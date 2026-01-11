@@ -22,8 +22,8 @@ import {
 import { HugeiconsIcon } from "@hugeicons/react";
 import { AnimatePresence, motion } from "motion/react";
 import { Pacifico } from "next/font/google";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
 import * as React from "react";
 
 const pacifico = Pacifico({
@@ -33,23 +33,23 @@ const pacifico = Pacifico({
 
 const items = [
   {
-    title: "Home",
-    url: "/",
+    titleKey: "home" as const,
+    url: "/" as const,
     icon: Home01Icon,
   },
   {
-    title: "Terminus",
-    url: "/terminus",
+    titleKey: "terminus" as const,
+    url: "/terminus" as const,
     icon: MoonEclipseIcon,
   },
   {
-    title: "Meltdown Protocol",
-    url: "/meltdown-protocol",
+    titleKey: "meltdownProtocol" as const,
+    url: "/meltdown-protocol" as const,
     icon: Book02Icon,
   },
   {
-    title: "Thinking Computers",
-    url: "/thinking-computers",
+    titleKey: "thinkingComputers" as const,
+    url: "/thinking-computers" as const,
     icon: FlowIcon,
   },
 ];
@@ -57,6 +57,7 @@ const items = [
 export function AppSidebar() {
   const pathname = usePathname();
   const { open, toggle, isMobile } = useSidebar();
+  const t = useTranslations("nav");
 
   return (
     <>
@@ -89,7 +90,7 @@ export function AppSidebar() {
       >
         <Sidebar
           collapsible="none"
-          className="border-r border-sidebar-border bg-background h-svh sticky top-0 md:h-auto md:max-h-[80vh] md:w-auto md:min-w-[16rem] md:rounded-xl md:border md:shadow-2xl transition-all duration-300"
+          className="border-r border-sidebar-border bg-background h-svh sticky top-0 md:h-auto md:max-h-[80vh] md:w-auto md:min-w-[16rem] md:rounded-xl md:border md:shadow-sm transition-all duration-300"
           mobileClassName="bg-background"
         >
           <SidebarHeader className="h-16 flex-row items-center justify-between px-6">
@@ -112,24 +113,26 @@ export function AppSidebar() {
             <SidebarNav>
               {items.map((item) => (
                 <SidebarNavItem
-                  key={item.title}
-                  href={item.url}
+                  key={item.titleKey}
                   isActive={pathname === item.url}
                   className={cn(
                     "gap-3 text-muted-foreground hover:text-foreground hover:bg-sidebar-accent/50 transition-all duration-200",
                     pathname === item.url &&
                       "font-medium text-foreground bg-sidebar-accent",
                   )}
+                  render={<Link href={item.url} />}
                 >
                   <HugeiconsIcon icon={item.icon} className="h-4 w-4" />
-                  <span>{item.title}</span>
+                  <span>{t(item.titleKey)}</span>
                 </SidebarNavItem>
               ))}
             </SidebarNav>
           </SidebarContent>
           <SidebarFooter className="p-4 border-t border-sidebar-border/50">
             <div className="flex items-center justify-between">
-              <span className="text-xs text-muted-foreground">Theme</span>
+              <span className="text-xs text-muted-foreground">
+                {t("theme")}
+              </span>
               <ThemeToggle />
             </div>
           </SidebarFooter>

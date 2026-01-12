@@ -1,5 +1,5 @@
 ---
-title: Coscientist: Not AGI, But Close Enough
+title: "Coscientist: Not AGI, But Close Enough"
 description: Whitepaper and personal narrative for the Coscientist system
 ---
 

@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Whitepaper",
-  description: "A documentation site with Andy Matuschak-style sliding panes",
+  title: "Coscientist's Whitepaper",
+  description: "Not AGI, but close enough",
 };
 
 export default function RootLayout({
@@ -31,7 +31,7 @@ export default function RootLayout({
         <header className="h-16 flex items-center px-6 bg-card border-b border-border sticky top-0 z-50 flex-shrink-0">
           <h1 className="text-lg font-semibold text-foreground">
             <Link href="/" className="hover:text-primary transition-colors">
-              Whitepaper
+              Coscientist's Whitepaper
             </Link>
           </h1>
         </header>

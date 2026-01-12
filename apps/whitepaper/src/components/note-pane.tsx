@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { useCallback } from 'react';
-import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
-import { X, GripVertical } from 'lucide-react';
-import type { Note, BacklinkInfo } from '@/lib/types';
-import { cn } from '@/lib/utils';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import { NoteContent } from './note-content';
-import { BacklinksSection } from './backlinks-section';
-import { usePaneCollapse } from './pane-container';
+import { useCallback } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { X, GripVertical } from "lucide-react";
+import type { Note, BacklinkInfo } from "@/lib/types";
+import { cn } from "@/lib/utils";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { NoteContent } from "./note-content";
+import { BacklinksSection } from "./backlinks-section";
+import { usePaneCollapse } from "./pane-container";
 
 interface NotePaneProps {
   note: Note;
@@ -38,10 +38,13 @@ export function NotePane({
   const { collapsedIndices } = usePaneCollapse();
   const isCollapsed = collapsedIndices.has(index);
   const shouldReduceMotion = useReducedMotion();
-  
-  const handleLinkClick = useCallback((slug: string) => {
-    onLinkClick(slug, index);
-  }, [onLinkClick, index]);
+
+  const handleLinkClick = useCallback(
+    (slug: string) => {
+      onLinkClick(slug, index);
+    },
+    [onLinkClick, index],
+  );
 
   const handleExpandClick = useCallback(() => {
     if (isCollapsed) {
@@ -51,14 +54,24 @@ export function NotePane({
 
   const paneMotion = shouldReduceMotion
     ? { initial: { opacity: 0 }, animate: { opacity: 1 }, exit: { opacity: 0 } }
-    : { initial: { opacity: 0, x: 300 }, animate: { opacity: 1, x: 0 }, exit: { opacity: 0, x: 300 } };
+    : {
+        initial: { opacity: 0, x: 300 },
+        animate: { opacity: 1, x: 0 },
+        exit: { opacity: 0, x: 300 },
+      };
 
   const paneTransition = shouldReduceMotion
     ? { duration: 0, layout: { duration: 0 } }
-    : { duration: 0.2, ease: 'easeOut' as const, layout: { duration: 0.2, ease: 'easeOut' as const } };
+    : {
+        duration: 0.2,
+        ease: "easeOut" as const,
+        layout: { duration: 0.2, ease: "easeOut" as const },
+      };
 
-  const fadeTransition = shouldReduceMotion ? { duration: 0 } : { duration: 0.12, ease: 'easeOut' as const };
-  
+  const fadeTransition = shouldReduceMotion
+    ? { duration: 0 }
+    : { duration: 0.12, ease: "easeOut" as const };
+
   return (
     <motion.article
       layout
@@ -71,12 +84,12 @@ export function NotePane({
       exit={paneMotion.exit}
       transition={paneTransition}
       className={cn(
-        'flex-shrink-0 w-full md:w-1/3 md:min-w-80 h-full overflow-hidden',
-        'bg-card border-l border-border',
-        'sticky left-0',
-        'first:border-l-0',
-        'snap-start md:snap-align-none',
-        isFocused && 'ring-2 ring-primary ring-inset'
+        "flex-shrink-0 w-full md:w-1/3 md:min-w-80 h-full overflow-hidden",
+        "bg-card border-l border-border",
+        "sticky left-0",
+        "first:border-l-0",
+        "snap-start md:snap-align-none",
+        isFocused && "ring-2 ring-primary ring-inset",
       )}
       style={{
         left: `calc(${index} * var(--pane-spine-width))`,
@@ -96,11 +109,11 @@ export function NotePane({
             <span className="size-5 rounded-full bg-primary/10 text-primary text-xs font-semibold flex items-center justify-center tabular-nums flex-shrink-0">
               {index + 1}
             </span>
-            <span 
+            <span
               className="text-sm font-medium text-muted-foreground whitespace-nowrap"
               style={{
-                writingMode: 'vertical-lr',
-                transform: 'rotate(180deg)',
+                writingMode: "vertical-lr",
+                transform: "rotate(180deg)",
               }}
             >
               {note.title}
@@ -108,20 +121,20 @@ export function NotePane({
           </motion.div>
         )}
       </AnimatePresence>
-      
+
       <motion.div
-        animate={{ x: isCollapsed ? 'var(--pane-spine-width)' : 0 }}
+        animate={{ x: isCollapsed ? "var(--pane-spine-width)" : 0 }}
         transition={fadeTransition}
         onClick={handleExpandClick}
         onKeyDown={(e) => {
-          if (isCollapsed && (e.key === 'Enter' || e.key === ' ')) {
+          if (isCollapsed && (e.key === "Enter" || e.key === " ")) {
             e.preventDefault();
             onExpand?.();
           }
         }}
         className={cn(
           "absolute top-0 left-0 bottom-0 w-full bg-card group",
-          isCollapsed && "cursor-pointer"
+          isCollapsed && "cursor-pointer",
         )}
         role={isCollapsed ? "button" : undefined}
         tabIndex={isCollapsed ? 0 : -1}
@@ -150,11 +163,11 @@ export function NotePane({
               <div
                 {...dragHandleProps}
                 className={cn(
-                  'absolute top-2 left-1/2 -translate-x-1/2 z-20',
-                  'hidden md:flex',
-                  'size-6 rounded-md items-center justify-center cursor-grab active:cursor-grabbing',
-                  'text-muted-foreground hover:text-foreground hover:bg-muted',
-                  'touch-none'
+                  "absolute top-2 left-1/2 -translate-x-1/2 z-20",
+                  "hidden md:flex",
+                  "size-6 rounded-md items-center justify-center cursor-grab active:cursor-grabbing",
+                  "text-muted-foreground hover:text-foreground hover:bg-muted",
+                  "touch-none",
                 )}
                 aria-label="Drag to reorder"
               >
@@ -171,11 +184,11 @@ export function NotePane({
               onClose?.();
             }}
             className={cn(
-              'absolute top-4 right-4 z-20',
-              'size-7 rounded-md flex items-center justify-center',
-              'text-muted-foreground hover:text-foreground hover:bg-muted',
-              'opacity-0 group-hover:opacity-100 focus:opacity-100',
-              'transition-opacity'
+              "absolute top-4 right-4 z-20",
+              "size-7 rounded-md flex items-center justify-center",
+              "text-muted-foreground hover:text-foreground hover:bg-muted",
+              "opacity-0 group-hover:opacity-100 focus:opacity-100",
+              "transition-opacity",
             )}
             aria-label={`Close ${note.title}`}
           >
@@ -184,7 +197,7 @@ export function NotePane({
         )}
         <ScrollArea className="h-full">
           <NoteContent note={note} onLinkClick={handleLinkClick} />
-          
+
           {backlinks.length > 0 && (
             <div className="px-8 pb-8">
               <BacklinksSection

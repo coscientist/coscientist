@@ -7,6 +7,10 @@ description: Knowledge-collapse phenomenon when AI takes initiative without huma
 
 Encyclopedia Meltdown is a knowledge-collapse phenomenon that begins when the initiative and control of writing transfers entirely to AI, without the [Galarch](./galarch)'s conscious intervention.
 
+## Origin
+
+The term comes from an essay by [Sunghyun Cho](./sunghyun-cho).
+
 ## The Mechanism
 
 Meltdown typically involves the coupling of three loops:
@@ -37,3 +41,7 @@ Because an encyclopedia is a mechanism in which links themselves manufacture tru
 ## Prevention
 
 The first principle of [Encyclopedia Galactica](./encyclopedia-galactica) design: **sovereignty over knowledge must remain with the [Galarch](./galarch)**. Prevention strategies implemented in [Coscientist](./coscientist) include the [Multi-AI Consensus Protocol](./multi-ai-consensus-protocol) and building a [Dialectical Graph](./dialectical-graph) that separates truth from narrative.
+
+## External Reference
+
+- https://cho.sh/r/C36398

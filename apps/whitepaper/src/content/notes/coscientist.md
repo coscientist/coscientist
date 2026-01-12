@@ -7,6 +7,10 @@ description: An intellectual companion system for knowledge production in the po
 
 Coscientist is an open-source service that implements the [Encyclopedia Galactica](./encyclopedia-galactica) concept from Isaac Asimov's Foundation series. It aims to be more than an ark of information; it aims to be an intellectual companion that expands knowledge and contemplation together with the [Galarch](./galarch). Above all, Coscientist is a system for **Un-Brain-Rotting** our minds in the post-AI era.
 
+## Builder
+
+Coscientist is built by [Sunghyun Cho](./sunghyun-cho).
+
 ## Origin
 
 The system draws inspiration from the [Encyclopedia Galactica](./encyclopedia-galactica)—a fictional [knowledge ark](./knowledge-ark) from Asimov's Foundation designed to preserve knowledge across [dark ages](./dark-night-of-the-soul). But Coscientist goes beyond preservation to enable discovery.
@@ -39,3 +43,7 @@ The system is built on a [Dialectical Graph](./dialectical-graph) that stores [a
 ## The Vision
 
 In the successful state, Coscientist can be operated not as a collection of documents, but as an **ecosystem of arguments**—a perpetual-motion encyclopedia where the [Galarch](./galarch) supervises structure while AI handles contemplation labor.
+
+## External Reference
+
+- https://cho.sh/r/6975BA

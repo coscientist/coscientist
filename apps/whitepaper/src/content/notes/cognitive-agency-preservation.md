@@ -3,11 +3,6 @@ title: Cognitive Agency Preservation
 description: AI safety framing that keeps humans in control of judgment
 ---
 
-# Cognitive Agency Preservation
+Cognitive agency preservation is the principle that AI should strengthen human judgment, not replace it. A system preserves agency when it keeps the user in the loop as an active critic: it shows its grounds, surfaces uncertainty, and makes disagreement cheap.
 
-Cognitive agency preservation is the principle that AI should strengthen human judgment, not replace it. It emphasizes transparency, critique, and human veto power.
-
-## Related
-
-- [Cognitive Sovereignty](./cognitive-sovereignty)
-- [Coscientist](./coscientist)
+In [Coscientist](./coscientist), this implies traceable claims, explicit rebuttal paths, and a human veto. It is tightly linked to [cognitive sovereignty](./cognitive-sovereignty): the right and obligation to own verification.

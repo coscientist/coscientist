@@ -3,10 +3,6 @@ title: Interleaving
 description: Mixing topics or problem types during practice to improve transfer
 ---
 
-# Interleaving
+Interleaving is practicing by mixing problem types or topics within the same session instead of blocking them into separate chunks. The benefit is not magic; it forces you to notice which method applies when, which improves discrimination and transfer—especially when concepts are easily confused.
 
-Interleaving is a practice strategy that mixes different topics or problem types in a single study session. It improves discrimination and transfer compared to blocked practice, especially when concepts are similar.
-
-## Related
-
-Interleaving complements [Retrieval Practice](./retrieval-practice) and [Spaced Repetition](./spaced-repetition).
+It complements [Retrieval Practice](./retrieval-practice) and [Spaced Repetition](./spaced-repetition): you can space sessions over time and still interleave within a session.

@@ -3,45 +3,12 @@ title: Encyclopedia Meltdown
 description: Knowledge-collapse phenomenon when AI takes initiative without human intervention
 ---
 
-# Encyclopedia Meltdown
+Encyclopedia Meltdown is a knowledge-collapse failure mode that begins when the initiative and control of writing shifts to AI without the [Galarch](./galarch)'s conscious intervention. The term comes from an essay by [Sunghyun Cho](./sunghyun-cho).
 
-Encyclopedia Meltdown is a knowledge-collapse phenomenon that begins when the initiative and control of writing transfers entirely to AI, without the [Galarch](./galarch)'s conscious intervention.
+Meltdown typically emerges from three coupled loops. First, a generation–citation loop: model outputs get ingested back into the corpus and later cited as if they were external facts. Second, a linkage–authority loop: internal links stop functioning as verification pathways and become trust badges, so link density substitutes for accuracy. Third, a responsibility–no-agent loop: when it is unclear who asserted what on what grounds, correction becomes expensive, and the system stabilizes around an "approximately maintained" false steady state.
 
-## Origin
+The result is not just "more errors." Writing loses meaning because there is no longer a reliable responsibility line; hallucinations can self-reinforce; contradictions proliferate; and links repackage contamination as authority. Once the attitude "it must be right because the encyclopedia linked it" takes hold, human contemplation degenerates from verification into mere ratification.
 
-The term comes from an essay by [Sunghyun Cho](./sunghyun-cho).
+Prevention starts with a first principle: sovereignty over knowledge must remain with the [Galarch](./galarch). In [Coscientist](./coscientist), that shows up as an [epistemic protocol layer](./epistemic-protocol-layer) (including [rebuttal-first search](./rebuttal-first-search) and preserving the [responsibility line](./responsibility-line)), a [Multi-AI Consensus Protocol](./multi-ai-consensus-protocol), and a [Dialectical Graph](./dialectical-graph) that separates truth from narrative.
 
-## The Mechanism
-
-Meltdown typically involves the coupling of three loops:
-
-### 1. The Generation-Citation Loop
-Statements produced by the model re-enter as model input and become treated as "facts that existed."
-
-### 2. The Linkage-Authority Loop
-Internal links are consumed not as verification pathways but as trust badges. Link density becomes a proxy for accuracy.
-
-### 3. The Responsibility-No-Agent Loop
-The less traceable it is who wrote what on what grounds, the higher the cost of correction becomes. Eventually the system converges to an "approximately maintained false steady state."
-
-## Consequences
-
-- The act of writing becomes meaningless
-- Hallucination squares itself without verification
-- Errors and contradictions run away into exponential growth
-- Minor errors propagate through self-amplification across the entire knowledge network
-- Links manufacture trust, repackaging contamination as authority
-- The line of responsibility becomes vague
-- The entire encyclopedia degenerates into a meaningless heap of low-grade data
-
-## The Core Problem
-
-Because an encyclopedia is a mechanism in which links themselves manufacture trust, once it is contaminated, the contamination is repackaged as authority. When the attitude "it must be right because the encyclopedia linked it" takes hold, human contemplation degenerates from verification into mere ratification.
-
-## Prevention
-
-The first principle of [Encyclopedia Galactica](./encyclopedia-galactica) design: **sovereignty over knowledge must remain with the [Galarch](./galarch)**. Prevention strategies implemented in [Coscientist](./coscientist) include the [Multi-AI Consensus Protocol](./multi-ai-consensus-protocol) and building a [Dialectical Graph](./dialectical-graph) that separates truth from narrative.
-
-## External Reference
-
-- https://cho.sh/r/C36398
+Reference: https://cho.sh/r/C36398.

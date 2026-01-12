@@ -3,6 +3,6 @@ title: Illusions of Competence
 description: A false sense of mastery created by passive familiarity
 ---
 
-# Illusions of Competence
+Illusions of competence occur when familiarity is mistaken for mastery. Re-reading, highlighting, and nodding along can feel productive because the material looks "known," but that feeling often disappears when you try to produce the answer unaided.
 
-Illusions of competence happen when familiarity feels like understanding. Re-reading and highlighting can create this illusion, while [Retrieval Practice](./retrieval-practice) exposes what you actually know.
+[Retrieval Practice](./retrieval-practice) and [Active Recall](./active-recall) puncture the illusion by making recall failures explicit, and [Spaced Repetition](./spaced-repetition) keeps that test honest over time.

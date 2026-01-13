@@ -1,11 +1,19 @@
 "use client";
 
 import { useCallback } from "react";
-import { X } from "lucide-react";
+import { XMarkIcon } from "@heroicons/react/24/outline";
 import { useTranslations } from "next-intl";
 import type { Note, BacklinkInfo } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import {
+  Frame,
+  FrameHeader,
+  FrameTitle,
+  FrameDescription,
+  FramePanel,
+  FrameFooter,
+} from "@/components/ui/frame";
 import { NoteContent } from "./note-content";
 import { BacklinksSection } from "./backlinks-section";
 import { usePaneCollapse } from "./pane-container";
@@ -51,9 +59,8 @@ export function NotePane({
       aria-label={note.title}
       className={cn(
         "flex-shrink-0 w-full md:w-1/3 md:min-w-pane-min h-full overflow-hidden",
-        "bg-card border-l border-border",
+        "bg-muted",
         "sticky left-0",
-        "first:border-l-0",
         "snap-start md:snap-align-none",
         isFocused && "ring-2 ring-primary ring-inset",
       )}
@@ -66,6 +73,7 @@ export function NotePane({
         <PaneSpine
           index={index}
           title={note.title}
+          description={note.description}
           showIndex={index > 0}
           isClosable={isClosable}
           onClose={onClose}
@@ -73,7 +81,7 @@ export function NotePane({
       )}
 
       <div
-        className="absolute top-0 left-0 bottom-0 w-full bg-card group"
+        className="absolute top-0 left-0 bottom-0 w-full bg-muted group"
         style={{
           transform: isCollapsed
             ? "translateX(var(--pane-spine-width))"
@@ -93,17 +101,33 @@ export function NotePane({
         {isCollapsed && (
           <div className="absolute left-0 top-0 bottom-0 w-px bg-border z-sticky" />
         )}
-        <ScrollArea className="h-full">
-          <NoteContent note={note} onLinkClick={handleLinkClick} />
 
-          {backlinks.length > 0 && (
-            <div className="px-8 pb-8">
-              <BacklinksSection
-                backlinks={backlinks}
-                onBacklinkClick={handleLinkClick}
-              />
-            </div>
-          )}
+        <ScrollArea className="h-full">
+          <Frame className="m-2 min-h-[calc(100%-1rem)]">
+            <FrameHeader>
+              <FrameTitle className="text-xl font-semibold">
+                {note.title}
+              </FrameTitle>
+              {note.description && (
+                <FrameDescription className="mt-1">
+                  {note.description}
+                </FrameDescription>
+              )}
+            </FrameHeader>
+
+            <FramePanel className="p-0">
+              <NoteContent note={note} onLinkClick={handleLinkClick} />
+            </FramePanel>
+
+            {backlinks.length > 0 && (
+              <FrameFooter className="px-5 py-4">
+                <BacklinksSection
+                  backlinks={backlinks}
+                  onBacklinkClick={handleLinkClick}
+                />
+              </FrameFooter>
+            )}
+          </Frame>
         </ScrollArea>
 
         {!isCollapsed && isClosable && (
@@ -114,7 +138,7 @@ export function NotePane({
               onClose?.();
             }}
             className={cn(
-              "absolute top-2 left-2.5 z-overlay",
+              "absolute top-4 left-4 z-overlay",
               "size-5 rounded-full flex items-center justify-center",
               "bg-primary/10 text-primary text-xs font-semibold tabular-nums font-mono",
               "group-hover:bg-red-500 group-hover:text-white",
@@ -123,7 +147,7 @@ export function NotePane({
             aria-label={t("closeNote", { title: note.title })}
           >
             <span className="group-hover:hidden">{index}</span>
-            <X className="size-3 hidden group-hover:block" />
+            <XMarkIcon className="size-3 hidden group-hover:block" />
           </button>
         )}
       </div>

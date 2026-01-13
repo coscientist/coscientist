@@ -1,13 +1,9 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { ArrowUpLeftIcon } from "@heroicons/react/24/outline";
 import type { BacklinkInfo } from "@/lib/types";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-} from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
 interface BacklinksSectionProps {
   backlinks: BacklinkInfo[];
@@ -20,7 +16,7 @@ function ExcerptWithBold({ text }: { text: string }) {
     <>
       {parts.map((part) =>
         part.startsWith("**") && part.endsWith("**") ? (
-          <strong key={part} className="font-semibold text-foreground">
+          <strong key={part} className="font-medium text-foreground">
             {part.slice(2, -2)}
           </strong>
         ) : (
@@ -45,30 +41,34 @@ export function BacklinksSection({
 
   return (
     <section>
-      <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-4 font-mono">
+      <h3 className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-3 flex items-center gap-1.5">
+        <ArrowUpLeftIcon className="size-3" />
         {t(translationKey, { count: backlinks.length })}
       </h3>
-      <ul className="flex flex-col gap-3">
-        {backlinks.map((backlink) => (
-          <li key={backlink.slug}>
-            <Card
-              render={
-                <button
-                  type="button"
-                  onClick={() => onBacklinkClick(backlink.slug)}
-                />
-              }
-              className="w-full text-left cursor-pointer transition-colors hover:bg-accent"
+      <ul className="flex flex-col">
+        {backlinks.map((backlink, index) => (
+          <li
+            key={backlink.slug}
+            className={cn(index > 0 && "border-t border-border/50")}
+          >
+            <button
+              type="button"
+              onClick={() => onBacklinkClick(backlink.slug)}
+              className={cn(
+                "w-full text-left py-2.5 -mx-1 px-1 rounded-md",
+                "transition-colors hover:bg-muted/50",
+                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+              )}
             >
-              <CardHeader>
-                <CardTitle className="text-base">{backlink.title}</CardTitle>
-                {backlink.excerpt && (
-                  <CardDescription className="line-clamp-2">
-                    <ExcerptWithBold text={backlink.excerpt} />
-                  </CardDescription>
-                )}
-              </CardHeader>
-            </Card>
+              <span className="block text-sm font-medium text-foreground">
+                {backlink.title}
+              </span>
+              {backlink.excerpt && (
+                <span className="block text-xs text-muted-foreground mt-0.5 line-clamp-2">
+                  <ExcerptWithBold text={backlink.excerpt} />
+                </span>
+              )}
+            </button>
           </li>
         ))}
       </ul>

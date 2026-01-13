@@ -1,17 +1,15 @@
 ---
 title: "Output Tokens ≠ Knowledge"
-description: Manifesto and personal narrative for the Coscientist system
+description: A Personal Quest for a Cognitive Exoskeleton
 ---
 
-## A Personal Quest for a Cognitive Exoskeleton
-
-I, [Sunghyun Cho](./sunghyun-cho), grew up with a reverence for encyclopedias and the idea of a single authoritative repository of knowledge. As a child, I pored over _Encyclopedia Galactica_, imagining a world where all my projects and research could live inside a universal reference. Later I discovered Vannevar Bush's 1945 essay [As We May Think](./as-we-may-think), which described the [Memex](./memex): an archive that lets individuals store records and retrieve them through associative trails. That vision felt like a cognitive exoskeleton.
+I, [Sunghyun Cho](./sunghyun-cho), grew up with a reverence for encyclopedias and the idea of a single authoritative repository of knowledge. As a child, I pored over _Encyclopedia Galactica_, imagining a world where all my projects and research could live inside a universal reference. Later I discovered [Vannevar Bush](./vannevar-bush)'s 1945 essay [As We May Think](./as-we-may-think), which described the [Memex](./memex): an archive that lets individuals store records and retrieve them through associative trails. That vision felt like a cognitive exoskeleton.
 
 By the time I began my own career in the 21st century, the internet had become a rough approximation of a global Memex. Yet something was missing: it preserved collective records but failed to capture the individual's mind, including personal context, evolving insights, and living ideas. I experimented with [second brain](./second-brain) tools and [digital garden](./digital-garden) practices, only to find them too manual and too brittle. I wanted an externalized [digital brain](./digital-brain) that could grow and adapt with minimal friction.
 
 That realization kicked off [Project Aldehyde](./project-aldehyde), my attempt to build a superset of the Memex for personal use. Years of iteration culminated in my May 2022 essay [Creating Next-gen Digital Brains](./creating-next-gen-digital-brains), which argued that friction is the enemy of personal knowledge workflows: the best way to manage a garden is not constant tending, but cultivating a [digital jungle](./digital-jungle) that self-organizes. You should be able to throw in raw knowledge and let the system organize, link, and resurface it.
 
-By mid-2022, I implemented a prototype using a static-site pipeline from Obsidian to the web and named it [Extracranial](./extracranial). It was a personal digital brain that auto-indexed content, suggested backlinks, and allowed old posts to decay unless marked evergreen. It freed me from micromanaging links and let me focus on writing and thinking.
+By mid-2022, I implemented a prototype using a static-site pipeline from Obsidian to the web and named it [Extracranial](./extracranial). It was a personal digital brain that auto-indexed content, suggested backlinks, allowed old posts to decay unless marked evergreen, and operated bilingually [across the Sprachraums](./across-the-sprachraums). It freed me from micromanaging links and let me focus on writing and thinking.
 
 However, as I built that personal wiki, a larger problem came into view: even a perfect personal Memex is not enough if the broader epistemic environment is compromised. As generative AI became ubiquitous, the deeper question shifted from "how do I store knowledge?" to "how do we keep verification from collapsing when AI can flood systems with plausible text?"
 
@@ -31,7 +29,7 @@ The larger goal is a "GitHub for scientists" that treats experiments as code: ve
 
 ## Coscientist: Architecture, Agency, and Blueprint
 
-[Coscientist](./coscientist) is the system that synthesizes these threads. It is a multi-agent LLM architecture designed to function as a research collaborator rather than a single answer engine. Its internal loop separates proposal, critique, ranking, and refinement, with a meta-review layer that checks coherence, traceability, and uncertainty.
+[Coscientist](./coscientist) is the system that synthesizes these threads. It is a multi-agent [LLM](./llm) architecture designed to function as a research collaborator rather than a single answer engine. Its internal loop separates proposal, critique, ranking, and refinement, with a meta-review layer that checks coherence, traceability, and uncertainty.
 
 At the knowledge layer, it maintains a [Dialectical Graph](./dialectical-graph) that stores claims and relations rather than raw text. Narrative output is treated as a projection of an inference layer, so every statement can backtrack to sources, evidence spans, and explicit relations. This separation avoids the "smooth but unverifiable" failure mode of conventional generation.
 

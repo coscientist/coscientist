@@ -1,7 +1,7 @@
 "use client";
 
 import { Autocomplete as AutocompletePrimitive } from "@base-ui/react/autocomplete";
-import { ChevronsUpDownIcon, XIcon } from "lucide-react";
+import { ChevronUpDownIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
@@ -56,7 +56,7 @@ function AutocompleteInput({
             sizeValue === "sm" ? "end-0" : "end-0.5",
           )}
         >
-          <ChevronsUpDownIcon />
+          <ChevronUpDownIcon />
         </AutocompleteTrigger>
       )}
       {showClear && (
@@ -66,7 +66,7 @@ function AutocompleteInput({
             sizeValue === "sm" ? "end-0" : "end-0.5",
           )}
         >
-          <XIcon />
+          <XMarkIcon />
         </AutocompleteClear>
       )}
     </div>
@@ -234,7 +234,7 @@ function AutocompleteClear({
       data-slot="autocomplete-clear"
       {...props}
     >
-      <XIcon />
+      <XMarkIcon />
     </AutocompletePrimitive.Clear>
   );
 }

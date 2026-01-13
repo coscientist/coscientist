@@ -4,6 +4,90 @@ import path from "node:path";
 
 const openai = new OpenAI();
 
+const CONCURRENCY_LIMIT = 32;
+const MAX_RETRIES = 5;
+const BASE_DELAY_MS = 1000;
+const MAX_DELAY_MS = 32000;
+
+interface TranslationTask<T> {
+  id: string;
+  execute: () => Promise<T>;
+}
+
+async function executeWithConcurrency<T>(
+  tasks: TranslationTask<T>[],
+  concurrency: number = CONCURRENCY_LIMIT,
+): Promise<Map<string, T | Error>> {
+  const results = new Map<string, T | Error>();
+  const executing = new Set<Promise<void>>();
+
+  for (const task of tasks) {
+    const promise = (async () => {
+      try {
+        const result = await executeWithRetry(task.execute, task.id);
+        results.set(task.id, result);
+      } catch (error) {
+        results.set(
+          task.id,
+          error instanceof Error ? error : new Error(String(error)),
+        );
+      }
+    })();
+
+    executing.add(promise);
+    promise.finally(() => executing.delete(promise));
+
+    if (executing.size >= concurrency) {
+      await Promise.race(executing);
+    }
+  }
+
+  await Promise.all(executing);
+  return results;
+}
+
+async function executeWithRetry<T>(
+  fn: () => Promise<T>,
+  taskId: string,
+  maxRetries: number = MAX_RETRIES,
+): Promise<T> {
+  let lastError: Error | undefined;
+
+  for (let attempt = 0; attempt <= maxRetries; attempt++) {
+    try {
+      return await fn();
+    } catch (error) {
+      lastError = error instanceof Error ? error : new Error(String(error));
+
+      if (attempt === maxRetries) {
+        console.error(
+          `✗ ${taskId}: Failed after ${maxRetries + 1} attempts - ${lastError.message}`,
+        );
+        throw lastError;
+      }
+
+      const delay = calculateBackoffDelay(attempt);
+      console.log(
+        `⟳ ${taskId}: Retry ${attempt + 1}/${maxRetries} in ${delay}ms...`,
+      );
+      await sleep(delay);
+    }
+  }
+
+  throw lastError;
+}
+
+// Formula: min(maxDelay, baseDelay * 2^attempt) + jitter
+function calculateBackoffDelay(attempt: number): number {
+  const exponentialDelay = Math.min(MAX_DELAY_MS, BASE_DELAY_MS * 2 ** attempt);
+  const jitter = Math.random() * exponentialDelay * 0.1;
+  return Math.floor(exponentialDelay + jitter);
+}
+
+function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 const LOCALES = [
   "en",
   "zh-CN",
@@ -149,31 +233,37 @@ async function translateUI(locales: string[]) {
   );
   console.log("✓ en.json (source)");
 
-  for (const locale of locales) {
-    if (locale === "en") continue;
+  const tasks: TranslationTask<void>[] = locales
+    .filter((locale) => locale !== "en")
+    .map((locale) => ({
+      id: `ui:${locale}`,
+      execute: async () => {
+        const filePath = path.join(messagesDir, `${locale}.json`);
+        console.log(`Translating to ${LOCALE_NAMES[locale]} (${locale})...`);
 
-    const filePath = path.join(messagesDir, `${locale}.json`);
+        const translated = await translateWithGPT52(
+          JSON.stringify(ENGLISH_UI, null, 2),
+          locale,
+          "json",
+        );
 
-    try {
-      console.log(`Translating to ${LOCALE_NAMES[locale]} (${locale})...`);
-      const translated = await translateWithGPT52(
-        JSON.stringify(ENGLISH_UI, null, 2),
-        locale,
-        "json",
-      );
+        const jsonMatch = translated.match(/\{[\s\S]*\}/);
+        if (!jsonMatch) throw new Error("No valid JSON in response");
 
-      const jsonMatch = translated.match(/\{[\s\S]*\}/);
-      if (!jsonMatch) throw new Error("No valid JSON in response");
+        JSON.parse(jsonMatch[0]);
+        await fs.writeFile(filePath, jsonMatch[0]);
+        console.log(`✓ ${locale}.json`);
+      },
+    }));
 
-      JSON.parse(jsonMatch[0]);
-      await fs.writeFile(filePath, jsonMatch[0]);
-      console.log(`✓ ${locale}.json`);
-    } catch (error) {
-      console.error(`✗ ${locale}: ${error}`);
+  const results = await executeWithConcurrency(tasks);
+
+  for (const [taskId, result] of results) {
+    if (result instanceof Error) {
+      const locale = taskId.replace("ui:", "");
+      const filePath = path.join(messagesDir, `${locale}.json`);
       await fs.writeFile(filePath, JSON.stringify(ENGLISH_UI, null, 2));
     }
-
-    await new Promise((r) => setTimeout(r, 200));
   }
 }
 
@@ -186,39 +276,54 @@ async function translateMarkdown(locales: string[]) {
 
   console.log(`\nTranslating ${mdFiles.length} markdown notes...\n`);
 
-  for (const locale of locales) {
-    if (locale === "en") continue;
+  const targetLocales = locales.filter((locale) => locale !== "en");
+  await Promise.all(
+    targetLocales.map((locale) =>
+      fs.mkdir(path.join(notesDir, locale), { recursive: true }),
+    ),
+  );
 
-    const localeDir = path.join(notesDir, locale);
-    await fs.mkdir(localeDir, { recursive: true });
+  const tasks: TranslationTask<void>[] = [];
 
+  for (const locale of targetLocales) {
     for (const file of mdFiles) {
-      const targetPath = path.join(localeDir, file);
+      const targetPath = path.join(notesDir, locale, file);
+      const fileExists = await fs
+        .access(targetPath)
+        .then(() => true)
+        .catch(() => false);
 
-      try {
-        await fs.access(targetPath);
+      if (fileExists) {
         console.log(`⊘ ${locale}/${file} (exists)`);
-        continue;
-      } catch {}
+      } else {
+        tasks.push({
+          id: `md:${locale}/${file}`,
+          execute: async () => {
+            const content = await fs.readFile(path.join(enDir, file), "utf-8");
+            console.log(`Translating ${file} to ${LOCALE_NAMES[locale]}...`);
 
-      try {
-        const content = await fs.readFile(path.join(enDir, file), "utf-8");
-        console.log(`Translating ${file} to ${LOCALE_NAMES[locale]}...`);
-
-        const translated = await translateWithGPT52(
-          content,
-          locale,
-          "markdown",
-        );
-        await fs.writeFile(targetPath, translated);
-        console.log(`✓ ${locale}/${file}`);
-      } catch (error) {
-        console.error(`✗ ${locale}/${file}: ${error}`);
-        const content = await fs.readFile(path.join(enDir, file), "utf-8");
-        await fs.writeFile(targetPath, content);
+            const translated = await translateWithGPT52(
+              content,
+              locale,
+              "markdown",
+            );
+            await fs.writeFile(targetPath, translated);
+            console.log(`✓ ${locale}/${file}`);
+          },
+        });
       }
+    }
+  }
 
-      await new Promise((r) => setTimeout(r, 200));
+  console.log(`\nQueued ${tasks.length} translations (32 concurrent)...\n`);
+  const results = await executeWithConcurrency(tasks);
+
+  for (const [taskId, result] of results) {
+    if (result instanceof Error) {
+      const [locale, file] = taskId.replace("md:", "").split("/");
+      const targetPath = path.join(notesDir, locale, file);
+      const content = await fs.readFile(path.join(enDir, file), "utf-8");
+      await fs.writeFile(targetPath, content);
     }
   }
 }

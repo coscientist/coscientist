@@ -5,8 +5,8 @@ import { useRender } from "@base-ui/react/use-render";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
-  MoreHorizontalIcon,
-} from "lucide-react";
+  EllipsisHorizontalIcon,
+} from "@heroicons/react/24/outline";
 import type * as React from "react";
 
 import { cn } from "@/lib/utils";
@@ -119,7 +119,7 @@ function PaginationEllipsis({
       data-slot="pagination-ellipsis"
       {...props}
     >
-      <MoreHorizontalIcon className="size-5 sm:size-4" />
+      <EllipsisHorizontalIcon className="size-5 sm:size-4" />
       <span className="sr-only">More pages</span>
     </span>
   );

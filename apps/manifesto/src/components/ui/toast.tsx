@@ -2,12 +2,12 @@
 
 import { Toast } from "@base-ui/react/toast";
 import {
-  CircleAlertIcon,
-  CircleCheckIcon,
-  InfoIcon,
-  LoaderCircleIcon,
-  TriangleAlertIcon,
-} from "lucide-react";
+  ExclamationCircleIcon,
+  CheckCircleIcon,
+  InformationCircleIcon,
+  ArrowPathIcon,
+  ExclamationTriangleIcon,
+} from "@heroicons/react/24/outline";
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
@@ -16,11 +16,11 @@ const toastManager = Toast.createToastManager();
 const anchoredToastManager = Toast.createToastManager();
 
 const TOAST_ICONS = {
-  error: CircleAlertIcon,
-  info: InfoIcon,
-  loading: LoaderCircleIcon,
-  success: CircleCheckIcon,
-  warning: TriangleAlertIcon,
+  error: ExclamationCircleIcon,
+  info: InformationCircleIcon,
+  loading: ArrowPathIcon,
+  success: CheckCircleIcon,
+  warning: ExclamationTriangleIcon,
 } as const;
 
 type ToastPosition =

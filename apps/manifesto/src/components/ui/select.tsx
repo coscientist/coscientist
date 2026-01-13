@@ -3,9 +3,9 @@
 import { Select as SelectPrimitive } from "@base-ui/react/select";
 import {
   ChevronDownIcon,
-  ChevronsUpDownIcon,
+  ChevronUpDownIcon,
   ChevronUpIcon,
-} from "lucide-react";
+} from "@heroicons/react/24/outline";
 
 import { cn } from "@/lib/utils";
 
@@ -33,7 +33,7 @@ function SelectTrigger({
     >
       {children}
       <SelectPrimitive.Icon data-slot="select-icon">
-        <ChevronsUpDownIcon className="-me-1 size-4.5 opacity-80 sm:size-4" />
+        <ChevronUpDownIcon className="-me-1 size-4.5 opacity-80 sm:size-4" />
       </SelectPrimitive.Icon>
     </SelectPrimitive.Trigger>
   );

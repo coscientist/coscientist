@@ -58,10 +58,5 @@ export function NoteContent({ note, onLinkClick }: NoteContentProps) {
     [note.contentHtml, parserOptions],
   );
 
-  return (
-    <div className="prose-note p-8 pt-10">
-      <h1>{note.title}</h1>
-      {parsedContent}
-    </div>
-  );
+  return <div className="prose-note p-6">{parsedContent}</div>;
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { Dialog as SheetPrimitive } from "@base-ui/react/dialog";
-import { XIcon } from "lucide-react";
+import { XMarkIcon } from "@heroicons/react/24/outline";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -97,7 +97,7 @@ function SheetPopup({
               className="absolute end-2 top-2"
               render={<Button size="icon" variant="ghost" />}
             >
-              <XIcon />
+              <XMarkIcon />
             </SheetPrimitive.Close>
           )}
         </SheetPrimitive.Popup>

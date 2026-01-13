@@ -1,12 +1,13 @@
 "use client";
 
-import { X } from "lucide-react";
+import { XMarkIcon } from "@heroicons/react/24/outline";
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 
 interface PaneSpineProps {
   index: number;
   title: string;
+  description?: string;
   showIndex?: boolean;
   isClosable?: boolean;
   onClose?: () => void;
@@ -16,6 +17,7 @@ interface PaneSpineProps {
 export function PaneSpine({
   index,
   title,
+  description,
   showIndex = true,
   isClosable = false,
   onClose,
@@ -47,7 +49,7 @@ export function PaneSpine({
             aria-label={t("closePane", { index })}
           >
             <span className="group-hover/spine:hidden">{index}</span>
-            <X className="size-3 hidden group-hover/spine:block" />
+            <XMarkIcon className="size-3 hidden group-hover/spine:block" />
           </button>
         ) : (
           <span className="size-5 rounded-full bg-primary/10 text-primary text-xs font-semibold flex items-center justify-center tabular-nums font-mono flex-shrink-0">
@@ -63,6 +65,17 @@ export function PaneSpine({
       >
         {title}
       </span>
+      {description && (
+        <span
+          className="text-xs text-muted-foreground/70 whitespace-nowrap mt-2"
+          style={{
+            writingMode: "vertical-lr",
+            transform: "rotate(180deg)",
+          }}
+        >
+          {description}
+        </span>
+      )}
     </div>
   );
 }

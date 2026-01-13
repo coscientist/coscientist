@@ -3,7 +3,7 @@ title: RAG Limitations
 description: Why standard retrieval-augmented generation cannot produce genuine discovery
 ---
 
-Retrieval-augmented generation (RAG) improves factuality by retrieving relevant documents, but standard RAG still has structural limitations for knowledge production. It retrieves text snippets and produces fluent prose; it does not represent the objects you need for discovery: claims, counterclaims, definitions, methods, and the relations that bind them.
+[RAG](./rag) (Retrieval-augmented generation) improves factuality by retrieving relevant documents, but standard RAG still has structural limitations for knowledge production. It retrieves text snippets and produces fluent prose; it does not represent the objects you need for discovery: claims, counterclaims, definitions, methods, and the relations that bind them.
 
 One failure mode is quantitative bias. If many sources repeat a claim and a small number contain decisive rebuttals or counterexamples, similarity-based retrieval tends to amplify the majority and smooth away the turning points. A single counterexample or definition revision can carry more epistemic weight than a hundred repetitions, but it is not necessarily "more similar."
 

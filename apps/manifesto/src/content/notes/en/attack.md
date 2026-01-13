@@ -3,7 +3,7 @@ title: Attack
 description: A direct challenge to a claim's truth
 ---
 
-An attack is a direct challenge to the truth of a [claim](./claim). Unlike an [undercut](./undercut), which targets the grounds, an attack says the claim itself is false or misleading, typically by providing a [counterexample](./counterexample) or contradicting evidence.
+An attack is a direct challenge to the truth of a [claim](./claim). Unlike an [undercut](./undercut), which targets the grounds, an attack says the claim itself is false or misleading, typically by providing a [counterexample](./counterexample) or contradictory evidence.
 
 Attacks are a core edge type in the [Dialectical Graph](./dialectical-graph) (see [Dialectical Graph Edges](./dialectical-graph-edges)). When an attack is registered, the claim's status can shift from `supported` to `contested` or `refuted` depending on the strength and type of the challenge.
 

@@ -15,7 +15,15 @@ However, as I built that personal wiki, a larger problem came into view: even a 
 
 ## From Digital Brains to Protocols
 
-Traditional mediums enforce linear structure. Knowledge in practice is a network. The "next-gen digital brain" was my response to that gap. Its principles were straightforward: frictionless input (capture ideas without forced taxonomy), automated organization (infer connections algorithmically), dynamic evolution (let knowledge decay or stay evergreen), multimodal content (diagrams, demos, interactive media), and seamless sources (connect notes to papers, code, datasets, and references). Manual linking can still refine understanding, but it should be optional. The system should do the heavy lifting.
+Traditional media enforce linear structure. Knowledge in practice is a network. The "next-gen digital brain" was my response to that gap. Its principles were straightforward:
+
+- frictionless input — capture ideas without forced taxonomy
+- automated organization — infer connections algorithmically
+- dynamic evolution — let knowledge decay or stay evergreen
+- multimodal content — diagrams, demos, interactive media
+- seamless sources — connect notes to papers, code, datasets, and references
+
+Manual linking can still refine understanding, but it should be optional. The system should do the heavy lifting.
 
 By 2023, I was grappling with questions that transcended personal note-taking. AI-generated content threatened verification itself. I called the collapse scenario [Encyclopedia Meltdown](./encyclopedia-meltdown): when AI takes the initiative of writing, the [responsibility line](./responsibility-line) disappears and errors self-amplify through links.
 

@@ -7,4 +7,4 @@ A normalized proposition is a [claim](./claim) that has been extracted from natu
 
 The same idea can be expressed in many ways. Normalization maps surface variations to a canonical form so that two papers saying the same thing in different words can be recognized as supporting (or contradicting) each other.
 
-In a [Dialectical Graph](./dialectical-graph), normalized propositions are the [claim](./claim) nodes that participate in [knowledge synthesis](./knowledge-synthesis). They are distinct from [evidence spans](./evidence-span), which preserve the original wording, and from [narrative layer](./narrative-layer) prose, which is generated for human reading.
+In a [Dialectical Graph](./dialectical-graph), normalized propositions are the [claim](./claim) nodes that participate in [knowledge synthesis](./knowledge-synthesis). They are distinct from [evidence spans](./evidence-span), which preserve the original wording, and from prose in the [narrative layer](./narrative-layer), which is generated for human reading.

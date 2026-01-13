@@ -3,7 +3,16 @@ title: Claim Status Taxonomy
 description: The states a claim can be in within a dialectical graph
 ---
 
-The claim status taxonomy defines the states a [claim](./claim) can occupy in a [Dialectical Graph](./dialectical-graph): tentative (hypothesis stage), contested (active debate), conditionally supported (true under specified conditions), robust (supported via multiple independent paths), refuted (collapsed by counterexample), or obsolete (meaning lost due to [definition drift](./definition-drift) or method shift).
+The claim status taxonomy defines the states a [claim](./claim) can occupy in a [Dialectical Graph](./dialectical-graph).
+
+## Common States
+
+- `tentative` — hypothesis stage
+- `contested` — active debate
+- `conditionally supported` — true under specified conditions
+- `robust` — supported via multiple independent paths
+- `refuted` — collapsed by a [counterexample](./counterexample)
+- `obsolete` — meaning lost due to [definition drift](./definition-drift) or method shift
 
 Status is not a single confidence score. A claim can be robust on evidence diversity but contested on scope; it can be conditionally supported in one context and refuted in another. Multi-dimensional status captures this complexity.
 

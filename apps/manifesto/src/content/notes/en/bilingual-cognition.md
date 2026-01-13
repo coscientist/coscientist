@@ -3,12 +3,12 @@ title: Bilingual Cognition
 description: The capacity to think and operate in multiple languages simultaneously
 ---
 
-Bilingual cognition is the capacity to think, reason, and operate in multiple languages, switching fluidly between them as context demands. It is not just speaking two languages; it is having integrated cognitive access to multiple linguistic frameworks.
+Bilingual cognition is the ability to think and work in more than one language, switching as context demands. It is more than speaking two languages; it means ideas are accessible in either language without heavy translation overhead.
 
-[Sunghyun Cho](./sunghyun-cho) operates bilingually in his [digital brain](./digital-brain), writing and thinking in both English and Korean. This practice informs his vision of [across the Sprachraums](./across-the-sprachraums): a mind that operates in multiple languages naturally tends toward a [language-agnostic index](./language-agnostic-indexing) of concepts, retrieving ideas learned in one language and applying them in another.
+In this manifesto, it matters because it hints at a deeper structure: concepts sit above words. That's the intuition behind going [across the Sprachraums](./across-the-sprachraums) and building a [language-agnostic index](./language-agnostic-indexing)—ideas should be retrievable regardless of the language they were first recorded in.
 
-Bilingual cognition is a form of high-level cognitive synthesis. A person who dreams in multiple languages demonstrates a mind that has integrated different linguistic frameworks into their subconscious. The bilingual brain maintains a coherent self across linguistic contexts while having access to the unique expressiveness of each language.
+[Sunghyun Cho](./sunghyun-cho) works bilingually (English and Korean) in his [digital brain](./digital-brain). [Extracranial](./extracranial) and [Coscientist](./coscientist) aim to mirror this at system scale by:
 
-[Extracranial](./extracranial) and [Coscientist](./coscientist) are designed to mirror this cognitive capacity at scale. The system should be able to take an idea expressed in one language and connect it to related ideas in another, forming a [multilingual knowledge mesh](./multilingual-knowledge-mesh) that operates as a bilingual or multilingual mind would: with concepts at the center and languages as interchangeable interfaces.
-
-The [Superbrain](./superbrain) vision extends this: even if a human cannot dream in five languages, an externalized cognitive system can hold and recombine knowledge from all of them, creating a laboratory for multilingual thought.
+- linking notes across languages through shared concepts, forming a [multilingual knowledge mesh](./multilingual-knowledge-mesh)
+- preserving [translation fidelity](./translation-fidelity) while flagging [translation nuance loss](./translation-nuance-loss)
+- keeping [provenance](./provenance) so claims can be traced back to their original-language sources

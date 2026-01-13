@@ -20,6 +20,6 @@ Graph components are the building blocks of a [Dialectical Graph](./dialectical-
 
 - [Attack](./attack) — direct challenges to truth
 - [Undercut](./undercut) — challenges to grounds
-- Supports, refines, generalizes, specializes
-- Cites, defines, measures, replicates
+- `supports`, `refines`, `generalizes`, `specializes`
+- `cites`, `defines`, `measures`, `replicates`, `fails_to_replicate`
 - [Contention](./contention) — structured conflict markers

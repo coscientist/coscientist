@@ -3,7 +3,7 @@ title: Multi-AI Consensus Protocol
 description: The 1+4 (human + four AI) writing and verification system
 ---
 
-The Multi-AI Consensus Protocol is a collaboration workflow in which the [Galarch](./galarch) plus multiple mainstream AIs work together to reduce single-model hallucination risk and prevent [Encyclopedia Meltdown](./encyclopedia-meltdown).
+The Multi-AI Consensus Protocol is a collaboration workflow in which the [Operator](./operator) plus multiple mainstream AIs work together to reduce single-model hallucination risk and prevent [Encyclopedia Meltdown](./encyclopedia-meltdown).
 
 In the "1+4" variant, one human coordinates four AI systems (as of December 2025: ChatGPT, Gemini, Claude, and Grok). Each AI has independent conversational memory, but the protocol treats memory diversity as a weak proxy for evidence diversity; what matters is forcing explicit disagreement and traceability.
 

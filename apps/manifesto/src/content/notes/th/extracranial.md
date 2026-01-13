@@ -1,0 +1,12 @@
+---
+title: นอกกะโหลก (Extracranial)
+description: สมองดิจิทัลส่วนตัวและระบบการเผยแพร่ของ Sunghyun Cho
+---
+
+Extracranial คือสมองดิจิทัลส่วนตัวของ [Sunghyun Cho](./sunghyun-cho): ระบบเผยแพร่แบบเว็บไซต์สแตติก (static-site publishing system) ที่มีลิงก์อัตโนมัติ (รวมถึง backlinks) และการเสื่อมสภาพแบบควบคุม (controlled decay) โน้ตเก่าจะค่อย ๆ เลือนหายไป เว้นแต่จะถูกตั้งใจให้คงความเขียวสด (evergreen) ไว้โดยชัดเจน มันถูกอธิบายว่าเป็น “เอ็กโซสูท (Exosuit) สำหรับ [Superbrains](./superbrain)”
+
+ระบบนี้นำหลักการของ [Memex แบบหลายภาษา](./multilingual-memex) มาใช้: การตรวจจับภาษาอัตโนมัติ, แท็ก hreflang สำหรับเนื้อหาตามโลแคล (locale-specific content) และการทำงานแบบสองภาษาในอังกฤษและเกาหลี สิ่งนี้สนับสนุนวิสัยทัศน์ของ [Sunghyun Cho](./sunghyun-cho) ในการไป [ข้าม Sprachraums](./across-the-sprachraums) ซึ่งความรู้ไม่ถูกจำกัดด้วยขอบเขตของภาษาใดภาษาหนึ่ง สถาปัตยกรรมนี้ทำให้สามารถเขียนเนื้อหาในภาษาเดียวและกระจายไปทั่วโลกโดยอัตโนมัติในหลายภาษาได้
+
+มันเติบโตมาจาก [Project Aldehyde](./project-aldehyde) และแนวคิดใน [Creating Next-gen Digital Brains](./creating-next-gen-digital-brains)
+
+อ้างอิง: https://cho.sh/r/000000.

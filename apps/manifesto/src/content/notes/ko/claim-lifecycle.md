@@ -1,0 +1,27 @@
+---
+title: 주장 생명주기
+description: 주장이 잠정 가설에서 견고한 지식 또는 폐기로 진화하는 방식
+---
+
+주장 생명주기는 [주장](./claim)이 [변증법적 그래프](./dialectical-graph)를 통해 초기 입력에서 시작하여, 최종적으로 견고한 지식, 반박된 오류, 또는 시대에 뒤떨어진 역사적 유물로 자리 잡기까지 어떻게 진화하는지를 설명한다.
+
+## 단계
+
+1. **입력(Entry)** — 출처에서 주장을 추출하고 잠정적 상태를 부여한다
+2. **정규화(Normalization)** — 명시적인 [범위](./scope)와 [가정](./assumption)을 갖춘 [정규화된 명제](./normalized-proposition)로 다시 작성한다
+3. **도전(Challenge)** — [공격](./attack), [언더컷(undercut)](./undercut), [반례](./counterexample)에 노출된다
+4. **해결(Resolution)** — 범위를 좁히고, 가정을 명확히 하거나, 주장을 반박한다
+5. **안정화(Stabilization)** — 조건부 지지, 견고함, 또는 반박됨 상태에 도달한다
+6. **쇠퇴(Decay)** — [정의 표류](./definition-drift) 또는 [의미 상실](./meaning-loss)을 통해 쓸모없게 될 수 있다
+
+## 상태 분류 체계
+
+[주장 상태 분류 체계](./claim-status-taxonomy)를 참고하라.
+
+## 전이 규칙
+
+[상태 전이 규칙](./status-transition-rules)을 참고하라.
+
+## 품질 측정
+
+다차원 평가를 위해 [신뢰도](./confidence)를 참고하라.

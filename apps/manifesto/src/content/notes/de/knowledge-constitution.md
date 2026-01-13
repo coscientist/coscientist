@@ -1,0 +1,10 @@
+---
+title: Wissensverfassung
+description: Die epistemische Protokollschicht als Regelwerk dafür, wie Behauptungen Autorität erlangen
+---
+
+Eine Wissensverfassung ist die Menge an Regeln, die festlegen, wie [Behauptungen](./claim) in ein Wissenssystem gelangen, wie sie angefochten werden und welche [Nachvollziehbarkeit](./traceability) erforderlich ist, bevor sie Autorität erlangen. Sie funktioniert wie eine politische Verfassung: Sie spezifiziert Befugnisse, Grenzen und Verfahren statt Inhalte.
+
+Die [epistemische Protokollschicht](./epistemic-protocol-layer) ist die Verfassung von [Coscientist](./coscientist). Sie verpflichtet sich zu Souveränität (das endgültige Urteil verbleibt beim [Operator](./operator)), Nachvollziehbarkeit (die [Verantwortungslinie](./responsibility-line) wird gewahrt) und adversarieller Validierung (wie bei der [rebuttal-first search](./rebuttal-first-search)). Das sind Einschränkungen des Prozesses, nicht der Schlussfolgerungen.
+
+Eine Verfassung ist wichtig, weil sie jede einzelne Behauptung überdauert. Fakten ändern sich; die Regeln zur Bewertung von Fakten sollten stabil genug sein, um über Domänen und Zeit hinweg anwendbar zu bleiben.

@@ -1,0 +1,14 @@
+---
+title: ज्ञान संश्लेषण
+description: द्वंद्वात्मक ज्ञान प्रणालियों में संश्लेषण औसत निकालने से कैसे भिन्न है
+---
+
+ज्ञान संश्लेषण (Knowledge synthesis) वह प्रक्रिया है जो पुनःप्राप्ति (retrieval) के बाद तब होती है जब आपको असंगत स्रोतों को तुलनीय बनाना पड़ता है। यह औसत निकालना नहीं है। यह पूर्वधारणाओं (premises), परिभाषाओं (definitions), और परिधि/दायरे (scope) को संरेखित (align) करना है ताकि असहमतियाँ शोर (noise) के बजाय स्पष्ट वस्तुओं (explicit objects) के रूप में सामने आएँ।
+
+मानक [RAG](./rag) पुनःप्राप्ति में मजबूत और संश्लेषण में कमजोर है क्योंकि इसके भीतर [contention](./contention) नाम की कोई आंतरिक वस्तु नहीं होती। एक [Dialectical Graph](./dialectical-graph) में contention प्रथम-श्रेणी (first-class) होता है, इसलिए प्रणाली असंगतता (incompatibility) को उसके कारणों में विघटित (decompose) कर सकती है: परिभाषा में अंतर, सैम्पलिंग (sampling) में अंतर, विधि (method) में अंतर, दायरे (scope) में अंतर, या समय-चालित [nonstationarity](./nonstationarity)।
+
+समाधान (resolution) विरले ही एक ही वाक्य होता है। यह अक्सर एक [branched resolution map](./branched-resolution-map) होता है: यदि अलग-अलग परिभाषाएँ या दायरे अलग-अलग निष्कर्षों तक ले जाते हैं, तो यह दिखावा करने के बजाय कि एक ही औसत उत्तर है, सही परत (layer) पर शाखाकरण (branching) दर्ज करें। [Issue nodes](./issue-node) यह समेटते हैं कि क्या किससे टकराता है और उन शर्तों (conditions) को दर्ज करते हैं जिनके अंतर्गत मुद्दे का समाधान किया जा सकता है।
+
+लक्ष्य विरोधाभासों का एक मानचित्र है, साथ ही स्पष्ट समाधान-शर्तें भी, ताकि भविष्य का कार्य ज्ञान को पुनर्लेखन (rewriting) के बजाय पुनर्व्यवस्था (rearrangement) द्वारा अपडेट कर सके। यही कारण है कि [Coscientist](./coscientist) में contemplation AI का लक्ष्य दस्तावेज़ों को “टकराने” देना है: issue clusters बनाना, शर्तों को परिष्कृत करना, संरचित प्रत्युत्तर (structured rebuttals) तैयार करना, और तुलना के लिए स्पष्ट निर्देशांक प्रणालियाँ (coordinate systems) बनाना।
+
+क्योंकि [LLMs](./llm) कई भाषाएँ पढ़ सकते हैं, संश्लेषण [cross-linguistic synthesis](./cross-linguistic-synthesis) तक भी विस्तृत होता है: अलग-अलग भाषाओं में स्रोतों को खींचना और उनके दावों को एक [language-agnostic index](./language-agnostic-indexing) में संरेखित करना। [Translation nuance loss](./translation-nuance-loss) को ट्रैक और हल करने के लिए असंगतता का एक और रूप माना जाता है।

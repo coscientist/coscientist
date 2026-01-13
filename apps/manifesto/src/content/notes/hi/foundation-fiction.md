@@ -1,0 +1,20 @@
+---
+title: फाउंडेशन फ़िक्शन
+description: असिमोव-प्रेरित अवधारणाएँ जो Coscientist की दृष्टि को आकार देती हैं
+---
+
+फाउंडेशन फ़िक्शन से आशय [Isaac Asimov](./isaac-asimov) की *Foundation* शृंखला की उन अवधारणाओं से है जो [Coscientist](./coscientist) की दृष्टि को दिशा देती हैं। काल्पनिक [Encyclopedia Galactica](./encyclopedia-galactica) ज्ञान-संरक्षण (knowledge preservation) और क्षमता (capability) के बारे में सोचने के लिए एक संदर्भ-बिंदु (touchstone) है।
+
+## मुख्य अवधारणाएँ
+
+- [Encyclopedia Galactica](./encyclopedia-galactica) — काल्पनिक ज्ञान-भंडार
+- [Psychohistory](./psychohistory) — सभ्यताओं का असिमोव का सांख्यिकीय विज्ञान
+- [Seldon Plan](./seldon-plan) — [Hari Seldon](./hari-seldon) की दीर्घ-कालिक रणनीति
+- [Dark Night of the Soul](./dark-night-of-the-soul) — सभ्यतागत या ज्ञानमीमांसात्मक (epistemic) पतन का रूपक
+- [Knowledge Ark](./knowledge-ark) — पतन के बाद भी टिके रहने के लिए डिज़ाइन किए गए भंडार
+
+## प्रमुख अंतर्दृष्टि
+
+- [From Preservation to Capability](./from-preservation-to-capability) — समझ (understanding) को केवल सहेजने से आगे बढ़कर उसे उत्पन्न करने की ओर बदलाव
+
+काल्पनिक विश्वकोश एक डिज़ाइन लक्ष्य है: एक ऐसी वास्तविक प्रणाली बनाने के लिए क्या चाहिए जो AI-परिपूर्ण (AI-saturated) ज्ञान-परिवेश (epistemic environment) में भी टिक सके और फिर भी वास्तविक ज्ञान उत्पन्न कर सके?

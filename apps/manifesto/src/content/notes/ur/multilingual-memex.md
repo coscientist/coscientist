@@ -1,0 +1,35 @@
+---
+title: کثیر اللسانی میمیکس
+description: خودکار ترجمہ سپورٹ کے ساتھ زبان سے آگاہ ذاتی علم کا نظام
+---
+
+کثیر اللسانی میمیکس ایک ذاتی علم کا نظام ہے جو فطری طور پر متعدد زبانوں میں مواد کی حمایت کرتا ہے، جس میں خودکار زبان کی شناخت، ترجمہ، اور بین اللسانی ربط (cross-linguistic linking) شامل ہے۔ یہ [Vannevar Bush](./vannevar-bush) کے اصل [Memex](./memex) کے تصور کو ایسی دنیا تک وسعت دیتا ہے جہاں علم زبان کی سرحدوں کی پابندی نہیں کرتا۔
+
+[Sunghyun Cho](./sunghyun-cho) کی [Extracranial](./extracranial) اس تصور کی ایک عملی تعبیر ہے۔ اس میں خودکار زبان کی شناخت، hreflang ٹیگز کے ذریعے لوکیل (locale) کے مطابق ترسیل، اور یہ صلاحیت شامل ہے کہ آپ ایک زبان میں لکھیں جبکہ دیگر زبانوں میں ترسیل کا کام ترجمہ نظام سنبھالیں۔
+
+اس کے معماری (architectural) مضمرات خاصے اہم ہیں۔ انٹرفیس عناصر، تلاش (search)، اور ربط (linkages) — سبھی کو زبان کو مدِنظر رکھنا ہوگا:
+
+- کوریائی میں کی گئی کوئی تلاش متعلقہ مواد تک پہنچے، خواہ وہ اصل میں کوریائی میں لکھا گیا ہو یا انگریزی سے ترجمہ کیا گیا ہو۔
+- بیک لنکس (backlinks) زبانوں کے پار بھی کام کریں۔
+- [responsibility line](./responsibility-line) کو صرف یہ نہیں ٹریک کرنا چاہیے کہ کس نے کیا دعویٰ کیا، بلکہ یہ بھی کہ کس زبان میں اور کس ترجمہ طریقہ کے ذریعے۔
+
+اسی لیے [Extracranial](./extracranial) ترجموں کو بہتر بنانے کے لیے GitHub کے ذریعے کمیونٹی کی شراکت کو اہم سمجھتا ہے: مشینی ترجمہ کثیر اللسانی مواد کو ممکن بناتا ہے، مگر [translation fidelity](./translation-fidelity) برقرار رکھنے کے لیے انسانی نظرِ ثانی ضروری ہے۔ کثیر اللسانی میمیکس کوئی حل شدہ مسئلہ نہیں بلکہ خودکار نظاموں اور انسانی فیصلہ سازی کے درمیان ایک جاری تعاون ہے۔
+
+[The output seems truncated in the last paragraph: it ended with "[". Need to provide full translation of entire markdown, preserving links. Must include final paragraph about Coscientist and Dialectical Graph. Ensure internal link text translated, slug unchanged. Avoid partial bracket. Also translate "Coscientist", maybe keep as proper noun with Urdu transliteration and English in parentheses if needed. Provide the full final output only.---
+title: کثیر اللسانی میمیکس
+description: خودکار ترجمہ سپورٹ کے ساتھ زبان سے آگاہ ذاتی علم کا نظام
+---
+
+کثیر اللسانی میمیکس ایک ذاتی علم کا نظام ہے جو فطری طور پر متعدد زبانوں میں مواد کی حمایت کرتا ہے، جس میں خودکار زبان کی شناخت، ترجمہ، اور بین اللسانی ربط (cross-linguistic linking) شامل ہے۔ یہ [Vannevar Bush](./vannevar-bush) کے اصل [Memex](./memex) کے تصور کو ایسی دنیا تک وسعت دیتا ہے جہاں علم زبان کی سرحدوں کی پابندی نہیں کرتا۔
+
+[Sunghyun Cho](./sunghyun-cho) کی [Extracranial](./extracranial) اس تصور کی ایک عملی شکل ہے۔ اس میں خودکار زبان کی شناخت، hreflang ٹیگز کے ذریعے لوکیل (locale) کے مطابق ترسیل، اور یہ صلاحیت شامل ہے کہ آپ ایک زبان میں لکھیں جبکہ دیگر زبانوں میں ترسیل کا کام ترجمہ نظام سنبھالیں۔
+
+اس کے معماری (architectural) مضمرات خاصے اہم ہیں۔ انٹرفیس عناصر، تلاش (search)، اور ربط (linkages) — سبھی کو زبان کو مدِنظر رکھنا ہوگا:
+
+- کوریائی میں کی گئی کوئی تلاش متعلقہ مواد تک پہنچے، خواہ وہ اصل میں کوریائی میں لکھا گیا ہو یا انگریزی سے ترجمہ کیا گیا ہو۔
+- بیک لنکس (backlinks) زبانوں کے پار بھی کام کریں۔
+- [responsibility line](./responsibility-line) کو صرف یہ نہیں ٹریک کرنا چاہیے کہ کس نے کیا دعویٰ کیا، بلکہ یہ بھی کہ کس زبان میں اور کس ترجمہ طریقہ کے ذریعے۔
+
+اسی لیے [Extracranial](./extracranial) ترجموں کو بہتر بنانے کے لیے GitHub کے ذریعے کمیونٹی کی شراکت کو اہم سمجھتا ہے: مشینی ترجمہ کثیر اللسانی مواد کو ممکن بناتا ہے، مگر [translation fidelity](./translation-fidelity) برقرار رکھنے کے لیے انسانی نظرِ ثانی ضروری ہے۔ کثیر اللسانی میمیکس کوئی حل شدہ مسئلہ نہیں بلکہ خودکار نظاموں اور انسانی فیصلہ سازی کے درمیان ایک جاری تعاون ہے۔
+
+[کوسائنسٹسٹ (Coscientist)](./coscientist) کے لیے، کثیر اللسانی میمیکس کثیر اللسانی [جدلیاتی گراف (Dialectical Graph)](./dialectical-graph) بن جاتا ہے: ایک ایسی ساخت جو کسی بھی زبان سے [دعویٰ (claims)](./claim)، [شواہد کے حصے (evidence spans)](./evidence-span)، اور باہمی تعلقات محفوظ کرتی ہے، اور زبان کو ایک بنیادی حد کے بجائے میٹا ڈیٹا کے طور پر دیکھتی ہے۔

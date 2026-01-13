@@ -1,0 +1,34 @@
+---
+title: व्यक्तिगत ज्ञान का विकास
+description: व्यक्तिगत ज्ञान प्रबंधन उपकरणों और विचारों की ऐतिहासिक प्रगति
+---
+
+व्यक्तिगत ज्ञान का विकास (Personal knowledge evolution) व्यक्तिगत ज्ञान को प्रबंधित करने वाले उपकरणों और विचारों के विकास का पता लगाता है—20वीं शताब्दी के मध्य की कल्पनाओं से लेकर समकालीन प्रणालियों तक।
+
+## आधारभूत दृष्टि
+
+- [As We May Think](./as-we-may-think) — [Vannevar Bush](./vannevar-bush) का 1945 का निबंध
+- [Memex](./memex) — Bush द्वारा प्रस्तावित व्यक्तिगत ज्ञान मशीन
+
+## वैचारिक ढाँचे
+
+- [Digital Brain](./digital-brain) — एक प्रणाली जो मन (mind) का प्रतिबिंब बनाती है और उसे विस्तार देती है
+- [Digital Garden](./digital-garden) — सार्वजनिक, विकसित होते परस्पर-जुड़े नोट्स
+- [Digital Jungle](./digital-jungle) — स्व-संगठित (self-organizing), कम-घर्षण (low-friction) ज्ञान-स्थान
+- [Second Brain](./second-brain) — व्यक्तिगत ज्ञान प्रबंधन अभ्यास
+
+## कार्यान्वयन
+
+- [Project Aldehyde](./project-aldehyde) — [Sunghyun Cho](./sunghyun-cho) का शुरुआती प्रयास
+- [Extracranial](./extracranial) — Cho की व्यक्तिगत डिजिटल ब्रेन प्रणाली
+- [Multilingual Memex](./multilingual-memex) — ऑटो-ट्रांसलेशन (auto-translation) वाला, भाषा-सचेत (language-aware) ज्ञान तंत्र
+- [Project PIRI](./project-piri) — रद्द की गई अनुवाद पहल (AI कोडिंग एजेंट्स द्वारा अप्रचलित)
+
+## डिज़ाइन सिद्धांत
+
+- [Friction as Enemy](./friction-as-enemy) — कैप्चर को अधिकतम करने के लिए ओवरहेड को न्यूनतम करना
+
+## Coscientist तक पुल
+
+- [From Memex to Dialectical Graph](./from-memex-to-dialectical-graph)
+- [Personal to Institutional Knowledge](./personal-to-institutional-knowledge)

@@ -3,7 +3,7 @@ title: Human Agency in AI
 description: Principles and mechanisms for keeping humans in control of AI-assisted knowledge work
 ---
 
-Human agency in AI is the cluster of principles and mechanisms that keep the human [Operator](./operator) in control of knowledge work, even when AI performs substantial [contemplation labor](./contemplation-labor).
+Human agency in [AI](./ai) is the cluster of principles and mechanisms that keep the human [Operator](./operator) in control of knowledge work, even when AI performs substantial [contemplation labor](./contemplation-labor).
 
 ## Core Principles
 

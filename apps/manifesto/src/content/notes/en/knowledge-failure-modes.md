@@ -24,5 +24,6 @@ Knowledge failure modes are the ways that knowledge systems degrade, collapse, o
 
 ## Semantic Failures
 
+- [Semantic Drift](./semantic-drift) — changes in meaning over time
 - [Definition Drift](./definition-drift) — meaning shifts over time
 - [Meaning Loss](./meaning-loss) — claims becoming obsolete as terms change

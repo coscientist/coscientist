@@ -5,6 +5,19 @@
 
 :root {
   --pane-spine-width: 2.5rem;
+  --pane-min-width: 20rem;
+
+  /* Z-index scale */
+  --z-base: 0;
+  --z-pane: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-popover: 500;
+  --z-toast: 600;
+
+  /* Colors */
   --background: var(--color-white);
   --foreground: var(--color-neutral-800);
   --accent: --alpha(var(--color-black) / 4%);
@@ -18,7 +31,11 @@
   --info-foreground: var(--color-blue-700);
   --input: --alpha(var(--color-black) / 10%);
   --muted: --alpha(var(--color-black) / 4%);
-  --muted-foreground: color-mix(in srgb, var(--color-neutral-500) 90%, var(--color-black));
+  --muted-foreground: color-mix(
+    in srgb,
+    var(--color-neutral-500) 90%,
+    var(--color-black)
+  );
   --popover: var(--color-white);
   --popover-foreground: var(--color-neutral-800);
   --primary: var(--color-neutral-800);
@@ -30,12 +47,25 @@
   --success-foreground: var(--color-emerald-700);
   --warning: var(--color-amber-500);
   --warning-foreground: var(--color-amber-700);
+  --link: var(--color-blue-600);
+  --link-visited: var(--color-blue-800);
 }
 
 @theme inline {
   --width-pane-spine: var(--pane-spine-width);
+  --width-pane-min: var(--pane-min-width);
+  --z-base: var(--z-base);
+  --z-pane: var(--z-pane);
+  --z-dropdown: var(--z-dropdown);
+  --z-sticky: var(--z-sticky);
+  --z-overlay: var(--z-overlay);
+  --z-modal: var(--z-modal);
+  --z-popover: var(--z-popover);
+  --z-toast: var(--z-toast);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-link: var(--link);
+  --color-link-visited: var(--link-visited);
   --font-sans: var(--font-faculty-glyphic);
   --font-mono: var(--font-geist-mono);
   --animate-skeleton: skeleton 2s -1s infinite linear;
@@ -63,8 +93,8 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
   @keyframes skeleton {
-  to {
-    background-position: -200% 0;
+    to {
+      background-position: -200% 0;
     }
   }
 }
@@ -90,18 +120,30 @@ body {
 .dark {
   --accent: --alpha(var(--color-white) / 4%);
   --accent-foreground: var(--color-neutral-100);
-  --background: color-mix(in srgb, var(--color-neutral-950) 95%, var(--color-white));
+  --background: color-mix(
+    in srgb,
+    var(--color-neutral-950) 95%,
+    var(--color-white)
+  );
   --border: --alpha(var(--color-white) / 6%);
   --card: color-mix(in srgb, var(--background) 98%, var(--color-white));
   --card-foreground: var(--color-neutral-100);
-  --destructive: color-mix(in srgb, var(--color-red-500) 90%, var(--color-white));
+  --destructive: color-mix(
+    in srgb,
+    var(--color-red-500) 90%,
+    var(--color-white)
+  );
   --destructive-foreground: var(--color-red-400);
   --foreground: var(--color-neutral-100);
   --info: var(--color-blue-500);
   --info-foreground: var(--color-blue-400);
   --input: --alpha(var(--color-white) / 8%);
   --muted: --alpha(var(--color-white) / 4%);
-  --muted-foreground: color-mix(in srgb, var(--color-neutral-500) 90%, var(--color-white));
+  --muted-foreground: color-mix(
+    in srgb,
+    var(--color-neutral-500) 90%,
+    var(--color-white)
+  );
   --popover: color-mix(in srgb, var(--background) 98%, var(--color-white));
   --popover-foreground: var(--color-neutral-100);
   --primary: var(--color-neutral-100);
@@ -113,6 +155,8 @@ body {
   --success-foreground: var(--color-emerald-400);
   --warning: var(--color-amber-500);
   --warning-foreground: var(--color-amber-400);
+  --link: var(--color-blue-400);
+  --link-visited: var(--color-blue-300);
 }
 
 @layer base {
@@ -122,10 +166,63 @@ body {
   body {
     @apply bg-background text-foreground;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply text-balance;
   }
-  p, li {
+  p,
+  li {
     @apply text-pretty;
+  }
+}
+
+@layer components {
+  .prose-note {
+    @apply max-w-prose;
+
+    & h1 {
+      @apply text-[1.75rem] font-semibold leading-tight mb-4 text-foreground text-balance;
+    }
+    & h2 {
+      @apply text-[1.375rem] font-medium mt-6 mb-3 text-foreground text-balance;
+    }
+    & h3 {
+      @apply text-lg font-medium mt-5 mb-2 text-foreground text-balance;
+    }
+    & p {
+      @apply text-base leading-relaxed mb-4 text-foreground/90 text-pretty;
+    }
+    & ul,
+    & ol {
+      @apply mb-4 pl-6;
+    }
+    & li {
+      @apply text-base leading-relaxed mb-2 text-foreground/90 text-pretty;
+    }
+    & code {
+      @apply bg-muted px-1.5 py-0.5 rounded text-sm font-mono;
+    }
+    & pre {
+      @apply bg-muted p-4 rounded-lg overflow-x-auto mb-4;
+    }
+    & pre code {
+      @apply bg-transparent p-0;
+    }
+    & blockquote {
+      @apply border-l-[3px] border-border pl-4 ml-0 mb-4 text-muted-foreground italic;
+    }
+    & a {
+      @apply text-link no-underline border-b border-transparent transition-colors;
+    }
+    & a:hover {
+      @apply border-link;
+    }
+    & a:visited {
+      @apply text-link-visited;
+    }
   }
 }

@@ -9,6 +9,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { NoteContent } from "./note-content";
 import { BacklinksSection } from "./backlinks-section";
 import { usePaneCollapse } from "./pane-container";
+import { PaneSpine } from "./pane-spine";
 
 interface NotePaneProps {
   note: Note;
@@ -46,12 +47,6 @@ export function NotePane({
     [onLinkClick, index],
   );
 
-  const handleExpandClick = useCallback(() => {
-    if (isCollapsed) {
-      onExpand?.();
-    }
-  }, [isCollapsed, onExpand]);
-
   const paneMotion = shouldReduceMotion
     ? { initial: { opacity: 0 }, animate: { opacity: 1 }, exit: { opacity: 0 } }
     : {
@@ -84,7 +79,7 @@ export function NotePane({
       exit={paneMotion.exit}
       transition={paneTransition}
       className={cn(
-        "flex-shrink-0 w-full md:w-1/3 md:min-w-80 h-full overflow-hidden",
+        "flex-shrink-0 w-full md:w-1/3 md:min-w-pane-min h-full overflow-hidden",
         "bg-card border-l border-border",
         "sticky left-0",
         "first:border-l-0",
@@ -93,7 +88,7 @@ export function NotePane({
       )}
       style={{
         left: `calc(${index} * var(--pane-spine-width))`,
-        zIndex: 10 + index,
+        zIndex: `calc(var(--z-pane) + ${index})`,
       }}
     >
       <AnimatePresence>
@@ -103,21 +98,8 @@ export function NotePane({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={fadeTransition}
-            className="absolute left-0 top-0 bottom-0 w-pane-spine flex flex-col items-center pt-2 bg-card z-10 gap-2"
-            aria-hidden="true"
           >
-            <span className="size-5 rounded-full bg-primary/10 text-primary text-xs font-semibold flex items-center justify-center tabular-nums flex-shrink-0">
-              {index + 1}
-            </span>
-            <span
-              className="text-sm font-medium text-muted-foreground whitespace-nowrap"
-              style={{
-                writingMode: "vertical-lr",
-                transform: "rotate(180deg)",
-              }}
-            >
-              {note.title}
-            </span>
+            <PaneSpine index={index} title={note.title} />
           </motion.div>
         )}
       </AnimatePresence>
@@ -125,22 +107,18 @@ export function NotePane({
       <motion.div
         animate={{ x: isCollapsed ? "var(--pane-spine-width)" : 0 }}
         transition={fadeTransition}
-        onClick={handleExpandClick}
-        onKeyDown={(e) => {
-          if (isCollapsed && (e.key === "Enter" || e.key === " ")) {
-            e.preventDefault();
-            onExpand?.();
-          }
-        }}
-        className={cn(
-          "absolute top-0 left-0 bottom-0 w-full bg-card group",
-          isCollapsed && "cursor-pointer",
-        )}
-        role={isCollapsed ? "button" : undefined}
-        tabIndex={isCollapsed ? 0 : -1}
-        aria-expanded={isCollapsed ? false : undefined}
-        aria-label={isCollapsed ? `Expand ${note.title}` : undefined}
+        className="absolute top-0 left-0 bottom-0 w-full bg-card group"
       >
+        {isCollapsed && (
+          <button
+            type="button"
+            onClick={onExpand}
+            className="absolute inset-0 z-overlay cursor-pointer"
+            aria-label={`Expand ${note.title}`}
+          >
+            <span className="sr-only">Expand pane</span>
+          </button>
+        )}
         <AnimatePresence>
           {isCollapsed && (
             <motion.div
@@ -148,13 +126,13 @@ export function NotePane({
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={fadeTransition}
-              className="absolute left-0 top-0 bottom-0 w-px bg-border z-10"
+              className="absolute left-0 top-0 bottom-0 w-px bg-border z-sticky"
             />
           )}
         </AnimatePresence>
         {!isCollapsed && (
           <>
-            <div className="absolute top-2 left-2 z-20">
+            <div className="absolute top-2 left-2 z-sticky">
               <span className="size-5 rounded-full bg-primary/10 text-primary text-xs font-semibold flex items-center justify-center tabular-nums">
                 {index + 1}
               </span>
@@ -163,7 +141,7 @@ export function NotePane({
               <div
                 {...dragHandleProps}
                 className={cn(
-                  "absolute top-2 left-1/2 -translate-x-1/2 z-20",
+                  "absolute top-2 left-1/2 -translate-x-1/2 z-sticky",
                   "hidden md:flex",
                   "size-6 rounded-md items-center justify-center cursor-grab active:cursor-grabbing",
                   "text-muted-foreground hover:text-foreground hover:bg-muted",
@@ -184,7 +162,7 @@ export function NotePane({
               onClose?.();
             }}
             className={cn(
-              "absolute top-4 right-4 z-20",
+              "absolute top-4 right-4 z-sticky",
               "size-7 rounded-md flex items-center justify-center",
               "text-muted-foreground hover:text-foreground hover:bg-muted",
               "opacity-0 group-hover:opacity-100 focus:opacity-100",

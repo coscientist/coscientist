@@ -1,5 +1,5 @@
 {
-  "name": "coscientist",
+  "name": "@coscientist/monorepo",
   "private": true,
   "scripts": {
     "build": "turbo run build",

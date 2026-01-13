@@ -1,4 +1,4 @@
-import { ArrowPathIcon } from "@heroicons/react/24/outline";
+import { IconArrowRotateClockwiseOutline18 } from "nucleo-ui-outline-18";
 import { cn } from "@/lib/utils";
 
 const sizeClasses = {
@@ -12,11 +12,14 @@ function Spinner({
   className,
   size = "default",
   ...props
-}: Omit<React.ComponentProps<typeof ArrowPathIcon>, "size"> & {
+}: Omit<
+  React.ComponentProps<typeof IconArrowRotateClockwiseOutline18>,
+  "size"
+> & {
   size?: keyof typeof sizeClasses;
 }) {
   return (
-    <ArrowPathIcon
+    <IconArrowRotateClockwiseOutline18
       aria-label="Loading"
       className={cn("animate-spin", sizeClasses[size], className)}
       role="status"

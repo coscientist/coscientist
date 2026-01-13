@@ -15,14 +15,6 @@ import {
 } from "@/lib/animations";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import {
-  Frame,
-  FrameHeader,
-  FrameTitle,
-  FrameDescription,
-  FramePanel,
-  FrameFooter,
-} from "@/components/ui/frame";
 import { NoteContent } from "./note-content";
 import { BacklinksSection } from "./backlinks-section";
 import { usePaneCollapse } from "./pane-container";
@@ -78,16 +70,34 @@ export function NotePane({
       transition={transition}
       className={cn(
         "flex-shrink-0 w-full md:w-1/3 md:min-w-pane-min h-full overflow-hidden",
-        "bg-background border-l border-border",
+        "bg-background border-l border-border relative group/pane",
         "sticky left-0",
         "snap-start md:snap-align-none",
-        isFocused && "ring-2 ring-primary ring-inset",
       )}
       style={{
         left: `calc(${index} * var(--pane-spine-width))`,
         zIndex: `calc(var(--z-pane) + ${index})`,
       }}
     >
+      <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
+        <div
+          className="absolute -top-[300px] -right-[100px] w-[800px] h-[800px] opacity-0 dark:opacity-100 transition-opacity duration-1000"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%)",
+            filter: "blur(80px)",
+          }}
+        />
+        <div
+          className="absolute -bottom-[300px] -left-[100px] w-[800px] h-[800px] opacity-0 dark:opacity-100 transition-opacity duration-1000"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(59, 130, 246, 0.05) 0%, transparent 70%)",
+            filter: "blur(80px)",
+          }}
+        />
+      </div>
+
       <AnimatePresence>
         {isCollapsed && (
           <motion.div
@@ -97,6 +107,7 @@ export function NotePane({
             exit="hidden"
             variants={spineVariants}
             transition={quickTransition}
+            className="absolute inset-0 z-10"
           >
             <PaneSpine
               index={index}
@@ -111,7 +122,7 @@ export function NotePane({
       </AnimatePresence>
 
       <motion.div
-        className="absolute top-0 left-0 bottom-0 w-full bg-background group"
+        className="absolute top-0 left-0 bottom-0 w-full h-full"
         animate={isCollapsed ? "collapsed" : "expanded"}
         variants={paneContentVariants}
         transition={transition}
@@ -130,32 +141,32 @@ export function NotePane({
           <div className="absolute left-0 top-0 bottom-0 w-px bg-border z-sticky" />
         )}
 
-        <ScrollArea className="h-full">
-          <Frame className="min-h-[calc(100%-1rem)] rounded-none">
-            <FrameHeader>
-              <FrameTitle className="text-xl font-semibold">
+        <ScrollArea className="h-full relative z-0">
+          <div className="min-h-full flex flex-col">
+            <header className="px-8 pt-8 pb-4">
+              <h1 className="text-3xl font-normal tracking-tight text-foreground/90 dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-br dark:from-white dark:via-white dark:to-neutral-500">
                 {note.title}
-              </FrameTitle>
+              </h1>
               {note.description && (
-                <FrameDescription className="mt-1">
+                <p className="mt-2 text-lg text-muted-foreground/80 font-normal">
                   {note.description}
-                </FrameDescription>
+                </p>
               )}
-            </FrameHeader>
+            </header>
 
-            <FramePanel className="p-0">
+            <div className="flex-1">
               <NoteContent note={note} onLinkClick={handleLinkClick} />
-            </FramePanel>
+            </div>
 
             {backlinks.length > 0 && (
-              <FrameFooter className="px-5 py-4">
+              <footer className="px-8 py-6 border-t border-border/40">
                 <BacklinksSection
                   backlinks={backlinks}
                   onBacklinkClick={handleLinkClick}
                 />
-              </FrameFooter>
+              </footer>
             )}
-          </Frame>
+          </div>
         </ScrollArea>
 
         <AnimatePresence>
@@ -171,16 +182,14 @@ export function NotePane({
                 onClose?.();
               }}
               className={cn(
-                "absolute top-2 left-2.5 z-overlay",
-                "size-5 rounded-full flex items-center justify-center",
-                "bg-primary/10 text-primary text-xs font-semibold tabular-nums font-mono",
-                "group-hover:bg-red-500 group-hover:text-white",
-                "transition-colors cursor-pointer",
+                "absolute top-4 right-4 z-overlay",
+                "size-8 rounded-full flex items-center justify-center",
+                "bg-transparent hover:bg-muted text-muted-foreground transition-colors",
+                "cursor-pointer",
               )}
               aria-label={t("closeNote", { title: note.title })}
             >
-              <span className="group-hover:hidden">{index}</span>
-              <XMarkIcon className="size-3 hidden group-hover:block" />
+              <XMarkIcon className="size-5" />
             </motion.button>
           )}
         </AnimatePresence>

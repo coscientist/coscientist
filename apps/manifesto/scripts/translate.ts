@@ -221,8 +221,12 @@ RULES:
   return response.output_text.trim();
 }
 
+// Get the directory where this script is located
+const SCRIPT_DIR = import.meta.dirname;
+const PROJECT_ROOT = path.resolve(SCRIPT_DIR, "..");
+
 async function translateUI(locales: string[]) {
-  const messagesDir = path.join(process.cwd(), "messages");
+  const messagesDir = path.join(PROJECT_ROOT, "messages");
   await fs.mkdir(messagesDir, { recursive: true });
 
   console.log("Translating UI strings...\n");
@@ -268,7 +272,7 @@ async function translateUI(locales: string[]) {
 }
 
 async function translateMarkdown(locales: string[]) {
-  const notesDir = path.join(process.cwd(), "src/content/notes");
+  const notesDir = path.join(PROJECT_ROOT, "src/content/notes");
   const enDir = path.join(notesDir, "en");
 
   const files = await fs.readdir(enDir);

@@ -15,6 +15,7 @@ import "../globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LanguageSwitcher } from "@/components/language-switcher";
+import { Logo } from "@/components/logo";
 import { Link } from "@/i18n/navigation";
 import { routing, getDirection, type Locale } from "@/i18n/routing";
 
@@ -63,11 +64,15 @@ export default async function LocaleLayout({ children, params }: Props) {
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider defaultTheme="system" storageKey="manifesto-theme">
             <header className="h-16 flex items-center justify-between px-6 bg-card border-b border-border sticky top-0 z-50 flex-shrink-0">
-              <h1 className="text-lg font-semibold text-foreground">
-                <Link href="/" className="hover:text-primary transition-colors">
+              <Link
+                href="/"
+                className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+              >
+                <Logo size={20} className="text-foreground" />
+                <span className="text-lg font-semibold text-foreground">
                   {t("title")}
-                </Link>
-              </h1>
+                </span>
+              </Link>
               <div className="flex items-center gap-2">
                 <LanguageSwitcher />
                 <ThemeToggle />

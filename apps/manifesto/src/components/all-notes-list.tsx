@@ -71,7 +71,7 @@ export function AllNotesList({
       transition={transition}
       className={cn(
         "flex-shrink-0 w-full md:w-1/3 md:min-w-pane-min h-full overflow-hidden",
-        "bg-card border-l border-border",
+        "bg-background border-x border-border relative",
         "sticky left-0",
       )}
       style={{
@@ -79,6 +79,25 @@ export function AllNotesList({
         zIndex: `calc(var(--z-pane) + ${index})`,
       }}
     >
+      <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
+        <div
+          className="absolute -top-[300px] -right-[100px] w-[800px] h-[800px] opacity-0 dark:opacity-100 transition-opacity duration-1000"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%)",
+            filter: "blur(80px)",
+          }}
+        />
+        <div
+          className="absolute -bottom-[300px] -left-[100px] w-[800px] h-[800px] opacity-0 dark:opacity-100 transition-opacity duration-1000"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(59, 130, 246, 0.05) 0%, transparent 70%)",
+            filter: "blur(80px)",
+          }}
+        />
+      </div>
+
       <AnimatePresence>
         {isCollapsed && (
           <motion.div
@@ -88,6 +107,7 @@ export function AllNotesList({
             exit="hidden"
             variants={spineVariants}
             transition={quickTransition}
+            className="absolute inset-0 z-10"
           >
             <PaneSpine index={index} title={t("title")} showIndex={false} />
           </motion.div>
@@ -95,7 +115,7 @@ export function AllNotesList({
       </AnimatePresence>
 
       <motion.div
-        className="absolute top-0 left-0 bottom-0 w-full bg-card"
+        className="absolute top-0 left-0 bottom-0 w-full h-full"
         animate={isCollapsed ? "collapsed" : "expanded"}
         variants={paneContentVariants}
         transition={transition}
@@ -114,17 +134,17 @@ export function AllNotesList({
           <div className="absolute left-0 top-0 bottom-0 w-px bg-border z-sticky" />
         )}
 
-        <ScrollArea className="h-full">
-          <div className="sticky top-0 z-sticky bg-card px-8 pt-8 pb-4 border-b border-border">
-            <h2 className="text-lg font-semibold text-foreground">
+        <ScrollArea className="h-full relative z-0">
+          <div className="sticky top-0 z-sticky bg-background/80 backdrop-blur-md px-8 pt-8 pb-4 border-b border-border/50">
+            <h2 className="text-2xl font-normal tracking-tight text-foreground/90 dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-br dark:from-white dark:via-white dark:to-neutral-500">
               {t("title")}
             </h2>
-            <p className="text-xs text-muted-foreground mt-1">
+            <p className="text-sm text-muted-foreground/60 mt-1 font-mono">
               {t("noteCount", { count: notes.length })}
             </p>
           </div>
           <div className="px-8 py-6">
-            <ul className="space-y-0.5">
+            <ul className="space-y-1">
               {sortedNotes.map((note) => {
                 const stackPosition = stackIndexBySlug.get(note.slug);
                 const isInStack = stackPosition !== undefined;
@@ -139,19 +159,26 @@ export function AllNotesList({
                     >
                       <span
                         className={cn(
-                          "flex items-center gap-2 py-1.5 px-2 rounded text-sm transition-colors",
-                          "hover:bg-muted",
-                          isInStack && "bg-primary/10 font-medium text-primary",
+                          "flex items-center gap-3 py-2 px-3 rounded-md text-sm transition-all duration-150",
+                          "hover:bg-muted/50 dark:hover:bg-white/5",
+                          isInStack
+                            ? "bg-primary/5 dark:bg-white/5 text-foreground"
+                            : "text-muted-foreground hover:text-foreground",
                         )}
                       >
-                        {isInStack && (
-                          <span className="flex-shrink-0 size-5 rounded-full bg-primary/20 text-primary text-xs font-semibold flex items-center justify-center tabular-nums">
-                            {(stackPosition ?? 0) + 1}
-                          </span>
-                        )}
-                        <span className={cn(!isInStack && "pl-7")}>
-                          {note.title}
+                        <span
+                          className={cn(
+                            "flex-shrink-0 w-6 text-[10px] font-mono tabular-nums",
+                            isInStack
+                              ? "text-primary dark:text-white/70"
+                              : "text-muted-foreground/30",
+                          )}
+                        >
+                          {isInStack
+                            ? String(stackPosition + 1).padStart(2, "0")
+                            : "—"}
                         </span>
+                        <span className="truncate">{note.title}</span>
                       </span>
                     </PreviewLink>
                   </li>

@@ -1,6 +1,5 @@
 "use client";
 
-import { motion, type Transition } from "motion/react";
 import { cn } from "@/lib/utils";
 
 interface PaneSpineProps {
@@ -39,29 +38,5 @@ export function PaneSpine({
         {title}
       </span>
     </div>
-  );
-}
-
-interface AnimatedPaneSpineProps extends PaneSpineProps {
-  isVisible: boolean;
-  fadeTransition: Transition;
-}
-
-export function AnimatedPaneSpine({
-  isVisible,
-  fadeTransition,
-  ...props
-}: AnimatedPaneSpineProps) {
-  if (!isVisible) return null;
-
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={fadeTransition}
-    >
-      <PaneSpine {...props} />
-    </motion.div>
   );
 }

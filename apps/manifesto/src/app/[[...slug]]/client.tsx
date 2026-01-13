@@ -1,14 +1,6 @@
 "use client";
 
-import {
-  Suspense,
-  useMemo,
-  useState,
-  useEffect,
-  useCallback,
-  useRef,
-} from "react";
-import { AnimatePresence, LayoutGroup } from "motion/react";
+import { Suspense, useMemo, useState, useEffect, useCallback } from "react";
 import type { Note, BacklinkInfo } from "@/lib/types";
 import { useNoteStack } from "@/lib/use-note-stack";
 import { useKeyboardNavigation } from "@/components/keyboard-navigation";
@@ -37,10 +29,6 @@ function NotesContent({
   const [keyboardFocusIndex, setKeyboardFocusIndex] = useState(() =>
     Math.max(0, initialNotesData.length - 1),
   );
-  const dragStateRef = useRef<{
-    index: number;
-    startX: number;
-  } | null>(null);
 
   useEffect(() => {
     if (initialNotesData.length > 0) {
@@ -98,88 +86,22 @@ function NotesContent({
     [stack, setStack],
   );
 
-  const handleReorder = useCallback(
-    (fromIndex: number, toIndex: number) => {
-      if (fromIndex === toIndex || fromIndex === 0 || toIndex === 0) return;
-      const newStack = [...stack];
-      const [moved] = newStack.splice(fromIndex, 1);
-      newStack.splice(toIndex, 0, moved);
-      setStack(newStack, toIndex);
-    },
-    [stack, setStack],
-  );
-
-  const createDragHandleProps = useCallback(
-    (index: number) => {
-      if (index === 0) return undefined;
-
-      return {
-        onPointerDown: (e: React.PointerEvent) => {
-          if (e.button !== 0) return;
-          e.preventDefault();
-          e.currentTarget.setPointerCapture(e.pointerId);
-          dragStateRef.current = { index, startX: e.clientX };
-        },
-        onPointerUp: (e: React.PointerEvent) => {
-          const currentDragState = dragStateRef.current;
-          if (!currentDragState || currentDragState.index !== index) return;
-          e.currentTarget.releasePointerCapture(e.pointerId);
-
-          const deltaX = e.clientX - currentDragState.startX;
-          const rootStyles = getComputedStyle(document.documentElement);
-          const rootFontSize = Number.parseFloat(rootStyles.fontSize) || 16;
-          const paneMinWidthRem =
-            Number.parseFloat(
-              rootStyles.getPropertyValue("--pane-min-width"),
-            ) || 20;
-          const paneWidth = paneMinWidthRem * rootFontSize;
-          const threshold = paneWidth / 2;
-
-          if (Math.abs(deltaX) > threshold) {
-            const direction = deltaX > 0 ? 1 : -1;
-            const newIndex = Math.max(
-              1,
-              Math.min(stack.length - 1, index + direction),
-            );
-            if (newIndex !== index) {
-              handleReorder(index, newIndex);
-            }
-          }
-
-          dragStateRef.current = null;
-        },
-        onPointerCancel: () => {
-          dragStateRef.current = null;
-        },
-      };
-    },
-    [stack.length, handleReorder],
-  );
-
   return (
     <NotePreviewProvider notesMap={notesMap}>
       <PaneContainer focusIndex={focusIndex}>
-        <LayoutGroup>
-          <AnimatePresence mode="popLayout">
-            {initialNotesData.map((data, index) => {
-              return (
-                <NotePane
-                  key={data.note.slug}
-                  note={data.note}
-                  index={index}
-                  isFocused={index === keyboardFocusIndex}
-                  isClosable={index > 0}
-                  isDraggable={index > 0}
-                  backlinks={data.backlinks}
-                  onLinkClick={handleLinkClick}
-                  onExpand={() => handleExpandPane(index)}
-                  onClose={() => handleClosePane(index)}
-                  dragHandleProps={createDragHandleProps(index)}
-                />
-              );
-            })}
-          </AnimatePresence>
-        </LayoutGroup>
+        {initialNotesData.map((data, index) => (
+          <NotePane
+            key={data.note.slug}
+            note={data.note}
+            index={index}
+            isFocused={index === keyboardFocusIndex}
+            isClosable={index > 0}
+            backlinks={data.backlinks}
+            onLinkClick={handleLinkClick}
+            onExpand={() => handleExpandPane(index)}
+            onClose={() => handleClosePane(index)}
+          />
+        ))}
         <AllNotesList
           notes={allNotes}
           currentStack={stack}

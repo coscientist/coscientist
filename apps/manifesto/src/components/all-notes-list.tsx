@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import type { Note } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import { buildNoteHref } from "@/lib/note-links";
@@ -27,7 +26,6 @@ export function AllNotesList({
 }: AllNotesListProps) {
   const { collapsedIndices } = usePaneCollapse();
   const isCollapsed = collapsedIndices.has(index);
-  const shouldReduceMotion = useReducedMotion();
 
   const sortedNotes = useMemo(
     () => [...notes].sort((a, b) => a.title.localeCompare(b.title)),
@@ -45,10 +43,6 @@ export function AllNotesList({
     return map;
   }, [currentStack]);
 
-  const fadeTransition = shouldReduceMotion
-    ? { duration: 0 }
-    : { duration: 0.12, ease: "easeOut" as const };
-
   return (
     <aside
       data-pane
@@ -63,23 +57,17 @@ export function AllNotesList({
         zIndex: `calc(var(--z-pane) + ${index})`,
       }}
     >
-      <AnimatePresence>
-        {isCollapsed && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={fadeTransition}
-          >
-            <PaneSpine index={index} title="All Notes" showIndex={false} />
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {isCollapsed && (
+        <PaneSpine index={index} title="All Notes" showIndex={false} />
+      )}
 
-      <motion.div
-        animate={{ x: isCollapsed ? "var(--pane-spine-width)" : 0 }}
-        transition={fadeTransition}
+      <div
         className="absolute top-0 left-0 bottom-0 w-full bg-card"
+        style={{
+          transform: isCollapsed
+            ? "translateX(var(--pane-spine-width))"
+            : undefined,
+        }}
       >
         {isCollapsed && (
           <button
@@ -91,17 +79,9 @@ export function AllNotesList({
             <span className="sr-only">Expand pane</span>
           </button>
         )}
-        <AnimatePresence>
-          {isCollapsed && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={fadeTransition}
-              className="absolute left-0 top-0 bottom-0 w-px bg-border z-sticky"
-            />
-          )}
-        </AnimatePresence>
+        {isCollapsed && (
+          <div className="absolute left-0 top-0 bottom-0 w-px bg-border z-sticky" />
+        )}
 
         <ScrollArea className="h-full">
           <div className="sticky top-0 z-sticky bg-card px-8 pt-8 pb-4 border-b border-border">
@@ -147,7 +127,7 @@ export function AllNotesList({
             </ul>
           </div>
         </ScrollArea>
-      </motion.div>
+      </div>
     </aside>
   );
 }

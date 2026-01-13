@@ -1,6 +1,5 @@
 "use client";
 
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import type { BacklinkInfo } from "@/lib/types";
 import {
   Card,
@@ -35,8 +34,6 @@ export function BacklinksSection({
   backlinks,
   onBacklinkClick,
 }: BacklinksSectionProps) {
-  const shouldReduceMotion = useReducedMotion();
-
   if (backlinks.length === 0) {
     return null;
   }
@@ -48,39 +45,28 @@ export function BacklinksSection({
         {backlinks.length === 1 ? "note links" : "notes link"} to this
       </h3>
       <ul className="flex flex-col gap-3">
-        <AnimatePresence mode="popLayout">
-          {backlinks.map((backlink, index) => (
-            <motion.li
-              key={backlink.slug}
-              layout
-              initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={shouldReduceMotion ? undefined : { opacity: 0, y: -10 }}
-              transition={
-                shouldReduceMotion ? { duration: 0 } : { delay: index * 0.05 }
+        {backlinks.map((backlink) => (
+          <li key={backlink.slug}>
+            <Card
+              render={
+                <button
+                  type="button"
+                  onClick={() => onBacklinkClick(backlink.slug)}
+                />
               }
+              className="w-full text-left cursor-pointer transition-colors hover:bg-accent"
             >
-              <Card
-                render={
-                  <button
-                    type="button"
-                    onClick={() => onBacklinkClick(backlink.slug)}
-                  />
-                }
-                className="w-full text-left cursor-pointer transition-colors hover:bg-accent"
-              >
-                <CardHeader>
-                  <CardTitle className="text-base">{backlink.title}</CardTitle>
-                  {backlink.excerpt && (
-                    <CardDescription className="line-clamp-2">
-                      <ExcerptWithBold text={backlink.excerpt} />
-                    </CardDescription>
-                  )}
-                </CardHeader>
-              </Card>
-            </motion.li>
-          ))}
-        </AnimatePresence>
+              <CardHeader>
+                <CardTitle className="text-base">{backlink.title}</CardTitle>
+                {backlink.excerpt && (
+                  <CardDescription className="line-clamp-2">
+                    <ExcerptWithBold text={backlink.excerpt} />
+                  </CardDescription>
+                )}
+              </CardHeader>
+            </Card>
+          </li>
+        ))}
       </ul>
     </section>
   );

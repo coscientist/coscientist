@@ -130,9 +130,22 @@ export function NotePane({
             />
           )}
         </AnimatePresence>
+        <ScrollArea className="h-full">
+          <NoteContent note={note} onLinkClick={handleLinkClick} />
+
+          {backlinks.length > 0 && (
+            <div className="px-8 pb-8">
+              <BacklinksSection
+                backlinks={backlinks}
+                onBacklinkClick={handleLinkClick}
+              />
+            </div>
+          )}
+        </ScrollArea>
+
         {!isCollapsed && (
           <>
-            <div className="absolute top-2 left-2 z-sticky">
+            <div className="absolute top-2 left-2 z-overlay pointer-events-none">
               <span className="size-5 rounded-full bg-primary/10 text-primary text-xs font-semibold flex items-center justify-center tabular-nums">
                 {index + 1}
               </span>
@@ -141,7 +154,7 @@ export function NotePane({
               <div
                 {...dragHandleProps}
                 className={cn(
-                  "absolute top-2 left-1/2 -translate-x-1/2 z-sticky",
+                  "absolute top-2 left-1/2 -translate-x-1/2 z-overlay",
                   "hidden md:flex",
                   "size-6 rounded-md items-center justify-center cursor-grab active:cursor-grabbing",
                   "text-muted-foreground hover:text-foreground hover:bg-muted",
@@ -162,7 +175,7 @@ export function NotePane({
               onClose?.();
             }}
             className={cn(
-              "absolute top-4 right-4 z-sticky",
+              "absolute top-4 right-4 z-overlay",
               "size-7 rounded-md flex items-center justify-center",
               "text-muted-foreground hover:text-foreground hover:bg-muted",
               "opacity-0 group-hover:opacity-100 focus:opacity-100",
@@ -173,18 +186,6 @@ export function NotePane({
             <X className="size-4" />
           </button>
         )}
-        <ScrollArea className="h-full">
-          <NoteContent note={note} onLinkClick={handleLinkClick} />
-
-          {backlinks.length > 0 && (
-            <div className="px-8 pb-8">
-              <BacklinksSection
-                backlinks={backlinks}
-                onBacklinkClick={handleLinkClick}
-              />
-            </div>
-          )}
-        </ScrollArea>
       </motion.div>
     </motion.article>
   );

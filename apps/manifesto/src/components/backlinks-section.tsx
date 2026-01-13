@@ -1,13 +1,12 @@
-'use client';
+"use client";
 
-import type { BacklinkInfo } from '@/lib/types';
-import { cn } from '@/lib/utils';
+import type { BacklinkInfo } from "@/lib/types";
 import {
   Card,
   CardHeader,
   CardTitle,
-  CardPanel,
-} from '@/components/ui/card';
+  CardDescription,
+} from "@/components/ui/card";
 
 interface BacklinksSectionProps {
   backlinks: BacklinkInfo[];
@@ -21,37 +20,37 @@ export function BacklinksSection({
   if (backlinks.length === 0) {
     return null;
   }
-  
+
   return (
-    <Card className="mt-8">
-      <CardHeader className="pb-4">
-        <CardTitle className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
-          {backlinks.length} {backlinks.length === 1 ? 'note link' : 'notes link'} to this
-        </CardTitle>
-      </CardHeader>
-      <CardPanel>
-        <ul className="space-y-4">
-          {backlinks.map((backlink) => (
-            <li key={backlink.slug} className="flex flex-col gap-1">
-              <button
-                type="button"
-                className={cn(
-                  'font-medium text-primary cursor-pointer text-left',
-                  'hover:underline focus:outline-none focus:underline'
+    <section>
+      <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-4">
+        {backlinks.length}{" "}
+        {backlinks.length === 1 ? "note links" : "notes link"} to this
+      </h3>
+      <ul className="flex flex-col gap-3">
+        {backlinks.map((backlink) => (
+          <li key={backlink.slug}>
+            <Card
+              render={
+                <button
+                  type="button"
+                  onClick={() => onBacklinkClick(backlink.slug)}
+                />
+              }
+              className="w-full text-left cursor-pointer transition-colors hover:bg-accent"
+            >
+              <CardHeader>
+                <CardTitle className="text-base">{backlink.title}</CardTitle>
+                {backlink.excerpt && (
+                  <CardDescription className="line-clamp-2">
+                    {backlink.excerpt}
+                  </CardDescription>
                 )}
-                onClick={() => onBacklinkClick(backlink.slug)}
-              >
-                {backlink.title}
-              </button>
-              {backlink.excerpt && (
-                <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">
-                  {backlink.excerpt}
-                </p>
-              )}
-            </li>
-          ))}
-        </ul>
-      </CardPanel>
-    </Card>
+              </CardHeader>
+            </Card>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }

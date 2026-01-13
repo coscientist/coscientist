@@ -1,5 +1,5 @@
 ---
-title: "Coscientist: Not AGI, But Close Enough"
+title: "coscientist: cuz token ≠ knowledge"
 description: Manifesto and personal narrative for the Coscientist system
 ---
 

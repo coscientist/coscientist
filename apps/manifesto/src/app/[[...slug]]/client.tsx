@@ -1,6 +1,13 @@
 "use client";
 
-import { Suspense, useMemo, useState, useEffect, useCallback } from "react";
+import {
+  Suspense,
+  useMemo,
+  useState,
+  useEffect,
+  useCallback,
+  useRef,
+} from "react";
 import { AnimatePresence, LayoutGroup } from "motion/react";
 import type { Note, BacklinkInfo } from "@/lib/types";
 import { useNoteStack } from "@/lib/use-note-stack";
@@ -30,7 +37,7 @@ function NotesContent({
   const [keyboardFocusIndex, setKeyboardFocusIndex] = useState(() =>
     Math.max(0, initialNotesData.length - 1),
   );
-  const [dragState, setDragState] = useState<{
+  const dragStateRef = useRef<{
     index: number;
     startX: number;
   } | null>(null);
@@ -111,13 +118,14 @@ function NotesContent({
           if (e.button !== 0) return;
           e.preventDefault();
           e.currentTarget.setPointerCapture(e.pointerId);
-          setDragState({ index, startX: e.clientX });
+          dragStateRef.current = { index, startX: e.clientX };
         },
         onPointerUp: (e: React.PointerEvent) => {
-          if (!dragState || dragState.index !== index) return;
+          const currentDragState = dragStateRef.current;
+          if (!currentDragState || currentDragState.index !== index) return;
           e.currentTarget.releasePointerCapture(e.pointerId);
 
-          const deltaX = e.clientX - dragState.startX;
+          const deltaX = e.clientX - currentDragState.startX;
           const rootStyles = getComputedStyle(document.documentElement);
           const rootFontSize = Number.parseFloat(rootStyles.fontSize) || 16;
           const paneMinWidthRem =
@@ -138,14 +146,14 @@ function NotesContent({
             }
           }
 
-          setDragState(null);
+          dragStateRef.current = null;
         },
         onPointerCancel: () => {
-          setDragState(null);
+          dragStateRef.current = null;
         },
       };
     },
-    [dragState, stack.length, handleReorder],
+    [stack.length, handleReorder],
   );
 
   return (

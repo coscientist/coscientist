@@ -1,5 +1,5 @@
 ---
-title: "coscientist: output token ≠ knowledge"
+title: "Output Tokens ≠ Knowledge"
 description: Manifesto and personal narrative for the Coscientist system
 ---
 

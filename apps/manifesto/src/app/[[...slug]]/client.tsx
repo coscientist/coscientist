@@ -164,7 +164,7 @@ function NotesContent({
             {initialNotesData.map((data, index) => {
               return (
                 <NotePane
-                  key={`${data.note.slug}-${index}`}
+                  key={data.note.slug}
                   note={data.note}
                   index={index}
                   isFocused={index === keyboardFocusIndex}

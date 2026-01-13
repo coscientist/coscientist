@@ -59,7 +59,7 @@ export function NotePane({
       aria-label={note.title}
       className={cn(
         "flex-shrink-0 w-full md:w-1/3 md:min-w-pane-min h-full overflow-hidden",
-        "bg-muted",
+        "bg-background",
         "sticky left-0",
         "snap-start md:snap-align-none",
         isFocused && "ring-2 ring-primary ring-inset",
@@ -81,7 +81,7 @@ export function NotePane({
       )}
 
       <div
-        className="absolute top-0 left-0 bottom-0 w-full bg-muted group"
+        className="absolute top-0 left-0 bottom-0 w-full bg-background group"
         style={{
           transform: isCollapsed
             ? "translateX(var(--pane-spine-width))"
@@ -103,7 +103,7 @@ export function NotePane({
         )}
 
         <ScrollArea className="h-full">
-          <Frame className="m-2 min-h-[calc(100%-1rem)]">
+          <Frame className="min-h-[calc(100%-1rem)] rounded-none">
             <FrameHeader>
               <FrameTitle className="text-xl font-semibold">
                 {note.title}

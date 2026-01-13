@@ -25,6 +25,7 @@ Andy Matuschak-style sliding panes for documentation. Users click links to open 
 | Language      | TypeScript                        | Type safety                                     |
 | Styling       | Tailwind CSS v4                   | Utility-first, design tokens                    |
 | UI Components | COSS/UI                           | Cal.com's component library, Base UI + Tailwind |
+| Animation     | motion/react                      | Performant springs, AnimatePresence, layout     |
 | Font          | Faculty Glyphic                   | Distinctive serif with personality              |
 | Markdown      | gray-matter + remark + remark-gfm | Frontmatter + GFM support                       |
 
@@ -41,14 +42,19 @@ src/
 │   └── page.tsx            # Home page with note listing
 ├── components/
 │   ├── ui/                 # COSS/UI components (auto-generated)
-│   ├── pane-container.tsx  # Horizontal scroll container
-│   ├── note-pane.tsx       # Individual pane (full or spine mode)
+│   ├── pane-container.tsx  # Horizontal scroll container + collapse detection
+│   ├── pane-spine.tsx      # Vertical title handle for collapsed panes
+│   ├── note-pane.tsx       # Individual pane with enter/exit/collapse animations
 │   ├── note-content.tsx    # Markdown renderer with link interception
 │   ├── backlinks-section.tsx # Shows notes linking to current
 │   ├── preview-link.tsx    # Link with hover preview tooltip
-│   ├── all-notes-list.tsx  # Lists all notes for home page
+│   ├── all-notes-list.tsx  # Lists all notes with matching animations
 │   └── keyboard-navigation.tsx # Arrow/Escape/Home/End handlers
+├── hooks/
+│   ├── use-mobile.ts       # Mobile breakpoint detection
+│   └── use-reduced-motion.ts # prefers-reduced-motion preference
 ├── lib/
+│   ├── animations.ts       # Dieter Rams-inspired spring configurations
 │   ├── types.ts            # Note, BacklinkInfo, NoteGraph types
 │   ├── notes.ts            # Note loading, parsing, graph building
 │   ├── stack.ts            # URL state parsing/serialization
@@ -80,6 +86,87 @@ src/
 - Internal links (relative, not http/mailto) are intercepted
 - `pushNote(slug, fromPaneIndex)` appends to stack
 - Panes after `fromPaneIndex` are trimmed before appending
+
+#### Pane Animation System (Dieter Rams Philosophy)
+
+The pane animations follow Dieter Rams' design principles: **"Good design is as little design as possible."** Animations exist to communicate spatial relationships and state changes, not to decorate.
+
+**Core Files:**
+
+- `src/lib/animations.ts` - Spring configurations and variants
+- `src/hooks/use-reduced-motion.ts` - Accessibility preference hook
+
+**Animation Configurations:**
+
+| Name           | Duration | Bounce | Use Case                                 |
+| -------------- | -------- | ------ | ---------------------------------------- |
+| `springSubtle` | 200ms    | 0.05   | Pane enter/exit, collapse/expand         |
+| `springQuick`  | 150ms    | 0      | Micro-interactions (buttons, spine fade) |
+
+**Pane Animation Variants:**
+
+```tsx
+// Enter: fade in + slide from right
+initial: { opacity: 0, x: 40 }
+animate: { opacity: 1, x: 0 }
+
+// Exit: fade out + slide left (faster, feels like accelerating away)
+exit: { opacity: 0, x: -20 }
+
+// Collapse: dim + translate to reveal spine
+collapsed: { opacity: 0.4, x: "var(--pane-spine-width)" }
+expanded: { opacity: 1, x: 0 }
+```
+
+**Implementation Pattern:**
+
+```tsx
+import { motion, AnimatePresence, LayoutGroup } from "motion/react";
+import { paneVariants, springSubtle } from "@/lib/animations";
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
+
+function Pane() {
+  const prefersReducedMotion = useReducedMotion();
+  const transition = prefersReducedMotion ? { duration: 0 } : springSubtle;
+
+  return (
+    <motion.article
+      layout
+      initial={prefersReducedMotion ? false : "initial"}
+      animate="animate"
+      exit="exit"
+      variants={paneVariants}
+      transition={transition}
+    >
+      {/* content */}
+    </motion.article>
+  );
+}
+
+// Wrap multiple panes for coordinated animations
+<LayoutGroup>
+  <AnimatePresence initial={false} mode="popLayout">
+    {panes.map((pane) => (
+      <Pane key={pane.id} />
+    ))}
+  </AnimatePresence>
+</LayoutGroup>;
+```
+
+**Dieter Rams Principles Applied:**
+
+| Principle                      | Implementation                                    |
+| ------------------------------ | ------------------------------------------------- |
+| "As little design as possible" | ~200ms springs, minimal bounce (0.05)             |
+| "Good design is unobtrusive"   | Only compositor properties (transform, opacity)   |
+| "Good design is honest"        | Animations communicate real spatial relationships |
+| "Good design is long-lasting"  | No trendy effects, timeless motion                |
+
+**The Test:** Remove the animation. Is the interface worse?
+
+- Yes → Keep it
+- No → Delete it
+- Not sure → Delete it
 
 ## UI Skills (Opinionated Constraints)
 
@@ -585,15 +672,18 @@ const paneWidth =
 
 When refactoring, complete in this order:
 
-1. [ ] Add z-index scale tokens to `globals.css`
-2. [ ] Add link color tokens to `globals.css`
-3. [ ] Extract `.prose-note` layer to `globals.css`
-4. [ ] Create `<PaneSpine>` shared component
-5. [ ] Refactor `note-pane.tsx` to use semantic button for expansion
+1. [x] Add z-index scale tokens to `globals.css`
+2. [x] Add link color tokens to `globals.css`
+3. [x] Extract `.prose-note` layer to `globals.css`
+4. [x] Create `<PaneSpine>` shared component
+5. [x] Refactor `note-pane.tsx` to use semantic button for expansion
 6. [ ] Refactor `keyboard-navigation.tsx` to use React refs
-7. [ ] Update `note-content.tsx` to use `.prose-note` class
-8. [ ] Replace arbitrary z-index values with tokens
+7. [x] Update `note-content.tsx` to use `.prose-note` class
+8. [x] Replace arbitrary z-index values with tokens
 9. [ ] Consider `@dnd-kit` migration for drag-and-drop
+10. [x] Add pane enter/exit animations with Motion
+11. [x] Add collapse/expand animations for panes
+12. [x] Add `prefers-reduced-motion` support
 
 ---
 

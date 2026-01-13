@@ -143,7 +143,7 @@ export function PaneContainer({ children, focusIndex }: PaneContainerProps) {
       <div
         ref={containerRef}
         className={cn(
-          "flex flex-1 min-h-0 overflow-x-auto overflow-y-hidden",
+          "relative flex flex-1 min-h-0 overflow-x-auto overflow-y-hidden",
           "scroll-smooth bg-background",
           "scrollbar-thin scrollbar-track-transparent scrollbar-thumb-foreground/20",
           "md:snap-none snap-x snap-mandatory",

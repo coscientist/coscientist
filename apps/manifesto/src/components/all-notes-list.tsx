@@ -1,10 +1,19 @@
 "use client";
 
 import { useMemo } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import { useTranslations } from "next-intl";
 import type { Note } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import { buildNoteHref } from "@/lib/note-links";
+import {
+  paneVariants,
+  paneContentVariants,
+  spineVariants,
+  springSubtle,
+  springQuick,
+} from "@/lib/animations";
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { PreviewLink } from "./preview-link";
 import { usePaneCollapse } from "./pane-container";
@@ -27,6 +36,7 @@ export function AllNotesList({
 }: AllNotesListProps) {
   const { collapsedIndices } = usePaneCollapse();
   const isCollapsed = collapsedIndices.has(index);
+  const prefersReducedMotion = useReducedMotion();
   const t = useTranslations("allNotes");
   const tPane = useTranslations("notePane");
 
@@ -46,10 +56,19 @@ export function AllNotesList({
     return map;
   }, [currentStack]);
 
+  const transition = prefersReducedMotion ? { duration: 0 } : springSubtle;
+  const quickTransition = prefersReducedMotion ? { duration: 0 } : springQuick;
+
   return (
-    <aside
+    <motion.aside
       data-pane
       data-index={index}
+      layout
+      initial={prefersReducedMotion ? false : "initial"}
+      animate="animate"
+      exit="exit"
+      variants={paneVariants}
+      transition={transition}
       className={cn(
         "flex-shrink-0 w-full md:w-1/3 md:min-w-pane-min h-full overflow-hidden",
         "bg-card border-l border-border",
@@ -60,17 +79,26 @@ export function AllNotesList({
         zIndex: `calc(var(--z-pane) + ${index})`,
       }}
     >
-      {isCollapsed && (
-        <PaneSpine index={index} title={t("title")} showIndex={false} />
-      )}
+      <AnimatePresence>
+        {isCollapsed && (
+          <motion.div
+            key="spine"
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            variants={spineVariants}
+            transition={quickTransition}
+          >
+            <PaneSpine index={index} title={t("title")} showIndex={false} />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-      <div
+      <motion.div
         className="absolute top-0 left-0 bottom-0 w-full bg-card"
-        style={{
-          transform: isCollapsed
-            ? "translateX(var(--pane-spine-width))"
-            : undefined,
-        }}
+        animate={isCollapsed ? "collapsed" : "expanded"}
+        variants={paneContentVariants}
+        transition={transition}
       >
         {isCollapsed && (
           <button
@@ -132,7 +160,7 @@ export function AllNotesList({
             </ul>
           </div>
         </ScrollArea>
-      </div>
-    </aside>
+      </motion.div>
+    </motion.aside>
   );
 }

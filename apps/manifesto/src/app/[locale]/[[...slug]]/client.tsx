@@ -1,6 +1,7 @@
 "use client";
 
 import { Suspense, useMemo, useState, useEffect, useCallback } from "react";
+import { AnimatePresence, LayoutGroup } from "motion/react";
 import type { Note, BacklinkInfo } from "@/lib/types";
 import { useNoteStack } from "@/lib/use-note-stack";
 import { useKeyboardNavigation } from "@/components/keyboard-navigation";
@@ -89,26 +90,31 @@ function NotesContent({
   return (
     <NotePreviewProvider notesMap={notesMap}>
       <PaneContainer focusIndex={focusIndex}>
-        {initialNotesData.map((data, index) => (
-          <NotePane
-            key={`${data.note.slug}-${index}`}
-            note={data.note}
-            index={index}
-            isFocused={index === keyboardFocusIndex}
-            isClosable={index > 0}
-            backlinks={data.backlinks}
-            onLinkClick={handleLinkClick}
-            onExpand={() => handleExpandPane(index)}
-            onClose={() => handleClosePane(index)}
-          />
-        ))}
-        <AllNotesList
-          notes={allNotes}
-          currentStack={stack}
-          index={initialNotesData.length}
-          onNoteClick={handleAllNotesClick}
-          onExpand={() => handleExpandPane(initialNotesData.length)}
-        />
+        <LayoutGroup>
+          <AnimatePresence initial={false} mode="popLayout">
+            {initialNotesData.map((data, index) => (
+              <NotePane
+                key={`pane-${stack.slice(0, index + 1).join("-")}`}
+                note={data.note}
+                index={index}
+                isFocused={index === keyboardFocusIndex}
+                isClosable={index > 0}
+                backlinks={data.backlinks}
+                onLinkClick={handleLinkClick}
+                onExpand={() => handleExpandPane(index)}
+                onClose={() => handleClosePane(index)}
+              />
+            ))}
+            <AllNotesList
+              key="all-notes-list"
+              notes={allNotes}
+              currentStack={stack}
+              index={initialNotesData.length}
+              onNoteClick={handleAllNotesClick}
+              onExpand={() => handleExpandPane(initialNotesData.length)}
+            />
+          </AnimatePresence>
+        </LayoutGroup>
       </PaneContainer>
     </NotePreviewProvider>
   );

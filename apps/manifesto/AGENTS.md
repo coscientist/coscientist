@@ -1,6 +1,6 @@
 # Manifesto - AI Agent Guidelines
 
-> **IMPORTANT**: This file should be updated regularly as the project evolves. After making significant changes, update this document to reflect new patterns, decisions, and learnings.
+> **IMPORTANT**: This file and @DESIGN_SYSTEM.md should be updated regularly as the project evolves. After making significant changes, update this document to reflect new patterns, decisions, and learnings.
 
 ## Project Philosophy
 

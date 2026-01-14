@@ -10,6 +10,7 @@ import {
   type MotionValue,
   type PanInfo,
 } from "motion/react";
+import { IconXmarkOutline18 } from "nucleo-ui-outline-18";
 import type { Note, BacklinkInfo } from "@/lib/types";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import { springSubtle } from "@/lib/animations";
@@ -27,10 +28,48 @@ interface MobilePaneCarouselProps {
 }
 
 const paneVariants = {
-  initial: { opacity: 0, scale: 0.85, x: 60 },
+  initial: { opacity: 0, scale: 0.92, x: 40 },
   animate: { opacity: 1, scale: 1, x: 0 },
-  exit: { opacity: 0, scale: 0.85, x: -60 },
+  exit: { opacity: 0, scale: 0.92, x: -40 },
 };
+
+function SliderNotch({
+  index,
+  activeIndex,
+  onTap,
+}: {
+  index: number;
+  activeIndex: MotionValue<number>;
+  onTap: () => void;
+}) {
+  const [isActive, setIsActive] = React.useState(false);
+
+  React.useEffect(() => {
+    const unsubscribe = activeIndex.on("change", (v) => {
+      setIsActive(Math.round(v) === index);
+    });
+    setIsActive(Math.round(activeIndex.get()) === index);
+    return unsubscribe;
+  }, [activeIndex, index]);
+
+  return (
+    <button
+      type="button"
+      onClick={onTap}
+      className="px-1.5 flex items-end justify-center h-10 touch-none"
+    >
+      <motion.div
+        className="w-0.5 rounded-full bg-foreground"
+        initial={false}
+        animate={{
+          height: isActive ? 28 : 12,
+          opacity: isActive ? 1 : 0.3,
+        }}
+        transition={{ type: "spring", duration: 0.4, bounce: 0.15 }}
+      />
+    </button>
+  );
+}
 
 function CoverflowPane({
   note,
@@ -40,8 +79,6 @@ function CoverflowPane({
   onClose,
   isClosable,
   progress,
-  totalItems,
-  onPaneClick,
 }: {
   note: Note;
   index: number;
@@ -50,25 +87,30 @@ function CoverflowPane({
   onClose: () => void;
   isClosable: boolean;
   progress: MotionValue<number>;
-  totalItems: number;
-  onPaneClick: () => void;
 }) {
   const prefersReducedMotion = useReducedMotion();
 
-  const offset = useTransform(progress, (p) => (p - index) * 200);
+  const offset = useTransform(progress, (p) => (index - p) * 200);
 
   const rotateY = useTransform(
     offset,
     [-200, 0, 200],
-    prefersReducedMotion ? [0, 0, 0] : [35, 0, -35],
+    prefersReducedMotion ? [0, 0, 0] : [-20, 0, 20],
   );
+
   const coverflowScale = useTransform(
     offset,
     [-200, 0, 200],
-    prefersReducedMotion ? [1, 1, 1] : [0.85, 1, 0.85],
+    prefersReducedMotion ? [1, 1, 1] : [0.8, 1, 0.8],
   );
 
-  const coverflowX = useTransform(offset, (value) => -(value / 200) * 320);
+  const coverflowX = useTransform(offset, (value) => value * 1.3);
+
+  const coverflowOpacity = useTransform(
+    offset,
+    [-400, -200, 0, 200, 400],
+    [0.3, 0.7, 1, 0.7, 0.3],
+  );
 
   const zIndex = useTransform(offset, (value) =>
     Math.max(0, Math.round(100 - Math.abs(value))),
@@ -84,39 +126,39 @@ function CoverflowPane({
       exit="exit"
       variants={paneVariants}
       transition={transition}
-      className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+      className="absolute inset-0 flex items-center justify-center pointer-events-none"
       style={{ zIndex }}
     >
       <motion.article
-        onClick={onPaneClick}
         className={cn(
-          "w-[90vw] h-[80vh]",
-          "bg-background border border-border rounded-xl overflow-hidden",
-          "shadow-xl cursor-pointer",
+          "w-[92dvw] h-full",
+          "bg-background border border-border rounded-2xl overflow-hidden",
+          "shadow-lg pointer-events-auto",
         )}
         style={{
           x: coverflowX,
           rotateY,
           scale: coverflowScale,
+          opacity: coverflowOpacity,
           transformStyle: "preserve-3d",
-          transformPerspective: 800,
+          transformPerspective: 1000,
         }}
       >
         <ScrollArea className="h-full">
-          <div className="p-4">
-            <header className="mb-4">
-              <h1 className="text-xl font-medium tracking-tight text-foreground">
+          <div className="p-5 pb-10">
+            <header className="mb-4 pr-8">
+              <h1 className="text-xl font-semibold text-foreground leading-snug">
                 {note.title}
               </h1>
               {note.description && (
-                <p className="mt-1 text-sm text-muted-foreground">
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
                   {note.description}
                 </p>
               )}
             </header>
             <NoteContent note={note} onLinkClick={onLinkClick} />
             {backlinks.length > 0 && (
-              <footer className="mt-4 pt-4 border-t border-border/40">
+              <footer className="mt-6 pt-4 border-t border-border/40">
                 <BacklinksSection
                   backlinks={backlinks}
                   onBacklinkClick={onLinkClick}
@@ -133,10 +175,10 @@ function CoverflowPane({
               e.stopPropagation();
               onClose();
             }}
-            className="absolute top-2 right-2 size-6 rounded-full bg-background/80 backdrop-blur flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors z-50"
+            className="absolute top-3 right-3 size-7 rounded-full bg-muted/80 backdrop-blur-sm flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors z-50"
             aria-label={`Close ${note.title}`}
           >
-            ×
+            <IconXmarkOutline18 className="size-4" />
           </button>
         )}
       </motion.article>
@@ -152,134 +194,132 @@ export function MobilePaneCarousel({
   focusIndex,
 }: MobilePaneCarouselProps) {
   const prefersReducedMotion = useReducedMotion();
-  const progress = useMotionValue(0);
-  const sliderX = useMotionValue(0);
-  const isDraggingSlider = React.useRef(false);
-  const sliderContainerRef = React.useRef<HTMLDivElement>(null);
+  const currentIndex = useMotionValue(focusIndex);
+  const containerRef = React.useRef<HTMLDivElement>(null);
   const prevNotesLengthRef = React.useRef(notes.length);
-
-  const SLIDER_ITEM_WIDTH = 16;
-  const SLIDER_GAP = 6;
-  const sliderTotalWidth =
-    notes.length * SLIDER_ITEM_WIDTH + (notes.length - 1) * SLIDER_GAP;
-  const maxSliderDrag = sliderTotalWidth - SLIDER_ITEM_WIDTH;
+  const prevFocusIndexRef = React.useRef(focusIndex);
+  const dragStartIndex = React.useRef(focusIndex);
+  const isInitialMount = React.useRef(true);
+  const isDragging = React.useRef(false);
 
   const animateToIndex = React.useCallback(
-    (index: number) => {
+    (index: number, instant = false) => {
       const clampedIndex = Math.max(0, Math.min(index, notes.length - 1));
-      const targetSliderX = clampedIndex * (SLIDER_ITEM_WIDTH + SLIDER_GAP);
-
-      if (prefersReducedMotion) {
-        progress.set(clampedIndex);
-        sliderX.set(targetSliderX);
+      if (prefersReducedMotion || instant) {
+        currentIndex.set(clampedIndex);
       } else {
-        animate(progress, clampedIndex, {
+        animate(currentIndex, clampedIndex, {
           type: "spring",
-          duration: 0.3,
-          bounce: 0.1,
-        });
-        animate(sliderX, targetSliderX, {
-          type: "spring",
-          duration: 0.3,
-          bounce: 0.1,
+          duration: 0.5,
+          bounce: 0.12,
         });
       }
     },
-    [notes.length, progress, sliderX, prefersReducedMotion],
+    [notes.length, currentIndex, prefersReducedMotion],
   );
 
   React.useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      currentIndex.set(focusIndex);
+      dragStartIndex.current = focusIndex;
+      prevFocusIndexRef.current = focusIndex;
+      return;
+    }
+
     const notesAdded = notes.length > prevNotesLengthRef.current;
     prevNotesLengthRef.current = notes.length;
 
-    if (notesAdded) {
-      requestAnimationFrame(() => {
+    if (focusIndex !== prevFocusIndexRef.current) {
+      prevFocusIndexRef.current = focusIndex;
+      if (!isDragging.current) {
+        dragStartIndex.current = focusIndex;
+      }
+      if (notesAdded) {
         requestAnimationFrame(() => {
-          animateToIndex(focusIndex);
+          requestAnimationFrame(() => {
+            animateToIndex(focusIndex);
+          });
         });
-      });
-    } else {
-      animateToIndex(focusIndex);
+      } else {
+        animateToIndex(focusIndex);
+      }
     }
-  }, [focusIndex, notes.length, animateToIndex]);
+  }, [focusIndex, notes.length, animateToIndex, currentIndex]);
 
-  const handleSliderDrag = React.useCallback(
-    (_event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
-      isDraggingSlider.current = true;
-      const newX = Math.max(
-        0,
-        Math.min(sliderX.get() + info.delta.x, maxSliderDrag),
+  const handleDragStart = React.useCallback(() => {
+    isDragging.current = true;
+    dragStartIndex.current = currentIndex.get();
+  }, [currentIndex]);
+
+  const handleDrag = React.useCallback(
+    (_: unknown, info: PanInfo) => {
+      const cardWidth = containerRef.current?.offsetWidth ?? 350;
+      const dragProgress = -info.offset.x / cardWidth;
+      const newIndex = dragStartIndex.current + dragProgress;
+      const clampedIndex = Math.max(
+        -0.15,
+        Math.min(newIndex, notes.length - 1 + 0.15),
       );
-      sliderX.set(newX);
-
-      const newProgress = newX / (SLIDER_ITEM_WIDTH + SLIDER_GAP);
-      progress.set(newProgress);
+      currentIndex.set(clampedIndex);
     },
-    [sliderX, progress, maxSliderDrag],
+    [currentIndex, notes.length],
   );
 
-  const handleSliderDragEnd = React.useCallback(
-    (_event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
-      isDraggingSlider.current = false;
-
-      const currentProgress = progress.get();
+  const handleDragEnd = React.useCallback(
+    (_: unknown, info: PanInfo) => {
+      isDragging.current = false;
       const velocity = info.velocity.x;
-      const velocityThreshold = 200;
+      const currentIdx = currentIndex.get();
+      const cardWidth = containerRef.current?.offsetWidth ?? 350;
 
       let targetIndex: number;
-      if (Math.abs(velocity) > velocityThreshold) {
+
+      if (Math.abs(velocity) > 400) {
         targetIndex =
-          velocity > 0
-            ? Math.ceil(currentProgress)
-            : Math.floor(currentProgress);
+          velocity < 0 ? Math.ceil(currentIdx) : Math.floor(currentIdx);
+      } else if (Math.abs(info.offset.x) > cardWidth * 0.15) {
+        targetIndex =
+          info.offset.x < 0 ? Math.ceil(currentIdx) : Math.floor(currentIdx);
       } else {
-        targetIndex = Math.round(currentProgress);
+        targetIndex = Math.round(currentIdx);
       }
 
-      animateToIndex(targetIndex);
+      const clampedTarget = Math.max(
+        0,
+        Math.min(targetIndex, notes.length - 1),
+      );
+      dragStartIndex.current = clampedTarget;
+      animateToIndex(clampedTarget);
     },
-    [progress, animateToIndex],
+    [currentIndex, animateToIndex, notes.length],
   );
-
-  const handlePaneClick = React.useCallback(
-    (index: number) => {
-      animateToIndex(index);
-    },
-    [animateToIndex],
-  );
-
-  const handleSliderTap = React.useCallback(
-    (index: number) => {
-      animateToIndex(index);
-    },
-    [animateToIndex],
-  );
-
-  const currentIndex = useTransform(progress, (p) => Math.round(p));
 
   return (
-    <div className="flex-1 flex flex-col items-center justify-center overflow-hidden w-full h-full bg-background/50 backdrop-blur-sm">
-      <SwipeableSlider
-        notes={notes}
-        sliderX={sliderX}
-        currentIndex={currentIndex}
-        onDrag={handleSliderDrag}
-        onDragEnd={handleSliderDragEnd}
-        onTap={handleSliderTap}
-        containerRef={sliderContainerRef}
-        itemWidth={SLIDER_ITEM_WIDTH}
-        gap={SLIDER_GAP}
-      />
+    <div className="flex-1 flex flex-col items-center justify-center overflow-hidden w-full h-full bg-background">
+      <div className="w-full h-12 flex items-center justify-center px-4">
+        <div className="flex items-end justify-center h-10">
+          {notes.map((note, index) => (
+            <SliderNotch
+              key={note.slug}
+              index={index}
+              activeIndex={currentIndex}
+              onTap={() => animateToIndex(index)}
+            />
+          ))}
+        </div>
+      </div>
 
-      <div
-        className="flex-1 w-full flex items-center justify-center overflow-hidden relative"
-        style={{
-          maskImage:
-            "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)",
-          WebkitMaskImage:
-            "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)",
-          perspective: 800,
-        }}
+      <motion.div
+        ref={containerRef}
+        className="flex-1 w-full flex items-center justify-center overflow-hidden relative cursor-grab active:cursor-grabbing"
+        style={{ perspective: 1000 }}
+        drag="x"
+        dragConstraints={{ left: 0, right: 0 }}
+        dragElastic={0.08}
+        onDragStart={handleDragStart}
+        onDrag={handleDrag}
+        onDragEnd={handleDragEnd}
       >
         <ul className="relative w-full h-full">
           <AnimatePresence initial={false} mode="popLayout">
@@ -292,99 +332,12 @@ export function MobilePaneCarousel({
                 onLinkClick={(slug) => onLinkClick(slug, index)}
                 onClose={() => onClose(index)}
                 isClosable={index > 0}
-                progress={progress}
-                totalItems={notes.length}
-                onPaneClick={() => handlePaneClick(index)}
+                progress={currentIndex}
               />
             ))}
           </AnimatePresence>
         </ul>
-      </div>
-    </div>
-  );
-}
-
-function SwipeableSlider({
-  notes,
-  sliderX,
-  currentIndex,
-  onDrag,
-  onDragEnd,
-  onTap,
-  containerRef,
-  itemWidth,
-  gap,
-}: {
-  notes: Note[];
-  sliderX: MotionValue<number>;
-  currentIndex: MotionValue<number>;
-  onDrag: (
-    event: MouseEvent | TouchEvent | PointerEvent,
-    info: PanInfo,
-  ) => void;
-  onDragEnd: (
-    event: MouseEvent | TouchEvent | PointerEvent,
-    info: PanInfo,
-  ) => void;
-  onTap: (index: number) => void;
-  containerRef: React.RefObject<HTMLDivElement | null>;
-  itemWidth: number;
-  gap: number;
-}) {
-  const [activeIndex, setActiveIndex] = React.useState(0);
-  const totalWidth = notes.length * itemWidth + (notes.length - 1) * gap;
-  const dragConstraints = { left: 0, right: totalWidth - itemWidth };
-
-  React.useEffect(() => {
-    const unsubscribe = currentIndex.on("change", (v) => {
-      setActiveIndex(Math.round(v));
-    });
-    return unsubscribe;
-  }, [currentIndex]);
-
-  return (
-    <div className="w-full h-14 flex items-center justify-center relative mb-2 z-10">
-      <div
-        ref={containerRef}
-        className="relative h-10 flex items-end justify-center"
-        style={{ width: totalWidth }}
-      >
-        {notes.map((note, i) => (
-          <button
-            key={note.slug}
-            type="button"
-            onClick={() => onTap(i)}
-            className="absolute bottom-1 flex flex-col items-center justify-end cursor-pointer"
-            style={{
-              left: i * (itemWidth + gap),
-              width: itemWidth,
-              height: "100%",
-            }}
-          >
-            <div
-              className={cn(
-                "w-0.5 rounded-full bg-foreground/20 transition-all duration-200",
-                i === activeIndex ? "h-6" : "h-3",
-              )}
-            />
-          </button>
-        ))}
-
-        <motion.div
-          drag="x"
-          dragConstraints={dragConstraints}
-          dragElastic={0.1}
-          dragMomentum={false}
-          onDrag={onDrag}
-          onDragEnd={onDragEnd}
-          className="absolute bottom-1 w-0.5 h-8 rounded-full bg-foreground cursor-grab active:cursor-grabbing z-10"
-          style={{
-            x: sliderX,
-            left: itemWidth / 2 - 1,
-            touchAction: "none",
-          }}
-        />
-      </div>
+      </motion.div>
     </div>
   );
 }

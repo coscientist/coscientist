@@ -58,5 +58,5 @@ export function NoteContent({ note, onLinkClick }: NoteContentProps) {
     [note.contentHtml, parserOptions],
   );
 
-  return <div className="prose-note px-4 py-3">{parsedContent}</div>;
+  return <div className="prose-note md:px-4 md:py-3">{parsedContent}</div>;
 }

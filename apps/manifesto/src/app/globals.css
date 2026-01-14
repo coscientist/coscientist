@@ -218,5 +218,8 @@ body {
     & a:visited {
       @apply text-link-visited;
     }
+    & hr {
+      @apply my-8 border-0 border-t border-border;
+    }
   }
 }

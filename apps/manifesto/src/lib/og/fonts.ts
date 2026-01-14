@@ -20,6 +20,7 @@ export async function fetchGoogleFont(
 
   const cssResponse = await fetch(cssUrl, {
     headers: { "User-Agent": TTF_USER_AGENT },
+    cache: "force-cache",
   });
 
   if (!cssResponse.ok) {
@@ -39,7 +40,7 @@ export async function fetchGoogleFont(
     throw new Error(`Could not extract font URL from CSS for ${family}`);
   }
 
-  const fontResponse = await fetch(fontUrlMatch[1]);
+  const fontResponse = await fetch(fontUrlMatch[1], { cache: "force-cache" });
 
   if (!fontResponse.ok) {
     throw new Error(

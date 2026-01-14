@@ -25,7 +25,7 @@ la autoridad.
 
 La federación también habilita una
 [malla de conocimiento multilingüe](./multilingual-knowledge-mesh): los nodos
-que operan en distintos [[sprachraum]] pueden intercambiar conocimiento validado
+que operan en distintos [sprachraum](./sprachraum) pueden intercambiar conocimiento validado
 [a través de fronteras lingüísticas](./across-the-sprachraums), con la
 [fidelidad de traducción](./translation-fidelity) registrada como parte de la
 procedencia. Esto hace que la

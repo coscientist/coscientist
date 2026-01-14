@@ -163,10 +163,6 @@ body {
   h6 {
     @apply text-balance;
   }
-  p,
-  li {
-    @apply text-pretty;
-  }
 }
 
 @layer components {
@@ -199,7 +195,7 @@ body {
     & pre {
       @apply bg-muted p-4 rounded-lg overflow-x-auto mb-6 border border-border/50;
     }
-    & pre code {
+    & code {
       @apply bg-transparent p-0 text-foreground;
     }
     & blockquote {

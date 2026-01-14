@@ -422,7 +422,7 @@ The index pane showing all available notes with their stack positions.
 <div
   className="sticky top-0 z-sticky 
                 bg-background/80 backdrop-blur-md 
-                px-8 pt-8 pb-4 border-b border-border/50"
+                px-4 pt-4 pb-2 border-b border-border/50"
 >
   <h2
     className="text-2xl font-normal tracking-tight 

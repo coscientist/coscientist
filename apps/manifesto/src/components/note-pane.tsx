@@ -142,7 +142,7 @@ export function NotePane({
 
         <ScrollArea className="h-full relative z-0">
           <div className="min-h-full flex flex-col">
-            <header className="px-8 pt-8 pb-4">
+            <header className="px-4 pt-4 pb-2">
               <h1 className="text-3xl font-normal tracking-tight text-foreground/90 dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-br dark:from-white dark:via-white dark:to-neutral-500">
                 {note.title}
               </h1>

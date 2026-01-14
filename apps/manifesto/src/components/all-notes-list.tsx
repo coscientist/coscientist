@@ -135,7 +135,7 @@ export function AllNotesList({
         )}
 
         <ScrollArea className="h-full relative z-0">
-          <div className="sticky top-0 z-sticky bg-background/80 backdrop-blur-md px-8 pt-8 pb-4 border-b border-border/50">
+          <div className="sticky top-0 z-sticky bg-background/80 backdrop-blur-md px-4 pt-4 pb-2 border-b border-border/50">
             <h2 className="text-2xl font-normal tracking-tight text-foreground/90 dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-br dark:from-white dark:via-white dark:to-neutral-500">
               {t("title")}
             </h2>

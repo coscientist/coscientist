@@ -187,14 +187,14 @@ body {
       @apply text-lg font-medium mt-6 mb-3 text-foreground text-balance tracking-tight;
     }
     & p {
-      @apply text-base leading-relaxed mb-4 text-muted-foreground text-pretty;
+      @apply text-base leading-relaxed mb-4 text-muted-foreground text-justify;
     }
     & ul,
     & ol {
       @apply mb-4 pl-6 text-muted-foreground;
     }
     & li {
-      @apply text-base leading-relaxed mb-2 text-pretty;
+      @apply text-base leading-relaxed mb-2;
     }
     & code {
       @apply bg-muted px-1.5 py-0.5 rounded text-sm font-mono text-foreground;

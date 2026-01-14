@@ -2,14 +2,20 @@
 title: De Monoliet
 description: Ontwerpinspiratie uit Kubricks 2001: A Space Odyssey
 sourceLocale: en
-sourceHash: f710dbf0735c
+sourceHash: fd5c03a09cc7
 translatedAt: 2026-01-14
 ---
 
-De Monoliet uit Stanley Kubricks _2001: A Space Odyssey_ (1968) is een
-kenmerkloze zwarte rechthoekige plaat die verschijnt op kantelmomenten van
-evolutionaire transformatie. Hij biedt geen verklaring, alleen aanwezigheid.
-Wie hem tegenkomt, verandert, maar het mechanisme blijft ondoorzichtig.
+De Monoliet uit Stanley Kubricks _2001: A Space Odyssey_ (1968) is een machine,
+gebouwd door een oude buitenaardse soort om intelligentie in lagere wezens te
+versnellen. Zijn kenmerkloze zwarte plaat biedt geen handleiding—alleen
+aanwezigheid. Wie hem tegenkomt, verandert, maar het mechanisme blijft
+ondoorzichtig.
+
+In Arthur C. Clarkes romans zaaiden de aliens (de "Firstborn") Monolieten uit
+door het hele melkwegstelsel als instrumenten van verheffing. De apen die hem
+aanraakten, kregen de vonk van gereedschapsgebruik. De ontmoeting van de
+mensheid op de Maan signaleerde gereedheid voor de volgende fase.
 
 Deze esthetiek vormt de visuele taal en het interactiemodel van
 [Coscientist](./coscientist). De [schuivend-paneelinterface](./monolith-as-interface-metaphor)
@@ -20,12 +26,12 @@ opstapelen, elk met kennis die het begrip transformeert.
 
 - [Mysterie en minimalisme](./mystery-minimalism): Verminder de chrome (UI-opsmuk), laat de inhoud spreken
 - [Signaal zonder verklaring](./signal-without-explanation): Presenteer informatie, vertrouw de lezer
-- Verticaal ritme: de 1:4:9-verhoudingen verschijnen in afstandsratio's
+- Verticaal ritme: de 1:4:9-verhoudingen (1², 2², 3²) verschijnen in afstandsratio's
 - Monochrome basis: grijstinten als standaard, kleur als signaal
 
 ## Waarom het ertoe doet
 
-De Monoliet is geen gereedschap—het is een katalysator. [Coscientist](./coscientist)
+De Monoliet is een katalysator voor cognitieve evolutie. [Coscientist](./coscientist)
 streeft naar hetzelfde: vragen niet direct beantwoorden, maar voorwaarden scheppen
 waarbij begrip ontstaat via [verkenningsmechanismen](./exploration-mechanisms)
 en [dialectische betrokkenheid](./dialectical-graph).
@@ -38,9 +44,9 @@ die kan leiden tot conceptuele evolutie.
 
 In _2001_ verschijnt de Monoliet drie keer:
 
-1. **Dageraad van de mens**: Activeert gereedschapsgebruik en geweld
-2. **Maanopgraving**: Signaleert gereedheid voor dieper contact
-3. **Jupiterbaan**: Maakt transcendentie mogelijk
+1. **Dageraad van de mens**: Brengt gereedschapsgebruik op gang bij apen
+2. **Maanopgraving**: Signaleert de gereedheid van de mensheid voor contact
+3. **Jupiterbaan**: Maakt transcendentie voorbij fysieke vorm mogelijk
 
 Elke ontmoeting vereist gereedheid. Het kennissysteem weerspiegelt dit: informatie
 is beschikbaar, maar transformatie vereist de actieve betrokkenheid van de

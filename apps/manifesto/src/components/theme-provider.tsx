@@ -27,7 +27,6 @@ export function ThemeProvider({
   children,
   defaultTheme = "system",
   storageKey = "ui-theme",
-  ...props
 }: ThemeProviderProps) {
   const [theme, setTheme] = React.useState<Theme>(() =>
     typeof window !== "undefined"

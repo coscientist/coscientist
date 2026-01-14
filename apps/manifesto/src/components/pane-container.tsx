@@ -91,7 +91,7 @@ export function PaneContainer({ children, focusIndex }: PaneContainerProps) {
     if (!container) return;
 
     updateCollapseThreshold();
-    updateCollapsedIndices();
+    const frameId = requestAnimationFrame(updateCollapsedIndices);
 
     if (typeof ResizeObserver !== "undefined") {
       const observer = new ResizeObserver(() => {
@@ -101,7 +101,10 @@ export function PaneContainer({ children, focusIndex }: PaneContainerProps) {
       observer.observe(container);
       const firstPane = container.querySelector("[data-pane]");
       if (firstPane) observer.observe(firstPane);
-      return () => observer.disconnect();
+      return () => {
+        cancelAnimationFrame(frameId);
+        observer.disconnect();
+      };
     }
 
     const handleResize = () => {
@@ -109,7 +112,10 @@ export function PaneContainer({ children, focusIndex }: PaneContainerProps) {
       updateCollapsedIndices();
     };
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      cancelAnimationFrame(frameId);
+      window.removeEventListener("resize", handleResize);
+    };
   }, [updateCollapseThreshold, updateCollapsedIndices]);
 
   useEffect(() => {

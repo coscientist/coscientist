@@ -30,12 +30,14 @@ function NotesContent({
   const [keyboardFocusIndex, setKeyboardFocusIndex] = useState(() =>
     Math.max(0, initialNotesData.length - 1),
   );
+  const [prevLength, setPrevLength] = useState(initialNotesData.length);
 
-  useEffect(() => {
+  if (prevLength !== initialNotesData.length) {
+    setPrevLength(initialNotesData.length);
     if (initialNotesData.length > 0) {
       setKeyboardFocusIndex(initialNotesData.length - 1);
     }
-  }, [initialNotesData.length]);
+  }
 
   useKeyboardNavigation({
     stackLength: stack.length,

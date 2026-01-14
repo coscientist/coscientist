@@ -34,7 +34,6 @@ interface NotePaneProps {
 export function NotePane({
   note,
   index,
-  isFocused = false,
   isClosable = false,
   backlinks,
   onLinkClick,

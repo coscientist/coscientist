@@ -32,9 +32,9 @@ function SheetBackdrop({ className, ...props }: SheetPrimitive.Backdrop.Props) {
 }
 
 function SheetViewport({
-  className,
   side,
   inset = false,
+  className,
   ...props
 }: SheetPrimitive.Viewport.Props & {
   side?: "right" | "left" | "top" | "bottom";
@@ -49,6 +49,7 @@ function SheetViewport({
         side === "left" && "flex justify-start",
         side === "right" && "flex justify-end",
         inset && "sm:p-4",
+        className,
       )}
       data-slot="sheet-viewport"
       {...props}

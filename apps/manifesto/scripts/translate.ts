@@ -147,7 +147,7 @@ const LOCALE_NAMES: Record<string, string> = {
 const ENGLISH_UI = {
   metadata: {
     title: "Coscientist Manifesto",
-    description: "Output Tokens ≠ Knowledge",
+    description: "Tokens ≠ Knowledge",
   },
   header: { title: "Coscientist Manifesto" },
   allNotes: { title: "All Notes", noteCount: "{count} notes" },

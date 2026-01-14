@@ -1,7 +1,5 @@
 "use client";
 
-import { IconXmarkOutline18 } from "nucleo-ui-outline-18";
-import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 
 interface PaneSpineProps {
@@ -9,8 +7,6 @@ interface PaneSpineProps {
   title: string;
   description?: string;
   showIndex?: boolean;
-  isClosable?: boolean;
-  onClose?: () => void;
   className?: string;
 }
 
@@ -19,12 +15,8 @@ export function PaneSpine({
   title,
   description,
   showIndex = true,
-  isClosable = false,
-  onClose,
   className,
 }: PaneSpineProps) {
-  const t = useTranslations("notePane");
-
   return (
     <div
       className={cn(
@@ -38,30 +30,11 @@ export function PaneSpine({
         <div className="w-1.5 h-6 bg-foreground/20 rounded-sm" />
       </div>
 
-      {showIndex &&
-        (isClosable ? (
-          <button
-            type="button"
-            onClick={(e) => {
-              e.stopPropagation();
-              onClose?.();
-            }}
-            className={cn(
-              "size-6 rounded-full flex items-center justify-center flex-shrink-0 z-modal",
-              "text-xs font-medium tabular-nums font-mono text-muted-foreground",
-              "hover:bg-destructive hover:text-destructive-foreground",
-              "transition-colors cursor-pointer",
-            )}
-            aria-label={t("closePane", { index })}
-          >
-            <span className="group-hover:hidden">{index}</span>
-            <IconXmarkOutline18 className="size-3 hidden group-hover:block" />
-          </button>
-        ) : (
-          <span className="text-[10px] font-mono text-muted-foreground/50 font-medium">
-            {index < 10 ? `0${index}` : index}
-          </span>
-        ))}
+      {showIndex && (
+        <span className="text-[10px] font-mono text-muted-foreground/50 font-medium">
+          {index < 10 ? `0${index}` : index}
+        </span>
+      )}
 
       <div className="flex-1 w-full relative flex items-start justify-center overflow-hidden pt-2">
         <div

@@ -67,8 +67,8 @@
   --color-link: var(--link);
   --color-link-visited: var(--link-visited);
   --font-sans:
-    var(--font-faculty-glyphic), var(--font-gowun-batang),
-    var(--font-shippori-mincho), var(--font-noto-serif-sc),
+    var(--font-faculty-glyphic), var(--font-noto-serif-kr),
+    var(--font-noto-serif-jp), var(--font-noto-serif-sc),
     var(--font-noto-serif-tc);
   --font-mono: "Iosevka", ui-monospace, monospace;
   --animate-skeleton: skeleton 2s -1s infinite linear;
@@ -174,27 +174,6 @@ body {
   li {
     @apply text-pretty;
   }
-
-  /* CJK font weight adjustment - make fallback fonts bolder to match Faculty Glyphic */
-  :lang(ko),
-  :lang(ja),
-  :lang(zh),
-  :lang(zh-Hans),
-  :lang(zh-Hant) {
-    font-weight: 500;
-  }
-
-  :lang(ko) h1,
-  :lang(ko) h2,
-  :lang(ko) h3,
-  :lang(ja) h1,
-  :lang(ja) h2,
-  :lang(ja) h3,
-  :lang(zh) h1,
-  :lang(zh) h2,
-  :lang(zh) h3 {
-    font-weight: 700;
-  }
 }
 
 @layer components {
@@ -212,14 +191,14 @@ body {
       @apply text-lg font-medium mt-6 mb-3 text-foreground text-balance tracking-tight;
     }
     & p {
-      @apply text-base leading-relaxed mb-4 text-muted-foreground text-justify;
+      @apply text-base leading-[1.8] mb-6 text-foreground/80 text-justify;
     }
     & ul,
     & ol {
-      @apply mb-4 pl-6 text-muted-foreground;
+      @apply mb-6 pl-6 text-foreground/80;
     }
     & li {
-      @apply text-base leading-relaxed mb-2;
+      @apply text-base leading-[1.8] mb-3;
     }
     & code {
       @apply bg-muted px-1.5 py-0.5 rounded text-sm font-mono text-foreground;
@@ -231,7 +210,7 @@ body {
       @apply bg-transparent p-0 text-foreground;
     }
     & blockquote {
-      @apply border-l-2 border-primary/20 pl-4 ml-0 mb-6 text-muted-foreground italic;
+      @apply border-l-2 border-primary/20 pl-4 ml-0 mb-6 text-foreground/70 italic;
     }
     & a {
       @apply text-link no-underline border-b border-transparent transition-all duration-200;

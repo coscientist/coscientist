@@ -114,9 +114,7 @@ export function NotePane({
               index={index}
               title={note.title}
               description={note.description}
-              showIndex={index > 0}
-              isClosable={isClosable}
-              onClose={onClose}
+              showIndex
             />
           </motion.div>
         )}
@@ -145,11 +143,11 @@ export function NotePane({
         <ScrollArea className="h-full relative z-0">
           <div className="min-h-full flex flex-col">
             <header className="px-4 pt-4 pb-2">
-              <h1 className="text-3xl font-normal tracking-tight text-foreground/90 dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-br dark:from-white dark:via-white dark:to-neutral-500">
+              <h1 className="text-3xl font-normal tracking-tight text-foreground dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-br dark:from-white dark:via-white dark:to-neutral-500">
                 {note.title}
               </h1>
               {note.description && (
-                <p className="mt-2 text-lg text-muted-foreground/80 font-normal">
+                <p className="mt-2 text-lg text-muted-foreground font-normal">
                   {note.description}
                 </p>
               )}
@@ -167,6 +165,17 @@ export function NotePane({
                 />
               </footer>
             )}
+
+            <footer className="px-8 py-4 border-t border-border/40">
+              <a
+                href={`https://github.com/coscientist/coscientist/edit/main/apps/manifesto/content/notes/${note.slug}.md`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {t("editOnGitHub")}
+              </a>
+            </footer>
           </div>
         </ScrollArea>
 

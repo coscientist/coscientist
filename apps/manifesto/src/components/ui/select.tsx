@@ -2,6 +2,7 @@
 
 import { Select as SelectPrimitive } from "@base-ui/react/select";
 import {
+  IconCheckOutline18,
   IconChevronDownOutline18,
   IconChevronExpandYOutline18,
   IconChevronUpOutline18,
@@ -119,19 +120,7 @@ function SelectItem({
       {...props}
     >
       <SelectPrimitive.ItemIndicator className="col-start-1">
-        <svg
-          fill="none"
-          height="24"
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M5.252 12.7 10.2 18.63 18.748 5.37" />
-        </svg>
+        <IconCheckOutline18 className="size-4" />
       </SelectPrimitive.ItemIndicator>
       <SelectPrimitive.ItemText className="col-start-2 min-w-0">
         {children}

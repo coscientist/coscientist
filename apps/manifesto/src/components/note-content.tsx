@@ -7,6 +7,7 @@ import parse, {
   type DOMNode,
   Element,
 } from "html-react-parser";
+import { IconArrowUpRightOutline18 } from "nucleo-ui-outline-18";
 import type { Note } from "@/lib/types";
 import {
   buildNoteHref,
@@ -34,7 +35,22 @@ export function NoteContent({ note, onLinkClick }: NoteContentProps) {
       replace: (domNode: DOMNode) => {
         if (domNode instanceof Element && domNode.name === "a") {
           const href = domNode.attribs?.href;
-          if (!href || isExternalHref(href)) return;
+          if (!href) return;
+
+          if (isExternalHref(href)) {
+            return (
+              <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={domNode.attribs?.class}
+              >
+                {domToReact(domNode.children as DOMNode[], options)}
+                <IconArrowUpRightOutline18 className="inline-block size-[0.85em] ml-0.5 align-baseline" />
+              </a>
+            );
+          }
+
           const slug = normalizeNoteSlug(href);
           if (!slug) return;
 

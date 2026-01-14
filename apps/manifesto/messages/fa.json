@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "مانیفست Coscientist",
-    "description": "توکن‌های خروجی ≠ دانش"
+    "description": "توکن‌ها ≠ دانش"
   },
   "header": {
     "title": "مانیفست Coscientist"
@@ -14,7 +14,8 @@
     "expand": "باز کردن پنل",
     "expandNote": "باز کردن {title}",
     "closeNote": "بستن {title}",
-    "closePane": "بستن پنل {index}"
+    "closePane": "بستن پنل {index}",
+    "editOnGitHub": "ویرایش در GitHub"
   },
   "backlinks": {
     "singular": "{count} یادداشت به این لینک دارد",

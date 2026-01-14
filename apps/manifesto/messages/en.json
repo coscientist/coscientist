@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Coscientist Manifesto",
-    "description": "Output Tokens ≠ Knowledge"
+    "description": "Tokens ≠ Knowledge"
   },
   "header": {
     "title": "Coscientist Manifesto"
@@ -14,7 +14,8 @@
     "expand": "Expand pane",
     "expandNote": "Expand {title}",
     "closeNote": "Close {title}",
-    "closePane": "Close pane {index}"
+    "closePane": "Close pane {index}",
+    "editOnGitHub": "Edit on GitHub"
   },
   "backlinks": {
     "singular": "{count} note links to this",

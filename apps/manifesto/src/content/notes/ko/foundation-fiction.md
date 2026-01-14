@@ -1,9 +1,9 @@
 ---
 title: 파운데이션 픽션
-description: 코사이언티스트의 비전에 영향을 준 아시모프 영감의 개념들
+description: Coscientist의 비전에 영향을 준 아시모프 영감의 개념들
 ---
 
-파운데이션 픽션은 [아이작 아시모프](./isaac-asimov)의 *파운데이션* 시리즈에서 가져온 개념들로, [코사이언티스트](./coscientist)의 비전을 형성하는 데 영향을 준다. 허구의 [은하대백과](./encyclopedia-galactica)는 지식 보존과 역량에 대해 사고할 때 기준점이 된다.
+파운데이션 픽션은 [아이작 아시모프](./isaac-asimov)의 *파운데이션* 시리즈에서 가져온 개념들로, [Coscientist](./coscientist)의 비전을 형성하는 데 영향을 준다. 허구의 [은하대백과](./encyclopedia-galactica)는 지식 보존과 역량에 대해 사고할 때 기준점이 된다.
 
 ## 핵심 개념
 

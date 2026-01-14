@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "কো-সায়েন্টিস্ট ঘোষণা",
-    "description": "আউটপুট টোকেন ≠ জ্ঞান"
+    "description": "টোকেন ≠ জ্ঞান"
   },
   "header": {
     "title": "কো-সায়েন্টিস্ট ঘোষণা"
@@ -14,7 +14,8 @@
     "expand": "প্যান প্রসারিত করুন",
     "expandNote": "{title} প্রসারিত করুন",
     "closeNote": "{title} বন্ধ করুন",
-    "closePane": "{index} নম্বর প্যান বন্ধ করুন"
+    "closePane": "{index} নম্বর প্যান বন্ধ করুন",
+    "editOnGitHub": "GitHub-এ সম্পাদনা করুন"
   },
   "backlinks": {
     "singular": "{count}টি নোট এতে লিঙ্ক করে",

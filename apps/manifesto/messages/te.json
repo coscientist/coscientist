@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "కోసైంటిస్ట్ మానిఫెస్టో",
-    "description": "అవుట్‌పుట్ టోకెన్లు ≠ జ్ఞానం"
+    "description": "టోకెన్లు ≠ జ్ఞానం"
   },
   "header": {
     "title": "కోసైంటిస్ట్ మానిఫెస్టో"
@@ -14,7 +14,8 @@
     "expand": "పేన్‌ను విస్తరించండి",
     "expandNote": "{title} ను విస్తరించండి",
     "closeNote": "{title} ను మూసివేయండి",
-    "closePane": "పేన్ {index} ను మూసివేయండి"
+    "closePane": "పేన్ {index} ను మూసివేయండి",
+    "editOnGitHub": "GitHub లో సవరించండి"
   },
   "backlinks": {
     "singular": "{count} నోట్ దీనికి లింక్ అవుతుంది",

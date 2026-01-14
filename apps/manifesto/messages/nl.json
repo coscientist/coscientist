@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Coscientist Manifest",
-    "description": "Outputtokens ≠ kennis"
+    "description": "Tokens ≠ kennis"
   },
   "header": {
     "title": "Coscientist Manifest"
@@ -14,7 +14,8 @@
     "expand": "Paneel uitklappen",
     "expandNote": "{title} uitklappen",
     "closeNote": "{title} sluiten",
-    "closePane": "Paneel {index} sluiten"
+    "closePane": "Paneel {index} sluiten",
+    "editOnGitHub": "Bewerken op GitHub"
   },
   "backlinks": {
     "singular": "{count} notitie linkt hiernaar",

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "کوسائنٹسٹ منشور",
-    "description": "آؤٹ پُٹ ٹوکنز ≠ علم"
+    "description": "ٹوکنز ≠ علم"
   },
   "header": {
     "title": "کوسائنٹسٹ منشور"
@@ -14,7 +14,8 @@
     "expand": "پین کو پھیلائیں",
     "expandNote": "{title} کو پھیلائیں",
     "closeNote": "{title} بند کریں",
-    "closePane": "پین {index} بند کریں"
+    "closePane": "پین {index} بند کریں",
+    "editOnGitHub": "GitHub پر ترمیم کریں"
   },
   "backlinks": {
     "singular": "{count} نوٹ اس سے لنک ہے",

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Coscientist Manifestosu",
-    "description": "Çıktı Token'ları ≠ Bilgi"
+    "description": "Token'lar ≠ Bilgi"
   },
   "header": {
     "title": "Coscientist Manifestosu"
@@ -14,7 +14,8 @@
     "expand": "Paneli genişlet",
     "expandNote": "{title} başlığını genişlet",
     "closeNote": "{title} başlığını kapat",
-    "closePane": "{index}. paneli kapat"
+    "closePane": "{index}. paneli kapat",
+    "editOnGitHub": "GitHub'da düzenle"
   },
   "backlinks": {
     "singular": "{count} not buna bağlantı veriyor",

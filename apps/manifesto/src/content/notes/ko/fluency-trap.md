@@ -7,4 +7,4 @@ description: 매끄러운 AI 문장을 정확성으로 착각하기
 
 이 함정은 [백과사전 멜트다운](./encyclopedia-meltdown)의 핵심 메커니즘이다. 사용자가 AI 출력이 "그럴듯하게 들린다"는 이유로 받아들이면, 오류가 마찰 없이 전파된다. 같은 현상은 학습 중 [유능함의 환상](./illusions-of-competence)에서도 나타난다. 다시 읽기는 내용이 익숙해 보이기 때문에 생산적으로 느껴진다.
 
-유창성 함정을 상쇄하려면 능동적인 노력이 필요하다. [코사이언티스트](./coscientist)에서는 이는 [반박 우선 검색](./rebuttal-first-search), [근거 구간](./evidence-span)까지 이어지는 [추적 가능성](./traceability), 그리고 [검증](./verification)을 [오퍼레이터](./operator)의 명시적 책임으로 만드는 것을 뜻한다.
+유창성 함정을 상쇄하려면 능동적인 노력이 필요하다. [Coscientist](./coscientist)에서는 이는 [반박 우선 검색](./rebuttal-first-search), [근거 구간](./evidence-span)까지 이어지는 [추적 가능성](./traceability), 그리고 [검증](./verification)을 [오퍼레이터](./operator)의 명시적 책임으로 만드는 것을 뜻한다.

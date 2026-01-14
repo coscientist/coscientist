@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Tuyên ngôn Coscientist",
-    "description": "Token đầu ra ≠ Tri thức"
+    "description": "Token ≠ Tri thức"
   },
   "header": {
     "title": "Tuyên ngôn Coscientist"
@@ -14,7 +14,8 @@
     "expand": "Mở rộng khung",
     "expandNote": "Mở rộng {title}",
     "closeNote": "Đóng {title}",
-    "closePane": "Đóng khung {index}"
+    "closePane": "Đóng khung {index}",
+    "editOnGitHub": "Chỉnh sửa trên GitHub"
   },
   "backlinks": {
     "singular": "{count} ghi chú liên kết đến đây",

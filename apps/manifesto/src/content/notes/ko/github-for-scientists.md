@@ -7,4 +7,4 @@ description: 실험을 버전 관리되고 감사 가능한 코드로 취급한�
 
 이 비전은 [사이언스옵스](./scienceops)의 핵심이다. 실험이 버전 관리되는 아티팩트가 되면, 가설과 [검증](./verification) 사이의 루프가 줄어든다. 실패는 추적 가능해진다. 성공은 다른 사람들이 영웅적인 노력 없이도 재현할 수 있게 된다.
 
-[코사이언티스트](./coscientist)는 이러한 워크플로를 위한 인지 계층이다. 여러 프로젝트 전반에 걸쳐 [주장](./claim), [증거](./evidence-span), 그리고 반박을 관리하면서, [책임선](./responsibility-line)을 보존하고 [자연과학 엔지니어](./natural-science-engineer) 역할을 지원한다.
+[Coscientist](./coscientist)는 이러한 워크플로를 위한 인지 계층이다. 여러 프로젝트 전반에 걸쳐 [주장](./claim), [증거](./evidence-span), 그리고 반박을 관리하면서, [책임선](./responsibility-line)을 보존하고 [자연과학 엔지니어](./natural-science-engineer) 역할을 지원한다.

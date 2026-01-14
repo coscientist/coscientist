@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "แถลงการณ์ Coscientist",
-    "description": "โทเคนผลลัพธ์ ≠ ความรู้"
+    "description": "โทเคน ≠ ความรู้"
   },
   "header": {
     "title": "แถลงการณ์ Coscientist"
@@ -14,7 +14,8 @@
     "expand": "ขยายแผง",
     "expandNote": "ขยาย {title}",
     "closeNote": "ปิด {title}",
-    "closePane": "ปิดแผง {index}"
+    "closePane": "ปิดแผง {index}",
+    "editOnGitHub": "แก้ไขบน GitHub"
   },
   "backlinks": {
     "singular": "มี {count} โน้ตที่ลิงก์มาที่นี่",

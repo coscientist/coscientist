@@ -1,5 +1,5 @@
 ---
-title: "Tokeny wyjściowe ≠ wiedza"
+title: "Tokeny ≠ wiedza"
 description: Osobista wyprawa po egzoszkielet poznawczy
 ---
 
@@ -27,11 +27,11 @@ Ręczne linkowanie nadal może doprecyzowywać rozumienie, ale powinno być opcj
 
 W 2023 roku zmagałem się już z pytaniami, które wykraczały poza osobiste notowanie. Treści generowane przez AI zagrażały samej weryfikacji. Nazwałem scenariusz załamania [Załamanie Encyklopedii](./encyclopedia-meltdown): gdy AI przejmuje inicjatywę pisania, znika [responsibility line](./responsibility-line) (linia odpowiedzialności), a błędy samowzmacniają się poprzez linki.
 
-Środkiem zaradczym jest [epistemic protocol layer](./epistemic-protocol-layer) — konstytucyjna warstwa dla systemów wiedzy. Jej kluczowe zobowiązania to suwerenność (autorytet wiedzy pozostaje po stronie człowieka — [Operator](./operator)), śledzalność (każde twierdzenie zachowuje linię odpowiedzialności) oraz walidacja „rebuttal-first"  — używaj [Wyszukiwanie z priorytetem obalenia](./rebuttal-first-search), aby przed akceptacją szukać kontrdowodów. Ta warstwa adresuje też presje takie jak [Załamanie modelu](./model-collapse) oraz zalew [Śmieci AI](./ai-slop), wymuszając jawną proweniencję i ingestowanie w trybie zero-trust.
+Środkiem zaradczym jest [epistemic protocol layer](./epistemic-protocol-layer) — konstytucyjna warstwa dla systemów wiedzy. Jej kluczowe zobowiązania to suwerenność (autorytet wiedzy pozostaje po stronie człowieka — [Operator](./operator)), śledzalność (każde twierdzenie zachowuje linię odpowiedzialności) oraz walidacja „rebuttal-first" — używaj [Wyszukiwanie z priorytetem obalenia](./rebuttal-first-search), aby przed akceptacją szukać kontrdowodów. Ta warstwa adresuje też presje takie jak [Załamanie modelu](./model-collapse) oraz zalew [Śmieci AI](./ai-slop), wymuszając jawną proweniencję i ingestowanie w trybie zero-trust.
 
 ## ScienceOps i skala instytucjonalna
 
-Osobista infrastruktura wiedzy rozwiązywała kwestię wygody, nie skali instytucjonalnej. Następnym skokiem było [ScienceOps](./scienceops): zastosowanie dyscypliny operacji oprogramowania  do badań naukowych poprzez powtarzalne eksperymenty, automatyzację i szybkie iteracje, przy jednoczesnym wprowadzeniu roli [natural science engineer](./natural-science-engineer) (inżyniera nauk przyrodniczych). Gdy eksperymenty stają się pipeline’ami, a nie jednorazowymi akcjami, pętla między hipotezą a weryfikacją może dramatycznie się skrócić.
+Osobista infrastruktura wiedzy rozwiązywała kwestię wygody, nie skali instytucjonalnej. Następnym skokiem było [ScienceOps](./scienceops): zastosowanie dyscypliny operacji oprogramowania do badań naukowych poprzez powtarzalne eksperymenty, automatyzację i szybkie iteracje, przy jednoczesnym wprowadzeniu roli [natural science engineer](./natural-science-engineer) (inżyniera nauk przyrodniczych). Gdy eksperymenty stają się pipeline’ami, a nie jednorazowymi akcjami, pętla między hipotezą a weryfikacją może dramatycznie się skrócić.
 
 Większym celem jest „GitHub dla naukowców", który traktuje eksperymenty jak kod: wersjonowane, powtarzalne i audytowalne. To właśnie kontekst operacyjny, który wymaga silnika poznawczego takiego jak [Współnaukowiec](./coscientist).
 
@@ -39,7 +39,7 @@ Większym celem jest „GitHub dla naukowców", który traktuje eksperymenty jak
 
 [Współnaukowiec](./coscientist) to system, który splata te wątki. To wieloagentowa architektura [Duży model językowy](./llm), zaprojektowana tak, by działać jako współpracownik badawczy, a nie pojedynczy silnik odpowiedzi. Jej wewnętrzna pętla rozdziela proponowanie, krytykę, ranking i dopracowanie, wraz z warstwą meta-recenzji sprawdzającą spójność, śledzalność i niepewność.
 
-Na warstwie wiedzy utrzymuje [Graf Dialektyczny](./dialectical-graph) , który przechowuje twierdzenia i relacje, a nie surowy tekst. Wyjście narracyjne jest traktowane jako projekcja warstwy wnioskowania, dzięki czemu każde zdanie może się cofnąć do źródeł, fragmentów dowodów  i jawnych relacji. To rozdzielenie pozwala uniknąć trybu porażki „gładkie, ale nieweryfikowalne", typowego dla konwencjonalnej generacji.
+Na warstwie wiedzy utrzymuje [Graf Dialektyczny](./dialectical-graph) , który przechowuje twierdzenia i relacje, a nie surowy tekst. Wyjście narracyjne jest traktowane jako projekcja warstwy wnioskowania, dzięki czemu każde zdanie może się cofnąć do źródeł, fragmentów dowodów i jawnych relacji. To rozdzielenie pozwala uniknąć trybu porażki „gładkie, ale nieweryfikowalne", typowego dla konwencjonalnej generacji.
 
 Tradycyjne podejścia do bezpieczeństwa AI często ujmują problem jako alignment . Ja podkreślam [cognitive agency preservation](./cognitive-agency-preservation) — zachowanie sprawczości poznawczej: AI ma wzmacniać ludzki osąd, a nie go zastępować. W praktyce oznacza to utrzymanie użytkownika w roli weryfikatora: pokazywanie toku rozumowania, ujawnianie niepewności, prezentowanie alternatywnych hipotez oraz uczynienie domyślnym trybu poszukiwania obaleń.
 

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Coscientist マニフェスト",
-    "description": "出力トークン ≠ 知識"
+    "description": "トークン ≠ 知識"
   },
   "header": {
     "title": "Coscientist マニフェスト"
@@ -14,7 +14,8 @@
     "expand": "ペインを展開",
     "expandNote": "{title}を展開",
     "closeNote": "{title}を閉じる",
-    "closePane": "ペイン{index}を閉じる"
+    "closePane": "ペイン{index}を閉じる",
+    "editOnGitHub": "GitHubで編集"
   },
   "backlinks": {
     "singular": "{count}件のノートがこれにリンクしています",

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "共科學家宣言",
-    "description": "輸出 Token ≠ 知識"
+    "description": "Token ≠ 知識"
   },
   "header": {
     "title": "共科學家宣言"
@@ -14,7 +14,8 @@
     "expand": "展開窗格",
     "expandNote": "展開 {title}",
     "closeNote": "關閉 {title}",
-    "closePane": "關閉窗格 {index}"
+    "closePane": "關閉窗格 {index}",
+    "editOnGitHub": "在 GitHub 上編輯"
   },
   "backlinks": {
     "singular": "{count} 則筆記連結至此",

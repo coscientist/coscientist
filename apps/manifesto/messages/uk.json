@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Маніфест Coscientist",
-    "description": "Вихідні токени ≠ знання"
+    "description": "Токени ≠ знання"
   },
   "header": {
     "title": "Маніфест Coscientist"
@@ -14,7 +14,8 @@
     "expand": "Розгорнути панель",
     "expandNote": "Розгорнути {title}",
     "closeNote": "Закрити {title}",
-    "closePane": "Закрити панель {index}"
+    "closePane": "Закрити панель {index}",
+    "editOnGitHub": "Редагувати на GitHub"
   },
   "backlinks": {
     "singular": "{count} нотатка посилається на це",

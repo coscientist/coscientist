@@ -28,7 +28,7 @@ description: 개인 지식 관리 도구와 아이디어의 역사적 전개
 
 - [마찰은 적이다](./friction-as-enemy) — 오버헤드를 최소화해 수집을 극대화하기
 
-## 코사이언티스트로의 연결
+## Coscientist로의 연결
 
 - [메멕스에서 변증법적 그래프로](./from-memex-to-dialectical-graph)
 - [개인 지식에서 제도적 지식으로](./personal-to-institutional-knowledge)

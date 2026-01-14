@@ -1,5 +1,5 @@
 ---
-title: "Tokens de Saída ≠ Conhecimento"
+title: "Tokens ≠ Conhecimento"
 description: Uma Busca Pessoal por um Exoesqueleto Cognitivo
 ---
 

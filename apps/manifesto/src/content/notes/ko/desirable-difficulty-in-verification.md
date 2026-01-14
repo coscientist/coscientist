@@ -7,4 +7,4 @@ description: 진정한 이해를 유지하기 위해 검증을 노력 들게 만
 
 이 용어는 학습과학에서 빌려온 것으로, 바람직한 어려움(예: [능동 회상](./active-recall), [간격 효과](./spacing-effect))은 노력이 필요하기 때문에 장기 기억을 개선한다. 검증도 동일하게 작동한다. 확인하는 데 드는 노력이 곧 이해를 만들고 오류를 포착한다.
 
-이는 [유창성 함정](./fluency-trap)에 맞서는 개념이다. 수용을 지나치게 매끄럽게 만드는 시스템은 수동적 소비를 훈련시킨다. [코사이언티스트](./coscientist)는 적절한 순간에 마찰을 도입한다. 즉, 운영자가 [증거 구간](./evidence-span)을 점검하고, [책임선](./responsibility-line)을 추적하며, [반례](./counterexample)와 씨름하도록 요구한다.
+이는 [유창성 함정](./fluency-trap)에 맞서는 개념이다. 수용을 지나치게 매끄럽게 만드는 시스템은 수동적 소비를 훈련시킨다. [Coscientist](./coscientist)는 적절한 순간에 마찰을 도입한다. 즉, 운영자가 [증거 구간](./evidence-span)을 점검하고, [책임선](./responsibility-line)을 추적하며, [반례](./counterexample)와 씨름하도록 요구한다.

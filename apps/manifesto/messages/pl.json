@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Manifest Coscientist",
-    "description": "Tokeny wyjściowe ≠ wiedza"
+    "description": "Tokeny ≠ wiedza"
   },
   "header": {
     "title": "Manifest Coscientist"
@@ -14,7 +14,8 @@
     "expand": "Rozwiń panel",
     "expandNote": "Rozwiń {title}",
     "closeNote": "Zamknij {title}",
-    "closePane": "Zamknij panel {index}"
+    "closePane": "Zamknij panel {index}",
+    "editOnGitHub": "Edytuj na GitHub"
   },
   "backlinks": {
     "singular": "{count} notatka prowadzi do tego",

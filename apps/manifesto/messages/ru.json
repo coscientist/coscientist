@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Манифест косайентиста",
-    "description": "Выходные токены ≠ знание"
+    "description": "Токены ≠ знание"
   },
   "header": {
     "title": "Манифест косайентиста"
@@ -14,7 +14,8 @@
     "expand": "Развернуть панель",
     "expandNote": "Развернуть «{title}»",
     "closeNote": "Закрыть «{title}»",
-    "closePane": "Закрыть панель {index}"
+    "closePane": "Закрыть панель {index}",
+    "editOnGitHub": "Редактировать на GitHub"
   },
   "backlinks": {
     "singular": "{count} заметка ссылается на это",

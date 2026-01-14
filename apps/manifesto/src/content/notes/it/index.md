@@ -1,5 +1,5 @@
 ---
-title: "Token di output ≠ conoscenza"
+title: "Token ≠ conoscenza"
 description: Una ricerca personale di un esoscheletro cognitivo
 ---
 
@@ -27,7 +27,7 @@ Il linking manuale può comunque affinare la comprensione, ma dovrebbe essere fa
 
 Nel 2023 stavo affrontando domande che trascendevano la presa di appunti personale. I contenuti generati dall’AI minacciavano la verifica stessa. Ho chiamato lo scenario di collasso [Crollo dell'Enciclopedia](./encyclopedia-meltdown): quando l’AI prende l’iniziativa di scrivere, la [linea di responsabilità](./responsibility-line) scompare e gli errori si auto-amplificano attraverso i link.
 
-La contromisura è un [strato di protocollo epistemico](./epistemic-protocol-layer), uno strato costituzionale per i sistemi di conoscenza. I suoi impegni fondamentali sono sovranità (l’autorità della conoscenza resta con l’[Operatore](./operator) umano), tracciabilità (ogni affermazione mantiene una linea di responsabilità) e validazione "rebuttal-first"  per cercare controprove prima dell’accettazione). Questo strato affronta anche pressioni come il [collasso del modello](./model-collapse) e l’ondata di [AI slop](./ai-slop) imponendo provenienza esplicita e ingestione a zero fiducia .
+La contromisura è un [strato di protocollo epistemico](./epistemic-protocol-layer), uno strato costituzionale per i sistemi di conoscenza. I suoi impegni fondamentali sono sovranità (l’autorità della conoscenza resta con l’[Operatore](./operator) umano), tracciabilità (ogni affermazione mantiene una linea di responsabilità) e validazione "rebuttal-first" per cercare controprove prima dell’accettazione). Questo strato affronta anche pressioni come il [collasso del modello](./model-collapse) e l’ondata di [AI slop](./ai-slop) imponendo provenienza esplicita e ingestione a zero fiducia .
 
 ## ScienceOps e scala istituzionale
 

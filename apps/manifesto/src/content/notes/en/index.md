@@ -1,5 +1,5 @@
 ---
-title: "Output Tokens ≠ Knowledge"
+title: "Tokens ≠ Knowledge"
 description: A Personal Quest for a Cognitive Exoskeleton
 ---
 
@@ -27,7 +27,7 @@ Manual linking can still refine understanding, but it should be optional. The sy
 
 By 2023, I was grappling with questions that transcended personal note-taking. AI-generated content threatened verification itself. I called the collapse scenario [Encyclopedia Meltdown](./encyclopedia-meltdown): when AI takes the initiative of writing, the [responsibility line](./responsibility-line) disappears and errors self-amplify through links.
 
-The countermeasure is an [epistemic protocol layer](./epistemic-protocol-layer), a constitutional layer for knowledge systems. Its core commitments are sovereignty ), traceability , and rebuttal-first validation  to seek counterevidence before acceptance). This layer also addresses pressures like [model collapse](./model-collapse) and the flood of [AI slop](./ai-slop) by enforcing explicit provenance and zero-trust ingestion.
+The countermeasure is an [epistemic protocol layer](./epistemic-protocol-layer), a constitutional layer for knowledge systems. Its core commitments are sovereignty ), traceability , and rebuttal-first validation to seek counterevidence before acceptance). This layer also addresses pressures like [model collapse](./model-collapse) and the flood of [AI slop](./ai-slop) by enforcing explicit provenance and zero-trust ingestion.
 
 ## ScienceOps and Institutional Scale
 

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Coscientist 宣言",
-    "description": "输出 Token ≠ 知识"
+    "description": "Token ≠ 知识"
   },
   "header": {
     "title": "Coscientist 宣言"
@@ -14,7 +14,8 @@
     "expand": "展开面板",
     "expandNote": "展开 {title}",
     "closeNote": "关闭 {title}",
-    "closePane": "关闭面板 {index}"
+    "closePane": "关闭面板 {index}",
+    "editOnGitHub": "在 GitHub 上编辑"
   },
   "backlinks": {
     "singular": "有 {count} 条笔记链接到此处",

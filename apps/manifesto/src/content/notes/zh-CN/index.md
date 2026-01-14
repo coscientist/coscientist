@@ -1,5 +1,5 @@
 ---
-title: "输出 Token ≠ 知识"
+title: "Token ≠ 知识"
 description: 一场关于认知外骨骼的个人探索
 ---
 

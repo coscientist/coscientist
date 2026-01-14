@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "கோசையன்டிஸ்ட் அறிக்கை",
-    "description": "வெளியீட்டு டோகன்கள் ≠ அறிவு"
+    "description": "டோகன்கள் ≠ அறிவு"
   },
   "header": {
     "title": "கோசையன்டிஸ்ட் அறிக்கை"
@@ -14,7 +14,8 @@
     "expand": "பலகையை விரிவாக்கு",
     "expandNote": "{title} ஐ விரிவாக்கு",
     "closeNote": "{title} ஐ மூடு",
-    "closePane": "பலகை {index} ஐ மூடு"
+    "closePane": "பலகை {index} ஐ மூடு",
+    "editOnGitHub": "GitHub-இல் திருத்து"
   },
   "backlinks": {
     "singular": "{count} குறிப்பு இதற்கு இணைக்கிறது",

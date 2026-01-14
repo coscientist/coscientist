@@ -1,5 +1,5 @@
 ---
-title: "Tokens de salida ≠ Conocimiento"
+title: "Tokens ≠ Conocimiento"
 description: Una búsqueda personal de un exoesqueleto cognitivo
 ---
 
@@ -39,7 +39,7 @@ El objetivo mayor es un «GitHub para científicos» que trate los experimentos 
 
 [Cocientífico](./coscientist) es el sistema que sintetiza estos hilos. Es una arquitectura multiagente de [LLM](./llm) diseñada para funcionar como un colaborador de investigación en lugar de un único motor de respuestas. Su bucle interno separa propuesta, crítica, ranking y refinamiento, con una capa de metarrevisión que comprueba coherencia, trazabilidad e incertidumbre.
 
-En la capa de conocimiento, mantiene un [Grafo dialéctico](./dialectical-graph) que almacena afirmaciones y relaciones en lugar de texto en bruto. La salida narrativa se trata como una proyección de una capa de inferencia, de modo que cada enunciado puede retroceder  hasta fuentes, fragmentos de evidencia y relaciones explícitas. Esta separación evita el modo de fallo «suave pero inverificable» de la generación convencional.
+En la capa de conocimiento, mantiene un [Grafo dialéctico](./dialectical-graph) que almacena afirmaciones y relaciones en lugar de texto en bruto. La salida narrativa se trata como una proyección de una capa de inferencia, de modo que cada enunciado puede retroceder hasta fuentes, fragmentos de evidencia y relaciones explícitas. Esta separación evita el modo de fallo «suave pero inverificable» de la generación convencional.
 
 La seguridad de la IA tradicional a menudo plantea el problema como alineamiento. Yo enfatizo la [preservación de la agencia cognitiva](./cognitive-agency-preservation): la IA debería fortalecer el juicio humano, no reemplazarlo. En la práctica, eso significa mantener al usuario en el rol de verificador: mostrar el trabajo, sacar a la superficie la incertidumbre, presentar hipótesis alternativas y hacer que la búsqueda de refutaciones sea lo predeterminado.
 

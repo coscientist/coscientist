@@ -1,5 +1,5 @@
 ---
-title: "Outputtokens ≠ Kennis"
+title: "Tokens ≠ Kennis"
 description: Een persoonlijke zoektocht naar een cognitief exoskelet
 ---
 
@@ -27,7 +27,7 @@ Handmatig linken kan begrip nog steeds aanscherpen, maar het zou optioneel moete
 
 In 2023 worstelde ik met vragen die verder gingen dan persoonlijke notities. Door AI gegenereerde content bedreigde verificatie zelf. Ik noemde het instortingsscenario [Encyclopedie-ineenstorting](./encyclopedia-meltdown): wanneer AI het initiatief neemt om te schrijven, verdwijnt de [responsibility line](./responsibility-line) en versterken fouten zichzelf via links.
 
-De tegenmaatregel is een [epistemic protocol layer](./epistemic-protocol-layer), een constitutionele laag voor kennissystemen. De kernverplichtingen zijn soevereiniteit ), traceerbaarheid , en rebuttal-first-validatie  om naar tegenbewijs te zoeken vóór acceptatie). Deze laag pakt ook druk aan zoals [modelinstorting](./model-collapse) en de vloed aan [AI-rommel](./ai-slop) door expliciete herkomst  en zero-trust-inname af te dwingen.
+De tegenmaatregel is een [epistemic protocol layer](./epistemic-protocol-layer), een constitutionele laag voor kennissystemen. De kernverplichtingen zijn soevereiniteit ), traceerbaarheid , en rebuttal-first-validatie om naar tegenbewijs te zoeken vóór acceptatie). Deze laag pakt ook druk aan zoals [modelinstorting](./model-collapse) en de vloed aan [AI-rommel](./ai-slop) door expliciete herkomst en zero-trust-inname af te dwingen.
 
 ## ScienceOps en Institutionele Schaal
 
@@ -39,7 +39,7 @@ Het grotere doel is een "GitHub voor wetenschappers" die experimenten behandelt 
 
 [Cowetenschapper](./coscientist) is het systeem dat deze lijnen samenbrengt. Het is een multi-agent-[Groot taalmodel](./llm)-architectuur die is ontworpen om te functioneren als onderzoekssamenwerker in plaats van als één enkele antwoordenmachine. De interne lus scheidt voorstel, kritiek, rangschikking en verfijning, met een meta-reviewlaag die coherentie, traceerbaarheid en onzekerheid controleert.
 
-Op de kennislaag onderhoudt het een [Dialectische graaf](./dialectical-graph) die claims en relaties opslaat in plaats van ruwe tekst. Narratieve output wordt behandeld als een projectie van een inferentielaag, zodat elke uitspraak kan terugsporen naar bronnen, evidence spans  en expliciete relaties. Deze scheiding vermijdt de "glad maar niet verifieerbaar"-faalmodus van conventionele generatie.
+Op de kennislaag onderhoudt het een [Dialectische graaf](./dialectical-graph) die claims en relaties opslaat in plaats van ruwe tekst. Narratieve output wordt behandeld als een projectie van een inferentielaag, zodat elke uitspraak kan terugsporen naar bronnen, evidence spans en expliciete relaties. Deze scheiding vermijdt de "glad maar niet verifieerbaar"-faalmodus van conventionele generatie.
 
 Traditionele AI-veiligheid framet het probleem vaak als alignment. Ik leg de nadruk op [cognitive agency preservation](./cognitive-agency-preservation): AI moet menselijk oordeel versterken, niet vervangen. Praktisch betekent dat de gebruiker in de rol van verificateur houden: het werk laten zien, onzekerheid zichtbaar maken, alternatieve hypotheses presenteren en rebuttal-seeking als standaard instellen.
 

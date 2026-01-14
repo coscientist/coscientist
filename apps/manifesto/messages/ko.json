@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "title": "코사이언티스트 선언문",
-    "description": "출력 토큰 ≠ 지식"
+    "title": "Coscientist 선언문",
+    "description": "토큰 ≠ 지식"
   },
   "header": {
-    "title": "코사이언티스트 선언문"
+    "title": "Coscientist 선언문"
   },
   "allNotes": {
     "title": "전체 노트",
@@ -14,7 +14,8 @@
     "expand": "창 확장",
     "expandNote": "{title} 확장",
     "closeNote": "{title} 닫기",
-    "closePane": "{index}번 창 닫기"
+    "closePane": "{index}번 창 닫기",
+    "editOnGitHub": "GitHub에서 수정"
   },
   "backlinks": {
     "singular": "이 노트로 연결된 링크 {count}개",

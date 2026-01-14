@@ -1,17 +1,17 @@
-"use client";
+"use client"
 
-import { useLocale, useTranslations } from "next-intl";
-import { IconLanguageOutline18 } from "nucleo-ui-outline-18";
-import { Button } from "@/components/ui/button";
+import { useLocale, useTranslations } from "next-intl"
+import { IconLanguageOutline18 } from "nucleo-ui-outline-18"
+import { Button } from "@/components/ui/button"
 import {
   Select,
   SelectItem,
   SelectPopup,
   SelectTrigger,
-} from "@/components/ui/select";
-import { usePathname, useRouter } from "@/i18n/navigation";
-import { type Locale, routing } from "@/i18n/routing";
-import { cn } from "@/lib/utils";
+} from "@/components/ui/select"
+import { usePathname, useRouter } from "@/i18n/navigation"
+import { type Locale, routing } from "@/i18n/routing"
+import { cn } from "@/lib/utils"
 
 const localeNames: Record<Locale, string> = {
   en: "English",
@@ -39,19 +39,19 @@ const localeNames: Record<Locale, string> = {
   pl: "Polski",
   uk: "Українська",
   nl: "Nederlands",
-};
+}
 
 export function LanguageSwitcher({ className }: { className?: string }) {
-  const t = useTranslations("languageSwitcher");
-  const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
+  const t = useTranslations("languageSwitcher")
+  const locale = useLocale()
+  const router = useRouter()
+  const pathname = usePathname()
 
   const handleChange = (value: string | null) => {
     if (value) {
-      router.replace(pathname, { locale: value as Locale });
+      router.replace(pathname, { locale: value as Locale })
     }
-  };
+  }
 
   return (
     <Select onValueChange={handleChange} value={locale}>
@@ -75,5 +75,5 @@ export function LanguageSwitcher({ className }: { className?: string }) {
         ))}
       </SelectPopup>
     </Select>
-  );
+  )
 }

@@ -1,15 +1,15 @@
-"use client";
+"use client"
 
-import { Autocomplete as AutocompletePrimitive } from "@base-ui/react/autocomplete";
+import { Autocomplete as AutocompletePrimitive } from "@base-ui/react/autocomplete"
 import {
   IconChevronExpandYOutline18,
   IconXmarkOutline18,
-} from "nucleo-ui-outline-18";
-import { Input } from "@/components/ui/input";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { cn } from "@/lib/utils";
+} from "nucleo-ui-outline-18"
+import { Input } from "@/components/ui/input"
+import { ScrollArea } from "@/components/ui/scroll-area"
+import { cn } from "@/lib/utils"
 
-const Autocomplete = AutocompletePrimitive.Root;
+const Autocomplete = AutocompletePrimitive.Root
 
 function AutocompleteInput({
   className,
@@ -19,13 +19,13 @@ function AutocompleteInput({
   size,
   ...props
 }: Omit<AutocompletePrimitive.Input.Props, "size"> & {
-  showTrigger?: boolean;
-  showClear?: boolean;
-  startAddon?: React.ReactNode;
-  size?: "sm" | "default" | "lg" | number;
-  ref?: React.Ref<HTMLInputElement>;
+  showTrigger?: boolean
+  showClear?: boolean
+  startAddon?: React.ReactNode
+  size?: "sm" | "default" | "lg" | number
+  ref?: React.Ref<HTMLInputElement>
 }) {
-  const sizeValue = (size ?? "default") as "sm" | "default" | "lg" | number;
+  const sizeValue = (size ?? "default") as "sm" | "default" | "lg" | number
 
   return (
     <div className="relative not-has-[>*.w-full]:w-fit w-full has-disabled:opacity-64">
@@ -72,7 +72,7 @@ function AutocompleteInput({
         </AutocompleteClear>
       )}
     </div>
-  );
+  )
 }
 
 function AutocompletePopup({
@@ -81,7 +81,7 @@ function AutocompletePopup({
   sideOffset = 4,
   ...props
 }: AutocompletePrimitive.Popup.Props & {
-  sideOffset?: number;
+  sideOffset?: number
 }) {
   return (
     <AutocompletePrimitive.Portal>
@@ -106,7 +106,7 @@ function AutocompletePopup({
         </span>
       </AutocompletePrimitive.Positioner>
     </AutocompletePrimitive.Portal>
-  );
+  )
 }
 
 function AutocompleteItem({
@@ -125,7 +125,7 @@ function AutocompleteItem({
     >
       {children}
     </AutocompletePrimitive.Item>
-  );
+  )
 }
 
 function AutocompleteSeparator({
@@ -138,7 +138,7 @@ function AutocompleteSeparator({
       data-slot="autocomplete-separator"
       {...props}
     />
-  );
+  )
 }
 
 function AutocompleteGroup({
@@ -151,7 +151,7 @@ function AutocompleteGroup({
       data-slot="autocomplete-group"
       {...props}
     />
-  );
+  )
 }
 
 function AutocompleteGroupLabel({
@@ -167,7 +167,7 @@ function AutocompleteGroupLabel({
       data-slot="autocomplete-group-label"
       {...props}
     />
-  );
+  )
 }
 
 function AutocompleteEmpty({
@@ -183,7 +183,7 @@ function AutocompleteEmpty({
       data-slot="autocomplete-empty"
       {...props}
     />
-  );
+  )
 }
 
 function AutocompleteRow({
@@ -196,13 +196,13 @@ function AutocompleteRow({
       data-slot="autocomplete-row"
       {...props}
     />
-  );
+  )
 }
 
 function AutocompleteValue({ ...props }: AutocompletePrimitive.Value.Props) {
   return (
     <AutocompletePrimitive.Value data-slot="autocomplete-value" {...props} />
-  );
+  )
 }
 
 function AutocompleteList({
@@ -220,7 +220,7 @@ function AutocompleteList({
         {...props}
       />
     </ScrollArea>
-  );
+  )
 }
 
 function AutocompleteClear({
@@ -238,7 +238,7 @@ function AutocompleteClear({
     >
       <IconXmarkOutline18 />
     </AutocompletePrimitive.Clear>
-  );
+  )
 }
 
 function AutocompleteStatus({
@@ -254,7 +254,7 @@ function AutocompleteStatus({
       data-slot="autocomplete-status"
       {...props}
     />
-  );
+  )
 }
 
 function AutocompleteCollection({
@@ -265,7 +265,7 @@ function AutocompleteCollection({
       data-slot="autocomplete-collection"
       {...props}
     />
-  );
+  )
 }
 
 function AutocompleteTrigger({
@@ -278,10 +278,10 @@ function AutocompleteTrigger({
       data-slot="autocomplete-trigger"
       {...props}
     />
-  );
+  )
 }
 
-const useAutocompleteFilter = AutocompletePrimitive.useFilter;
+const useAutocompleteFilter = AutocompletePrimitive.useFilter
 
 export {
   Autocomplete,
@@ -300,4 +300,4 @@ export {
   AutocompleteRow,
   AutocompleteCollection,
   useAutocompleteFilter,
-};
+}

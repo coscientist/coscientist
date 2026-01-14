@@ -1,30 +1,30 @@
-"use client";
+"use client"
 
-import { AnimatePresence, motion } from "motion/react";
-import { useTranslations } from "next-intl";
-import { useMemo } from "react";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { useReducedMotion } from "@/hooks/use-reduced-motion";
+import { AnimatePresence, motion } from "motion/react"
+import { useTranslations } from "next-intl"
+import { useMemo } from "react"
+import { ScrollArea } from "@/components/ui/scroll-area"
+import { useReducedMotion } from "@/hooks/use-reduced-motion"
 import {
   paneContentVariants,
   paneVariants,
   spineVariants,
   springQuick,
   springSubtle,
-} from "@/lib/animations";
-import { buildNoteHref } from "@/lib/note-links";
-import type { Note } from "@/lib/types";
-import { cn } from "@/lib/utils";
-import { usePaneCollapse } from "./pane-container";
-import { PaneSpine } from "./pane-spine";
-import { PreviewLink } from "./preview-link";
+} from "@/lib/animations"
+import { buildNoteHref } from "@/lib/note-links"
+import type { Note } from "@/lib/types"
+import { cn } from "@/lib/utils"
+import { usePaneCollapse } from "./pane-container"
+import { PaneSpine } from "./pane-spine"
+import { PreviewLink } from "./preview-link"
 
 interface AllNotesListProps {
-  notes: Note[];
-  currentStack: string[];
-  index: number;
-  onNoteClick: (slug: string) => void;
-  onExpand?: () => void;
+  notes: Note[]
+  currentStack: string[]
+  index: number
+  onNoteClick: (slug: string) => void
+  onExpand?: () => void
 }
 
 export function AllNotesList({
@@ -34,30 +34,30 @@ export function AllNotesList({
   onNoteClick,
   onExpand,
 }: AllNotesListProps) {
-  const { collapsedIndices } = usePaneCollapse();
-  const isCollapsed = collapsedIndices.has(index);
-  const prefersReducedMotion = useReducedMotion();
-  const t = useTranslations("allNotes");
-  const tPane = useTranslations("notePane");
+  const { collapsedIndices } = usePaneCollapse()
+  const isCollapsed = collapsedIndices.has(index)
+  const prefersReducedMotion = useReducedMotion()
+  const t = useTranslations("allNotes")
+  const tPane = useTranslations("notePane")
 
   const sortedNotes = useMemo(
     () => [...notes].sort((a, b) => a.title.localeCompare(b.title)),
     [notes]
-  );
+  )
 
   const stackIndexBySlug = useMemo(() => {
-    const map = new Map<string, number>();
+    const map = new Map<string, number>()
     for (let i = 0; i < currentStack.length; i += 1) {
-      const slug = currentStack[i];
+      const slug = currentStack[i]
       if (!map.has(slug)) {
-        map.set(slug, i);
+        map.set(slug, i)
       }
     }
-    return map;
-  }, [currentStack]);
+    return map
+  }, [currentStack])
 
-  const transition = prefersReducedMotion ? { duration: 0 } : springSubtle;
-  const quickTransition = prefersReducedMotion ? { duration: 0 } : springQuick;
+  const transition = prefersReducedMotion ? { duration: 0 } : springSubtle
+  const quickTransition = prefersReducedMotion ? { duration: 0 } : springQuick
 
   return (
     <motion.aside
@@ -146,15 +146,15 @@ export function AllNotesList({
           <div className="px-8 py-6">
             <ul className="space-y-1">
               {sortedNotes.map((note) => {
-                const stackPosition = stackIndexBySlug.get(note.slug);
-                const isInStack = stackPosition !== undefined;
+                const stackPosition = stackIndexBySlug.get(note.slug)
+                const isInStack = stackPosition !== undefined
                 return (
                   <li key={note.slug}>
                     <PreviewLink
                       href={buildNoteHref(note.slug)}
                       onClick={(e) => {
-                        e.preventDefault();
-                        onNoteClick(note.slug);
+                        e.preventDefault()
+                        onNoteClick(note.slug)
                       }}
                     >
                       <span
@@ -182,12 +182,12 @@ export function AllNotesList({
                       </span>
                     </PreviewLink>
                   </li>
-                );
+                )
               })}
             </ul>
           </div>
         </ScrollArea>
       </motion.div>
     </motion.aside>
-  );
+  )
 }

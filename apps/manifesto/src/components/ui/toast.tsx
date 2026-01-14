@@ -1,18 +1,18 @@
-"use client";
+"use client"
 
-import { Toast } from "@base-ui/react/toast";
+import { Toast } from "@base-ui/react/toast"
 import {
   IconAlertWarningOutline18,
   IconArrowRotateClockwiseOutline18,
   IconCircleCheckOutline18,
   IconCircleInfoOutline18,
   IconCircleXmarkOutline18,
-} from "nucleo-ui-outline-18";
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+} from "nucleo-ui-outline-18"
+import { buttonVariants } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 
-const toastManager = Toast.createToastManager();
-const anchoredToastManager = Toast.createToastManager();
+const toastManager = Toast.createToastManager()
+const anchoredToastManager = Toast.createToastManager()
 
 const TOAST_ICONS = {
   error: IconCircleXmarkOutline18,
@@ -20,7 +20,7 @@ const TOAST_ICONS = {
   loading: IconArrowRotateClockwiseOutline18,
   success: IconCircleCheckOutline18,
   warning: IconAlertWarningOutline18,
-} as const;
+} as const
 
 type ToastPosition =
   | "top-left"
@@ -28,29 +28,29 @@ type ToastPosition =
   | "top-right"
   | "bottom-left"
   | "bottom-center"
-  | "bottom-right";
+  | "bottom-right"
 
-type SwipeDirection = "up" | "down" | "left" | "right";
+type SwipeDirection = "up" | "down" | "left" | "right"
 
 function getSwipeDirections(
   position: ToastPosition,
   isTop: boolean
 ): SwipeDirection[] {
-  const verticalDirection: SwipeDirection = isTop ? "up" : "down";
+  const verticalDirection: SwipeDirection = isTop ? "up" : "down"
 
   if (position.includes("center")) {
-    return [verticalDirection];
+    return [verticalDirection]
   }
 
   const horizontalDirection: SwipeDirection = position.includes("left")
     ? "left"
-    : "right";
+    : "right"
 
-  return [horizontalDirection, verticalDirection];
+  return [horizontalDirection, verticalDirection]
 }
 
 interface ToastProviderProps extends Toast.Provider.Props {
-  position?: ToastPosition;
+  position?: ToastPosition
 }
 
 function ToastProvider({
@@ -63,12 +63,12 @@ function ToastProvider({
       {children}
       <Toasts position={position} />
     </Toast.Provider>
-  );
+  )
 }
 
 function Toasts({ position = "bottom-right" }: { position: ToastPosition }) {
-  const { toasts } = Toast.useToastManager();
-  const isTop = position.startsWith("top");
+  const { toasts } = Toast.useToastManager()
+  const isTop = position.startsWith("top")
 
   return (
     <Toast.Portal data-slot="toast-portal">
@@ -89,7 +89,7 @@ function Toasts({ position = "bottom-right" }: { position: ToastPosition }) {
         {toasts.map((toast) => {
           const Icon = toast.type
             ? TOAST_ICONS[toast.type as keyof typeof TOAST_ICONS]
-            : null;
+            : null
 
           return (
             <Toast.Root
@@ -171,11 +171,11 @@ function Toasts({ position = "bottom-right" }: { position: ToastPosition }) {
                 )}
               </Toast.Content>
             </Toast.Root>
-          );
+          )
         })}
       </Toast.Viewport>
     </Toast.Portal>
-  );
+  )
 }
 
 function AnchoredToastProvider({ children, ...props }: Toast.Provider.Props) {
@@ -184,11 +184,11 @@ function AnchoredToastProvider({ children, ...props }: Toast.Provider.Props) {
       {children}
       <AnchoredToasts />
     </Toast.Provider>
-  );
+  )
 }
 
 function AnchoredToasts() {
-  const { toasts } = Toast.useToastManager();
+  const { toasts } = Toast.useToastManager()
 
   return (
     <Toast.Portal data-slot="toast-portal-anchored">
@@ -199,13 +199,13 @@ function AnchoredToasts() {
         {toasts.map((toast) => {
           const Icon = toast.type
             ? TOAST_ICONS[toast.type as keyof typeof TOAST_ICONS]
-            : null;
+            : null
           const tooltipStyle =
-            (toast.data as { tooltipStyle?: boolean })?.tooltipStyle ?? false;
-          const positionerProps = toast.positionerProps;
+            (toast.data as { tooltipStyle?: boolean })?.tooltipStyle ?? false
+          const positionerProps = toast.positionerProps
 
           if (!positionerProps?.anchor) {
-            return null;
+            return null
           }
 
           return (
@@ -265,11 +265,11 @@ function AnchoredToasts() {
                 )}
               </Toast.Root>
             </Toast.Positioner>
-          );
+          )
         })}
       </Toast.Viewport>
     </Toast.Portal>
-  );
+  )
 }
 
 export {
@@ -278,4 +278,4 @@ export {
   toastManager,
   AnchoredToastProvider,
   anchoredToastManager,
-};
+}

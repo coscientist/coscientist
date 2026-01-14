@@ -1,24 +1,24 @@
-const GOOGLE_FONTS_CSS_API = "https://fonts.googleapis.com/css2";
+const GOOGLE_FONTS_CSS_API = "https://fonts.googleapis.com/css2"
 
 // Safari UA makes Google Fonts return TTF instead of WOFF2 (Satori needs TTF/OTF)
 const TTF_USER_AGENT =
-  "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; de-at) AppleWebKit/533.21.1 (KHTML, like Gecko) Version/5.0.5 Safari/533.21.1";
+  "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; de-at) AppleWebKit/533.21.1 (KHTML, like Gecko) Version/5.0.5 Safari/533.21.1"
 
 // Regex to extract font URL from Google Fonts CSS
 const FONT_URL_REGEX =
-  /src: url\(([^)]+)\) format\(['"](?:truetype|opentype)['"]\)/;
+  /src: url\(([^)]+)\) format\(['"](?:truetype|opentype)['"]\)/
 
 interface FontConfig {
-  family: string;
-  weight: number;
-  style?: "normal" | "italic";
+  family: string
+  weight: number
+  style?: "normal" | "italic"
 }
 
 export interface OGFont {
-  name: string;
-  data: ArrayBuffer;
-  weight: 400 | 500 | 700;
-  style: "normal" | "italic";
+  name: string
+  data: ArrayBuffer
+  weight: 400 | 500 | 700
+  style: "normal" | "italic"
 }
 
 type Script =
@@ -33,7 +33,7 @@ type Script =
   | "tamil"
   | "telugu"
   | "thai"
-  | "cyrillic";
+  | "cyrillic"
 
 const LOCALE_SCRIPT_MAP: Record<string, Script> = {
   en: "latin",
@@ -61,7 +61,7 @@ const LOCALE_SCRIPT_MAP: Record<string, Script> = {
   th: "thai",
   ru: "cyrillic",
   uk: "cyrillic",
-};
+}
 
 const SCRIPT_FONT_MAP: Record<Script, FontConfig> = {
   latin: { family: "Faculty Glyphic", weight: 400 },
@@ -76,103 +76,103 @@ const SCRIPT_FONT_MAP: Record<Script, FontConfig> = {
   telugu: { family: "Noto Sans Telugu", weight: 400 },
   thai: { family: "Noto Sans Thai", weight: 400 },
   cyrillic: { family: "Noto Sans", weight: 400 },
-};
+}
 
 async function fetchGoogleFont(config: FontConfig): Promise<ArrayBuffer> {
-  const { family, weight } = config;
+  const { family, weight } = config
 
-  const familyParam = family.replace(/ /g, "+");
-  const cssUrl = `${GOOGLE_FONTS_CSS_API}?family=${familyParam}:wght@${weight}`;
+  const familyParam = family.replace(/ /g, "+")
+  const cssUrl = `${GOOGLE_FONTS_CSS_API}?family=${familyParam}:wght@${weight}`
 
   const cssResponse = await fetch(cssUrl, {
     headers: { "User-Agent": TTF_USER_AGENT },
     cache: "force-cache",
-  });
+  })
 
   if (!cssResponse.ok) {
     throw new Error(
       `Failed to fetch font CSS: ${cssResponse.status} ${cssResponse.statusText}`
-    );
+    )
   }
 
-  const css = await cssResponse.text();
+  const css = await cssResponse.text()
 
-  const fontUrlMatch = css.match(FONT_URL_REGEX);
+  const fontUrlMatch = css.match(FONT_URL_REGEX)
 
   if (!fontUrlMatch?.[1]) {
-    throw new Error(`Could not extract font URL from CSS for ${family}`);
+    throw new Error(`Could not extract font URL from CSS for ${family}`)
   }
 
-  const fontResponse = await fetch(fontUrlMatch[1], { cache: "force-cache" });
+  const fontResponse = await fetch(fontUrlMatch[1], { cache: "force-cache" })
 
   if (!fontResponse.ok) {
     throw new Error(
       `Failed to fetch font file: ${fontResponse.status} ${fontResponse.statusText}`
-    );
+    )
   }
 
-  return fontResponse.arrayBuffer();
+  return fontResponse.arrayBuffer()
 }
 
-const fontCache = new Map<string, Promise<ArrayBuffer>>();
+const fontCache = new Map<string, Promise<ArrayBuffer>>()
 
 function getCachedFont(config: FontConfig): Promise<ArrayBuffer> {
-  const cacheKey = `${config.family}-${config.weight}-${config.style || "normal"}`;
+  const cacheKey = `${config.family}-${config.weight}-${config.style || "normal"}`
 
-  const cached = fontCache.get(cacheKey);
+  const cached = fontCache.get(cacheKey)
   if (cached) {
-    return cached;
+    return cached
   }
 
-  const promise = fetchGoogleFont(config);
-  fontCache.set(cacheKey, promise);
+  const promise = fetchGoogleFont(config)
+  fontCache.set(cacheKey, promise)
 
-  return promise;
+  return promise
 }
 
 function getScriptForLocale(locale: string): Script {
-  return LOCALE_SCRIPT_MAP[locale] || "latin";
+  return LOCALE_SCRIPT_MAP[locale] || "latin"
 }
 
 export function getFacultyGlyphic(): Promise<ArrayBuffer> {
-  return getCachedFont(SCRIPT_FONT_MAP.latin);
+  return getCachedFont(SCRIPT_FONT_MAP.latin)
 }
 
 export async function getLocaleFallbackFont(
   locale: string
 ): Promise<OGFont | null> {
-  const script = getScriptForLocale(locale);
+  const script = getScriptForLocale(locale)
 
   if (script === "latin") {
-    return null;
+    return null
   }
 
-  const fontConfig = SCRIPT_FONT_MAP[script];
-  const data = await getCachedFont(fontConfig);
+  const fontConfig = SCRIPT_FONT_MAP[script]
+  const data = await getCachedFont(fontConfig)
 
   return {
     name: fontConfig.family,
     data,
     weight: fontConfig.weight as 400 | 500 | 700,
     style: "normal",
-  };
+  }
 }
 
 export async function getFontsForLocale(locale: string): Promise<OGFont[]> {
-  const fonts: OGFont[] = [];
+  const fonts: OGFont[] = []
 
-  const primaryData = await getFacultyGlyphic();
+  const primaryData = await getFacultyGlyphic()
   fonts.push({
     name: "Faculty Glyphic",
     data: primaryData,
     weight: 400,
     style: "normal",
-  });
+  })
 
-  const fallback = await getLocaleFallbackFont(locale);
+  const fallback = await getLocaleFallbackFont(locale)
   if (fallback) {
-    fonts.push(fallback);
+    fonts.push(fallback)
   }
 
-  return fonts;
+  return fonts
 }

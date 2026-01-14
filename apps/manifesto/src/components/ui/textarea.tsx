@@ -1,15 +1,15 @@
-"use client";
+"use client"
 
-import { Field as FieldPrimitive } from "@base-ui/react/field";
-import { mergeProps } from "@base-ui/react/merge-props";
-import type * as React from "react";
+import { Field as FieldPrimitive } from "@base-ui/react/field"
+import { mergeProps } from "@base-ui/react/merge-props"
+import type * as React from "react"
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
 type TextareaProps = React.ComponentProps<"textarea"> & {
-  size?: "sm" | "default" | "lg" | number;
-  unstyled?: boolean;
-};
+  size?: "sm" | "default" | "lg" | number
+  unstyled?: boolean
+}
 
 function Textarea({
   className,
@@ -45,7 +45,7 @@ function Textarea({
         )}
       />
     </span>
-  );
+  )
 }
 
-export { Textarea, type TextareaProps };
+export { Textarea, type TextareaProps }

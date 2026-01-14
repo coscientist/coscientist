@@ -5,9 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "bun x ultracite check",
-    "format": "bun x ultracite fix"
+    "start": "next start"
   },
   "dependencies": {
     "@base-ui/react": "^1.0.0",

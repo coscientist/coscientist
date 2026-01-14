@@ -1,50 +1,50 @@
-import fs from "node:fs/promises";
-import path from "node:path";
-import OpenAI from "openai";
+import fs from "node:fs/promises"
+import path from "node:path"
+import OpenAI from "openai"
 
-const openai = new OpenAI();
+const openai = new OpenAI()
 
-const CONCURRENCY_LIMIT = 32;
-const MAX_RETRIES = 5;
-const BASE_DELAY_MS = 1000;
-const MAX_DELAY_MS = 32_000;
-const JSON_EXTRACT_REGEX = /\{[\s\S]*\}/;
+const CONCURRENCY_LIMIT = 32
+const MAX_RETRIES = 5
+const BASE_DELAY_MS = 1000
+const MAX_DELAY_MS = 32_000
+const JSON_EXTRACT_REGEX = /\{[\s\S]*\}/
 
 interface TranslationTask<T> {
-  id: string;
-  execute: () => Promise<T>;
+  id: string
+  execute: () => Promise<T>
 }
 
 async function executeWithConcurrency<T>(
   tasks: TranslationTask<T>[],
   concurrency: number = CONCURRENCY_LIMIT
 ): Promise<Map<string, T | Error>> {
-  const results = new Map<string, T | Error>();
-  const executing = new Set<Promise<void>>();
+  const results = new Map<string, T | Error>()
+  const executing = new Set<Promise<void>>()
 
   for (const task of tasks) {
     const promise = (async () => {
       try {
-        const result = await executeWithRetry(task.execute, task.id);
-        results.set(task.id, result);
+        const result = await executeWithRetry(task.execute, task.id)
+        results.set(task.id, result)
       } catch (error) {
         results.set(
           task.id,
           error instanceof Error ? error : new Error(String(error))
-        );
+        )
       }
-    })();
+    })()
 
-    executing.add(promise);
-    promise.finally(() => executing.delete(promise));
+    executing.add(promise)
+    promise.finally(() => executing.delete(promise))
 
     if (executing.size >= concurrency) {
-      await Promise.race(executing);
+      await Promise.race(executing)
     }
   }
 
-  await Promise.all(executing);
-  return results;
+  await Promise.all(executing)
+  return results
 }
 
 async function executeWithRetry<T>(
@@ -52,41 +52,41 @@ async function executeWithRetry<T>(
   taskId: string,
   maxRetries: number = MAX_RETRIES
 ): Promise<T> {
-  let lastError: Error | undefined;
+  let lastError: Error | undefined
 
   for (let attempt = 0; attempt <= maxRetries; attempt++) {
     try {
-      return await fn();
+      return await fn()
     } catch (error) {
-      lastError = error instanceof Error ? error : new Error(String(error));
+      lastError = error instanceof Error ? error : new Error(String(error))
 
       if (attempt === maxRetries) {
         console.error(
           `✗ ${taskId}: Failed after ${maxRetries + 1} attempts - ${lastError.message}`
-        );
-        throw lastError;
+        )
+        throw lastError
       }
 
-      const delay = calculateBackoffDelay(attempt);
+      const delay = calculateBackoffDelay(attempt)
       console.log(
         `⟳ ${taskId}: Retry ${attempt + 1}/${maxRetries} in ${delay}ms...`
-      );
-      await sleep(delay);
+      )
+      await sleep(delay)
     }
   }
 
-  throw lastError;
+  throw lastError
 }
 
 // Formula: min(maxDelay, baseDelay * 2^attempt) + jitter
 function calculateBackoffDelay(attempt: number): number {
-  const exponentialDelay = Math.min(MAX_DELAY_MS, BASE_DELAY_MS * 2 ** attempt);
-  const jitter = Math.random() * exponentialDelay * 0.1;
-  return Math.floor(exponentialDelay + jitter);
+  const exponentialDelay = Math.min(MAX_DELAY_MS, BASE_DELAY_MS * 2 ** attempt)
+  const jitter = Math.random() * exponentialDelay * 0.1
+  return Math.floor(exponentialDelay + jitter)
 }
 
 function sleep(ms: number): Promise<void> {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+  return new Promise((resolve) => setTimeout(resolve, ms))
 }
 
 const LOCALES = [
@@ -115,7 +115,7 @@ const LOCALES = [
   "pl",
   "uk",
   "nl",
-] as const;
+] as const
 
 const LOCALE_NAMES: Record<string, string> = {
   en: "English",
@@ -143,7 +143,7 @@ const LOCALE_NAMES: Record<string, string> = {
   pl: "Polish",
   uk: "Ukrainian",
   nl: "Dutch",
-};
+}
 
 const ENGLISH_UI = {
   metadata: {
@@ -180,14 +180,14 @@ const ENGLISH_UI = {
   },
   common: { close: "Close", remove: "Remove", loading: "Loading" },
   languageSwitcher: { label: "Language", selectLanguage: "Select language" },
-};
+}
 
 async function translateWithGPT52(
   content: string,
   targetLocale: string,
   type: "json" | "markdown"
 ): Promise<string> {
-  const langName = LOCALE_NAMES[targetLocale] || targetLocale;
+  const langName = LOCALE_NAMES[targetLocale] || targetLocale
 
   const systemPrompt =
     type === "json"
@@ -208,7 +208,7 @@ RULES:
 5. Preserve wikilinks [[slug]] unchanged
 6. Use fluent, natural ${langName}
 7. Keep technical terms with English in parentheses if no good translation exists
-8. Return ONLY the translated markdown`;
+8. Return ONLY the translated markdown`
 
   const response = await openai.responses.create({
     model: "gpt-5.2",
@@ -217,143 +217,143 @@ RULES:
       { role: "developer", content: systemPrompt },
       { role: "user", content },
     ],
-  });
+  })
 
-  return response.output_text.trim();
+  return response.output_text.trim()
 }
 
 // Get the directory where this script is located
-const SCRIPT_DIR = import.meta.dirname;
-const PROJECT_ROOT = path.resolve(SCRIPT_DIR, "..");
+const SCRIPT_DIR = import.meta.dirname
+const PROJECT_ROOT = path.resolve(SCRIPT_DIR, "..")
 
 async function translateUI(locales: string[]) {
-  const messagesDir = path.join(PROJECT_ROOT, "messages");
-  await fs.mkdir(messagesDir, { recursive: true });
+  const messagesDir = path.join(PROJECT_ROOT, "messages")
+  await fs.mkdir(messagesDir, { recursive: true })
 
-  console.log("Translating UI strings...\n");
+  console.log("Translating UI strings...\n")
 
   await fs.writeFile(
     path.join(messagesDir, "en.json"),
     JSON.stringify(ENGLISH_UI, null, 2)
-  );
-  console.log("✓ en.json (source)");
+  )
+  console.log("✓ en.json (source)")
 
   const tasks: TranslationTask<void>[] = locales
     .filter((locale) => locale !== "en")
     .map((locale) => ({
       id: `ui:${locale}`,
       execute: async () => {
-        const filePath = path.join(messagesDir, `${locale}.json`);
-        console.log(`Translating to ${LOCALE_NAMES[locale]} (${locale})...`);
+        const filePath = path.join(messagesDir, `${locale}.json`)
+        console.log(`Translating to ${LOCALE_NAMES[locale]} (${locale})...`)
 
         const translated = await translateWithGPT52(
           JSON.stringify(ENGLISH_UI, null, 2),
           locale,
           "json"
-        );
+        )
 
-        const jsonMatch = translated.match(JSON_EXTRACT_REGEX);
+        const jsonMatch = translated.match(JSON_EXTRACT_REGEX)
         if (!jsonMatch) {
-          throw new Error("No valid JSON in response");
+          throw new Error("No valid JSON in response")
         }
 
-        JSON.parse(jsonMatch[0]);
-        await fs.writeFile(filePath, jsonMatch[0]);
-        console.log(`✓ ${locale}.json`);
+        JSON.parse(jsonMatch[0])
+        await fs.writeFile(filePath, jsonMatch[0])
+        console.log(`✓ ${locale}.json`)
       },
-    }));
+    }))
 
-  const results = await executeWithConcurrency(tasks);
+  const results = await executeWithConcurrency(tasks)
 
   for (const [taskId, result] of results) {
     if (result instanceof Error) {
-      const locale = taskId.replace("ui:", "");
-      const filePath = path.join(messagesDir, `${locale}.json`);
-      await fs.writeFile(filePath, JSON.stringify(ENGLISH_UI, null, 2));
+      const locale = taskId.replace("ui:", "")
+      const filePath = path.join(messagesDir, `${locale}.json`)
+      await fs.writeFile(filePath, JSON.stringify(ENGLISH_UI, null, 2))
     }
   }
 }
 
 async function translateMarkdown(locales: string[]) {
-  const notesDir = path.join(PROJECT_ROOT, "src/content/notes");
-  const enDir = path.join(notesDir, "en");
+  const notesDir = path.join(PROJECT_ROOT, "src/content/notes")
+  const enDir = path.join(notesDir, "en")
 
-  const files = await fs.readdir(enDir);
-  const mdFiles = files.filter((f) => f.endsWith(".md"));
+  const files = await fs.readdir(enDir)
+  const mdFiles = files.filter((f) => f.endsWith(".md"))
 
-  console.log(`\nTranslating ${mdFiles.length} markdown notes...\n`);
+  console.log(`\nTranslating ${mdFiles.length} markdown notes...\n`)
 
-  const targetLocales = locales.filter((locale) => locale !== "en");
+  const targetLocales = locales.filter((locale) => locale !== "en")
   await Promise.all(
     targetLocales.map((locale) =>
       fs.mkdir(path.join(notesDir, locale), { recursive: true })
     )
-  );
+  )
 
-  const tasks: TranslationTask<void>[] = [];
+  const tasks: TranslationTask<void>[] = []
 
   for (const locale of targetLocales) {
     for (const file of mdFiles) {
-      const targetPath = path.join(notesDir, locale, file);
+      const targetPath = path.join(notesDir, locale, file)
       const fileExists = await fs
         .access(targetPath)
         .then(() => true)
-        .catch(() => false);
+        .catch(() => false)
 
       if (fileExists) {
-        console.log(`⊘ ${locale}/${file} (exists)`);
+        console.log(`⊘ ${locale}/${file} (exists)`)
       } else {
         tasks.push({
           id: `md:${locale}/${file}`,
           execute: async () => {
-            const content = await fs.readFile(path.join(enDir, file), "utf-8");
-            console.log(`Translating ${file} to ${LOCALE_NAMES[locale]}...`);
+            const content = await fs.readFile(path.join(enDir, file), "utf-8")
+            console.log(`Translating ${file} to ${LOCALE_NAMES[locale]}...`)
 
             const translated = await translateWithGPT52(
               content,
               locale,
               "markdown"
-            );
-            await fs.writeFile(targetPath, translated);
-            console.log(`✓ ${locale}/${file}`);
+            )
+            await fs.writeFile(targetPath, translated)
+            console.log(`✓ ${locale}/${file}`)
           },
-        });
+        })
       }
     }
   }
 
-  console.log(`\nQueued ${tasks.length} translations (32 concurrent)...\n`);
-  const results = await executeWithConcurrency(tasks);
+  console.log(`\nQueued ${tasks.length} translations (32 concurrent)...\n`)
+  const results = await executeWithConcurrency(tasks)
 
   for (const [taskId, result] of results) {
     if (result instanceof Error) {
-      const [locale, file] = taskId.replace("md:", "").split("/");
-      const targetPath = path.join(notesDir, locale, file);
-      const content = await fs.readFile(path.join(enDir, file), "utf-8");
-      await fs.writeFile(targetPath, content);
+      const [locale, file] = taskId.replace("md:", "").split("/")
+      const targetPath = path.join(notesDir, locale, file)
+      const content = await fs.readFile(path.join(enDir, file), "utf-8")
+      await fs.writeFile(targetPath, content)
     }
   }
 }
 
 async function main() {
-  const args = process.argv.slice(2);
-  const mode = args[0];
-  const localeArg = args[1];
+  const args = process.argv.slice(2)
+  const mode = args[0]
+  const localeArg = args[1]
 
-  let targetLocales: string[];
+  let targetLocales: string[]
   if (localeArg && localeArg !== "all") {
-    targetLocales = localeArg.split(",");
+    targetLocales = localeArg.split(",")
   } else {
-    targetLocales = [...LOCALES];
+    targetLocales = [...LOCALES]
   }
 
   if (mode === "ui") {
-    await translateUI(targetLocales);
+    await translateUI(targetLocales)
   } else if (mode === "markdown" || mode === "md") {
-    await translateMarkdown(targetLocales);
+    await translateMarkdown(targetLocales)
   } else if (mode === "all") {
-    await translateUI(targetLocales);
-    await translateMarkdown(targetLocales);
+    await translateUI(targetLocales)
+    await translateMarkdown(targetLocales)
   } else {
     console.log(`
 Usage:
@@ -365,8 +365,8 @@ Examples:
   bun run scripts/translate.ts ui ko,ja,zh-CN     # Translate UI to specific languages
   bun run scripts/translate.ts markdown all       # Translate all markdown to all languages
   bun run scripts/translate.ts all                # Translate everything to all languages
-`);
+`)
   }
 }
 
-main().catch(console.error);
+main().catch(console.error)

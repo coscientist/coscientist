@@ -1,23 +1,23 @@
-"use client";
+"use client"
 
-import { AnimatePresence, LayoutGroup } from "motion/react";
-import { Suspense, useCallback, useMemo, useState } from "react";
-import { AllNotesList } from "@/components/all-notes-list";
-import { useKeyboardNavigation } from "@/components/keyboard-navigation";
-import { NotePane } from "@/components/note-pane";
-import { PaneContainer } from "@/components/pane-container";
-import { NotePreviewProvider } from "@/components/preview-link";
-import { Spinner } from "@/components/ui/spinner";
-import type { BacklinkInfo, Note } from "@/lib/types";
-import { useNoteStack } from "@/lib/use-note-stack";
+import { AnimatePresence, LayoutGroup } from "motion/react"
+import { Suspense, useCallback, useMemo, useState } from "react"
+import { AllNotesList } from "@/components/all-notes-list"
+import { useKeyboardNavigation } from "@/components/keyboard-navigation"
+import { NotePane } from "@/components/note-pane"
+import { PaneContainer } from "@/components/pane-container"
+import { NotePreviewProvider } from "@/components/preview-link"
+import { Spinner } from "@/components/ui/spinner"
+import type { BacklinkInfo, Note } from "@/lib/types"
+import { useNoteStack } from "@/lib/use-note-stack"
 
 interface NotesPageClientProps {
-  rootSlug: string;
-  allNotes: Note[];
+  rootSlug: string
+  allNotes: Note[]
   initialNotesData: Array<{
-    note: Note;
-    backlinks: BacklinkInfo[];
-  }>;
+    note: Note
+    backlinks: BacklinkInfo[]
+  }>
 }
 
 function NotesContent({
@@ -26,16 +26,16 @@ function NotesContent({
   initialNotesData,
 }: NotesPageClientProps) {
   const { stack, focusIndex, pushNote, popNote, focusPane, setStack } =
-    useNoteStack(rootSlug);
+    useNoteStack(rootSlug)
   const [keyboardFocusIndex, setKeyboardFocusIndex] = useState(() =>
     Math.max(0, initialNotesData.length - 1)
-  );
-  const [prevLength, setPrevLength] = useState(initialNotesData.length);
+  )
+  const [prevLength, setPrevLength] = useState(initialNotesData.length)
 
   if (prevLength !== initialNotesData.length) {
-    setPrevLength(initialNotesData.length);
+    setPrevLength(initialNotesData.length)
     if (initialNotesData.length > 0) {
-      setKeyboardFocusIndex(initialNotesData.length - 1);
+      setKeyboardFocusIndex(initialNotesData.length - 1)
     }
   }
 
@@ -45,65 +45,65 @@ function NotesContent({
     maxFocusIndex: initialNotesData.length,
     onFocusChange: setKeyboardFocusIndex,
     onPopStack: popNote,
-  });
+  })
 
   const notesMap = useMemo(() => {
-    const map = new Map<string, Note>();
+    const map = new Map<string, Note>()
     for (const note of allNotes) {
-      map.set(note.slug, note);
+      map.set(note.slug, note)
     }
-    return map;
-  }, [allNotes]);
+    return map
+  }, [allNotes])
 
   const handleLinkClick = useCallback(
     (slug: string, fromPaneIndex: number) => {
-      pushNote(slug, fromPaneIndex);
+      pushNote(slug, fromPaneIndex)
     },
     [pushNote]
-  );
+  )
 
   const handleExpandPane = useCallback(
     (index: number) => {
-      setKeyboardFocusIndex(index);
+      setKeyboardFocusIndex(index)
       if (index < stack.length) {
-        focusPane(index);
+        focusPane(index)
       }
     },
     [focusPane, stack.length]
-  );
+  )
 
   const handleAllNotesClick = useCallback(
     (slug: string) => {
-      pushNote(slug, stack.length - 1);
+      pushNote(slug, stack.length - 1)
     },
     [pushNote, stack.length]
-  );
+  )
 
   const handleClosePane = useCallback(
     (index: number) => {
       if (index === 0 || stack.length <= 1) {
-        return;
+        return
       }
-      const newStack = [...stack.slice(0, index), ...stack.slice(index + 1)];
-      const newFocusIndex = Math.min(index, newStack.length - 1);
-      setStack(newStack, newFocusIndex);
+      const newStack = [...stack.slice(0, index), ...stack.slice(index + 1)]
+      const newFocusIndex = Math.min(index, newStack.length - 1)
+      setStack(newStack, newFocusIndex)
     },
     [stack, setStack]
-  );
+  )
 
   const mobileData = useMemo(() => {
-    const backlinksMap = new Map<string, BacklinkInfo[]>();
+    const backlinksMap = new Map<string, BacklinkInfo[]>()
     const notes = initialNotesData.map((data) => {
-      backlinksMap.set(data.note.slug, data.backlinks);
-      return data.note;
-    });
+      backlinksMap.set(data.note.slug, data.backlinks)
+      return data.note
+    })
     return {
       notes,
       backlinksMap,
       onLinkClick: handleLinkClick,
       onClose: handleClosePane,
-    };
-  }, [initialNotesData, handleLinkClick, handleClosePane]);
+    }
+  }, [initialNotesData, handleLinkClick, handleClosePane])
 
   return (
     <NotePreviewProvider notesMap={notesMap}>
@@ -135,7 +135,7 @@ function NotesContent({
         </LayoutGroup>
       </PaneContainer>
     </NotePreviewProvider>
-  );
+  )
 }
 
 export function NotesPageClient(props: NotesPageClientProps) {
@@ -149,5 +149,5 @@ export function NotesPageClient(props: NotesPageClientProps) {
     >
       <NotesContent {...props} />
     </Suspense>
-  );
+  )
 }

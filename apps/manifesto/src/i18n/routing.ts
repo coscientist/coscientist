@@ -1,4 +1,4 @@
-import { defineRouting } from "next-intl/routing";
+import { defineRouting } from "next-intl/routing"
 
 export const locales = [
   "en",
@@ -26,20 +26,20 @@ export const locales = [
   "pl",
   "uk",
   "nl",
-] as const;
+] as const
 
-export type Locale = (typeof locales)[number];
+export type Locale = (typeof locales)[number]
 
 // RTL languages
-export const rtlLocales: Locale[] = ["ar", "fa", "ur"];
+export const rtlLocales: Locale[] = ["ar", "fa", "ur"]
 
 // Get text direction for a locale
 export function getDirection(locale: Locale): "ltr" | "rtl" {
-  return rtlLocales.includes(locale) ? "rtl" : "ltr";
+  return rtlLocales.includes(locale) ? "rtl" : "ltr"
 }
 
 export const routing = defineRouting({
   locales,
   defaultLocale: "en",
   localePrefix: "as-needed",
-});
+})

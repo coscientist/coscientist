@@ -1,21 +1,21 @@
-import { ImageResponse } from "next/og";
-import type { NextRequest } from "next/server";
-import { getFontsForLocale } from "@/lib/og/fonts";
+import { ImageResponse } from "next/og"
+import type { NextRequest } from "next/server"
+import { getFontsForLocale } from "@/lib/og/fonts"
 
-export const runtime = "edge";
-export const revalidate = 86_400;
+export const runtime = "edge"
+export const revalidate = 86_400
 
-const OG_WIDTH = 2400;
-const OG_HEIGHT = 1260;
+const OG_WIDTH = 2400
+const OG_HEIGHT = 1260
 
 export async function GET(request: NextRequest) {
-  const { searchParams } = request.nextUrl;
-  const title = searchParams.get("title") || "Coscientist";
-  const description = searchParams.get("description") || "";
-  const locale = searchParams.get("locale") || "en";
+  const { searchParams } = request.nextUrl
+  const title = searchParams.get("title") || "Coscientist"
+  const description = searchParams.get("description") || ""
+  const locale = searchParams.get("locale") || "en"
 
-  const fonts = await getFontsForLocale(locale);
-  const primaryFontName = fonts[0]?.name || "Faculty Glyphic";
+  const fonts = await getFontsForLocale(locale)
+  const primaryFontName = fonts[0]?.name || "Faculty Glyphic"
 
   return new ImageResponse(
     <div
@@ -178,5 +178,5 @@ export async function GET(request: NextRequest) {
         style: font.style,
       })),
     }
-  );
+  )
 }

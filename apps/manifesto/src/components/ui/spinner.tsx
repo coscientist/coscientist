@@ -1,12 +1,12 @@
-import { IconArrowRotateClockwiseOutline18 } from "nucleo-ui-outline-18";
-import { cn } from "@/lib/utils";
+import { IconArrowRotateClockwiseOutline18 } from "nucleo-ui-outline-18"
+import { cn } from "@/lib/utils"
 
 const sizeClasses = {
   sm: "size-4",
   default: "size-5",
   lg: "size-6",
   xl: "size-8",
-} as const;
+} as const
 
 function Spinner({
   className,
@@ -16,7 +16,7 @@ function Spinner({
   React.ComponentProps<typeof IconArrowRotateClockwiseOutline18>,
   "size"
 > & {
-  size?: keyof typeof sizeClasses;
+  size?: keyof typeof sizeClasses
 }) {
   return (
     <IconArrowRotateClockwiseOutline18
@@ -25,7 +25,7 @@ function Spinner({
       role="status"
       {...props}
     />
-  );
+  )
 }
 
-export { Spinner };
+export { Spinner }

@@ -1,34 +1,34 @@
-"use client";
+"use client"
 
-import { AnimatePresence, motion } from "motion/react";
-import { useLocale, useTranslations } from "next-intl";
-import { IconXmarkOutline18 } from "nucleo-ui-outline-18";
-import { useCallback } from "react";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { useReducedMotion } from "@/hooks/use-reduced-motion";
+import { AnimatePresence, motion } from "motion/react"
+import { useLocale, useTranslations } from "next-intl"
+import { IconXmarkOutline18 } from "nucleo-ui-outline-18"
+import { useCallback } from "react"
+import { ScrollArea } from "@/components/ui/scroll-area"
+import { useReducedMotion } from "@/hooks/use-reduced-motion"
 import {
   paneContentVariants,
   paneVariants,
   spineVariants,
   springQuick,
   springSubtle,
-} from "@/lib/animations";
-import type { BacklinkInfo, Note } from "@/lib/types";
-import { cn } from "@/lib/utils";
-import { BacklinksSection } from "./backlinks-section";
-import { NoteContent } from "./note-content";
-import { usePaneCollapse } from "./pane-container";
-import { PaneSpine } from "./pane-spine";
+} from "@/lib/animations"
+import type { BacklinkInfo, Note } from "@/lib/types"
+import { cn } from "@/lib/utils"
+import { BacklinksSection } from "./backlinks-section"
+import { NoteContent } from "./note-content"
+import { usePaneCollapse } from "./pane-container"
+import { PaneSpine } from "./pane-spine"
 
 interface NotePaneProps {
-  note: Note;
-  index: number;
-  isFocused?: boolean;
-  isClosable?: boolean;
-  backlinks: BacklinkInfo[];
-  onLinkClick: (slug: string, fromIndex: number) => void;
-  onExpand?: () => void;
-  onClose?: () => void;
+  note: Note
+  index: number
+  isFocused?: boolean
+  isClosable?: boolean
+  backlinks: BacklinkInfo[]
+  onLinkClick: (slug: string, fromIndex: number) => void
+  onExpand?: () => void
+  onClose?: () => void
 }
 
 export function NotePane({
@@ -40,21 +40,21 @@ export function NotePane({
   onExpand,
   onClose,
 }: NotePaneProps) {
-  const { collapsedIndices } = usePaneCollapse();
-  const isCollapsed = collapsedIndices.has(index);
-  const prefersReducedMotion = useReducedMotion();
-  const t = useTranslations("notePane");
-  const locale = useLocale();
+  const { collapsedIndices } = usePaneCollapse()
+  const isCollapsed = collapsedIndices.has(index)
+  const prefersReducedMotion = useReducedMotion()
+  const t = useTranslations("notePane")
+  const locale = useLocale()
 
   const handleLinkClick = useCallback(
     (slug: string) => {
-      onLinkClick(slug, index);
+      onLinkClick(slug, index)
     },
     [onLinkClick, index]
-  );
+  )
 
-  const transition = prefersReducedMotion ? { duration: 0 } : springSubtle;
-  const quickTransition = prefersReducedMotion ? { duration: 0 } : springQuick;
+  const transition = prefersReducedMotion ? { duration: 0 } : springSubtle
+  const quickTransition = prefersReducedMotion ? { duration: 0 } : springQuick
 
   return (
     <motion.article
@@ -194,8 +194,8 @@ export function NotePane({
               exit={{ opacity: 0, scale: 0.8 }}
               initial={{ opacity: 0, scale: 0.8 }}
               onClick={(e) => {
-                e.stopPropagation();
-                onClose?.();
+                e.stopPropagation()
+                onClose?.()
               }}
               transition={quickTransition}
               type="button"
@@ -206,5 +206,5 @@ export function NotePane({
         </AnimatePresence>
       </motion.div>
     </motion.article>
-  );
+  )
 }

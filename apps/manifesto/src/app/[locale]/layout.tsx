@@ -1,73 +1,73 @@
-import { Analytics } from "@vercel/analytics/next";
-import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next"
+import type { Metadata } from "next"
 import {
   Faculty_Glyphic,
   Noto_Serif_JP,
   Noto_Serif_KR,
   Noto_Serif_SC,
   Noto_Serif_TC,
-} from "next/font/google";
-import { notFound } from "next/navigation";
-import { hasLocale, NextIntlClientProvider } from "next-intl";
+} from "next/font/google"
+import { notFound } from "next/navigation"
+import { hasLocale, NextIntlClientProvider } from "next-intl"
 import {
   getMessages,
   getTranslations,
   setRequestLocale,
-} from "next-intl/server";
-import "@fontsource/iosevka/400.css";
-import "@fontsource/iosevka/500.css";
-import "@fontsource/iosevka/600.css";
-import "../globals.css";
-import { LanguageSwitcher } from "@/components/language-switcher";
-import { Logo } from "@/components/logo";
-import { ThemeProvider } from "@/components/theme-provider";
-import { ThemeToggle } from "@/components/theme-toggle";
-import { Button } from "@/components/ui/button";
-import { Group, GroupSeparator } from "@/components/ui/group";
-import { Link } from "@/i18n/navigation";
-import { getDirection, type Locale, routing } from "@/i18n/routing";
+} from "next-intl/server"
+import "@fontsource/iosevka/400.css"
+import "@fontsource/iosevka/500.css"
+import "@fontsource/iosevka/600.css"
+import "../globals.css"
+import { LanguageSwitcher } from "@/components/language-switcher"
+import { Logo } from "@/components/logo"
+import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeToggle } from "@/components/theme-toggle"
+import { Button } from "@/components/ui/button"
+import { Group, GroupSeparator } from "@/components/ui/group"
+import { Link } from "@/i18n/navigation"
+import { getDirection, type Locale, routing } from "@/i18n/routing"
 
 const facultyGlyphic = Faculty_Glyphic({
   variable: "--font-faculty-glyphic",
   subsets: ["latin"],
   weight: "400",
-});
+})
 
 const notoSerifKR = Noto_Serif_KR({
   variable: "--font-noto-serif-kr",
   subsets: ["latin"],
   weight: ["400", "700"],
-});
+})
 
 const notoSerifJP = Noto_Serif_JP({
   variable: "--font-noto-serif-jp",
   subsets: ["latin"],
   weight: ["500", "700"],
-});
+})
 
 const notoSerifSC = Noto_Serif_SC({
   variable: "--font-noto-serif-sc",
   subsets: ["latin"],
   weight: ["500", "700"],
-});
+})
 
 const notoSerifTC = Noto_Serif_TC({
   variable: "--font-noto-serif-tc",
   subsets: ["latin"],
   weight: ["500", "700"],
-});
+})
 
 interface Props {
-  children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  children: React.ReactNode
+  params: Promise<{ locale: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "metadata" });
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: "metadata" })
 
-  const title = t("title");
-  const description = t("description");
+  const title = t("title")
+  const description = t("description")
 
   return {
     metadataBase: new URL(
@@ -99,24 +99,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         `/api/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}&locale=${locale}`,
       ],
     },
-  };
+  }
 }
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
+  return routing.locales.map((locale) => ({ locale }))
 }
 
 export default async function LocaleLayout({ children, params }: Props) {
-  const { locale } = await params;
+  const { locale } = await params
 
   if (!hasLocale(routing.locales, locale)) {
-    notFound();
+    notFound()
   }
 
-  setRequestLocale(locale);
-  const messages = await getMessages();
-  const direction = getDirection(locale as Locale);
-  const t = await getTranslations("header");
+  setRequestLocale(locale)
+  const messages = await getMessages()
+  const direction = getDirection(locale as Locale)
+  const t = await getTranslations("header")
 
   return (
     <html className="h-full" dir={direction} lang={locale}>
@@ -199,5 +199,5 @@ export default async function LocaleLayout({ children, params }: Props) {
         <Analytics />
       </body>
     </html>
-  );
+  )
 }

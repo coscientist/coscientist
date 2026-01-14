@@ -1,40 +1,40 @@
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import { hasLocale } from "next-intl";
-import { getTranslations, setRequestLocale } from "next-intl/server";
-import { routing } from "@/i18n/routing";
-import { buildNoteGraph, getAllNoteSlugs, getNoteBySlug } from "@/lib/notes";
-import { parseStackFromParams } from "@/lib/stack";
-import type { BacklinkInfo, Note } from "@/lib/types";
-import { NotesPageClient } from "./client";
+import type { Metadata } from "next"
+import { notFound } from "next/navigation"
+import { hasLocale } from "next-intl"
+import { getTranslations, setRequestLocale } from "next-intl/server"
+import { routing } from "@/i18n/routing"
+import { buildNoteGraph, getAllNoteSlugs, getNoteBySlug } from "@/lib/notes"
+import { parseStackFromParams } from "@/lib/stack"
+import type { BacklinkInfo, Note } from "@/lib/types"
+import { NotesPageClient } from "./client"
 
 interface PageProps {
-  params: Promise<{ locale: string; slug?: string[] }>;
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+  params: Promise<{ locale: string; slug?: string[] }>
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const { locale, slug } = await params;
+  const { locale, slug } = await params
 
   if (!hasLocale(routing.locales, locale)) {
-    return {};
+    return {}
   }
 
-  const rootSlug = slug?.[0] ?? "index";
-  const note = await getNoteBySlug(rootSlug, locale);
+  const rootSlug = slug?.[0] ?? "index"
+  const note = await getNoteBySlug(rootSlug, locale)
 
   if (!note) {
-    const t = await getTranslations({ locale, namespace: "metadata" });
+    const t = await getTranslations({ locale, namespace: "metadata" })
     return {
       title: t("title"),
       description: t("description"),
-    };
+    }
   }
 
-  const title = note.title;
-  const description = note.description || note.excerpt;
+  const title = note.title
+  const description = note.description || note.excerpt
 
   return {
     title,
@@ -61,55 +61,55 @@ export async function generateMetadata({
         `/api/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description || "")}&locale=${locale}`,
       ],
     },
-  };
+  }
 }
 
 interface NotePaneData {
-  note: Note;
-  backlinks: BacklinkInfo[];
+  note: Note
+  backlinks: BacklinkInfo[]
 }
 
 export default async function Page({ params, searchParams }: PageProps) {
-  const resolvedParams = await params;
-  const resolvedSearchParams = await searchParams;
+  const resolvedParams = await params
+  const resolvedSearchParams = await searchParams
 
   if (!hasLocale(routing.locales, resolvedParams.locale)) {
-    notFound();
+    notFound()
   }
 
-  setRequestLocale(resolvedParams.locale);
+  setRequestLocale(resolvedParams.locale)
 
-  const rootSlug = resolvedParams.slug?.[0] ?? "index";
+  const rootSlug = resolvedParams.slug?.[0] ?? "index"
 
-  const urlSearchParams = new URLSearchParams();
+  const urlSearchParams = new URLSearchParams()
   for (const [key, value] of Object.entries(resolvedSearchParams)) {
     if (typeof value === "string") {
-      urlSearchParams.set(key, value);
+      urlSearchParams.set(key, value)
     } else if (Array.isArray(value)) {
       for (const v of value) {
-        urlSearchParams.append(key, v);
+        urlSearchParams.append(key, v)
       }
     }
   }
 
-  const { stack } = parseStackFromParams(rootSlug, urlSearchParams);
+  const { stack } = parseStackFromParams(rootSlug, urlSearchParams)
 
-  const { notes, backlinks } = await buildNoteGraph(resolvedParams.locale);
-  const rootNote = notes.get(rootSlug);
+  const { notes, backlinks } = await buildNoteGraph(resolvedParams.locale)
+  const rootNote = notes.get(rootSlug)
   if (!rootNote) {
-    notFound();
+    notFound()
   }
 
-  const notesData: NotePaneData[] = [];
+  const notesData: NotePaneData[] = []
   for (const slug of stack) {
-    const note = notes.get(slug);
+    const note = notes.get(slug)
     if (!note) {
-      continue;
+      continue
     }
     notesData.push({
       note,
       backlinks: backlinks.get(slug) || [],
-    });
+    })
   }
 
   return (
@@ -118,19 +118,19 @@ export default async function Page({ params, searchParams }: PageProps) {
       initialNotesData={notesData}
       rootSlug={rootSlug}
     />
-  );
+  )
 }
 
 export async function generateStaticParams() {
-  const slugs = await getAllNoteSlugs();
+  const slugs = await getAllNoteSlugs()
 
-  const params: Array<{ locale: string; slug: string[] | undefined }> = [];
+  const params: Array<{ locale: string; slug: string[] | undefined }> = []
   for (const locale of routing.locales) {
-    params.push({ locale, slug: undefined });
+    params.push({ locale, slug: undefined })
     for (const slug of slugs) {
-      params.push({ locale, slug: [slug] });
+      params.push({ locale, slug: [slug] })
     }
   }
 
-  return params;
+  return params
 }

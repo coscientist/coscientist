@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import {
   createContext,
@@ -8,33 +8,33 @@ import {
   useEffect,
   useRef,
   useState,
-} from "react";
-import { useIsMobile } from "@/hooks/use-mobile";
-import type { BacklinkInfo, Note } from "@/lib/types";
-import { cn } from "@/lib/utils";
-import { MobilePaneCarousel } from "./mobile-pane-carousel";
+} from "react"
+import { useIsMobile } from "@/hooks/use-mobile"
+import type { BacklinkInfo, Note } from "@/lib/types"
+import { cn } from "@/lib/utils"
+import { MobilePaneCarousel } from "./mobile-pane-carousel"
 
 interface PaneCollapseContextValue {
-  collapsedIndices: Set<number>;
+  collapsedIndices: Set<number>
 }
 
 const PaneCollapseContext = createContext<PaneCollapseContextValue>({
   collapsedIndices: new Set(),
-});
+})
 
 export function usePaneCollapse() {
-  return useContext(PaneCollapseContext);
+  return useContext(PaneCollapseContext)
 }
 
 interface PaneContainerProps {
-  children: ReactNode;
-  focusIndex: number;
+  children: ReactNode
+  focusIndex: number
   mobileData?: {
-    notes: Note[];
-    backlinksMap: Map<string, BacklinkInfo[]>;
-    onLinkClick: (slug: string, fromIndex: number) => void;
-    onClose: (index: number) => void;
-  };
+    notes: Note[]
+    backlinksMap: Map<string, BacklinkInfo[]>
+    onLinkClick: (slug: string, fromIndex: number) => void
+    onClose: (index: number) => void
+  }
 }
 
 export function PaneContainer({
@@ -42,156 +42,155 @@ export function PaneContainer({
   focusIndex,
   mobileData,
 }: PaneContainerProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null)
   const [collapsedIndices, setCollapsedIndices] = useState<Set<number>>(
     new Set()
-  );
-  const collapseThresholdRef = useRef(0);
-  const isMobile = useIsMobile();
+  )
+  const collapseThresholdRef = useRef(0)
+  const isMobile = useIsMobile()
 
   const getScrollBehavior = useCallback(() => {
     if (typeof window === "undefined") {
-      return "smooth" as const;
+      return "smooth" as const
     }
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches
       ? "auto"
-      : "smooth";
-  }, []);
+      : "smooth"
+  }, [])
 
   const updateCollapseThreshold = useCallback(() => {
-    const container = containerRef.current;
+    const container = containerRef.current
     if (!container) {
-      return;
+      return
     }
 
     const firstPane = container.querySelector(
       "[data-pane]"
-    ) as HTMLElement | null;
+    ) as HTMLElement | null
     if (!firstPane) {
-      return;
+      return
     }
 
-    const paneWidth = firstPane.offsetWidth;
-    const rootStyles = getComputedStyle(document.documentElement);
-    const rootFontSize = Number.parseFloat(rootStyles.fontSize) || 16;
+    const paneWidth = firstPane.offsetWidth
+    const rootStyles = getComputedStyle(document.documentElement)
+    const rootFontSize = Number.parseFloat(rootStyles.fontSize) || 16
     const spineWidthRem =
       Number.parseFloat(rootStyles.getPropertyValue("--pane-spine-width")) ||
-      2.5;
-    const spineWidth = spineWidthRem * rootFontSize;
+      2.5
+    const spineWidth = spineWidthRem * rootFontSize
 
-    collapseThresholdRef.current = Math.max(0, paneWidth - spineWidth);
-  }, []);
+    collapseThresholdRef.current = Math.max(0, paneWidth - spineWidth)
+  }, [])
 
   const updateCollapsedIndices = useCallback(() => {
     if (!containerRef.current) {
-      return;
+      return
     }
 
     if (isMobile) {
-      setCollapsedIndices(new Set());
-      return;
+      setCollapsedIndices(new Set())
+      return
     }
 
-    const scrollLeft = containerRef.current.scrollLeft;
-    const collapseThreshold = collapseThresholdRef.current;
-    const newCollapsed = new Set<number>();
+    const scrollLeft = containerRef.current.scrollLeft
+    const collapseThreshold = collapseThresholdRef.current
+    const newCollapsed = new Set<number>()
 
     if (collapseThreshold > 0) {
-      let index = 0;
+      let index = 0
       while ((index + 1) * collapseThreshold <= scrollLeft) {
-        newCollapsed.add(index);
-        index++;
+        newCollapsed.add(index)
+        index++
       }
     }
 
     setCollapsedIndices((prev) => {
       if (prev.size !== newCollapsed.size) {
-        return newCollapsed;
+        return newCollapsed
       }
       for (const i of newCollapsed) {
         if (!prev.has(i)) {
-          return newCollapsed;
+          return newCollapsed
         }
       }
-      return prev;
-    });
-  }, [isMobile]);
+      return prev
+    })
+  }, [isMobile])
 
   useEffect(() => {
     if (isMobile) {
-      return;
+      return
     }
 
-    const container = containerRef.current;
+    const container = containerRef.current
     if (!container) {
-      return;
+      return
     }
 
-    updateCollapseThreshold();
-    const frameId = requestAnimationFrame(updateCollapsedIndices);
+    updateCollapseThreshold()
+    const frameId = requestAnimationFrame(updateCollapsedIndices)
 
     if (typeof ResizeObserver !== "undefined") {
       const observer = new ResizeObserver(() => {
-        updateCollapseThreshold();
-        updateCollapsedIndices();
-      });
-      observer.observe(container);
-      const firstPane = container.querySelector("[data-pane]");
+        updateCollapseThreshold()
+        updateCollapsedIndices()
+      })
+      observer.observe(container)
+      const firstPane = container.querySelector("[data-pane]")
       if (firstPane) {
-        observer.observe(firstPane);
+        observer.observe(firstPane)
       }
       return () => {
-        cancelAnimationFrame(frameId);
-        observer.disconnect();
-      };
+        cancelAnimationFrame(frameId)
+        observer.disconnect()
+      }
     }
 
     const handleResize = () => {
-      updateCollapseThreshold();
-      updateCollapsedIndices();
-    };
-    window.addEventListener("resize", handleResize);
+      updateCollapseThreshold()
+      updateCollapsedIndices()
+    }
+    window.addEventListener("resize", handleResize)
     return () => {
-      cancelAnimationFrame(frameId);
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [isMobile, updateCollapseThreshold, updateCollapsedIndices]);
+      cancelAnimationFrame(frameId)
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [isMobile, updateCollapseThreshold, updateCollapsedIndices])
 
   useEffect(() => {
     if (isMobile) {
-      return;
+      return
     }
 
-    const container = containerRef.current;
+    const container = containerRef.current
     if (!container) {
-      return;
+      return
     }
 
     container.addEventListener("scroll", updateCollapsedIndices, {
       passive: true,
-    });
-    return () =>
-      container.removeEventListener("scroll", updateCollapsedIndices);
-  }, [isMobile, updateCollapsedIndices]);
+    })
+    return () => container.removeEventListener("scroll", updateCollapsedIndices)
+  }, [isMobile, updateCollapsedIndices])
 
   useEffect(() => {
     if (isMobile) {
-      return;
+      return
     }
 
     if (containerRef.current) {
-      const panes = containerRef.current.querySelectorAll("[data-pane]");
-      const targetPane = panes[focusIndex] as HTMLElement | undefined;
+      const panes = containerRef.current.querySelectorAll("[data-pane]")
+      const targetPane = panes[focusIndex] as HTMLElement | undefined
 
       if (targetPane) {
         targetPane.scrollIntoView({
           behavior: getScrollBehavior(),
           block: "nearest",
           inline: "start",
-        });
+        })
       }
     }
-  }, [isMobile, focusIndex, getScrollBehavior]);
+  }, [isMobile, focusIndex, getScrollBehavior])
 
   if (isMobile && mobileData) {
     return (
@@ -202,7 +201,7 @@ export function PaneContainer({
         onClose={mobileData.onClose}
         onLinkClick={mobileData.onLinkClick}
       />
-    );
+    )
   }
 
   return (
@@ -219,5 +218,5 @@ export function PaneContainer({
         {children}
       </div>
     </PaneCollapseContext.Provider>
-  );
+  )
 }

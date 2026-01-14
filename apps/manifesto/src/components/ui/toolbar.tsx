@@ -1,8 +1,8 @@
-"use client";
+"use client"
 
-import { Toolbar as ToolbarPrimitive } from "@base-ui/react/toolbar";
+import { Toolbar as ToolbarPrimitive } from "@base-ui/react/toolbar"
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
 function Toolbar({ className, ...props }: ToolbarPrimitive.Root.Props) {
   return (
@@ -14,7 +14,7 @@ function Toolbar({ className, ...props }: ToolbarPrimitive.Root.Props) {
       data-slot="toolbar"
       {...props}
     />
-  );
+  )
 }
 
 function ToolbarButton({ className, ...props }: ToolbarPrimitive.Button.Props) {
@@ -24,7 +24,7 @@ function ToolbarButton({ className, ...props }: ToolbarPrimitive.Button.Props) {
       data-slot="toolbar-button"
       {...props}
     />
-  );
+  )
 }
 
 function ToolbarLink({ className, ...props }: ToolbarPrimitive.Link.Props) {
@@ -34,7 +34,7 @@ function ToolbarLink({ className, ...props }: ToolbarPrimitive.Link.Props) {
       data-slot="toolbar-link"
       {...props}
     />
-  );
+  )
 }
 
 function ToolbarInput({ className, ...props }: ToolbarPrimitive.Input.Props) {
@@ -44,7 +44,7 @@ function ToolbarInput({ className, ...props }: ToolbarPrimitive.Input.Props) {
       data-slot="toolbar-input"
       {...props}
     />
-  );
+  )
 }
 
 function ToolbarGroup({ className, ...props }: ToolbarPrimitive.Group.Props) {
@@ -54,7 +54,7 @@ function ToolbarGroup({ className, ...props }: ToolbarPrimitive.Group.Props) {
       data-slot="toolbar-group"
       {...props}
     />
-  );
+  )
 }
 
 function ToolbarSeparator({
@@ -70,7 +70,7 @@ function ToolbarSeparator({
       data-slot="toolbar-separator"
       {...props}
     />
-  );
+  )
 }
 
 export {
@@ -80,4 +80,4 @@ export {
   ToolbarButton,
   ToolbarLink,
   ToolbarInput,
-};
+}

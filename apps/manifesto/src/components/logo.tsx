@@ -1,6 +1,6 @@
 interface LogoProps {
-  className?: string;
-  size?: number;
+  className?: string
+  size?: number
 }
 
 export function Logo({ className, size = 20 }: LogoProps) {
@@ -20,5 +20,5 @@ export function Logo({ className, size = 20 }: LogoProps) {
       <rect fill="white" fillOpacity="0.5" height="20" width="6" x="13" y="6" />
       <rect fill="white" fillOpacity="0.2" height="20" width="6" x="21" y="6" />
     </svg>
-  );
+  )
 }

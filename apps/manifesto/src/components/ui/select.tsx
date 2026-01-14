@@ -1,16 +1,16 @@
-"use client";
+"use client"
 
-import { Select as SelectPrimitive } from "@base-ui/react/select";
+import { Select as SelectPrimitive } from "@base-ui/react/select"
 import {
   IconCheckOutline18,
   IconChevronDownOutline18,
   IconChevronExpandYOutline18,
   IconChevronUpOutline18,
-} from "nucleo-ui-outline-18";
+} from "nucleo-ui-outline-18"
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
-const Select = SelectPrimitive.Root;
+const Select = SelectPrimitive.Root
 
 function SelectTrigger({
   className,
@@ -18,7 +18,7 @@ function SelectTrigger({
   children,
   ...props
 }: SelectPrimitive.Trigger.Props & {
-  size?: "sm" | "default" | "lg";
+  size?: "sm" | "default" | "lg"
 }) {
   return (
     <SelectPrimitive.Trigger
@@ -37,7 +37,7 @@ function SelectTrigger({
         <IconChevronExpandYOutline18 className="-me-1 size-4.5 opacity-80 sm:size-4" />
       </SelectPrimitive.Icon>
     </SelectPrimitive.Trigger>
-  );
+  )
 }
 
 function SelectValue({ className, ...props }: SelectPrimitive.Value.Props) {
@@ -50,7 +50,7 @@ function SelectValue({ className, ...props }: SelectPrimitive.Value.Props) {
       data-slot="select-value"
       {...props}
     />
-  );
+  )
 }
 
 function SelectPopup({
@@ -60,8 +60,8 @@ function SelectPopup({
   alignItemWithTrigger = true,
   ...props
 }: SelectPrimitive.Popup.Props & {
-  sideOffset?: SelectPrimitive.Positioner.Props["sideOffset"];
-  alignItemWithTrigger?: SelectPrimitive.Positioner.Props["alignItemWithTrigger"];
+  sideOffset?: SelectPrimitive.Positioner.Props["sideOffset"]
+  alignItemWithTrigger?: SelectPrimitive.Positioner.Props["alignItemWithTrigger"]
 }) {
   return (
     <SelectPrimitive.Portal>
@@ -102,7 +102,7 @@ function SelectPopup({
         </SelectPrimitive.Popup>
       </SelectPrimitive.Positioner>
     </SelectPrimitive.Portal>
-  );
+  )
 }
 
 function SelectItem({
@@ -126,7 +126,7 @@ function SelectItem({
         {children}
       </SelectPrimitive.ItemText>
     </SelectPrimitive.Item>
-  );
+  )
 }
 
 function SelectSeparator({
@@ -139,11 +139,11 @@ function SelectSeparator({
       data-slot="select-separator"
       {...props}
     />
-  );
+  )
 }
 
 function SelectGroup(props: SelectPrimitive.Group.Props) {
-  return <SelectPrimitive.Group data-slot="select-group" {...props} />;
+  return <SelectPrimitive.Group data-slot="select-group" {...props} />
 }
 
 function SelectGroupLabel(props: SelectPrimitive.GroupLabel.Props) {
@@ -153,7 +153,7 @@ function SelectGroupLabel(props: SelectPrimitive.GroupLabel.Props) {
       data-slot="select-group-label"
       {...props}
     />
-  );
+  )
 }
 
 export {
@@ -166,4 +166,4 @@ export {
   SelectSeparator,
   SelectGroup,
   SelectGroupLabel,
-};
+}

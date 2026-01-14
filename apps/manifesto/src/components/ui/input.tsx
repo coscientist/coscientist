@@ -1,17 +1,17 @@
-"use client";
+"use client"
 
-import { Input as InputPrimitive } from "@base-ui/react/input";
-import type * as React from "react";
+import { Input as InputPrimitive } from "@base-ui/react/input"
+import type * as React from "react"
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
 type InputProps = Omit<
   InputPrimitive.Props & React.RefAttributes<HTMLInputElement>,
   "size"
 > & {
-  size?: "sm" | "default" | "lg" | number;
-  unstyled?: boolean;
-};
+  size?: "sm" | "default" | "lg" | number
+  unstyled?: boolean
+}
 
 function Input({
   className,
@@ -47,7 +47,7 @@ function Input({
         {...props}
       />
     </span>
-  );
+  )
 }
 
-export { Input, type InputProps };
+export { Input, type InputProps }

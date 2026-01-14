@@ -1,17 +1,17 @@
-"use client";
+"use client"
 
-import { Tooltip as TooltipPrimitive } from "@base-ui/react/tooltip";
+import { Tooltip as TooltipPrimitive } from "@base-ui/react/tooltip"
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
-const TooltipCreateHandle = TooltipPrimitive.createHandle;
+const TooltipCreateHandle = TooltipPrimitive.createHandle
 
-const TooltipProvider = TooltipPrimitive.Provider;
+const TooltipProvider = TooltipPrimitive.Provider
 
-const Tooltip = TooltipPrimitive.Root;
+const Tooltip = TooltipPrimitive.Root
 
 function TooltipTrigger(props: TooltipPrimitive.Trigger.Props) {
-  return <TooltipPrimitive.Trigger data-slot="tooltip-trigger" {...props} />;
+  return <TooltipPrimitive.Trigger data-slot="tooltip-trigger" {...props} />
 }
 
 function TooltipPopup({
@@ -22,9 +22,9 @@ function TooltipPopup({
   children,
   ...props
 }: TooltipPrimitive.Popup.Props & {
-  align?: TooltipPrimitive.Positioner.Props["align"];
-  side?: TooltipPrimitive.Positioner.Props["side"];
-  sideOffset?: TooltipPrimitive.Positioner.Props["sideOffset"];
+  align?: TooltipPrimitive.Positioner.Props["align"]
+  side?: TooltipPrimitive.Positioner.Props["side"]
+  sideOffset?: TooltipPrimitive.Positioner.Props["sideOffset"]
 }) {
   return (
     <TooltipPrimitive.Portal>
@@ -52,7 +52,7 @@ function TooltipPopup({
         </TooltipPrimitive.Popup>
       </TooltipPrimitive.Positioner>
     </TooltipPrimitive.Portal>
-  );
+  )
 }
 
 export {
@@ -62,4 +62,4 @@ export {
   TooltipTrigger,
   TooltipPopup,
   TooltipPopup as TooltipContent,
-};
+}

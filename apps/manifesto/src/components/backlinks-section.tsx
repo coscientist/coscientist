@@ -1,17 +1,17 @@
-"use client";
+"use client"
 
-import { useTranslations } from "next-intl";
-import { IconArrowUpLeftOutline18 } from "nucleo-ui-outline-18";
-import type { BacklinkInfo } from "@/lib/types";
-import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl"
+import { IconArrowUpLeftOutline18 } from "nucleo-ui-outline-18"
+import type { BacklinkInfo } from "@/lib/types"
+import { cn } from "@/lib/utils"
 
 interface BacklinksSectionProps {
-  backlinks: BacklinkInfo[];
-  onBacklinkClick: (slug: string) => void;
+  backlinks: BacklinkInfo[]
+  onBacklinkClick: (slug: string) => void
 }
 
 function ExcerptWithBold({ text }: { text: string }) {
-  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  const parts = text.split(/(\*\*[^*]+\*\*)/g)
   return (
     <>
       {parts.map((part) =>
@@ -24,20 +24,20 @@ function ExcerptWithBold({ text }: { text: string }) {
         )
       )}
     </>
-  );
+  )
 }
 
 export function BacklinksSection({
   backlinks,
   onBacklinkClick,
 }: BacklinksSectionProps) {
-  const t = useTranslations("backlinks");
+  const t = useTranslations("backlinks")
 
   if (backlinks.length === 0) {
-    return null;
+    return null
   }
 
-  const translationKey = backlinks.length === 1 ? "singular" : "plural";
+  const translationKey = backlinks.length === 1 ? "singular" : "plural"
 
   return (
     <section>
@@ -73,5 +73,5 @@ export function BacklinksSection({
         ))}
       </ul>
     </section>
-  );
+  )
 }

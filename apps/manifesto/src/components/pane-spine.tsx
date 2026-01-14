@@ -1,13 +1,13 @@
-"use client";
+"use client"
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
 interface PaneSpineProps {
-  index: number;
-  title: string;
-  description?: string;
-  showIndex?: boolean;
-  className?: string;
+  index: number
+  title: string
+  description?: string
+  showIndex?: boolean
+  className?: string
 }
 
 export function PaneSpine({
@@ -55,5 +55,5 @@ export function PaneSpine({
         </div>
       </div>
     </div>
-  );
+  )
 }

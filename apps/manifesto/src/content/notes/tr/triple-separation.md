@@ -7,4 +7,4 @@ description: Ham metni, normalize edilmiş iddiaları ve açık ilişkileri birb
 
 Bu ayrım, [RAG](./rag-limitations) içinde yaygın bir arıza modunu önler: alıntı kesilmesi (excerpt truncation). Metin, özgün ifade biçimi korunmadan geri getirilip özetlendiğinde, atıf sessizce ortadan kaybolabilir. Üçlü ayrım, bir iddiayı her zaman onu üreten tam kelimelere ve onları üreten [kaynağa](./source) geri izleyebilmenizi sağlar.
 
-Ayrıca yapıyı sorgulanabilir kılarak [bilgi sentezini](./knowledge-synthesis) mümkün kılar. “Bu iddiaya ne saldırıyor?” veya “Bu hangi tanımlara dayanıyor?” diye sorabilirsiniz; çünkü bu ilişkiler ima edilmez, saklanır.
+Ayrıca yapıyı sorgulanabilir kılarak [bilgi sentezini](./knowledge-synthesis) mümkün kılar. "Bu iddiaya ne saldırıyor?” veya "Bu hangi tanımlara dayanıyor?” diye sorabilirsiniz; çünkü bu ilişkiler ima edilmez, saklanır.

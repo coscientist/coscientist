@@ -7,4 +7,4 @@ Koreksi vs drift adalah prinsip ekonomi bahwa sebuah sistem pengetahuan tetap se
 
 Lapisan [protokol epistemik](./epistemic-protocol-layer) dirancang agar koreksi tetap murah. [Keterlacakan](./traceability) berarti Anda bisa menemukan apa yang perlu diperbaiki; [klaim](./claim) yang eksplisit berarti Anda bisa menargetkan perubahan secara presisi; dan [Graf Dialektis](./dialectical-graph) berarti pembaruan menyebar melalui relasi alih-alih membutuhkan penulisan ulang manual.
 
-[Kehancuran Ensiklopedia](./encyclopedia-meltdown) adalah apa yang terjadi ketika drift menang secara permanen: sistem menstabil di sekitar keadaan mapan palsu yang “dipelihara secara kira-kira” karena tidak ada yang mampu membersihkannya.
+[Kehancuran Ensiklopedia](./encyclopedia-meltdown) adalah apa yang terjadi ketika drift menang secara permanen: sistem menstabil di sekitar keadaan mapan palsu yang "dipelihara secara kira-kira” karena tidak ada yang mampu membersihkannya.

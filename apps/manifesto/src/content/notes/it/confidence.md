@@ -7,4 +7,4 @@ La fiducia in [Coscienziato](./coscientist) non è un singolo punteggio di proba
 
 Le dimensioni includono il tipo di evidenza (osservazione diretta vs. inferenza), lo stato di replicazione (percorsi indipendenti vs. citazione ripetuta), la storia delle contestazioni (è stata attaccata ed è sopravvissuta?) e la diversità dei percorsi (il supporto proviene da più vie indipendenti?). Una tesi può avere alta fiducia in una dimensione ed essere debole in un’altra.
 
-Questa visione multidimensionale evita la [trappola della fluidità](./fluency-trap): una tesi che “sembra affidabile” perché è espressa in modo scorrevole non è la stessa cosa di una tesi che è stata messa alla prova ed è sopravvissuta. Vedi [Nodi del Grafo Dialettico](./dialectical-graph-nodes) per la tassonomia degli stati.
+Questa visione multidimensionale evita la [trappola della fluidità](./fluency-trap): una tesi che "sembra affidabile” perché è espressa in modo scorrevole non è la stessa cosa di una tesi che è stata messa alla prova ed è sopravvissuta. Vedi [Nodi del Grafo Dialettico](./dialectical-graph-nodes) per la tassonomia degli stati.

@@ -3,7 +3,7 @@ title: Superbrein
 description: De visie van een geëxternaliseerd cognitief exoskelet dat menselijke intelligentie versterkt
 ---
 
-Superbrein is de term van [Sunghyun Cho](./sunghyun-cho) voor de visie van een [cognitief exoskelet](./cognitive-exoskeleton) dat menselijke intelligentie voorbij biologische grenzen versterkt. [Extracranial](./extracranial) wordt beschreven als een “Exosuit for Superbrains”: een geëxternaliseerde geheugenextensie die bedoeld is om elk idee dat de gebruiker heeft vast te houden.
+Superbrein is de term van [Sunghyun Cho](./sunghyun-cho) voor de visie van een [cognitief exoskelet](./cognitive-exoskeleton) dat menselijke intelligentie voorbij biologische grenzen versterkt. [Extracranial](./extracranial) wordt beschreven als een "Exosuit for Superbrains”: een geëxternaliseerde geheugenextensie die bedoeld is om elk idee dat de gebruiker heeft vast te houden.
 
 Het superbrein is geen vervanging van menselijke cognitie, maar een versterker. Het moet:
 

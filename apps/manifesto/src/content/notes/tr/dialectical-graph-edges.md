@@ -3,7 +3,7 @@ title: Diyalektik Grafik Kenarları
 description: Diyalektik bir bilgi grafiğinde düğümleri bağlayan ilişki türleri
 ---
 
-Bir [Diyalektik Grafikte](./dialectical-graph), kenarlar benzerlik skorları yerine ilişki türlerini kodlar. Bunun değeri, yalnızca “bunlar aynı konu hakkında mı?” demek yerine “bu, şuna nasıl etki ediyor?” diye sorabilmenizdir.
+Bir [Diyalektik Grafikte](./dialectical-graph), kenarlar benzerlik skorları yerine ilişki türlerini kodlar. Bunun değeri, yalnızca "bunlar aynı konu hakkında mı?” demek yerine "bu, şuna nasıl etki ediyor?” diye sorabilmenizdir.
 
 Yaygın ilişki türleri şunları içerir:
 

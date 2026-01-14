@@ -11,7 +11,7 @@ description: 주장을 증거와 반증, 그리고 대안적 설명에 비추어
 - [반박 우선 탐색](./rebuttal-first-search) — 수용하기 전에 반증을 먼저 찾기
 - [다중 AI 합의 프로토콜](./multi-ai-consensus-protocol) — 모델 간 불일치를 신호로 활용하기
 - [만장일치 요구](./unanimity-requirement) — 모든 검토자가 동의할 때만 주장을 수용하기
-- [책임 라인](./responsibility-line) — 누가 무엇을 주장했는지 추적하기
+- [책임선](./responsibility-line) — 누가 무엇을 주장했는지 추적하기
 - [반례](./counterexample) — 주장을 무너뜨리는 사례
 - [제로 트러스트 수집](./zero-trust-ingestion) — 권위보다 출처를 먼저 요구하기
 

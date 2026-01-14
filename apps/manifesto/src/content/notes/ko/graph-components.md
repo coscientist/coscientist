@@ -1,9 +1,9 @@
 ---
 title: 그래프 구성 요소
-description: 변증법적 그래프를 구성하는 노드 및 에지 유형
+description: 변증법적 그래프를 구성하는 노드 및 엣지 유형
 ---
 
-그래프 구성 요소는 [변증법적 그래프](./dialectical-graph)의 기본 단위입니다. 즉, 인식론적 객체(epistemic objects)를 나타내는 노드 유형과, 그들 사이의 관계를 나타내는 에지 유형입니다.
+그래프 구성 요소는 [변증법적 그래프](./dialectical-graph)의 기본 단위다. 즉, 인식론적 객체(epistemic objects)를 나타내는 노드 유형과, 그들 사이의 관계를 나타내는 엣지 유형이다.
 
 **노드 유형**([변증법적 그래프 노드](./dialectical-graph-nodes) 참고):
 
@@ -16,7 +16,7 @@ description: 변증법적 그래프를 구성하는 노드 및 에지 유형
 - [반례](./counterexample) — 주장을 깨뜨리는 사례
 - [이슈 노드](./issue-node) — 충돌하는 주장들의 묶음
 
-**에지 유형**([변증법적 그래프 에지](./dialectical-graph-edges) 참고):
+**엣지 유형**([변증법적 그래프 엣지](./dialectical-graph-edges) 참고):
 
 - [공격](./attack) — 진실성에 대한 직접적 도전
 - [언더컷](./undercut) — 근거에 대한 도전

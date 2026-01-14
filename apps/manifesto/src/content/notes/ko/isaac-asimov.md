@@ -3,7 +3,7 @@ title: 아이작 아시모프
 description: 파운데이션 시리즈로 코사이언티스트의 비전에 영감을 준 SF 작가
 ---
 
-아이작 아시모프(1920–1992)는 다작의 과학소설 작가이자 생화학 교수로, 그의 파운데이션(Foundation) 시리즈는 [코사이언티스트](./coscientist)의 비전을 떠받치는 허구적 준거점이다. 이 시리즈는 [은하 백과사전](./encyclopedia-galactica), [심리역사학](./psychohistory), [셀던 계획](./seldon-plan), 그리고 인물 [하리 셀던](./hari-seldon)을 소개했다.
+아이작 아시모프(1920–1992)는 다작의 과학소설 작가이자 생화학 교수로, 그의 파운데이션(Foundation) 시리즈는 [코사이언티스트](./coscientist)의 비전을 떠받치는 허구적 준거점이다. 이 시리즈는 [은하대백과](./encyclopedia-galactica), [심리역사학](./psychohistory), [셀던 계획](./seldon-plan), 그리고 인물 [하리 셀던](./hari-seldon)을 소개했다.
 
 파운데이션의 전제는 [은하 제국](./galactic-empire)이 필연적으로 붕괴하고, 그 결과 수천 년에 걸친 [영혼의 어두운 밤](./dark-night-of-the-soul)이 찾아온다는 것이다. 이에 대한 셀던의 대응은 지식을 보존하고 생산함으로써 암흑기를 단축할 수 있는 제도들을—테르미누스(Terminus)에서의 백과사전 프로젝트를 포함해—만드는 것이다.
 

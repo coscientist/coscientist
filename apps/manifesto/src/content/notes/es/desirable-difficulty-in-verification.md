@@ -3,7 +3,7 @@ title: Dificultad deseable en la verificación
 description: Hacer que la verificación requiera esfuerzo para mantener una comprensión genuina
 ---
 
-La dificultad deseable en la verificación es el principio de que la [verificación](./verification) debe requerir suficiente esfuerzo como para activar una cognición genuina. Si comprobar una afirmación es demasiado fácil —si se reduce a “la IA lo dijo”—, el [Operador](./operator) no está aprendiendo ni verificando; está ratificando.
+La dificultad deseable en la verificación es el principio de que la [verificación](./verification) debe requerir suficiente esfuerzo como para activar una cognición genuina. Si comprobar una afirmación es demasiado fácil —si se reduce a "la IA lo dijo”—, el [Operador](./operator) no está aprendiendo ni verificando; está ratificando.
 
 El término proviene de la ciencia del aprendizaje, donde las dificultades deseables (como el [recuerdo activo](./active-recall) y el [espaciado](./spacing-effect)) mejoran la retención a largo plazo porque exigen esfuerzo. La verificación funciona igual: el esfuerzo de comprobar es lo que produce comprensión y detecta errores.
 

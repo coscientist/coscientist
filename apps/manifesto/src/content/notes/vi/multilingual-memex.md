@@ -3,7 +3,7 @@ title: Memex đa ngôn ngữ
 description: Một hệ thống tri thức cá nhân có nhận biết ngôn ngữ với hỗ trợ dịch tự động
 ---
 
-Memex đa ngôn ngữ là một hệ thống tri thức cá nhân hỗ trợ nội dung bằng nhiều ngôn ngữ một cách “tự nhiên”, với khả năng tự động phát hiện ngôn ngữ, dịch thuật và liên kết xuyên ngôn ngữ. Nó mở rộng tầm nhìn [Memex](./memex) nguyên bản của [Vannevar Bush](./vannevar-bush) sang một thế giới nơi tri thức không bị ràng buộc bởi biên giới ngôn ngữ.
+Memex đa ngôn ngữ là một hệ thống tri thức cá nhân hỗ trợ nội dung bằng nhiều ngôn ngữ một cách "tự nhiên”, với khả năng tự động phát hiện ngôn ngữ, dịch thuật và liên kết xuyên ngôn ngữ. Nó mở rộng tầm nhìn [Memex](./memex) nguyên bản của [Vannevar Bush](./vannevar-bush) sang một thế giới nơi tri thức không bị ràng buộc bởi biên giới ngôn ngữ.
 
 [Extracranial](./extracranial) của [Sunghyun Cho](./sunghyun-cho) là một hiện thực hóa của khái niệm này. Nó bao gồm phát hiện ngôn ngữ tự động, phân phối theo miền địa phương (locale) bằng thẻ hreflang, và khả năng viết bằng một ngôn ngữ trong khi để các hệ thống dịch xử lý việc phân phối sang các ngôn ngữ khác.
 

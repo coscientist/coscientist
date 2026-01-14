@@ -9,4 +9,4 @@ description: 문서 내용이 아니라 주장과 관계를 저장하는 지식 
 
 그래프는 또한 추론 계층(진화하는 주장 네트워크)과 서사 계층(읽기에 적합한, 타임스탬프가 찍힌 투영)을 분리한다. 문서는 최종 진리가 아니라 그래프의 스냅샷이다. 모든 문장은 주장, 범위(scope), 가정, 방법, 데이터, 증거 범위, 출처를 통해 되짚어 올라갈 수 있어야 한다. 그 사슬이 없으면 문장은 그저 문장일 뿐, 지식이 아니다.
 
-[백과사전 붕괴](./encyclopedia-meltdown)에 제동을 거는 역할을 하기 위해, 시스템은 합의(consensus)보다 모순과 반례(counterexamples)를 우선시한다. 어떤 주장이 그래프에 들어오면 기본 자세는 대립적(adversarial)이다. 반복에 의해 구조가 표류(drifting)하기보다, 이른 시점에 공격(attack)과 약화(undercuts)를 찾아 반박(rebuttal)으로 구조가 갱신되도록 한다. 구체적인 노드 및 관계 유형은 [변증법적 그래프 노드](./dialectical-graph-nodes)와 [변증법적 그래프 엣지](./dialectical-graph-edges)를 보라.
+[백과사전 멜트다운](./encyclopedia-meltdown)에 제동을 거는 역할을 하기 위해, 시스템은 합의(consensus)보다 모순과 반례(counterexamples)를 우선시한다. 어떤 주장이 그래프에 들어오면 기본 자세는 대립적(adversarial)이다. 반복에 의해 구조가 표류(drifting)하기보다, 이른 시점에 공격(attack)과 약화(undercuts)를 찾아 반박(rebuttal)으로 구조가 갱신되도록 한다. 구체적인 노드 및 관계 유형은 [변증법적 그래프 노드](./dialectical-graph-nodes)와 [변증법적 그래프 엣지](./dialectical-graph-edges)를 보라.

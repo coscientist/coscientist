@@ -7,4 +7,4 @@ A repetição espaçada é uma forma baseada em evidências de programar revisõ
 
 Na prática, você aprende algo, se testa logo em seguida e depois revisita o conteúdo após lacunas cada vez maiores, desde que a recuperação continue sendo bem-sucedida. Ferramentas como Anki e SuperMemo automatizam os ajustes de intervalo, mas o essencial continua sendo a recuperação, não a repetição.
 
-Ela é especialmente eficaz para grandes volumes de conhecimento discreto (vocabulário, fórmulas, anatomia) e é fácil de usar incorretamente como um “virar cartas” passivo. As cartas devem exigir recuperação genuína, não reconhecimento. Combinar repetição espaçada com [intercalação](./interleaving) e [meta-aprendizagem](./meta-learning) oferece uma visão mais completa do estudo eficaz.
+Ela é especialmente eficaz para grandes volumes de conhecimento discreto (vocabulário, fórmulas, anatomia) e é fácil de usar incorretamente como um "virar cartas” passivo. As cartas devem exigir recuperação genuína, não reconhecimento. Combinar repetição espaçada com [intercalação](./interleaving) e [meta-aprendizagem](./meta-learning) oferece uma visão mais completa do estudo eficaz.

@@ -3,7 +3,7 @@ title: Siêu não
 description: Tầm nhìn về một bộ khung xương ngoài nhận thức được ngoại hóa nhằm khuếch đại trí tuệ con người
 ---
 
-Siêu não là thuật ngữ của [Sunghyun Cho](./sunghyun-cho) dùng để chỉ tầm nhìn về một [khung xương ngoài nhận thức](./cognitive-exoskeleton) có thể khuếch đại trí tuệ con người vượt qua các giới hạn sinh học. [Extracranial](./extracranial) được mô tả như một “Exosuit for Superbrains”: một phần mở rộng trí nhớ được ngoại hóa nhằm lưu giữ mọi ý tưởng mà người dùng có.
+Siêu não là thuật ngữ của [Sunghyun Cho](./sunghyun-cho) dùng để chỉ tầm nhìn về một [khung xương ngoài nhận thức](./cognitive-exoskeleton) có thể khuếch đại trí tuệ con người vượt qua các giới hạn sinh học. [Extracranial](./extracranial) được mô tả như một "Exosuit for Superbrains”: một phần mở rộng trí nhớ được ngoại hóa nhằm lưu giữ mọi ý tưởng mà người dùng có.
 
 Siêu não không phải là sự thay thế cho nhận thức của con người mà là một bộ khuếch đại. Nó nên:
 

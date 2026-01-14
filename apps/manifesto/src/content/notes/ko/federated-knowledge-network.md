@@ -9,4 +9,4 @@ description: 로컬 주권을 보존하면서 검증된 지식을 교환하는 �
 
 핵심 제약은 [제로 트러스트 수용](./zero-trust-ingestion)(zero-trust ingestion)이다. 가져온 주장(claim)은 [출처](./provenance)를 동반해야 하며 로컬 [검증](./verification)을 통과해야 한다. 주권은 각 노드의 [운영자](./operator)에게 남아 있으며, 네트워크는 권위를 중앙집중화하지 않으면서 도달 범위를 증폭한다.
 
-연합은 또한 [다국어 지식 메시](./multilingual-knowledge-mesh)를 가능하게 한다. 서로 다른 [언어권](./sprachraum)에서 운영되는 노드들은 [언어 경계 너머로](./across-the-sprachraums) 검증된 지식을 교환할 수 있으며, [번역 충실도](./translation-fidelity)는 출처의 일부로 추적된다. 이를 통해 [언어 간 종합](./cross-linguistic-synthesis)은 로컬 기능에 그치지 않고 네트워크 차원의 역량이 된다.
+연합은 또한 [다국어 지식 메시](./multilingual-knowledge-mesh)를 가능하게 한다. 서로 다른 [언어권](./sprachraum)에서 운영되는 노드들은 [언어권을 가로질러](./across-the-sprachraums) 검증된 지식을 교환할 수 있으며, [번역 충실도](./translation-fidelity)는 출처의 일부로 추적된다. 이를 통해 [언어 간 종합](./cross-linguistic-synthesis)은 로컬 기능에 그치지 않고 네트워크 차원의 역량이 된다.

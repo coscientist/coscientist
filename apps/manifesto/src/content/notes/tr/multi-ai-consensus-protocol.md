@@ -14,7 +14,7 @@ description: 1+4 (insan + dört YZ) yazma ve doğrulama sistemi
 - İddialar için izlenebilir kaynak kökeni (provenance) şart koşun (bkz. [Sorumluluk Hattı](./responsibility-line) ve [Köken (Provenance)](./provenance)).
 - Doğrulayıcı arama yerine kasıtlı çürütme araması yapın (bkz. [Önce Çürütme Araması](./rebuttal-first-search)).
 
-Protokol aynı zamanda kültüreldir: “Fikrimi ne değiştirirdi?” diye sorma alışkanlığını eğitir.
+Protokol aynı zamanda kültüreldir: "Fikrimi ne değiştirirdi?” diye sorma alışkanlığını eğitir.
 
 ## Sınırlamalar
 

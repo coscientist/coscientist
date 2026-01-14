@@ -7,4 +7,4 @@ Persyaratan bulat adalah aturan dalam [Protokol Konsensus Multi-AI](./multi-ai-c
 
 Kesepakatan bulat bukanlah bukti kebenaran; model-model berbagi data pelatihan dan dapat berkonvergensi pada kegagalan yang berkorelasi. Namun, ketidaksepakatan adalah sinyal berbiaya rendah bahwa ada sesuatu yang mungkin salah. Persyaratan bulat memaksa penanganan ketidakpastian secara eksplisit alih-alih membiarkan mayoritas mengesampingkan pendapat yang berbeda.
 
-Konsekuensinya adalah bahwa kesepakatan bulat dapat mendorong penulisan ke arah kehati-hatian berlebihan (hedging) dan kesimpulan “penyebut bersama terendah” (lowest-common-denominator). Protokol ini mengimbanginya dengan mensyaratkan agar ketidakpastian tetap eksplisit, bukannya dihaluskan menjadi bahasa yang samar.
+Konsekuensinya adalah bahwa kesepakatan bulat dapat mendorong penulisan ke arah kehati-hatian berlebihan (hedging) dan kesimpulan "penyebut bersama terendah” (lowest-common-denominator). Protokol ini mengimbanginya dengan mensyaratkan agar ketidakpastian tetap eksplisit, bukannya dihaluskan menjadi bahasa yang samar.

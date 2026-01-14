@@ -3,7 +3,7 @@ title: Supergehirn
 description: Die Vision eines externalisierten kognitiven Exoskeletts, das menschliche Intelligenz verstärkt
 ---
 
-Superbrain ist [Sunghyun Cho](./sunghyun-cho)s Begriff für die Vision eines [kognitiven Exoskeletts](./cognitive-exoskeleton), das menschliche Intelligenz über biologische Grenzen hinaus verstärkt. [Extracranial](./extracranial) wird als ein „Exosuit für Superbrains“ beschrieben: eine externalisierte Gedächtniserweiterung, die dazu gedacht ist, jede Idee zu speichern, die der Nutzer hat.
+Superbrain ist [Sunghyun Cho](./sunghyun-cho)s Begriff für die Vision eines [kognitiven Exoskeletts](./cognitive-exoskeleton), das menschliche Intelligenz über biologische Grenzen hinaus verstärkt. [Extracranial](./extracranial) wird als ein „Exosuit für Superbrains" beschrieben: eine externalisierte Gedächtniserweiterung, die dazu gedacht ist, jede Idee zu speichern, die der Nutzer hat.
 
 Das Supergehirn ist kein Ersatz für menschliche Kognition, sondern ein Verstärker. Es sollte:
 

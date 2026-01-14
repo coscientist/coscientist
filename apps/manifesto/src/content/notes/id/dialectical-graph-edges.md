@@ -3,7 +3,7 @@ title: Sisi Graf Dialektik
 description: Jenis relasi yang menghubungkan node dalam graf pengetahuan dialektik
 ---
 
-Dalam sebuah [Graf Dialektik](./dialectical-graph), sisi (edge) mengodekan jenis relasi alih-alih skor kemiripan. Nilainya adalah Anda bisa bertanya “bagaimana ini berdampak pada itu?” alih-alih hanya “apakah ini tentang topik yang sama?”
+Dalam sebuah [Graf Dialektik](./dialectical-graph), sisi (edge) mengodekan jenis relasi alih-alih skor kemiripan. Nilainya adalah Anda bisa bertanya "bagaimana ini berdampak pada itu?” alih-alih hanya "apakah ini tentang topik yang sama?”
 
 Jenis relasi yang umum meliputi:
 

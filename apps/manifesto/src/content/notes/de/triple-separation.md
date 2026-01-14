@@ -7,4 +7,4 @@ Die Dreifachtrennung ist die architektonische Regel in einem [Dialektischen Grap
 
 Diese Trennung verhindert einen häufigen Fehlermodus in [RAG](./rag-limitations): die Kürzung von Auszügen. Wenn Text abgerufen und zusammengefasst wird, ohne die ursprüngliche Formulierung zu bewahren, kann die Zuschreibung unbemerkt verschwinden. Die Dreifachtrennung stellt sicher, dass du eine Behauptung immer auf die exakten Worte und die [Quelle](./source) zurückverfolgen kannst, aus denen sie stammen.
 
-Sie ermöglicht außerdem [Wissenssynthese](./knowledge-synthesis), indem sie die Struktur abfragbar macht. Du kannst fragen: „Was greift diese Behauptung an?“ oder „Auf welche Definitionen stützt sich das?“ — weil diese Relationen gespeichert und nicht nur impliziert sind.
+Sie ermöglicht außerdem [Wissenssynthese](./knowledge-synthesis), indem sie die Struktur abfragbar macht. Du kannst fragen: „Was greift diese Behauptung an?" oder „Auf welche Definitionen stützt sich das?" — weil diese Relationen gespeichert und nicht nur impliziert sind.

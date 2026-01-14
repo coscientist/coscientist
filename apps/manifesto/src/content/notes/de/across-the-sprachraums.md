@@ -3,7 +3,7 @@ title: Über die Sprachräume hinweg
 description: Die Vision, Sprachgrenzen für Wissenssysteme zu überwinden
 ---
 
-„Across the Sprachraums“ ist die Vision von [Sunghyun Cho](./sunghyun-cho) für Wissenssysteme, die Sprachgrenzen überschreiten. Der Ausdruck kombiniert eine englische Präposition mit einem deutschen Substantiv und verkörpert damit seine eigene Bedeutung: Kein einzelner [Sprachraum](./sprachraum) sollte den Fluss von Wissen einschränken.
+„Across the Sprachraums" ist die Vision von [Sunghyun Cho](./sunghyun-cho) für Wissenssysteme, die Sprachgrenzen überschreiten. Der Ausdruck kombiniert eine englische Präposition mit einem deutschen Substantiv und verkörpert damit seine eigene Bedeutung: Kein einzelner [Sprachraum](./sprachraum) sollte den Fluss von Wissen einschränken.
 
 Die Vision besteht aus drei Teilen:
 

@@ -3,7 +3,7 @@ title: Dialektische Graphkanten
 description: Die Relationstypen, die Knoten in einem dialektischen Wissensgraphen verbinden
 ---
 
-In einem [Dialektischen Graphen](./dialectical-graph) kodieren Kanten Relationstypen statt Ähnlichkeitsscores. Der Vorteil ist, dass man fragen kann: „Wie wirkt sich das auf jenes aus?“ statt nur: „Geht es hier um dasselbe Thema?“
+In einem [Dialektischen Graphen](./dialectical-graph) kodieren Kanten Relationstypen statt Ähnlichkeitsscores. Der Vorteil ist, dass man fragen kann: „Wie wirkt sich das auf jenes aus?" statt nur: „Geht es hier um dasselbe Thema?"
 
 Häufige Relationstypen sind:
 

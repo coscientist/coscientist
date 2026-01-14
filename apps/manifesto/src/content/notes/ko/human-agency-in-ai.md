@@ -13,7 +13,7 @@ description: AI 보조 지식 노동에서 인간이 통제권을 유지하기 �
 
 ## 메커니즘
 
-- [책임 라인](./responsibility-line) — 누가 무엇을 주장했는지 추적하기
+- [책임선](./responsibility-line) — 누가 무엇을 주장했는지 추적하기
 - [검증](./verification) — 수동적 수용이 아니라 능동적 확인
 - [검증에서의 바람직한 난이도](./desirable-difficulty-in-verification) — 참여를 유지하기 위해 검증을 수고스럽게 만들기
 

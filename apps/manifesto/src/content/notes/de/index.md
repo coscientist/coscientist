@@ -11,11 +11,11 @@ Diese Erkenntnis gab den Anstoß zu [Projekt Aldehyd](./project-aldehyde), meine
 
 Mitte 2022 implementierte ich einen Prototypen mit einer Static-Site-Pipeline von Obsidian ins Web und nannte ihn [Extracranial](./extracranial). Es war ein persönliches Digital Brain, das Inhalte automatisch indexierte, Backlinks vorschlug, alte Beiträge verfallen ließ, sofern sie nicht als evergreen markiert waren, und zweisprachig [über die Sprachräume hinweg](./across-the-sprachraums) funktionierte. Es befreite mich vom Mikromanagement der Links und ließ mich auf Schreiben und Denken konzentrieren.
 
-Doch während ich dieses persönliche Wiki baute, zeichnete sich ein größeres Problem ab: Selbst ein perfekter persönlicher Memex reicht nicht aus, wenn das breitere epistemische Umfeld kompromittiert ist. Als generative KI allgegenwärtig wurde, verschob sich die tiefere Frage von „Wie speichere ich Wissen?“ zu „Wie verhindern wir, dass Verifikation kollabiert, wenn KI Systeme mit plausiblen Texten fluten kann?“
+Doch während ich dieses persönliche Wiki baute, zeichnete sich ein größeres Problem ab: Selbst ein perfekter persönlicher Memex reicht nicht aus, wenn das breitere epistemische Umfeld kompromittiert ist. Als generative KI allgegenwärtig wurde, verschob sich die tiefere Frage von „Wie speichere ich Wissen?" zu „Wie verhindern wir, dass Verifikation kollabiert, wenn KI Systeme mit plausiblen Texten fluten kann?"
 
 ## Von Digital Brains zu Protokollen
 
-Traditionelle Medien erzwingen lineare Struktur. Wissen in der Praxis ist ein Netzwerk. Das „Next-gen Digital Brain“ war meine Antwort auf diese Lücke. Seine Prinzipien waren unkompliziert:
+Traditionelle Medien erzwingen lineare Struktur. Wissen in der Praxis ist ein Netzwerk. Das „Next-gen Digital Brain" war meine Antwort auf diese Lücke. Seine Prinzipien waren unkompliziert:
 
 - reibungsloser Input — Ideen erfassen ohne erzwungene Taxonomie
 - automatisierte Organisation — Verbindungen algorithmisch ableiten
@@ -27,19 +27,19 @@ Manuelles Verlinken kann das Verständnis weiterhin verfeinern, sollte aber opti
 
 2023 beschäftigten mich Fragen, die persönliches Notieren überstiegen. KI-generierte Inhalte bedrohten die Verifikation selbst. Ich nannte das Kollapsszenario [Enzyklopädie-Zusammenbruch](./encyclopedia-meltdown): Wenn KI die Initiative des Schreibens übernimmt, verschwindet die [responsibility line](./responsibility-line), und Fehler verstärken sich durch Links selbst.
 
-Die Gegenmaßnahme ist eine [epistemic protocol layer](./epistemic-protocol-layer), eine konstitutionelle Schicht für Wissenssysteme. Ihre Kernverpflichtungen sind Souveränität (Wissensautorität bleibt beim menschlichen [Betreiber](./operator)), Nachvollziehbarkeit (jede Behauptung behält eine responsibility line) und rebuttal-first Validation (Validierung nach dem Prinzip „Widerlegung zuerst“; nutze [Widerlegung-zuerst-Suche](./rebuttal-first-search), um vor Akzeptanz nach Gegenbelegen zu suchen). Diese Schicht adressiert auch Druck wie [Modellkollaps](./model-collapse) und die Flut an [AI slop](./ai-slop), indem sie explizite Provenienz und Zero-Trust-Ingestion durchsetzt.
+Die Gegenmaßnahme ist eine [epistemic protocol layer](./epistemic-protocol-layer), eine konstitutionelle Schicht für Wissenssysteme. Ihre Kernverpflichtungen sind Souveränität (Wissensautorität bleibt beim menschlichen [Betreiber](./operator)), Nachvollziehbarkeit (jede Behauptung behält eine responsibility line) und rebuttal-first Validation (Validierung nach dem Prinzip „Widerlegung zuerst"; nutze [Widerlegung-zuerst-Suche](./rebuttal-first-search), um vor Akzeptanz nach Gegenbelegen zu suchen). Diese Schicht adressiert auch Druck wie [Modellkollaps](./model-collapse) und die Flut an [AI slop](./ai-slop), indem sie explizite Provenienz und Zero-Trust-Ingestion durchsetzt.
 
 ## ScienceOps und institutioneller Maßstab
 
 Persönliche Wissensinfrastruktur löste Bequemlichkeit, nicht institutionellen Maßstab. Der nächste Sprung war [ScienceOps](./scienceops): die Anwendung von Software-Operations-Disziplin auf wissenschaftliche Forschung durch reproduzierbare Experimente, Automatisierung und schnelle Iteration — und zugleich die Einführung der Rolle des/der [natural science engineer](./natural-science-engineer). Wenn Experimente zu Pipelines werden statt zu einmaligen Aktionen, kann die Schleife zwischen Hypothese und Verifikation dramatisch schrumpfen.
 
-Das größere Ziel ist ein „GitHub für Wissenschaftler:innen“, das Experimente wie Code behandelt: versioniert, wiederholbar und auditierbar. Das ist der operative Kontext, der eine kognitive Engine wie [Kozientist](./coscientist) verlangt.
+Das größere Ziel ist ein „GitHub für Wissenschaftler:innen", das Experimente wie Code behandelt: versioniert, wiederholbar und auditierbar. Das ist der operative Kontext, der eine kognitive Engine wie [Kozientist](./coscientist) verlangt.
 
 ## Coscientist: Architektur, Agency und Blueprint
 
 [Kozientist](./coscientist) ist das System, das diese Fäden zusammenführt. Es ist eine Multi-Agent-[LLM](./llm)-Architektur, die als Forschungskollaborator fungieren soll statt als einzelne Antwortmaschine. Seine interne Schleife trennt Vorschlag, Kritik, Ranking und Verfeinerung, mit einer Meta-Review-Schicht, die Kohärenz, Nachvollziehbarkeit und Unsicherheit prüft.
 
-Auf der Wissensebene pflegt es einen [Dialektischer Graph](./dialectical-graph), der Behauptungen und Relationen statt Rohtext speichert. Narrative Ausgabe wird als Projektion einer Inferenzschicht behandelt, sodass jede Aussage zu Quellen, Evidence Spans (Belegspannen) und expliziten Relationen zurückverfolgen kann. Diese Trennung vermeidet den „glatt, aber unverifizierbar“-Fehlermodus konventioneller Generation.
+Auf der Wissensebene pflegt es einen [Dialektischer Graph](./dialectical-graph), der Behauptungen und Relationen statt Rohtext speichert. Narrative Ausgabe wird als Projektion einer Inferenzschicht behandelt, sodass jede Aussage zu Quellen, Evidence Spans (Belegspannen) und expliziten Relationen zurückverfolgen kann. Diese Trennung vermeidet den „glatt, aber unverifizierbar"-Fehlermodus konventioneller Generation.
 
 Traditionelle KI-Sicherheit rahmt das Problem oft als Alignment. Ich betone [cognitive agency preservation](./cognitive-agency-preservation) (Erhalt kognitiver Agency): KI sollte menschliches Urteilsvermögen stärken, nicht ersetzen. Praktisch bedeutet das, den/die Nutzer:in in der Rolle des/der Verifizierenden zu halten: Arbeitsschritte offenlegen, Unsicherheit sichtbar machen, alternative Hypothesen präsentieren und das Suchen nach Widerlegungen zum Standard machen.
 

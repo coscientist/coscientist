@@ -3,7 +3,7 @@ title: Các cạnh của Đồ thị Biện chứng
 description: Các kiểu quan hệ kết nối các nút trong một đồ thị tri thức biện chứng
 ---
 
-Trong một [Đồ thị Biện chứng](./dialectical-graph), các cạnh mã hoá các kiểu quan hệ thay vì điểm tương đồng. Giá trị ở chỗ bạn có thể hỏi “điều này liên quan/tác động đến điều kia như thế nào?” thay vì chỉ “chúng có cùng chủ đề không?”
+Trong một [Đồ thị Biện chứng](./dialectical-graph), các cạnh mã hoá các kiểu quan hệ thay vì điểm tương đồng. Giá trị ở chỗ bạn có thể hỏi "điều này liên quan/tác động đến điều kia như thế nào?” thay vì chỉ "chúng có cùng chủ đề không?”
 
 Các kiểu quan hệ phổ biến bao gồm:
 

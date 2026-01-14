@@ -9,13 +9,13 @@ Ben, [Sunghyun Cho](./sunghyun-cho), ansiklopedilere ve bilginin tek, otoriter b
 
 Bu farkındalık, Memex’in kişisel kullanım için bir üst kümesini inşa etme girişimim olan [Aldehit Projesi](./project-aldehyde)’i başlattı. Yıllarca süren iterasyonlar, Mayıs 2022’deki [Yeni Nesil Dijital Beyinler Oluşturmak](./creating-next-gen-digital-brains) denememde zirveye ulaştı; burada sürtünmenin kişisel bilgi iş akışlarının düşmanı olduğunu savundum: bir bahçeyi yönetmenin en iyi yolu sürekli bakım değil, kendi kendini organize eden bir [digital jungle](./digital-jungle) yetiştirmektir. Ham bilgiyi içeri atabilmeli ve sistemin onu organize etmesine, bağlamasına ve yeniden yüzeye çıkarmasına izin verebilmelisiniz.
 
-2022 ortasına doğru Obsidian’dan web’e uzanan statik-site hattını (pipeline) kullanan bir prototip uyguladım ve adını [Extracranial](./extracranial) koydum. Bu, içeriği otomatik indeksleyen, geri bağlantılar (backlinks) öneren, evergreen olarak işaretlenmedikçe eski yazıların “çürümesine” izin veren ve [Sprachraum'lar boyunca](./across-the-sprachraums) iki dilli çalışan kişisel bir dijital beyindi. Bağlantıları mikro-yönetmekten beni kurtardı; yazmaya ve düşünmeye odaklanmamı sağladı.
+2022 ortasına doğru Obsidian’dan web’e uzanan statik-site hattını (pipeline) kullanan bir prototip uyguladım ve adını [Extracranial](./extracranial) koydum. Bu, içeriği otomatik indeksleyen, geri bağlantılar (backlinks) öneren, evergreen olarak işaretlenmedikçe eski yazıların "çürümesine” izin veren ve [Sprachraum'lar boyunca](./across-the-sprachraums) iki dilli çalışan kişisel bir dijital beyindi. Bağlantıları mikro-yönetmekten beni kurtardı; yazmaya ve düşünmeye odaklanmamı sağladı.
 
-Ne var ki bu kişisel wikiyi inşa ederken daha büyük bir problem görünür oldu: daha geniş epistemik çevre bozulmuşsa, kusursuz bir kişisel Memex bile yeterli değildir. Üretken yapay zekâ her yerde yaygınlaştıkça, daha derin soru “bilgiyi nasıl saklarım?”dan “Yapay zekâ sistemleri inandırıcı metinle doldurabildiğinde doğrulamanın çökmesini nasıl engelleriz?”e kaydı.
+Ne var ki bu kişisel wikiyi inşa ederken daha büyük bir problem görünür oldu: daha geniş epistemik çevre bozulmuşsa, kusursuz bir kişisel Memex bile yeterli değildir. Üretken yapay zekâ her yerde yaygınlaştıkça, daha derin soru "bilgiyi nasıl saklarım?”dan "Yapay zekâ sistemleri inandırıcı metinle doldurabildiğinde doğrulamanın çökmesini nasıl engelleriz?”e kaydı.
 
 ## Dijital Beyinlerden Protokollere
 
-Geleneksel medya doğrusal bir yapı dayatır. Oysa pratikte bilgi bir ağdır. “Yeni nesil dijital beyin” bu boşluğa verdiğim yanıttı. İlkeleri yalındı:
+Geleneksel medya doğrusal bir yapı dayatır. Oysa pratikte bilgi bir ağdır. "Yeni nesil dijital beyin” bu boşluğa verdiğim yanıttı. İlkeleri yalındı:
 
 - sürtünmesiz girdi — zorunlu bir taksonomi olmadan fikirleri yakala
 - otomatik organizasyon — bağlantıları algoritmik olarak çıkar
@@ -33,13 +33,13 @@ Karşı önlem bir [epistemic protocol layer](./epistemic-protocol-layer)’dır
 
 Kişisel bilgi altyapısı kolaylık sorununu çözdü, kurumsal ölçeği değil. Bir sonraki sıçrama [ScienceOps](./scienceops) oldu: tekrarlanabilir deneyler, otomasyon ve hızlı iterasyon üzerinden yazılım-operasyonları disiplinini bilimsel araştırmaya uygulamak ve [natural science engineer](./natural-science-engineer) rolünü tanıtmak. Deneyler tek seferlik işler değil de hatlar (pipelines) hâline geldiğinde, hipotez ile doğrulama arasındaki döngü dramatik biçimde kısalabilir.
 
-Daha büyük hedef, deneyleri kod gibi ele alan bir “bilim insanları için GitHub”dır: sürümlenen, tekrarlanabilir ve denetlenebilir. [Eşbilimci](./coscientist) gibi bir bilişsel motoru talep eden operasyonel bağlam da budur.
+Daha büyük hedef, deneyleri kod gibi ele alan bir "bilim insanları için GitHub”dır: sürümlenen, tekrarlanabilir ve denetlenebilir. [Eşbilimci](./coscientist) gibi bir bilişsel motoru talep eden operasyonel bağlam da budur.
 
 ## Coscientist: Mimari, Ajans ve Taslak
 
 [Eşbilimci](./coscientist), bu damarları birleştiren sistemdir. Tek bir cevap motorundan ziyade bir araştırma işbirlikçisi olarak işlev görmek üzere tasarlanmış, çok ajanlı bir [LLM](./llm) mimarisidir. İç döngüsü öneri, eleştiri, sıralama ve rafine etmeyi ayırır; tutarlılığı, izlenebilirliği ve belirsizliği denetleyen bir meta-inceleme katmanıyla birlikte çalışır.
 
-Bilgi katmanında, ham metin yerine iddiaları ve ilişkileri depolayan bir [Diyalektik Graf](./dialectical-graph) sürdürür. Anlatı çıktısı, bir çıkarım katmanının projeksiyonu olarak ele alınır; böylece her ifade kaynaklara, kanıt aralıklarına (evidence spans) ve açık ilişkilere geri iz sürebilir. Bu ayrım, geleneksel üretimin “pürüzsüz ama doğrulanamaz” arıza kipinden kaçınır.
+Bilgi katmanında, ham metin yerine iddiaları ve ilişkileri depolayan bir [Diyalektik Graf](./dialectical-graph) sürdürür. Anlatı çıktısı, bir çıkarım katmanının projeksiyonu olarak ele alınır; böylece her ifade kaynaklara, kanıt aralıklarına (evidence spans) ve açık ilişkilere geri iz sürebilir. Bu ayrım, geleneksel üretimin "pürüzsüz ama doğrulanamaz” arıza kipinden kaçınır.
 
 Geleneksel yapay zekâ güvenliği problemi çoğu zaman hizalama (alignment) olarak çerçeveler. Ben [cognitive agency preservation](./cognitive-agency-preservation)’ı vurguluyorum: Yapay zekâ insan muhakemesini ikame etmemeli, onu güçlendirmelidir. Pratikte bu, kullanıcıyı doğrulayıcı rolünde tutmak demektir: yapılan işi göstermek, belirsizliği görünür kılmak, alternatif hipotezleri sunmak ve çürütme aramayı varsayılan hâle getirmek.
 

@@ -11,11 +11,11 @@ Dat inzicht vormde het startschot voor [Project Aldehyde](./project-aldehyde), m
 
 Halverwege 2022 implementeerde ik een prototype met een statische-site-pipeline van Obsidian naar het web en noemde het [Extracranial](./extracranial). Het was een persoonlijk digitaal brein dat content automatisch indexeerde, backlinks suggereerde, oude posts liet vergaan tenzij ze als evergreen waren gemarkeerd, en tweetalig opereerde [over de Sprachraums heen](./across-the-sprachraums). Het bevrijdde me van het micromanagen van links en liet me focussen op schrijven en denken.
 
-Maar terwijl ik die persoonlijke wiki bouwde, kwam een groter probleem in beeld: zelfs een perfecte persoonlijke Memex is niet genoeg als de bredere epistemische omgeving is aangetast. Toen generatieve AI alomtegenwoordig werd, verschoof de diepere vraag van “hoe sla ik kennis op?” naar “hoe voorkomen we dat verificatie instort wanneer AI systemen kan overspoelen met plausibele tekst?”
+Maar terwijl ik die persoonlijke wiki bouwde, kwam een groter probleem in beeld: zelfs een perfecte persoonlijke Memex is niet genoeg als de bredere epistemische omgeving is aangetast. Toen generatieve AI alomtegenwoordig werd, verschoof de diepere vraag van "hoe sla ik kennis op?” naar "hoe voorkomen we dat verificatie instort wanneer AI systemen kan overspoelen met plausibele tekst?”
 
 ## Van Digitale Breinen naar Protocollen
 
-Traditionele media dwingen een lineaire structuur af. Kennis in de praktijk is een netwerk. Het “next-gen digital brain” was mijn antwoord op die kloof. De principes waren eenvoudig:
+Traditionele media dwingen een lineaire structuur af. Kennis in de praktijk is een netwerk. Het "next-gen digital brain” was mijn antwoord op die kloof. De principes waren eenvoudig:
 
 - frictieloze invoer — ideeën vastleggen zonder opgedrongen taxonomie
 - geautomatiseerde organisatie — verbanden algorithmisch afleiden
@@ -33,13 +33,13 @@ De tegenmaatregel is een [epistemic protocol layer](./epistemic-protocol-layer),
 
 Persoonlijke kennisinfrastructuur loste gemak op, niet institutionele schaal. De volgende sprong was [ScienceOps](./scienceops): het toepassen van software-operationsdiscipline op wetenschappelijk onderzoek via reproduceerbare experimenten, automatisering en snelle iteratie, terwijl de rol van de [natural science engineer](./natural-science-engineer) werd geïntroduceerd. Wanneer experimenten pipelines worden, geen eenmalige acties, kan de lus tussen hypothese en verificatie dramatisch krimpen.
 
-Het grotere doel is een “GitHub voor wetenschappers” die experimenten behandelt als code: geversioneerd, herhaalbaar en auditbaar. Dat is de operationele context die een cognitieve engine zoals [Cowetenschapper](./coscientist) vereist.
+Het grotere doel is een "GitHub voor wetenschappers” die experimenten behandelt als code: geversioneerd, herhaalbaar en auditbaar. Dat is de operationele context die een cognitieve engine zoals [Cowetenschapper](./coscientist) vereist.
 
 ## Coscientist: Architectuur, Agency en Blueprint
 
 [Cowetenschapper](./coscientist) is het systeem dat deze lijnen samenbrengt. Het is een multi-agent-[Groot taalmodel](./llm)-architectuur die is ontworpen om te functioneren als onderzoekssamenwerker in plaats van als één enkele antwoordenmachine. De interne lus scheidt voorstel, kritiek, rangschikking en verfijning, met een meta-reviewlaag die coherentie, traceerbaarheid en onzekerheid controleert.
 
-Op de kennislaag onderhoudt het een [Dialectische graaf](./dialectical-graph) die claims en relaties opslaat in plaats van ruwe tekst. Narratieve output wordt behandeld als een projectie van een inferentielaag, zodat elke uitspraak kan terugsporen naar bronnen, evidence spans (bewijssegmenten) en expliciete relaties. Deze scheiding vermijdt de “glad maar niet verifieerbaar”-faalmodus van conventionele generatie.
+Op de kennislaag onderhoudt het een [Dialectische graaf](./dialectical-graph) die claims en relaties opslaat in plaats van ruwe tekst. Narratieve output wordt behandeld als een projectie van een inferentielaag, zodat elke uitspraak kan terugsporen naar bronnen, evidence spans (bewijssegmenten) en expliciete relaties. Deze scheiding vermijdt de "glad maar niet verifieerbaar”-faalmodus van conventionele generatie.
 
 Traditionele AI-veiligheid framet het probleem vaak als alignment. Ik leg de nadruk op [cognitive agency preservation](./cognitive-agency-preservation): AI moet menselijk oordeel versterken, niet vervangen. Praktisch betekent dat de gebruiker in de rol van verificateur houden: het werk laten zien, onzekerheid zichtbaar maken, alternatieve hypotheses presenteren en rebuttal-seeking als standaard instellen.
 

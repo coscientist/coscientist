@@ -66,7 +66,7 @@ evokes stacked monoliths receding into depth.
 | ------- | -------- | ------ | --------------------------------------------- |
 | H1      | 1.75rem  | 600    | `text-[1.75rem] font-semibold tracking-tight` |
 | H2      | 1.375rem | 500    | `text-[1.375rem] font-medium tracking-tight`  |
-| Body    | 1rem     | 400    | `text-base leading-[1.8] text-justify`        |
+| Body    | 1rem     | 400    | `text-base leading-[1.8]`                     |
 | Mono    | 0.875rem | 400    | `font-mono text-sm tabular-nums`              |
 
 **Fonts**: Faculty Glyphic (primary), Noto Serif (CJK), Iosevka (mono)

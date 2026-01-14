@@ -48,7 +48,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
   const pathname = usePathname()
 
   const handleChange = (value: string | null) => {
-    if (value) {
+    if (value && value !== locale) {
       router.replace(pathname, { locale: value as Locale })
     }
   }

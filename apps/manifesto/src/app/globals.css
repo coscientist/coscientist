@@ -102,13 +102,6 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .scroll-smooth {
     scroll-behavior: auto;
@@ -191,7 +184,7 @@ body {
       @apply text-lg font-medium mt-6 mb-3 text-foreground text-balance tracking-tight;
     }
     & p {
-      @apply text-base leading-[1.8] mb-6 text-foreground/80 text-justify;
+      @apply text-base leading-[1.8] mb-6 text-foreground/80;
     }
     & ul,
     & ol {

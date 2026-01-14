@@ -3,7 +3,8 @@ title: 辩证图节点
 description: 辩证知识图谱中的节点类型
 ---
 
-在一个[辩证图](./dialectical-graph)中，节点表示的是认识论对象（epistemic objects），而不是原始文本。常见的节点类型包括：
+在一个[辩证图](./dialectical-graph)中，节点表示的是认识论对象（epistemic
+objects），而不是原始文本。常见的节点类型包括：
 
 - [主张](./claim) —— 可验证的命题
 - [范围](./scope) —— 适用条件

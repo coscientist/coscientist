@@ -3,7 +3,10 @@ title: Argumentative Relations
 description: Edge types in a dialectical graph organized by function
 ---
 
-Argumentative relations are the edge types in a [Dialectical Graph](./dialectical-graph) that encode how epistemic objects relate to each other. They are what distinguish a dialectical graph from a topic-similarity graph.
+Argumentative relations are the edge types in a
+[Dialectical Graph](./dialectical-graph) that encode how epistemic objects
+relate to each other. They are what distinguish a dialectical graph from a
+topic-similarity graph.
 
 ## Challenge Relations
 
@@ -25,4 +28,6 @@ Argumentative relations are the edge types in a [Dialectical Graph](./dialectica
 - `depends_on` — links claims to their [assumptions](./assumption)
 - `defines` — connects terms to their definitions )
 
-See [Dialectical Graph Edges](./dialectical-graph-edges) for full specification and [Relation Typing vs Similarity](./relation-typing-vs-similarity) for why typed edges matter.
+See [Dialectical Graph Edges](./dialectical-graph-edges) for full specification
+and [Relation Typing vs Similarity](./relation-typing-vs-similarity) for why
+typed edges matter.

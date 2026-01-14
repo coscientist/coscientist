@@ -3,7 +3,8 @@ title: 翻譯中的細微差異流失
 description: 當觀念跨越語言邊界時消失的語義微妙之處
 ---
 
-翻譯中的細微差異流失（translation nuance loss）指的是當想法從一種語言翻譯到另一種語言時，語義上的微妙之處被剝離或淡化。它包括意涵（connotation）、文化語境、隱含假設，以及使某個表達在其原本[語言文化圈（Sprachraum）](./sprachraum)中之所以有意義的特定風味。
+翻譯中的細微差異流失（translation nuance
+loss）指的是當想法從一種語言翻譯到另一種語言時，語義上的微妙之處被剝離或淡化。它包括意涵（connotation）、文化語境、隱含假設，以及使某個表達在其原本[語言文化圈（Sprachraum）](./sprachraum)中之所以有意義的特定風味。
 
 這是[Sunghyun Cho](./sunghyun-cho)所構想的[跨越各個 Sprachraum](./across-the-sprachraums)願景中的核心關切。機器翻譯讓多語內容得以大規模實現，但也使細微差異的流失變得系統化。一份流暢的譯文可能掩蓋細小的錯誤，就像[流暢性陷阱](./fluency-trap)會讓順滑的 AI 文本看起來很準確，實際上卻未必如此。
 

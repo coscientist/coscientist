@@ -3,7 +3,9 @@ title: Graafcomponenten
 description: De knoop- en randtypen die samen een dialectische graaf vormen
 ---
 
-Graafcomponenten zijn de bouwstenen van een [Dialectische Graaf](./dialectical-graph): de knooptypen die epistemische objecten representeren en de randtypen die relaties daartussen representeren.
+Graafcomponenten zijn de bouwstenen van een
+[Dialectische Graaf](./dialectical-graph): de knooptypen die epistemische
+objecten representeren en de randtypen die relaties daartussen representeren.
 
 **Knooptypen** ):
 

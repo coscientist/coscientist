@@ -7,26 +7,33 @@ description: 個人知識管理ツールとアイデアの歴史的進展
 
 ## 基盤となるビジョン
 
-- [われわれが考えるように](./as-we-may-think) — [Vannevar Bush](./vannevar-bush) による1945年のエッセイ
+- [われわれが考えるように](./as-we-may-think) — [Vannevar Bush](./vannevar-bush)
+  による1945年のエッセイ
 - [Memex](./memex) — Bush が提案した個人知識マシン
 
 ## 概念的フレームワーク
 
 - [Digital Brain](./digital-brain) — 心（mind）を写し取り、拡張するシステム
-- [Digital Garden](./digital-garden) — 公開され、進化していく相互リンクされたノート
+- [Digital Garden](./digital-garden)
+  — 公開され、進化していく相互リンクされたノート
 - [Digital Jungle](./digital-jungle) — 自己組織化する、摩擦の少ない知識空間
 - [Second Brain](./second-brain) — 個人知識管理の実践
 
 ## 実装
 
-- [プロジェクト・アルデヒド](./project-aldehyde) — [Sunghyun Cho](./sunghyun-cho) による初期の試み
-- [Extracranial](./extracranial) — Cho の個人用デジタル・ブレイン（digital brain）システム
-- [Multilingual Memex](./multilingual-memex) — 自動翻訳を備えた言語対応の知識システム
-- [Project PIRI](./project-piri) — 中止された翻訳イニシアチブ（AI コーディングエージェントにより陳腐化）
+- [プロジェクト・アルデヒド](./project-aldehyde) —
+  [Sunghyun Cho](./sunghyun-cho) による初期の試み
+- [Extracranial](./extracranial) — Cho の個人用デジタル・ブレイン（digital
+  brain）システム
+- [Multilingual Memex](./multilingual-memex)
+  — 自動翻訳を備えた言語対応の知識システム
+- [Project PIRI](./project-piri)
+  — 中止された翻訳イニシアチブ（AI コーディングエージェントにより陳腐化）
 
 ## 設計原則
 
-- [Friction as Enemy](./friction-as-enemy) — 取り込みを最大化するためにオーバーヘッドを最小化する
+- [Friction as Enemy](./friction-as-enemy)
+  — 取り込みを最大化するためにオーバーヘッドを最小化する
 
 ## Coscientist への橋渡し
 

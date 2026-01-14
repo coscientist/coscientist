@@ -3,7 +3,8 @@ title: 多 AI 共识协议
 description: 1+4（人类 + 四个 AI）的写作与验证系统
 ---
 
-多 AI 共识协议（Multi-AI Consensus Protocol）是一种协作工作流，由[操作员](./operator)协调多个 AI 系统，以降低单一模型产生幻觉（hallucination）的风险，并帮助防御[百科全书熔毁（Encyclopedia Meltdown）](./encyclopedia-meltdown)。
+多 AI 共识协议（Multi-AI Consensus
+Protocol）是一种协作工作流，由[操作员](./operator)协调多个 AI 系统，以降低单一模型产生幻觉（hallucination）的风险，并帮助防御[百科全书熔毁（Encyclopedia Meltdown）](./encyclopedia-meltdown)。
 
 在"1+4"变体中，一名人类协调四个 AI 助手（截至 2025 年 12 月：ChatGPT、Gemini、Claude 和 Grok）。重点不是"更多记忆"，而是结构化的分歧与可追溯性。
 

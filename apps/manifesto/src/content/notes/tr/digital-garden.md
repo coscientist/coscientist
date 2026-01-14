@@ -1,8 +1,14 @@
 ---
 title: Dijital Bahçe
-description: Birbirine bağlı notlardan oluşan, herkese açık ve gelişen bir koleksiyon
+description:
+  Birbirine bağlı notlardan oluşan, herkese açık ve gelişen bir koleksiyon
 ---
 
-Dijital bahçe, zaman içinde büyüyen, birbirine bağlı notlardan oluşan, herkese açık ve gelişen bir koleksiyondur; bitmiş yazılardan veya statik bloglardan farklıdır. Bahçe metaforu yinelemeyi ima eder: eksik/ham düşünceleri yayımlarsınız, onlara geri dönersiniz, budarsınız ve yazmayı tek seferlik bir ürün gibi ele almak yerine bağlantıların ortaya çıkmasına izin verirsiniz.
+Dijital bahçe, zaman içinde büyüyen, birbirine bağlı notlardan oluşan, herkese
+açık ve gelişen bir koleksiyondur; bitmiş yazılardan veya statik bloglardan
+farklıdır. Bahçe metaforu yinelemeyi ima eder: eksik/ham düşünceleri
+yayımlarsınız, onlara geri dönersiniz, budarsınız ve yazmayı tek seferlik bir
+ürün gibi ele almak yerine bağlantıların ortaya çıkmasına izin verirsiniz.
 
-[İkinci beyin](./second-brain) pratikleriyle örtüşür, ancak vurgu dışa dönüktür: bir bahçe yalnızca depolanmak için değil, okunmak için vardır.
+[İkinci beyin](./second-brain) pratikleriyle örtüşür, ancak vurgu dışa dönüktür:
+bir bahçe yalnızca depolanmak için değil, okunmak için vardır.

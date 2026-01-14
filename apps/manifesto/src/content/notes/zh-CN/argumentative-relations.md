@@ -3,7 +3,8 @@ title: 论证关系
 description: 按功能组织的辩证图中的边类型
 ---
 
-论证关系是 [辩证图](./dialectical-graph) 中的边类型，用于编码认识对象（epistemic objects）彼此之间如何关联。它们正是辩证图区别于主题相似性图的关键所在。
+论证关系是 [辩证图](./dialectical-graph) 中的边类型，用于编码认识对象（epistemic
+objects）彼此之间如何关联。它们正是辩证图区别于主题相似性图的关键所在。
 
 ## 质疑关系
 
@@ -25,4 +26,6 @@ description: 按功能组织的辩证图中的边类型
 - `depends_on` — 将主张与其[假设](./assumption)关联起来
 - `defines` — 将术语与其定义连接（通过[定义漂移](./definition-drift)随时间跟踪）
 
-完整规范请参见 [辩证图边](./dialectical-graph-edges)；关于为什么类型化边很重要，请参见 [关系类型化 vs 相似性](./relation-typing-vs-similarity)。
+完整规范请参见
+[辩证图边](./dialectical-graph-edges)；关于为什么类型化边很重要，请参见
+[关系类型化 vs 相似性](./relation-typing-vs-similarity)。

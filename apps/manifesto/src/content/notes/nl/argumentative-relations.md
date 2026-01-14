@@ -3,7 +3,10 @@ title: Argumentatieve Relaties
 description: Randtypen in een dialectische graaf, geordend naar functie
 ---
 
-Argumentatieve relaties zijn de randtypen in een [Dialectische Graaf](./dialectical-graph) die coderen hoe epistemische objecten zich tot elkaar verhouden. Ze zijn wat een dialectische graaf onderscheidt van een onderwerp-similariteitsgraaf.
+Argumentatieve relaties zijn de randtypen in een
+[Dialectische Graaf](./dialectical-graph) die coderen hoe epistemische objecten
+zich tot elkaar verhouden. Ze zijn wat een dialectische graaf onderscheidt van
+een onderwerp-similariteitsgraaf.
 
 ## Uitdagingsrelaties
 
@@ -25,4 +28,7 @@ Argumentatieve relaties zijn de randtypen in een [Dialectische Graaf](./dialecti
 - `depends_on` — koppelt beweringen aan hun [aannames](./assumption)
 - `defines` — verbindt termen met hun definities )
 
-Zie [Randen van de Dialectische Graaf](./dialectical-graph-edges) voor de volledige specificatie en [Relatietypering vs Similariteit](./relation-typing-vs-similarity) voor waarom getypeerde randen ertoe doen.
+Zie [Randen van de Dialectische Graaf](./dialectical-graph-edges) voor de
+volledige specificatie en
+[Relatietypering vs Similariteit](./relation-typing-vs-similarity) voor waarom
+getypeerde randen ertoe doen.

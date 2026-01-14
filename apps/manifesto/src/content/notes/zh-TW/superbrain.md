@@ -3,7 +3,9 @@ title: 超級大腦
 description: 一種外部化的認知外骨骼願景，用以放大人類智慧
 ---
 
-「超級大腦」（Superbrain）是 [Sunghyun Cho](./sunghyun-cho) 用來指稱一種願景的術語：打造一個能將人類智慧放大至超越生物極限的[認知外骨骼](./cognitive-exoskeleton)。[顱外](./extracranial)被描述為「給超級大腦的外骨骼套裝（Exosuit for Superbrains）」：一種外部化的記憶延伸，旨在容納使用者擁有的每一個想法。
+「超級大腦」（Superbrain）是 [Sunghyun Cho](./sunghyun-cho)
+用來指稱一種願景的術語：打造一個能將人類智慧放大至超越生物極限的[認知外骨骼](./cognitive-exoskeleton)。[顱外](./extracranial)被描述為「給超級大腦的外骨骼套裝（Exosuit
+for Superbrains）」：一種外部化的記憶延伸，旨在容納使用者擁有的每一個想法。
 
 超級大腦不是取代人類認知，而是放大器。它應該：
 

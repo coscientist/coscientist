@@ -3,7 +3,9 @@ title: Graf Bileşenleri
 description: Diyalektik bir grafı oluşturan düğüm ve kenar türleri
 ---
 
-Graf bileşenleri, bir [Diyalektik Grafın](./dialectical-graph) yapı taşlarıdır: epistemik nesneleri temsil eden düğüm türleri ve bunlar arasındaki ilişkileri temsil eden kenar türleri.
+Graf bileşenleri, bir [Diyalektik Grafın](./dialectical-graph) yapı taşlarıdır:
+epistemik nesneleri temsil eden düğüm türleri ve bunlar arasındaki ilişkileri
+temsil eden kenar türleri.
 
 **Düğüm türleri** (bkz. [Diyalektik Graf Düğümleri](./dialectical-graph-nodes)):
 
@@ -12,7 +14,7 @@ Graf bileşenleri, bir [Diyalektik Grafın](./dialectical-graph) yapı taşları
 - [Kapsam](./scope) — uygulanabilirlik koşulları
 - [Varsayım](./assumption) — örtük öncüller
 - [Yöntem](./method) — kanıt üretmeye yönelik prosedürler
-- [Kaynak](./source) — köken  dayanakları
+- [Kaynak](./source) — köken dayanakları
 - [Karşı Örnek](./counterexample) — iddiaları bozan durumlar
 - [Sorun Düğümü](./issue-node) — çarpışan iddiaların demetleri
 

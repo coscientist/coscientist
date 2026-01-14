@@ -3,7 +3,8 @@ title: 辯證圖節點
 description: 辯證知識圖中的節點類型
 ---
 
-在[辯證圖](./dialectical-graph)中，節點代表的是認識論對象（epistemic objects），而非原始文字。常見的節點類型包括：
+在[辯證圖](./dialectical-graph)中，節點代表的是認識論對象（epistemic
+objects），而非原始文字。常見的節點類型包括：
 
 - [主張](./claim) — 可驗證的命題
 - [範圍](./scope) — 適用條件

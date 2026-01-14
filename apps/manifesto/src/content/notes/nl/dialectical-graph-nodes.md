@@ -3,7 +3,9 @@ title: Dialectische Graafknooppunten
 description: De knooppunttypen in een dialectische kennisgraaf
 ---
 
-In een [Dialectische Graaf](./dialectical-graph) vertegenwoordigen knooppunten epistemische objecten in plaats van ruwe tekst. Veelvoorkomende knooppunttypen zijn:
+In een [Dialectische Graaf](./dialectical-graph) vertegenwoordigen knooppunten
+epistemische objecten in plaats van ruwe tekst. Veelvoorkomende knooppunttypen
+zijn:
 
 - [Claim](./claim) — verifieerbare proposities
 - [Scope](./scope) — voorwaarden voor toepasbaarheid
@@ -16,6 +18,13 @@ In een [Dialectische Graaf](./dialectical-graph) vertegenwoordigen knooppunten e
 - [Counterexample](./counterexample) — gevallen die claims breken of inperken
 - [Issue Node](./issue-node) — bundels van botsende claimclusters
 
-Deze decompositie voorkomt een veelvoorkomende verwarring: een document is niet één ding. Datzelfde paper kan een definitie introduceren, een claim poneren, bewijs aanhalen en een eerder resultaat weerleggen; elk van die onderdelen moet adresseerbaar blijven als je wilt dat kennis wordt bijgewerkt in plaats van louter geaccumuleerd.
+Deze decompositie voorkomt een veelvoorkomende verwarring: een document is niet
+één ding. Datzelfde paper kan een definitie introduceren, een claim poneren,
+bewijs aanhalen en een eerder resultaat weerleggen; elk van die onderdelen moet
+adresseerbaar blijven als je wilt dat kennis wordt bijgewerkt in plaats van
+louter geaccumuleerd.
 
-Claimstatus is multidimensionaal in plaats van één enkele vertrouwensscore ). Overgangen worden minder gedreven door het aantal weerleggingen en meer door het soort weerlegging en of die slaagt op het niveau van scope, aanname, definitie of methode.
+Claimstatus is multidimensionaal in plaats van één enkele vertrouwensscore ).
+Overgangen worden minder gedreven door het aantal weerleggingen en meer door het
+soort weerlegging en of die slaagt op het niveau van scope, aanname, definitie
+of methode.

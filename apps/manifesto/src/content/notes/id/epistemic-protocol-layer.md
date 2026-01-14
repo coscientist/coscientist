@@ -1,8 +1,16 @@
 ---
 title: Lapisan Protokol Epistemik
-description: Aturan dan alur kerja yang memperkuat sistem pengetahuan terhadap kolaps
+description:
+  Aturan dan alur kerja yang memperkuat sistem pengetahuan terhadap kolaps
 ---
 
-Lapisan protokol epistemik adalah seperangkat aturan, pemeriksaan, dan alur kerja yang memperkuat sistem pengetahuan terhadap kaskade kesalahan. Lapisan ini berfungsi seperti konstitusi: ia menetapkan bagaimana klaim masuk, bagaimana klaim ditantang, dan keterlacakan apa yang diperlukan sebelum klaim tersebut memperoleh otoritas.
+Lapisan protokol epistemik adalah seperangkat aturan, pemeriksaan, dan alur
+kerja yang memperkuat sistem pengetahuan terhadap kaskade kesalahan. Lapisan ini
+berfungsi seperti konstitusi: ia menetapkan bagaimana klaim masuk, bagaimana
+klaim ditantang, dan keterlacakan apa yang diperlukan sebelum klaim tersebut
+memperoleh otoritas.
 
-Dalam praktiknya, ini mencakup kedaulatan ), keterlacakan ), dan validasi adversarial  secara default ). Tujuannya bukan memperlambat berpikir, melainkan membuat koreksi lebih murah daripada penyimpangan, terutama di bawah tekanan [Kehancuran Ensiklopedia](./encyclopedia-meltdown).
+Dalam praktiknya, ini mencakup kedaulatan ), keterlacakan ), dan validasi
+adversarial secara default ). Tujuannya bukan memperlambat berpikir, melainkan
+membuat koreksi lebih murah daripada penyimpangan, terutama di bawah tekanan
+[Kehancuran Ensiklopedia](./encyclopedia-meltdown).

@@ -8,11 +8,14 @@ description: 主张如何从暂定假设演化为稳健知识或走向过时
 ## 阶段
 
 1. **录入** — 从来源中提取主张，并赋予暂定状态
-2. **规范化** — 重写为[规范化命题](./normalized-proposition)，并明确[范围](./scope)与[假设](./assumption)
-3. **质疑** — 接受[攻击](./attack)、[削弱](./undercut)与[反例](./counterexample)的检验
+2. **规范化**
+   — 重写为[规范化命题](./normalized-proposition)，并明确[范围](./scope)与[假设](./assumption)
+3. **质疑**
+   — 接受[攻击](./attack)、[削弱](./undercut)与[反例](./counterexample)的检验
 4. **裁决** — 缩小范围、澄清假设，或驳倒主张
 5. **稳定化** — 达到条件性支持、稳健或被驳斥的状态
-6. **衰退** — 可能因[定义漂移](./definition-drift)或[意义流失](./meaning-loss)而过时
+6. **衰退**
+   — 可能因[定义漂移](./definition-drift)或[意义流失](./meaning-loss)而过时
 
 ## 状态分类体系
 

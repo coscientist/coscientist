@@ -3,7 +3,9 @@ title: Componentes do Grafo
 description: Os tipos de nós e arestas que compõem um grafo dialético
 ---
 
-Os componentes do grafo são os blocos de construção de um [Grafo Dialético](./dialectical-graph): os tipos de nós que representam objetos epistêmicos e os tipos de arestas que representam relações entre eles.
+Os componentes do grafo são os blocos de construção de um
+[Grafo Dialético](./dialectical-graph): os tipos de nós que representam objetos
+epistêmicos e os tipos de arestas que representam relações entre eles.
 
 **Tipos de nós** (ver [Nós do Grafo Dialético](./dialectical-graph-nodes)):
 
@@ -16,7 +18,8 @@ Os componentes do grafo são os blocos de construção de um [Grafo Dialético](
 - [Contraexemplo](./counterexample) — casos que invalidam alegações
 - [Nó de Questão](./issue-node) — agrupamentos de alegações em colisão
 
-**Tipos de arestas** (ver [Arestas do Grafo Dialético](./dialectical-graph-edges)):
+**Tipos de arestas** (ver
+[Arestas do Grafo Dialético](./dialectical-graph-edges)):
 
 - [Ataque](./attack) — desafios diretos à verdade
 - [Refutação por Minar ](./undercut) — desafios aos fundamentos

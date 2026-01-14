@@ -7,7 +7,8 @@ description: 知識系統可能出錯的分類法
 
 ## 系統層級失效
 
-- [百科全書崩潰](./encyclopedia-meltdown) — 當 AI 在缺乏人類介入下主動運作時造成的知識崩塌
+- [百科全書崩潰](./encyclopedia-meltdown)
+  — 當 AI 在缺乏人類介入下主動運作時造成的知識崩塌
 - [模型崩塌](./model-collapse) — 由使用 AI 生成資料訓練而導致的劣化
 - [機構性腦腐](./institutional-brain-rot) — 組織的驗證能力衰退
 
@@ -19,8 +20,10 @@ description: 知識系統可能出錯的分類法
 ## 人類層級失效
 
 - [流暢性陷阱](./fluency-trap) — 把流暢的文字誤當成準確性
-- [AI 誘發的能力幻覺](./ai-induced-illusions-of-competence) — 由 AI 協助帶來的錯誤精通感
-- [透過 AI 委派導致的技能退化](./deskilling-through-ai-delegation) — 因不再練習而喪失能力
+- [AI 誘發的能力幻覺](./ai-induced-illusions-of-competence)
+  — 由 AI 協助帶來的錯誤精通感
+- [透過 AI 委派導致的技能退化](./deskilling-through-ai-delegation)
+  — 因不再練習而喪失能力
 
 ## 語意層級失效
 

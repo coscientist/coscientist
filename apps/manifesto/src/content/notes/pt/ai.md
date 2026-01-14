@@ -1,18 +1,31 @@
 ---
 title: IA
-description: Inteligência Artificial como ferramenta e desafio para sistemas de conhecimento
+description:
+  Inteligência Artificial como ferramenta e desafio para sistemas de
+  conhecimento
 ---
 
-IA (Inteligência Artificial) no contexto de [Cocientista](./coscientist) refere-se a sistemas que realizam tarefas cognitivas tradicionalmente associadas à inteligência humana: ler, resumir, gerar e raciocinar sobre texto. A principal tecnologia é o [LLM](./llm) .
+IA (Inteligência Artificial) no contexto de [Cocientista](./coscientist)
+refere-se a sistemas que realizam tarefas cognitivas tradicionalmente associadas
+à inteligência humana: ler, resumir, gerar e raciocinar sobre texto. A principal
+tecnologia é o [LLM](./llm) .
 
-A IA é, simultaneamente, o motor e a ameaça. Por um lado, a IA realiza [trabalho de contemplação](./contemplation-labor): pesquisar, estruturar e gerar candidatos a velocidades impossíveis para humanos. Por outro lado, a IA cria modos de falha que exigem novas defesas: [alucinação](./hallucination), [lixo de IA](./ai-slop), [colapso do modelo](./model-collapse) e [Derretimento da Enciclopédia](./encyclopedia-meltdown).
+A IA é, simultaneamente, o motor e a ameaça. Por um lado, a IA realiza
+[trabalho de contemplação](./contemplation-labor): pesquisar, estruturar e gerar
+candidatos a velocidades impossíveis para humanos. Por outro lado, a IA cria
+modos de falha que exigem novas defesas: [alucinação](./hallucination),
+[lixo de IA](./ai-slop), [colapso do modelo](./model-collapse) e
+[Derretimento da Enciclopédia](./encyclopedia-meltdown).
 
 ## IA como Ferramenta
 
 - [LLM](./llm) — a tecnologia subjacente
-- [Trabalho de Contemplação](./contemplation-labor) — trabalho cognitivo que a IA realiza
-- [Síntese Translinguística](./cross-linguistic-synthesis) — leitura de qualquer idioma
-- [Protocolo de Consenso Multi-IA](./multi-ai-consensus-protocol) — uso de múltiplos modelos
+- [Trabalho de Contemplação](./contemplation-labor) — trabalho cognitivo que a
+  IA realiza
+- [Síntese Translinguística](./cross-linguistic-synthesis) — leitura de qualquer
+  idioma
+- [Protocolo de Consenso Multi-IA](./multi-ai-consensus-protocol) — uso de
+  múltiplos modelos
 
 ## Modos de Falha da IA
 
@@ -25,5 +38,7 @@ A IA é, simultaneamente, o motor e a ameaça. Por um lado, a IA realiza [trabal
 
 - [Operador](./operator) — o soberano humano
 - [Soberania Cognitiva](./cognitive-sovereignty) — manter os humanos no controle
-- [Perda de Competências por Delegação à IA](./deskilling-through-ai-delegation) — risco de habilidades atrofiadas
-- [Ilusões de Competência Induzidas pela IA](./ai-induced-illusions-of-competence) — falso domínio
+- [Perda de Competências por Delegação à IA](./deskilling-through-ai-delegation)
+  — risco de habilidades atrofiadas
+- [Ilusões de Competência Induzidas pela IA](./ai-induced-illusions-of-competence)
+  — falso domínio

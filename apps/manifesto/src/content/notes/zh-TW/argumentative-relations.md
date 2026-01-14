@@ -3,7 +3,9 @@ title: 論證關係
 description: 依功能組織的辯證圖中的邊類型
 ---
 
-論證關係是 [辯證圖](./dialectical-graph) 中的邊類型，用來編碼知識論對象（epistemic objects）彼此之間如何關聯。它們正是區分辯證圖與主題相似度圖的關鍵。
+論證關係是 [辯證圖](./dialectical-graph)
+中的邊類型，用來編碼知識論對象（epistemic
+objects）彼此之間如何關聯。它們正是區分辯證圖與主題相似度圖的關鍵。
 
 ## 挑戰關係
 
@@ -23,6 +25,9 @@ description: 依功能組織的辯證圖中的邊類型
 - `refines` — 縮小範圍或釐清某個主張
 - `generalizes` / `specializes` — 範圍調整
 - `depends_on` — 將主張連結到其[假設](./assumption)
-- `defines` — 將術語連結到其定義（並透過[定義漂移](./definition-drift)隨時間追蹤）
+- `defines`
+  — 將術語連結到其定義（並透過[定義漂移](./definition-drift)隨時間追蹤）
 
-完整規格請見 [辯證圖邊](./dialectical-graph-edges)，並參考 [關係類型 vs 相似度](./relation-typing-vs-similarity) 以了解為何帶類型的邊很重要。
+完整規格請見 [辯證圖邊](./dialectical-graph-edges)，並參考
+[關係類型 vs 相似度](./relation-typing-vs-similarity)
+以了解為何帶類型的邊很重要。

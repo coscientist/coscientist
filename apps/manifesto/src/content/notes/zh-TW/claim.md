@@ -3,7 +3,8 @@ title: 主張
 description: 儲存在辯證圖中、可被驗證的命題節點
 ---
 
-主張（claim）是從文本中抽取、可被驗證的命題，並以一級物件（first-class object）的形式儲存在[辯證圖](./dialectical-graph)中。主張不是原始句子；它們是經過規範化的陳述，具有明確的[範疇](./scope)、[假設](./assumption)與[方法](./method)相依關係。
+主張（claim）是從文本中抽取、可被驗證的命題，並以一級物件（first-class
+object）的形式儲存在[辯證圖](./dialectical-graph)中。主張不是原始句子；它們是經過規範化的陳述，具有明確的[範疇](./scope)、[假設](./assumption)與[方法](./method)相依關係。
 
 主張可以連結到支持它們的[證據片段](./evidence-span)、用以縮限它們的[反例](./counterexample)、用以挑戰它們的[攻擊](./attack)，以及用來質疑其立論根據的[削弱（undercut）](./undercut)。這種關係結構使知識得以透過反駁而更新，而非透過替換。
 

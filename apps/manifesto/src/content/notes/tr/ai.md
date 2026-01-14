@@ -1,18 +1,29 @@
 ---
 title: Yapay Zekâ
-description: Bilgi sistemleri için hem araç hem de meydan okuma olarak Yapay Zekâ
+description:
+  Bilgi sistemleri için hem araç hem de meydan okuma olarak Yapay Zekâ
 ---
 
-[Eşbilimci](./coscientist) bağlamında AI , geleneksel olarak insan zekâsı gerektiren bilişsel görevleri yerine getiren sistemleri ifade eder: metin okumak, özetlemek, üretmek ve metin hakkında akıl yürütmek. Temel teknoloji, [LLM](./llm) dir.
+[Eşbilimci](./coscientist) bağlamında AI , geleneksel olarak insan zekâsı
+gerektiren bilişsel görevleri yerine getiren sistemleri ifade eder: metin
+okumak, özetlemek, üretmek ve metin hakkında akıl yürütmek. Temel teknoloji,
+[LLM](./llm) dir.
 
-AI aynı anda hem motor hem de tehdittir. Bir yandan AI, [tefekkür emeği](./contemplation-labor) gerçekleştirir: insanlar için imkânsız hızlarda arama, yapılandırma ve aday üretimi. Öte yandan AI, yeni savunmalar gerektiren hata kipleri yaratır: [halüsinasyon](./hallucination), [AI slop](./ai-slop), [model çöküşü](./model-collapse) ve [Ansiklopedi Erimesi](./encyclopedia-meltdown).
+AI aynı anda hem motor hem de tehdittir. Bir yandan AI,
+[tefekkür emeği](./contemplation-labor) gerçekleştirir: insanlar için imkânsız
+hızlarda arama, yapılandırma ve aday üretimi. Öte yandan AI, yeni savunmalar
+gerektiren hata kipleri yaratır: [halüsinasyon](./hallucination),
+[AI slop](./ai-slop), [model çöküşü](./model-collapse) ve
+[Ansiklopedi Erimesi](./encyclopedia-meltdown).
 
 ## Araç Olarak AI
 
 - [LLM](./llm) — alttaki temel teknoloji
 - [Tefekkür Emeği](./contemplation-labor) — AI’ın yaptığı bilişsel iş
-- [Diller Arası Sentez](./cross-linguistic-synthesis) — herhangi bir dili okuyabilme
-- [Çoklu-AI Uzlaşma Protokolü](./multi-ai-consensus-protocol) — birden fazla model kullanma
+- [Diller Arası Sentez](./cross-linguistic-synthesis) — herhangi bir dili
+  okuyabilme
+- [Çoklu-AI Uzlaşma Protokolü](./multi-ai-consensus-protocol) — birden fazla
+  model kullanma
 
 ## AI Hata Kipleri
 
@@ -25,5 +36,7 @@ AI aynı anda hem motor hem de tehdittir. Bir yandan AI, [tefekkür emeği](./co
 
 - [Operatör](./operator) — insan egemen
 - [Bilişsel Egemenlik](./cognitive-sovereignty) — kontrolün insanda kalması
-- [AI Yetkilendirmesi Yoluyla Becerisizleşme](./deskilling-through-ai-delegation) — körelen beceriler riski
-- [AI’nin Tetiklediği Yetkinlik Yanılsamaları](./ai-induced-illusions-of-competence) — sahte ustalık
+- [AI Yetkilendirmesi Yoluyla Becerisizleşme](./deskilling-through-ai-delegation)
+  — körelen beceriler riski
+- [AI’nin Tetiklediği Yetkinlik Yanılsamaları](./ai-induced-illusions-of-competence)
+  — sahte ustalık

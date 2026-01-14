@@ -1,9 +1,13 @@
 ---
 title: Các Quan hệ Lập luận
-description: Các loại cạnh trong một Đồ thị Biện chứng được tổ chức theo chức năng
+description:
+  Các loại cạnh trong một Đồ thị Biện chứng được tổ chức theo chức năng
 ---
 
-Các quan hệ lập luận là các loại cạnh trong một [Đồ thị Biện chứng](./dialectical-graph) mã hóa cách các đối tượng tri thức  liên hệ với nhau. Chúng là yếu tố phân biệt một đồ thị biện chứng với một đồ thị tương đồng theo chủ đề.
+Các quan hệ lập luận là các loại cạnh trong một
+[Đồ thị Biện chứng](./dialectical-graph) mã hóa cách các đối tượng tri thức liên
+hệ với nhau. Chúng là yếu tố phân biệt một đồ thị biện chứng với một đồ thị
+tương đồng theo chủ đề.
 
 ## Quan hệ Thách thức
 
@@ -23,6 +27,9 @@ Các quan hệ lập luận là các loại cạnh trong một [Đồ thị Bi�
 - `refines` — thu hẹp hoặc làm rõ một mệnh đề
 - `generalizes` / `specializes` — điều chỉnh phạm vi
 - `depends_on` — liên kết các mệnh đề với các [giả định](./assumption) của chúng
-- `defines` — kết nối các thuật ngữ với định nghĩa của chúng (được theo dõi theo thời gian qua [Độ trôi Định nghĩa](./definition-drift))
+- `defines` — kết nối các thuật ngữ với định nghĩa của chúng (được theo dõi theo
+  thời gian qua [Độ trôi Định nghĩa](./definition-drift))
 
-Xem [Các Cạnh của Đồ thị Biện chứng](./dialectical-graph-edges) để biết đặc tả đầy đủ và [Phân loại Quan hệ so với Tương đồng](./relation-typing-vs-similarity) để hiểu vì sao các cạnh được phân loại lại quan trọng.
+Xem [Các Cạnh của Đồ thị Biện chứng](./dialectical-graph-edges) để biết đặc tả
+đầy đủ và [Phân loại Quan hệ so với Tương đồng](./relation-typing-vs-similarity)
+để hiểu vì sao các cạnh được phân loại lại quan trọng.

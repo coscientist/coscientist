@@ -3,7 +3,8 @@ title: 知识系统层级
 description: Coscientist 的架构层级
 ---
 
-知识系统层级是构成 [共研者](./coscientist) 的不同架构组件。将这些层级分离，使不同关注点能够彼此独立地演进。
+知识系统层级是构成 [共研者](./coscientist)
+的不同架构组件。将这些层级分离，使不同关注点能够彼此独立地演进。
 
 ## 数据层
 
@@ -13,7 +14,8 @@ description: Coscientist 的架构层级
 ## 推理层
 
 - [推理层](./inference-layer) — 由主张与关系构成的、持续演进的活体网络
-- [主张](./claim)、[反驳](./attack)、[削弱](./undercut) 及其他 [论证关系](./argumentative-relations)
+- [主张](./claim)、[反驳](./attack)、[削弱](./undercut) 及其他
+  [论证关系](./argumentative-relations)
 
 ## 叙事层
 

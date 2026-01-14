@@ -3,7 +3,8 @@ title: 銀河百科全書
 description: 一個用於在黑暗時代中保存知識的概念
 ---
 
-《銀河百科全書》（Encyclopedia Galactica）是[艾薩克·阿西莫夫](./isaac-asimov)《基地》系列中的一個虛構裝置：一座龐大的知識庫，旨在文明崩潰之前保存人類知識。它是「[知識方舟](./knowledge-ark)」這一母題以制度形式呈現的版本。
+《銀河百科全書》（Encyclopedia
+Galactica）是[艾薩克·阿西莫夫](./isaac-asimov)《基地》系列中的一個虛構裝置：一座龐大的知識庫，旨在文明崩潰之前保存人類知識。它是「[知識方舟](./knowledge-ark)」這一母題以制度形式呈現的版本。
 
 在故事中，[哈里·謝頓](./hari-seldon)的[心理史學](./psychohistory)預測[銀河帝國](./galactic-empire)的崩潰不可避免，之後將迎來一段漫長的[靈魂的黑夜](./dark-night-of-the-soul)。[謝頓計畫](./seldon-plan)是他試圖透過塑造崩潰後的發展軌跡來縮短那段黑暗時代的嘗試。這項在端點星（Terminus）編纂的百科全書計畫，同時作為明確的保存工程，以及用於重建的策略性種子。
 

@@ -3,7 +3,8 @@ title: マルチAI合意プロトコル
 description: 1+4（人間＋4つのAI）による執筆・検証システム
 ---
 
-マルチAI合意プロトコル（Multi-AI Consensus Protocol）は、[オペレーター](./operator)が複数のAIシステムを調整し、単一モデルによるハルシネーション（hallucination）リスクを低減し、[百科事典メルトダウン](./encyclopedia-meltdown)への防御を支援するための協働ワークフローである。
+マルチAI合意プロトコル（Multi-AI Consensus
+Protocol）は、[オペレーター](./operator)が複数のAIシステムを調整し、単一モデルによるハルシネーション（hallucination）リスクを低減し、[百科事典メルトダウン](./encyclopedia-meltdown)への防御を支援するための協働ワークフローである。
 
 「1+4」バリアントでは、1人の人間が4つのAIアシスタント（2025年12月時点：ChatGPT、Gemini、Claude、Grok）を調整する。狙いは「より多くの記憶」ではなく、構造化された不一致（disagreement）とトレーサビリティ（traceability）である。
 
@@ -12,7 +13,8 @@ description: 1+4（人間＋4つのAI）による執筆・検証システム
 - 全会一致に達した場合にのみ改訂を受け入れる（[全会一致要件](./unanimity-requirement)を参照）。
 - 不確実性を明示したままにし、文章でならして消さない。
 - 主張には追跡可能な出所（provenance）を要求する（[責任ライン](./responsibility-line)および[プロヴナンス](./provenance)を参照）。
-- 確認的検索（confirmatory search）ではなく、意図的な反証探索（rebuttal search）を行う（[反証優先検索](./rebuttal-first-search)を参照）。
+- 確認的検索（confirmatory search）ではなく、意図的な反証探索（rebuttal
+  search）を行う（[反証優先検索](./rebuttal-first-search)を参照）。
 
 このプロトコルは文化的なものでもある。「何があれば自分の考えを変えるのか？」と問う習慣を鍛える。
 

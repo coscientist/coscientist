@@ -1,18 +1,29 @@
 ---
 title: Cykl życia twierdzenia
-description: Jak twierdzenia ewoluują od wstępnej hipotezy do solidnej wiedzy albo popadają w nieaktualność
+description:
+  Jak twierdzenia ewoluują od wstępnej hipotezy do solidnej wiedzy albo popadają
+  w nieaktualność
 ---
 
-Cykl życia twierdzenia opisuje, jak [twierdzenie](./claim) ewoluuje w ramach [Grafu Dialektycznego](./dialectical-graph) — od momentu pierwszego wprowadzenia aż po ostateczny status jako solidna wiedza, obalony błąd lub nieaktualny artefakt historyczny.
+Cykl życia twierdzenia opisuje, jak [twierdzenie](./claim) ewoluuje w ramach
+[Grafu Dialektycznego](./dialectical-graph) — od momentu pierwszego wprowadzenia
+aż po ostateczny status jako solidna wiedza, obalony błąd lub nieaktualny
+artefakt historyczny.
 
 ## Etapy
 
-1. **Wprowadzenie** — twierdzenie wyodrębnione ze źródła i otrzymuje wstępny status
-2. **Normalizacja** — przepisane jako [znormalizowana propozycja](./normalized-proposition) z jawnym [zakresem](./scope) i [założeniami](./assumption)
-3. **Kwestionowanie** — poddane [atakom](./attack), [podcięciom](./undercut) oraz [kontrprzykładom](./counterexample)
-4. **Rozstrzygnięcie** — zakres zawężony, założenia doprecyzowane albo twierdzenie obalone
+1. **Wprowadzenie** — twierdzenie wyodrębnione ze źródła i otrzymuje wstępny
+   status
+2. **Normalizacja** — przepisane jako
+   [znormalizowana propozycja](./normalized-proposition) z jawnym
+   [zakresem](./scope) i [założeniami](./assumption)
+3. **Kwestionowanie** — poddane [atakom](./attack), [podcięciom](./undercut)
+   oraz [kontrprzykładom](./counterexample)
+4. **Rozstrzygnięcie** — zakres zawężony, założenia doprecyzowane albo
+   twierdzenie obalone
 5. **Stabilizacja** — osiąga status warunkowo wspierany, solidny lub obalony
-6. **Zanikanie** — może stać się nieaktualne wskutek [dryfu definicji](./definition-drift) lub [utraty znaczenia](./meaning-loss)
+6. **Zanikanie** — może stać się nieaktualne wskutek
+   [dryfu definicji](./definition-drift) lub [utraty znaczenia](./meaning-loss)
 
 ## Taksonomia statusów
 

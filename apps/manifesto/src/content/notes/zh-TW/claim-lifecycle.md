@@ -8,11 +8,14 @@ description: 主張如何從暫時性假設演化為穩健知識或走向過時
 ## 階段
 
 1. **登錄** — 從來源抽取主張並賦予暫定狀態
-2. **正規化** — 改寫為[正規化命題](./normalized-proposition)，並明確標示[範圍](./scope)與[假設](./assumption)
-3. **挑戰** — 暴露於[攻擊](./attack)、[削弱](./undercut)與[反例](./counterexample)
+2. **正規化**
+   — 改寫為[正規化命題](./normalized-proposition)，並明確標示[範圍](./scope)與[假設](./assumption)
+3. **挑戰**
+   — 暴露於[攻擊](./attack)、[削弱](./undercut)與[反例](./counterexample)
 4. **解決** — 縮小範圍、澄清假設，或將主張駁斥
 5. **穩定化** — 達到條件式支持、穩健或被駁斥的狀態
-6. **衰退** — 可能因[定義漂移](./definition-drift)或[意義流失](./meaning-loss)而變得過時
+6. **衰退**
+   — 可能因[定義漂移](./definition-drift)或[意義流失](./meaning-loss)而變得過時
 
 ## 狀態分類
 

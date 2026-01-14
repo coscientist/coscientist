@@ -3,7 +3,10 @@ title: Relaciones argumentativas
 description: Tipos de aristas en un grafo dialéctico organizados por función
 ---
 
-Las relaciones argumentativas son los tipos de aristas en un [Grafo dialéctico](./dialectical-graph) que codifican cómo los objetos epistémicos se relacionan entre sí. Son lo que distingue a un grafo dialéctico de un grafo de similitud temática.
+Las relaciones argumentativas son los tipos de aristas en un
+[Grafo dialéctico](./dialectical-graph) que codifican cómo los objetos
+epistémicos se relacionan entre sí. Son lo que distingue a un grafo dialéctico
+de un grafo de similitud temática.
 
 ## Relaciones de desafío
 
@@ -25,4 +28,7 @@ Las relaciones argumentativas son los tipos de aristas en un [Grafo dialéctico]
 - `depends_on` — vincula afirmaciones con sus [supuestos](./assumption)
 - `defines` — conecta términos con sus definiciones )
 
-Consulta [Aristas del grafo dialéctico](./dialectical-graph-edges) para la especificación completa y [Tipado de relaciones vs similitud](./relation-typing-vs-similarity) para entender por qué importan las aristas tipadas.
+Consulta [Aristas del grafo dialéctico](./dialectical-graph-edges) para la
+especificación completa y
+[Tipado de relaciones vs similitud](./relation-typing-vs-similarity) para
+entender por qué importan las aristas tipadas.

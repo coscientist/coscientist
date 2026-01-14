@@ -3,7 +3,8 @@ title: 环境漂移
 description: 世界中的变化使先前有效的知识失效
 ---
 
-环境漂移（Environmental drift）是[漂移现象](./drift-phenomena)的一类：外部世界发生变化，导致先前有效的知识变得过时或不再适用。
+环境漂移（Environmental
+drift）是[漂移现象](./drift-phenomena)的一类：外部世界发生变化，导致先前有效的知识变得过时或不再适用。
 
 ## 主要形式
 

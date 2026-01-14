@@ -3,7 +3,8 @@ title: 哈里·謝頓
 description: 阿西莫夫《基地》中的虛構數學家，創立心理史學
 ---
 
-哈里·謝頓（Hari Seldon）是[艾薩克·阿西莫夫](./isaac-asimov)《基地》系列中的虛構數學家，他發展了[心理史學](./psychohistory)並設計了[謝頓計畫](./seldon-plan)。他認知到[銀河帝國](./galactic-empire)終將不可避免地崩潰，於是在端點星（Terminus）建立了基地，表面上是為了編纂[銀河百科全書](./encyclopedia-galactica)，但暗中則是為人類復興播下種子。
+哈里·謝頓（Hari
+Seldon）是[艾薩克·阿西莫夫](./isaac-asimov)《基地》系列中的虛構數學家，他發展了[心理史學](./psychohistory)並設計了[謝頓計畫](./seldon-plan)。他認知到[銀河帝國](./galactic-empire)終將不可避免地崩潰，於是在端點星（Terminus）建立了基地，表面上是為了編纂[銀河百科全書](./encyclopedia-galactica)，但暗中則是為人類復興播下種子。
 
 謝頓的方法將預測與介入結合：心理史學揭示可能的未來，而精心設置的制度能將局勢引導至更好的結果。百科全書計畫既真實（保存知識很重要），也具工具性（真正功能是重塑崩潰後的發展軌跡）。
 

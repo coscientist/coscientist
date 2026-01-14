@@ -3,7 +3,9 @@ title: スーパーブレイン
 description: 人間の知能を生物学的限界を超えて増幅する、外在化された認知エクソスケルトンというビジョン
 ---
 
-スーパーブレイン（Superbrain）とは、人間の知能を生物学的限界を超えて増幅する[認知エクソスケルトン](./cognitive-exoskeleton)というビジョンを指す、[Sunghyun Cho](./sunghyun-cho)の用語である。[Extracranial](./extracranial)は「スーパーブレインのためのエクソスーツ（Exosuit for Superbrains）」として説明され、ユーザーが持つあらゆるアイデアを保持することを意図した、外在化された記憶拡張である。
+スーパーブレイン（Superbrain）とは、人間の知能を生物学的限界を超えて増幅する[認知エクソスケルトン](./cognitive-exoskeleton)というビジョンを指す、[Sunghyun Cho](./sunghyun-cho)の用語である。[Extracranial](./extracranial)は「スーパーブレインのためのエクソスーツ（Exosuit
+for
+Superbrains）」として説明され、ユーザーが持つあらゆるアイデアを保持することを意図した、外在化された記憶拡張である。
 
 スーパーブレインは人間の認知の代替ではなく、増幅器である。求められるのは次のような機能だ：
 

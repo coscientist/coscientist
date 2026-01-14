@@ -3,7 +3,9 @@ title: 탐색 메커니즘
 description: 변증법적 그래프에서 지속적인 지식 발견을 위한 전략
 ---
 
-탐색 메커니즘은 [Coscientist](./coscientist)가 [변증법적 그래프](./dialectical-graph)에서 모순, 경계 조건, 그리고 방법 의존성을 지속적으로 발견하기 위해 사용하는 전략이다.
+탐색 메커니즘은 [Coscientist](./coscientist)가
+[변증법적 그래프](./dialectical-graph)에서 모순, 경계 조건, 그리고 방법 의존성을
+지속적으로 발견하기 위해 사용하는 전략이다.
 
 ## 검색 전략
 
@@ -18,8 +20,10 @@ description: 변증법적 그래프에서 지속적인 지식 발견을 위한 �
 
 ## 방법 분석
 
-- [방법-결론 결합](./method-conclusion-coupling) — 방법별로 주장을 군집화하여 공통 결함을 찾기
-- [복제 경로 분리](./replication-path-separation) — 독립 경로를 단순 재진술과 구분
+- [방법-결론 결합](./method-conclusion-coupling) — 방법별로 주장을 군집화하여
+  공통 결함을 찾기
+- [복제 경로 분리](./replication-path-separation) — 독립 경로를 단순 재진술과
+  구분
 
 ## 의미 추적
 

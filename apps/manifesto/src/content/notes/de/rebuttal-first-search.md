@@ -1,8 +1,18 @@
 ---
 title: Widerlegung-zuerst-Suche
-description: Ein Validierungsprotokoll, das vor der Akzeptanz nach Gegenbelegen sucht
+description:
+  Ein Validierungsprotokoll, das vor der Akzeptanz nach Gegenbelegen sucht
 ---
 
-Die Widerlegung-zuerst-Suche ist ein Validierungsprotokoll, das nach Gegenbelegen sucht, bevor es eine Behauptung akzeptiert. Statt zu fragen „was stützt das?", fragt es „was würde das widerlegen?", und zwingt die Behauptung dann dazu, den Kontakt mit Gegenbeispielen, Randbedingungen und alternativen Erklärungen zu überstehen.
+Die Widerlegung-zuerst-Suche ist ein Validierungsprotokoll, das nach
+Gegenbelegen sucht, bevor es eine Behauptung akzeptiert. Statt zu fragen „was
+stützt das?", fragt es „was würde das widerlegen?", und zwingt die Behauptung
+dann dazu, den Kontakt mit Gegenbeispielen, Randbedingungen und alternativen
+Erklärungen zu überstehen.
 
-Sie wirkt als Bremse gegen Bestätigungsfehler und als Verteidigung gegen linkvermittelte Autorität in [Enzyklopädie-Zusammenbruch](./encyclopedia-meltdown). In einem [Dialektischen Graphen](./dialectical-graph) entspricht sie auf natürliche Weise dem frühen Erzeugen von angreifenden und unterminierenden Relationen, was später die Synthese günstiger macht.
+Sie wirkt als Bremse gegen Bestätigungsfehler und als Verteidigung gegen
+linkvermittelte Autorität in
+[Enzyklopädie-Zusammenbruch](./encyclopedia-meltdown). In einem
+[Dialektischen Graphen](./dialectical-graph) entspricht sie auf natürliche Weise
+dem frühen Erzeugen von angreifenden und unterminierenden Relationen, was später
+die Synthese günstiger macht.

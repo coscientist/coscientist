@@ -3,18 +3,25 @@ title: 파운데이션 픽션
 description: Coscientist의 비전에 영향을 준 아시모프 영감의 개념들
 ---
 
-파운데이션 픽션은 [아이작 아시모프](./isaac-asimov)의 *파운데이션* 시리즈에서 가져온 개념들로, [Coscientist](./coscientist)의 비전을 형성하는 데 영향을 준다. 허구의 [은하대백과](./encyclopedia-galactica)는 지식 보존과 역량에 대해 사고할 때 기준점이 된다.
+파운데이션 픽션은 [아이작 아시모프](./isaac-asimov)의 _파운데이션_ 시리즈에서
+가져온 개념들로, [Coscientist](./coscientist)의 비전을 형성하는 데 영향을 준다.
+허구의 [은하대백과](./encyclopedia-galactica)는 지식 보존과 역량에 대해 사고할
+때 기준점이 된다.
 
 ## 핵심 개념
 
 - [은하대백과](./encyclopedia-galactica) — 허구의 지식 저장소
 - [심리역사학](./psychohistory) — 문명에 대한 아시모프의 통계 과학
 - [셀던 계획](./seldon-plan) — [하리 셀던](./hari-seldon)의 장기 전략
-- [영혼의 어두운 밤](./dark-night-of-the-soul) — 문명적 또는 인식론적 붕괴에 대한 은유
+- [영혼의 어두운 밤](./dark-night-of-the-soul) — 문명적 또는 인식론적 붕괴에
+  대한 은유
 - [지식 방주](./knowledge-ark) — 붕괴 이후에도 살아남도록 설계된 저장소
 
 ## 핵심 통찰
 
-- [보존에서 역량으로](./from-preservation-to-capability) — 이해를 저장하는 것에서 생산하는 것으로의 전환
+- [보존에서 역량으로](./from-preservation-to-capability) — 이해를 저장하는
+  것에서 생산하는 것으로의 전환
 
-허구의 백과사전은 하나의 설계 목표다. AI로 포화된 인식론적 환경 속에서도 살아남고, 그럼에도 여전히 진정한 지식을 생산할 수 있는 현실의 시스템을 만들려면 무엇이 필요할까?
+허구의 백과사전은 하나의 설계 목표다. AI로 포화된 인식론적 환경 속에서도
+살아남고, 그럼에도 여전히 진정한 지식을 생산할 수 있는 현실의 시스템을 만들려면
+무엇이 필요할까?

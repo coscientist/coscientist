@@ -3,7 +3,9 @@ title: Lagen van het kennissysteem
 description: De architecturale lagen van Coscientist
 ---
 
-De lagen van het kennissysteem zijn de afzonderlijke architecturale componenten waaruit [Cowetenschapper](./coscientist) bestaat. Door deze lagen te scheiden, kunnen verschillende aandachtspunten onafhankelijk van elkaar evolueren.
+De lagen van het kennissysteem zijn de afzonderlijke architecturale componenten
+waaruit [Cowetenschapper](./coscientist) bestaat. Door deze lagen te scheiden,
+kunnen verschillende aandachtspunten onafhankelijk van elkaar evolueren.
 
 ## Datalayer
 
@@ -12,8 +14,10 @@ De lagen van het kennissysteem zijn de afzonderlijke architecturale componenten 
 
 ## Inferentielaag
 
-- [Inferentielaag](./inference-layer) — het levende, evoluerende netwerk van beweringen en relaties
-- [Bewering](./claim), [Aanval](./attack), [Ondergraving](./undercut) en andere [argumentatieve relaties](./argumentative-relations)
+- [Inferentielaag](./inference-layer) — het levende, evoluerende netwerk van
+  beweringen en relaties
+- [Bewering](./claim), [Aanval](./attack), [Ondergraving](./undercut) en andere
+  [argumentatieve relaties](./argumentative-relations)
 
 ## Narratieve laag
 
@@ -22,9 +26,12 @@ De lagen van het kennissysteem zijn de afzonderlijke architecturale componenten 
 
 ## Protocollaag
 
-- [Epistemische protocollaag](./epistemic-protocol-layer) — regels voor hoe beweringen binnenkomen en gezag verwerven
-- [Kennisgrondwet](./knowledge-constitution) — het sturende document voor kennisoperaties
+- [Epistemische protocollaag](./epistemic-protocol-layer) — regels voor hoe
+  beweringen binnenkomen en gezag verwerven
+- [Kennisgrondwet](./knowledge-constitution) — het sturende document voor
+  kennisoperaties
 
 ## Scheidingsprincipe
 
-- [Drievoudige scheiding](./triple-separation) — ruwe tekst, genormaliseerde beweringen en relaties gescheiden houden
+- [Drievoudige scheiding](./triple-separation) — ruwe tekst, genormaliseerde
+  beweringen en relaties gescheiden houden

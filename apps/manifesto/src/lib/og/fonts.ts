@@ -10,9 +10,71 @@ interface FontConfig {
   style?: "normal" | "italic";
 }
 
-export async function fetchGoogleFont(
-  config: FontConfig,
-): Promise<ArrayBuffer> {
+export interface OGFont {
+  name: string;
+  data: ArrayBuffer;
+  weight: 400 | 500 | 700;
+  style: "normal" | "italic";
+}
+
+type Script =
+  | "latin"
+  | "korean"
+  | "japanese"
+  | "chinese-simplified"
+  | "chinese-traditional"
+  | "arabic"
+  | "devanagari"
+  | "bengali"
+  | "tamil"
+  | "telugu"
+  | "thai"
+  | "cyrillic";
+
+const LOCALE_SCRIPT_MAP: Record<string, Script> = {
+  en: "latin",
+  es: "latin",
+  fr: "latin",
+  de: "latin",
+  pt: "latin",
+  it: "latin",
+  nl: "latin",
+  pl: "latin",
+  tr: "latin",
+  vi: "latin",
+  id: "latin",
+  ko: "korean",
+  ja: "japanese",
+  "zh-CN": "chinese-simplified",
+  "zh-TW": "chinese-traditional",
+  ar: "arabic",
+  fa: "arabic",
+  ur: "arabic",
+  hi: "devanagari",
+  bn: "bengali",
+  ta: "tamil",
+  te: "telugu",
+  th: "thai",
+  ru: "cyrillic",
+  uk: "cyrillic",
+};
+
+const SCRIPT_FONT_MAP: Record<Script, FontConfig> = {
+  latin: { family: "Faculty Glyphic", weight: 400 },
+  korean: { family: "Noto Sans KR", weight: 400 },
+  japanese: { family: "Noto Sans JP", weight: 400 },
+  "chinese-simplified": { family: "Noto Sans SC", weight: 400 },
+  "chinese-traditional": { family: "Noto Sans TC", weight: 400 },
+  arabic: { family: "Noto Sans Arabic", weight: 400 },
+  devanagari: { family: "Noto Sans Devanagari", weight: 400 },
+  bengali: { family: "Noto Sans Bengali", weight: 400 },
+  tamil: { family: "Noto Sans Tamil", weight: 400 },
+  telugu: { family: "Noto Sans Telugu", weight: 400 },
+  thai: { family: "Noto Sans Thai", weight: 400 },
+  cyrillic: { family: "Noto Sans", weight: 400 },
+};
+
+async function fetchGoogleFont(config: FontConfig): Promise<ArrayBuffer> {
   const { family, weight } = config;
 
   const familyParam = family.replace(/ /g, "+");
@@ -31,7 +93,7 @@ export async function fetchGoogleFont(
 
   const css = await cssResponse.text();
 
-  // Regex pattern: src: url(https://fonts.gstatic.com/...) format('truetype')
+  // Regex: src: url(https://fonts.gstatic.com/...) format('truetype'|'opentype')
   const fontUrlMatch = css.match(
     /src: url\(([^)]+)\) format\(['"](?:truetype|opentype)['"]\)/,
   );
@@ -53,7 +115,7 @@ export async function fetchGoogleFont(
 
 const fontCache = new Map<string, Promise<ArrayBuffer>>();
 
-export function getCachedFont(config: FontConfig): Promise<ArrayBuffer> {
+function getCachedFont(config: FontConfig): Promise<ArrayBuffer> {
   const cacheKey = `${config.family}-${config.weight}-${config.style || "normal"}`;
 
   const cached = fontCache.get(cacheKey);
@@ -67,9 +129,49 @@ export function getCachedFont(config: FontConfig): Promise<ArrayBuffer> {
   return promise;
 }
 
+function getScriptForLocale(locale: string): Script {
+  return LOCALE_SCRIPT_MAP[locale] || "latin";
+}
+
 export function getFacultyGlyphic(): Promise<ArrayBuffer> {
-  return getCachedFont({
-    family: "Faculty Glyphic",
+  return getCachedFont(SCRIPT_FONT_MAP.latin);
+}
+
+export async function getLocaleFallbackFont(
+  locale: string,
+): Promise<OGFont | null> {
+  const script = getScriptForLocale(locale);
+
+  if (script === "latin") {
+    return null;
+  }
+
+  const fontConfig = SCRIPT_FONT_MAP[script];
+  const data = await getCachedFont(fontConfig);
+
+  return {
+    name: fontConfig.family,
+    data,
+    weight: fontConfig.weight as 400 | 500 | 700,
+    style: "normal",
+  };
+}
+
+export async function getFontsForLocale(locale: string): Promise<OGFont[]> {
+  const fonts: OGFont[] = [];
+
+  const primaryData = await getFacultyGlyphic();
+  fonts.push({
+    name: "Faculty Glyphic",
+    data: primaryData,
     weight: 400,
+    style: "normal",
   });
+
+  const fallback = await getLocaleFallbackFont(locale);
+  if (fallback) {
+    fonts.push(fallback);
+  }
+
+  return fonts;
 }

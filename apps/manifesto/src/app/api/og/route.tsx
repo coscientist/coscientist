@@ -1,6 +1,9 @@
 import { ImageResponse } from "next/og";
 import type { NextRequest } from "next/server";
-import { getFacultyGlyphic } from "@/lib/og/fonts";
+import { getFontsForLocale } from "@/lib/og/fonts";
+
+export const runtime = "edge";
+export const revalidate = 86400;
 
 const OG_WIDTH = 2400;
 const OG_HEIGHT = 1260;
@@ -9,8 +12,10 @@ export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl;
   const title = searchParams.get("title") || "Coscientist";
   const description = searchParams.get("description") || "";
+  const locale = searchParams.get("locale") || "en";
 
-  const facultyGlyphicFont = await getFacultyGlyphic();
+  const fonts = await getFontsForLocale(locale);
+  const primaryFontName = fonts[0]?.name || "Faculty Glyphic";
 
   return new ImageResponse(
     <div
@@ -21,7 +26,7 @@ export async function GET(request: NextRequest) {
         flexDirection: "column",
         backgroundColor: "#0a0a0a",
         color: "white",
-        fontFamily: "Faculty Glyphic",
+        fontFamily: primaryFontName,
         position: "relative",
       }}
     >
@@ -166,14 +171,12 @@ export async function GET(request: NextRequest) {
     {
       width: OG_WIDTH,
       height: OG_HEIGHT,
-      fonts: [
-        {
-          name: "Faculty Glyphic",
-          data: facultyGlyphicFont,
-          weight: 400,
-          style: "normal",
-        },
-      ],
+      fonts: fonts.map((font) => ({
+        name: font.name,
+        data: font.data,
+        weight: font.weight,
+        style: font.style,
+      })),
     },
   );
 }

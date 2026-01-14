@@ -1,19 +1,25 @@
 # Manifesto - AI Agent Guidelines
 
-> **IMPORTANT**: This file and @DESIGN_SYSTEM.md should be updated regularly as the project evolves. After making significant changes, update this document to reflect new patterns, decisions, and learnings.
+> **IMPORTANT**: This file and @DESIGN_SYSTEM.md should be updated regularly as
+> the project evolves. After making significant changes, update this document to
+> reflect new patterns, decisions, and learnings.
 
 ## Project Philosophy
 
 ### Core Concept
 
-Andy Matuschak-style sliding panes for documentation. Users click links to open notes in new panes stacking horizontally, creating a "rabbit hole" exploration trail while maintaining context.
+Andy Matuschak-style sliding panes for documentation. Users click links to open
+notes in new panes stacking horizontally, creating a "rabbit hole" exploration
+trail while maintaining context.
 
 ### Key UX Principles
 
 1. **Context preservation** - Never lose where you came from
 2. **Horizontal stacking** - New panes open to the right
-3. **Book spine collapse** - Overflow panes shrink to thin spines showing titles vertically
-4. **Duplicate allowed** - Clicking an existing note appends it again (stack becomes [1,2,3,1] not [1])
+3. **Book spine collapse** - Overflow panes shrink to thin spines showing titles
+   vertically
+4. **Duplicate allowed** - Clicking an existing note appends it again (stack
+   becomes [1,2,3,1] not [1])
 5. **URL-synced state** - Stack state persists in `?stack=a,b,c&focus=N` format
 
 ## Tech Stack
@@ -89,7 +95,9 @@ src/
 
 #### Pane Animation System (Dieter Rams Philosophy)
 
-The pane animations follow Dieter Rams' design principles: **"Good design is as little design as possible."** Animations exist to communicate spatial relationships and state changes, not to decorate.
+The pane animations follow Dieter Rams' design principles: **"Good design is as
+little design as possible."** Animations exist to communicate spatial
+relationships and state changes, not to decorate.
 
 **Core Files:**
 
@@ -173,13 +181,15 @@ function Pane() {
 ### Stack
 
 - MUST use Tailwind CSS defaults (spacing, radius, shadows) before custom values
-- MUST use motion/react (formerly framer-motion) when JavaScript animation is required
+- MUST use motion/react (formerly framer-motion) when JavaScript animation is
+  required
 - SHOULD use tw-animate-css for entrance and micro-animations in Tailwind CSS
 - MUST use cn utility (clsx + tailwind-merge) for class logic
 
 ### Components
 
-- MUST use accessible component primitives for anything with keyboard or focus behavior (Base UI, React Aria, Radix)
+- MUST use accessible component primitives for anything with keyboard or focus
+  behavior (Base UI, React Aria, Radix)
 - MUST use the project's existing component primitives first
 - NEVER mix primitive systems within the same interaction surface
 - SHOULD prefer Base UI for new primitives if compatible with the stack
@@ -201,7 +211,8 @@ function Pane() {
 - NEVER add animation unless it is explicitly requested
 - MUST animate only compositor props (transform, opacity)
 - NEVER animate layout properties (width, height, top, left, margin, padding)
-- SHOULD avoid animating paint properties (background, color) except for small, local UI (text, icons)
+- SHOULD avoid animating paint properties (background, color) except for small,
+  local UI (text, icons)
 - SHOULD use ease-out on entrance
 - NEVER exceed 200ms for interaction feedback
 - MUST pause looping animations when off-screen
@@ -235,7 +246,8 @@ function Pane() {
 - SHOULD use Tailwind CSS default shadow scale unless explicitly requested
 - MUST give empty states one clear next action
 - SHOULD limit accent color usage to one per view
-- SHOULD use existing theme or Tailwind CSS color tokens before introducing new ones
+- SHOULD use existing theme or Tailwind CSS color tokens before introducing new
+  ones
 
 ## Component Guidelines
 
@@ -275,13 +287,16 @@ After significant changes, update these sections:
 3. **Key Patterns** - New conventions or patterns
 4. **Component Guidelines** - Style/component standards
 
-Keep this document accurate - it's the source of truth for AI agents working on this codebase.
+Keep this document accurate - it's the source of truth for AI agents working on
+this codebase.
 
 ---
 
 ## COSS/UI Pattern Reference (from coss.com)
 
-> **Source**: Studied from [cosscom/coss](https://github.com/cosscom/coss) - the official coss.com monorepo containing `@coss/ui` package and reference implementations.
+> **Source**: Studied from [cosscom/coss](https://github.com/cosscom/coss) - the
+> official coss.com monorepo containing `@coss/ui` package and reference
+> implementations.
 
 ### Architecture Overview
 
@@ -412,7 +427,8 @@ COSS/UI uses a fixed z-index scale. Define these tokens:
 ## Identified Issues & Refactoring Roadmap
 
 > **Analysis Date**: January 2026  
-> **Severity Legend**: 🔴 High (Accessibility/Breaking) | 🟡 Medium (Maintenance) | 🟢 Low (Tech Debt)
+> **Severity Legend**: 🔴 High (Accessibility/Breaking) | 🟡 Medium
+> (Maintenance) | 🟢 Low (Tech Debt)
 
 ### 🔴 High Priority Issues
 
@@ -634,7 +650,8 @@ export function PaneSpine({ index, title }: PaneSpineProps) {
 
 **File**: `src/app/notes/[...slug]/client.tsx`
 
-Uses manual pointer events (`startX`, `deltaX` math). Consider using `@dnd-kit` for better accessibility and mobile support.
+Uses manual pointer events (`startX`, `deltaX` math). Consider using `@dnd-kit`
+for better accessibility and mobile support.
 
 #### 8. Brittle Width Constants
 
@@ -702,7 +719,8 @@ Components available in `@coss/ui` (from `packages/ui/src/components/`):
 | **Disclosure** | Accordion, Collapsible, Toggle, ToggleGroup, Toolbar                                                                          |
 | **Utilities**  | Label, Field, Form, ScrollArea                                                                                                |
 
-When adding new UI, check if COSS/UI has a component first. Copy from their implementation to maintain consistency.
+When adding new UI, check if COSS/UI has a component first. Copy from their
+implementation to maintain consistency.
 
 ---
 
@@ -710,7 +728,8 @@ When adding new UI, check if COSS/UI has a component first. Copy from their impl
 
 ### Contextual CSS with `data-slot`
 
-COSS/UI heavily uses `data-slot` attributes for contextual styling without React Context:
+COSS/UI heavily uses `data-slot` attributes for contextual styling without React
+Context:
 
 ```tsx
 // Component sets its slot

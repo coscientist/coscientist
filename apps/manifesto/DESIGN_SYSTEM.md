@@ -2,7 +2,9 @@
 
 > "Good design is as little design as possible." — Dieter Rams
 
-This document defines the visual language, design tokens, and component patterns for Coscientist. It serves as the single source of truth for designers and developers building the Coscientist knowledge production system.
+This document defines the visual language, design tokens, and component patterns
+for Coscientist. It serves as the single source of truth for designers and
+developers building the Coscientist knowledge production system.
 
 ---
 
@@ -29,13 +31,19 @@ This document defines the visual language, design tokens, and component patterns
 
 Coscientist follows the "Less, but better" approach. We prioritize:
 
-- **Honesty**: The UI reflects the underlying data structure (the Dialectical Graph).
-- **Unobtrusiveness**: Tools should fade into the background, leaving space for thought.
-- **Longevity**: Avoiding trendy effects in favor of timeless typography and motion.
+- **Honesty**: The UI reflects the underlying data structure (the Dialectical
+  Graph).
+- **Unobtrusiveness**: Tools should fade into the background, leaving space for
+  thought.
+- **Longevity**: Avoiding trendy effects in favor of timeless typography and
+  motion.
 
 ### Sliding Panes (Matuschak-style)
 
-The interface is based on the concept of **Sliding Panes**. Instead of traditional tabbed navigation or a single-page view, notes open in a horizontal stack. This preserves context and allows for non-linear exploration of knowledge.
+The interface is based on the concept of **Sliding Panes**. Instead of
+traditional tabbed navigation or a single-page view, notes open in a horizontal
+stack. This preserves context and allows for non-linear exploration of
+knowledge.
 
 ---
 
@@ -79,7 +87,8 @@ The Coscientist logo represents three sliding panes in a stack.
 
 ## 3. Color System
 
-Coscientist uses a theme-aware color system with strong contrast in both light and dark modes.
+Coscientist uses a theme-aware color system with strong contrast in both light
+and dark modes.
 
 ### Core Palettes
 
@@ -96,8 +105,12 @@ Coscientist uses a theme-aware color system with strong contrast in both light a
 
 To create depth and premium feel, dark mode utilizes subtle radial gradients:
 
-- **Top Right**: `radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%)` with `blur(80px)`.
-- **Bottom Left**: `radial-gradient(circle, rgba(59, 130, 246, 0.05) 0%, transparent 70%)` with `blur(80px)`.
+- **Top Right**:
+  `radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%)` with
+  `blur(80px)`.
+- **Bottom Left**:
+  `radial-gradient(circle, rgba(59, 130, 246, 0.05) 0%, transparent 70%)` with
+  `blur(80px)`.
 
 ---
 
@@ -107,7 +120,8 @@ We prioritize readability and typographic "voice".
 
 ### Font Families
 
-- **Sans (Headings/Body)**: `Faculty Glyphic` — A distinctive serif-like font with a scholarly yet modern personality.
+- **Sans (Headings/Body)**: `Faculty Glyphic` — A distinctive serif-like font
+  with a scholarly yet modern personality.
 - **Mono (Code/Data)**: `Iosevka` — A condensed, highly legible monospace font.
 
 ### Scale & Hierarchy
@@ -161,7 +175,8 @@ A centralized z-index scale prevents "z-index wars".
 
 ### 6.1 Note Pane
 
-The primary content container. Each note is rendered in its own pane with ambient lighting effects.
+The primary content container. Each note is rendered in its own pane with
+ambient lighting effects.
 
 #### Anatomy
 
@@ -262,7 +277,8 @@ The primary content container. Each note is rendered in its own pane with ambien
 
 ### 6.2 Pane Spine
 
-When a pane is scrolled out of view, it collapses into a thin "spine" showing vertical text.
+When a pane is scrolled out of view, it collapses into a thin "spine" showing
+vertical text.
 
 #### Anatomy
 
@@ -554,7 +570,8 @@ transition-opacity duration-1000  /* Ambient gradients fade */
 
 ## 8. Motion & Animation
 
-Animations communicate **spatial relationships** and provide feedback. They should never be decorative.
+Animations communicate **spatial relationships** and provide feedback. They
+should never be decorative.
 
 ### 8.1 Spring Configurations
 

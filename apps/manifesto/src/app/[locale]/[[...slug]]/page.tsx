@@ -46,7 +46,7 @@ export async function generateMetadata({
       locale,
       images: [
         {
-          url: `/api/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description || "")}`,
+          url: `/api/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description || "")}&locale=${locale}`,
           width: 2400,
           height: 1260,
           alt: title,
@@ -58,7 +58,7 @@ export async function generateMetadata({
       title,
       description,
       images: [
-        `/api/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description || "")}`,
+        `/api/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description || "")}&locale=${locale}`,
       ],
     },
   };

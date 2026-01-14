@@ -2,7 +2,7 @@
 title: Arayüz Metaforu Olarak Monolit
 description: Monolitin kayar panel gezinimini nasıl şekillendirdiği
 sourceLocale: en
-sourceHash: 555ec31ef810
+sourceHash: 406d93dbb744
 translatedAt: 2026-01-14
 ---
 
@@ -10,7 +10,7 @@ _2001: Bir Uzay Destanı_’ndaki [Monolit](./monolith) yalnızca görsel bir il
 
 ## Oranlar ve Mekân
 
-Monolitin 1:4:9 oranı (1, 2, 3’ün kareleri) arayüzün her yanında görünür:
+Monolitin 1:4:9 oranı arayüzün her yanında görünür:
 
 - Üst üste dizildiğinde panel genişliği oranları
 - Tipografide dikey ritim

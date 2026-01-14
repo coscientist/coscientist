@@ -1,15 +1,13 @@
 ---
 title: Perda de nuances na tradução
-description:
-  As sutilezas semânticas que desaparecem quando ideias atravessam fronteiras
-  linguísticas
+description: As sutilezas semânticas que desaparecem quando ideias atravessam fronteiras linguísticas
 sourceLocale: en
-sourceHash: aef048dd4f50
+sourceHash: b702bb1401b7
 translatedAt: 2026-01-14
 ---
 
 A perda de nuances na tradução é o apagamento de sutilezas semânticas quando
-ideias são traduzidas de uma língua para outra. Ela inclui a perda de conotação,
+ideias são traduzidas de uma língua para outra, reduzindo a [Fidelidade da Tradução](./translation-fidelity). Ela inclui a perda de conotação,
 de contexto cultural, de pressupostos implícitos e daquele sabor específico que
 torna uma expressão significativa no seu [Sprachraum](./sprachraum) original.
 
@@ -20,8 +18,7 @@ sistemática a perda de nuances. Uma tradução fluente pode mascarar erros suti
 assim como a [armadilha da fluência](./fluency-trap) faz com que uma prosa de IA
 suave pareça precisa quando talvez não seja.
 
-Há muitos exemplos: um conceito japonês como "wa" (harmonia, mas também uma
-evitação de conflito direto dependente do contexto) não se mapeia de forma limpa
+Há muitos exemplos: um conceito japonês como "wa" não se mapeia de forma limpa
 para nenhuma palavra em inglês. Um substantivo composto alemão condensa um
 sentido que, em inglês, exige uma frase. A terminologia técnica de um campo pode
 ter conotações diferentes na tradução para outra língua.

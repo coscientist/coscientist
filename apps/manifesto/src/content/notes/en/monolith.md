@@ -3,12 +3,12 @@ title: The Monolith
 description: Design inspiration from Kubrick's 2001 A Space Odyssey
 ---
 
-The Monolith from Stanley Kubrick's _2001: A Space Odyssey_ (1968) is a machine
+The Monolith from Stanley Kubrick's _2001: A Space Odyssey_ is a machine
 built by an ancient extraterrestrial species to accelerate intelligence in lower
 beings. Its featureless black slab offers no instruction manual—only presence.
 Those who encounter it are changed, but the mechanism remains opaque.
 
-In Arthur C. Clarke's novels, the aliens (the "Firstborn") seeded Monoliths
+In Arthur C. Clarke's novels, the aliens seeded Monoliths
 across the galaxy as instruments of uplift. The apes who touched it gained the
 spark of tool use. Humanity's encounter on the Moon signaled readiness for the
 next stage.

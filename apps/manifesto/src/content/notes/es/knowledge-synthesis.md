@@ -1,17 +1,15 @@
 ---
 title: Síntesis de conocimiento
-description:
-  En qué se diferencia la síntesis del promediado en sistemas dialécticos de
-  conocimiento
+description: Cómo la síntesis difiere del promediado en sistemas de conocimiento dialécticos
 sourceLocale: en
-sourceHash: 8035aade2986
+sourceHash: 7d59b577f2e7
 translatedAt: 2026-01-14
 ---
 
-La síntesis de conocimiento es lo que ocurre después de la recuperación , cuando
+La síntesis de conocimiento es lo que ocurre después de la recuperación cuando
 tienes que hacer comparables fuentes incompatibles. No es promediar. Es alinear
 premisas, definiciones y alcance, de modo que los desacuerdos se conviertan en
-objetos explícitos en lugar de ruido.
+objetos explícitos en lugar de ruido. Véase [Mecanismos de síntesis](./synthesis-mechanisms).
 
 El [RAG](./rag) estándar es fuerte en recuperación y débil en síntesis porque no
 tiene un objeto interno llamado [contención](./contention). En un
@@ -38,6 +36,6 @@ estructuradas y sistemas de coordenadas explícitos para la comparación.
 Como los [LLM](./llm) pueden leer muchos idiomas, la síntesis se extiende a la
 [síntesis translingüística](./cross-linguistic-synthesis): extraer fuentes en
 diferentes idiomas y alinear sus afirmaciones en un
-[índice independiente del idioma](./language-agnostic-indexing). La
-[pérdida de matiz en la traducción](./translation-nuance-loss) se convierte en
+[índice independiente del idioma](./language-agnostic-indexing).
+La [pérdida de matiz en la traducción](./translation-nuance-loss) se convierte en
 otra forma de incompatibilidad que rastrear y resolver.

@@ -4,7 +4,8 @@ description: The node types in a dialectical knowledge graph
 ---
 
 In a [Dialectical Graph](./dialectical-graph), nodes represent epistemic objects
-rather than raw text. Common node types include:
+rather than raw text. For an overview of how these pieces fit together, see
+[Graph Components](./graph-components). Common node types include:
 
 - [Claim](./claim) — verifiable propositions
 - [Scope](./scope) — conditions of applicability
@@ -25,4 +26,4 @@ update instead of merely accumulate.
 Claim status is multi-dimensional rather than a single confidence score ).
 Transitions are driven less by the number of rebuttals and more by the kind of
 rebuttal and whether it succeeds at the level of scope, assumption, definition,
-or method.
+or method; see [Dialectical Graph Edges](./dialectical-graph-edges).

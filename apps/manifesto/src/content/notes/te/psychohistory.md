@@ -1,8 +1,8 @@
 ---
 title: సైకోహిస్టరీ
-description: అసిమోవ్ యొక్క ఫౌండేషన్‌లోని కల్పిత గణాంక శాస్త్రం
+description: అసిమోవ్ యొక్క ఫౌండేషన్‌లోని కల్పిత గణాంక శాస్త్రశాఖ
 sourceLocale: en
-sourceHash: ddd31577b00d
+sourceHash: 4bcddff1ac41
 translatedAt: 2026-01-14
 ---
 
@@ -15,4 +15,4 @@ translatedAt: 2026-01-14
 
 ఇది [సెల్డన్ ప్రణాళిక](./seldon-plan) మరియు
 [ఎన్‌సైక్లోపీడియా గాలాక్టికా](./encyclopedia-galactica) సృష్టికి శాస్త్రీయ
-పునాది.
+పునాది; వీటిని [హరి సెల్డన్](./hari-seldon) అభివృద్ధి చేశాడు.

@@ -16,7 +16,7 @@ Loại bỏ mọi thứ không phục vụ cho sự thấu hiểu. Những gì c
 trọng lượng.
 
 - Không dùng gradient trang trí
-- Không dùng hoạt ảnh (animation) mang tính vui đùa
+- Không dùng hoạt ảnh mang tính vui đùa
 - Không có viền không cần thiết
 - Không có nhãn trùng lặp
 
@@ -25,7 +25,7 @@ là điều nghiêm túc. Hãy chú ý.
 
 ## Ứng dụng
 
-### Chữ (Typography)
+### Chữ
 
 Faculty Glyphic—một kiểu chữ serif có cá tính nhưng không màu mè. Tiêu đề không
 la hét; chúng khẳng định. Chữ nội dung ưu tiên khả năng đọc hơn là phong cách.

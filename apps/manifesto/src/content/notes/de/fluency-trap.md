@@ -2,7 +2,7 @@
 title: Flüssigkeitsfalle
 description: Glatte KI-Prosa mit Genauigkeit verwechseln
 sourceLocale: en
-sourceHash: d8010bfe6bcb
+sourceHash: dde3d8c7519c
 translatedAt: 2026-01-14
 ---
 
@@ -10,7 +10,8 @@ Die Flüssigkeitsfalle ist die kognitive Verzerrung, glatt klingende,
 selbstbewusste Prosa als korrekt zu behandeln. Weil [LLMs](./llm) darauf
 optimieren, plausible nächste Tokens zu erzeugen, liest sich ihre Ausgabe oft
 gut, selbst wenn sie falsch ist. Flüssigkeit imitiert die Oberflächenmerkmale
-von Expertise ohne die zugrunde liegende Überprüfung.
+von Expertise ohne die zugrunde liegende Überprüfung und befeuert
+[KI-induzierte Kompetenzillusionen](./ai-induced-illusions-of-competence).
 
 Diese Falle ist ein Schlüsselmechanismus in
 [Enzyklopädie-Zusammenbruch](./encyclopedia-meltdown): Wenn Nutzer KI-Ausgaben

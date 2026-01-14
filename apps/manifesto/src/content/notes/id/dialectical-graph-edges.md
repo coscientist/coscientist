@@ -2,12 +2,12 @@
 title: Sisi Graf Dialektik
 description: Jenis relasi yang menghubungkan node dalam graf pengetahuan dialektik
 sourceLocale: en
-sourceHash: e060cb9fd333
+sourceHash: 82c6fd07bccd
 translatedAt: 2026-01-14
 ---
 
 Dalam sebuah [Graf Dialektik](./dialectical-graph), sisi mengodekan jenis relasi
-alih-alih skor kemiripan. Nilainya adalah Anda bisa bertanya "bagaimana ini
+alih-alih skor kemiripan (lihat [Relasi Argumentatif](./argumentative-relations)). Nilainya adalah Anda bisa bertanya "bagaimana ini
 berdampak pada itu?" alih-alih hanya "apakah ini tentang topik yang sama?"
 
 Jenis relasi yang umum meliputi:
@@ -22,7 +22,7 @@ Jenis relasi yang umum meliputi:
 
 Sisi bertipe memungkinkan pembaruan pengetahuan melalui rantai sanggahan,
 pendeteksian konflik definisi, dan pelacakan status replikasi. Ini adalah
-kemampuan yang sulit direpresentasikan oleh pengambilan berbasis kemiripan ).
+kemampuan yang sulit direpresentasikan oleh pengambilan berbasis kemiripan.
 Sisi bertipe juga mendukung penilaian kualitas: kualitas pengetahuan kurang
 bergantung pada arah sebuah kesimpulan dan lebih pada ketahanan jalur yang
-menghasilkan kesimpulan itu, dan sisi mengodekan struktur jalur tersebut.
+menghasilkan kesimpulan itu, dan sisi mengodekan struktur jalur tersebut lintas node (lihat [Node Graf Dialektik](./dialectical-graph-nodes)) dan [Komponen Graf](./graph-components) lainnya.

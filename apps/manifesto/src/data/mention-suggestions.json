@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-01-14T15:05:40.268Z",
+  "generatedAt": "2026-01-14T15:55:58.885Z",
   "threshold": 0.75,
-  "totalSuggestions": 29,
+  "totalSuggestions": 27,
   "suggestions": [
     {
       "sourceSlug": "dialectical-graph-edges",
       "sourceTitle": "Dialectical Graph Edges",
       "targetSlug": "argumentative-relations",
       "targetTitle": "Argumentative Relations",
-      "similarity": 0.8457928478656632,
+      "similarity": 0.8457392108088192,
       "alreadyLinked": false
     },
     {
@@ -16,7 +16,7 @@
       "sourceTitle": "Dialectical Graph Edges",
       "targetSlug": "dialectical-graph-nodes",
       "targetTitle": "Dialectical Graph Nodes",
-      "similarity": 0.7764139712654928,
+      "similarity": 0.7764852052871244,
       "alreadyLinked": false
     },
     {
@@ -24,7 +24,7 @@
       "sourceTitle": "Dialectical Graph Edges",
       "targetSlug": "graph-components",
       "targetTitle": "Graph Components",
-      "similarity": 0.7678168689023201,
+      "similarity": 0.7678790737545859,
       "alreadyLinked": false
     },
     {
@@ -40,7 +40,7 @@
       "sourceTitle": "Graph Components",
       "targetSlug": "dialectical-graph-nodes",
       "targetTitle": "Dialectical Graph Nodes",
-      "similarity": 0.8255546848173988,
+      "similarity": 0.8255854483649633,
       "alreadyLinked": false
     },
     {
@@ -48,7 +48,7 @@
       "sourceTitle": "Graph Components",
       "targetSlug": "argumentative-relations",
       "targetTitle": "Argumentative Relations",
-      "similarity": 0.76833836391306,
+      "similarity": 0.7684082268738259,
       "alreadyLinked": false
     },
     {
@@ -56,7 +56,7 @@
       "sourceTitle": "Graph Components",
       "targetSlug": "dialectical-graph-edges",
       "targetTitle": "Dialectical Graph Edges",
-      "similarity": 0.7678168689023201,
+      "similarity": 0.7678790737545859,
       "alreadyLinked": false
     },
     {
@@ -64,7 +64,7 @@
       "sourceTitle": "Claim",
       "targetSlug": "dialectical-graph-nodes",
       "targetTitle": "Dialectical Graph Nodes",
-      "similarity": 0.7663620031490972,
+      "similarity": 0.7663056118269889,
       "alreadyLinked": false
     },
     {
@@ -72,7 +72,7 @@
       "sourceTitle": "Encyclopedia Galactica",
       "targetSlug": "foundation-fiction",
       "targetTitle": "Foundation Fiction",
-      "similarity": 0.7940934756697886,
+      "similarity": 0.7939601030485435,
       "alreadyLinked": false
     },
     {
@@ -80,7 +80,7 @@
       "sourceTitle": "Encyclopedia Galactica",
       "targetSlug": "from-preservation-to-capability",
       "targetTitle": "From Preservation to Capability",
-      "similarity": 0.7605677201065095,
+      "similarity": 0.7605033410896297,
       "alreadyLinked": false
     },
     {
@@ -88,7 +88,7 @@
       "sourceTitle": "Psychohistory",
       "targetSlug": "hari-seldon",
       "targetTitle": "Hari Seldon",
-      "similarity": 0.7516463658230726,
+      "similarity": 0.7516317181938497,
       "alreadyLinked": false
     },
     {
@@ -104,7 +104,7 @@
       "sourceTitle": "Claim Status Taxonomy",
       "targetSlug": "status-transition-rules",
       "targetTitle": "Status Transition Rules",
-      "similarity": 0.7625237285160233,
+      "similarity": 0.7625394806812195,
       "alreadyLinked": false
     },
     {
@@ -112,15 +112,7 @@
       "sourceTitle": "Claim Status Taxonomy",
       "targetSlug": "claim-lifecycle",
       "targetTitle": "Claim Lifecycle",
-      "similarity": 0.7518822554290424,
-      "alreadyLinked": false
-    },
-    {
-      "sourceSlug": "exploration-strategies",
-      "sourceTitle": "Exploration Strategies",
-      "targetSlug": "exploration-mechanisms",
-      "targetTitle": "Exploration Mechanisms",
-      "similarity": 0.9022180131502567,
+      "similarity": 0.7520633392307633,
       "alreadyLinked": false
     },
     {
@@ -128,7 +120,7 @@
       "sourceTitle": "Fluency Trap",
       "targetSlug": "ai-induced-illusions-of-competence",
       "targetTitle": "AI-Induced Illusions of Competence",
-      "similarity": 0.8029141216025074,
+      "similarity": 0.8028572675442581,
       "alreadyLinked": false
     },
     {
@@ -136,7 +128,7 @@
       "sourceTitle": "Argumentative Relations",
       "targetSlug": "graph-components",
       "targetTitle": "Graph Components",
-      "similarity": 0.76833836391306,
+      "similarity": 0.7684082268738259,
       "alreadyLinked": false
     },
     {
@@ -148,19 +140,11 @@
       "alreadyLinked": false
     },
     {
-      "sourceSlug": "verification",
-      "sourceTitle": "Verification",
-      "targetSlug": "verification-system",
-      "targetTitle": "Verification System",
-      "similarity": 0.8733194807485642,
-      "alreadyLinked": false
-    },
-    {
       "sourceSlug": "definition-drift",
       "sourceTitle": "Definition Drift",
       "targetSlug": "semantic-drift",
       "targetTitle": "Semantic Drift",
-      "similarity": 0.8092174512662546,
+      "similarity": 0.8092111312027777,
       "alreadyLinked": false
     },
     {
@@ -168,7 +152,7 @@
       "sourceTitle": "Definition Drift",
       "targetSlug": "drift-phenomena",
       "targetTitle": "Drift Phenomena",
-      "similarity": 0.7648253081494496,
+      "similarity": 0.7648720979753251,
       "alreadyLinked": false
     },
     {
@@ -176,7 +160,7 @@
       "sourceTitle": "Multilingual Knowledge Mesh",
       "targetSlug": "multilingual-memex",
       "targetTitle": "Multilingual Memex",
-      "similarity": 0.7897392063371967,
+      "similarity": 0.7896756574882513,
       "alreadyLinked": false
     },
     {
@@ -184,7 +168,7 @@
       "sourceTitle": "Multilingual Memex",
       "targetSlug": "multilingual-knowledge-mesh",
       "targetTitle": "Multilingual Knowledge Mesh",
-      "similarity": 0.7897392063371967,
+      "similarity": 0.7896756574882513,
       "alreadyLinked": false
     },
     {
@@ -192,7 +176,7 @@
       "sourceTitle": "Dialectical Graph Nodes",
       "targetSlug": "graph-components",
       "targetTitle": "Graph Components",
-      "similarity": 0.8255546848173988,
+      "similarity": 0.8255854483649633,
       "alreadyLinked": false
     },
     {
@@ -200,7 +184,7 @@
       "sourceTitle": "Dialectical Graph Nodes",
       "targetSlug": "dialectical-graph-edges",
       "targetTitle": "Dialectical Graph Edges",
-      "similarity": 0.7764139712654928,
+      "similarity": 0.7764852052871244,
       "alreadyLinked": false
     },
     {
@@ -208,7 +192,7 @@
       "sourceTitle": "Coscientist",
       "targetSlug": "index",
       "targetTitle": "Tokens ≠ Knowledge",
-      "similarity": 0.8113763832921045,
+      "similarity": 0.8113254907934265,
       "alreadyLinked": false
     },
     {
@@ -216,7 +200,7 @@
       "sourceTitle": "Dialectical Graph",
       "targetSlug": "graph-as-meltdown-defense",
       "targetTitle": "Graph as Meltdown Defense",
-      "similarity": 0.811111988180662,
+      "similarity": 0.811093842226563,
       "alreadyLinked": false
     },
     {
@@ -224,7 +208,7 @@
       "sourceTitle": "Dialectical Graph",
       "targetSlug": "graph-components",
       "targetTitle": "Graph Components",
-      "similarity": 0.7701892912560149,
+      "similarity": 0.7702002258980567,
       "alreadyLinked": false
     },
     {
@@ -232,7 +216,7 @@
       "sourceTitle": "Dialectical Graph",
       "targetSlug": "from-memex-to-dialectical-graph",
       "targetTitle": "From Memex to Dialectical Graph",
-      "similarity": 0.7685268717840744,
+      "similarity": 0.7684181828447594,
       "alreadyLinked": false
     }
   ]

@@ -1,8 +1,8 @@
 ---
 title: Malha de Conhecimento Multilíngue
-description: Uma rede de conhecimento que atravessa idiomas e se distribui globalmente
+description: Uma rede de conhecimento que abrange idiomas e se distribui globalmente
 sourceLocale: en
-sourceHash: d0cefb393fe3
+sourceHash: 6015daf06d5c
 translatedAt: 2026-01-14
 ---
 
@@ -10,7 +10,8 @@ Uma malha de conhecimento multilíngue é uma rede de conhecimento em que conte�
 em qualquer idioma pode se conectar a conteúdo em qualquer outro idioma por meio
 de conceitos compartilhados, em vez de correspondência de palavras. Ela é uma
 expressão da visão de [Sunghyun Cho](./sunghyun-cho) de ir
-[através dos Sprachraums](./across-the-sprachraums).
+[através dos Sprachraums](./across-the-sprachraums), e um passo em direção a um
+[Memex Multilíngue](./multilingual-memex).
 
 Isso vai além de uma simples tradução. Em uma malha multilíngue de verdade, uma
 nota escrita em coreano sobre um conceito se conecta a uma nota em inglês sobre
@@ -21,8 +22,8 @@ independentemente de qual [Sprachraum](./sprachraum) o conteúdo tenha se
 originado.
 
 A [Extracranial](./extracranial) implementa formas iniciais disso por meio de
-detecção automática de idioma, _content negotiation_ (negociação de conteúdo) e
-tags hreflang para entrega específica por localidade. A visão é que o sistema
+detecção automática de idioma, negociação de conteúdo e tags hreflang para
+entrega específica por localidade. A visão é que o sistema
 deveria distribuir automaticamente o conteúdo entre idiomas, ao mesmo tempo em
 que penaliza conteúdo desatualizado independentemente do seu idioma original.
 

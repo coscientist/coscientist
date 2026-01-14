@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: 8c91c1527bf6
 translatedAt: 2026-01-14
 ---
+
 Verificatie is het proces van het nagaan of een bewering standhoudt tegenover
 bewijs, tegenbewijs en alternatieve verklaringen. Het is geen passieve
 acceptatie: het vereist inspanning, en juist die inspanning onderscheidt kennis

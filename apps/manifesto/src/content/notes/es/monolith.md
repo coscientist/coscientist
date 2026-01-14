@@ -1,20 +1,20 @@
 ---
 title: El Monolito
-description: Inspiración de diseño de _2001: Una odisea del espacio_ de Kubrick
+description: Inspiración de diseño a partir de _2001: Una odisea del espacio_ de Kubrick
 sourceLocale: en
-sourceHash: fd5c03a09cc7
+sourceHash: aef77e879a9f
 translatedAt: 2026-01-14
 ---
 
-El Monolito de Stanley Kubrick en _2001: Una odisea del espacio_ (1968) es una máquina construida por una antigua especie extraterrestre para acelerar la inteligencia en seres inferiores. Su losa negra y lisa, sin rasgos, no ofrece manual de instrucciones, solo presencia. Quienes lo encuentran cambian, pero el mecanismo permanece opaco.
+El Monolito de Stanley Kubrick en _2001: Una odisea del espacio_ es una máquina construida por una antigua especie extraterrestre para acelerar la inteligencia en seres inferiores. Su losa negra y lisa, sin rasgos, no ofrece manual de instrucciones, solo presencia. Quienes lo encuentran cambian, pero el mecanismo permanece opaco.
 
-En las novelas de Arthur C. Clarke, los alienígenas (los «Primogénitos») sembraron Monolitos por toda la galaxia como instrumentos de elevación. Los simios que lo tocaron obtuvieron la chispa del uso de herramientas. El encuentro de la humanidad en la Luna señaló la preparación para la siguiente etapa.
+En las novelas de Arthur C. Clarke, los alienígenas sembraron Monolitos por toda la galaxia como instrumentos de elevación. Los simios que lo tocaron obtuvieron la chispa del uso de herramientas. El encuentro de la humanidad en la Luna señaló la preparación para la siguiente etapa.
 
 Esta estética informa el lenguaje visual y el modelo de interacción de [Coscientist](./coscientist). La [interfaz de panel deslizante](./monolith-as-interface-metaphor) refleja las proporciones del Monolito: losas verticales apiladas horizontalmente, cada una conteniendo conocimiento que transforma la comprensión.
 
 ## Principios de diseño derivados
 
-- [Misterio y minimalismo](./mystery-minimalism): Reducir la ornamentación, dejar que el contenido hable
+- [Misterio y minimalismo](./mystery-minimalism): Reducir el cromado, dejar que el contenido hable
 - [Señal sin explicación](./signal-without-explanation): Presentar información, confiar en el lector
 - Ritmo vertical: las proporciones 1:4:9 (1², 2², 3²) aparecen en las relaciones de espaciado
 - Base monocroma: escala de grises por defecto, el color como señal

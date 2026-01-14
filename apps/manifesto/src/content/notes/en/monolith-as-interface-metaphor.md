@@ -9,7 +9,7 @@ interface translates this into functional design.
 
 ## Proportions and Space
 
-The Monolith's 1:4:9 ratio (squares of 1, 2, 3) appears throughout the interface:
+The Monolith's 1:4:9 ratio appears throughout the interface:
 
 - Pane width ratios when stacked
 - Vertical rhythm in typography

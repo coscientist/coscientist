@@ -6,7 +6,7 @@ description: How synthesis differs from averaging in dialectical knowledge syste
 Knowledge synthesis is what happens after retrieval when you have to make
 incompatible sources comparable. It is not averaging. It is aligning premises,
 definitions, and scope so disagreements become explicit objects instead of
-noise.
+noise. See [Synthesis Mechanisms](./synthesis-mechanisms).
 
 Standard [RAG](./rag) is strong at retrieval and weak at synthesis because it
 has no internal object called [contention](./contention). In a

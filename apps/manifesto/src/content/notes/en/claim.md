@@ -4,7 +4,7 @@ description: A verifiable proposition stored as a node in a dialectical graph
 ---
 
 A claim is a verifiable proposition extracted from text and stored as a
-first-class object in a [Dialectical Graph](./dialectical-graph). Claims are not
+first-class [Dialectical Graph node](./dialectical-graph-nodes) in a [Dialectical Graph](./dialectical-graph). (See [Dialectical Graph Nodes](./dialectical-graph-nodes).) Claims are not
 raw sentences; they are normalized statements with explicit [scope](./scope),
 [assumptions](./assumption), and [method](./method) dependencies.
 

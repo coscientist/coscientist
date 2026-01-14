@@ -2,12 +2,12 @@
 title: Encyclopedia Galactica
 description: Ein Konzept zur Bewahrung von Wissen über dunkle Zeitalter hinweg
 sourceLocale: en
-sourceHash: 94e03a945895
+sourceHash: 5417fe6b3bb4
 translatedAt: 2026-01-14
 ---
 
 Die Encyclopedia Galactica ist ein fiktives Instrument in
-[Isaac Asimov](./isaac-asimov)s Foundation-Reihe: ein riesiges Archiv, das dazu
+[Isaac Asimov](./isaac-asimov)s [Foundation-Fiction](./foundation-fiction)-Reihe: ein riesiges Archiv, das dazu
 bestimmt ist, menschliches Wissen im Vorfeld eines zivilisatorischen
 Zusammenbruchs zu bewahren. Sie ist der [Wissens-Arche](./knowledge-ark)-Topos ,
 umgesetzt als Institution.
@@ -26,7 +26,7 @@ Speicherung zu Fähigkeit: Bewahrung ist wichtig, aber eine Enzyklopädie, die
 keine Provenienz sichern, Widersprüche nicht sichtbar machen und sich nicht
 durch Widerlegung aktualisieren kann, wird irgendwann zerfallen. Die fiktive
 Enzyklopädie wird zu einem Designziel für ein reales Werkzeug, das in einer
-KI-gesättigten epistemischen Umgebung überleben kann.
+KI-gesättigten epistemischen Umgebung überleben kann, und verschiebt sich [Von Bewahrung zu Fähigkeit](./from-preservation-to-capability).
 
 Eine Enzyklopädie, die der Galaxie würdig ist, würde notwendigerweise Wissen
 [über die Sprachräume hinweg](./across-the-sprachraums) integrieren: über

@@ -1,9 +1,8 @@
 ---
 title: Mehrsprachiger Memex
-description: Ein sprachbewusstes persönliches Wissenssystem mit automatischer
-  Übersetzungsunterstützung
+description: Ein sprachbewusstes persönliches Wissenssystem mit automatischer Übersetzungsunterstützung
 sourceLocale: en
-sourceHash: 4cbc551868c1
+sourceHash: 7f632fdf73b6
 translatedAt: 2026-01-14
 ---
 
@@ -11,7 +10,8 @@ Ein mehrsprachiger Memex ist ein persönliches Wissenssystem, das Inhalte in
 mehreren Sprachen nativ unterstützt – mit automatischer Spracherkennung,
 Übersetzung und sprachübergreifender Verlinkung. Er erweitert die ursprüngliche
 [Memex](./memex)-Vision von [Vannevar Bush](./vannevar-bush) auf eine Welt, in
-der Wissen keine Sprachgrenzen respektiert.
+der Wissen keine Sprachgrenzen respektiert, und ähnelt stark einem
+[Mehrsprachigen Wissensnetz](./multilingual-knowledge-mesh).
 
 [Sunghyun Cho](./sunghyun-cho)s [Extracranial](./extracranial) ist eine
 Umsetzung dieses Konzepts. Es umfasst automatische Spracherkennung,
@@ -42,3 +42,7 @@ Für [Kozientist](./coscientist) wird der mehrsprachige Memex zum mehrsprachigen
 [Behauptungen](./claim), [Evidenzspannen](./evidence-span) und Relationen aus
 jeder Sprache speichert, wobei Sprache als Metadatum statt als grundlegende
 Grenze behandelt wird.
+
+## Verwandt
+
+- [Mehrsprachiges Wissensnetz](./multilingual-knowledge-mesh)

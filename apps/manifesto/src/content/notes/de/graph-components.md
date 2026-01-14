@@ -2,13 +2,13 @@
 title: Graph-Komponenten
 description: Die Knoten- und Kantentypen, aus denen ein dialektischer Graph besteht
 sourceLocale: en
-sourceHash: eb17714b277c
+sourceHash: 1c3352deea91
 translatedAt: 2026-01-14
 ---
 
 Graph-Komponenten sind die Bausteine eines
-[Dialektischen Graphen](./dialectical-graph): die Knotentypen, die epistemische
-Objekte repräsentieren, und die Kantentypen, die Relationen zwischen ihnen
+[Dialektischen Graphen](./dialectical-graph): die [Knoten des Dialektischen Graphen](./dialectical-graph-nodes), die epistemische
+Objekte repräsentieren, und die [Kanten des Dialektischen Graphen](./dialectical-graph-edges), die [Argumentative Relationen](./argumentative-relations) zwischen ihnen
 darstellen.
 
 **Knotentypen** ):

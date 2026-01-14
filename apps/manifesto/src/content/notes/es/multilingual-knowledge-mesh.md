@@ -2,7 +2,7 @@
 title: Malla de conocimiento multilingüe
 description: Una red de conocimiento que abarca idiomas y se distribuye globalmente
 sourceLocale: en
-sourceHash: d0cefb393fe3
+sourceHash: 6015daf06d5c
 translatedAt: 2026-01-14
 ---
 
@@ -10,7 +10,8 @@ Una malla de conocimiento multilingüe es una red de conocimiento en la que el
 contenido en cualquier idioma puede conectarse con contenido en cualquier otro
 idioma mediante conceptos compartidos, en lugar de por coincidencia de palabras.
 Es una expresión de la visión de [Sunghyun Cho](./sunghyun-cho) de ir
-[a través de los Sprachraums](./across-the-sprachraums).
+[a través de los Sprachraums](./across-the-sprachraums), y un paso hacia un
+[Memex multilingüe](./multilingual-memex).
 
 Esto va más allá de la simple traducción. En una malla multilingüe auténtica,
 una nota escrita en coreano sobre un concepto enlaza con una nota en inglés
@@ -22,7 +23,7 @@ importar en qué [Sprachraum](./sprachraum) se originó el contenido.
 
 [Extracranial](./extracranial) implementa formas tempranas de esto mediante
 detección automática de idioma, negociación de contenido y etiquetas hreflang
-para la entrega específica por configuración regional . La visión es que el
+para la entrega específica por configuración regional. La visión es que el
 sistema debería distribuir automáticamente el contenido entre idiomas mientras
 penaliza el contenido desactualizado, independientemente de su idioma original.
 
@@ -31,4 +32,4 @@ global abarca muchos idiomas; un colaborador de investigación que solo puede
 leer inglés está fundamentalmente limitado. El
 [Grafo dialéctico](./dialectical-graph) puede almacenar [afirmaciones](./claim)
 de cualquier idioma, con [procedencia](./provenance) que rastrea qué idioma
-fuente produjo qué insight .
+fuente produjo qué insight.

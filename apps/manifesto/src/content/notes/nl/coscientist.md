@@ -1,8 +1,8 @@
 ---
 title: Coscientist
-description: Een intellectueel metgezelsysteem voor kennisproductie in het post-AI-tijdperk
+description: Een systeem als intellectuele metgezel voor kennisproductie in het post-AI-tijdperk
 sourceLocale: en
-sourceHash: 9ef4ae7abd93
+sourceHash: 19a7f6d48c09
 translatedAt: 2026-01-14
 ---
 
@@ -17,8 +17,8 @@ een [kennisark](./knowledge-ark) van informatie: een
 verificatie en handelingsbekwaamheid.
 
 Het wordt gebouwd door [Sunghyun Cho](./sunghyun-cho). Het ontstaansverhaal is
-eenvoudig: behoud is belangrijk, maar behoud alleen levert geen begrip op.
-Coscientist is ontworpen om kennis bijwerkbaar te maken, zodat
+eenvoudig: behoud is belangrijk, maar behoud alleen levert geen begrip op
+([Tokens ≠ Kennis](./index)). Coscientist is ontworpen om kennis bijwerkbaar te maken, zodat
 tegenstrijdigheden, tegenvoorbeelden en [definition drift](./definition-drift)
 zichtbaar en handelbaar worden in plaats van gladgestreken door vloeiende
 samenvattingen.

@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: b3abf2d73b65
 translatedAt: 2026-01-14
 ---
+
 [Kozientist](./coscientist) braucht mehr als Retrieval: Es braucht [Explorationsmechanismen](./exploration-mechanisms),
 die aktiv Widersprüche, Randbedingungen und Methodenabhängigkeit im
 [Dialektischen Graphen](./dialectical-graph) sichtbar machen.

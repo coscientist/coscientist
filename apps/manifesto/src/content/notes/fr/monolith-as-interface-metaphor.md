@@ -1,8 +1,8 @@
 ---
 title: Le Monolithe comme métaphore d’interface
-description: Comment le Monolithe inspire la navigation en panneaux coulissants
+description: Comment le Monolithe informe la navigation à panneaux coulissants
 sourceLocale: en
-sourceHash: 555ec31ef810
+sourceHash: 406d93dbb744
 translatedAt: 2026-01-14
 ---
 
@@ -32,7 +32,7 @@ Cela reflète le comportement du Monolithe : présent quand nécessaire, en retr
 
 ## Profondeur par l’opacité
 
-Le logo [Monolithe](./monolith) utilise trois barres à 100 %, 50 % et 20 % d’opacité. Cela suggère la profondeur — des Monolithes qui s’éloignent au loin. L’interface utilise des graduations d’opacité similaires pour indiquer la mise au point (focus) et la pertinence.
+Le logo [Monolithe](./monolith) utilise trois barres à 100 %, 50 % et 20 % d’opacité. Cela suggère la profondeur — des Monolithes qui s’éloignent au loin. L’interface utilise des graduations d’opacité similaires pour indiquer la mise au point et la pertinence.
 
 ## Liés
 

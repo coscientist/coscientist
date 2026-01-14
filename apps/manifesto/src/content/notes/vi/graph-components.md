@@ -1,17 +1,16 @@
 ---
-title: Các thành phần của đồ thị
+title: Các thành phần đồ thị
 description: Các loại nút và cạnh tạo nên một đồ thị biện chứng
 sourceLocale: en
-sourceHash: eb17714b277c
+sourceHash: 1c3352deea91
 translatedAt: 2026-01-14
 ---
 
 Các thành phần đồ thị là những khối xây dựng của một
-[Đồ thị Biện chứng](./dialectical-graph): các loại nút biểu diễn các đối tượng
-nhận thức luận và các loại cạnh biểu diễn các quan hệ giữa chúng.
+[Đồ thị Biện chứng](./dialectical-graph): [Các nút của Đồ thị Biện chứng](./dialectical-graph-nodes) biểu diễn các đối tượng
+nhận thức luận và [Các cạnh của Đồ thị Biện chứng](./dialectical-graph-edges) biểu diễn các [Quan hệ Lập luận](./argumentative-relations) giữa chúng.
 
-**Các loại nút** (xem
-[Các nút của Đồ thị Biện chứng](./dialectical-graph-nodes)):
+**Các loại nút** ):
 
 - [Mệnh đề](./claim) — các phát biểu có thể kiểm chứng
 - [Đoạn bằng chứng](./evidence-span) — văn bản được trích dẫn nguyên văn chính
@@ -23,8 +22,7 @@ nhận thức luận và các loại cạnh biểu diễn các quan hệ giữa 
 - [Phản ví dụ](./counterexample) — các trường hợp làm sai mệnh đề
 - [Nút vấn đề](./issue-node) — các cụm mệnh đề xung đột
 
-**Các loại cạnh** (xem
-[Các cạnh của Đồ thị Biện chứng](./dialectical-graph-edges)):
+**Các loại cạnh** ):
 
 - [Tấn công](./attack) — thách thức trực tiếp đối với tính đúng
 - [Làm suy yếu cơ sở](./undercut) — thách thức đối với căn cứ

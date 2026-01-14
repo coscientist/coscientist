@@ -1,16 +1,14 @@
 ---
 title: Perte de nuance en traduction
-description:
-  Les subtilités sémantiques qui disparaissent lorsque les idées franchissent
-  les frontières linguistiques
+description: Les subtilités sémantiques qui disparaissent lorsque les idées franchissent des frontières linguistiques
 sourceLocale: en
-sourceHash: aef048dd4f50
+sourceHash: b702bb1401b7
 translatedAt: 2026-01-14
 ---
 
 La perte de nuance en traduction consiste à dépouiller les idées de leurs
-subtilités sémantiques lorsqu’elles sont traduites d’une langue à une autre.
-Elle inclut la perte de connotation, de contexte culturel, d’implicites et de
+subtilités sémantiques lorsqu’elles sont traduites d’une langue à une autre,
+réduisant la [Fidélité de traduction](./translation-fidelity). Elle inclut la perte de connotation, de contexte culturel, d’implicites et de
 cette saveur particulière qui rend une expression signifiante dans son
 [Sprachraum](./sprachraum) d’origine.
 
@@ -23,11 +21,10 @@ des erreurs subtiles, de la même manière que le
 [piège de la fluidité](./fluency-trap) fait paraître exacte une prose d’IA lisse
 alors qu’elle peut ne pas l’être.
 
-Les exemples ne manquent pas : un concept japonais comme « wa » (harmonie, mais
-aussi évitement contextuel du conflit direct) ne correspond proprement à aucun
-mot français. Un nom composé allemand concentre un sens qui exige une périphrase
-en français. La terminologie technique d’un domaine peut avoir des connotations
-différentes une fois traduite dans une autre langue.
+Les exemples ne manquent pas : un concept japonais comme « wa » ne correspond
+proprement à aucun mot anglais. Un nom composé allemand concentre un sens qui
+exige une périphrase en anglais. La terminologie technique d’un domaine peut
+avoir des connotations différentes une fois traduite dans une autre langue.
 
 La défense ne consiste pas à éviter la traduction, mais à reconnaître ses
 limites. [Coscientifique](./coscientist) doit suivre le moment où une

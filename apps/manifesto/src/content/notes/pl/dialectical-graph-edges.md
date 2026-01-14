@@ -2,12 +2,12 @@
 title: Krawędzie grafu dialektycznego
 description: Typy relacji łączące węzły w dialektycznym grafie wiedzy
 sourceLocale: en
-sourceHash: e060cb9fd333
+sourceHash: 82c6fd07bccd
 translatedAt: 2026-01-14
 ---
 
 W [Grafie dialektycznym](./dialectical-graph) krawędzie kodują typy relacji, a
-nie wyniki podobieństwa. Dzięki temu możesz pytać „jak to wpływa na tamto?",
+nie wyniki podobieństwa (zob. [Relacje argumentacyjne](./argumentative-relations)). Dzięki temu możesz pytać „jak to wpływa na tamto?",
 zamiast tylko „czy to dotyczy tego samego tematu?".
 
 Typowe typy relacji obejmują:
@@ -24,4 +24,4 @@ wykrywanie konfliktów definicji oraz śledzenie statusu replikacji. Są to
 możliwości, które wyszukiwanie oparte na podobieństwie ma trudność reprezentować
 ). Wspierają też ocenę jakości: jakość wiedzy zależy mniej od kierunku wniosku,
 a bardziej od trwałości ścieżki, która go wytworzyła — a krawędzie kodują
-strukturę tej ścieżki.
+strukturę tej ścieżki w poprzek węzłów (zob. [Węzły grafu dialektycznego](./dialectical-graph-nodes)) oraz innych [Komponentów grafu](./graph-components).

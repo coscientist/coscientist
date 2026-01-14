@@ -36,7 +36,7 @@ dikkat talep eder.
 
 ### Boşluk
 
-Cömert kenar boşlukları (margin) ve iç boşluklar (padding). İçerik nefes alır.
+Cömert kenar boşlukları ve iç boşluklar . İçerik nefes alır.
 Yoğun bilgi duvarları bunaltır; aralıklı bilgi okumaya davet eder.
 
 ## Paradoks

@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: b3abf2d73b65
 translatedAt: 2026-01-14
 ---
+
 [Cowetenschapper](./coscientist) heeft meer nodig dan retrieval: het heeft [verkenningsmechanismen](./exploration-mechanisms)
 nodig die actief tegenstrijdigheden, randvoorwaarden en
 methode-afhankelijkheid in de [Dialectische Graaf](./dialectical-graph) naar

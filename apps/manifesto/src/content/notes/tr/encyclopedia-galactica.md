@@ -1,12 +1,12 @@
 ---
 title: Encyclopedia Galactica
-description: Karanlık çağlar boyunca bilgiyi korumaya yönelik bir konsept
+description: Karanlık çağlar boyunca bilgiyi koruma kavramı
 sourceLocale: en
-sourceHash: 94e03a945895
+sourceHash: 5417fe6b3bb4
 translatedAt: 2026-01-14
 ---
 
-Encyclopedia Galactica, [Isaac Asimov](./isaac-asimov)'un _Foundation_ serisinde
+Encyclopedia Galactica, [Isaac Asimov](./isaac-asimov)'un [Foundation Kurgusu](./foundation-fiction) serisinde
 yer alan kurgusal bir aygıttır: uygarlık çöküşü öncesinde insan bilgisini
 korumayı amaçlayan devasa bir depo. Bu, [bilgi gemisi](./knowledge-ark)
 motifinin bir kurum olarak vücut bulmuş hâlidir.
@@ -23,7 +23,7 @@ stratejik bir tohum işlevi görür.
 önemlidir, ancak kaynak zincirini tutamayan, çelişkileri görünür kılamayan ve
 çürütmelerle güncellenemeyen bir ansiklopedi eninde sonunda çöker. Kurgusal
 ansiklopedi, yapay zekâya doygun bir epistemik ortamda ayakta kalabilecek gerçek
-bir araç için bir tasarım hedefi hâline gelir.
+bir araç için bir tasarım hedefi hâline gelir; [Korumadan Kabiliyete](./from-preservation-to-capability) doğru kayar.
 
 Galaksiye layık bir ansiklopedi,
 [Sprachraum’lar arasında](./across-the-sprachraums) bilgiyi zorunlu olarak

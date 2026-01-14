@@ -1,18 +1,18 @@
 ---
 title: Monolith als Interface-Metapher
-description: Wie der Monolith die Navigation mit Sliding Panes beeinflusst
+description: Wie der Monolith die Sliding-Pane-Navigation prägt
 sourceLocale: en
-sourceHash: 555ec31ef810
+sourceHash: 406d93dbb744
 translatedAt: 2026-01-14
 ---
 
 Der [Monolith](./monolith) aus _2001: Odyssee im Weltraum_ liefert mehr als visuelle
-Inspiration—er bietet ein Modell für den Umgang mit Wissen. Die Sliding-Pane-
+Inspiration—er bietet ein Modell für die Interaktion mit Wissen. Die Sliding-Pane-
 Oberfläche übersetzt das in funktionales Design.
 
 ## Proportionen und Raum
 
-Das 1:4:9-Verhältnis des Monolithen (Quadrate von 1, 2, 3) taucht in der gesamten Oberfläche auf:
+Das 1:4:9-Verhältnis des Monolithen taucht in der gesamten Oberfläche auf:
 
 - Verhältnis der Pane-Breiten beim Stapeln
 - Vertikaler Rhythmus in der Typografie

@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: 8c91c1527bf6
 translatedAt: 2026-01-14
 ---
+
 验证（Verification）是检查某个主张是否经得起证据、反证以及替代性解释的过程。它不是被动接受：它需要付出努力，而这种努力正是区分知识与信念的关键。
 
 在 [共研者](./coscientist) 中，验证是 [操作者](./operator) 的责任。AI 可以执行

@@ -2,7 +2,7 @@
 title: Monolit sebagai Metafora Antarmuka
 description: Bagaimana Monolit menginformasikan navigasi panel geser
 sourceLocale: en
-sourceHash: 555ec31ef810
+sourceHash: 406d93dbb744
 translatedAt: 2026-01-14
 ---
 
@@ -12,7 +12,7 @@ menerjemahkannya ke dalam desain fungsional.
 
 ## Proporsi dan Ruang
 
-Rasio 1:4:9 Monolit (kuadrat dari 1, 2, 3) muncul di seluruh antarmuka:
+Rasio 1:4:9 Monolit muncul di seluruh antarmuka:
 
 - Rasio lebar panel saat ditumpuk
 - Ritme vertikal dalam tipografi

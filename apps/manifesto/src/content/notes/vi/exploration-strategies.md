@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: b3abf2d73b65
 translatedAt: 2026-01-14
 ---
+
 [Nhà đồng khoa học](./coscientist) cần nhiều hơn chỉ truy hồi : nó cần các [cơ chế khám phá](./exploration-mechanisms)
 để chủ động làm lộ ra các mâu thuẫn, các điều kiện biên, và sự phụ thuộc vào phương pháp trong [Đồ thị Biện chứng](./dialectical-graph).
 

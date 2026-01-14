@@ -1,15 +1,15 @@
 ---
 title: Sintesi della conoscenza
-description: In cosa la sintesi differisce dalla media nei sistemi di conoscenza dialettici
+description: In che modo la sintesi differisce dalla media nei sistemi di conoscenza dialettici
 sourceLocale: en
-sourceHash: 8035aade2986
+sourceHash: 7d59b577f2e7
 translatedAt: 2026-01-14
 ---
 
 La sintesi della conoscenza è ciò che accade dopo il recupero , quando devi
 rendere comparabili fonti incompatibili. Non è una media. È l’allineamento di
 premesse, definizioni e ambito, così che i disaccordi diventino oggetti
-espliciti invece che rumore.
+espliciti invece che rumore. Vedi [Meccanismi di sintesi](./synthesis-mechanisms).
 
 Il [RAG](./rag) standard è forte nel recupero e debole nella sintesi perché non
 ha un oggetto interno chiamato [contenzione](./contention). In un
@@ -35,6 +35,6 @@ coordinate espliciti per il confronto.
 Poiché gli [LLM](./llm) possono leggere molte lingue, la sintesi si estende alla
 [sintesi interlinguistica](./cross-linguistic-synthesis): attingendo a fonti in
 lingue diverse e allineando le loro affermazioni in un
-[indice indipendente dalla lingua](./language-agnostic-indexing). La
-[perdita di sfumature nella traduzione](./translation-nuance-loss) diventa
+[indice indipendente dalla lingua](./language-agnostic-indexing).
+La [perdita di sfumature nella traduzione](./translation-nuance-loss) diventa
 un’altra forma di incompatibilità da tracciare e risolvere.

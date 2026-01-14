@@ -2,12 +2,12 @@
 title: Utrata niuansów w tłumaczeniu
 description: Subtelności semantyczne, które znikają, gdy idee przekraczają granice językowe
 sourceLocale: en
-sourceHash: aef048dd4f50
+sourceHash: b702bb1401b7
 translatedAt: 2026-01-14
 ---
 
 Utrata niuansów w tłumaczeniu to wyzbywanie się subtelności semantycznych, gdy
-idee są przekładane z jednego języka na drugi. Obejmuje to utratę konotacji,
+idee są przekładane z jednego języka na drugi, co obniża [Wierność tłumaczenia](./translation-fidelity). Obejmuje to utratę konotacji,
 kontekstu kulturowego, ukrytych założeń oraz swoistego „smaku", który sprawia,
 że dana wypowiedź jest znacząca w swoim pierwotnym [Sprachraum](./sprachraum).
 
@@ -18,11 +18,11 @@ niuansów zjawiskiem systemowym. Płynne tłumaczenie może maskować subtelne b
 tak jak [pułapka płynności](./fluency-trap) sprawia, że gładka proza AI wydaje
 się trafna, choć wcale taka nie musi być.
 
-Przykładów jest mnóstwo: japońskie pojęcie „wa" (harmonia, ale też zależne od
-kontekstu unikanie bezpośredniego konfliktu) nie ma czystego odpowiednika w
-żadnym polskim słowie. Niemiecki rzeczownik złożony potrafi upakować znaczenie,
-które po polsku wymaga całego wyrażenia. Terminologia techniczna w jednej
-dziedzinie może mieć inne konotacje w tłumaczeniu na inny język.
+Przykładów jest mnóstwo: japońskie pojęcie takie jak „wa" nie ma czystego
+odpowiednika w żadnym angielskim słowie. Niemiecki rzeczownik złożony potrafi
+upakować znaczenie, które po angielsku wymaga całego wyrażenia. Terminologia
+techniczna w jednej dziedzinie może mieć inne konotacje w tłumaczeniu na inny
+język.
 
 Obroną nie jest unikanie tłumaczenia, lecz uznanie jego ograniczeń.
 [Współnaukowiec](./coscientist) musi śledzić, kiedy [twierdzenie](./claim)

@@ -1,12 +1,12 @@
 ---
 title: Ensiklopedia Galactica
-description: Sebuah konsep untuk melestarikan pengetahuan melintasi zaman kegelapan
+description: Sebuah konsep untuk melestarikan pengetahuan melintasi zaman-zaman kegelapan
 sourceLocale: en
-sourceHash: 94e03a945895
+sourceHash: 5417fe6b3bb4
 translatedAt: 2026-01-14
 ---
 
-Ensiklopedia Galactica adalah perangkat fiksi dalam seri Foundation karya
+Ensiklopedia Galactica adalah perangkat fiksi dalam seri [Fiksi Foundation](./foundation-fiction) karya
 [Isaac Asimov](./isaac-asimov): sebuah repositori raksasa yang dimaksudkan untuk
 melestarikan pengetahuan manusia menjelang runtuhnya peradaban. Ini adalah trope
 [bahtera pengetahuan](./knowledge-ark) yang diwujudkan sebagai sebuah institusi.
@@ -25,7 +25,7 @@ ke kapabilitas: pelestarian itu penting, tetapi sebuah ensiklopedia yang tidak
 dapat menjaga provenans, menampilkan kontradiksi, dan memperbarui lewat
 sanggahan pada akhirnya akan kolaps. Ensiklopedia fiksi itu menjadi target
 desain bagi alat nyata yang dapat bertahan dalam lingkungan epistemik yang jenuh
-AI.
+AI, menggeser [Dari Pelestarian ke Kapabilitas](./from-preservation-to-capability).
 
 Sebuah ensiklopedia yang layak bagi galaksi niscaya mengintegrasikan pengetahuan
 [melintasi Sprachraum](./across-the-sprachraums): melintasi budaya, bahasa, dan

@@ -1,8 +1,8 @@
 ---
 title: Psicostoria
-description: Una scienza statistica fittizia nella saga della Fondazione di Asimov
+description: Una scienza statistica fittizia nella Fondazione di Asimov
 sourceLocale: en
-sourceHash: ddd31577b00d
+sourceHash: 4bcddff1ac41
 translatedAt: 2026-01-14
 ---
 
@@ -13,4 +13,4 @@ singoli individui sono imprevedibili, ma su vasta scala emergono regolarità
 statistiche, rendendo prevedibili le grandi traiettorie sotto ipotesi stabili.
 
 È la base scientifica del [Piano Seldon](./seldon-plan) e della creazione
-dell'[Enciclopedia Galattica](./encyclopedia-galactica).
+dell'[Enciclopedia Galattica](./encyclopedia-galactica), sviluppata da [Hari Seldon](./hari-seldon).

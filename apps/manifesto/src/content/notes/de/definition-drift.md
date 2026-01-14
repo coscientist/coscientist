@@ -1,15 +1,13 @@
 ---
 title: Definitionsdrift
-description:
-  Wenn sich die Bedeutung eines Begriffs über die Zeit oder in unterschiedlichen
-  Kontexten verschiebt
+description: Wenn sich die Bedeutung eines Begriffs über Zeit oder Kontexte hinweg verschiebt
 sourceLocale: en
-sourceHash: 660a481dc105
+sourceHash: 13d640679420
 translatedAt: 2026-01-14
 ---
 
 Definitionsdrift ist die allmähliche Verschiebung der Bedeutung eines Begriffs
-über die Zeit, Schulen oder Fachgebiete hinweg. Er erzeugt falsche
+über die Zeit, Schulen oder Fachgebiete hinweg (siehe auch [Semantische Drift](./semantic-drift) und die umfassenderen [Driftphänomene](./drift-phenomena)). Er erzeugt falsche
 Übereinstimmung und falschen Widerspruch, wenn dasselbe Wort für
 unterschiedliche Konzepte verwendet wird, sodass es so wirkt, als würden
 Menschen über Schlussfolgerungen streiten, obwohl sie tatsächlich aneinander

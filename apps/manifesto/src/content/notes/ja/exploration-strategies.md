@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: b3abf2d73b65
 translatedAt: 2026-01-14
 ---
+
 [コサイエンティスト](./coscientist)
 には検索（retrieval）以上のものが必要です。すなわち、[探索メカニズム](./exploration-mechanisms)
 により、[弁証法グラフ](./dialectical-graph)

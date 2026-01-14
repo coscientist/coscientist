@@ -2,12 +2,14 @@
 title: Taksonomi Status Klaim
 description: Keadaan yang dapat ditempati sebuah klaim di dalam sebuah graf dialektik
 sourceLocale: en
-sourceHash: e713e484c72f
+sourceHash: ece55705e1ef
 translatedAt: 2026-01-14
 ---
 
 Taksonomi status klaim mendefinisikan keadaan yang dapat ditempati sebuah
-[klaim](./claim) dalam sebuah [Graf Dialektik](./dialectical-graph).
+[klaim](./claim) dalam sebuah [Graf Dialektik](./dialectical-graph). Untuk
+bagaimana sebuah klaim biasanya bergerak melalui keadaan-keadaan ini dari waktu
+ke waktu, lihat [Siklus Hidup Klaim](./claim-lifecycle).
 
 ## Keadaan Umum
 
@@ -27,4 +29,5 @@ kompleksitas ini.
 Transisi antar keadaan didorong oleh jenis sanggahan, bukan kuantitasnya. Satu
 [contoh tandingan](./counterexample) yang didukung bukti kuat dapat memindahkan
 klaim dari robust menjadi refuted; banyak keberatan lemah dapat membuatnya tetap
-contested tanpa menghasilkan penyelesaian.
+contested tanpa menghasilkan penyelesaian. Lihat [Aturan Transisi Status](./status-transition-rules) untuk
+logika transisi formal.

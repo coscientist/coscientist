@@ -14,7 +14,7 @@ a [knowledge ark](./knowledge-ark) of information: an
 
 It is built by [Sunghyun Cho](./sunghyun-cho). The origin story is
 straightforward: preservation matters, but preservation alone does not produce
-understanding. Coscientist is designed to make knowledge updatable so
+understanding ([Tokens ≠ Knowledge](./index)). Coscientist is designed to make knowledge updatable so
 contradictions, counterexamples, and [definition drift](./definition-drift)
 become visible and actionable instead of being smoothed away by fluent
 summaries.

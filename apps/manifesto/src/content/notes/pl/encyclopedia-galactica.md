@@ -2,11 +2,11 @@
 title: Encyklopedia Galactica
 description: Koncepcja zachowania wiedzy na czas ciemnych wieków
 sourceLocale: en
-sourceHash: 94e03a945895
+sourceHash: 5417fe6b3bb4
 translatedAt: 2026-01-14
 ---
 
-Encyklopedia Galactica to fikcyjne urządzenie w cyklu Fundacja
+Encyklopedia Galactica to fikcyjne urządzenie w cyklu [fikcji Fundacji](./foundation-fiction)
 [Isaaca Asimova](./isaac-asimov): ogromne repozytorium mające zachować ludzką
 wiedzę przed cywilizacyjnym upadkiem. To trop [arki wiedzy](./knowledge-ark)
 ujęty w formę instytucji.
@@ -24,7 +24,7 @@ do zdolności: zachowanie ma znaczenie, ale encyklopedia, która nie potrafi
 utrzymać proweniencji, ujawniać sprzeczności i aktualizować się poprzez
 obalenia, w końcu się rozpadnie. Fikcyjna encyklopedia staje się celem
 projektowym dla realnego narzędzia, które może przetrwać w nasyconym AI
-środowisku epistemicznym.
+środowisku epistemicznym, przesuwając akcent [Od zachowania do zdolności](./from-preservation-to-capability).
 
 Encyklopedia godna galaktyki musiałaby z konieczności integrować wiedzę
 [ponad Sprachraumami](./across-the-sprachraums): ponad kulturami, językami i

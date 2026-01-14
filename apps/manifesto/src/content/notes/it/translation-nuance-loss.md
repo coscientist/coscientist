@@ -1,16 +1,14 @@
 ---
 title: Perdita di sfumature nella traduzione
-description:
-  Le sottigliezze semantiche che scompaiono quando le idee attraversano i
-  confini linguistici
+description: Le sottigliezze semantiche che scompaiono quando le idee attraversano i confini linguistici
 sourceLocale: en
-sourceHash: aef048dd4f50
+sourceHash: b702bb1401b7
 translatedAt: 2026-01-14
 ---
 
 La perdita di sfumature nella traduzione è l’eliminazione delle sottigliezze
-semantiche quando le idee vengono tradotte da una lingua all’altra. Include la
-perdita di connotazioni, di contesto culturale, di presupposti impliciti e del
+semantiche quando le idee vengono tradotte da una lingua all’altra, riducendo la
+[Fedeltà della traduzione](./translation-fidelity). Include la perdita di connotazioni, di contesto culturale, di presupposti impliciti e del
 "sapore" specifico che rende un’espressione significativa nel suo
 [Sprachraum](./sprachraum) originale.
 
@@ -23,8 +21,7 @@ mascherare errori sottili, proprio come la
 [trappola della fluidità](./fluency-trap) fa sembrare accurata una prosa dell’IA
 levigata anche quando potrebbe non esserlo.
 
-Gli esempi abbondano: un concetto giapponese come "wa" (armonia, ma anche
-un’evitamento del conflitto diretto dipendente dal contesto) non si mappa in
+Gli esempi abbondano: un concetto giapponese come "wa" non si mappa in
 modo pulito su alcuna parola inglese. Un sostantivo composto tedesco concentra
 significato che in inglese richiede un’intera frase. La terminologia tecnica in
 un campo può avere connotazioni diverse nella traduzione in un’altra lingua.

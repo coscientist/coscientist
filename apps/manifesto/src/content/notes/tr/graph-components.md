@@ -1,16 +1,15 @@
 ---
 title: Graf Bileşenleri
-description: Diyalektik bir grafı oluşturan düğüm ve kenar türleri
+description: Bir diyalektik grafı oluşturan düğüm ve kenar türleri
 sourceLocale: en
-sourceHash: eb17714b277c
+sourceHash: 1c3352deea91
 translatedAt: 2026-01-14
 ---
 
-Graf bileşenleri, bir [Diyalektik Grafın](./dialectical-graph) yapı taşlarıdır:
-epistemik nesneleri temsil eden düğüm türleri ve bunlar arasındaki ilişkileri
-temsil eden kenar türleri.
+Graf bileşenleri, bir
+[Diyalektik Grafın](./dialectical-graph) yapı taşlarıdır: epistemik nesneleri temsil eden [Diyalektik Graf Düğümleri](./dialectical-graph-nodes) ve bunlar arasındaki [Tartışmacı İlişkileri](./argumentative-relations) temsil eden [Diyalektik Graf Kenarları](./dialectical-graph-edges).
 
-**Düğüm türleri** (bkz. [Diyalektik Graf Düğümleri](./dialectical-graph-nodes)):
+**Düğüm türleri** ):
 
 - [İddia](./claim) — doğrulanabilir önermeler
 - [Kanıt Alıntısı](./evidence-span) — kaynaklardan birebir alıntılanmış metin
@@ -21,7 +20,7 @@ temsil eden kenar türleri.
 - [Karşı Örnek](./counterexample) — iddiaları bozan durumlar
 - [Sorun Düğümü](./issue-node) — çarpışan iddiaların demetleri
 
-**Kenar türleri** (bkz. [Diyalektik Graf Kenarları](./dialectical-graph-edges)):
+**Kenar türleri** ):
 
 - [Saldırı](./attack) — doğruluğa yönelik doğrudan itirazlar
 - [Altını Oyma](./undercut) — gerekçelere yönelik itirazlar

@@ -2,14 +2,14 @@
 title: Synteza wiedzy
 description: Czym synteza różni się od uśredniania w dialektycznych systemach wiedzy
 sourceLocale: en
-sourceHash: 8035aade2986
+sourceHash: 7d59b577f2e7
 translatedAt: 2026-01-14
 ---
 
 Synteza wiedzy to to, co dzieje się po wyszukaniu , gdy trzeba uczynić
 niekompatybilne źródła porównywalnymi. To nie jest uśrednianie. To dopasowywanie
 przesłanek, definicji i zakresu , tak aby niezgodności stały się jawnymi
-obiektami, a nie szumem.
+obiektami, a nie szumem. Zobacz [Mechanizmy syntezy](./synthesis-mechanisms).
 
 Standardowy [RAG](./rag) jest mocny w wyszukiwaniu i słaby w syntezie, ponieważ
 nie ma wewnętrznego obiektu o nazwie [contention](./contention). W

@@ -1,14 +1,12 @@
 ---
 title: İddia
-description: Diyalektik bir grafikte düğüm olarak saklanan, doğrulanabilir bir önerme
+description: Bir Diyalektik Graf içinde bir düğüm olarak saklanan doğrulanabilir bir önerme
 sourceLocale: en
-sourceHash: 11bb739db24b
+sourceHash: a3b6f4399179
 translatedAt: 2026-01-14
 ---
 
-Bir iddia, metinden çıkarılan ve bir [Diyalektik Graf](./dialectical-graph)
-içinde birinci sınıf bir nesne olarak saklanan doğrulanabilir bir önermedir.
-İddialar ham cümleler değildir; açık [kapsam](./scope),
+Bir iddia, metinden çıkarılan ve bir [Diyalektik Graf](./dialectical-graph) içinde birinci sınıf bir [Diyalektik Graf düğümü](./dialectical-graph-nodes) olarak saklanan doğrulanabilir bir önermedir. (Bkz. [Diyalektik Graf Düğümleri](./dialectical-graph-nodes).) İddialar ham cümleler değildir; açık [kapsam](./scope),
 [varsayımlar](./assumption) ve [yöntem](./method) bağımlılıklarıyla
 normalleştirilmiş ifadelerdir.
 
@@ -18,8 +16,6 @@ daraltan [karşı örnekler](./counterexample), onları zorlayan
 ilişkilendirilebilir. Bu ilişkisel yapı, bilginin değiştirilerek değil, çürütme
 yoluyla güncellenmesini sağlar.
 
-Her iddianın bir durumu vardır (bkz.
-[Diyalektik Graf Düğümleri](./dialectical-graph-nodes)): geçici, ihtilaflı,
-koşullu olarak desteklenen, sağlam, çürütülmüş veya geçersiz olabilir. Durum,
-sayısına göre değil, çürütmenin türüne göre değişir ve destekleyici yapı
-zayıflarsa geriye gidebilir.
+Her iddianın bir durumu vardır: geçici, ihtilaflı, koşullu olarak desteklenen,
+sağlam, çürütülmüş veya kullanım dışı olabilir. Durum, sayısına göre değil,
+çürütmenin türüne göre değişir ve destekleyici yapı zayıflarsa geriye gidebilir.

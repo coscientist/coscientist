@@ -2,12 +2,12 @@
 title: Relações Argumentativas
 description: Tipos de arestas em um grafo dialético organizados por função
 sourceLocale: en
-sourceHash: 45592ddcb1d1
+sourceHash: a48d629230dc
 translatedAt: 2026-01-14
 ---
 
 Relações argumentativas são os tipos de arestas em um
-[Grafo Dialético](./dialectical-graph) que codificam como objetos epistêmicos se
+[Grafo Dialético](./dialectical-graph) (veja também [Componentes do Grafo](./graph-components)) que codificam como objetos epistêmicos se
 relacionam entre si. Elas são o que distingue um grafo dialético de um grafo de
 similaridade de tópicos.
 
@@ -30,8 +30,7 @@ similaridade de tópicos.
 - `refines` — restringe ou esclarece uma afirmação
 - `generalizes` / `specializes` — ajustes de escopo
 - `depends_on` — vincula afirmações às suas [pressuposições](./assumption)
-- `defines` — conecta termos às suas definições (acompanhadas ao longo do tempo
-  via [Deriva de Definição](./definition-drift))
+- `defines` — conecta termos às suas definições )
 
 Veja [Arestas do Grafo Dialético](./dialectical-graph-edges) para a
 especificação completa e

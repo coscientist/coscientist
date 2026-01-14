@@ -1,8 +1,8 @@
 ---
 title: Psikosejarah
-description: Sebuah ilmu statistik fiksi dalam seri Foundation karya Asimov
+description: Ilmu statistik fiksi dalam seri Foundation karya Asimov
 sourceLocale: en
-sourceHash: ddd31577b00d
+sourceHash: 4bcddff1ac41
 translatedAt: 2026-01-14
 ---
 
@@ -14,4 +14,4 @@ muncul pada skala besar, sehingga lintasan umum dapat diramalkan berdasarkan
 asumsi yang stabil.
 
 Psikosejarah menjadi dasar ilmiah bagi [Rencana Seldon](./seldon-plan) dan
-penciptaan [Ensiklopedia Galaktika](./encyclopedia-galactica).
+penciptaan [Ensiklopedia Galaktika](./encyclopedia-galactica), yang dikembangkan oleh [Hari Seldon](./hari-seldon).

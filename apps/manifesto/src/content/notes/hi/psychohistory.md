@@ -2,7 +2,7 @@
 title: साइकोहिस्ट्री
 description: असिमोव की फ़ाउंडेशन में एक काल्पनिक सांख्यिकीय विज्ञान
 sourceLocale: en
-sourceHash: ddd31577b00d
+sourceHash: 4bcddff1ac41
 translatedAt: 2026-01-14
 ---
 
@@ -14,4 +14,4 @@ translatedAt: 2026-01-14
 
 यह [सेल्डन योजना](./seldon-plan) और
 [एन्साइक्लोपीडिया गैलेक्टिका](./encyclopedia-galactica) के निर्माण का वैज्ञानिक
-आधार है।
+आधार है, जिसे [हारी सेल्डन](./hari-seldon) ने विकसित किया था।

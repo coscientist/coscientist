@@ -1,14 +1,14 @@
 ---
 title: Componenti del grafo
-description: I tipi di nodi e archi che compongono un grafo dialettico
+description: I tipi di nodo e di arco che compongono un grafo dialettico
 sourceLocale: en
-sourceHash: eb17714b277c
+sourceHash: 1c3352deea91
 translatedAt: 2026-01-14
 ---
 
 I componenti del grafo sono i mattoni di un
-[Grafo Dialettico](./dialectical-graph): i tipi di nodo che rappresentano
-oggetti epistemici e i tipi di arco che rappresentano le relazioni tra di essi.
+[Grafo Dialettico](./dialectical-graph): i [Nodi del Grafo Dialettico](./dialectical-graph-nodes) che rappresentano
+oggetti epistemici e gli [Archi del Grafo Dialettico](./dialectical-graph-edges) che rappresentano le [Relazioni Argomentative](./argumentative-relations) tra di essi.
 
 **Tipi di nodo** ):
 

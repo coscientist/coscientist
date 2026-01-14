@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: b3abf2d73b65
 translatedAt: 2026-01-14
 ---
+
 [پژوهشگر مشترک](./coscientist) به چیزی بیش از بازیابی نیاز دارد: به [سازوکارهای اکتشاف](./exploration-mechanisms)
 نیاز دارد که به‌طور فعال تناقض‌ها، شرایط مرزی، و وابستگی به روش را در
 [گراف دیالکتیکی](./dialectical-graph) آشکار کند.

@@ -1,16 +1,14 @@
 ---
 title: Bewering
-description:
-  Een verifieerbare propositie die als knooppunt in een dialectische grafiek
-  wordt opgeslagen
+description: Een verifieerbare propositie opgeslagen als een node in een dialectische grafiek
 sourceLocale: en
-sourceHash: 11bb739db24b
+sourceHash: a3b6f4399179
 translatedAt: 2026-01-14
 ---
 
 Een bewering is een verifieerbare propositie die uit tekst wordt geëxtraheerd en
-als een eersteklas object wordt opgeslagen in een
-[Dialectische Grafiek](./dialectical-graph). Beweringen zijn geen ruwe zinnen;
+als een eersteklas [Dialectische Grafiek-node](./dialectical-graph-nodes) wordt opgeslagen in een
+[Dialectische Grafiek](./dialectical-graph). (Zie [Dialectische Grafiek-nodes](./dialectical-graph-nodes).) Beweringen zijn geen ruwe zinnen;
 het zijn genormaliseerde uitspraken met expliciete afhankelijkheden van
 [reikwijdte](./scope), [aannames](./assumption) en [methode](./method).
 

@@ -1,8 +1,8 @@
 ---
 title: Coscientist
-description: System intelektualnego towarzysza do wytwarzania wiedzy w epoce post-AI
+description: System intelektualnego towarzysza do produkcji wiedzy w epoce post-AI
 sourceLocale: en
-sourceHash: 9ef4ae7abd93
+sourceHash: 19a7f6d48c09
 translatedAt: 2026-01-14
 ---
 
@@ -16,8 +16,8 @@ Coscientist to usługa open-source inspirowana fikcyjną
 [od-gnicia mózgu](./un-brain-rotting): przywracanie weryfikacji i sprawczości.
 
 Twórcą jest [Sunghyun Cho](./sunghyun-cho). Historia powstania jest prosta:
-zachowanie ma znaczenie, ale samo zachowanie nie wytwarza zrozumienia.
-Coscientist zaprojektowano tak, by wiedza była aktualizowalna, dzięki czemu
+zachowanie ma znaczenie, ale samo zachowanie nie wytwarza zrozumienia
+([Tokeny ≠ Wiedza](./index)). Coscientist zaprojektowano tak, by wiedza była aktualizowalna, dzięki czemu
 sprzeczności, kontrprzykłady oraz [dryf definicji](./definition-drift) stają się
 widoczne i możliwe do przepracowania, zamiast być wygładzane przez płynne
 streszczenia.
@@ -32,8 +32,7 @@ Dlatego Coscientist wykracza poza RAG w stylu Q&A ). Utrzymuje
 [Graf Dialektyczny](./dialectical-graph), który przechowuje
 [akty argumentacyjne](./argumentative-act), a nie surowy tekst dokumentów,
 dzięki czemu każde twierdzenie można powiązać z fragmentami dowodów, źródłami i
-jawnymi relacjami (zob. [Węzły Grafu Dialektycznego](./dialectical-graph-nodes)
-oraz [Krawędzie Grafu Dialektycznego](./dialectical-graph-edges)).
+jawnymi relacjami oraz [Krawędziami Grafu Dialektycznego](./dialectical-graph-edges)).
 
 Eksploracja jest domyślnie antagonistyczna. Strategie takie jak
 [wyszukiwanie najpierw kontrprzykładów](./counterexample-first-search),

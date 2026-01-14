@@ -1,13 +1,14 @@
 ---
 title: Node Graf Dialektis
-description: Jenis-jenis node dalam graf pengetahuan dialektis
+description: Jenis node dalam graf pengetahuan dialektis
 sourceLocale: en
-sourceHash: b451261d8474
+sourceHash: 007206ea7078
 translatedAt: 2026-01-14
 ---
 
 Dalam sebuah [Graf Dialektis](./dialectical-graph), node merepresentasikan objek
-epistemik, bukan teks mentah. Jenis node yang umum mencakup:
+epistemik, bukan teks mentah. Untuk ikhtisar tentang bagaimana bagian-bagian ini
+saling menyatu, lihat [Komponen Graf](./graph-components). Jenis node yang umum mencakup:
 
 - [Klaim](./claim) — proposisi yang dapat diverifikasi
 - [Cakupan](./scope) — kondisi penerapan
@@ -28,4 +29,5 @@ sekadar menumpuk.
 
 Status klaim bersifat multidimensi, bukan satu skor keyakinan ). Transisi lebih
 sedikit didorong oleh jumlah sanggahan dan lebih oleh jenis sanggahan serta
-apakah sanggahan itu berhasil pada level cakupan, asumsi, definisi, atau metode.
+apakah sanggahan itu berhasil pada level cakupan, asumsi, definisi, atau metode;
+lihat [Tepi Graf Dialektis](./dialectical-graph-edges).

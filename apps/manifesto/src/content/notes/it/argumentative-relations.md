@@ -1,22 +1,22 @@
 ---
 title: Relazioni argomentative
-description: Tipi di archi in un grafo dialettico organizzati per funzione
+description: Tipi di arco in un grafo dialettico organizzati per funzione
 sourceLocale: en
-sourceHash: 45592ddcb1d1
+sourceHash: a48d629230dc
 translatedAt: 2026-01-14
 ---
 
 Le relazioni argomentative sono i tipi di arco in un
-[Grafo dialettico](./dialectical-graph) che codificano come gli oggetti
+[Grafo dialettico](./dialectical-graph) (vedi anche [Componenti del grafo](./graph-components)) che codificano come gli oggetti
 epistemici si relazionano tra loro. Sono ciò che distingue un grafo dialettico
-da un grafo di somiglianza tra argomenti.
+da un grafo di somiglianza per tema.
 
 ## Relazioni di contestazione
 
 - [Attacco](./attack) — contestazione diretta della verità di un'affermazione
 - [Confutazione implicita](./undercut) — contestazione del metodo,
   dell’assunzione o della definizione
-- [Controesempio](./counterexample) — un caso che invalida l’affermazione
+- [Controesempio](./counterexample) — un caso che rompe l’affermazione
 - `contradicts` — incompatibilità esplicita
 
 ## Relazioni di supporto

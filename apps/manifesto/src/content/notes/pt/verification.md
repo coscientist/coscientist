@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: 8c91c1527bf6
 translatedAt: 2026-01-14
 ---
+
 Verificação é o processo de checar se uma alegação se sustenta diante de
 evidências, contraevidências e explicações alternativas. Não é aceitação
 passiva: exige esforço, e é esse esforço que distingue conhecimento de crença.

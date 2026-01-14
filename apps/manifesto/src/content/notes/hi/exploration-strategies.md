@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: b3abf2d73b65
 translatedAt: 2026-01-14
 ---
+
 [सह-वैज्ञानिक](./coscientist) को केवल retrieval (पुनर्प्राप्ति) से अधिक चाहिए:
 इसे [अन्वेषण तंत्रों](./exploration-mechanisms) की आवश्यकता है जो [द्वंद्वात्मक ग्राफ](./dialectical-graph) में
 विरोधाभास, सीमा-शर्तें, और पद्धति-निर्भरता को सक्रिय रूप से सतह पर लाए।

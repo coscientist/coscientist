@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: 8c91c1527bf6
 translatedAt: 2026-01-14
 ---
+
 Doğrulama, bir iddianın kanıta, karşı kanıta ve alternatif açıklamalara karşı
 dayanıp dayanmadığını kontrol etme sürecidir. Pasif bir kabulleniş değildir:
 çaba gerektirir ve bu çaba, bilgiyi inançtan ayıran şeydir.

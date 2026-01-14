@@ -1,8 +1,8 @@
 ---
 title: Monoliet als interface-metafoor
-description: Hoe de Monoliet de schuivende-paneelnavigatie vormgeeft
+description: Hoe de Monoliet navigatie met schuivende panelen vormgeeft
 sourceLocale: en
-sourceHash: 555ec31ef810
+sourceHash: 406d93dbb744
 translatedAt: 2026-01-14
 ---
 
@@ -12,7 +12,7 @@ panelen vertaalt dit naar functioneel ontwerp.
 
 ## Proporties en ruimte
 
-De 1:4:9-verhouding van de Monoliet (kwadraten van 1, 2, 3) komt overal in de interface terug:
+De 1:4:9-verhouding van de Monoliet komt overal in de interface terug:
 
 - Verhoudingen van paneelbreedtes wanneer gestapeld
 - Verticaal ritme in typografie

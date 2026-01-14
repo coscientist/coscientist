@@ -1,8 +1,8 @@
 ---
 title: 심리역사학
-description: 아시모프의 ‘파운데이션’에 등장하는 가상의 통계 과학
+description: 아시모프의 파운데이션에 등장하는 가상의 통계적 과학
 sourceLocale: en
-sourceHash: ddd31577b00d
+sourceHash: 4bcddff1ac41
 translatedAt: 2026-01-14
 ---
 
@@ -12,4 +12,4 @@ translatedAt: 2026-01-14
 가정하에서 큰 흐름을 예측할 수 있다는 것이다.
 
 이는 [셀던 계획](./seldon-plan)과 [은하대백과](./encyclopedia-galactica) 제작을
-가능하게 하는 과학적 기반이다.
+가능하게 하는 과학적 기반으로, [해리 셀던](./hari-seldon)이 개발했다.

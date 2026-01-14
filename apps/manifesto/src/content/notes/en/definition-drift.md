@@ -4,7 +4,7 @@ description: When a term's meaning shifts across time or contexts
 ---
 
 Definition drift is the gradual shift in meaning of a term across time, schools,
-or fields. It creates false agreement and false contradiction when the same word
+or fields (see also [Semantic Drift](./semantic-drift) and broader [Drift Phenomena](./drift-phenomena)). It creates false agreement and false contradiction when the same word
 is used for different concepts, causing people to appear to argue about
 conclusions when they are actually talking past one another.
 

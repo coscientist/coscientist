@@ -2,13 +2,13 @@
 title: Komponen Graf
 description: Jenis node dan edge yang membentuk sebuah graf dialektik
 sourceLocale: en
-sourceHash: eb17714b277c
+sourceHash: 1c3352deea91
 translatedAt: 2026-01-14
 ---
 
 Komponen graf adalah blok penyusun dari sebuah
-[Graf Dialektik](./dialectical-graph): jenis node yang merepresentasikan objek
-epistemik dan jenis edge yang merepresentasikan relasi di antara mereka.
+[Graf Dialektik](./dialectical-graph): [Node Graf Dialektik](./dialectical-graph-nodes) yang merepresentasikan objek
+epistemik dan [Edge Graf Dialektik](./dialectical-graph-edges) yang merepresentasikan [Relasi Argumentatif](./argumentative-relations) di antara mereka.
 
 **Jenis node** ):
 

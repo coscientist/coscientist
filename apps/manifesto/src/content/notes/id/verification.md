@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: 8c91c1527bf6
 translatedAt: 2026-01-14
 ---
+
 Verifikasi adalah proses memeriksa apakah sebuah klaim bertahan ketika
 dihadapkan pada bukti, bukti tandingan, dan penjelasan alternatif. Ini bukan
 penerimaan pasif: verifikasi menuntut upaya, dan upaya itulah yang membedakan

@@ -2,9 +2,9 @@
 title: Grafo dialettico
 description:
   Un modello di grafo della conoscenza che memorizza affermazioni e relazioni
-  invece del contenuto dei documenti
+  anziché il contenuto dei documenti
 sourceLocale: en
-sourceHash: cd2021478e98
+sourceHash: 7de42f075323
 translatedAt: 2026-01-14
 ---
 
@@ -12,7 +12,9 @@ Un grafo dialettico è un grafo della conoscenza che memorizza la struttura
 argomentativa invece di trattare i documenti come testo indifferenziato.
 L’intuizione centrale è semplice: non scambiare il testo per conoscenza. Il
 testo è confezione; la conoscenza è la struttura di vincoli che permette alle
-affermazioni di supportarsi, attaccarsi e raffinarsi a vicenda.
+affermazioni di supportarsi, attaccarsi e raffinarsi a vicenda. Per contesto su
+come questo approccio evolva oltre i sistemi centrati sui documenti, vedi
+[Da Memex al grafo dialettico](./from-memex-to-dialectical-graph).
 
 [Coscienziato](./coscientist) impone una tripla separazione: il testo originale
 viene preservato come estratti di evidenza citabili; le affermazioni vengono
@@ -31,9 +33,12 @@ frase è solo una frase, non conoscenza.
 
 Per fungere da freno al [Collasso dell’enciclopedia](./encyclopedia-meltdown),
 il sistema dà priorità a contraddizioni e controesempi piuttosto che al
-consenso. Quando un’affermazione entra nel grafo, l’atteggiamento predefinito è
-avversariale: cercare presto attacchi e confutazioni così che la struttura si
-aggiorni tramite confutazione invece di derivare per ripetizione. Per tipi
-concreti di nodi e relazioni, vedi
+consenso (vedi
+[Il grafo come difesa dal collasso](./graph-as-meltdown-defense)). Quando
+un’affermazione entra nel grafo, l’atteggiamento predefinito è avversariale:
+cercare presto attacchi e indebolimenti così che la struttura si aggiorni
+tramite confutazione invece di derivare per ripetizione. Per tipi concreti di
+nodi e relazioni, vedi
 [Nodi del grafo dialettico](./dialectical-graph-nodes) e
-[Archi del grafo dialettico](./dialectical-graph-edges).
+[Archi del grafo dialettico](./dialectical-graph-edges), oltre a
+[Componenti del grafo](./graph-components).

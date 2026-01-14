@@ -1,18 +1,18 @@
 ---
 title: Monolit jako metafora interfejsu
-description: Jak Monolit inspiruje nawigację w układzie przesuwnych paneli
+description: Jak Monolit informuje nawigację z przesuwnymi panelami
 sourceLocale: en
-sourceHash: 555ec31ef810
+sourceHash: 406d93dbb744
 translatedAt: 2026-01-14
 ---
 
-[Monolit](./monolith) z _2001: Odysei kosmicznej_ jest czymś więcej niż wizualną
-inspiracją — oferuje model interakcji z wiedzą. Interfejs przesuwnych paneli
+[Monolit](./monolith) z _2001: Odysei kosmicznej_ oferuje coś więcej niż wizualną
+inspirację — daje model interakcji z wiedzą. Interfejs przesuwnych paneli
 przekłada to na funkcjonalny projekt.
 
 ## Proporcje i przestrzeń
 
-Proporcja Monolitu 1:4:9 (kwadraty 1, 2, 3) pojawia się w całym interfejsie:
+Proporcja Monolitu 1:4:9 ojawia się w całym interfejsie:
 
 - Proporcje szerokości paneli, gdy są ułożone warstwowo
 - Pionowy rytm w typografii

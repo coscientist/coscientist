@@ -1,13 +1,13 @@
 ---
 title: Tanım Kayması
-description: Bir terimin anlamının zaman içinde veya bağlamlar arasında değişmesi
+description: Bir terimin anlamının zaman veya bağlamlar boyunca değişmesi
 sourceLocale: en
-sourceHash: 660a481dc105
+sourceHash: 13d640679420
 translatedAt: 2026-01-14
 ---
 
 Tanım kayması, bir terimin anlamının zaman, ekoller veya alanlar boyunca
-kademeli olarak değişmesidir. Aynı kelime farklı kavramlar için kullanıldığında
+kademeli olarak değişmesidir (ayrıca bkz. [Anlamsal Kayma](./semantic-drift) ve daha geniş [Kayma Olguları](./drift-phenomena)). Aynı kelime farklı kavramlar için kullanıldığında
 sahte uzlaşma ve sahte çelişki üretir; bu da insanların aslında birbirlerini
 anlamadan konuşmalarına rağmen sonuçlar hakkında tartışıyormuş gibi
 görünmelerine neden olur.

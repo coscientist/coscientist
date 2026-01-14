@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: 8c91c1527bf6
 translatedAt: 2026-01-14
 ---
+
 Weryfikacja to proces sprawdzania, czy twierdzenie wytrzymuje konfrontację z
 dowodami, kontrdowodami oraz alternatywnymi wyjaśnieniami. Nie jest to bierna
 akceptacja: wymaga wysiłku, a ten wysiłek odróżnia wiedzę od przekonania.

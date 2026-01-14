@@ -1,18 +1,16 @@
 ---
 title: Componentes del grafo
-description: Los tipos de nodos y aristas que conforman un grafo dialéctico
+description: Los tipos de nodos y aristas que componen un grafo dialéctico
 sourceLocale: en
-sourceHash: eb17714b277c
+sourceHash: 1c3352deea91
 translatedAt: 2026-01-14
 ---
 
 Los componentes del grafo son los bloques de construcción de un
-[Grafo dialéctico](./dialectical-graph): los tipos de nodos que representan
-objetos epistémicos y los tipos de aristas que representan relaciones entre
-ellos.
+[Grafo dialéctico](./dialectical-graph): los [Nodos del grafo dialéctico](./dialectical-graph-nodes) que representan
+objetos epistémicos y las [Aristas del grafo dialéctico](./dialectical-graph-edges) que representan [Relaciones argumentativas](./argumentative-relations) entre ellos.
 
-**Tipos de nodos** (ver
-[Nodos del grafo dialéctico](./dialectical-graph-nodes)):
+**Tipos de nodos** ):
 
 - [Afirmación](./claim) — proposiciones verificables
 - [Fragmento de evidencia](./evidence-span) — texto citado exacto de las fuentes
@@ -23,8 +21,7 @@ ellos.
 - [Contraejemplo](./counterexample) — casos que invalidan afirmaciones
 - [Nodo de cuestión](./issue-node) — conjuntos de afirmaciones en colisión
 
-**Tipos de aristas** (ver
-[Aristas del grafo dialéctico](./dialectical-graph-edges)):
+**Tipos de aristas** ):
 
 - [Ataque](./attack) — impugnaciones directas de la verdad
 - [Socavación](./undercut) — impugnaciones de los fundamentos

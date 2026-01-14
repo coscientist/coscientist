@@ -1,15 +1,12 @@
 ---
 title: 論証関係
-description: 機能によって整理された弁証法グラフのエッジ種別
+description: 機能別に整理された弁証法グラフのエッジ種別
 sourceLocale: en
-sourceHash: 45592ddcb1d1
+sourceHash: a48d629230dc
 translatedAt: 2026-01-14
 ---
 
-論証関係（argumentative
-relations）は、[弁証法グラフ](./dialectical-graph)におけるエッジ種別であり、認識論的オブジェクト（epistemic
-objects）が互いにどのように関係するかを符号化します。これは、弁証法グラフをトピック類似性グラフ（topic-similarity
-graph）と区別するものです。
+論証関係は、[弁証法グラフ](./dialectical-graph)（[グラフ構成要素](./graph-components)も参照）におけるエッジ種別であり、認識論的オブジェクト（epistemic objects）が互いにどのように関係するかを符号化します。これは、弁証法グラフをトピック類似性グラフ（topic-similarity graph）と区別するものです。
 
 ## 反駁（チャレンジ）関係
 
@@ -29,7 +26,6 @@ graph）と区別するものです。
 - `refines` — 主張を狭める、または明確化する
 - `generalizes` / `specializes` — 適用範囲の調整
 - `depends_on` — 主張をその[前提](./assumption)へ結びつける
-- `defines`
-  — 用語をその定義へ接続する（[定義ドリフト](./definition-drift)を通じて経時的に追跡）
+- `defines` — 用語をその定義へ接続する
 
 完全な仕様については[弁証法グラフのエッジ](./dialectical-graph-edges)を、また型付きエッジがなぜ重要かについては[関係タイピング vs 類似性](./relation-typing-vs-similarity)を参照してください。

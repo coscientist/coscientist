@@ -1,12 +1,12 @@
 ---
-title: Khối Monolith như một ẩn dụ giao diện
-description: Cách Monolith gợi mở điều hướng dạng khung trượt
+title: Monolith như một Ẩn dụ Giao diện
+description: Cách Monolith định hình điều hướng khung trượt
 sourceLocale: en
-sourceHash: 555ec31ef810
+sourceHash: 406d93dbb744
 translatedAt: 2026-01-14
 ---
 
-[Monolith](./monolith) từ _2001: A Space Odyssey_ không chỉ mang lại cảm hứng thị giác—nó còn đưa ra một mô hình cho cách con người tương tác với tri thức. Giao diện khung trượt (sliding pane) chuyển hóa điều đó thành thiết kế có chức năng.
+[Monolith](./monolith) từ _2001: A Space Odyssey_ không chỉ mang lại cảm hứng thị giác—nó còn đưa ra một mô hình cho cách con người tương tác với tri thức. Giao diện khung trượt chuyển hóa điều đó thành thiết kế có chức năng.
 
 ## Tỷ lệ và không gian
 
@@ -32,7 +32,7 @@ Khi không gian không đủ, các khung thu gọn thành những “gáy” d�
 
 ## Chiều sâu qua độ mờ
 
-Logo [Monolith](./monolith) dùng ba thanh ở mức độ mờ (opacity) 100%, 50% và 20%. Điều đó gợi cảm giác chiều sâu—các Monolith lùi dần vào xa. Giao diện cũng dùng các mức độ mờ tương tự để biểu thị điểm tập trung và mức độ liên quan.
+Logo [Monolith](./monolith) dùng ba thanh ở mức độ mờ 100%, 50% và 20%. Điều đó gợi cảm giác chiều sâu—các Monolith lùi dần vào xa. Giao diện cũng dùng các mức độ mờ tương tự để biểu thị điểm tập trung và mức độ liên quan.
 
 ## Liên quan
 

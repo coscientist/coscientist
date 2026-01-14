@@ -1,13 +1,13 @@
 ---
-title: Các Quan hệ Lập luận
-description: Các loại cạnh trong một Đồ thị Biện chứng được tổ chức theo chức năng
+title: Quan hệ lập luận
+description: Các loại cạnh trong một đồ thị biện chứng được tổ chức theo chức năng
 sourceLocale: en
-sourceHash: 45592ddcb1d1
+sourceHash: a48d629230dc
 translatedAt: 2026-01-14
 ---
 
 Các quan hệ lập luận là các loại cạnh trong một
-[Đồ thị Biện chứng](./dialectical-graph) mã hóa cách các đối tượng tri thức liên
+[Đồ thị Biện chứng](./dialectical-graph) (xem thêm [Các Thành phần của Đồ thị](./graph-components)) mã hóa cách các đối tượng tri thức liên
 hệ với nhau. Chúng là yếu tố phân biệt một đồ thị biện chứng với một đồ thị
 tương đồng theo chủ đề.
 
@@ -29,8 +29,7 @@ tương đồng theo chủ đề.
 - `refines` — thu hẹp hoặc làm rõ một mệnh đề
 - `generalizes` / `specializes` — điều chỉnh phạm vi
 - `depends_on` — liên kết các mệnh đề với các [giả định](./assumption) của chúng
-- `defines` — kết nối các thuật ngữ với định nghĩa của chúng (được theo dõi theo
-  thời gian qua [Độ trôi Định nghĩa](./definition-drift))
+- `defines` — kết nối các thuật ngữ với định nghĩa của chúng )
 
 Xem [Các Cạnh của Đồ thị Biện chứng](./dialectical-graph-edges) để biết đặc tả
 đầy đủ và [Phân loại Quan hệ so với Tương đồng](./relation-typing-vs-similarity)

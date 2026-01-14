@@ -304,13 +304,13 @@ Content here. Link with [Display Text](./other-slug).
 
 ### Scripts
 
-| Command | Purpose |
-| ------- | ------- |
-| `bun run scripts/translate.ts markdown` | Translate new/changed notes |
-| `bun run scripts/translate.ts backfill` | Add hashes without re-translating |
-| `bun run scripts/generate-embeddings.ts` | Regenerate embeddings |
-| `bun run scripts/suggest-mentions.ts` | Find link suggestions |
-| `bun run scripts/inject-mentions.ts --apply` | Apply high-confidence links |
+| Command                                      | Purpose                           |
+| -------------------------------------------- | --------------------------------- |
+| `bun run scripts/translate.ts markdown`      | Translate new/changed notes       |
+| `bun run scripts/translate.ts backfill`      | Add hashes without re-translating |
+| `bun run scripts/generate-embeddings.ts`     | Regenerate embeddings             |
+| `bun run scripts/suggest-mentions.ts`        | Find link suggestions             |
+| `bun run scripts/inject-mentions.ts --apply` | Apply high-confidence links       |
 
 ### Workflow
 

@@ -2,14 +2,15 @@
 title: Sintesis Pengetahuan
 description: Bagaimana sintesis berbeda dari perataan dalam sistem pengetahuan dialektis
 sourceLocale: en
-sourceHash: 8035aade2986
+sourceHash: 7d59b577f2e7
 translatedAt: 2026-01-14
 ---
 
 Sintesis pengetahuan adalah apa yang terjadi setelah retrieval ketika Anda harus
 membuat sumber-sumber yang tidak kompatibel menjadi dapat dibandingkan. Ini
 bukan perataan . Ini adalah penyelarasan premis, definisi, dan cakupan sehingga
-ketidaksepakatan menjadi objek yang eksplisit, bukan sekadar noise.
+ketidaksepakatan menjadi objek yang eksplisit, bukan sekadar noise. Lihat
+[Mekanisme Sintesis](./synthesis-mechanisms).
 
 [RAG](./rag) standar kuat dalam retrieval dan lemah dalam sintesis karena ia
 tidak memiliki objek internal bernama [kontestasi](./contention). Dalam sebuah

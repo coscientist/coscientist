@@ -2,7 +2,7 @@
 title: Coscientist
 description: Sistem pendamping intelektual untuk produksi pengetahuan di era pasca-AI
 sourceLocale: en
-sourceHash: 9ef4ae7abd93
+sourceHash: 19a7f6d48c09
 translatedAt: 2026-01-14
 ---
 
@@ -17,7 +17,7 @@ manusia. Di era pasca-AI, tujuannya adalah mendukung
 
 Sistem ini dibangun oleh [Sunghyun Cho](./sunghyun-cho). Kisah asalnya
 sederhana: pelestarian itu penting, tetapi pelestarian saja tidak menghasilkan
-pemahaman. Coscientist dirancang untuk membuat pengetahuan dapat diperbarui
+pemahaman ([Token ≠ Pengetahuan](./index)). Coscientist dirancang untuk membuat pengetahuan dapat diperbarui
 sehingga kontradiksi, contoh tandingan, dan
 [pergeseran definisi](./definition-drift) menjadi terlihat dan dapat
 ditindaklanjuti, alih-alih dihaluskan oleh ringkasan yang fasih.

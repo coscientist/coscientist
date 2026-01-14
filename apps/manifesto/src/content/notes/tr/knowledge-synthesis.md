@@ -1,15 +1,15 @@
 ---
 title: Bilgi Sentezi
-description: Diyalektik bilgi sistemlerinde sentezin ortalamadan nasıl farklılaştığı
+description: Diyalektik bilgi sistemlerinde sentezin ortalama almadan nasıl farklılaştığı
 sourceLocale: en
-sourceHash: 8035aade2986
+sourceHash: 7d59b577f2e7
 translatedAt: 2026-01-14
 ---
 
 Bilgi sentezi, erişimden sonra, birbirine uyumsuz kaynakları karşılaştırılabilir
 hâle getirmeniz gerektiğinde gerçekleşen şeydir. Ortalama alma değildir.
 Anlaşmazlıkların gürültü yerine açık nesneler hâline gelmesi için öncülleri,
-tanımları ve kapsamı hizalamaktır.
+tanımları ve kapsamı hizalamaktır. Bkz. [Sentez Mekanizmaları](./synthesis-mechanisms).
 
 Standart [RAG](./rag) erişimde güçlü, sentezde zayıftır; çünkü içinde
 [ihtilaf](./contention) diye bir iç nesne yoktur. Bir

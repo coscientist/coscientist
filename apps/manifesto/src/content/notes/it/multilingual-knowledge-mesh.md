@@ -1,10 +1,8 @@
 ---
 title: Mesh di conoscenza multilingue
-description:
-  Una rete di conoscenza che attraversa le lingue e si distribuisce a livello
-  globale
+description: Una rete di conoscenza che attraversa le lingue e si distribuisce globalmente
 sourceLocale: en
-sourceHash: d0cefb393fe3
+sourceHash: 6015daf06d5c
 translatedAt: 2026-01-14
 ---
 
@@ -12,7 +10,8 @@ Una mesh di conoscenza multilingue è una rete di conoscenza in cui contenuti in
 qualsiasi lingua possono connettersi a contenuti in qualsiasi altra lingua
 tramite concetti condivisi, anziché tramite la corrispondenza di parole. È una
 delle espressioni della visione di [Sunghyun Cho](./sunghyun-cho) di andare
-[attraverso gli Sprachraums](./across-the-sprachraums).
+[attraverso gli Sprachraums](./across-the-sprachraums), e un passo verso un
+[Memex multilingue](./multilingual-memex).
 
 Questo va oltre la semplice traduzione. In una vera mesh multilingue, una nota
 scritta in coreano su un concetto si collega a una nota in inglese sullo stesso

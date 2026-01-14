@@ -4,7 +4,7 @@ description: The semantic subtleties that disappear when ideas cross language bo
 ---
 
 Translation nuance loss is the stripping away of semantic subtleties when ideas
-are translated from one language to another. It includes loss of connotation,
+are translated from one language to another, reducing [Translation Fidelity](./translation-fidelity). It includes loss of connotation,
 cultural context, implicit assumptions, and the specific flavor that makes an
 expression meaningful in its original [Sprachraum](./sprachraum).
 

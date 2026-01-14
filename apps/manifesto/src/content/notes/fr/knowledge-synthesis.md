@@ -1,10 +1,8 @@
 ---
 title: Synthèse des connaissances
-description:
-  Comment la synthèse diffère de la moyenne dans les systèmes de connaissance
-  dialectiques
+description: En quoi la synthèse diffère d’une moyenne dans les systèmes de connaissance dialectiques
 sourceLocale: en
-sourceHash: 8035aade2986
+sourceHash: 7d59b577f2e7
 translatedAt: 2026-01-14
 ---
 
@@ -12,6 +10,7 @@ La synthèse des connaissances est ce qui se produit après la récupération,
 lorsque vous devez rendre comparables des sources incompatibles. Ce n’est pas
 une moyenne. C’est l’alignement des prémisses, des définitions et de la portée,
 afin que les désaccords deviennent des objets explicites plutôt que du bruit.
+Voir [Mécanismes de synthèse](./synthesis-mechanisms).
 
 Le [RAG](./rag) standard est performant pour la récupération et faible pour la
 synthèse, parce qu’il n’a pas d’objet interne appelé [contention](./contention).

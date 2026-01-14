@@ -1,15 +1,15 @@
 ---
 title: 유창성 함정
-description: 매끄러운 AI 문장을 정확성으로 착각하기
+description: 매끄러운 AI 산문을 정확성으로 오해하기
 sourceLocale: en
-sourceHash: d8010bfe6bcb
+sourceHash: dde3d8c7519c
 translatedAt: 2026-01-14
 ---
 
 유창성 함정은 매끄럽고 자신감 있게 들리는 문장을 정확한 것으로 취급하는 인지
 편향이다. [대규모 언어 모델](./llm)은 그럴듯한 다음 토큰을 최적화하기 때문에,
 출력은 종종 틀렸더라도 읽기 좋게 느껴진다. 유창성은 근거 검증이라는 기반 없이도
-전문성의 겉모습을 흉내 낸다.
+전문성의 겉모습을 흉내 내며, [AI로 유발된 유능함의 환상](./ai-induced-illusions-of-competence)을 부추긴다.
 
 이 함정은 [백과사전 멜트다운](./encyclopedia-meltdown)의 핵심 메커니즘이다.
 사용자가 AI 출력이 "그럴듯하게 들린다"는 이유로 받아들이면, 오류가 마찰 없이

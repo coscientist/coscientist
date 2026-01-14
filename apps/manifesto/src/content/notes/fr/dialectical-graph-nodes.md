@@ -1,20 +1,20 @@
 ---
-title: Nœuds de graphe dialectique
-description: Les types de nœuds dans un graphe de connaissances dialectique
+title: Nœuds du graphe dialectique
+description: Les types de nœuds dans un graphe de connaissance dialectique
 sourceLocale: en
-sourceHash: b451261d8474
+sourceHash: 007206ea7078
 translatedAt: 2026-01-14
 ---
 
 Dans un [Graphe dialectique](./dialectical-graph), les nœuds représentent des
-objets épistémiques plutôt que du texte brut. Les types de nœuds courants
-incluent :
+objets épistémiques plutôt que du texte brut. Pour un aperçu de la manière dont
+ces éléments s’articulent, voir [Composants du graphe](./graph-components). Les
+types de nœuds courants incluent :
 
 - [Assertion](./claim) — propositions vérifiables
 - [Portée](./scope) — conditions d’applicabilité
 - [Hypothèse](./assumption) — prémisses implicites
-- Définitions — sens des termes (suivi au fil du temps via la
-  [Dérive des définitions](./definition-drift))
+- Définitions — sens des termes )
 - [Méthode](./method) — procédures qui produisent des preuves ou des conclusions
 - Données — mesures ou résultats
 - [Extrait de preuve](./evidence-span) — plages citées exactement
@@ -33,4 +33,4 @@ jour plutôt que de simplement s’accumuler.
 Le statut d’une assertion est multidimensionnel plutôt qu’un simple score de
 confiance ). Les transitions sont moins déterminées par le nombre de réfutations
 que par le type de réfutation et par le fait qu’elle réussisse au niveau de la
-portée, de l’hypothèse, de la définition ou de la méthode.
+portée, de l’hypothèse, de la définition ou de la méthode ; voir [Arêtes du graphe dialectique](./dialectical-graph-edges).

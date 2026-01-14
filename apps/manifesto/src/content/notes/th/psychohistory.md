@@ -1,8 +1,8 @@
 ---
 title: ไซโคฮิสทอรี
-description: วิทยาศาสตร์สถิติสมมติในชุดเรื่อง Foundation ของอาซิมอฟ
+description: วิทยาศาสตร์เชิงสถิติสมมติในชุดเรื่อง Foundation ของอาซิมอฟ
 sourceLocale: en
-sourceHash: ddd31577b00d
+sourceHash: 4bcddff1ac41
 translatedAt: 2026-01-14
 ---
 
@@ -14,4 +14,4 @@ translatedAt: 2026-01-14
 ทำให้สามารถพยากรณ์ทิศทางโดยรวมได้ภายใต้สมมติฐานที่คงที่
 
 มันเป็นรากฐานทางวิทยาศาสตร์ของ [แผนเซลดอน](./seldon-plan) และการจัดทำ
-[สารานุกรมกาแลกติกา](./encyclopedia-galactica)
+[สารานุกรมกาแลกติกา](./encyclopedia-galactica) ซึ่งพัฒนาโดย [ฮาริ เซลดอน](./hari-seldon)

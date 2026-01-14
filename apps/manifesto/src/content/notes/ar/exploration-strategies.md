@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: b3abf2d73b65
 translatedAt: 2026-01-14
 ---
+
 يحتاج [العالِم المشارك](./coscientist) إلى ما هو أكثر من الاسترجاع: فهو يحتاج
 إلى [آليات الاستكشاف](./exploration-mechanisms) التي تكشف بنشاط عن التناقضات، والشروط الحدّية، واعتماد النتائج على المنهج
 داخل [الرسم البياني الجدلي](./dialectical-graph).

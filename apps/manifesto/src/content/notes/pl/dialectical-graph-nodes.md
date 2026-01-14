@@ -2,18 +2,18 @@
 title: Węzły grafu dialektycznego
 description: Typy węzłów w dialektycznym grafie wiedzy
 sourceLocale: en
-sourceHash: b451261d8474
+sourceHash: 007206ea7078
 translatedAt: 2026-01-14
 ---
 
 W [Grafie dialektycznym](./dialectical-graph) węzły reprezentują obiekty
-epistemiczne, a nie surowy tekst. Typowe typy węzłów obejmują:
+epistemiczne, a nie surowy tekst. Aby zobaczyć, jak te elementy pasują do siebie,
+zob. [Komponenty grafu](./graph-components). Typowe typy węzłów obejmują:
 
 - [Teza](./claim) — weryfikowalne propozycje
 - [Zakres](./scope) — warunki stosowalności
 - [Założenie](./assumption) — implicytne przesłanki
-- Definicje — znaczenia terminów (śledzone w czasie poprzez
-  [Dryf definicji](./definition-drift))
+- Definicje — znaczenia terminów )
 - [Metoda](./method) — procedury generujące dowody lub wnioski
 - Dane — pomiary lub wyniki
 - [Zakres dowodu](./evidence-span) — dokładne cytowane fragmenty
@@ -29,6 +29,6 @@ adresowalny, jeśli chcesz, by wiedza się aktualizowała, zamiast jedynie się
 kumulować.
 
 Status tezy jest wielowymiarowy, a nie sprowadzony do pojedynczego wyniku
-pewności (zob. [Taksonomia statusów tez](./claim-status-taxonomy)). Przejścia są
-napędzane mniej liczbą obaleń, a bardziej rodzajem obalenia oraz tym, czy jest
-ono skuteczne na poziomie zakresu, założenia, definicji lub metody.
+pewności ). Przejścia są napędzane mniej liczbą obaleń, a bardziej rodzajem
+obalenia oraz tym, czy jest ono skuteczne na poziomie zakresu, założenia,
+definicji lub metody; zob. [Krawędzie grafu dialektycznego](./dialectical-graph-edges).

@@ -2,12 +2,12 @@
 title: Argumentative Relationen
 description: Kantentypen in einem dialektischen Graphen, geordnet nach Funktion
 sourceLocale: en
-sourceHash: 45592ddcb1d1
+sourceHash: a48d629230dc
 translatedAt: 2026-01-14
 ---
 
 Argumentative Relationen sind die Kantentypen in einem
-[Dialektischen Graphen](./dialectical-graph), die kodieren, wie epistemische
+[Dialektischen Graphen](./dialectical-graph) (siehe auch [Graph-Komponenten](./graph-components)), die kodieren, wie epistemische
 Objekte zueinander in Beziehung stehen. Sie sind es, was einen dialektischen
 Graphen von einem Topic-Ähnlichkeits-Graphen unterscheidet.
 
@@ -29,8 +29,7 @@ Graphen von einem Topic-Ähnlichkeits-Graphen unterscheidet.
 - `refines` — grenzt eine Behauptung ein oder präzisiert sie
 - `generalizes` / `specializes` — Anpassungen des Geltungsbereichs
 - `depends_on` — verknüpft Behauptungen mit ihren [Annahmen](./assumption)
-- `defines` — verbindet Begriffe mit ihren Definitionen (über die Zeit
-  nachverfolgt via [Definition Drift](./definition-drift))
+- `defines` — verbindet Begriffe mit ihren Definitionen )
 
 Siehe [Kanten im Dialektischen Graphen](./dialectical-graph-edges) für die
 vollständige Spezifikation und

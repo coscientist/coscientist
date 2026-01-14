@@ -2,12 +2,12 @@
 title: Relacje argumentacyjne
 description: Typy krawędzi w grafie dialektycznym uporządkowane według funkcji
 sourceLocale: en
-sourceHash: 45592ddcb1d1
+sourceHash: a48d629230dc
 translatedAt: 2026-01-14
 ---
 
 Relacje argumentacyjne to typy krawędzi w
-[Grafie dialektycznym](./dialectical-graph), które kodują, w jaki sposób obiekty
+[Grafie dialektycznym](./dialectical-graph) (zob. też [Komponenty grafu](./graph-components)), które kodują, w jaki sposób obiekty
 epistemiczne odnoszą się do siebie nawzajem. To one odróżniają graf dialektyczny
 od grafu podobieństwa tematów.
 
@@ -29,8 +29,7 @@ od grafu podobieństwa tematów.
 - `refines` — zawęża lub doprecyzowuje tezę
 - `generalizes` / `specializes` — korekty zakresu
 - `depends_on` — wiąże tezy z ich [założeniami](./assumption)
-- `defines` — łączy terminy z ich definicjami (śledzone w czasie poprzez
-  [Dryf definicji](./definition-drift))
+- `defines` — łączy terminy z ich definicjami )
 
 Zobacz [Krawędzie grafu dialektycznego](./dialectical-graph-edges), aby poznać
 pełną specyfikację, oraz

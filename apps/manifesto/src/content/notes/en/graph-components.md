@@ -4,8 +4,8 @@ description: The node and edge types that make up a dialectical graph
 ---
 
 Graph components are the building blocks of a
-[Dialectical Graph](./dialectical-graph): the node types that represent
-epistemic objects and the edge types that represent relations between them.
+[Dialectical Graph](./dialectical-graph): the [Dialectical Graph Nodes](./dialectical-graph-nodes) that represent
+epistemic objects and the [Dialectical Graph Edges](./dialectical-graph-edges) that represent [Argumentative Relations](./argumentative-relations) between them.
 
 **Node types** ):
 

@@ -1,10 +1,8 @@
 ---
 title: Maillage de connaissances multilingue
-description:
-  Un réseau de connaissances qui traverse les langues et se distribue à
-  l’échelle mondiale
+description: Un réseau de connaissances qui s’étend sur les langues et se distribue à l’échelle mondiale
 sourceLocale: en
-sourceHash: d0cefb393fe3
+sourceHash: 6015daf06d5c
 translatedAt: 2026-01-14
 ---
 
@@ -13,7 +11,8 @@ lequel du contenu, quelle que soit la langue, peut se connecter à du contenu
 dans n’importe quelle autre langue via des concepts partagés plutôt que par
 simple correspondance de mots. C’est une expression de la vision de
 [Sunghyun Cho](./sunghyun-cho) consistant à aller
-[à travers les Sprachraums](./across-the-sprachraums).
+[à travers les Sprachraums](./across-the-sprachraums), et un pas vers un
+[Memex multilingue](./multilingual-memex).
 
 Cela va au-delà d’une simple traduction. Dans un véritable maillage multilingue,
 une note rédigée en coréen sur un concept renvoie à une note en anglais sur ce

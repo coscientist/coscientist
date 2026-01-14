@@ -1,8 +1,8 @@
 ---
 title: روان‌تاریخ
-description: یک علم آماری خیالی در مجموعه «بنیاد» آسیموف
+description: یک علم آماریِ خیالی در مجموعهٔ «بنیاد» آسیموف
 sourceLocale: en
-sourceHash: ddd31577b00d
+sourceHash: 4bcddff1ac41
 translatedAt: 2026-01-14
 ---
 
@@ -13,4 +13,4 @@ translatedAt: 2026-01-14
 پیش‌بینی می‌گردند.
 
 این، پایهٔ علمیِ [طرح سلدون](./seldon-plan) و شکل‌گیریِ
-[دانشنامهٔ کهکشانی](./encyclopedia-galactica) است.
+[دانشنامهٔ کهکشانی](./encyclopedia-galactica) است که توسط [هری سلدون](./hari-seldon) توسعه یافت.

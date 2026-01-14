@@ -1,8 +1,8 @@
 ---
 title: Tâm sử học
-description: Một khoa học thống kê hư cấu trong loạt Foundation của Asimov
+description: Một ngành khoa học thống kê hư cấu trong loạt Foundation của Asimov
 sourceLocale: en
-sourceHash: ddd31577b00d
+sourceHash: 4bcddff1ac41
 translatedAt: 2026-01-14
 ---
 
@@ -13,4 +13,4 @@ Tâm sử học là một ngành hư cấu trong loạt Foundation của
 tổng thể có thể dự báo được dưới những giả định ổn định.
 
 Đây là cơ sở khoa học cho [Kế hoạch Seldon](./seldon-plan) và việc tạo ra
-[Bách khoa Toàn thư Thiên Hà](./encyclopedia-galactica).
+[Bách khoa Toàn thư Thiên Hà](./encyclopedia-galactica), do [Hari Seldon](./hari-seldon) phát triển.

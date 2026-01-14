@@ -1,8 +1,8 @@
 ---
 title: Vloeiendheidsval
-description: Vloeiende AI-proza verwarren met nauwkeurigheid
+description: Soepel AI-proza aanzien voor accuraatheid
 sourceLocale: en
-sourceHash: d8010bfe6bcb
+sourceHash: dde3d8c7519c
 translatedAt: 2026-01-14
 ---
 
@@ -10,7 +10,8 @@ De vloeiendheidsval is de cognitieve bias waarbij men soepel, zelfverzekerd
 klinkende proza als accuraat beschouwt. Omdat [Grote taalmodellen](./llm)
 optimaliseren voor plausibele volgende tokens, leest hun output vaak prettig,
 zelfs wanneer die onjuist is. Vloeiendheid bootst de oppervlakkige kenmerken van
-expertise na, zonder de onderliggende verificatie.
+expertise na, zonder de onderliggende verificatie, en voedt
+[AI-geïnduceerde illusies van competentie](./ai-induced-illusions-of-competence).
 
 Deze val is een kernmechanisme in
 [Encyclopedie-ineenstorting](./encyclopedia-meltdown): wanneer gebruikers

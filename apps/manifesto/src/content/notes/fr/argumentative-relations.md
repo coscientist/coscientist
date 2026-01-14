@@ -1,13 +1,13 @@
 ---
 title: Relations argumentatives
-description: Types d’arêtes dans un graphe dialectique organisées par fonction
+description: Types d’arêtes dans un graphe dialectique organisés par fonction
 sourceLocale: en
-sourceHash: 45592ddcb1d1
+sourceHash: a48d629230dc
 translatedAt: 2026-01-14
 ---
 
 Les relations argumentatives sont les types d’arêtes dans un
-[Graphe dialectique](./dialectical-graph) qui encodent la manière dont les
+[Graphe dialectique](./dialectical-graph) (voir aussi [Composants du graphe](./graph-components)) qui encodent la manière dont les
 objets épistémiques se rapportent les uns aux autres. C’est ce qui distingue un
 graphe dialectique d’un graphe de similarité thématique.
 
@@ -30,8 +30,7 @@ graphe dialectique d’un graphe de similarité thématique.
 - `refines` — restreint ou clarifie une affirmation
 - `generalizes` / `specializes` — ajustements de portée
 - `depends_on` — relie des affirmations à leurs [hypothèses](./assumption)
-- `defines` — relie des termes à leurs définitions (suivies dans le temps via la
-  [Dérive des définitions](./definition-drift))
+- `defines` — relie des termes à leurs définitions )
 
 Voir [Arêtes du graphe dialectique](./dialectical-graph-edges) pour la
 spécification complète et

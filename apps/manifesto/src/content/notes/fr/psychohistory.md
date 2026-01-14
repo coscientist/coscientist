@@ -2,7 +2,7 @@
 title: Psychohistoire
 description: Une science statistique fictive dans Fondation d’Asimov
 sourceLocale: en
-sourceHash: ddd31577b00d
+sourceHash: 4bcddff1ac41
 translatedAt: 2026-01-14
 ---
 
@@ -14,4 +14,5 @@ des régularités statistiques émergent à grande échelle, rendant les grandes
 trajectoires prévisibles lorsque les hypothèses restent stables.
 
 Elle constitue la base scientifique du [Plan Seldon](./seldon-plan) et de la
-création de l’[Encyclopédie Galactica](./encyclopedia-galactica).
+création de l’[Encyclopédie Galactica](./encyclopedia-galactica), élaborés par
+[Hari Seldon](./hari-seldon).

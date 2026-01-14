@@ -1,8 +1,8 @@
 ---
 title: Il Monolite come metafora dell’interfaccia
-description: Come il Monolite ispira la navigazione a pannelli scorrevoli
+description: Come il Monolite informa la navigazione a pannelli scorrevoli
 sourceLocale: en
-sourceHash: 555ec31ef810
+sourceHash: 406d93dbb744
 translatedAt: 2026-01-14
 ---
 
@@ -10,7 +10,7 @@ Il [Monolite](./monolith) di _2001: Odissea nello spazio_ offre più di una semp
 
 ## Proporzioni e spazio
 
-Il rapporto 1:4:9 del Monolite (i quadrati di 1, 2, 3) ricorre in tutta l’interfaccia:
+Il rapporto 1:4:9 del Monolite ricorre in tutta l’interfaccia:
 
 - Rapporti di larghezza dei pannelli quando sono impilati
 - Ritmo verticale nella tipografia

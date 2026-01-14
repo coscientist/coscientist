@@ -1,8 +1,8 @@
 ---
-title: El Monolito como metáfora de interfaz
-description: Cómo el Monolito informa la navegación en paneles deslizantes
+title: Monolito como metáfora de interfaz
+description: Cómo el Monolito informa la navegación por paneles deslizantes
 sourceLocale: en
-sourceHash: 555ec31ef810
+sourceHash: 406d93dbb744
 translatedAt: 2026-01-14
 ---
 
@@ -12,7 +12,7 @@ paneles deslizantes traduce esto en un diseño funcional.
 
 ## Proporciones y espacio
 
-La proporción 1:4:9 del Monolito (cuadrados de 1, 2, 3) aparece en toda la interfaz:
+La proporción 1:4:9 del Monolito aparece en toda la interfaz:
 
 - Proporciones del ancho de los paneles cuando se apilan
 - Ritmo vertical en la tipografía

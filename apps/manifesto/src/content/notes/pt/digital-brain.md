@@ -1,8 +1,8 @@
 ---
 title: Cérebro Digital
-description: Um sistema pessoal de conhecimento que espelha e estende uma mente
+description: Um sistema pessoal de conhecimento que espelha e amplia uma mente
 sourceLocale: en
-sourceHash: 6503fc9c630c
+sourceHash: ed0863388357
 translatedAt: 2026-01-14
 ---
 
@@ -10,7 +10,7 @@ Um cérebro digital é um sistema pessoal de conhecimento projetado para captura
 conectar e fazer evoluir ideias ao longo do tempo, atuando como um exoesqueleto
 cognitivo em vez de um arquivo estático. O objetivo é a composição : preservar
 contexto e proveniência para que uma ideia possa ser revisitada, questionada e
-ampliada anos depois.
+ampliada anos depois, muito como um [Segundo Cérebro](./second-brain).
 
 Conceitualmente, ele descende do [Memex](./memex). Na prática, aparece como
 projetos como o [Projeto Aldehyde](./project-aldehyde) e sistemas como o

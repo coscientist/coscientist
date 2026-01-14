@@ -1,8 +1,8 @@
 ---
 title: Psicohistoria
-description: Una ciencia estadística ficticia en la saga Fundación de Asimov
+description: Una ciencia estadística ficticia en la Fundación de Asimov
 sourceLocale: en
-sourceHash: ddd31577b00d
+sourceHash: 4bcddff1ac41
 translatedAt: 2026-01-14
 ---
 
@@ -14,4 +14,4 @@ estadísticas, lo que hace que las grandes trayectorias sean previsibles bajo
 supuestos estables.
 
 Es la base científica del [Plan Seldon](./seldon-plan) y de la creación de la
-[Enciclopedia Galáctica](./encyclopedia-galactica).
+[Enciclopedia Galáctica](./encyclopedia-galactica), desarrollada por [Hari Seldon](./hari-seldon).

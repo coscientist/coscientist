@@ -1,8 +1,8 @@
 ---
 title: Monólito como Metáfora de Interface
-description: Como o Monólito inspira a navegação por painéis deslizantes
+description: Como o Monólito informa a navegação por painéis deslizantes
 sourceLocale: en
-sourceHash: 555ec31ef810
+sourceHash: 406d93dbb744
 translatedAt: 2026-01-14
 ---
 
@@ -12,7 +12,7 @@ deslizantes traduz isso em design funcional.
 
 ## Proporções e Espaço
 
-A proporção 1:4:9 do Monólito (quadrados de 1, 2, 3) aparece por toda a interface:
+A proporção 1:4:9 do Monólito aparece por toda a interface:
 
 - Proporções de largura dos painéis quando empilhados
 - Ritmo vertical na tipografia

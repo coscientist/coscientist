@@ -1,16 +1,15 @@
 ---
 title: Tassonomia dello stato delle affermazioni
-description:
-  Gli stati in cui un’affermazione può trovarsi all’interno di un grafo
-  dialettico
+description: Gli stati in cui un’affermazione può trovarsi all’interno di un grafo dialettico
 sourceLocale: en
-sourceHash: e713e484c72f
+sourceHash: ece55705e1ef
 translatedAt: 2026-01-14
 ---
 
 La tassonomia dello stato delle [affermazioni](./claim) definisce gli stati che
 un’[affermazione](./claim) può occupare in un
-[Grafo Dialettico](./dialectical-graph).
+[Grafo Dialettico](./dialectical-graph). Per come un’affermazione tipicamente si
+muove attraverso questi stati nel tempo, vedi il [Ciclo di vita dell’affermazione](./claim-lifecycle).
 
 ## Stati comuni
 
@@ -30,4 +29,4 @@ Uno stato multidimensionale cattura questa complessità.
 Le transizioni tra gli stati sono guidate dal tipo di confutazione, non dalla
 quantità. Un singolo [controesempio](./counterexample) ben corroborato può
 spostare un’affermazione da robusta a confutata; molte obiezioni deboli possono
-lasciarla contestata senza risoluzione.
+lasciarla contestata senza risoluzione. Vedi le [Regole di transizione dello stato](./status-transition-rules) per la logica formale delle transizioni.

@@ -2,12 +2,12 @@
 title: Enciclopédia Galactica
 description: Um conceito para preservar o conhecimento através de eras sombrias
 sourceLocale: en
-sourceHash: 94e03a945895
+sourceHash: 5417fe6b3bb4
 translatedAt: 2026-01-14
 ---
 
-A Enciclopédia Galactica é um dispositivo fictício na série _Foundation_ de
-[Isaac Asimov](./isaac-asimov): um vasto repositório destinado a preservar o
+A Enciclopédia Galactica é um dispositivo fictício na série de
+[ficção _Foundation_](./foundation-fiction) de [Isaac Asimov](./isaac-asimov): um vasto repositório destinado a preservar o
 conhecimento humano antes de um colapso civilizacional. É o tropo da
 [arca do conhecimento](./knowledge-ark) materializado como uma instituição.
 
@@ -24,7 +24,7 @@ armazenamento para a capacidade: a preservação importa, mas uma enciclopédia 
 não consiga manter a proveniência, trazer contradições à tona e atualizar-se por
 refutação acabará por colapsar. A enciclopédia fictícia torna-se um alvo de
 design para uma ferramenta real que consiga sobreviver num ambiente epistémico
-saturado de IA.
+saturado de IA, mudando [da preservação para a capacidade](./from-preservation-to-capability).
 
 Uma enciclopédia digna da galáxia teria necessariamente de integrar conhecimento
 [através dos Sprachraums](./across-the-sprachraums): através de culturas,

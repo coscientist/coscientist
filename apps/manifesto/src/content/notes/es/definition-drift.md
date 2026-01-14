@@ -1,15 +1,13 @@
 ---
 title: Deriva de definición
-description:
-  Cuando el significado de un término cambia a lo largo del tiempo o según el
-  contexto
+description: Cuando el significado de un término cambia a través del tiempo o contextos
 sourceLocale: en
-sourceHash: 660a481dc105
+sourceHash: 13d640679420
 translatedAt: 2026-01-14
 ---
 
 La deriva de definición es el cambio gradual en el significado de un término a
-lo largo del tiempo, entre escuelas o campos. Genera acuerdos falsos y
+lo largo del tiempo, entre escuelas o campos (véase también [Deriva semántica](./semantic-drift) y los más amplios [Fenómenos de deriva](./drift-phenomena)). Genera acuerdos falsos y
 contradicciones falsas cuando se usa la misma palabra para conceptos distintos,
 haciendo que las personas parezcan discutir sobre conclusiones cuando en
 realidad están hablando en paralelo.

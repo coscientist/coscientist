@@ -1,13 +1,13 @@
 ---
 title: Relasi Argumentatif
-description: Jenis-jenis edge dalam Graf Dialektis yang diorganisasi berdasarkan fungsi
+description: Jenis-jenis edge dalam graf dialektis yang diorganisasikan berdasarkan fungsi
 sourceLocale: en
-sourceHash: 45592ddcb1d1
+sourceHash: a48d629230dc
 translatedAt: 2026-01-14
 ---
 
 Relasi argumentatif adalah jenis-jenis edge dalam
-[Graf Dialektis](./dialectical-graph) yang mengodekan bagaimana objek-objek
+[Graf Dialektis](./dialectical-graph) (lihat juga [Komponen Graf](./graph-components)) yang mengodekan bagaimana objek-objek
 epistemik saling berhubungan. Inilah yang membedakan graf dialektis dari graf
 kemiripan-topik.
 

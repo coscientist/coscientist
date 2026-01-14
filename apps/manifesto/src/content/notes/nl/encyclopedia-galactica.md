@@ -1,13 +1,13 @@
 ---
 title: Encyclopedie Galactica
-description: Een concept om kennis te behouden door donkere eeuwen heen
+description: Een concept voor het bewaren van kennis door donkere eeuwen heen
 sourceLocale: en
-sourceHash: 94e03a945895
+sourceHash: 5417fe6b3bb4
 translatedAt: 2026-01-14
 ---
 
 De Encyclopedie Galactica is een fictief apparaat in
-[Isaac Asimov](./isaac-asimov)'s Foundation-reeks: een enorme opslagplaats
+[Isaac Asimov](./isaac-asimov)'s [Foundation Fiction](./foundation-fiction)-reeks: een enorme opslagplaats
 bedoeld om menselijke kennis te bewaren in aanloop naar een
 beschavingsinstorting. Het is het [kennisark](./knowledge-ark)-trope uitgewerkt
 als een instituut.
@@ -23,10 +23,10 @@ bewaringsinspanning als een strategisch zaad voor wederopbouw.
 
 Voor [Cowetenschapper](./coscientist) is de inspiratie de verschuiving van
 opslag naar bekwaamheid: behoud is belangrijk, maar een encyclopedie die geen
-herkomst , tegenstrijdigheden kan blootleggen en niet kan bijwerken via
-weerlegging, zal uiteindelijk instorten. De fictieve encyclopedie wordt een
+herkomst kan bijhouden, tegenstrijdigheden kan blootleggen en niet kan bijwerken
+via weerlegging, zal uiteindelijk instorten. De fictieve encyclopedie wordt een
 ontwerpdoel voor een echt hulpmiddel dat kan overleven in een door AI verzadigde
-epistemische omgeving.
+epistemische omgeving, verschuivend [Van Bewaring naar Bekwaamheid](./from-preservation-to-capability).
 
 Een encyclopedie die de melkweg waardig is, zou noodzakelijkerwijs kennis
 integreren [over de Sprachraums heen](./across-the-sprachraums): over culturen,

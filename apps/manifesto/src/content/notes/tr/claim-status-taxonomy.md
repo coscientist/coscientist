@@ -1,13 +1,15 @@
 ---
 title: İddia Durumu Taksonomisi
-description: Diyalektik bir graf içinde bir iddianın bulunabileceği durumlar
+description: Bir iddianın bir diyalektik graf içinde bulunabileceği durumlar
 sourceLocale: en
-sourceHash: e713e484c72f
+sourceHash: ece55705e1ef
 translatedAt: 2026-01-14
 ---
 
 İddia durumu taksonomisi, bir [iddianın](./claim) bir
-[Diyalektik Graf](./dialectical-graph) içinde bulunabileceği durumları tanımlar.
+[Diyalektik Graf](./dialectical-graph) içinde bulunabileceği durumları tanımlar. Bir
+iddianın zaman içinde tipik olarak bu durumlar arasında nasıl hareket ettiğini görmek
+için [İddia Yaşam Döngüsü](./claim-lifecycle) sayfasına bakın.
 
 ## Yaygın Durumlar
 
@@ -27,4 +29,5 @@ bu karmaşıklığı yakalar.
 Durumlar arasındaki geçişler, nicelikten ziyade çürütmenin türü tarafından
 belirlenir. Tek bir iyi temellendirilmiş [karşı örnek](./counterexample), bir
 iddiayı sağlamdan çürütülmüşe taşıyabilir; çok sayıda zayıf itiraz ise çözüm
-getirmeden onu tartışmalı durumda bırakabilir.
+getirmeden onu tartışmalı durumda bırakabilir. Biçimsel geçiş mantığı için
+[Durum Geçiş Kuralları](./status-transition-rules) sayfasına bakın.

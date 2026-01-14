@@ -2,7 +2,7 @@
 title: Psychohistorie
 description: Een fictieve statistische wetenschap in Asimovs Foundation
 sourceLocale: en
-sourceHash: ddd31577b00d
+sourceHash: 4bcddff1ac41
 translatedAt: 2026-01-14
 ---
 
@@ -14,4 +14,5 @@ statistische regelmatigheden ontstaan, waardoor brede ontwikkelingen
 voorspelbaar worden onder stabiele aannames.
 
 Het vormt de wetenschappelijke basis voor het [Seldonplan](./seldon-plan) en de
-totstandkoming van de [Encyclopedie Galactica](./encyclopedia-galactica).
+totstandkoming van de [Encyclopedie Galactica](./encyclopedia-galactica),
+ontwikkeld door [Hari Seldon](./hari-seldon).

@@ -1,8 +1,8 @@
 ---
 title: Meertalige Memex
-description: Een taalbewust persoonlijk kennissysteem met automatische vertaalondersteuning
+description: Een taalbewust persoonlijk kennissysteem met ondersteuning voor automatische vertaling
 sourceLocale: en
-sourceHash: 4cbc551868c1
+sourceHash: 7f632fdf73b6
 translatedAt: 2026-01-14
 ---
 
@@ -10,7 +10,7 @@ Een meertalige Memex is een persoonlijk kennissysteem dat van nature inhoud in
 meerdere talen ondersteunt, met automatische taaldetectie, vertaling en
 cross-linguale koppelingen. Het breidt de oorspronkelijke [Memex](./memex)-visie
 van [Vannevar Bush](./vannevar-bush) uit naar een wereld waarin kennis geen
-taalgrenzen respecteert.
+taalgrenzen respecteert, en lijkt sterk op een [Meertalige Knowledge Mesh](./multilingual-knowledge-mesh).
 
 [Sunghyun Cho](./sunghyun-cho)'s [Extracranial](./extracranial) is een
 implementatie van dit concept. Het bevat automatische taaldetectie,
@@ -39,3 +39,7 @@ Voor [Cowetenschapper](./coscientist) wordt de meertalige Memex de meertalige
 [Dialectische graaf](./dialectical-graph): een structuur die [claims](./claim),
 [evidence spans](./evidence-span) en relaties uit elke taal opslaat, waarbij
 taal als metadata wordt behandeld in plaats van als een fundamentele grens.
+
+## Gerelateerd
+
+- [Meertalige Knowledge Mesh](./multilingual-knowledge-mesh)

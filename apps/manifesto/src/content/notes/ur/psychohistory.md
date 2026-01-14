@@ -2,7 +2,7 @@
 title: سائیکو ہسٹری
 description: عاصموف کی فاؤنڈیشن میں ایک افسانوی شماریاتی سائنس
 sourceLocale: en
-sourceHash: ddd31577b00d
+sourceHash: 4bcddff1ac41
 translatedAt: 2026-01-14
 ---
 
@@ -14,4 +14,4 @@ translatedAt: 2026-01-14
 
 یہ [سیلڈن پلان](./seldon-plan) اور
 [انسائیکلوپیڈیا گیلیکٹیکا](./encyclopedia-galactica) کی تخلیق کی سائنسی بنیاد
-ہے۔
+ہے، جسے [ہاری سیلڈن](./hari-seldon) نے وضع کیا۔

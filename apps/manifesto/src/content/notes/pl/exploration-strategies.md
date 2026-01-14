@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: b3abf2d73b65
 translatedAt: 2026-01-14
 ---
+
 [Współnaukowiec](./coscientist) potrzebuje czegoś więcej niż wyszukiwania:
 potrzebuje [mechanizmów eksploracji](./exploration-mechanisms), które aktywnie ujawniają sprzeczności, warunki brzegowe
 oraz zależność od metody w [Grafie Dialektycznym](./dialectical-graph).

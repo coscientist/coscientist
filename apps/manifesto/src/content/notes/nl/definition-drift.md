@@ -1,13 +1,13 @@
 ---
 title: Definitieverschuiving
-description: Wanneer de betekenis van een term verschuift door de tijd of tussen contexten
+description: Wanneer de betekenis van een term verschuift door de tijd heen of tussen contexten
 sourceLocale: en
-sourceHash: 660a481dc105
+sourceHash: 13d640679420
 translatedAt: 2026-01-14
 ---
 
 Definitieverschuiving is de geleidelijke verandering in de betekenis van een
-term door de tijd heen, tussen denkscholen of vakgebieden. Het veroorzaakt
+term door de tijd heen, tussen denkscholen of vakgebieden (zie ook [Semantische verschuiving](./semantic-drift) en het bredere [Verschijnselen van verschuiving](./drift-phenomena)). Het veroorzaakt
 schijnbare overeenstemming en schijnbare tegenspraak wanneer hetzelfde woord
 voor verschillende concepten wordt gebruikt, waardoor het lijkt alsof mensen
 over conclusies discussiëren terwijl ze elkaar in werkelijkheid voorbijpraten.

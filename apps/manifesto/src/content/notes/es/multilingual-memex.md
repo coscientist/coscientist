@@ -1,10 +1,8 @@
 ---
 title: Memex multilingüe
-description:
-  Un sistema de conocimiento personal consciente del idioma con soporte de
-  traducción automática
+description: Un sistema de conocimiento personal consciente del idioma con soporte de traducción automática
 sourceLocale: en
-sourceHash: 4cbc551868c1
+sourceHash: 7f632fdf73b6
 translatedAt: 2026-01-14
 ---
 
@@ -12,7 +10,8 @@ Un Memex multilingüe es un sistema de conocimiento personal que admite de forma
 nativa contenido en varios idiomas, con detección automática del idioma,
 traducción y enlaces entre lenguas. Amplía la visión original del
 [Memex](./memex) de [Vannevar Bush](./vannevar-bush) a un mundo en el que el
-conocimiento no respeta las fronteras lingüísticas.
+conocimiento no respeta las fronteras lingüísticas, asemejándose estrechamente
+a una [Malla de conocimiento multilingüe](./multilingual-knowledge-mesh).
 
 [Extracranial](./extracranial) de [Sunghyun Cho](./sunghyun-cho) es una
 implementación de este concepto. Incluye detección automática del idioma,
@@ -42,3 +41,7 @@ Para [Cocientífico](./coscientist), el Memex multilingüe se convierte en el
 [afirmaciones](./claim), [fragmentos de evidencia](./evidence-span) y relaciones
 desde cualquier idioma, tratando el idioma como metadatos en lugar de un límite
 fundamental.
+
+## Relacionado
+
+- [Malla de conocimiento multilingüe](./multilingual-knowledge-mesh)

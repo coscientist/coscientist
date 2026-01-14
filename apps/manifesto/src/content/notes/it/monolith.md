@@ -1,18 +1,18 @@
 ---
 title: Il Monolito
-description: Ispirazione di design dal 2001: Odissea nello spazio di Kubrick
+description: Ispirazione per il design da _2001: Odissea nello spazio_ di Kubrick
 sourceLocale: en
-sourceHash: fd5c03a09cc7
+sourceHash: aef77e879a9f
 translatedAt: 2026-01-14
 ---
 
-Il Monolito di _2001: Odissea nello spazio_ (1968) di Stanley Kubrick è una
+Il Monolito di _2001: Odissea nello spazio_ di Stanley Kubrick è una
 macchina costruita da un’antica specie extraterrestre per accelerare
 l’intelligenza in esseri inferiori. La sua lastra nera, priva di caratteristiche,
 non offre alcun manuale d’istruzioni—solo presenza. Chi lo incontra cambia, ma
 il meccanismo rimane opaco.
 
-Nei romanzi di Arthur C. Clarke, gli alieni (i “Primi Nati”) disseminarono
+Nei romanzi di Arthur C. Clarke, gli alieni disseminarono
 Monoliti nella galassia come strumenti di elevazione. Le scimmie che lo toccarono
 ottennero la scintilla dell’uso degli strumenti. L’incontro dell’umanità sulla
 Luna segnalò la prontezza per la fase successiva.
@@ -24,7 +24,7 @@ orizzontalmente, ciascuna contenente conoscenza che trasforma la comprensione.
 
 ## Principi di design derivati
 
-- [Mistero e minimalismo](./mystery-minimalism): Riduci gli elementi superflui dell’interfaccia, lascia che sia il contenuto a parlare
+- [Mistero e minimalismo](./mystery-minimalism): Riduci la “cromatura”, lascia che sia il contenuto a parlare
 - [Segnale senza spiegazione](./signal-without-explanation): Presenta le informazioni, fidati del lettore
 - Ritmo verticale: le proporzioni 1:4:9 (1², 2², 3²) compaiono nei rapporti di spaziatura
 - Fondazione monocromatica: scala di grigi come predefinita, colore come segnale

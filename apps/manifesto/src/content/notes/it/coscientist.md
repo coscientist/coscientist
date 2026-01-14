@@ -1,10 +1,8 @@
 ---
 title: Coscientist
-description:
-  Un sistema di compagno intellettuale per la produzione di conoscenza nell’era
-  post-AI
+description: Un sistema di compagno intellettuale per la produzione di conoscenza nell’era post-AI
 sourceLocale: en
-sourceHash: 9ef4ae7abd93
+sourceHash: 19a7f6d48c09
 translatedAt: 2026-01-14
 ---
 
@@ -20,7 +18,7 @@ agency.
 
 È costruito da [Sunghyun Cho](./sunghyun-cho). La storia delle origini è
 semplice: la preservazione conta, ma la sola preservazione non produce
-comprensione. Coscientist è progettato per rendere la conoscenza aggiornabile,
+comprensione ([Token ≠ Conoscenza](./index)). Coscientist è progettato per rendere la conoscenza aggiornabile,
 così che contraddizioni, controesempi e [deriva definitoria](./definition-drift)
 diventino visibili e azionabili invece di essere smussati da riassunti
 scorrevoli.

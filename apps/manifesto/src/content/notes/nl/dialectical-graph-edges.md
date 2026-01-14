@@ -1,13 +1,13 @@
 ---
-title: Dialectische graafranden
+title: Randen van de dialectische graaf
 description: De relatietypen die knooppunten verbinden in een dialectische kennisgraaf
 sourceLocale: en
-sourceHash: e060cb9fd333
+sourceHash: 82c6fd07bccd
 translatedAt: 2026-01-14
 ---
 
 In een [Dialectische graaf](./dialectical-graph) coderen randen relatietypen in
-plaats van similariteitsscores. De waarde is dat je kunt vragen: "hoe verhoudt
+plaats van similariteitsscores (zie [Argumentatieve relaties](./argumentative-relations)). De waarde is dat je kunt vragen: "hoe verhoudt
 dit zich tot dat?" in plaats van alleen: "gaan deze over hetzelfde onderwerp?"
 
 Veelvoorkomende relatietypen zijn onder andere:
@@ -25,4 +25,5 @@ detecteren van definitieconflicten en het volgen van replicatiestatus. Dit zijn
 mogelijkheden die similarity-gebaseerde retrieval moeilijk kan weergeven ). Ze
 ondersteunen ook kwaliteitsbeoordeling: de kwaliteit van kennis hangt minder af
 van de richting van een conclusie en meer van de duurzaamheid van het pad dat
-haar heeft voortgebracht, en randen coderen die padstructuur.
+haar heeft voortgebracht, en randen coderen die padstructuur over knooppunten
+heen (zie [Knooppunten van de dialectische graaf](./dialectical-graph-nodes)) en andere [Graafcomponenten](./graph-components).

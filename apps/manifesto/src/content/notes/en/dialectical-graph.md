@@ -9,6 +9,8 @@ A dialectical graph is a knowledge graph that stores argumentative structure
 rather than treating documents as undifferentiated text. The core insight is
 simple: do not mistake text for knowledge. Text is packaging; knowledge is the
 constraint structure that lets claims support, attack, and refine one another.
+For background on how this approach evolves beyond document-centric systems, see
+[From Memex to Dialectical Graph](./from-memex-to-dialectical-graph).
 
 [Coscientist](./coscientist) enforces a triple separation: original text is
 preserved as quotable evidence spans; claims are decomposed into normalized
@@ -24,9 +26,10 @@ to backtrack through claim, scope, assumption, method, data, evidence span, and
 source. Without that chain, a sentence is just a sentence, not knowledge.
 
 To act as a brake on [Encyclopedia Meltdown](./encyclopedia-meltdown), the
-system prioritizes contradictions and counterexamples rather than consensus.
-When a claim enters the graph, the default posture is adversarial: seek attacks
+system prioritizes contradictions and counterexamples rather than consensus (see
+[Graph as Meltdown Defense](./graph-as-meltdown-defense)). When a claim enters the graph, the default posture is adversarial: seek attacks
 and undercuts early so the structure updates by rebuttal instead of drifting by
 repetition. For concrete node and relation types, see
 [Dialectical Graph Nodes](./dialectical-graph-nodes) and
-[Dialectical Graph Edges](./dialectical-graph-edges).
+[Dialectical Graph Edges](./dialectical-graph-edges), as well as
+[Graph Components](./graph-components).

@@ -1,8 +1,8 @@
 ---
 title: Psikotarih
-description: Asimov’un Vakıf’ında yer alan kurgusal bir istatistik bilimi
+description: Asimov’un Vakıf’ında kurgusal bir istatistik bilimi
 sourceLocale: en
-sourceHash: ddd31577b00d
+sourceHash: 4bcddff1ac41
 translatedAt: 2026-01-14
 ---
 
@@ -14,4 +14,4 @@ varsayımlar altında genel gidişatların tahmin edilebilir olmasını sağlar.
 
 Bu disiplin, [Seldon Planı](./seldon-plan) ve
 [Galaktik Ansiklopedi](./encyclopedia-galactica)’nın oluşturulmasının bilimsel
-temelidir.
+temelidir; [Hari Seldon](./hari-seldon) tarafından geliştirilmiştir.

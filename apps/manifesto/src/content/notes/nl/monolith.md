@@ -2,17 +2,17 @@
 title: De Monoliet
 description: Ontwerpinspiratie uit Kubricks 2001: A Space Odyssey
 sourceLocale: en
-sourceHash: fd5c03a09cc7
+sourceHash: aef77e879a9f
 translatedAt: 2026-01-14
 ---
 
-De Monoliet uit Stanley Kubricks _2001: A Space Odyssey_ (1968) is een machine,
+De Monoliet uit Stanley Kubricks _2001: A Space Odyssey_ is een machine,
 gebouwd door een oude buitenaardse soort om intelligentie in lagere wezens te
 versnellen. Zijn kenmerkloze zwarte plaat biedt geen handleiding—alleen
 aanwezigheid. Wie hem tegenkomt, verandert, maar het mechanisme blijft
 ondoorzichtig.
 
-In Arthur C. Clarkes romans zaaiden de aliens (de "Firstborn") Monolieten uit
+In Arthur C. Clarkes romans zaaiden de aliens Monolieten uit
 door het hele melkwegstelsel als instrumenten van verheffing. De apen die hem
 aanraakten, kregen de vonk van gereedschapsgebruik. De ontmoeting van de
 mensheid op de Maan signaleerde gereedheid voor de volgende fase.
@@ -24,7 +24,7 @@ opstapelen, elk met kennis die het begrip transformeert.
 
 ## Afgeleide ontwerpprincipes
 
-- [Mysterie en minimalisme](./mystery-minimalism): Verminder de chrome (UI-opsmuk), laat de inhoud spreken
+- [Mysterie en minimalisme](./mystery-minimalism): Verminder de chrome , laat de inhoud spreken
 - [Signaal zonder verklaring](./signal-without-explanation): Presenteer informatie, vertrouw de lezer
 - Verticaal ritme: de 1:4:9-verhoudingen (1², 2², 3²) verschijnen in afstandsratio's
 - Monochrome basis: grijstinten als standaard, kleur als signaal

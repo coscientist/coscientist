@@ -1,13 +1,13 @@
 ---
 title: Hilangnya Nuansa dalam Terjemahan
-description: Kehalusan semantik yang lenyap ketika gagasan melintasi batas-batas bahasa
+description: Kehalusan semantik yang menghilang ketika gagasan melintasi batas-batas bahasa
 sourceLocale: en
-sourceHash: aef048dd4f50
+sourceHash: b702bb1401b7
 translatedAt: 2026-01-14
 ---
 
 Hilangnya nuansa dalam terjemahan adalah terkikisnya kehalusan semantik ketika
-gagasan diterjemahkan dari satu bahasa ke bahasa lain. Ini mencakup hilangnya
+gagasan diterjemahkan dari satu bahasa ke bahasa lain, mengurangi [Kesetiaan Terjemahan](./translation-fidelity). Ini mencakup hilangnya
 konotasi, konteks budaya, asumsi implisit, dan cita rasa khas yang membuat
 sebuah ungkapan bermakna dalam [Sprachraum](./sprachraum) aslinya.
 

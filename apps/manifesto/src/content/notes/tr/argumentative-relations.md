@@ -1,12 +1,13 @@
 ---
 title: Tartışmacı İlişkiler
-description: İşleve göre düzenlenmiş diyalektik bir grafikteki kenar türleri
+description: Bir diyalektik graf içindeki kenar türleri, işlevlerine göre düzenlenmiştir
 sourceLocale: en
-sourceHash: 45592ddcb1d1
+sourceHash: a48d629230dc
 translatedAt: 2026-01-14
 ---
 
-Tartışmacı ilişkiler, bir [Diyalektik Graf](./dialectical-graph) içindeki,
+Tartışmacı ilişkiler, bir [Diyalektik Graf](./dialectical-graph) içindeki
+([Graf Bileşenleri](./graph-components)ne de bakın),
 epistemik nesnelerin birbirleriyle nasıl ilişkilendiğini kodlayan kenar
 türleridir. Bir diyalektik grafi, konu-benzerliği grafından ayıran şey de
 bunlardır.
@@ -29,8 +30,7 @@ bunlardır.
 - `refines` — bir iddiayı daraltır veya netleştirir
 - `generalizes` / `specializes` — kapsam ayarlamaları
 - `depends_on` — iddiaları [varsayımlarına](./assumption) bağlar
-- `defines` — terimleri tanımlarına bağlar (zaman içinde
-  [Tanım Kayması](./definition-drift) üzerinden izlenir)
+- `defines` — terimleri tanımlarına bağlar )
 
 Tam belirtim için [Diyalektik Graf Kenarları](./dialectical-graph-edges)na ve
 türlendirilmiş kenarların neden önemli olduğu için

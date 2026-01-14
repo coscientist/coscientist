@@ -1,13 +1,13 @@
 ---
 title: Deriva definitoria
-description: Quando il significato di un termine cambia nel tempo o in contesti diversi
+description: Quando il significato di un termine si sposta nel tempo o tra contesti
 sourceLocale: en
-sourceHash: 660a481dc105
+sourceHash: 13d640679420
 translatedAt: 2026-01-14
 ---
 
 La deriva definitoria è lo spostamento graduale del significato di un termine
-nel tempo, tra scuole o tra discipline. Crea falso accordo e falsa
+nel tempo, tra scuole o tra discipline (vedi anche [Deriva semantica](./semantic-drift) e i più ampi [Fenomeni di deriva](./drift-phenomena)). Crea falso accordo e falsa
 contraddizione quando la stessa parola viene usata per concetti diversi, facendo
 sì che le persone sembrino discutere di conclusioni quando in realtà parlano
 senza capirsi.

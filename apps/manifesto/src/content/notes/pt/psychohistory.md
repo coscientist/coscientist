@@ -1,8 +1,8 @@
 ---
 title: Psico-história
-description: Uma ciência estatística fictícia na série Fundação de Asimov
+description: Uma ciência estatística fictícia na Fundação de Asimov
 sourceLocale: en
-sourceHash: ddd31577b00d
+sourceHash: 4bcddff1ac41
 translatedAt: 2026-01-14
 ---
 
@@ -14,4 +14,4 @@ grande escala, tornando as trajetórias gerais previsíveis sob pressupostos
 estáveis.
 
 Ela é a base científica do [Plano Seldon](./seldon-plan) e da criação da
-[Enciclopédia Galáctica](./encyclopedia-galactica).
+[Enciclopédia Galáctica](./encyclopedia-galactica), desenvolvida por [Hari Seldon](./hari-seldon).

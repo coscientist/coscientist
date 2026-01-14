@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: 8c91c1527bf6
 translatedAt: 2026-01-14
 ---
+
 La verifica è il processo di controllare se un’affermazione regge di fronte a
 evidenze, controevidenze e spiegazioni alternative. Non è un’accettazione
 passiva: richiede impegno, ed è proprio questo impegno che distingue la

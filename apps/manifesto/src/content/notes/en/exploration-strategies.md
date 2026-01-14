@@ -2,6 +2,7 @@
 title: Exploration Strategies
 description: Graph traversal strategies for continuous knowledge discovery
 ---
+
 [Coscientist](./coscientist) needs more than retrieval: it needs [exploration mechanisms](./exploration-mechanisms)
 that actively surfaces contradictions, boundary conditions, and method
 dependence in the [Dialectical Graph](./dialectical-graph).

@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: 8c91c1527bf6
 translatedAt: 2026-01-14
 ---
+
 La vérification est le processus consistant à examiner si une affirmation
 résiste aux preuves, aux contre-preuves et aux explications alternatives. Ce
 n’est pas une acceptation passive : cela demande un effort, et c’est précisément

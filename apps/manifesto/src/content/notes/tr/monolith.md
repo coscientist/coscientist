@@ -2,13 +2,13 @@
 title: Monolit
 description: Kubrick’in 2001: A Space Odyssey filminden tasarım ilhamı
 sourceLocale: en
-sourceHash: fd5c03a09cc7
+sourceHash: aef77e879a9f
 translatedAt: 2026-01-14
 ---
 
-Stanley Kubrick’in _2001: A Space Odyssey_ (1968) filmindeki Monolit, alt düzey varlıklarda zekâyı hızlandırmak için kadim bir dünya dışı tür tarafından inşa edilmiş bir makinedir. Özelliksiz siyah levhası bir kullanım kılavuzu sunmaz — yalnızca varlığıyla yer eder. Onunla karşılaşanlar değişir, fakat mekanizma kapalı kalır.
+Stanley Kubrick’in _2001: A Space Odyssey_ filmindeki Monolit, alt düzey varlıklarda zekâyı hızlandırmak için kadim bir dünya dışı tür tarafından inşa edilmiş bir makinedir. Özelliksiz siyah levhası bir kullanım kılavuzu sunmaz — yalnızca varlığıyla yer eder. Onunla karşılaşanlar değişir, fakat mekanizma kapalı kalır.
 
-Arthur C. Clarke’ın romanlarında uzaylılar (“İlkdoğanlar”), yükseltme araçları olarak galaksinin dört bir yanına Monolitler yerleştirir. Ona dokunan insansı maymunlar alet kullanımının kıvılcımını edinir. Ay’daki insan karşılaşması ise bir sonraki aşamaya hazır oluşu işaret eder.
+Arthur C. Clarke’ın romanlarında uzaylılar galaksinin dört bir yanına yükseltme araçları olarak Monolitler serper. Ona dokunan insansı maymunlar alet kullanımının kıvılcımını edinir. Ay’daki insan karşılaşması ise bir sonraki aşamaya hazır oluşu işaret eder.
 
 Bu estetik, [Coscientist](./coscientist)’in görsel dilini ve etkileşim modelini şekillendirir. [Kaydırmalı panel arayüzü](./monolith-as-interface-metaphor), Monolit’in oranlarını yankılar: yatayda üst üste dizilen dikey levhalar; her biri, anlayışı dönüştüren bir bilgi barındırır.
 

@@ -1,8 +1,8 @@
 ---
 title: Meertalig kennisnetwerk
-description: Een kennisnetwerk dat talen overspant en wereldwijd wordt verspreid
+description: Een kennisnetwerk dat talen overspant en wereldwijd distribueert
 sourceLocale: en
-sourceHash: d0cefb393fe3
+sourceHash: 6015daf06d5c
 translatedAt: 2026-01-14
 ---
 
@@ -10,7 +10,8 @@ Een meertalig kennisnetwerk is een kennisnetwerk waarin content in eender welke
 taal kan verbinden met content in eender welke andere taal via gedeelde
 concepten, in plaats van via woordovereenkomsten. Het is één uitdrukking van
 [Sunghyun Cho](./sunghyun-cho)'s visie om
-[over de Sprachraums heen](./across-the-sprachraums) te gaan.
+[over de Sprachraums heen](./across-the-sprachraums) te gaan, en een stap richting een
+[Meertalige Memex](./multilingual-memex).
 
 Dit gaat verder dan eenvoudige vertaling. In een echt meertalig netwerk linkt
 een notitie die in het Koreaans is geschreven over een concept naar een Engelse
@@ -20,7 +21,7 @@ fungeert als de conceptuele ruggengraat, en maakt terugvinden en verbinden
 mogelijk ongeacht uit welke [Sprachraum](./sprachraum) de content afkomstig is.
 
 [Extracranial](./extracranial) implementeert vroege vormen hiervan via
-automatische taaldetectie, content negotiation , en hreflang-tags voor
+automatische taaldetectie, content negotiation, en hreflang-tags voor
 locale-specifieke levering. De visie is dat het systeem content automatisch over
 talen heen moet distribueren, terwijl het verouderde content bestraft ongeacht
 de oorspronkelijke taal.

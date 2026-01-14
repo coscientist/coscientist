@@ -1,8 +1,8 @@
 ---
 title: Coscientist
-description: Ein intellektuelles Begleitsystem für Wissensproduktion in der Post-AI-Ära
+description: Ein System eines intellektuellen Begleiters für Wissensproduktion in der Post-AI-Ära
 sourceLocale: en
-sourceHash: 9ef4ae7abd93
+sourceHash: 19a7f6d48c09
 translatedAt: 2026-01-14
 ---
 
@@ -12,26 +12,25 @@ Coscientist ist ein Open-Source-Dienst, inspiriert von
 [Wissensarche](./knowledge-ark) für Informationen: ein
 [intellektueller Begleiter](./intellectual-companion), der
 [Kontemplationsarbeit](./contemplation-labor) gemeinsam mit dem menschlichen
-[Betreiber](./operator) leistet. In der Post-AI-Ära ist sein Ziel,
+[Operator](./operator) leistet. In der Post-AI-Ära ist sein Ziel,
 [Un-Brain-Rotting](./un-brain-rotting) zu unterstützen: Verifikation und
 Handlungsfähigkeit wiederherzustellen.
 
 Es wird von [Sunghyun Cho](./sunghyun-cho) entwickelt. Die Entstehungsgeschichte
 ist geradlinig: Bewahrung ist wichtig, aber Bewahrung allein erzeugt kein
-Verständnis. Coscientist ist darauf ausgelegt, Wissen aktualisierbar zu machen,
+Verständnis ([Tokens ≠ Knowledge](./index)). Coscientist ist darauf ausgelegt, Wissen aktualisierbar zu machen,
 sodass Widersprüche, Gegenbeispiele und [Definitionsdrift](./definition-drift)
 sichtbar und bearbeitbar werden, statt durch flüssige Zusammenfassungen
 geglättet zu werden.
 
 Das erste Prinzip ist Souveränität: Die Wissensautorität muss beim
-[Betreiber](./operator) bleiben. Sich gegen den
+[Operator](./operator) bleiben. Sich gegen den
 [Enzyklopädie-Zusammenbruch](./encyclopedia-meltdown) zu wappnen, ist kein
 nachträglicher Gedanke; es ist eine Designvorgabe. KI kann Kontemplationsarbeit
 leisten, aber sie sollte nicht die Initiative des Schreibens und Deklarierens an
 sich reißen.
 
-Deshalb geht Coscientist über Q&A-artiges RAG hinaus (siehe
-[RAG-Einschränkungen](./rag-limitations)). Es pflegt einen
+Deshalb geht Coscientist über Q&A-artiges RAG ) hinaus. Es pflegt einen
 [Dialektischen Graphen](./dialectical-graph), der
 [argumentative Akte](./argumentative-act) statt rohem Dokumenttext speichert,
 sodass jede Behauptung mit Evidenzspannen, Quellen und expliziten Relationen

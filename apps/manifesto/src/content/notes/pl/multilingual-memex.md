@@ -1,8 +1,8 @@
 ---
 title: Wielojęzyczny Memex
-description: Świadomy języka osobisty system wiedzy z obsługą automatycznego tłumaczenia
+description: Świadomy języka osobisty system wiedzy z automatycznym wsparciem tłumaczenia
 sourceLocale: en
-sourceHash: 4cbc551868c1
+sourceHash: 7f632fdf73b6
 translatedAt: 2026-01-14
 ---
 
@@ -10,7 +10,7 @@ Wielojęzyczny Memex to osobisty system wiedzy, który natywnie wspiera treści 
 wielu językach, z automatycznym wykrywaniem języka, tłumaczeniem oraz łączeniem
 międzyjęzykowym. Rozszerza pierwotną wizję [Memexu](./memex) autorstwa
 [Vannevara Busha](./vannevar-bush) na świat, w którym wiedza nie respektuje
-granic językowych.
+granic językowych, ściśle przypominając [Wielojęzyczną Siatkę Wiedzy](./multilingual-knowledge-mesh).
 
 [Extracranial](./extracranial) autorstwa [Sunghyun Cho](./sunghyun-cho) jest
 implementacją tej koncepcji. Obejmuje automatyczne wykrywanie języka,
@@ -40,3 +40,7 @@ Dla [Współnaukowiec](./coscientist) wielojęzyczny Memex staje się wielojęzy
 [Grafem Dialektycznym](./dialectical-graph): strukturą, która przechowuje
 [twierdzenia](./claim), [fragmenty dowodów](./evidence-span) oraz relacje z
 dowolnego języka, traktując język jako metadane, a nie fundamentalną granicę.
+
+## Powiązane
+
+- [Wielojęzyczna Siatka Wiedzy](./multilingual-knowledge-mesh)

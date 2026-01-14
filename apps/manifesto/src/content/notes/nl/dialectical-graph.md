@@ -4,7 +4,7 @@ description:
   Een kennisgraafmodel dat beweringen en relaties opslaat in plaats van
   documentinhoud
 sourceLocale: en
-sourceHash: cd2021478e98
+sourceHash: 7de42f075323
 translatedAt: 2026-01-14
 ---
 
@@ -12,7 +12,9 @@ Een dialectische graaf is een kennisgraaf die argumentatieve structuur opslaat ,
 in plaats van documenten te behandelen als ongedifferentieerde tekst. Het
 kerninzicht is eenvoudig: verwar tekst niet met kennis. Tekst is verpakking;
 kennis is de beperkingenstructuur die beweringen elkaar laat ondersteunen,
-aanvallen en verfijnen.
+aanvallen en verfijnen. Voor achtergrond over hoe deze benadering verder
+ontwikkelt voorbij document-centrische systemen, zie
+[Van Memex naar Dialectische Graaf](./from-memex-to-dialectical-graph).
 
 [Cowetenschapper](./coscientist) dwingt een drievoudige scheiding af: originele
 tekst blijft bewaard als citeerbare evidence spans; beweringen worden ontleed
@@ -30,9 +32,12 @@ span en bron. Zonder die keten is een zin gewoon een zin, geen kennis.
 
 Om te fungeren als rem op [Encyclopedie-ineenstorting](./encyclopedia-meltdown),
 geeft het systeem prioriteit aan tegenstrijdigheden en tegenvoorbeelden boven
-consensus. Wanneer een bewering de graaf binnenkomt, is de standaardhouding
+consensus (zie
+[De graaf als verdediging tegen ineenstorting](./graph-as-meltdown-defense)).
+Wanneer een bewering de graaf binnenkomt, is de standaardhouding
 adversarieel: zoek vroeg naar aanvallen en ondermijningen, zodat de structuur
 wordt bijgewerkt via weerlegging in plaats van af te drijven door herhaling.
 Voor concrete node- en relatietypen, zie
 [Dialectische Graaf-nodes](./dialectical-graph-nodes) en
-[Dialectische Graaf-edges](./dialectical-graph-edges).
+[Dialectische Graaf-edges](./dialectical-graph-edges), alsook
+[Graafcomponenten](./graph-components).

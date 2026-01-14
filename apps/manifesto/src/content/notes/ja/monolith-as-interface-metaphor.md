@@ -1,8 +1,8 @@
 ---
 title: インターフェースのメタファーとしてのモノリス
-description: モノリスがスライディングペインナビゲーションに与える示唆
+description: モノリスがスライディングペインのナビゲーションに与える示唆
 sourceLocale: en
-sourceHash: 555ec31ef810
+sourceHash: 406d93dbb744
 translatedAt: 2026-01-14
 ---
 

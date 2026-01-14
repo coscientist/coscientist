@@ -2,13 +2,13 @@
 title: Assertion
 description: Une proposition vérifiable stockée comme un nœud dans un graphe dialectique
 sourceLocale: en
-sourceHash: 11bb739db24b
+sourceHash: a3b6f4399179
 translatedAt: 2026-01-14
 ---
 
 Une assertion est une proposition vérifiable extraite d’un texte et stockée
-comme un objet de première classe dans un
-[Graphe dialectique](./dialectical-graph). Les assertions ne sont pas des
+comme un [nœud du Graphe dialectique](./dialectical-graph-nodes) de première classe dans un
+[Graphe dialectique](./dialectical-graph). (voir [Nœuds du graphe dialectique](./dialectical-graph-nodes).) Les assertions ne sont pas des
 phrases brutes ; ce sont des énoncés normalisés avec des dépendances explicites
 de [portée](./scope), d’[hypothèses](./assumption) et de [méthode](./method).
 
@@ -19,8 +19,7 @@ qui les étayent, à des [contre-exemples](./counterexample) qui les restreignen
 Cette structure relationnelle permet aux connaissances de se mettre à jour par
 réfutation plutôt que par remplacement.
 
-Chaque assertion a un statut (voir
-[Nœuds du graphe dialectique](./dialectical-graph-nodes)) : elle peut être
+Chaque assertion a un statut : elle peut être
 provisoire, contestée, soutenue sous conditions, robuste, réfutée ou obsolète.
 Le statut change en fonction du type de réfutation, pas de leur nombre, et il
 peut régresser si la structure de soutien s’affaiblit.

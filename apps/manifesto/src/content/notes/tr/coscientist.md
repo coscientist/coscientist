@@ -1,8 +1,8 @@
 ---
 title: Coscientist
-description: Yapay zekâ sonrası çağda bilgi üretimi için entelektüel bir yoldaş sistemi
+description: Yapay zekâ sonrası çağda bilgi üretimi için bir entelektüel yoldaş sistemi
 sourceLocale: en
-sourceHash: 9ef4ae7abd93
+sourceHash: 19a7f6d48c09
 translatedAt: 2026-01-14
 ---
 
@@ -16,8 +16,8 @@ yürüten bir [entelektüel yoldaş](./intellectual-companion). Yapay zekâ sonr
 doğrulamayı ve özneyliği yeniden tesis etmek.
 
 [Sunghyun Cho](./sunghyun-cho) tarafından geliştirilmiştir. Köken hikâyesi
-basittir: koruma önemlidir, ancak tek başına koruma anlayış üretmez.
-Coscientist, bilginin güncellenebilir olmasını sağlayacak şekilde
+basittir: koruma önemlidir, ancak tek başına koruma anlayış üretmez
+([Tokenlar ≠ Bilgi](./index)). Coscientist, bilginin güncellenebilir olmasını sağlayacak şekilde
 tasarlanmıştır; böylece çelişkiler, karşı-örnekler ve
 [tanım kayması](./definition-drift), akıcı özetler tarafından yumuşatılıp
 geçiştirilmek yerine görünür ve üzerinde işlem yapılabilir hâle gelir.
@@ -27,20 +27,18 @@ geçiştirilmek yerine görünür ve üzerinde işlem yapılabilir hâle gelir.
 bir düşünce değildir; bir tasarım kısıtıdır. Yapay zekâ tefekkür emeği
 yapabilir, ancak yazma ve ilan etme inisiyatifini ele geçirmemelidir.
 
-Bu nedenle Coscientist, Soru-Cevap tarzı RAG’in ötesine geçer (bkz.
-[RAG sınırlamaları](./rag-limitations)). Ham belge metni yerine
+Bu nedenle Coscientist, Soru-Cevap tarzı RAG’in ötesine geçer. Ham belge metni yerine
 [tartışmacı eylemleri](./argumentative-act) depolayan bir
 [Diyalektik Grafik](./dialectical-graph) tutar; böylece her iddia kanıt
-parçalarına , kaynaklara ve açık ilişkilere bağlanabilir (bkz.
-[Diyalektik Grafik Düğümleri](./dialectical-graph-nodes) ve
-[Diyalektik Grafik Kenarları](./dialectical-graph-edges)).
+parçalarına, kaynaklara ve açık ilişkilere ve
+[Diyalektik Grafik Kenarları](./dialectical-graph-edges) bağlanabilir.
 
-Keşif varsayılan olarak adversaryaldir .
+Keşif varsayılan olarak adversaryaldir.
 [Karşı-örnek öncelikli arama](./counterexample-first-search),
 [minimum cut](./minimum-cut) ile çelişki izolasyonu ve açık
 [tanım kayması](./definition-drift) tespiti gibi stratejiler erken aşamada baskı
 uygular; böylece bilgi, tekrar yoluyla kayıp sürüklenmek yerine çürütme yoluyla
-güncellenir (bkz. [Keşif Stratejileri](./exploration-strategies)).
+güncellenir.
 
 Protokol düzeyinde sistem, belgeleri yalnızca özetlemek yerine birbirleriyle
 çarpıştırmak için [Çoklu-YZ Uzlaşı Protokolü](./multi-ai-consensus-protocol) ve

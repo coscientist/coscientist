@@ -1,16 +1,15 @@
 ---
 title: Taxonomie des Anspruchsstatus
-description:
-  Die Zustände, in denen sich ein Anspruch innerhalb eines dialektischen Graphen
-  befinden kann
+description: Die Zustände, die ein Anspruch innerhalb eines dialektischen Graphen einnehmen kann
 sourceLocale: en
-sourceHash: e713e484c72f
+sourceHash: ece55705e1ef
 translatedAt: 2026-01-14
 ---
 
 Die Taxonomie des Anspruchsstatus definiert die Zustände, die ein
 [Anspruch](./claim) in einem [Dialektischen Graphen](./dialectical-graph)
-einnehmen kann.
+einnehmen kann. Wie ein Anspruch sich typischerweise im Laufe der Zeit durch
+diese Zustände bewegt, siehe den [Anspruchslebenszyklus](./claim-lifecycle).
 
 ## Häufige Zustände
 
@@ -31,4 +30,5 @@ widerlegt sein. Mehrdimensionale Statusmodelle erfassen diese Komplexität.
 nicht durch die Menge. Ein einzelnes gut belegtes
 [Gegenbeispiel](./counterexample) kann einen Anspruch von robust zu widerlegt
 verschieben; viele schwache Einwände können ihn umstritten lassen, ohne ihn zu
-klären.
+klären. Siehe [Regeln für Statusübergänge](./status-transition-rules) für die
+formale Übergangslogik.

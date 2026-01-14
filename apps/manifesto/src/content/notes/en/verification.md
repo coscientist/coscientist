@@ -2,6 +2,7 @@
 title: Verification
 description: The process of checking claims against evidence and counterevidence
 ---
+
 Verification is the process of checking whether a claim holds up against
 evidence, counterevidence, and alternative explanations. It is not passive
 acceptance: it requires effort, and that effort is what distinguishes knowledge

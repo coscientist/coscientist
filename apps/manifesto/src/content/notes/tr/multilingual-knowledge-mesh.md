@@ -1,8 +1,8 @@
 ---
-title: Çok Dilli Bilgi Ağı
-description: Dilleri aşan ve küresel olarak dağıtılan bir bilgi ağı
+title: Çok dilli Bilgi Ağı
+description: Dilleri kapsayan ve küresel olarak dağıtılan bir bilgi ağı
 sourceLocale: en
-sourceHash: d0cefb393fe3
+sourceHash: 6015daf06d5c
 translatedAt: 2026-01-14
 ---
 
@@ -10,12 +10,12 @@ translatedAt: 2026-01-14
 yerine paylaşılan kavramlar üzerinden, başka herhangi bir dildeki içerikle bağ
 kurabildiği bir bilgi ağıdır. Bu, [Sunghyun Cho](./sunghyun-cho)'nun
 [Sprachraum’lar arasında](./across-the-sprachraums) ilerleme vizyonunun bir
-ifadesidir.
+ifadesidir ve [Çok dilli Memex](./multilingual-memex) yönünde bir adımdır.
 
 Bu, basit çevirinin ötesine geçer. Gerçek bir çok dilli ağda, bir kavram
 hakkında Korece yazılmış bir not, anahtar kelime örtüşmesiyle değil, alttaki
 fikir üzerinden aynı kavramla ilgili İngilizce bir nota bağlanır.
-[Dilden bağımsız dizinleme](./language-agnostic-indexing), hangi
+[Dilden bağımsız dizin](./language-agnostic-indexing), hangi
 [Sprachraum](./sprachraum) içinde üretildiğinden bağımsız olarak geri getirme ve
 bağlantı kurmayı mümkün kılan kavramsal omurga olarak işlev görür.
 
@@ -28,5 +28,5 @@ içeriği cezalandırmasıdır.
 [Eşbilimci](./coscientist) için çok dilli ağ vazgeçilmezdir. Küresel bilim
 birçok dili kapsar; yalnızca İngilizce okuyabilen bir araştırma işbirlikçisi
 temelden sınırlıdır. [Diyalektik Grafik](./dialectical-graph), herhangi bir
-dilden [iddiaları](./claim) depolayabilir; [köken ](./provenance) ise hangi
+dilden [iddiaları](./claim) depolayabilir; [köken](./provenance) ise hangi
 kaynak dilin hangi içgörüyü ürettiğini izler.

@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: b3abf2d73b65
 translatedAt: 2026-01-14
 ---
+
 [共研者](./coscientist)需要的不仅仅是检索：它需要[探索机制](./exploration-mechanisms)，在[辩证图](./dialectical-graph)中主动浮现矛盾、边界条件以及对方法的依赖性。
 
 关键策略包括：

@@ -2,12 +2,14 @@
 title: Taxonomia de Status de Afirmações
 description: Os estados em que uma afirmação pode estar dentro de um grafo dialético
 sourceLocale: en
-sourceHash: e713e484c72f
+sourceHash: ece55705e1ef
 translatedAt: 2026-01-14
 ---
 
 A taxonomia de status de afirmações define os estados que uma
 [afirmação](./claim) pode ocupar em um [Grafo Dialético](./dialectical-graph).
+Para como uma afirmação normalmente se move através desses estados ao longo do
+tempo, veja o [Ciclo de Vida da Afirmação](./claim-lifecycle).
 
 ## Estados Comuns
 
@@ -27,4 +29,4 @@ captura essa complexidade.
 As transições entre estados são impulsionadas pelo tipo de refutação, não pela
 quantidade. Um único [contraexemplo](./counterexample) bem fundamentado pode
 mover uma afirmação de robusta para refutada; muitas objeções fracas podem
-deixá-la contestada sem resolver.
+deixá-la contestada sem resolver. Veja as [Regras de Transição de Status](./status-transition-rules) para a lógica formal de transição.

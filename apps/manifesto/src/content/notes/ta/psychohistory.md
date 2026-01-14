@@ -1,8 +1,8 @@
 ---
 title: உளவரலாறு
-description: அசிமோவின் *Foundation* கதைத்தொடரில் வரும் கற்பனையான புள்ளியியல் அறிவியல்
+description: அசிமோவின் _Foundation_ தொடரில் வரும் கற்பனையான புள்ளியியல் அறிவியல்
 sourceLocale: en
-sourceHash: ddd31577b00d
+sourceHash: 4bcddff1ac41
 translatedAt: 2026-01-14
 ---
 
@@ -15,4 +15,4 @@ translatedAt: 2026-01-14
 
 இது [செல்டன் திட்டம்](./seldon-plan) மற்றும்
 [கேலக்டிக் கலைக்களஞ்சியம்](./encyclopedia-galactica) உருவாக்கத்திற்கான அறிவியல்
-அடித்தளமாகும்.
+அடித்தளமாகும்; இதை [ஹரி செல்டன்](./hari-seldon) உருவாக்கினார்.

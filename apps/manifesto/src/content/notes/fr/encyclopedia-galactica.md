@@ -2,14 +2,15 @@
 title: Encyclopédie Galactica
 description: Un concept pour préserver le savoir à travers les âges sombres
 sourceLocale: en
-sourceHash: 94e03a945895
+sourceHash: 5417fe6b3bb4
 translatedAt: 2026-01-14
 ---
 
-L’Encyclopédie Galactica est un dispositif fictif de la série _Fondation_
-d’[Isaac Asimov](./isaac-asimov) : un vaste dépôt destiné à préserver le savoir
-humain avant l’effondrement de la civilisation. C’est le trope de
-l’[arche du savoir](./knowledge-ark) incarné sous forme d’institution.
+L’Encyclopédie Galactica est un dispositif fictif de la série
+[_Foundation Fiction_](./foundation-fiction) d’[Isaac Asimov](./isaac-asimov) :
+un vaste dépôt destiné à préserver le savoir humain avant l’effondrement de la
+civilisation. C’est le trope de l’[arche du savoir](./knowledge-ark) incarné
+sous forme d’institution.
 
 Dans l’histoire, la [psychohistoire](./psychohistory) de
 [Hari Seldon](./hari-seldon) prédit que l’effondrement de
@@ -25,7 +26,7 @@ stockage à la capacité : la préservation compte, mais une encyclopédie incap
 de conserver la provenance, de faire remonter les contradictions et de se mettre
 à jour par réfutation finira par s’effondrer. L’encyclopédie fictive devient une
 cible de conception pour un outil réel capable de survivre dans un environnement
-épistémique saturé d’IA.
+épistémique saturé d’IA, en passant [De la préservation à la capacité](./from-preservation-to-capability).
 
 Une encyclopédie digne de la galaxie intégrerait nécessairement le savoir
 [à travers les Sprachraums](./across-the-sprachraums) : à travers les cultures,

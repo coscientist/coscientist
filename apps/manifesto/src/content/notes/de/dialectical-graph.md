@@ -1,10 +1,9 @@
 ---
 title: Dialektischer Graph
-description:
-  Ein Wissensgraphmodell, das Behauptungen und Beziehungen statt Dokumentinhalte
-  speichert
+description: Ein Wissensgraphmodell, das Behauptungen und Beziehungen statt
+  Dokumentinhalte speichert
 sourceLocale: en
-sourceHash: cd2021478e98
+sourceHash: 7de42f075323
 translatedAt: 2026-01-14
 ---
 
@@ -12,7 +11,9 @@ Ein dialektischer Graph ist ein Wissensgraph, der argumentative Strukturen
 speichert, anstatt Dokumente als undifferenzierten Text zu behandeln. Die
 zentrale Einsicht ist einfach: Verwechsle Text nicht mit Wissen. Text ist
 Verpackung; Wissen ist die Struktur von Einschränkungen, die es Behauptungen
-erlaubt, einander zu stützen, anzugreifen und zu verfeinern.
+erlaubt, einander zu stützen, anzugreifen und zu verfeinern. Für Hintergrund
+dazu, wie dieser Ansatz über dokumentenzentrierte Systeme hinauswächst, siehe
+[Vom Memex zum dialektischen Graphen](./from-memex-to-dialectical-graph).
 
 [Kozientist](./coscientist) erzwingt eine dreifache Trennung: Der Originaltext
 bleibt als zitierfähige Evidenzspannen erhalten; Behauptungen werden in
@@ -30,10 +31,12 @@ Daten, Evidenzspanne und Quelle rückverfolgbar sein. Ohne diese Kette ist ein
 Satz nur ein Satz, kein Wissen.
 
 Um als Bremse gegen [Enzyklopädie-Zusammenbruch](./encyclopedia-meltdown) zu
-wirken, priorisiert das System Widersprüche und Gegenbeispiele statt Konsens.
-Wenn eine Behauptung in den Graphen gelangt, ist die Standardhaltung
-adversarial: Suche früh nach Angriffen und Unterminierungen, damit sich die
-Struktur durch Widerlegung aktualisiert, statt durch Wiederholung abzudriften.
-Für konkrete Knoten- und Beziehungstypen siehe
+wirken, priorisiert das System Widersprüche und Gegenbeispiele statt Konsens
+(siehe [Graph als Meltdown-Abwehr](./graph-as-meltdown-defense)). Wenn eine
+Behauptung in den Graphen gelangt, ist die Standardhaltung adversarial: Suche
+früh nach Angriffen und Unterminierungen, damit sich die Struktur durch
+Widerlegung aktualisiert, statt durch Wiederholung abzudriften. Für konkrete
+Knoten- und Beziehungstypen siehe
 [Dialektische-Graph-Knoten](./dialectical-graph-nodes) und
-[Dialektische-Graph-Kanten](./dialectical-graph-edges).
+[Dialektische-Graph-Kanten](./dialectical-graph-edges), sowie
+[Graph-Komponenten](./graph-components).

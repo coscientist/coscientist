@@ -2,17 +2,17 @@
 title: Der Monolith
 description: Design-Inspiration aus Kubricks 2001: A Space Odyssey
 sourceLocale: en
-sourceHash: fd5c03a09cc7
+sourceHash: aef77e879a9f
 translatedAt: 2026-01-14
 ---
 
-Der Monolith aus Stanley Kubricks _2001: A Space Odyssey_ (1968) ist eine Maschine,
+Der Monolith aus Stanley Kubricks _2001: A Space Odyssey_ ist eine Maschine,
 gebaut von einer uralten außerirdischen Spezies, um die Intelligenz niederer
 Wesen zu beschleunigen. Seine merkmalslose schwarze Platte bietet kein
 Handbuch – nur Präsenz. Wer ihm begegnet, wird verändert, doch der Mechanismus
 bleibt undurchsichtig.
 
-In Arthur C. Clarkes Romanen säten die Aliens (die „Firstborn“) Monolithen
+In Arthur C. Clarkes Romanen säten die Aliens Monolithen
 über die Galaxis als Instrumente der Erhebung. Die Affen, die ihn berührten,
 erhielten den Funken des Werkzeuggebrauchs. Die Begegnung der Menschheit auf
 dem Mond signalisierte Bereitschaft für die nächste Stufe.
@@ -25,7 +25,7 @@ transformiert.
 
 ## Abgeleitete Designprinzipien
 
-- [Mysterium und Minimalismus](./mystery-minimalism): Weniger UI-Chrome (Bedienelemente), den Inhalt sprechen lassen
+- [Mysterium und Minimalismus](./mystery-minimalism): Weniger UI-Chrome , den Inhalt sprechen lassen
 - [Signal ohne Erklärung](./signal-without-explanation): Informationen präsentieren, dem Leser vertrauen
 - Vertikaler Rhythmus: Die 1:4:9-Proportionen (1², 2², 3²) erscheinen in Abstandsverhältnissen
 - Monochrome Grundlage: Graustufen als Standard, Farbe als Signal

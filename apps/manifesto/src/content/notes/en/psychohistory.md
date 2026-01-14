@@ -10,4 +10,4 @@ unpredictable but statistical regularities emerge at scale, making broad
 trajectories forecastable under stable assumptions.
 
 It is the scientific basis for the [Seldon Plan](./seldon-plan) and the creation
-of the [Encyclopedia Galactica](./encyclopedia-galactica).
+of the [Encyclopedia Galactica](./encyclopedia-galactica), developed by [Hari Seldon](./hari-seldon).

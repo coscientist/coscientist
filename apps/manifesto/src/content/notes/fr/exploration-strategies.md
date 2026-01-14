@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: b3abf2d73b65
 translatedAt: 2026-01-14
 ---
+
 [Coscientifique](./coscientist) a besoin de plus que de la récupération : il lui
 faut des [mécanismes d’exploration](./exploration-mechanisms) qui mettent activement au jour les contradictions, les
 conditions aux limites et la dépendance à la méthode dans le

@@ -7,7 +7,7 @@ A multilingual Memex is a personal knowledge system that natively supports
 content in multiple languages, with automatic language detection, translation,
 and cross-linguistic linking. It extends [Vannevar Bush](./vannevar-bush)'s
 original [Memex](./memex) vision to a world where knowledge does not respect
-language boundaries.
+language boundaries, closely resembling a [Multilingual Knowledge Mesh](./multilingual-knowledge-mesh).
 
 [Sunghyun Cho](./sunghyun-cho)'s [Extracranial](./extracranial) is an
 implementation of this concept. It includes automatic language detection,
@@ -34,3 +34,7 @@ For [Coscientist](./coscientist), the multilingual Memex becomes the
 multilingual [Dialectical Graph](./dialectical-graph): a structure that stores
 [claims](./claim), [evidence spans](./evidence-span), and relations from any
 language, treating language as metadata rather than a fundamental boundary.
+
+## Related
+
+- [Multilingual Knowledge Mesh](./multilingual-knowledge-mesh)

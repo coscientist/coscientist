@@ -1,15 +1,16 @@
 ---
 title: Çokdilli Memex
-description: Otomatik çeviri desteğine sahip, dile duyarlı bir kişisel bilgi sistemi
+description: Otomatik çeviri desteğine sahip, dile duyarlı kişisel bilgi sistemi
 sourceLocale: en
-sourceHash: 4cbc551868c1
+sourceHash: 7f632fdf73b6
 translatedAt: 2026-01-14
 ---
 
 Çokdilli Memex, birden fazla dilde içeriği yerel olarak destekleyen; otomatik
 dil algılama, çeviri ve diller arası bağlantılama sağlayan bir kişisel bilgi
 sistemidir. [Vannevar Bush](./vannevar-bush)'un özgün [Memex](./memex)
-vizyonunu, bilginin dil sınırlarına saygı duymadığı bir dünyaya genişletir.
+vizyonunu, bilginin dil sınırlarına saygı duymadığı bir dünyaya genişletir ve
+[Çokdilli Bilgi Örgüsü](./multilingual-knowledge-mesh)'ne yakından benzer.
 
 [Sunghyun Cho](./sunghyun-cho)'nun [Extracranial](./extracranial) projesi bu
 kavramın bir uygulamasıdır. Otomatik dil algılamayı, hreflang etiketleri
@@ -37,3 +38,7 @@ sistemler ile insan muhakemesi arasındaki süregelen bir iş birliğidir.
 olarak değil metadata olarak ele alarak, herhangi bir dilden
 [iddiaları](./claim), [kanıt aralıklarını](./evidence-span) ve ilişkileri
 depolayan bir yapı.
+
+## İlgili
+
+- [Çokdilli Bilgi Örgüsü](./multilingual-knowledge-mesh)

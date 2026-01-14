@@ -2,14 +2,13 @@
 title: グラフ構成要素
 description: 弁証法グラフを構成するノード型とエッジ型
 sourceLocale: en
-sourceHash: eb17714b277c
+sourceHash: 1c3352deea91
 translatedAt: 2026-01-14
 ---
 
-グラフ構成要素は、[弁証法グラフ](./dialectical-graph)の基本的な構成単位です。認識論的対象（epistemic
-objects）を表すノード型と、それらの間の関係を表すエッジ型から成ります。
+グラフ構成要素は、[弁証法グラフ](./dialectical-graph)の基本的な構成単位です。認識論的対象（epistemic objects）を表す[弁証法グラフのノード](./dialectical-graph-nodes)と、それらの間の[議論関係](./argumentative-relations)を表す[弁証法グラフのエッジ](./dialectical-graph-edges)から成ります。
 
-**ノード型**（[弁証法グラフのノード](./dialectical-graph-nodes)参照）:
+**ノード型**:
 
 - [Claim](./claim) — 検証可能な命題
 - [Evidence Span](./evidence-span) — 情報源からの正確な引用テキスト
@@ -20,7 +19,7 @@ objects）を表すノード型と、それらの間の関係を表すエッジ�
 - [Counterexample](./counterexample) — 主張を破る事例
 - [Issue Node](./issue-node) — 衝突する主張の束
 
-**エッジ型**（[弁証法グラフのエッジ](./dialectical-graph-edges)参照）:
+**エッジ型**:
 
 - [Attack](./attack) — 真偽への直接的な異議
 - [Undercut](./undercut) — 根拠への異議

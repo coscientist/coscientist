@@ -1,19 +1,19 @@
 ---
 title: Síntese de Conhecimento
-description: Como a síntese difere da média em sistemas dialéticos de conhecimento
+description: Como a síntese difere de fazer uma média em sistemas dialéticos de conhecimento
 sourceLocale: en
-sourceHash: 8035aade2986
+sourceHash: 7d59b577f2e7
 translatedAt: 2026-01-14
 ---
 
-A síntese de conhecimento é o que acontece após a recuperação , quando você
+A síntese de conhecimento é o que acontece após a recuperação, quando você
 precisa tornar fontes incompatíveis comparáveis. Não é fazer uma média. É
 alinhar premissas, definições e escopo para que os desacordos se tornem objetos
-explícitos, em vez de ruído.
+explícitos, em vez de ruído. Veja [Mecanismos de Síntese](./synthesis-mechanisms).
 
 O [RAG](./rag) padrão é forte em recuperação e fraco em síntese porque não tem
 um objeto interno chamado [contenda](./contention). Em um
-[Grafo Dialético](./dialectical-graph), a contenda é de primeira classe , então
+[Grafo Dialético](./dialectical-graph), a contenda é de primeira classe, então
 o sistema pode decompor a incompatibilidade em suas causas: diferenças de
 definição, diferenças de amostragem, diferenças de método, diferenças de escopo
 ou [não estacionariedade](./nonstationarity) orientada pelo tempo.

@@ -1,15 +1,16 @@
 ---
 title: Wissenssynthese
-description: Wie sich Synthese von Mittelung in dialektischen Wissenssystemen unterscheidet
+description: Wie sich Synthese vom Mitteln in dialektischen Wissenssystemen unterscheidet
 sourceLocale: en
-sourceHash: 8035aade2986
+sourceHash: 7d59b577f2e7
 translatedAt: 2026-01-14
 ---
 
 Wissenssynthese ist das, was nach dem Retrieval passiert, wenn man inkompatible
 Quellen vergleichbar machen muss. Sie ist keine Mittelung. Sie bedeutet,
 Prämissen, Definitionen und Geltungsbereich so aufeinander auszurichten, dass
-Meinungsverschiedenheiten zu expliziten Objekten werden statt zu Rauschen.
+Meinungsverschiedenheiten zu expliziten Objekten werden statt zu Rauschen. Siehe
+[Synthesemechanismen](./synthesis-mechanisms).
 
 Standard-[RAG](./rag) ist stark beim Retrieval und schwach bei der Synthese,
 weil es kein internes Objekt namens [Streitpunkt](./contention) kennt. In einem
@@ -29,7 +30,7 @@ das Issue gelöst werden kann.
 
 Das Ziel ist eine Karte der Widersprüche plus explizite Auflösungsbedingungen,
 damit zukünftige Arbeit Wissen durch Umordnung statt durch Umschreiben
-aktualisieren kann. Deshalb zielt die contemplative AI in
+aktualisieren kann. Deshalb zielt die contemplation AI in
 [Kozientist](./coscientist) darauf ab, Dokumente kollidieren zu lassen:
 Issue-Cluster zu erzeugen, Bedingungen zu verfeinern, strukturierte
 Widerlegungen zu erstellen und explizite Koordinatensysteme für den Vergleich

@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: b3abf2d73b65
 translatedAt: 2026-01-14
 ---
+
 [সহ-বিজ্ঞানী](./coscientist)-এর শুধু রিট্রিভাল নয়: এর দরকার [অন্বেষণ প্রক্রিয়া](./exploration-mechanisms)
 যা [দ্বান্দ্বিক গ্রাফ](./dialectical-graph)-এ সক্রিয়ভাবে বিরোধ , সীমা-শর্ত , এবং
 পদ্ধতি-নির্ভরতা উন্মোচন করে।

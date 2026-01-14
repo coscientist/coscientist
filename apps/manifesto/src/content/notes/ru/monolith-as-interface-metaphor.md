@@ -1,8 +1,8 @@
 ---
 title: Монолит как метафора интерфейса
-description: Как Монолит вдохновляет навигацию со скользящими панелями
+description: Как Монолит формирует навигацию со скользящими панелями
 sourceLocale: en
-sourceHash: 555ec31ef810
+sourceHash: 406d93dbb744
 translatedAt: 2026-01-14
 ---
 

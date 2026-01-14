@@ -1,10 +1,8 @@
 ---
 title: Coscientist
-description:
-  Um sistema de companhia intelectual para produção de conhecimento na era
-  pós-IA
+description: Um sistema de companheiro intelectual para produção de conhecimento na era pós-IA
 sourceLocale: en
-sourceHash: 9ef4ae7abd93
+sourceHash: 19a7f6d48c09
 translatedAt: 2026-01-14
 ---
 
@@ -19,8 +17,8 @@ Coscientist é um serviço open-source inspirado na fictícia
 agência.
 
 Ele é construído por [Sunghyun Cho](./sunghyun-cho). A história de origem é
-direta: preservação importa, mas preservação por si só não produz compreensão. O
-Coscientist foi projetado para tornar o conhecimento atualizável, de modo que
+direta: preservação importa, mas preservação por si só não produz compreensão
+([Tokens ≠ Conhecimento](./index)). O Coscientist foi projetado para tornar o conhecimento atualizável, de modo que
 contradições, contraexemplos e [deriva de definição](./definition-drift) se
 tornem visíveis e acionáveis, em vez de serem suavizados por resumos fluentes.
 
@@ -30,20 +28,19 @@ com o [Operador](./operator). Proteger contra o
 uma restrição de projeto. A IA pode fazer trabalho de contemplação, mas não deve
 tomar a iniciativa de escrever e declarar.
 
-É por isso que o Coscientist vai além do RAG no estilo perguntas e respostas
-(veja [limitações do RAG](./rag-limitations)). Ele mantém um
+É por isso que o Coscientist vai além do RAG no estilo perguntas e respostas.
+Ele mantém um
 [Grafo Dialético](./dialectical-graph) que armazena
 [atos argumentativos](./argumentative-act) em vez de texto bruto de documentos,
 para que toda afirmação possa ser vinculada a trechos de evidência, fontes e
-relações explícitas (veja [Nós do Grafo Dialético](./dialectical-graph-nodes) e
-[Arestas do Grafo Dialético](./dialectical-graph-edges)).
+relações explícitas e
+[Arestas do Grafo Dialético](./dialectical-graph-edges).
 
 A exploração é adversarial por padrão. Estratégias como
 [busca primeiro por contraexemplo](./counterexample-first-search), isolamento de
 contradições via [corte mínimo](./minimum-cut), e detecção explícita de
 [deriva de definição](./definition-drift) aplicam pressão cedo, para que o
-conhecimento seja atualizado por refutação em vez de derivar por repetição (veja
-[Estratégias de Exploração](./exploration-strategies)).
+conhecimento seja atualizado por refutação em vez de derivar por repetição.
 
 No nível de protocolo, o sistema usa procedimentos como o
 [Protocolo de Consenso Multi-IA](./multi-ai-consensus-protocol) e

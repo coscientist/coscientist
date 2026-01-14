@@ -1,27 +1,27 @@
 ---
 title: Le Monolithe
-description: Inspiration de design tirée du _2001: A Space Odyssey_ de Kubrick
+description: Inspiration de design tirée de _2001: A Space Odyssey_ de Kubrick
 sourceLocale: en
-sourceHash: fd5c03a09cc7
+sourceHash: aef77e879a9f
 translatedAt: 2026-01-14
 ---
 
-Le Monolithe de _2001: A Space Odyssey_ (1968) de Stanley Kubrick est une machine construite par une ancienne espèce extraterrestre pour accélérer l’intelligence chez des êtres inférieurs. Sa dalle noire, lisse et sans caractéristiques, n’offre aucun manuel d’instructions—seulement une présence. Ceux qui le rencontrent en sont changés, mais le mécanisme demeure opaque.
+Le Monolithe de _2001: A Space Odyssey_ de Stanley Kubrick est une machine construite par une ancienne espèce extraterrestre pour accélérer l’intelligence chez des êtres inférieurs. Sa dalle noire, lisse et sans caractéristiques, n’offre aucun manuel d’instructions—seulement une présence. Ceux qui le rencontrent en sont changés, mais le mécanisme demeure opaque.
 
-Dans les romans d’Arthur C. Clarke, les extraterrestres (les « Premiers-Nés ») ont disséminé des Monolithes à travers la galaxie comme instruments d’élévation. Les singes qui l’ont touché ont gagné l’étincelle de l’usage d’outils. La rencontre de l’humanité sur la Lune a signalé l’aptitude à l’étape suivante.
+Dans les romans d’Arthur C. Clarke, les extraterrestres ont disséminé des Monolithes à travers la galaxie comme instruments d’élévation. Les singes qui l’ont touché ont gagné l’étincelle de l’usage d’outils. La rencontre de l’humanité sur la Lune a signalé l’aptitude à l’étape suivante.
 
 Cette esthétique informe le langage visuel et le modèle d’interaction de [Coscientist](./coscientist). L’[interface à panneaux coulissants](./monolith-as-interface-metaphor) fait écho aux proportions du Monolithe : des dalles verticales s’empilant horizontalement, chacune contenant un savoir qui transforme la compréhension.
 
 ## Principes de design dérivés
 
-- [Mystère et minimalisme](./mystery-minimalism) : Réduire le chrome (UI chrome), laisser le contenu parler
+- [Mystère et minimalisme](./mystery-minimalism) : Réduire le chrome, laisser le contenu parler
 - [Signal sans explication](./signal-without-explanation) : Présenter l’information, faire confiance au lecteur
 - Rythme vertical : les proportions 1:4:9 (1², 2², 3²) apparaissent dans les ratios d’espacement
 - Fondement monochrome : niveaux de gris par défaut, couleur comme signal
 
 ## Pourquoi c’est important
 
-Le Monolithe n’est pas un outil — c’est un catalyseur d’évolution cognitive. [Coscientist](./coscientist) aspire à la même chose : ne pas répondre directement aux questions, mais créer des conditions où la compréhension émerge grâce aux [mécanismes d’exploration](./exploration-mechanisms) et à l’[engagement dialectique](./dialectical-graph).
+Le Monolithe est un catalyseur d’évolution cognitive. [Coscientist](./coscientist) aspire à la même chose : ne pas répondre directement aux questions, mais créer des conditions où la compréhension émerge grâce aux [mécanismes d’exploration](./exploration-mechanisms) et à l’[engagement dialectique](./dialectical-graph).
 
 Dans le film, toucher le Monolithe précède la transformation. Dans cette base de connaissances, cliquer sur un lien ouvre un nouveau panneau — un petit acte susceptible de mener à une évolution conceptuelle.
 

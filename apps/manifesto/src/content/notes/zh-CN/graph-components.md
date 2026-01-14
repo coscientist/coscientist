@@ -2,12 +2,12 @@
 title: 图组件
 description: 构成辩证图的节点与边类型
 sourceLocale: en
-sourceHash: eb17714b277c
+sourceHash: 1c3352deea91
 translatedAt: 2026-01-14
 ---
 
 图组件是 [辩证图](./dialectical-graph)
-的基本构件：用于表示认知对象的节点类型，以及用于表示它们之间关系的边类型。
+的基本构件：用于表示认知对象的 [辩证图节点](./dialectical-graph-nodes)，以及用于表示它们之间 [论证关系](./argumentative-relations) 的 [辩证图边](./dialectical-graph-edges)。
 
 **节点类型**（见 [辩证图节点](./dialectical-graph-nodes)）：
 

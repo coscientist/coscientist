@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: b3abf2d73b65
 translatedAt: 2026-01-14
 ---
+
 [کوسائنٹسٹ](./coscientist) کو محض بازیافت سے زیادہ کی ضرورت ہے: اسے [تلاشی میکانزم](./exploration-mechanisms)
 درکار ہیں جو [جدلیاتی گراف](./dialectical-graph) میں تضادات، حدی شرائط ، اور
 طریقۂ کار پر انحصار کو فعال طور پر سامنے لائے۔

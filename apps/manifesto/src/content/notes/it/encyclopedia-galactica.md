@@ -2,12 +2,12 @@
 title: Enciclopedia Galactica
 description: Un concetto per preservare la conoscenza attraverso i secoli bui
 sourceLocale: en
-sourceHash: 94e03a945895
+sourceHash: 5417fe6b3bb4
 translatedAt: 2026-01-14
 ---
 
 L’Enciclopedia Galactica è un dispositivo immaginario nella serie della
-Fondazione di [Isaac Asimov](./isaac-asimov): un vasto archivio concepito per
+[Narrativa della Fondazione](./foundation-fiction) di [Isaac Asimov](./isaac-asimov): un vasto archivio concepito per
 preservare la conoscenza umana in vista del collasso della civiltà. È il trope
 dell’[arca della conoscenza](./knowledge-ark) reso istituzione.
 
@@ -25,7 +25,8 @@ dall’archiviazione alla capacità: preservare conta, ma un’enciclopedia che 
 riesce a mantenere la provenienza, far emergere le contraddizioni e aggiornarsi
 tramite confutazioni finirà prima o poi per collassare. L’enciclopedia
 immaginaria diventa un obiettivo di progettazione per uno strumento reale in
-grado di sopravvivere in un ambiente epistemico saturo di IA.
+grado di sopravvivere in un ambiente epistemico saturo di IA, spostandosi
+[Dalla conservazione alla capacità](./from-preservation-to-capability).
 
 Un’enciclopedia degna della galassia dovrebbe necessariamente integrare la
 conoscenza [attraverso gli Sprachräume](./across-the-sprachraums): tra culture,

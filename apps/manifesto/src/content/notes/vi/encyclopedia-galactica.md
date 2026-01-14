@@ -1,16 +1,16 @@
 ---
 title: Bách khoa toàn thư Galactica
-description: Một khái niệm nhằm gìn giữ tri thức xuyên qua những thời kỳ đen tối
+description: Một khái niệm nhằm bảo tồn tri thức xuyên qua những thời kỳ đen tối
 sourceLocale: en
-sourceHash: 94e03a945895
+sourceHash: 5417fe6b3bb4
 translatedAt: 2026-01-14
 ---
 
-Bách khoa toàn thư Galactica là một thiết bị hư cấu trong loạt _Foundation_ của
-[Isaac Asimov](./isaac-asimov): một kho lưu trữ khổng lồ nhằm bảo tồn tri thức
-của nhân loại trước sự sụp đổ của nền văn minh. Nó là mô-típ
-[con tàu lưu giữ tri thức](./knowledge-ark) được thể hiện dưới dạng một định
-chế.
+Bách khoa toàn thư Galactica là một thiết bị hư cấu trong loạt
+[hư cấu _Foundation_](./foundation-fiction) của [Isaac Asimov](./isaac-asimov):
+một kho lưu trữ khổng lồ nhằm bảo tồn tri thức của nhân loại trước sự sụp đổ
+của nền văn minh. Nó là mô-típ [con tàu lưu giữ tri thức](./knowledge-ark) được
+thể hiện dưới dạng một định chế.
 
 Trong câu chuyện, [psychohistory](./psychohistory) của
 [Hari Seldon](./hari-seldon) dự đoán sự sụp đổ của
@@ -23,10 +23,10 @@ là một "hạt giống" chiến lược cho công cuộc tái thiết.
 
 Với [Nhà đồng khoa học](./coscientist), nguồn cảm hứng nằm ở bước chuyển từ lưu
 trữ sang năng lực: bảo tồn là quan trọng, nhưng một bách khoa toàn thư không thể
-giữ được nguồn gốc , làm nổi bật các mâu thuẫn, và cập nhật thông qua phản biện
+giữ được nguồn gốc, làm nổi bật các mâu thuẫn, và cập nhật thông qua phản biện
 thì rốt cuộc sẽ sụp đổ. Bách khoa toàn thư hư cấu trở thành một mục tiêu thiết
 kế cho một công cụ thật có thể tồn tại trong một môi trường nhận thức tràn ngập
-AI.
+AI, dịch chuyển [Từ Bảo tồn sang Năng lực](./from-preservation-to-capability).
 
 Một bách khoa toàn thư xứng tầm thiên hà tất yếu phải tích hợp tri thức
 [xuyên qua các Sprachraums](./across-the-sprachraums): xuyên qua các nền văn

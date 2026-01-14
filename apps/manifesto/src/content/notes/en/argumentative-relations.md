@@ -4,7 +4,7 @@ description: Edge types in a dialectical graph organized by function
 ---
 
 Argumentative relations are the edge types in a
-[Dialectical Graph](./dialectical-graph) that encode how epistemic objects
+[Dialectical Graph](./dialectical-graph) (see also [Graph Components](./graph-components)) that encode how epistemic objects
 relate to each other. They are what distinguish a dialectical graph from a
 topic-similarity graph.
 

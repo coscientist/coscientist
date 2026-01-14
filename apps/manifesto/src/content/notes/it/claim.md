@@ -2,12 +2,12 @@
 title: Affermazione
 description: Una proposizione verificabile memorizzata come nodo in un grafo dialettico
 sourceLocale: en
-sourceHash: 11bb739db24b
+sourceHash: a3b6f4399179
 translatedAt: 2026-01-14
 ---
 
 Un’affermazione è una proposizione verificabile estratta dal testo e memorizzata
-come oggetto di primo livello in un [Grafo Dialettico](./dialectical-graph). Le
+come [nodo del Grafo Dialettico](./dialectical-graph-nodes) di primo livello in un [Grafo Dialettico](./dialectical-graph). (Vedi [Nodi del Grafo Dialettico](./dialectical-graph-nodes).) Le
 affermazioni non sono frasi grezze; sono enunciati normalizzati con dipendenze
 esplicite da [ambito](./scope), [assunzioni](./assumption) e [metodo](./method).
 

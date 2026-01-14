@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: 8c91c1527bf6
 translatedAt: 2026-01-14
 ---
+
 La verificación es el proceso de comprobar si una afirmación se sostiene frente
 a evidencia, contraevidencia y explicaciones alternativas. No es una aceptación
 pasiva: requiere esfuerzo, y ese esfuerzo es lo que distingue el conocimiento de

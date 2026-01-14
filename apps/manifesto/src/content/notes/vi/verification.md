@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: 8c91c1527bf6
 translatedAt: 2026-01-14
 ---
+
 Xác minh là quá trình kiểm tra xem một tuyên bố có đứng vững trước bằng chứng,
 phản bằng chứng và các lời giải thích thay thế hay không. Đây không phải là sự
 chấp nhận thụ động: nó đòi hỏi nỗ lực, và chính nỗ lực đó là điều phân biệt tri

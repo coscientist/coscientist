@@ -1,8 +1,8 @@
 ---
 title: Wielojęzyczna siatka wiedzy
-description: Sieć wiedzy, która obejmuje wiele języków i jest globalnie dystrybuowana
+description: Sieć wiedzy, która obejmuje języki i jest dystrybuowana globalnie
 sourceLocale: en
-sourceHash: d0cefb393fe3
+sourceHash: 6015daf06d5c
 translatedAt: 2026-01-14
 ---
 
@@ -10,7 +10,8 @@ Wielojęzyczna siatka wiedzy to sieć wiedzy, w której treści w dowolnym języ
 mogą łączyć się z treściami w każdym innym języku poprzez wspólne pojęcia, a nie
 dopasowywanie słów. Jest to jeden z przejawów wizji
 [Sunghyun Cho](./sunghyun-cho), polegającej na działaniu
-[ponad Sprachraumami](./across-the-sprachraums).
+[ponad Sprachraumami](./across-the-sprachraums), i krok w stronę
+[Wielojęzycznego Memeksu](./multilingual-memex).
 
 To wykracza poza proste tłumaczenie. W prawdziwie wielojęzycznej siatce notatka
 napisana po koreańsku o jakimś pojęciu łączy się z angielską notatką o tym samym
@@ -30,5 +31,5 @@ Dla [Współnaukowiec](./coscientist) wielojęzyczna siatka ma kluczowe znaczeni
 Nauka globalna obejmuje wiele języków; współpracownik badawczy, który potrafi
 czytać wyłącznie po angielsku, jest z definicji ograniczony.
 [Graf dialektyczny](./dialectical-graph) może przechowywać
-[twierdzenia](./claim) w dowolnym języku, a [pochodzenie ](./provenance) śledzi,
-który język źródłowy doprowadził do jakiego wniosku.
+[twierdzenia](./claim) z dowolnego języka, a [pochodzenie](./provenance) śledzi,
+który język źródłowy wygenerował jaki wgląd.

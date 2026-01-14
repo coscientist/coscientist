@@ -1,10 +1,8 @@
 ---
-title: Memex Multibahasa
-description:
-  Sistem pengetahuan pribadi yang sadar bahasa dengan dukungan terjemahan
-  otomatis
+title: Memex multibahasa
+description: Sistem pengetahuan pribadi yang sadar bahasa dengan dukungan penerjemahan otomatis
 sourceLocale: en
-sourceHash: 4cbc551868c1
+sourceHash: 7f632fdf73b6
 translatedAt: 2026-01-14
 ---
 
@@ -12,7 +10,7 @@ Memex multibahasa adalah sistem pengetahuan pribadi yang secara native mendukung
 konten dalam berbagai bahasa, dengan deteksi bahasa otomatis, penerjemahan, dan
 penautan lintas bahasa. Ia memperluas visi [Memex](./memex) asli
 [Vannevar Bush](./vannevar-bush) ke dunia di mana pengetahuan tidak menghormati
-batas-batas bahasa.
+batas-batas bahasa, sangat menyerupai sebuah [Jala Pengetahuan Multibahasa](./multilingual-knowledge-mesh).
 
 [Extracranial](./extracranial) karya [Sunghyun Cho](./sunghyun-cho) adalah
 implementasi dari konsep ini. Ia mencakup deteksi bahasa otomatis, penyajian
@@ -42,3 +40,7 @@ Bagi [Kosaintis](./coscientist), Memex multibahasa menjadi
 menyimpan [klaim](./claim), [rentang bukti](./evidence-span), serta relasi dari
 bahasa mana pun, dengan memperlakukan bahasa sebagai metadata, bukan sebagai
 batas yang fundamental.
+
+## Terkait
+
+- [Jala Pengetahuan Multibahasa](./multilingual-knowledge-mesh)

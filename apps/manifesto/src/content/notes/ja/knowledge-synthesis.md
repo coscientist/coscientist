@@ -2,11 +2,11 @@
 title: 知識の統合
 description: 弁証法的知識システムにおいて、統合が平均化とどう異なるか
 sourceLocale: en
-sourceHash: 8035aade2986
+sourceHash: 7d59b577f2e7
 translatedAt: 2026-01-14
 ---
 
-知識の統合（synthesis）とは、検索（retrieval）の後に、互換性のない情報源同士を比較可能にしなければならないときに起こるものだ。平均化ではない。前提、定義、スコープを整合させ、意見の不一致をノイズではなく明示的な対象にすることだ。
+知識の統合（synthesis）とは、検索（retrieval）の後に、互換性のない情報源同士を比較可能にしなければならないときに起こるものだ。平均化ではない。前提、定義、スコープを整合させ、意見の不一致をノイズではなく明示的な対象にすることだ。[統合メカニズム（Synthesis Mechanisms）](./synthesis-mechanisms) も参照。
 
 標準的な [RAG](./rag) は検索は強いが統合は弱い。なぜなら内部に
 [contention](./contention)

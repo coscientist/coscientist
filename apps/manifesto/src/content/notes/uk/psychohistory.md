@@ -1,8 +1,8 @@
 ---
 title: Психоісторія
-description: Вигадана статистична наука в циклі «Фундація» Азімова
+description: Вигадана статистична наука в «Фундації» Азімова
 sourceLocale: en
-sourceHash: ddd31577b00d
+sourceHash: 4bcddff1ac41
 translatedAt: 2026-01-14
 ---
 
@@ -14,4 +14,4 @@ translatedAt: 2026-01-14
 стабільних припущень.
 
 Вона є науковою основою для [Плану Селдона](./seldon-plan) та створення
-[Енциклопедії Галактики](./encyclopedia-galactica).
+[Енциклопедії Галактики](./encyclopedia-galactica), розробленого [Гарі Селдоном](./hari-seldon).

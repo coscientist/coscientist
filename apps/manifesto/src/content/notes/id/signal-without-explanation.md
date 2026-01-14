@@ -15,7 +15,7 @@ kekejaman—ini adalah rasa hormat.
 Sajikan informasi dengan jelas. Jangan menjelaskan berlebihan. Percayai
 kecerdasan pembaca.
 
-Ketika dokumentasi menutupi setiap pernyataan dengan kehati-hatian (caveat), kualifikasi, dan
+Ketika dokumentasi menutupi setiap pernyataan dengan kehati-hatian , kualifikasi, dan
 tuntunan yang terlalu memanjakan, itu menyampaikan keraguan pada pembaca. Ketika ia
 menyatakan fakta secara lugas, itu menyampaikan kepercayaan.
 

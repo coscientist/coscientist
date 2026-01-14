@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: b3abf2d73b65
 translatedAt: 2026-01-14
 ---
+
 [Kosaintis](./coscientist) membutuhkan lebih dari sekadar retrieval: ia membutuhkan [mekanisme eksplorasi](./exploration-mechanisms)
 yang secara aktif memunculkan kontradiksi, kondisi batas, dan ketergantungan pada metode dalam [Graf Dialektik](./dialectical-graph).
 

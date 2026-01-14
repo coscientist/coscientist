@@ -1,13 +1,15 @@
 ---
 title: Phân loại Trạng thái Mệnh đề
-description: Các trạng thái mà một mệnh đề có thể ở trong một đồ thị biện chứng
+description: Các trạng thái mà một mệnh đề có thể ở trong một Đồ thị Biện chứng
 sourceLocale: en
-sourceHash: e713e484c72f
+sourceHash: ece55705e1ef
 translatedAt: 2026-01-14
 ---
 
 Phân loại trạng thái mệnh đề xác định các trạng thái mà một [mệnh đề](./claim)
-có thể chiếm trong một [Đồ thị Biện chứng](./dialectical-graph).
+có thể chiếm trong một [Đồ thị Biện chứng](./dialectical-graph). Để biết một
+mệnh đề thường di chuyển qua các trạng thái này theo thời gian như thế nào, xem
+[Vòng đời Mệnh đề](./claim-lifecycle).
 
 ## Các Trạng thái Phổ biến
 
@@ -27,4 +29,5 @@ thái đa chiều nắm bắt được sự phức tạp này.
 Các chuyển trạng thái được thúc đẩy bởi loại phản biện, không phải số lượng. Chỉ
 một [phản ví dụ](./counterexample) duy nhất nhưng có bằng chứng mạnh cũng có thể
 chuyển một mệnh đề từ robust sang refuted; nhiều phản đối yếu có thể khiến nó
-vẫn contested mà không đi đến phân giải.
+vẫn contested mà không đi đến phân giải. Xem [Quy tắc Chuyển đổi Trạng thái](./status-transition-rules)
+để biết logic chuyển đổi hình thức.

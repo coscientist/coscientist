@@ -1,8 +1,8 @@
 ---
 title: Piège de la fluidité
-description: Confondre une prose IA fluide avec l’exactitude
+description: Confondre une prose d’IA fluide avec l’exactitude
 sourceLocale: en
-sourceHash: d8010bfe6bcb
+sourceHash: dde3d8c7519c
 translatedAt: 2026-01-14
 ---
 
@@ -10,7 +10,8 @@ Le piège de la fluidité est le biais cognitif qui consiste à considérer une
 prose fluide, au ton assuré, comme exacte. Parce que les [LLMs](./llm)
 optimisent la production de jetons suivants plausibles, leur sortie se lit
 souvent bien même lorsqu’elle est fausse. La fluidité imite les caractéristiques
-de surface de l’expertise sans la vérification sous-jacente.
+de surface de l’expertise sans la vérification sous-jacente, alimentant les
+[Illusions de compétence induites par l’IA](./ai-induced-illusions-of-competence).
 
 Ce piège est un mécanisme clé de
 l’[Effondrement de l’Encyclopédie](./encyclopedia-meltdown) : lorsque les

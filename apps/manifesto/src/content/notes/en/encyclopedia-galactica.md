@@ -4,7 +4,7 @@ description: A concept for preserving knowledge across dark ages
 ---
 
 The Encyclopedia Galactica is a fictional device in
-[Isaac Asimov](./isaac-asimov)'s Foundation series: a vast repository intended
+[Isaac Asimov](./isaac-asimov)'s [Foundation Fiction](./foundation-fiction) series: a vast repository intended
 to preserve human knowledge ahead of civilizational collapse. It is the
 [knowledge ark](./knowledge-ark) trope rendered as an institution.
 
@@ -20,7 +20,7 @@ For [Coscientist](./coscientist), the inspiration is the move from storage to
 capability: preservation matters, but an encyclopedia that cannot keep
 provenance, surface contradictions, and update by rebuttal will eventually melt
 down. The fictional encyclopedia becomes a design target for a real tool that
-can survive an AI-saturated epistemic environment.
+can survive an AI-saturated epistemic environment, shifting [From Preservation to Capability](./from-preservation-to-capability).
 
 An encyclopedia worthy of the galaxy would necessarily integrate knowledge
 [across the Sprachraums](./across-the-sprachraums): across cultures, tongues,

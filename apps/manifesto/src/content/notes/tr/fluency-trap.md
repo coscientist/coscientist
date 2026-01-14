@@ -1,15 +1,15 @@
 ---
-title: Akıcılık Tuzağı
-description: Akıcı yapay zekâ nesrini doğrulukla karıştırmak
+title: Akıcılık tuzağı
+description: Akıcı yapay zekâ nesrini doğruluk sanmak
 sourceLocale: en
-sourceHash: d8010bfe6bcb
+sourceHash: dde3d8c7519c
 translatedAt: 2026-01-14
 ---
 
 Akıcılık tuzağı, akıcı ve kendinden emin tınlayan nesri doğru kabul etme
 bilişsel yanlılığıdır. [LLM'ler](./llm) makul bir sonraki token'ları optimize
 ettiği için, çıktıları yanlış olduğunda bile çoğu zaman iyi okunur. Akıcılık,
-alttaki doğrulama olmadan uzmanlığın yüzey özelliklerini taklit eder.
+alttaki doğrulama olmadan uzmanlığın yüzey özelliklerini taklit eder ve [Yapay Zekâ Kaynaklı Yeterlilik Yanılsamaları](./ai-induced-illusions-of-competence)'nı körükler.
 
 Bu tuzak, [Ansiklopedi Çöküşü](./encyclopedia-meltdown) içinde kilit bir
 mekanizmadır: kullanıcılar yapay zekâ çıktısını "kulağa doğru geliyor" diye

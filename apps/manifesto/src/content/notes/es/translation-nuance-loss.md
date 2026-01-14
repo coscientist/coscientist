@@ -1,15 +1,13 @@
 ---
 title: Pérdida de matiz en la traducción
-description:
-  Las sutilezas semánticas que desaparecen cuando las ideas cruzan fronteras
-  lingüísticas
+description: Las sutilezas semánticas que desaparecen cuando las ideas cruzan fronteras lingüísticas
 sourceLocale: en
-sourceHash: aef048dd4f50
+sourceHash: b702bb1401b7
 translatedAt: 2026-01-14
 ---
 
 La pérdida de matiz en la traducción es el despojo de sutilezas semánticas
-cuando las ideas se traducen de un idioma a otro. Incluye la pérdida de
+cuando las ideas se traducen de un idioma a otro, reduciendo la [Fidelidad de la traducción](./translation-fidelity). Incluye la pérdida de
 connotación, contexto cultural, supuestos implícitos y el sabor específico que
 hace que una expresión sea significativa en su [Sprachraum](./sprachraum)
 original.
@@ -23,8 +21,7 @@ enmascarar errores sutiles, del mismo modo que la
 [trampa de la fluidez](./fluency-trap) hace que una prosa de IA suave parezca
 precisa cuando puede no serlo.
 
-Abundan los ejemplos: un concepto japonés como "wa" (armonía, pero también
-evitación, dependiente del contexto, del conflicto directo) no se corresponde
+Abundan los ejemplos: un concepto japonés como "wa" no se corresponde
 limpiamente con ninguna palabra en inglés. Un sustantivo compuesto alemán
 concentra significado que en inglés requiere una frase. La terminología técnica
 en un campo puede tener connotaciones distintas en la traducción a otro idioma.

@@ -1,8 +1,8 @@
 ---
-title: 作為介面隱喻的 Monolith
+title: Monolith 作為介面隱喻
 description: Monolith 如何啟發滑動窗格導覽
 sourceLocale: en
-sourceHash: 555ec31ef810
+sourceHash: 406d93dbb744
 translatedAt: 2026-01-14
 ---
 
@@ -10,7 +10,7 @@ translatedAt: 2026-01-14
 
 ## 比例與空間
 
-Monolith 的 1:4:9 比例（1、2、3 的平方）在整個介面中反覆出現：
+Monolith 的 1:4:9 比例在整個介面中反覆出現：
 
 - 窗格堆疊時的寬度比例
 - 文字排版的垂直節奏
@@ -32,7 +32,7 @@ Monolith 的 1:4:9 比例（1、2、3 的平方）在整個介面中反覆出現
 
 ## 透過不透明度營造深度
 
-[Monolith](./monolith) 標誌使用三條長條，分別為 100%、50% 與 20% 的不透明度。這暗示出深度——Monolith 向遠處逐漸退去。介面也使用類似的不透明度漸層，用來表示焦點與關聯性。
+[Monolith](./monolith) 標誌使用三條長條，分別為 100%、50% 與 20% 的不透明度。這暗示出深度——Monoliths 向遠處逐漸退去。介面也使用類似的不透明度漸層，用來表示焦點與關聯性。
 
 ## 相關
 

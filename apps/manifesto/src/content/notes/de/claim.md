@@ -1,16 +1,14 @@
 ---
 title: Behauptung
-description:
-  Eine überprüfbare Aussage, die als Knoten in einem dialektischen Graphen
-  gespeichert ist
+description: Eine überprüfbare Aussage, die als Knoten in einem dialektischen Graphen gespeichert wird
 sourceLocale: en
-sourceHash: 11bb739db24b
+sourceHash: a3b6f4399179
 translatedAt: 2026-01-14
 ---
 
 Eine Behauptung ist eine überprüfbare Aussage, die aus Text extrahiert und als
-Objekt erster Klasse in einem [Dialektischen Graphen](./dialectical-graph)
-gespeichert wird. Behauptungen sind keine rohen Sätze; sie sind normalisierte
+Knoten erster Klasse im [Dialektischen Graphen](./dialectical-graph) als [Knoten des Dialektischen Graphen](./dialectical-graph-nodes)
+gespeichert wird. (Siehe [Knoten des Dialektischen Graphen](./dialectical-graph-nodes).) Behauptungen sind keine rohen Sätze; sie sind normalisierte
 Aussagen mit expliziten Abhängigkeiten von [Geltungsbereich](./scope),
 [Annahmen](./assumption) und [Methode](./method).
 

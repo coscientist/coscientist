@@ -7,7 +7,8 @@ A multilingual knowledge mesh is a knowledge network where content in any
 language can connect to content in any other language through shared concepts
 rather than word matching. It is one expression of
 [Sunghyun Cho](./sunghyun-cho)'s vision of going
-[across the Sprachraums](./across-the-sprachraums).
+[across the Sprachraums](./across-the-sprachraums), and a step toward a
+[Multilingual Memex](./multilingual-memex).
 
 This goes beyond simple translation. In a true multilingual mesh, a note written
 in Korean about a concept links to an English note about the same concept via

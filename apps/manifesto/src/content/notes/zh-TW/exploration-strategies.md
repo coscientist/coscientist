@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: b3abf2d73b65
 translatedAt: 2026-01-14
 ---
+
 [共科學家](./coscientist)
 需要的不只是檢索：它需要[探索機制](./exploration-mechanisms)，能主動浮現矛盾、邊界條件，以及在[辯證圖](./dialectical-graph)中對方法相依性（method
 dependence）的探索。

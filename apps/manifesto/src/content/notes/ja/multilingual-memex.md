@@ -1,13 +1,13 @@
 ---
 title: 多言語Memex
-description: 自動翻訳支援を備えた言語対応のパーソナル知識システム
+description: 自動翻訳サポートを備えた言語対応のパーソナル知識システム
 sourceLocale: en
-sourceHash: 4cbc551868c1
+sourceHash: 7f632fdf73b6
 translatedAt: 2026-01-14
 ---
 
 多言語Memexとは、複数言語のコンテンツをネイティブにサポートし、自動言語検出、翻訳、言語横断的なリンクを備えたパーソナル知識システムである。これは、知識が言語の境界に縛られない世界に向けて、[Vannevar Bush](./vannevar-bush)
-のオリジナルの [Memex](./memex) 構想を拡張するものだ。
+のオリジナルの [Memex](./memex) 構想を拡張するものだ。さらに、[多言語ナレッジ・メッシュ](./multilingual-knowledge-mesh) に非常に近い。
 
 [Sunghyun Cho](./sunghyun-cho) の [Extracranial](./extracranial)
 は、この概念の実装例である。自動言語検出、hreflang タグを用いたロケール別配信、そして「ある言語で書きつつ、他言語での配信は翻訳システムに任せる」能力を含んでいる。
@@ -20,9 +20,13 @@ translatedAt: 2026-01-14
   は、「誰が何を主張したか」だけでなく、「どの言語で、どの翻訳手法を介して」主張されたのかも追跡しなければならない。
 
 このため [Extracranial](./extracranial)
-は、翻訳を改善するために GitHub を介したコミュニティ貢献を検討している。機械翻訳は多言語コンテンツを可能にするが、[翻訳の忠実性](./translation-fidelity)
+は、翻訳を洗練させるために GitHub を介したコミュニティ貢献を検討している。機械翻訳は多言語コンテンツを可能にするが、[翻訳の忠実性](./translation-fidelity)
 を維持するには人間によるレビューが必要だ。多言語Memexは解決済みの問題ではなく、自動化システムと人間の判断の継続的な協働である。
 
 [コサイエンティスト](./coscientist) にとって、多言語Memexは多言語の
 [弁証法グラフ](./dialectical-graph) となる。すなわち、どの言語からでも
 [主張](./claim)、[エビデンス・スパン](./evidence-span)、およびそれらの関係を保存し、言語を根本的な境界ではなくメタデータとして扱う構造である。
+
+## 関連
+
+- [多言語ナレッジ・メッシュ](./multilingual-knowledge-mesh)

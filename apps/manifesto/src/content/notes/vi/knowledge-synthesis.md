@@ -1,17 +1,15 @@
 ---
 title: Tổng hợp tri thức
-description:
-  Tổng hợp khác với việc lấy trung bình như thế nào trong các hệ thống tri thức
-  biện chứng
+description: Tổng hợp khác với lấy trung bình như thế nào trong các hệ thống tri thức biện chứng
 sourceLocale: en
-sourceHash: 8035aade2986
+sourceHash: 7d59b577f2e7
 translatedAt: 2026-01-14
 ---
 
 Tổng hợp tri thức là điều xảy ra sau khi truy hồi, khi bạn phải làm cho các
 nguồn không tương thích trở nên có thể so sánh được. Nó không phải là lấy trung
 bình. Đó là việc căn chỉnh các tiền đề, định nghĩa và phạm vi để những bất đồng
-trở thành các đối tượng tường minh thay vì nhiễu.
+trở thành các đối tượng tường minh thay vì nhiễu. Xem [Các cơ chế tổng hợp](./synthesis-mechanisms).
 
 [RAG](./rag) tiêu chuẩn mạnh về truy hồi và yếu về tổng hợp vì nó không có một
 đối tượng nội bộ gọi là [tranh chấp](./contention). Trong một

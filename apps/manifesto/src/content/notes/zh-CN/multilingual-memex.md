@@ -1,14 +1,14 @@
 ---
 title: 多语言 Memex
-description: 具备自动翻译支持、可感知语言的个人知识系统
+description: 一种具备自动翻译支持、具备语言感知能力的个人知识系统
 sourceLocale: en
-sourceHash: 4cbc551868c1
+sourceHash: 7f632fdf73b6
 translatedAt: 2026-01-14
 ---
 
 多语言 Memex 是一种个人知识系统，原生支持多种语言内容，并具备自动语言检测、翻译以及跨语言链接能力。它将
 [范内瓦·布什](./vannevar-bush) 最初的 [记忆延伸器](./memex)
-构想扩展到一个知识不再受语言边界限制的世界。
+构想扩展到一个知识不再受语言边界限制的世界，并与[多语言知识网格](./multilingual-knowledge-mesh) 高度相似。
 
 [曹成贤](./sunghyun-cho) 的 [Extracranial](./extracranial)
 是这一概念的实现。它包含自动语言检测、使用 hreflang 标签按地区/语言（locale）定向分发内容的能力，以及允许你用一种语言写作、同时让翻译系统负责以其他语言进行呈现的机制。
@@ -28,3 +28,7 @@ translatedAt: 2026-01-14
 [辩证图谱](./dialectical-graph)：一种能够存储任意语言的
 [主张](./claim)、[证据片段](./evidence-span)
 及其关系的结构，将语言视为元数据，而非根本性的边界。
+
+## 相关
+
+- [多语言知识网格](./multilingual-knowledge-mesh)

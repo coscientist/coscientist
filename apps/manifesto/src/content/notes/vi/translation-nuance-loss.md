@@ -1,14 +1,14 @@
 ---
-title: Sự mất mát sắc thái khi dịch
-description: Những tinh tế về ngữ nghĩa biến mất khi ý tưởng băng qua ranh giới ngôn ngữ
+title: Mất mát sắc thái khi dịch
+description: Những tinh tế về ngữ nghĩa biến mất khi ý tưởng vượt qua ranh giới ngôn ngữ
 sourceLocale: en
-sourceHash: aef048dd4f50
+sourceHash: b702bb1401b7
 translatedAt: 2026-01-14
 ---
 
 Sự mất mát sắc thái khi dịch là việc các tinh tế về ngữ nghĩa bị tước bỏ khi ý
-tưởng được dịch từ ngôn ngữ này sang ngôn ngữ khác. Nó bao gồm việc mất đi hàm ý
-, bối cảnh văn hoá, các giả định ngầm, và "hương vị" riêng khiến một cách diễn
+tưởng được dịch từ ngôn ngữ này sang ngôn ngữ khác, làm giảm [Độ trung thực của bản dịch](./translation-fidelity). Nó bao gồm việc mất đi hàm ý,
+bối cảnh văn hoá, các giả định ngầm, và "hương vị" riêng khiến một cách diễn
 đạt trở nên có ý nghĩa trong [Sprachraum](./sprachraum) nguyên bản của nó.
 
 Đây là mối quan tâm trung tâm đối với tầm nhìn của
@@ -19,8 +19,7 @@ thái trở nên có hệ thống. Một bản dịch trôi chảy có thể che
 vi, giống như [cái bẫy trôi chảy](./fluency-trap) khiến văn xuôi AI mượt mà
 trông có vẻ chính xác dù thực tế có thể không phải vậy.
 
-Ví dụ thì rất nhiều: một khái niệm tiếng Nhật như "wa" (hài hoà, nhưng cũng là
-sự tránh né xung đột trực tiếp tuỳ theo bối cảnh) không ánh xạ gọn gàng sang bất
+Ví dụ thì rất nhiều: một khái niệm tiếng Nhật như "wa" không ánh xạ gọn gàng sang bất
 kỳ từ tiếng Anh nào. Một danh từ ghép tiếng Đức có thể nén chặt ý nghĩa đến mức
 khi sang tiếng Anh phải dùng cả một cụm từ mới diễn đạt được. Thuật ngữ kỹ thuật
 trong một lĩnh vực có thể mang những hàm ý khác khi được dịch sang một ngôn ngữ
@@ -29,9 +28,9 @@ khác.
 Cách phòng vệ không phải là tránh dịch, mà là thừa nhận các giới hạn của nó.
 [Nhà đồng khoa học](./coscientist) phải theo dõi khi nào một
 [khẳng định](./claim) đã đi qua quá trình dịch, lưu giữ nguồn bằng ngôn ngữ gốc
-trong [nguồn gốc ](./provenance), và đánh dấu những chỗ có thể đã mất sắc thái.
-[Xác minh ](./verification) nội dung đã dịch nên bao gồm việc kiểm tra liệu bản
-dịch có giữ được ý định nghĩa , chứ không chỉ là các từ theo nghĩa đen.
+trong [nguồn gốc](./provenance), và đánh dấu những chỗ có thể đã mất sắc thái.
+[Xác minh](./verification) nội dung đã dịch nên bao gồm việc kiểm tra liệu bản
+dịch có giữ được ý nghĩa dự định, chứ không chỉ là các từ theo nghĩa đen.
 
 Đối với tầm nhìn [Bách khoa toàn thư Thiên hà](./encyclopedia-galactica), sự mất
 mát sắc thái khi dịch là một rủi ro mang tính sống còn: một bộ bách khoa toàn

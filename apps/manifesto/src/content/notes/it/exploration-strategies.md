@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: b3abf2d73b65
 translatedAt: 2026-01-14
 ---
+
 [Coscienziato](./coscientist) ha bisogno di più del semplice recupero: ha
 bisogno di [meccanismi di esplorazione](./exploration-mechanisms)
 che facciano emergere attivamente contraddizioni, condizioni al contorno e dipendenza dal metodo nel

@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: 8c91c1527bf6
 translatedAt: 2026-01-14
 ---
+
 Verifikation ist der Prozess, zu prüfen, ob eine Behauptung gegenüber Evidenz,
 Gegenbelegen und alternativen Erklärungen standhält. Sie ist keine passive
 Akzeptanz: Sie erfordert Aufwand, und genau dieser Aufwand unterscheidet Wissen

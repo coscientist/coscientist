@@ -1,8 +1,8 @@
 ---
 title: التاريخ النفسي
-description: علمٌ إحصائيٌّ خيالي في سلسلة «المؤسسة» لأسيموف
+description: علمٌ إحصائي خيالي في سلسلة «المؤسسة» لأسيموف
 sourceLocale: en
-sourceHash: ddd31577b00d
+sourceHash: 4bcddff1ac41
 translatedAt: 2026-01-14
 ---
 
@@ -13,4 +13,4 @@ translatedAt: 2026-01-14
 للتوقّع في ظل افتراضاتٍ مستقرة.
 
 وهو الأساس العلمي لـ[خطة سلدون](./seldon-plan) وإنشاء
-[الموسوعة المجرّية](./encyclopedia-galactica).
+[الموسوعة المجرّية](./encyclopedia-galactica)، التي طوّرها [هاري سلدون](./hari-seldon).

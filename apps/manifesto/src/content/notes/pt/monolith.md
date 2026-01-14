@@ -2,18 +2,18 @@
 title: O Monólito
 description: Inspiração de design a partir de _2001: Uma Odisseia no Espaço_, de Kubrick
 sourceLocale: en
-sourceHash: fd5c03a09cc7
+sourceHash: aef77e879a9f
 translatedAt: 2026-01-14
 ---
 
-O Monólito de _2001: Uma Odisseia no Espaço_ (1968), de Stanley Kubrick, é uma
+O Monólito de _2001: Uma Odisseia no Espaço_ , de Stanley Kubrick, é uma
 máquina construída por uma antiga espécie extraterrestre para acelerar a
 inteligência em seres inferiores. Sua laje preta, sem características, não
 oferece manual de instruções — apenas presença. Aqueles que o encontram são
 mudados, mas o mecanismo permanece opaco.
 
-Nos romances de Arthur C. Clarke, os alienígenas (os “Primeiros Nascidos”)
-semearam Monólitos pela galáxia como instrumentos de elevação. Os macacos que o
+Nos romances de Arthur C. Clarke, os alienígenas semearam Monólitos
+pela galáxia como instrumentos de elevação. Os macacos que o
 tocaram ganharam a centelha do uso de ferramentas. O encontro da humanidade na
 Lua sinalizou prontidão para a próxima etapa.
 
@@ -24,7 +24,7 @@ cada uma contendo conhecimento que transforma a compreensão.
 
 ## Princípios de Design Derivados
 
-- [Mistério e Minimalismo](./mystery-minimalism): Reduza a “cromagem” (chrome), deixe o conteúdo falar
+- [Mistério e Minimalismo](./mystery-minimalism): Reduza a “cromagem” , deixe o conteúdo falar
 - [Sinal sem Explicação](./signal-without-explanation): Apresente a informação, confie no leitor
 - Ritmo vertical: as proporções 1:4:9 (1², 2², 3²) aparecem em razões de espaçamento
 - Base monocromática: escala de cinza como padrão, cor como sinal

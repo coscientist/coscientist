@@ -2,18 +2,18 @@
 title: Diyalektik Grafik Düğümleri
 description: Diyalektik bir bilgi grafiğindeki düğüm türleri
 sourceLocale: en
-sourceHash: b451261d8474
+sourceHash: 007206ea7078
 translatedAt: 2026-01-14
 ---
 
 Bir [Diyalektik Grafik](./dialectical-graph) içinde düğümler, ham metin yerine
-epistemik nesneleri temsil eder. Yaygın düğüm türleri şunlardır:
+epistemik nesneleri temsil eder. Bu parçaların nasıl bir araya geldiğine dair bir
+genel bakış için [Grafik Bileşenleri](./graph-components) bölümüne bakın. Yaygın düğüm türleri şunlardır:
 
 - [İddia](./claim) — doğrulanabilir önermeler
 - [Kapsam](./scope) — uygulanabilirlik koşulları
 - [Varsayım](./assumption) — örtük öncüller
-- Tanımlar — terim anlamları (zaman içinde [Tanım Kayması](./definition-drift)
-  aracılığıyla izlenir)
+- Tanımlar — terim anlamları )
 - [Yöntem](./method) — kanıt veya sonuç üreten prosedürler
 - Veri — ölçümler veya sonuçlar
 - [Kanıt Aralığı](./evidence-span) — tam alıntılanmış aralıklar
@@ -27,7 +27,6 @@ ve önceki bir sonucu çürütebilir; bilginin yalnızca birikmek yerine
 güncellenmesini istiyorsanız, bunların her biri ayrı ayrı ele alınabilir
 kalmalıdır.
 
-İddia durumu, tek bir güven puanı yerine çok boyutludur (bkz.
-[İddia Durumu Taksonomisi](./claim-status-taxonomy)). Geçişler, itirazların
-sayısından ziyade itirazın türü ve kapsam, varsayım, tanım veya yöntem düzeyinde
-başarılı olup olmamasına daha çok bağlıdır.
+İddia durumu, tek bir güven puanı yerine çok boyutludur ).
+Geçişler, itirazların sayısından ziyade itirazın türü ve kapsam, varsayım, tanım veya yöntem düzeyinde
+başarılı olup olmamasına daha çok bağlıdır; bkz. [Diyalektik Grafik Kenarları](./dialectical-graph-edges).

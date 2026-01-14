@@ -1,14 +1,15 @@
 ---
-title: Dialectische Graafknooppunten
+title: Knooppunten in een Dialectische Graaf
 description: De knooppunttypen in een dialectische kennisgraaf
 sourceLocale: en
-sourceHash: b451261d8474
+sourceHash: 007206ea7078
 translatedAt: 2026-01-14
 ---
 
 In een [Dialectische Graaf](./dialectical-graph) vertegenwoordigen knooppunten
-epistemische objecten in plaats van ruwe tekst. Veelvoorkomende knooppunttypen
-zijn:
+epistemische objecten in plaats van ruwe tekst. Voor een overzicht van hoe deze
+stukken in elkaar passen, zie [Grafcomponenten](./graph-components).
+Veelvoorkomende knooppunttypen zijn:
 
 - [Claim](./claim) — verifieerbare proposities
 - [Scope](./scope) — voorwaarden voor toepasbaarheid
@@ -30,4 +31,4 @@ louter geaccumuleerd.
 Claimstatus is multidimensionaal in plaats van één enkele vertrouwensscore ).
 Overgangen worden minder gedreven door het aantal weerleggingen en meer door het
 soort weerlegging en of die slaagt op het niveau van scope, aanname, definitie
-of methode.
+of methode; zie [Dialectische Graaf-randen](./dialectical-graph-edges).

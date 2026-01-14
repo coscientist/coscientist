@@ -1,10 +1,8 @@
 ---
-title: Memex Multilíngue
-description:
-  Um sistema de conhecimento pessoal sensível ao idioma, com suporte a tradução
-  automática
+title: Memex multilíngue
+description: Um sistema de conhecimento pessoal sensível ao idioma com suporte a tradução automática
 sourceLocale: en
-sourceHash: 4cbc551868c1
+sourceHash: 7f632fdf73b6
 translatedAt: 2026-01-14
 ---
 
@@ -12,7 +10,7 @@ Um Memex multilíngue é um sistema de conhecimento pessoal que oferece suporte
 nativo a conteúdo em vários idiomas, com detecção automática de idioma, tradução
 e vinculação entre línguas. Ele estende a visão original de [Memex](./memex) de
 [Vannevar Bush](./vannevar-bush) para um mundo em que o conhecimento não
-respeita fronteiras linguísticas.
+respeita fronteiras linguísticas, assemelhando-se de perto a uma [Malha de Conhecimento Multilíngue](./multilingual-knowledge-mesh).
 
 O [Extracranial](./extracranial) de [Sunghyun Cho](./sunghyun-cho) é uma
 implementação desse conceito. Ele inclui detecção automática de idioma, entrega
@@ -40,3 +38,7 @@ Para o [Cocientista](./coscientist), o Memex multilíngue torna-se o
 [alegações](./claim), [trechos de evidência](./evidence-span) e relações de
 qualquer idioma, tratando o idioma como metadado em vez de uma fronteira
 fundamental.
+
+## Relacionado
+
+- [Malha de Conhecimento Multilíngue](./multilingual-knowledge-mesh)

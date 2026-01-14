@@ -2,14 +2,15 @@
 title: 다국어 메멕스
 description: 자동 번역 지원을 갖춘 언어 인지형 개인 지식 시스템
 sourceLocale: en
-sourceHash: 4cbc551868c1
+sourceHash: 7f632fdf73b6
 translatedAt: 2026-01-14
 ---
 
 다국어 메멕스는 여러 언어의 콘텐츠를 네이티브로 지원하는 개인 지식 시스템으로,
 자동 언어 감지, 번역, 그리고 언어 간 링크를 포함한다. 이는 지식이 언어 경계를
 따르지 않는 세계를 위해 [버니바 부시](./vannevar-bush)의 원래 [메멕스](./memex)
-비전을 확장한 것이다.
+비전을 확장한 것으로, [다국어 지식 메시](./multilingual-knowledge-mesh)와 매우
+유사하다.
 
 [조성현](./sunghyun-cho)의 [외골격두뇌](./extracranial)은 이 개념을 구현한
 사례다. 여기에는 자동 언어 감지, hreflang 태그를 활용한 로케일별 제공, 그리고 한
@@ -35,3 +36,7 @@ translatedAt: 2026-01-14
 [변증법적 그래프](./dialectical-graph)가 된다. 즉, 언어를 근본적인 경계가 아니라
 메타데이터로 취급하면서, 어떤 언어에서든 [주장](./claim),
 [증거 구간](./evidence-span), 그리고 관계를 저장하는 구조다.
+
+## 관련
+
+- [다국어 지식 메시](./multilingual-knowledge-mesh)

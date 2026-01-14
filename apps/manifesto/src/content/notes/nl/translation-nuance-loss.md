@@ -1,15 +1,14 @@
 ---
 title: Verlies van vertaalnuance
-description:
-  De semantische subtiliteiten die verdwijnen wanneer ideeën taalgrenzen
-  oversteken
+description: De semantische subtiliteiten die verdwijnen wanneer ideeën taalgrenzen oversteken
 sourceLocale: en
-sourceHash: aef048dd4f50
+sourceHash: b702bb1401b7
 translatedAt: 2026-01-14
 ---
 
 Verlies van vertaalnuance is het wegvallen van semantische subtiliteiten wanneer
-ideeën van de ene taal naar de andere worden vertaald. Het omvat verlies van
+ideeën van de ene taal naar de andere worden vertaald, waardoor de
+[Vertaalgetrouwheid](./translation-fidelity) afneemt. Het omvat verlies van
 connotatie, culturele context, impliciete aannames en de specifieke smaak die
 een uitdrukking betekenisvol maakt in haar oorspronkelijke
 [Sprachraum](./sprachraum).

@@ -1,8 +1,8 @@
 ---
 title: Psychohistoria
-description: Fikcyjna nauka statystyczna w cyklu „Fundacja" Asimova
+description: Fikcyjna statystyczna nauka w „Fundacji” Asimova
 sourceLocale: en
-sourceHash: ddd31577b00d
+sourceHash: 4bcddff1ac41
 translatedAt: 2026-01-14
 ---
 
@@ -14,4 +14,4 @@ prawidłowości, co sprawia, że przy stabilnych założeniach można prognozowa
 ogólne kierunki rozwoju.
 
 Stanowi ona naukową podstawę [Planu Seldona](./seldon-plan) oraz stworzenia
-[Encyklopedii Galactica](./encyclopedia-galactica).
+[Encyklopedii Galactica](./encyclopedia-galactica), opracowanej przez [Hariego Seldona](./hari-seldon).

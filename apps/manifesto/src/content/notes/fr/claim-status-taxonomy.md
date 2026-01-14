@@ -1,14 +1,16 @@
 ---
 title: Taxonomie des statuts d’une affirmation
-description: Les états possibles d’une affirmation au sein d’un graphe dialectique
+description: Les états qu’une affirmation peut occuper au sein d’un graphe dialectique
 sourceLocale: en
-sourceHash: e713e484c72f
+sourceHash: ece55705e1ef
 translatedAt: 2026-01-14
 ---
 
 La taxonomie des statuts d’une [affirmation](./claim) définit les états qu’une
 [affirmation](./claim) peut occuper dans un
-[Graphe dialectique](./dialectical-graph).
+[Graphe dialectique](./dialectical-graph). Pour la manière dont une affirmation
+passe généralement par ces états au fil du temps, voir le [Cycle de vie de
+l’affirmation](./claim-lifecycle).
 
 ## États courants
 
@@ -28,4 +30,6 @@ dans un autre. Un statut multidimensionnel rend compte de cette complexité.
 Les transitions entre états sont déterminées par le type de réfutation, et non
 par la quantité. Un seul [contre-exemple](./counterexample) solidement étayé
 peut faire passer une affirmation de robuste à réfutée ; de nombreuses
-objections faibles peuvent la laisser contestée sans trancher.
+objections faibles peuvent la laisser contestée sans trancher. Voir les [Règles
+de transition de statut](./status-transition-rules) pour la logique formelle de
+transition.

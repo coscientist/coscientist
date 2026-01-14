@@ -1,8 +1,8 @@
 ---
 title: Pułapka płynności
-description: Branie gładkiej prozy AI za dokładność
+description: Mylenie gładkiej prozy AI z trafnością
 sourceLocale: en
-sourceHash: d8010bfe6bcb
+sourceHash: dde3d8c7519c
 translatedAt: 2026-01-14
 ---
 
@@ -10,7 +10,7 @@ Pułapka płynności to błąd poznawczy polegający na uznawaniu gładkiej, brz
 pewnie prozy za trafną. Ponieważ [LLM-y](./llm) optymalizują pod kątem
 prawdopodobnych kolejnych tokenów, ich odpowiedzi często dobrze się czyta, nawet
 gdy są błędne. Płynność naśladuje powierzchowne cechy eksperckości bez stojącej
-za nimi weryfikacji.
+za nimi weryfikacji, napędzając [Wywołane przez AI iluzje kompetencji](./ai-induced-illusions-of-competence).
 
 Ta pułapka jest kluczowym mechanizmem w
 [Załamanie Encyklopedii](./encyclopedia-meltdown): gdy użytkownicy akceptują

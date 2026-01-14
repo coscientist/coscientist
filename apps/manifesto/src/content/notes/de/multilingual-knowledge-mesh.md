@@ -1,8 +1,8 @@
 ---
 title: Mehrsprachiges Wissensnetz
-description: Ein Wissensnetzwerk, das Sprachen überspannt und weltweit verteilt wird
+description: Ein Wissensnetzwerk, das Sprachen überspannt und global verteilt
 sourceLocale: en
-sourceHash: d0cefb393fe3
+sourceHash: 6015daf06d5c
 translatedAt: 2026-01-14
 ---
 
@@ -10,7 +10,8 @@ Ein mehrsprachiges Wissensnetz ist ein Wissensnetzwerk, in dem Inhalte in jeder
 Sprache über gemeinsame Konzepte statt über Wortabgleich mit Inhalten in jeder
 anderen Sprache verbunden werden können. Es ist ein Ausdruck von
 [Sunghyun Cho](./sunghyun-cho)s Vision,
-[über die Sprachräume hinweg](./across-the-sprachraums) zu gehen.
+[über die Sprachräume hinweg](./across-the-sprachraums) zu gehen, und ein Schritt
+hin zu einem [Mehrsprachigen Memex](./multilingual-memex).
 
 Das geht über einfache Übersetzung hinaus. In einem echten mehrsprachigen Netz
 verlinkt eine auf Koreanisch geschriebene Notiz über ein Konzept über die

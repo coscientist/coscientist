@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: b3abf2d73b65
 translatedAt: 2026-01-14
 ---
+
 [Cocientífico](./coscientist) necesita más que recuperación: necesita [mecanismos de exploración](./exploration-mechanisms)
 que hagan aflorar activamente contradicciones, condiciones de
 contorno y dependencia del método en el [Grafo dialéctico](./dialectical-graph).

@@ -29,7 +29,7 @@ interface InjectResult {
   content: string
 }
 
-const MIN_SIMILARITY_FOR_AUTO = 0.85
+const MIN_SIMILARITY_FOR_AUTO = 0.5
 const CONCURRENCY_LIMIT = 8
 const MAX_RETRIES = 3
 const BASE_DELAY_MS = 1000
@@ -260,7 +260,7 @@ async function injectMentions(mode: "apply" | "dry-run" = "dry-run") {
   const bySource = await loadSuggestions()
 
   if (bySource.size === 0) {
-    console.log("No high-confidence suggestions (≥85% similarity).")
+    console.log("No suggestions (≥50% similarity).")
     return
   }
 

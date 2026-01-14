@@ -2,14 +2,14 @@
 title: Kennissynthese
 description: Hoe synthese verschilt van middelen in dialectische kennissystemen
 sourceLocale: en
-sourceHash: 8035aade2986
+sourceHash: 7d59b577f2e7
 translatedAt: 2026-01-14
 ---
 
 Kennissynthese is wat er na retrieval gebeurt wanneer je onverenigbare bronnen
 vergelijkbaar moet maken. Het is geen middelen. Het is het uitlijnen van
 premissen, definities en reikwijdte, zodat meningsverschillen expliciete
-objecten worden in plaats van ruis.
+objecten worden in plaats van ruis. Zie [Synthesemechanismen](./synthesis-mechanisms).
 
 Standaard [RAG](./rag) is sterk in retrieval en zwak in synthese, omdat het geen
 intern object heeft dat [contention](./contention) heet. In een

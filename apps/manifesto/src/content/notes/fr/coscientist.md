@@ -1,10 +1,8 @@
 ---
 title: Coscientist
-description:
-  Un système de compagnon intellectuel pour la production de connaissances à
-  l’ère post-IA
+description: Un système de compagnon intellectuel pour la production de connaissances à l’ère post-IA
 sourceLocale: en
-sourceHash: 9ef4ae7abd93
+sourceHash: 19a7f6d48c09
 translatedAt: 2026-01-14
 ---
 
@@ -20,7 +18,7 @@ l’agentivité.
 
 Il est construit par [Sunghyun Cho](./sunghyun-cho). L’histoire d’origine est
 simple : la préservation compte, mais la préservation seule ne produit pas de
-compréhension. Coscientist est conçu pour rendre la connaissance actualisable,
+compréhension ([Jetons ≠ Connaissance](./index)). Coscientist est conçu pour rendre la connaissance actualisable,
 afin que les contradictions, les contre-exemples et la
 [dérive de définition](./definition-drift) deviennent visibles et actionnables,
 au lieu d’être gommés par des résumés trop fluides.
@@ -37,7 +35,6 @@ maintient un [Graphe dialectique](./dialectical-graph) qui stocke des
 [actes argumentatifs](./argumentative-act) plutôt que du texte brut de
 documents, afin que chaque affirmation puisse être rattachée à des passages
 probants, à des sources et à des relations explicites (voir les
-[Nœuds du Graphe dialectique](./dialectical-graph-nodes) et les
 [Arêtes du Graphe dialectique](./dialectical-graph-edges)).
 
 L’exploration est adversariale par défaut. Des stratégies comme la
@@ -45,8 +42,7 @@ L’exploration est adversariale par défaut. Des stratégies comme la
 l’isolement des contradictions via la [coupe minimale](./minimum-cut) et la
 détection explicite de la [dérive de définition](./definition-drift) appliquent
 une pression tôt, de sorte que la connaissance se mette à jour par réfutation
-plutôt que de dériver par répétition (voir les
-[Stratégies d’exploration](./exploration-strategies)).
+plutôt que de dériver par répétition ).
 
 Au niveau du protocole, le système utilise des procédures comme le
 [Protocole de consensus multi-IA](./multi-ai-consensus-protocol) et la

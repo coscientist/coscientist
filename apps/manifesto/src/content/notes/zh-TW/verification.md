@@ -5,6 +5,7 @@ sourceLocale: en
 sourceHash: 8c91c1527bf6
 translatedAt: 2026-01-14
 ---
+
 驗證是檢查某個主張是否能在證據、反證與替代性解釋面前站得住腳的過程。它不是被動接受：它需要投入努力，而正是這份努力，將知識與信念區分開來。
 
 在 [共科學家](./coscientist) 中，驗證是 [操作員](./operator) 的責任。AI 可以執行

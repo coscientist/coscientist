@@ -2,7 +2,7 @@
 title: कोसाइंटिस्ट
 description: पोस्ट-AI युग में ज्ञान-उत्पादन के लिए एक बौद्धिक साथी प्रणाली
 sourceLocale: en
-sourceHash: 9ef4ae7abd93
+sourceHash: 19a7f6d48c09
 translatedAt: 2026-01-14
 ---
 
@@ -15,30 +15,29 @@ translatedAt: 2026-01-14
 समर्थन देना है: सत्यापन और एजेंसी की पुनर्स्थापना।
 
 इसे [सुंगह्यून चो](./sunghyun-cho) ने बनाया है। इसकी उत्पत्ति कथा सरल है:
-संरक्षण महत्वपूर्ण है, लेकिन केवल संरक्षण से समझ उत्पन्न नहीं होती। कोसाइंटिस्ट
-को इस तरह डिज़ाइन किया गया है कि ज्ञान को अपडेट किया जा सके, ताकि विरोधाभास,
-प्रति-उदाहरण , और [definition drift](./definition-drift) स्पष्ट और क्रियाशील
-बनें—न कि प्रवाहपूर्ण सारांशों द्वारा चुपचाप समतल कर दिए जाएँ।
+संरक्षण महत्वपूर्ण है, लेकिन केवल संरक्षण से समझ उत्पन्न नहीं होती
+([Tokens ≠ Knowledge](./index))। कोसाइंटिस्ट को इस तरह डिज़ाइन किया गया है कि
+ज्ञान को अपडेट किया जा सके, ताकि विरोधाभास, प्रति-उदाहरण , और
+[definition drift](./definition-drift) स्पष्ट और क्रियाशील बनें—न कि प्रवाहपूर्ण
+सारांशों द्वारा चुपचाप समतल कर दिए जाएँ।
 
 पहला सिद्धांत संप्रभुता है: ज्ञान का अधिकार [ऑपरेटर](./operator) के पास ही रहना
 चाहिए। [विश्वकोश पतन](./encyclopedia-meltdown) से बचाव कोई बाद में जोड़ने वाली
 चीज़ नहीं; यह एक डिज़ाइन बाध्यता है। AI contemplation labor कर सकता है, लेकिन
 उसे लिखने और घोषणा करने की पहल नहीं हथियानी चाहिए।
 
-इसी कारण कोसाइंटिस्ट Q&A शैली के RAG से आगे जाता है (देखें
-[RAG limitations](./rag-limitations))। यह एक
+इसी कारण कोसाइंटिस्ट Q&A शैली के RAG से आगे जाता है )। यह एक
 [द्वंद्वात्मक ग्राफ](./dialectical-graph) बनाए रखता है, जो कच्चे
 दस्तावेज़-टेक्स्ट के बजाय [argumentative acts](./argumentative-act) को संग्रहीत
 करता है, ताकि हर दावे को प्रमाण-खंडों , स्रोतों, और स्पष्ट संबंधों से जोड़ा जा
-सके (देखें [Dialectical Graph Nodes](./dialectical-graph-nodes) और
-[Dialectical Graph Edges](./dialectical-graph-edges))।
+सके और [Dialectical Graph Edges](./dialectical-graph-edges))।
 
 अन्वेषण डिफ़ॉल्ट रूप से विरोधी होता है।
-[counterexample-first search](./counterexample-first-search),
-[minimum cut](./minimum-cut) के माध्यम से विरोधाभास अलग करना , और स्पष्ट
+[counterexample-first search](./counterexample-first-search), विरोधाभास अलग
+करना [minimum cut](./minimum-cut) के माध्यम से , और स्पष्ट
 [definition drift](./definition-drift) पहचान जैसी रणनीतियाँ शुरू में ही दबाव
 डालती हैं, ताकि ज्ञान का अपडेट खंडन द्वारा हो—दोहराव से धीरे-धीरे बहकने के बजाय
-(देखें [Exploration Strategies](./exploration-strategies))।
+)।
 
 प्रोटोकॉल स्तर पर, सिस्टम
 [Multi-AI Consensus Protocol](./multi-ai-consensus-protocol) और

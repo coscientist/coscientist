@@ -1,10 +1,10 @@
 ---
 title: Đồ thị biện chứng
 description:
-  Một mô hình đồ thị tri thức lưu trữ các mệnh đề và quan hệ thay vì nội dung
+  Một mô hình đồ thị tri thức lưu trữ các khẳng định và quan hệ thay vì nội dung
   tài liệu
 sourceLocale: en
-sourceHash: cd2021478e98
+sourceHash: 7de42f075323
 translatedAt: 2026-01-14
 ---
 
@@ -13,7 +13,9 @@ translatedAt: 2026-01-14
 quan hệ giữa chúng) thay vì coi tài liệu như văn bản không phân biệt. Trực giác
 cốt lõi rất đơn giản: đừng nhầm văn bản với tri thức. Văn bản là lớp đóng gói;
 tri thức là cấu trúc ràng buộc cho phép các mệnh đề hỗ trợ, công kích và tinh
-chỉnh lẫn nhau.
+chỉnh lẫn nhau. Để biết bối cảnh về cách tiếp cận này tiến hoá vượt ra khỏi các
+hệ thống lấy tài liệu làm trung tâm, hãy xem
+[Từ Memex đến Đồ thị biện chứng](./from-memex-to-dialectical-graph).
 
 [Nhà đồng khoa học](./coscientist) áp đặt sự tách biệt ba lớp: văn bản gốc được
 giữ lại như các đoạn bằng chứng có thể trích dẫn; các mệnh đề được phân rã thành
@@ -32,9 +34,11 @@ thức.
 
 Để đóng vai trò như một cái phanh đối với
 [Sự sụp đổ Bách khoa toàn thư](./encyclopedia-meltdown), hệ thống ưu tiên các
-mâu thuẫn và phản ví dụ hơn là sự đồng thuận. Khi một mệnh đề đi vào đồ thị, tư
-thế mặc định là đối kháng: tìm các đòn công kích và các phản bác kiểu "undercut"
-sớm để cấu trúc được cập nhật bằng phản biện thay vì trôi dạt do lặp lại. Để xem
-các loại nút và quan hệ cụ thể, hãy xem
+mâu thuẫn và phản ví dụ hơn là sự đồng thuận (xem
+[Đồ thị như một cơ chế phòng vệ trước Sự sụp đổ](./graph-as-meltdown-defense)).
+Khi một mệnh đề đi vào đồ thị, tư thế mặc định là đối kháng: tìm các đòn công
+kích và các phản bác kiểu "undercut" sớm để cấu trúc được cập nhật bằng phản
+biện thay vì trôi dạt do lặp lại. Để xem các loại nút và quan hệ cụ thể, hãy xem
 [Các nút của Đồ thị biện chứng](./dialectical-graph-nodes) và
-[Các cạnh của Đồ thị biện chứng](./dialectical-graph-edges).
+[Các cạnh của Đồ thị biện chứng](./dialectical-graph-edges), cũng như
+[Các thành phần của Đồ thị](./graph-components).

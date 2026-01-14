@@ -1,7 +1,6 @@
 ---
 title: RAG
-description:
-  Retrieval-Augmented Generation เทคนิคสำหรับยึดโยงผลลัพธ์ของ AI
+description: Retrieval-Augmented Generation เทคนิคสำหรับยึดโยงผลลัพธ์ของ AI
   เข้ากับเอกสารที่ดึงมา
 ---
 

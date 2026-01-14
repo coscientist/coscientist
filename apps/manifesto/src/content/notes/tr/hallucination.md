@@ -1,7 +1,6 @@
 ---
 title: Halüsinasyon
-description:
-  Makul görünen ama olgusal olarak yanlış veya uydurma olan yapay zekâ çıktıları
+description: Makul görünen ama olgusal olarak yanlış veya uydurma olan yapay zekâ çıktıları
 ---
 
 Halüsinasyon, kendinden emin ve tutarlı görünen ancak olgusal hatalar,

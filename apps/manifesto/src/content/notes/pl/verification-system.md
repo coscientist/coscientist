@@ -1,7 +1,6 @@
 ---
 title: System weryfikacji
-description:
-  Mechanizmy sprawdzania twierdzeń względem dowodów, kontrdowodów i
+description: Mechanizmy sprawdzania twierdzeń względem dowodów, kontrdowodów i
   alternatywnych wyjaśnień
 ---
 

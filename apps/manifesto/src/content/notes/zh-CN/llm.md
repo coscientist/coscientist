@@ -1,7 +1,6 @@
 ---
 title: LLM
-description:
-  大型语言模型（Large Language Model），支撑 Coscientist 思辨劳动的 AI 架构
+description: 大型语言模型（Large Language Model），支撑 Coscientist 思辨劳动的 AI 架构
 ---
 
 LLM（Large Language

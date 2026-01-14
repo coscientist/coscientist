@@ -1,7 +1,6 @@
 ---
 title: Cerveau numérique
-description:
-  Un système de connaissances personnel qui reflète et prolonge un esprit
+description: Un système de connaissances personnel qui reflète et prolonge un esprit
 ---
 
 Un cerveau numérique est un système de connaissances personnel conçu pour

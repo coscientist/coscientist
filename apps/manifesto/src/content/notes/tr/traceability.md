@@ -1,7 +1,6 @@
 ---
 title: İzlenebilirlik
-description:
-  Bir iddiayı, kaynaklarına ve dayanaklarına kadar geri takip edebilme yeteneği
+description: Bir iddiayı, kaynaklarına ve dayanaklarına kadar geri takip edebilme yeteneği
 ---
 
 İzlenebilirlik, bir iddiayı onu destekleyen yapı boyunca geriye doğru takip

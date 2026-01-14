@@ -1,7 +1,6 @@
 ---
 title: Séparation des chemins de réplication
-description:
-  Se demander si le soutien provient de chemins indépendants ou de
+description: Se demander si le soutien provient de chemins indépendants ou de
   reformulations répétées
 ---
 

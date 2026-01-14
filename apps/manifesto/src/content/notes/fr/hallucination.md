@@ -1,7 +1,6 @@
 ---
 title: Hallucination
-description:
-  Sorties d’IA plausibles mais factuellement incorrectes ou fabriquées
+description: Sorties d’IA plausibles mais factuellement incorrectes ou fabriquées
 ---
 
 Une hallucination est une sortie d’IA qui semble assurée et cohérente, mais qui

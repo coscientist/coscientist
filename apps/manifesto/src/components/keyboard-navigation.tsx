@@ -8,6 +8,7 @@ interface KeyboardNavigationProps {
   maxFocusIndex?: number
   onFocusChange: (index: number) => void
   onPopStack: () => void
+  onScrollToPane: (index: number) => void
 }
 
 export function useKeyboardNavigation({
@@ -16,6 +17,7 @@ export function useKeyboardNavigation({
   maxFocusIndex,
   onFocusChange,
   onPopStack,
+  onScrollToPane,
 }: KeyboardNavigationProps) {
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
@@ -34,7 +36,7 @@ export function useKeyboardNavigation({
           e.preventDefault()
           if (focusIndex > 0) {
             onFocusChange(focusIndex - 1)
-            scrollToPane(focusIndex - 1)
+            onScrollToPane(focusIndex - 1)
           }
           break
 
@@ -42,7 +44,7 @@ export function useKeyboardNavigation({
           e.preventDefault()
           if (focusIndex < upperBound) {
             onFocusChange(focusIndex + 1)
-            scrollToPane(focusIndex + 1)
+            onScrollToPane(focusIndex + 1)
           }
           break
 
@@ -56,40 +58,33 @@ export function useKeyboardNavigation({
         case "Home":
           e.preventDefault()
           onFocusChange(0)
-          scrollToPane(0)
+          onScrollToPane(0)
           break
 
         case "End":
           e.preventDefault()
           onFocusChange(upperBound)
-          scrollToPane(upperBound)
+          onScrollToPane(upperBound)
           break
 
         default:
           break
       }
     },
-    [focusIndex, stackLength, maxFocusIndex, onFocusChange, onPopStack]
+    [
+      focusIndex,
+      stackLength,
+      maxFocusIndex,
+      onFocusChange,
+      onPopStack,
+      onScrollToPane,
+    ]
   )
 
   useEffect(() => {
     document.addEventListener("keydown", handleKeyDown)
     return () => document.removeEventListener("keydown", handleKeyDown)
   }, [handleKeyDown])
-}
-
-function scrollToPane(index: number) {
-  const panes = document.querySelectorAll("[data-pane]")
-  const targetPane = panes[index] as HTMLElement | undefined
-
-  if (targetPane) {
-    targetPane.scrollIntoView({
-      behavior: prefersReducedMotion() ? "auto" : "smooth",
-      block: "nearest",
-      inline: "start",
-    })
-    targetPane.focus()
-  }
 }
 
 function isTextInput(target: EventTarget | null): boolean {
@@ -103,11 +98,4 @@ function isTextInput(target: EventTarget | null): boolean {
     target instanceof HTMLSelectElement ||
     target.isContentEditable
   )
-}
-
-function prefersReducedMotion(): boolean {
-  if (typeof window === "undefined") {
-    return false
-  }
-  return window.matchMedia("(prefers-reduced-motion: reduce)").matches
 }

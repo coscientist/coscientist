@@ -1,7 +1,6 @@
 ---
 title: Dialectical Graph Edges
-description:
-  The relation types connecting nodes in a dialectical knowledge graph
+description: The relation types connecting nodes in a dialectical knowledge graph
 ---
 
 In a [Dialectical Graph](./dialectical-graph), edges encode relation types

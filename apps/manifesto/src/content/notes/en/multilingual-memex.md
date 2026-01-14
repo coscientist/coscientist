@@ -1,7 +1,6 @@
 ---
 title: Multilingual Memex
-description:
-  A language-aware personal knowledge system with automatic translation support
+description: A language-aware personal knowledge system with automatic translation support
 ---
 
 A multilingual Memex is a personal knowledge system that natively supports

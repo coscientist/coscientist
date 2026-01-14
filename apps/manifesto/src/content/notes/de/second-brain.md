@@ -1,7 +1,6 @@
 ---
 title: Zweites Gehirn
-description:
-  Ein Ansatz für persönliches Wissensmanagement zur Externalisierung von Ideen
+description: Ein Ansatz für persönliches Wissensmanagement zur Externalisierung von Ideen
 ---
 
 Das „zweite Gehirn" ist ein Ansatz für persönliches Wissensmanagement, der sich

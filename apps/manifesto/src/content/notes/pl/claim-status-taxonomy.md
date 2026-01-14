@@ -1,7 +1,6 @@
 ---
 title: Taksonomia statusu twierdzeń
-description:
-  Stany, w jakich twierdzenie może się znajdować w ramach grafu dialektycznego
+description: Stany, w jakich twierdzenie może się znajdować w ramach grafu dialektycznego
 ---
 
 Taksonomia statusu twierdzeń definiuje stany, jakie [twierdzenie](./claim) może

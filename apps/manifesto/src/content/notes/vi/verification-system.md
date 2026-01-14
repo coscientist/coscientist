@@ -1,7 +1,6 @@
 ---
 title: Hệ thống xác minh
-description:
-  Các cơ chế để kiểm tra các khẳng định dựa trên bằng chứng và phản bằng chứng
+description: Các cơ chế để kiểm tra các khẳng định dựa trên bằng chứng và phản bằng chứng
 ---
 
 Hệ thống xác minh là tập hợp các cơ chế mà [Nhà đồng khoa học](./coscientist) sử

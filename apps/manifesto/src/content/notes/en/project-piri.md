@@ -1,7 +1,6 @@
 ---
 title: Project PIRI
-description:
-  A cancelled initiative for unlimited translations of programming documentation
+description: A cancelled initiative for unlimited translations of programming documentation
 ---
 
 Project PIRI was [Sunghyun Cho](./sunghyun-cho)'s initiative to provide

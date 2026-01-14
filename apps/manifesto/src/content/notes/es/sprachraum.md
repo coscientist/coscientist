@@ -1,7 +1,6 @@
 ---
 title: Sprachraum
-description:
-  Una esfera o dominio lingüístico que moldea el pensamiento y el conocimiento
+description: Una esfera o dominio lingüístico que moldea el pensamiento y el conocimiento
 ---
 
 Sprachraum (alemán: "espacio lingüístico" o "esfera lingüística") es el dominio

@@ -1,7 +1,6 @@
 ---
 title: GitHub dla naukowców
-description:
-  Wizja traktowania eksperymentów jako wersjonowanego, audytowalnego kodu
+description: Wizja traktowania eksperymentów jako wersjonowanego, audytowalnego kodu
 ---
 
 „GitHub dla naukowców" to wizja, w której eksperymenty naukowe są traktowane jak

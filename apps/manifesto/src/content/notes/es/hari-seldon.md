@@ -1,7 +1,6 @@
 ---
 title: Hari Seldon
-description:
-  Matemático ficticio que creó la psicohistoria en la serie Fundación de Asimov
+description: Matemático ficticio que creó la psicohistoria en la serie Fundación de Asimov
 ---
 
 Hari Seldon es el matemático ficticio de la serie Fundación de

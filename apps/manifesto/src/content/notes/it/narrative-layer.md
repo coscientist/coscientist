@@ -1,7 +1,6 @@
 ---
 title: Livello narrativo
-description:
-  Proiezioni con marca temporale del grafo dialettico adatte alla lettura umana
+description: Proiezioni con marca temporale del grafo dialettico adatte alla lettura umana
 ---
 
 Il livello narrativo è la proiezione leggibile dagli esseri umani di un

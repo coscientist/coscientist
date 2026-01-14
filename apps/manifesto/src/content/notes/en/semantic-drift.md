@@ -1,7 +1,6 @@
 ---
 title: Semantic Drift
-description:
-  Changes in meaning that cause knowledge to become obsolete or misleading
+description: Changes in meaning that cause knowledge to become obsolete or misleading
 ---
 
 Semantic drift is the category of [drift phenomena](./drift-phenomena) where the

@@ -1,7 +1,6 @@
 ---
 title: Effet d’espacement
-description:
-  La mémoire s’améliore lorsque les sessions d’étude sont espacées dans le temps
+description: La mémoire s’améliore lorsque les sessions d’étude sont espacées dans le temps
 ---
 
 L’effet d’espacement est une observation bien reproduite : l’apprentissage est

@@ -1,7 +1,6 @@
 ---
 title: Lapisan Protokol Epistemik
-description:
-  Aturan dan alur kerja yang memperkuat sistem pengetahuan terhadap kolaps
+description: Aturan dan alur kerja yang memperkuat sistem pengetahuan terhadap kolaps
 ---
 
 Lapisan protokol epistemik adalah seperangkat aturan, pemeriksaan, dan alur

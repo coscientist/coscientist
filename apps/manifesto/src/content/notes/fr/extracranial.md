@@ -1,7 +1,6 @@
 ---
 title: Extracrânien
-description:
-  Le cerveau numérique personnel et le système de publication de Sunghyun Cho
+description: Le cerveau numérique personnel et le système de publication de Sunghyun Cho
 ---
 
 Extracranial est le cerveau numérique personnel de

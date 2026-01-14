@@ -1,7 +1,6 @@
 ---
 title: Garis Tanggung Jawab
-description:
-  Rantai yang dapat dilacak tentang siapa menyatakan apa dan atas dasar apa
+description: Rantai yang dapat dilacak tentang siapa menyatakan apa dan atas dasar apa
 ---
 
 Garis tanggung jawab adalah rantai yang dapat dilacak tentang siapa menyatakan

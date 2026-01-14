@@ -1,7 +1,6 @@
 ---
 title: Recherche d’abord par réfutation
-description:
-  Un protocole de validation qui recherche des contre-preuves avant d’accepter
+description: Un protocole de validation qui recherche des contre-preuves avant d’accepter
 ---
 
 La recherche d’abord par réfutation est un protocole de validation qui cherche

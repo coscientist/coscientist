@@ -1,7 +1,6 @@
 ---
 title: Trazabilidad
-description:
-  La capacidad de rastrear una afirmación hasta sus fuentes y fundamentos
+description: La capacidad de rastrear una afirmación hasta sus fuentes y fundamentos
 ---
 
 La trazabilidad es la capacidad de recorrer una afirmación hacia atrás a través

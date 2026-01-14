@@ -1,7 +1,6 @@
 ---
 title: Epistemiczna warstwa protokołów
-description:
-  Zasady i przepływy pracy, które utwardzają systemy wiedzy przed załamaniem
+description: Zasady i przepływy pracy, które utwardzają systemy wiedzy przed załamaniem
 ---
 
 Epistemiczna warstwa protokołów to zestaw zasad, kontroli i przepływów pracy,

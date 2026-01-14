@@ -1,7 +1,6 @@
 ---
 title: Arca do Conhecimento
-description:
-  Um repositório concebido para preservar o conhecimento durante o colapso
+description: Um repositório concebido para preservar o conhecimento durante o colapso
 ---
 
 Uma arca do conhecimento é um repositório concebido para preservar e transmitir

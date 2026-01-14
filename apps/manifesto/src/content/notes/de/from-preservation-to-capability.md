@@ -1,7 +1,6 @@
 ---
 title: Von Bewahrung zu Befähigung
-description:
-  Der Wandel vom Speichern von Wissen hin zum Erzeugen von Verständnis
+description: Der Wandel vom Speichern von Wissen hin zum Erzeugen von Verständnis
 ---
 
 Von Bewahrung zu Befähigung bezeichnet den Wandel von Wissenssystemen, die

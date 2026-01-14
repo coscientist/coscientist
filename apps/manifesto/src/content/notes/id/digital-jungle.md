@@ -1,7 +1,6 @@
 ---
 title: Rimba Digital
-description:
-  Ruang pengetahuan personal berhambatan rendah yang mengorganisasi diri
+description: Ruang pengetahuan personal berhambatan rendah yang mengorganisasi diri
 ---
 
 Rimba digital adalah ruang pengetahuan personal yang tumbuh dengan kurasi manual

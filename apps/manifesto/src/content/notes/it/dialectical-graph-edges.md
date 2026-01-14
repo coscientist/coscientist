@@ -1,7 +1,6 @@
 ---
 title: Archi del Grafo Dialettico
-description:
-  I tipi di relazione che connettono i nodi in un grafo di conoscenza dialettico
+description: I tipi di relazione che connettono i nodi in un grafo di conoscenza dialettico
 ---
 
 In un [Grafo Dialettico](./dialectical-graph), gli archi codificano tipi di

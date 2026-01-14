@@ -1,7 +1,6 @@
 ---
 title: Contención
-description:
-  Un conflicto estructurado entre afirmaciones que requiere resolución
+description: Un conflicto estructurado entre afirmaciones que requiere resolución
 ---
 
 La contención es un conflicto estructurado entre afirmaciones, definiciones o

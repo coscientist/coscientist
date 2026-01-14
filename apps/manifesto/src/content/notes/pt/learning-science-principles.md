@@ -1,7 +1,6 @@
 ---
 title: Princípios da Ciência da Aprendizagem
-description:
-  Técnicas baseadas em evidências para aprendizagem e memória duradouras
+description: Técnicas baseadas em evidências para aprendizagem e memória duradouras
 ---
 
 Os princípios da ciência da aprendizagem são técnicas baseadas em evidências

@@ -1,7 +1,6 @@
 ---
 title: Foundation-fictie
-description:
-  Door Asimov geïnspireerde concepten die de visie van Coscientist vormgeven
+description: Door Asimov geïnspireerde concepten die de visie van Coscientist vormgeven
 ---
 
 Foundation-fictie verwijst naar concepten uit de Foundation-reeks van

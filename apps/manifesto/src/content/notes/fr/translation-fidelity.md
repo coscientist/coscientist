@@ -1,7 +1,6 @@
 ---
 title: Fidélité de traduction
-description:
-  Préserver le sens et la précision au-delà des frontières linguistiques
+description: Préserver le sens et la précision au-delà des frontières linguistiques
 ---
 
 La fidélité de traduction est le degré selon lequel un contenu traduit préserve

@@ -1,7 +1,6 @@
 ---
 title: Verantwortlichkeitslinie
-description:
-  Die nachverfolgbare Kette, wer was behauptet hat und auf welcher Grundlage
+description: Die nachverfolgbare Kette, wer was behauptet hat und auf welcher Grundlage
 ---
 
 Die Verantwortlichkeitslinie ist die nachverfolgbare Kette, wer was behauptet

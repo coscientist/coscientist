@@ -1,7 +1,6 @@
 ---
 title: ScienceOps
-description:
-  Aplicar principios de operaciones de software para acelerar la ciencia
+description: Aplicar principios de operaciones de software para acelerar la ciencia
 ---
 
 ScienceOps es la visión de [Sunghyun Cho](./sunghyun-cho) para aplicar el

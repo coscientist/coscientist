@@ -1,7 +1,6 @@
 ---
 title: Methode-conclusie-koppeling
-description:
-  Analysepatroon dat beweringen groepeert op methode in plaats van op conclusie
+description: Analysepatroon dat beweringen groepeert op methode in plaats van op conclusie
 ---
 
 Methode-conclusie-koppeling is een analysepatroon dat [beweringen](./claim)

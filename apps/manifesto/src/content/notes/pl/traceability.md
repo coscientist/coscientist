@@ -1,7 +1,6 @@
 ---
 title: Śledzalność
-description:
-  Zdolność prześledzenia twierdzenia z powrotem do jego źródeł i podstaw
+description: Zdolność prześledzenia twierdzenia z powrotem do jego źródeł i podstaw
 ---
 
 Śledzalność to zdolność przechodzenia wstecz przez strukturę wspierającą

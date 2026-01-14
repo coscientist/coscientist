@@ -1,7 +1,6 @@
 ---
 title: Các Quan hệ Lập luận
-description:
-  Các loại cạnh trong một Đồ thị Biện chứng được tổ chức theo chức năng
+description: Các loại cạnh trong một Đồ thị Biện chứng được tổ chức theo chức năng
 ---
 
 Các quan hệ lập luận là các loại cạnh trong một

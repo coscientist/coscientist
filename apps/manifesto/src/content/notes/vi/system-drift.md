@@ -1,7 +1,6 @@
 ---
 title: Trôi dạt hệ thống
-description:
-  Sự suy thoái của các hệ thống tri thức do tự nhiễm bẩn hoặc bị sao nhãng
+description: Sự suy thoái của các hệ thống tri thức do tự nhiễm bẩn hoặc bị sao nhãng
 ---
 
 Trôi dạt hệ thống là nhóm [hiện tượng trôi dạt](./drift-phenomena) mà trong đó

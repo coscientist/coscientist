@@ -1,7 +1,6 @@
 ---
 title: LLM
-description:
-  భారీ భాషా మోడల్, Coscientist యొక్క contemplation labor‌కు ఆధారమైన AI నిర్మాణం
+description: భారీ భాషా మోడల్, Coscientist యొక్క contemplation labor‌కు ఆధారమైన AI నిర్మాణం
 ---
 
 LLM అంటే సహజ భాషను ముందుగా ఊహించి రూపొందించడానికి విస్తృతమైన పాఠ్య సమాహారాలపై

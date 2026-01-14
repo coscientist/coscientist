@@ -1,7 +1,6 @@
 ---
 title: Pergeseran Semantik
-description:
-  Perubahan makna yang menyebabkan pengetahuan menjadi usang atau menyesatkan
+description: Perubahan makna yang menyebabkan pengetahuan menjadi usang atau menyesatkan
 ---
 
 Pergeseran semantik adalah kategori dari

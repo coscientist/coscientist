@@ -1,7 +1,6 @@
 ---
 title: Sintesi della conoscenza
-description:
-  In cosa la sintesi differisce dalla media nei sistemi di conoscenza dialettici
+description: In cosa la sintesi differisce dalla media nei sistemi di conoscenza dialettici
 ---
 
 La sintesi della conoscenza è ciò che accade dopo il recupero , quando devi

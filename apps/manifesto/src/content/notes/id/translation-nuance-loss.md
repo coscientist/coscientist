@@ -1,7 +1,6 @@
 ---
 title: Hilangnya Nuansa dalam Terjemahan
-description:
-  Kehalusan semantik yang lenyap ketika gagasan melintasi batas-batas bahasa
+description: Kehalusan semantik yang lenyap ketika gagasan melintasi batas-batas bahasa
 ---
 
 Hilangnya nuansa dalam terjemahan adalah terkikisnya kehalusan semantik ketika

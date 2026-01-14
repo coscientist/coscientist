@@ -1,7 +1,6 @@
 ---
 title: Digitale Jungle
-description:
-  Een persoonlijke kennisruimte met weinig wrijving die zichzelf organiseert
+description: Een persoonlijke kennisruimte met weinig wrijving die zichzelf organiseert
 ---
 
 Een digitale jungle is een persoonlijke kennisruimte die groeit met minimale

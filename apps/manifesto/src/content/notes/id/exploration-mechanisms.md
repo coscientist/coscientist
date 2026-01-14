@@ -1,7 +1,6 @@
 ---
 title: Mekanisme Eksplorasi
-description:
-  Strategi untuk penemuan pengetahuan berkelanjutan dalam graf dialektik
+description: Strategi untuk penemuan pengetahuan berkelanjutan dalam graf dialektik
 ---
 
 Mekanisme eksplorasi adalah strategi yang digunakan [Kosaintis](./coscientist)

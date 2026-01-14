@@ -1,7 +1,6 @@
 ---
 title: Evolução do Conhecimento Pessoal
-description:
-  Progressão histórica de ferramentas e ideias de gestão do conhecimento pessoal
+description: Progressão histórica de ferramentas e ideias de gestão do conhecimento pessoal
 ---
 
 A evolução do conhecimento pessoal acompanha o desenvolvimento de ferramentas e

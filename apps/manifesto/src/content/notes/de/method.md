@@ -1,7 +1,6 @@
 ---
 title: Methode
-description:
-  Das Verfahren, das verwendet wird, um Evidenz zu erzeugen oder
+description: Das Verfahren, das verwendet wird, um Evidenz zu erzeugen oder
   Schlussfolgerungen abzuleiten
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: Evidence Independence
-description:
-  Principle that agreement from shared training bias is not real consensus
+description: Principle that agreement from shared training bias is not real consensus
 ---
 
 Evidence independence is the principle that apparent agreement among AI models

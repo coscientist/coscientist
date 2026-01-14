@@ -1,7 +1,6 @@
 ---
 title: Méthode
-description:
-  La procédure utilisée pour produire des preuves ou tirer des conclusions
+description: La procédure utilisée pour produire des preuves ou tirer des conclusions
 ---
 
 Une méthode est la procédure par laquelle des preuves sont recueillies ou une

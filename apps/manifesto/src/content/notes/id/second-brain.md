@@ -1,7 +1,6 @@
 ---
 title: Otak Kedua
-description:
-  Pendekatan manajemen pengetahuan pribadi untuk mengeksternalisasi ide
+description: Pendekatan manajemen pengetahuan pribadi untuk mengeksternalisasi ide
 ---
 
 "Otak kedua" adalah pendekatan manajemen pengetahuan pribadi yang berfokus pada

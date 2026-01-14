@@ -1,7 +1,6 @@
 ---
 title: Mekanisme Sintesis
-description:
-  Pola untuk membuat sumber yang tidak kompatibel menjadi dapat diperbandingkan
+description: Pola untuk membuat sumber yang tidak kompatibel menjadi dapat diperbandingkan
 ---
 
 Mekanisme sintesis adalah pola dan protokol yang digunakan

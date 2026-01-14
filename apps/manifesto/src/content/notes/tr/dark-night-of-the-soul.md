@@ -1,7 +1,6 @@
 ---
 title: Ruhun Karanlık Gecesi
-description:
-  Kimliğin yeniden inşasına yol açan derin bir içsel kriz için edebi bir araç
+description: Kimliğin yeniden inşasına yol açan derin bir içsel kriz için edebi bir araç
 ---
 
 "Ruhun Karanlık Gecesi" , kimliğin, inancın ve kişinin benlik-modelinin çöktüğü

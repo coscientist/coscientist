@@ -1,7 +1,6 @@
 ---
 title: Evolutie van persoonlijke kennis
-description:
-  Historische ontwikkeling van tools en ideeën voor persoonlijk kennisbeheer
+description: Historische ontwikkeling van tools en ideeën voor persoonlijk kennisbeheer
 ---
 
 De evolutie van persoonlijke kennis volgt de ontwikkeling van tools en ideeën

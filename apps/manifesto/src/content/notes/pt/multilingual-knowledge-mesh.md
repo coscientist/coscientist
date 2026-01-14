@@ -1,7 +1,6 @@
 ---
 title: Malha de Conhecimento Multilíngue
-description:
-  Uma rede de conhecimento que atravessa idiomas e se distribui globalmente
+description: Uma rede de conhecimento que atravessa idiomas e se distribui globalmente
 ---
 
 Uma malha de conhecimento multilíngue é uma rede de conhecimento em que conteúdo

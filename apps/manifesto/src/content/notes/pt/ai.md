@@ -1,7 +1,6 @@
 ---
 title: IA
-description:
-  Inteligência Artificial como ferramenta e desafio para sistemas de
+description: Inteligência Artificial como ferramenta e desafio para sistemas de
   conhecimento
 ---
 

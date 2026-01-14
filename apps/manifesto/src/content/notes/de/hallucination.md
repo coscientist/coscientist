@@ -1,7 +1,6 @@
 ---
 title: Halluzination
-description:
-  KI-Ausgaben, die plausibel wirken, aber faktisch falsch oder erfunden sind
+description: KI-Ausgaben, die plausibel wirken, aber faktisch falsch oder erfunden sind
 ---
 
 Eine Halluzination ist eine KI-Ausgabe, die selbstbewusst und kohärent wirkt,

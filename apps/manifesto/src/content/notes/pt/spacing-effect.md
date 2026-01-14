@@ -1,7 +1,6 @@
 ---
 title: Efeito do Espaçamento
-description:
-  A memória melhora quando as sessões de estudo são espaçadas ao longo do tempo
+description: A memória melhora quando as sessões de estudo são espaçadas ao longo do tempo
 ---
 
 O efeito do espaçamento é o achado, amplamente replicado, de que a aprendizagem

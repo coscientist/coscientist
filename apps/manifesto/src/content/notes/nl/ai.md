@@ -1,7 +1,6 @@
 ---
 title: AI
-description:
-  Kunstmatige intelligentie als zowel hulpmiddel als uitdaging voor
+description: Kunstmatige intelligentie als zowel hulpmiddel als uitdaging voor
   kennissystemen
 ---
 

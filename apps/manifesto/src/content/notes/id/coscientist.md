@@ -1,7 +1,6 @@
 ---
 title: Coscientist
-description:
-  Sistem pendamping intelektual untuk produksi pengetahuan di era pasca-AI
+description: Sistem pendamping intelektual untuk produksi pengetahuan di era pasca-AI
 ---
 
 Coscientist adalah layanan open-source yang terinspirasi oleh

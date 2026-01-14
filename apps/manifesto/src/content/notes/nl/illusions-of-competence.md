@@ -1,7 +1,6 @@
 ---
 title: Illusies van Competentie
-description:
-  Een vals gevoel van beheersing, veroorzaakt door passieve vertrouwdheid
+description: Een vals gevoel van beheersing, veroorzaakt door passieve vertrouwdheid
 ---
 
 Illusies van competentie ontstaan wanneer vertrouwdheid wordt verward met

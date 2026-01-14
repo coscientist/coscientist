@@ -1,7 +1,6 @@
 ---
 title: RAG Limitations
-description:
-  Why standard retrieval-augmented generation cannot produce genuine discovery
+description: Why standard retrieval-augmented generation cannot produce genuine discovery
 ---
 
 [RAG](./rag) improves factuality by retrieving relevant documents, but standard

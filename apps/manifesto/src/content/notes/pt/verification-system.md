@@ -1,7 +1,6 @@
 ---
 title: Sistema de Verificação
-description:
-  Os mecanismos para verificar afirmações em relação a evidência e
+description: Os mecanismos para verificar afirmações em relação a evidência e
   contraevidência
 ---
 

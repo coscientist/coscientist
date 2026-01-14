@@ -1,7 +1,6 @@
 ---
 title: Lapisan Naratif
-description:
-  Proyeksi bertanda waktu dari graf dialektis yang cocok untuk dibaca manusia
+description: Proyeksi bertanda waktu dari graf dialektis yang cocok untuk dibaca manusia
 ---
 
 Lapisan naratif adalah proyeksi yang dapat dibaca manusia dari sebuah

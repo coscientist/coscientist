@@ -1,7 +1,6 @@
 ---
 title: Systemdrift
-description:
-  Degradierung von Wissenssystemen durch Selbstkontamination oder
+description: Degradierung von Wissenssystemen durch Selbstkontamination oder
   Vernachlässigung
 ---
 

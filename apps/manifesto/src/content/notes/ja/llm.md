@@ -1,7 +1,6 @@
 ---
 title: LLM
-description:
-  Coscientist の熟考労働を支える AI アーキテクチャである大規模言語モデル
+description: Coscientist の熟考労働を支える AI アーキテクチャである大規模言語モデル
 ---
 
 LLM（Large Language

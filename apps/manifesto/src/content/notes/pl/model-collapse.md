@@ -1,7 +1,6 @@
 ---
 title: Załamanie modelu
-description:
-  Degradacja modeli trenowanych na danych wygenerowanych przez nie same
+description: Degradacja modeli trenowanych na danych wygenerowanych przez nie same
 ---
 
 Załamanie modelu to degradacja, do której może dojść, gdy modele są trenowane na

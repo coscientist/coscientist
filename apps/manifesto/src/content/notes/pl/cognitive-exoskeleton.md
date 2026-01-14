@@ -1,7 +1,6 @@
 ---
 title: Egzoszkielet poznawczy
-description:
-  Zewnętrzne narzędzia, które rozszerzają i wzmacniają ludzkie poznanie
+description: Zewnętrzne narzędzia, które rozszerzają i wzmacniają ludzkie poznanie
 ---
 
 Egzoszkielet poznawczy to system zewnętrznych narzędzi, które rozszerzają i

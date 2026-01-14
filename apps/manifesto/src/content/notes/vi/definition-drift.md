@@ -1,7 +1,6 @@
 ---
 title: Trôi dạt định nghĩa
-description:
-  Khi ý nghĩa của một thuật ngữ thay đổi theo thời gian hoặc theo ngữ cảnh
+description: Khi ý nghĩa của một thuật ngữ thay đổi theo thời gian hoặc theo ngữ cảnh
 ---
 
 Trôi dạt định nghĩa là sự thay đổi dần dần về ý nghĩa của một thuật ngữ theo

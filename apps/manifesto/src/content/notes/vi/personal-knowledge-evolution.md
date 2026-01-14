@@ -1,7 +1,6 @@
 ---
 title: Tiến hóa tri thức cá nhân
-description:
-  Tiến trình lịch sử của các công cụ và ý tưởng quản lý tri thức cá nhân
+description: Tiến trình lịch sử của các công cụ và ý tưởng quản lý tri thức cá nhân
 ---
 
 Tiến hóa tri thức cá nhân lần theo sự phát triển của các công cụ và ý tưởng để

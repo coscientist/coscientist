@@ -1,7 +1,6 @@
 ---
 title: ScienceOps
-description:
-  Stosowanie zasad operacji oprogramowania w celu przyspieszenia nauki
+description: Stosowanie zasad operacji oprogramowania w celu przyspieszenia nauki
 ---
 
 ScienceOps to wizja [Sunghyuna Cho](./sunghyun-cho), polegająca na zastosowaniu

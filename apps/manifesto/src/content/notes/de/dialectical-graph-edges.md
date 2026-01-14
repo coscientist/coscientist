@@ -1,7 +1,6 @@
 ---
 title: Dialektische Graphkanten
-description:
-  Die Relationstypen, die Knoten in einem dialektischen Wissensgraphen verbinden
+description: Die Relationstypen, die Knoten in einem dialektischen Wissensgraphen verbinden
 ---
 
 In einem [Dialektischen Graphen](./dialectical-graph) kodieren Kanten

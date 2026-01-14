@@ -1,7 +1,6 @@
 ---
 title: Hari Seldon
-description:
-  Fictional mathematician who created psychohistory in Asimov's Foundation
+description: Fictional mathematician who created psychohistory in Asimov's Foundation
 ---
 
 Hari Seldon is the fictional mathematician in [Isaac Asimov](./isaac-asimov)'s

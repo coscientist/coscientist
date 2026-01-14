@@ -1,7 +1,6 @@
 ---
 title: Mesh Pengetahuan Multibahasa
-description:
-  Jaringan pengetahuan yang melintasi bahasa dan terdistribusi secara global
+description: Jaringan pengetahuan yang melintasi bahasa dan terdistribusi secara global
 ---
 
 Mesh pengetahuan multibahasa adalah jaringan pengetahuan di mana konten dalam

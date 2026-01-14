@@ -1,7 +1,6 @@
 ---
 title: Regole di transizione dello stato
-description:
-  Che cosa innesca il passaggio tra stati di una tesi in un grafo dialettico
+description: Che cosa innesca il passaggio tra stati di una tesi in un grafo dialettico
 ---
 
 Le regole di transizione dello stato definiscono che cosa fa passare una

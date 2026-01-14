@@ -1,7 +1,6 @@
 ---
 title: Keterkaitan Metode-Kesimpulan
-description:
-  Pola analisis yang mengelompokkan klaim berdasarkan metode, bukan kesimpulan
+description: Pola analisis yang mengelompokkan klaim berdasarkan metode, bukan kesimpulan
 ---
 
 Keterkaitan metode-kesimpulan adalah pola analisis yang mengelompokkan

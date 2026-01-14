@@ -1,7 +1,6 @@
 ---
 title: Coscientist
-description:
-  Yapay zekâ sonrası çağda bilgi üretimi için entelektüel bir yoldaş sistemi
+description: Yapay zekâ sonrası çağda bilgi üretimi için entelektüel bir yoldaş sistemi
 ---
 
 Coscientist, [Isaac Asimov](./isaac-asimov)'un kurgusal

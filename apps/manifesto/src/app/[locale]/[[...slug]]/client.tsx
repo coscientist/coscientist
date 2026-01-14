@@ -1,7 +1,7 @@
 "use client"
 
 import { AnimatePresence, LayoutGroup } from "motion/react"
-import { Suspense, useCallback, useMemo, useState } from "react"
+import { Suspense, useCallback, useMemo, useRef, useState } from "react"
 import { AllNotesList } from "@/components/all-notes-list"
 import { useKeyboardNavigation } from "@/components/keyboard-navigation"
 import { NotePane } from "@/components/note-pane"
@@ -31,6 +31,7 @@ function NotesContent({
     Math.max(0, initialNotesData.length - 1)
   )
   const [prevLength, setPrevLength] = useState(initialNotesData.length)
+  const scrollToPaneRef = useRef<((index: number) => void) | null>(null)
 
   if (prevLength !== initialNotesData.length) {
     setPrevLength(initialNotesData.length)
@@ -39,12 +40,17 @@ function NotesContent({
     }
   }
 
+  const handleScrollToPane = useCallback((index: number) => {
+    scrollToPaneRef.current?.(index)
+  }, [])
+
   useKeyboardNavigation({
     stackLength: stack.length,
     focusIndex: keyboardFocusIndex,
     maxFocusIndex: initialNotesData.length,
     onFocusChange: setKeyboardFocusIndex,
     onPopStack: popNote,
+    onScrollToPane: handleScrollToPane,
   })
 
   const notesMap = useMemo(() => {
@@ -107,7 +113,11 @@ function NotesContent({
 
   return (
     <NotePreviewProvider notesMap={notesMap}>
-      <PaneContainer focusIndex={focusIndex} mobileData={mobileData}>
+      <PaneContainer
+        focusIndex={focusIndex}
+        mobileData={mobileData}
+        scrollToPaneRef={scrollToPaneRef}
+      >
         <LayoutGroup>
           <AnimatePresence initial={false} mode="popLayout">
             {initialNotesData.map((data, index) => (

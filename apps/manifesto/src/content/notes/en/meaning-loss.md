@@ -1,7 +1,6 @@
 ---
 title: Meaning Loss
-description:
-  When a claim becomes obsolete because its terms have shifted meaning
+description: When a claim becomes obsolete because its terms have shifted meaning
 ---
 
 Meaning loss occurs when a [claim](./claim) becomes obsolete not because it was

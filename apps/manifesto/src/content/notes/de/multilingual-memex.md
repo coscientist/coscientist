@@ -1,7 +1,6 @@
 ---
 title: Mehrsprachiger Memex
-description:
-  Ein sprachbewusstes persönliches Wissenssystem mit automatischer
+description: Ein sprachbewusstes persönliches Wissenssystem mit automatischer
   Übersetzungsunterstützung
 ---
 

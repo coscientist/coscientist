@@ -1,7 +1,6 @@
 ---
 title: Hari Seldon
-description:
-  Fictieve wiskundige die de psychohistorie ontwikkelde in Asimovs Foundation
+description: Fictieve wiskundige die de psychohistorie ontwikkelde in Asimovs Foundation
 ---
 
 Hari Seldon is de fictieve wiskundige in de Foundation-serie van

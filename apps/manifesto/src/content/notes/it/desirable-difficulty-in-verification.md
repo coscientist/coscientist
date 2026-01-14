@@ -1,7 +1,6 @@
 ---
 title: Difficoltà desiderabile nella verifica
-description:
-  Rendere la verifica impegnativa per mantenere una comprensione autentica
+description: Rendere la verifica impegnativa per mantenere una comprensione autentica
 ---
 
 La difficoltà desiderabile nella verifica è il principio secondo cui la

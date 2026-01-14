@@ -1,7 +1,6 @@
 ---
 title: Digitaal Brein
-description:
-  Een persoonlijk kennissysteem dat een geest weerspiegelt en uitbreidt
+description: Een persoonlijk kennissysteem dat een geest weerspiegelt en uitbreidt
 ---
 
 Een digitaal brein is een persoonlijk kennissysteem dat is ontworpen om ideeën

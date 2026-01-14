@@ -1,7 +1,6 @@
 ---
 title: Translation Nuance Loss
-description:
-  The semantic subtleties that disappear when ideas cross language boundaries
+description: The semantic subtleties that disappear when ideas cross language boundaries
 ---
 
 Translation nuance loss is the stripping away of semantic subtleties when ideas

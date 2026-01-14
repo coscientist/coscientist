@@ -1,7 +1,6 @@
 ---
 title: Communication inter-Sprachraum
-description:
-  Dialogue et échange de connaissances à travers des domaines linguistiques
+description: Dialogue et échange de connaissances à travers des domaines linguistiques
 ---
 
 La communication inter-Sprachraum est l’échange d’idées au-delà des frontières

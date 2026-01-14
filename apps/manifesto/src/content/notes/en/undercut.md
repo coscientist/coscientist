@@ -1,7 +1,6 @@
 ---
 title: Undercut
-description:
-  An attack on the method, assumption, or definition underlying a claim
+description: An attack on the method, assumption, or definition underlying a claim
 ---
 
 An undercut is a challenge that targets not the [claim](./claim) itself but the

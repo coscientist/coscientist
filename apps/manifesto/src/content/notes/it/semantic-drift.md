@@ -1,7 +1,6 @@
 ---
 title: Deriva semantica
-description:
-  Cambiamenti di significato che rendono la conoscenza obsoleta o fuorviante
+description: Cambiamenti di significato che rendono la conoscenza obsoleta o fuorviante
 ---
 
 La deriva semantica è la categoria dei [fenomeni di deriva](./drift-phenomena)

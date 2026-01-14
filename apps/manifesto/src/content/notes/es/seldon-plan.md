@@ -1,7 +1,6 @@
 ---
 title: Plan Seldon
-description:
-  La estrategia a largo plazo de Hari Seldon para acortar una edad oscura
+description: La estrategia a largo plazo de Hari Seldon para acortar una edad oscura
 ---
 
 El Plan Seldon es la estrategia a largo plazo de [Hari Seldon](./hari-seldon)

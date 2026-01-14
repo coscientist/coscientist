@@ -1,7 +1,6 @@
 ---
 title: Tweede Brein
-description:
-  Een persoonlijke kennismanagementbenadering voor het externaliseren van ideeën
+description: Een persoonlijke kennismanagementbenadering voor het externaliseren van ideeën
 ---
 
 Het "tweede brein" is een persoonlijke kennismanagementbenadering die gericht is

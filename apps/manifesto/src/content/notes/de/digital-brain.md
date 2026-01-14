@@ -1,7 +1,6 @@
 ---
 title: Digitales Gehirn
-description:
-  Ein persönliches Wissenssystem, das einen Geist spiegelt und erweitert
+description: Ein persönliches Wissenssystem, das einen Geist spiegelt und erweitert
 ---
 
 Ein digitales Gehirn ist ein persönliches Wissenssystem, das darauf ausgelegt

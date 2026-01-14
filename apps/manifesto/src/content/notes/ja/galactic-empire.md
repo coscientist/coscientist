@@ -1,7 +1,6 @@
 ---
 title: 銀河帝国
-description:
-  アシモフ『ファウンデーション』において、百科事典銀河（Encyclopedia
+description: アシモフ『ファウンデーション』において、百科事典銀河（Encyclopedia
   Galactica）を動機づける文明の崩壊
 ---
 

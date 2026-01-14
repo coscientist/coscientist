@@ -1,7 +1,6 @@
 ---
 title: Principi della scienza dell’apprendimento
-description:
-  Tecniche basate su evidenze per un apprendimento e una memoria duraturi
+description: Tecniche basate su evidenze per un apprendimento e una memoria duraturi
 ---
 
 I principi della scienza dell’apprendimento sono tecniche basate su evidenze per

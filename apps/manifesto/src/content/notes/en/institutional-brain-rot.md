@@ -1,7 +1,6 @@
 ---
 title: Institutional Brain Rot
-description:
-  Organizational failure mode where collective verification capacity degrades
+description: Organizational failure mode where collective verification capacity degrades
 ---
 
 Institutional brain rot is a failure mode in which an organization's collective

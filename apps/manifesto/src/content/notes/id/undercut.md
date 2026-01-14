@@ -1,7 +1,6 @@
 ---
 title: Undercut
-description:
-  Serangan terhadap metode, asumsi, atau definisi yang mendasari sebuah klaim
+description: Serangan terhadap metode, asumsi, atau definisi yang mendasari sebuah klaim
 ---
 
 Undercut adalah tantangan yang menargetkan bukan [klaim](./claim) itu sendiri,

@@ -1,7 +1,6 @@
 ---
 title: Sintesis Pengetahuan
-description:
-  Bagaimana sintesis berbeda dari perataan dalam sistem pengetahuan dialektis
+description: Bagaimana sintesis berbeda dari perataan dalam sistem pengetahuan dialektis
 ---
 
 Sintesis pengetahuan adalah apa yang terjadi setelah retrieval ketika Anda harus

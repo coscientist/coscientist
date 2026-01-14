@@ -1,7 +1,6 @@
 ---
 title: Znormalizowana teza
-description:
-  Ustandaryzowane twierdzenie wyodrębnione z tekstu w języku naturalnym
+description: Ustandaryzowane twierdzenie wyodrębnione z tekstu w języku naturalnym
 ---
 
 Znormalizowana teza to [twierdzenie](./claim), które zostało wyodrębnione z

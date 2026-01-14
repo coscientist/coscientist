@@ -1,7 +1,6 @@
 ---
 title: LLM
-description:
-  Large Language Model, die KI-Architektur, die Coscientists
+description: Large Language Model, die KI-Architektur, die Coscientists
   Kontemplationsarbeit zugrunde liegt
 ---
 

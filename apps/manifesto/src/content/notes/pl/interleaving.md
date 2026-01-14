@@ -1,7 +1,6 @@
 ---
 title: Przeplatanie
-description:
-  Mieszanie tematów lub typów zadań podczas ćwiczeń, aby poprawić transfer
+description: Mieszanie tematów lub typów zadań podczas ćwiczeń, aby poprawić transfer
 ---
 
 Przeplatanie polega na ćwiczeniu poprzez mieszanie typów zadań lub tematów w

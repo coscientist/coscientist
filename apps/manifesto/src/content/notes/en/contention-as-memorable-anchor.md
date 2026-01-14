@@ -1,7 +1,6 @@
 ---
 title: Contention as Memorable Anchor
-description:
-  Disagreements require cognitive effort and create stronger memory traces
+description: Disagreements require cognitive effort and create stronger memory traces
 ---
 
 "Contention as a memorable anchor" is the observation that

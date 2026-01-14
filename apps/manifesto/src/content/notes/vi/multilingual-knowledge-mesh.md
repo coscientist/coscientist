@@ -1,7 +1,6 @@
 ---
 title: Lưới Tri thức Đa ngôn ngữ
-description:
-  Một mạng lưới tri thức trải rộng qua nhiều ngôn ngữ và phân phối trên toàn cầu
+description: Một mạng lưới tri thức trải rộng qua nhiều ngôn ngữ và phân phối trên toàn cầu
 ---
 
 Lưới tri thức đa ngôn ngữ là một mạng lưới tri thức trong đó nội dung ở bất kỳ

@@ -1,7 +1,6 @@
 ---
 title: Erhalt kognitiver Handlungsfähigkeit
-description:
-  AI-Sicherheits-Frame, der Menschen die Kontrolle über Urteilsvermögen lässt
+description: AI-Sicherheits-Frame, der Menschen die Kontrolle über Urteilsvermögen lässt
 ---
 
 Erhalt kognitiver Handlungsfähigkeit ist das Prinzip, dass KI menschliches

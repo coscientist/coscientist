@@ -1,7 +1,6 @@
 ---
 title: Reibung als Feind
-description:
-  Gestaltungsprinzip, dass Reibung persönliche Wissens-Workflows zerstört
+description: Gestaltungsprinzip, dass Reibung persönliche Wissens-Workflows zerstört
 ---
 
 „Reibung als Feind" ist das Gestaltungsprinzip, dass unnötiger Aufwand beim

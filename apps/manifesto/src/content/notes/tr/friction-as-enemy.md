@@ -1,7 +1,6 @@
 ---
 title: Düşman Olarak Sürtünme
-description:
-  Sürtünmenin kişisel bilgi iş akışlarını öldürdüğünü söyleyen tasarım ilkesi
+description: Sürtünmenin kişisel bilgi iş akışlarını öldürdüğünü söyleyen tasarım ilkesi
 ---
 
 Düşman olarak sürtünme, bilgiyi yakalama, düzenleme veya geri çağırma

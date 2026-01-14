@@ -1,7 +1,6 @@
 ---
 title: Effondrement du modèle
-description:
-  Dégradation des modèles entraînés sur leurs propres données générées
+description: Dégradation des modèles entraînés sur leurs propres données générées
 ---
 
 L’effondrement du modèle est une dégradation qui peut se produire lorsque des

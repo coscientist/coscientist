@@ -1,7 +1,6 @@
 ---
 title: Document Collision
-description:
-  Protocol of forcing disparate sources to engage with each other's claims
+description: Protocol of forcing disparate sources to engage with each other's claims
 ---
 
 Document collision is the protocol of forcing disparate sources to engage with

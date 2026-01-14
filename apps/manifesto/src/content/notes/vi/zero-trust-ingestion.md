@@ -1,7 +1,6 @@
 ---
 title: Nạp dữ liệu Zero-Trust
-description:
-  Giao thức yêu cầu xuất xứ rõ ràng trước khi chấp nhận các khẳng định
+description: Giao thức yêu cầu xuất xứ rõ ràng trước khi chấp nhận các khẳng định
 ---
 
 Nạp dữ liệu zero-trust là một giao thức coi thông tin đầu vào mặc định là chưa

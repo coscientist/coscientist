@@ -1,7 +1,6 @@
 ---
 title: Effetto della spaziatura
-description:
-  La memoria migliora quando le sessioni di studio sono distribuite nel tempo
+description: La memoria migliora quando le sessioni di studio sono distribuite nel tempo
 ---
 
 L’effetto della spaziatura è il risultato, ampiamente replicato, secondo cui

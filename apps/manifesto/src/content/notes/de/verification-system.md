@@ -1,7 +1,6 @@
 ---
 title: Verifikationssystem
-description:
-  Die Mechanismen zum Prüfen von Behauptungen gegen Evidenz und Gegenevidenz
+description: Die Mechanismen zum Prüfen von Behauptungen gegen Evidenz und Gegenevidenz
 ---
 
 Das Verifikationssystem ist die Gesamtheit der Mechanismen, die

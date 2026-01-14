@@ -1,7 +1,6 @@
 ---
 title: AI-slop
-description:
-  Laagwaardige door AI gegenereerde content die het internet overspoelt
+description: Laagwaardige door AI gegenereerde content die het internet overspoelt
 ---
 
 AI-slop is content met weinig inspanning en groot volume, geproduceerd met

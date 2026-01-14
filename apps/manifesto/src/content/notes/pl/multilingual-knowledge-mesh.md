@@ -1,7 +1,6 @@
 ---
 title: Wielojęzyczna siatka wiedzy
-description:
-  Sieć wiedzy, która obejmuje wiele języków i jest globalnie dystrybuowana
+description: Sieć wiedzy, która obejmuje wiele języków i jest globalnie dystrybuowana
 ---
 
 Wielojęzyczna siatka wiedzy to sieć wiedzy, w której treści w dowolnym języku

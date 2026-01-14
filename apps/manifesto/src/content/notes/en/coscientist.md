@@ -1,7 +1,6 @@
 ---
 title: Coscientist
-description:
-  An intellectual companion system for knowledge production in the post-AI era
+description: An intellectual companion system for knowledge production in the post-AI era
 ---
 
 Coscientist is an open-source service inspired by

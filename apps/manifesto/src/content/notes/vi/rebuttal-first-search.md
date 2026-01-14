@@ -1,7 +1,6 @@
 ---
 title: Tìm kiếm ưu tiên phản bác
-description:
-  Một giao thức kiểm định tìm kiếm bằng chứng phản chứng trước khi chấp nhận
+description: Một giao thức kiểm định tìm kiếm bằng chứng phản chứng trước khi chấp nhận
 ---
 
 Tìm kiếm ưu tiên phản bác là một giao thức kiểm định nhằm tìm bằng chứng phản

@@ -1,7 +1,6 @@
 ---
 title: Bảo toàn tác nhân nhận thức
-description:
-  Khung an toàn AI giúp con người giữ quyền kiểm soát đối với phán đoán
+description: Khung an toàn AI giúp con người giữ quyền kiểm soát đối với phán đoán
 ---
 
 Bảo toàn tác nhân nhận thức là nguyên tắc rằng AI nên củng cố phán đoán của con

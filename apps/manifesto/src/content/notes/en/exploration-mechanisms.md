@@ -1,7 +1,6 @@
 ---
 title: Exploration Mechanisms
-description:
-  Strategies for continuous knowledge discovery in a dialectical graph
+description: Strategies for continuous knowledge discovery in a dialectical graph
 ---
 
 Exploration mechanisms are the strategies [Coscientist](./coscientist) uses to

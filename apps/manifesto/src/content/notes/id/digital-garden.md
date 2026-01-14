@@ -1,7 +1,6 @@
 ---
 title: Kebun Digital
-description:
-  Kumpulan catatan saling-terkait yang bersifat publik dan terus berkembang
+description: Kumpulan catatan saling-terkait yang bersifat publik dan terus berkembang
 ---
 
 Kebun digital adalah kumpulan catatan saling-terkait yang bersifat publik dan

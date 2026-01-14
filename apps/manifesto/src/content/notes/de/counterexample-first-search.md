@@ -1,7 +1,6 @@
 ---
 title: Gegenbeispiel-zuerst-Suche
-description:
-  Strategie, die Gegenbeispiele gegenüber unterstützenden Belegen priorisiert
+description: Strategie, die Gegenbeispiele gegenüber unterstützenden Belegen priorisiert
 ---
 
 Die Gegenbeispiel-zuerst-Suche ist eine

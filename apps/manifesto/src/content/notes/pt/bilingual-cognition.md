@@ -1,7 +1,6 @@
 ---
 title: Cognição bilíngue
-description:
-  A capacidade de pensar e operar em múltiplas línguas simultaneamente
+description: A capacidade de pensar e operar em múltiplas línguas simultaneamente
 ---
 
 Cognição bilíngue é a capacidade de pensar e trabalhar em mais de uma língua,

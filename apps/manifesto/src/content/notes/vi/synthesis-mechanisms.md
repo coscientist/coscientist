@@ -1,7 +1,6 @@
 ---
 title: Cơ chế Tổng hợp
-description:
-  Các mẫu hình để làm cho những nguồn không tương thích có thể so sánh được
+description: Các mẫu hình để làm cho những nguồn không tương thích có thể so sánh được
 ---
 
 Cơ chế tổng hợp là các mẫu hình và giao thức mà

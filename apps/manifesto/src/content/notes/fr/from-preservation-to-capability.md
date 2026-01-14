@@ -1,7 +1,6 @@
 ---
 title: De la préservation à la capacité
-description:
-  Le passage du stockage des connaissances à la production de compréhension
+description: Le passage du stockage des connaissances à la production de compréhension
 ---
 
 Passer de la préservation à la capacité, c’est passer de systèmes de

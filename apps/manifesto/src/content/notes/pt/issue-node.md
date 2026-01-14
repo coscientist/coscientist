@@ -1,7 +1,6 @@
 ---
 title: Nó de Questão
-description:
-  Um feixe de aglomerados de alegações em colisão em um grafo dialético
+description: Um feixe de aglomerados de alegações em colisão em um grafo dialético
 ---
 
 Um nó de questão é um objeto de grafo que agrupa [alegações](./claim) em colisão

@@ -1,7 +1,6 @@
 ---
 title: Verifikation
-description:
-  Der Prozess des Abgleichs von Behauptungen mit Evidenz und Gegenbelegen
+description: Der Prozess des Abgleichs von Behauptungen mit Evidenz und Gegenbelegen
 ---
 
 Verifikation ist der Prozess, zu prüfen, ob eine Behauptung gegenüber Evidenz,

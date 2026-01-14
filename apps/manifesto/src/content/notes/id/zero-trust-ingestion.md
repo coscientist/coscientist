@@ -1,7 +1,6 @@
 ---
 title: Ingesti Tanpa Kepercayaan
-description:
-  Protokol yang mengharuskan asal-usul eksplisit sebelum menerima klaim
+description: Protokol yang mengharuskan asal-usul eksplisit sebelum menerima klaim
 ---
 
 Ingesti tanpa kepercayaan adalah protokol yang memperlakukan informasi yang

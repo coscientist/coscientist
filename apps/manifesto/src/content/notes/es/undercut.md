@@ -1,7 +1,6 @@
 ---
 title: Socavamiento
-description:
-  Un ataque al método, la suposición o la definición que sustenta una afirmación
+description: Un ataque al método, la suposición o la definición que sustenta una afirmación
 ---
 
 Un socavamiento es un desafío que no apunta a la [afirmación](./claim) en sí,

@@ -1,7 +1,6 @@
 ---
 title: Bộ xương ngoài nhận thức
-description:
-  Các công cụ bên ngoài giúp mở rộng và khuếch đại nhận thức của con người
+description: Các công cụ bên ngoài giúp mở rộng và khuếch đại nhận thức của con người
 ---
 
 Bộ xương ngoài nhận thức là một hệ thống các công cụ bên ngoài giúp mở rộng và

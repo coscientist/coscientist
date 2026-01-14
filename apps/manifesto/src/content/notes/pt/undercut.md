@@ -1,7 +1,6 @@
 ---
 title: Solapamento
-description:
-  Um ataque ao método, pressuposto ou definição subjacente a uma afirmação
+description: Um ataque ao método, pressuposto ou definição subjacente a uma afirmação
 ---
 
 Um solapamento é uma contestação que não mira a [afirmação](./claim) em si, mas

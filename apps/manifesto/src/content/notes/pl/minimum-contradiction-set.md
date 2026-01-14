@@ -1,7 +1,6 @@
 ---
 title: Minimalny Zestaw Sprzeczności
-description:
-  Najmniejszy zestaw przesłanek i relacji, który prowadzi do konfliktu
+description: Najmniejszy zestaw przesłanek i relacji, który prowadzi do konfliktu
 ---
 
 Minimalny zestaw sprzeczności to najmniejsza kolekcja przesłanek, twierdzeń i

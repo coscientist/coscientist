@@ -1,7 +1,6 @@
 ---
 title: Ciemna noc duszy
-description:
-  Środek literacki opisujący głęboki kryzys wewnętrzny prowadzący do
+description: Środek literacki opisujący głęboki kryzys wewnętrzny prowadzący do
   rekonstrukcji tożsamości
 ---
 

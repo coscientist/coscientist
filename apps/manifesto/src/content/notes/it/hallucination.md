@@ -1,7 +1,6 @@
 ---
 title: Allucinazione
-description:
-  Output dell’IA che sono plausibili ma fattualmente errati o inventati
+description: Output dell’IA che sono plausibili ma fattualmente errati o inventati
 ---
 
 Un’allucinazione è un output dell’IA che appare sicuro e coerente, ma contiene

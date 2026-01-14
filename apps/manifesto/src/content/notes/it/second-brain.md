@@ -1,7 +1,6 @@
 ---
 title: Secondo cervello
-description:
-  Un approccio di gestione della conoscenza personale per esternalizzare le idee
+description: Un approccio di gestione della conoscenza personale per esternalizzare le idee
 ---
 
 Il "secondo cervello" è un approccio di gestione della conoscenza personale

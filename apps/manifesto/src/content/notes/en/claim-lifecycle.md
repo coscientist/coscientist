@@ -1,7 +1,6 @@
 ---
 title: Claim Lifecycle
-description:
-  How claims evolve from tentative hypothesis to robust knowledge or
+description: How claims evolve from tentative hypothesis to robust knowledge or
   obsolescence
 ---
 

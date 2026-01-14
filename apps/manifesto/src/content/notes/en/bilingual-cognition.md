@@ -1,7 +1,6 @@
 ---
 title: Bilingual Cognition
-description:
-  The capacity to think and operate in multiple languages simultaneously
+description: The capacity to think and operate in multiple languages simultaneously
 ---
 
 Bilingual cognition is the ability to think and work in more than one language,

@@ -1,7 +1,6 @@
 ---
 title: Insieme Minimo di Contraddizione
-description:
-  Il più piccolo insieme di premesse e relazioni che producono un conflitto
+description: Il più piccolo insieme di premesse e relazioni che producono un conflitto
 ---
 
 L’insieme minimo di contraddizione è la più piccola raccolta di premesse,

@@ -1,7 +1,6 @@
 ---
 title: Mất ý nghĩa
-description:
-  Khi một mệnh đề trở nên lỗi thời vì các thuật ngữ của nó đã thay đổi ý nghĩa
+description: Khi một mệnh đề trở nên lỗi thời vì các thuật ngữ của nó đã thay đổi ý nghĩa
 ---
 
 Mất ý nghĩa xảy ra khi một [mệnh đề](./claim) trở nên lỗi thời không phải vì nó

@@ -1,7 +1,6 @@
 ---
 title: Sistem Sürüklenmesi
-description:
-  Bilgi sistemlerinin kendi kendini kirletme veya ihmal yoluyla bozulması
+description: Bilgi sistemlerinin kendi kendini kirletme veya ihmal yoluyla bozulması
 ---
 
 Sistem sürüklenmesi, anlamsal ya da çevresel değişimlerden bağımsız olarak,

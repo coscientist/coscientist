@@ -1,7 +1,6 @@
 ---
 title: Extracraneal
-description:
-  El cerebro digital personal y sistema de publicación de Sunghyun Cho
+description: El cerebro digital personal y sistema de publicación de Sunghyun Cho
 ---
 
 Extracraneal es el cerebro digital personal de [Sunghyun Cho](./sunghyun-cho):

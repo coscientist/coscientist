@@ -1,7 +1,6 @@
 ---
 title: Yapay Zekâ Devrine Dayalı De-Skilleşme
-description:
-  Yapay zekâ bilişsel işi yaptığında öğrenme kapasitesini kaybetme riski
+description: Yapay zekâ bilişsel işi yaptığında öğrenme kapasitesini kaybetme riski
 ---
 
 Yapay zekâya devrederek de-skilleşme, bilişsel işi yapay zekâya yüklemenin, o

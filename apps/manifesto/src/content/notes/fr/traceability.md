@@ -1,7 +1,6 @@
 ---
 title: Traçabilité
-description:
-  La capacité de remonter une affirmation jusqu’à ses sources et ses fondements
+description: La capacité de remonter une affirmation jusqu’à ses sources et ses fondements
 ---
 
 La traçabilité est la capacité de remonter une affirmation à rebours à travers

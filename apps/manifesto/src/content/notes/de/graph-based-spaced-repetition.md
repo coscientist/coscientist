@@ -1,7 +1,6 @@
 ---
 title: Graphbasierte verteilte Wiederholung
-description:
-  Verwendung von Claim-Alter oder Widerlegungs-Alter, um eine erneute
+description: Verwendung von Claim-Alter oder Widerlegungs-Alter, um eine erneute
   Verifikation auszulösen
 ---
 

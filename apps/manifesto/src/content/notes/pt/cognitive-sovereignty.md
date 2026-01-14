@@ -1,7 +1,6 @@
 ---
 title: Soberania Cognitiva
-description:
-  Controle humano sobre julgamento e verificação no trabalho do conhecimento
+description: Controle humano sobre julgamento e verificação no trabalho do conhecimento
 ---
 
 A soberania cognitiva é o compromisso de manter o julgamento e a verificação

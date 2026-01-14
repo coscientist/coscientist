@@ -1,7 +1,6 @@
 ---
 title: Lặp lại ngắt quãng dựa trên đồ thị
-description:
-  Dùng tuổi của khẳng định hoặc tuổi phản biện để kích hoạt việc tái xác minh
+description: Dùng tuổi của khẳng định hoặc tuổi phản biện để kích hoạt việc tái xác minh
 ---
 
 Lặp lại ngắt quãng dựa trên đồ thị áp dụng các nguyên lý của

@@ -1,7 +1,6 @@
 ---
 title: Zero-Trust-inname
-description:
-  Protocol dat expliciete herkomst vereist voordat beweringen worden
+description: Protocol dat expliciete herkomst vereist voordat beweringen worden
   geaccepteerd
 ---
 

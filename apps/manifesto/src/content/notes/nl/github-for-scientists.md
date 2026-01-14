@@ -1,7 +1,6 @@
 ---
 title: GitHub voor Wetenschappers
-description:
-  Visie om experimenten te behandelen als geversioneerde, auditeerbare code
+description: Visie om experimenten te behandelen als geversioneerde, auditeerbare code
 ---
 
 "GitHub voor Wetenschappers" is een visie waarin wetenschappelijke experimenten

@@ -1,7 +1,6 @@
 ---
 title: Estratégias de Exploração
-description:
-  Estratégias de travessia de grafo para descoberta contínua de conhecimento
+description: Estratégias de travessia de grafo para descoberta contínua de conhecimento
 ---
 
 O [Cocientista](./coscientist) precisa de mais do que recuperação: precisa de

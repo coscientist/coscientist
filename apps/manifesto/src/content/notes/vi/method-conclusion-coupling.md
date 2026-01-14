@@ -1,7 +1,6 @@
 ---
 title: Ghép nối phương pháp–kết luận
-description:
-  Mẫu phân tích nhóm các luận điểm theo phương pháp thay vì theo kết luận
+description: Mẫu phân tích nhóm các luận điểm theo phương pháp thay vì theo kết luận
 ---
 
 Ghép nối phương pháp–kết luận là một mẫu phân tích dùng để nhóm các

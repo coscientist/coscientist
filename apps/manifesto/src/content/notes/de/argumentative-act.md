@@ -1,7 +1,6 @@
 ---
 title: Argumentativer Akt
-description:
-  Ein Schritt im Schlussfolgern, wie etwa Behaupten, Definieren oder Widerlegen
+description: Ein Schritt im Schlussfolgern, wie etwa Behaupten, Definieren oder Widerlegen
 ---
 
 Ein argumentativer Akt ist ein eigenständiger Schritt im Schlussfolgern, etwa

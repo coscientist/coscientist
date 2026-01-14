@@ -1,7 +1,6 @@
 ---
 title: AI
-description:
-  Kecerdasan Buatan sebagai alat sekaligus tantangan bagi sistem pengetahuan
+description: Kecerdasan Buatan sebagai alat sekaligus tantangan bagi sistem pengetahuan
 ---
 
 AI dalam konteks [Kosaintis](./coscientist) merujuk pada sistem yang melakukan

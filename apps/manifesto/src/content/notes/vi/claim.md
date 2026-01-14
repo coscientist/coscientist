@@ -1,7 +1,6 @@
 ---
 title: Khẳng định
-description:
-  Một mệnh đề có thể kiểm chứng được lưu trữ như một nút trong đồ thị biện chứng
+description: Một mệnh đề có thể kiểm chứng được lưu trữ như một nút trong đồ thị biện chứng
 ---
 
 Một khẳng định là một mệnh đề có thể kiểm chứng được trích xuất từ văn bản và

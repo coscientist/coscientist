@@ -1,7 +1,6 @@
 ---
 title: Argumentatieve handeling
-description:
-  Een stap in het redeneren, zoals iets beweren, definiëren of weerleggen
+description: Een stap in het redeneren, zoals iets beweren, definiëren of weerleggen
 ---
 
 Een argumentatieve handeling is een afzonderlijke stap in het redeneren, zoals

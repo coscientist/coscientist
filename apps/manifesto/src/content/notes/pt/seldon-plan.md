@@ -1,7 +1,6 @@
 ---
 title: Plano Seldon
-description:
-  A estratégia de longo prazo de Hari Seldon para encurtar uma era sombria
+description: A estratégia de longo prazo de Hari Seldon para encurtar uma era sombria
 ---
 
 O Plano Seldon é a estratégia de longo prazo de [Hari Seldon](./hari-seldon)

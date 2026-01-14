@@ -1,7 +1,6 @@
 ---
 title: Ensiklopedia Galactica
-description:
-  Sebuah konsep untuk melestarikan pengetahuan melintasi zaman kegelapan
+description: Sebuah konsep untuk melestarikan pengetahuan melintasi zaman kegelapan
 ---
 
 Ensiklopedia Galactica adalah perangkat fiksi dalam seri Foundation karya

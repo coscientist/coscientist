@@ -1,7 +1,6 @@
 ---
 title: Fedeltà della traduzione
-description:
-  Preservare significato e accuratezza attraverso i confini linguistici
+description: Preservare significato e accuratezza attraverso i confini linguistici
 ---
 
 La fedeltà della traduzione è il grado in cui un contenuto tradotto preserva il

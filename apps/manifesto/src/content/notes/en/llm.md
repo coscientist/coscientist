@@ -1,7 +1,6 @@
 ---
 title: LLM
-description:
-  Large Language Model, the AI architecture underlying Coscientist's
+description: Large Language Model, the AI architecture underlying Coscientist's
   contemplation labor
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: Mesele Düğümü
-description:
-  Diyalektik bir grafikte çarpışan iddia kümelerinden oluşan bir demet
+description: Diyalektik bir grafikte çarpışan iddia kümelerinden oluşan bir demet
 ---
 
 Bir mesele düğümü, çarpışan [iddiaları](./claim) tutarlı bir inceleme nesnesi

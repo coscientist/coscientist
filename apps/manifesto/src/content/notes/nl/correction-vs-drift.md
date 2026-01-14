@@ -1,7 +1,6 @@
 ---
 title: Correctie vs drift
-description:
-  Economisch principe dat een kennissysteem alleen overleeft als de
+description: Economisch principe dat een kennissysteem alleen overleeft als de
   correctiekosten onder de driftkosten blijven
 ---
 

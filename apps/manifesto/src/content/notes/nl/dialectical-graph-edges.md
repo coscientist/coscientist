@@ -1,7 +1,6 @@
 ---
 title: Dialectische graafranden
-description:
-  De relatietypen die knooppunten verbinden in een dialectische kennisgraaf
+description: De relatietypen die knooppunten verbinden in een dialectische kennisgraaf
 ---
 
 In een [Dialectische graaf](./dialectical-graph) coderen randen relatietypen in

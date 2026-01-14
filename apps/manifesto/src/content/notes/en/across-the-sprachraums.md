@@ -1,7 +1,6 @@
 ---
 title: Across the Sprachraums
-description:
-  The vision of transcending language boundaries for knowledge systems
+description: The vision of transcending language boundaries for knowledge systems
 ---
 
 "Across the Sprachraums" is [Sunghyun Cho](./sunghyun-cho)'s vision for

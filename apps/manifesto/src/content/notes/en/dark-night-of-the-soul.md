@@ -1,7 +1,6 @@
 ---
 title: Dark Night of the Soul
-description:
-  A literary device for profound inner crisis leading to identity reconstruction
+description: A literary device for profound inner crisis leading to identity reconstruction
 ---
 
 "The Dark Night of the Soul" names a profound inner crisis in which identity,

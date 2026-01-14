@@ -1,7 +1,6 @@
 ---
 title: Nodo di Questione
-description:
-  Un insieme di cluster di affermazioni in collisione in un grafo dialettico
+description: Un insieme di cluster di affermazioni in collisione in un grafo dialettico
 ---
 
 Un nodo di questione è un oggetto del grafo che raggruppa

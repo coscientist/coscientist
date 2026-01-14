@@ -1,7 +1,6 @@
 ---
 title: Arestas do Grafo Dialético
-description:
-  Os tipos de relação que conectam nós em um grafo de conhecimento dialético
+description: Os tipos de relação que conectam nós em um grafo de conhecimento dialético
 ---
 
 Em um [Grafo Dialético](./dialectical-graph), as arestas codificam tipos de

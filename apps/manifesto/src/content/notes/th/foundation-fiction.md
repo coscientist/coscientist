@@ -1,7 +1,6 @@
 ---
 title: นิยาย Foundation
-description:
-  แนวคิดที่ได้แรงบันดาลใจจาก Asimov ซึ่งหล่อหลอมวิสัยทัศน์ของ Coscientist
+description: แนวคิดที่ได้แรงบันดาลใจจาก Asimov ซึ่งหล่อหลอมวิสัยทัศน์ของ Coscientist
 ---
 
 นิยาย Foundation หมายถึงแนวคิดจากชุดนิยาย Foundation ของ

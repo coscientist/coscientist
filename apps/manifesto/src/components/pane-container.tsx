@@ -16,10 +16,14 @@ import { MobilePaneCarousel } from "./mobile-pane-carousel"
 
 interface PaneCollapseContextValue {
   collapsedIndices: Set<number>
+  registerPaneRef: (index: number, element: HTMLElement | null) => void
+  scrollToPane: (index: number) => void
 }
 
 const PaneCollapseContext = createContext<PaneCollapseContextValue>({
   collapsedIndices: new Set(),
+  registerPaneRef: () => null,
+  scrollToPane: () => null,
 })
 
 export function usePaneCollapse() {
@@ -29,6 +33,7 @@ export function usePaneCollapse() {
 interface PaneContainerProps {
   children: ReactNode
   focusIndex: number
+  scrollToPaneRef?: React.MutableRefObject<((index: number) => void) | null>
   mobileData?: {
     notes: Note[]
     backlinksMap: Map<string, BacklinkInfo[]>
@@ -40,9 +45,11 @@ interface PaneContainerProps {
 export function PaneContainer({
   children,
   focusIndex,
+  scrollToPaneRef,
   mobileData,
 }: PaneContainerProps) {
   const containerRef = useRef<HTMLDivElement>(null)
+  const paneRefsMap = useRef<Map<number, HTMLElement>>(new Map())
   const [collapsedIndices, setCollapsedIndices] = useState<Set<number>>(
     new Set()
   )
@@ -57,6 +64,43 @@ export function PaneContainer({
       ? "auto"
       : "smooth"
   }, [])
+
+  const registerPaneRef = useCallback(
+    (index: number, element: HTMLElement | null) => {
+      if (element) {
+        paneRefsMap.current.set(index, element)
+      } else {
+        paneRefsMap.current.delete(index)
+      }
+    },
+    []
+  )
+
+  const scrollToPane = useCallback(
+    (index: number) => {
+      const targetPane = paneRefsMap.current.get(index)
+      if (targetPane) {
+        targetPane.scrollIntoView({
+          behavior: getScrollBehavior(),
+          block: "nearest",
+          inline: "start",
+        })
+        targetPane.focus()
+      }
+    },
+    [getScrollBehavior]
+  )
+
+  useEffect(() => {
+    if (scrollToPaneRef) {
+      scrollToPaneRef.current = scrollToPane
+    }
+    return () => {
+      if (scrollToPaneRef) {
+        scrollToPaneRef.current = null
+      }
+    }
+  }, [scrollToPane, scrollToPaneRef])
 
   const updateCollapseThreshold = useCallback(() => {
     const container = containerRef.current
@@ -178,17 +222,13 @@ export function PaneContainer({
       return
     }
 
-    if (containerRef.current) {
-      const panes = containerRef.current.querySelectorAll("[data-pane]")
-      const targetPane = panes[focusIndex] as HTMLElement | undefined
-
-      if (targetPane) {
-        targetPane.scrollIntoView({
-          behavior: getScrollBehavior(),
-          block: "nearest",
-          inline: "start",
-        })
-      }
+    const targetPane = paneRefsMap.current.get(focusIndex)
+    if (targetPane) {
+      targetPane.scrollIntoView({
+        behavior: getScrollBehavior(),
+        block: "nearest",
+        inline: "start",
+      })
     }
   }, [isMobile, focusIndex, getScrollBehavior])
 
@@ -205,7 +245,9 @@ export function PaneContainer({
   }
 
   return (
-    <PaneCollapseContext.Provider value={{ collapsedIndices }}>
+    <PaneCollapseContext.Provider
+      value={{ collapsedIndices, registerPaneRef, scrollToPane }}
+    >
       <div
         className={cn(
           "relative flex min-h-0 flex-1 overflow-x-auto overflow-y-hidden",

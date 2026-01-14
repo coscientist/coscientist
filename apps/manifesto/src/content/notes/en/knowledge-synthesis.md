@@ -1,7 +1,6 @@
 ---
 title: Knowledge Synthesis
-description:
-  How synthesis differs from averaging in dialectical knowledge systems
+description: How synthesis differs from averaging in dialectical knowledge systems
 ---
 
 Knowledge synthesis is what happens after retrieval when you have to make

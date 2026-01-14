@@ -1,7 +1,6 @@
 ---
 title: Sprzężenie metody z konkluzją
-description:
-  Wzorzec analizy grupujący twierdzenia według metody, a nie konkluzji
+description: Wzorzec analizy grupujący twierdzenia według metody, a nie konkluzji
 ---
 
 Sprzężenie metody z konkluzją to wzorzec analizy, który grupuje

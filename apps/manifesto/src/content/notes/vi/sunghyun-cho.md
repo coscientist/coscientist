@@ -1,7 +1,6 @@
 ---
 title: Sunghyun Cho
-description:
-  Người xây dựng Coscientist và tác giả của các bài tiểu luận nền tảng của nó
+description: Người xây dựng Coscientist và tác giả của các bài tiểu luận nền tảng của nó
 ---
 
 Sunghyun Cho là người xây dựng [Nhà đồng khoa học](./coscientist) và là tác giả

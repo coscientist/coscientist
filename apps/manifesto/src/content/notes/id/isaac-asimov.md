@@ -1,7 +1,6 @@
 ---
 title: Isaac Asimov
-description:
-  Penulis fiksi ilmiah yang seri Foundation-nya menginspirasi visi Coscientist
+description: Penulis fiksi ilmiah yang seri Foundation-nya menginspirasi visi Coscientist
 ---
 
 Isaac Asimov (1920–1992) adalah penulis fiksi ilmiah yang sangat produktif dan

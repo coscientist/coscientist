@@ -1,7 +1,6 @@
 ---
 title: Síntese Interlinguística
-description:
-  Combinando conhecimento de múltiplas línguas em uma compreensão unificada
+description: Combinando conhecimento de múltiplas línguas em uma compreensão unificada
 ---
 
 A síntese interlinguística é o processo de combinar conhecimento de fontes em

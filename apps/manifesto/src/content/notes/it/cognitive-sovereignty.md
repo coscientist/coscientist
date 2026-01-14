@@ -1,7 +1,6 @@
 ---
 title: Sovranità cognitiva
-description:
-  Controllo umano sul giudizio e sulla verifica nel lavoro della conoscenza
+description: Controllo umano sul giudizio e sulla verifica nel lavoro della conoscenza
 ---
 
 La sovranità cognitiva è l’impegno a mantenere il giudizio e la verifica umani

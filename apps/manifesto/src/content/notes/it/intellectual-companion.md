@@ -1,7 +1,6 @@
 ---
 title: Compagno intellettuale
-description:
-  L'IA come partner di contemplazione piuttosto che come motore di risposte
+description: L'IA come partner di contemplazione piuttosto che come motore di risposte
 ---
 
 Un compagno intellettuale è un sistema di IA progettato per pensare insieme

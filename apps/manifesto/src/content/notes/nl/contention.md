@@ -1,7 +1,6 @@
 ---
 title: Controversie
-description:
-  Een gestructureerd conflict tussen beweringen dat om oplossing vraagt
+description: Een gestructureerd conflict tussen beweringen dat om oplossing vraagt
 ---
 
 Een controversie is een gestructureerd conflict tussen beweringen, definities of

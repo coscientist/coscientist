@@ -1,7 +1,6 @@
 ---
 title: Doğrulamada Arzu Edilen Zorluk
-description:
-  Gerçek anlayışı sürdürmek için doğrulamayı emek gerektirir hâle getirmek
+description: Gerçek anlayışı sürdürmek için doğrulamayı emek gerektirir hâle getirmek
 ---
 
 Doğrulamada arzu edilen zorluk, [doğrulamanın](./verification) gerçek bilişi

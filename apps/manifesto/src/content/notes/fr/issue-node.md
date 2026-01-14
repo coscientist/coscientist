@@ -1,7 +1,6 @@
 ---
 title: Nœud de controverse
-description:
-  Un ensemble de grappes d’assertions en collision dans un graphe dialectique
+description: Un ensemble de grappes d’assertions en collision dans un graphe dialectique
 ---
 
 Un nœud de controverse est un objet de graphe qui regroupe des

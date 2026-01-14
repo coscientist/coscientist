@@ -1,7 +1,6 @@
 ---
 title: Bilgi Sentezi
-description:
-  Diyalektik bilgi sistemlerinde sentezin ortalamadan nasıl farklılaştığı
+description: Diyalektik bilgi sistemlerinde sentezin ortalamadan nasıl farklılaştığı
 ---
 
 Bilgi sentezi, erişimden sonra, birbirine uyumsuz kaynakları karşılaştırılabilir

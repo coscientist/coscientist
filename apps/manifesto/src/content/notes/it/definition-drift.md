@@ -1,7 +1,6 @@
 ---
 title: Deriva definitoria
-description:
-  Quando il significato di un termine cambia nel tempo o in contesti diversi
+description: Quando il significato di un termine cambia nel tempo o in contesti diversi
 ---
 
 La deriva definitoria è lo spostamento graduale del significato di un termine

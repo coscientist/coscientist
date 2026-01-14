@@ -1,7 +1,6 @@
 ---
 title: Anlatı Katmanı
-description:
-  İnsan tarafından okunmaya uygun, diyalektik grafiğin zaman damgalı
+description: İnsan tarafından okunmaya uygun, diyalektik grafiğin zaman damgalı
   projeksiyonları
 ---
 

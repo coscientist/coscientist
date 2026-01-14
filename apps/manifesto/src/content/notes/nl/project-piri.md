@@ -1,7 +1,6 @@
 ---
 title: Project PIRI
-description:
-  Een geannuleerd initiatief voor onbeperkte vertalingen van
+description: Een geannuleerd initiatief voor onbeperkte vertalingen van
   programmeerdocumentatie
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: Separación triple
-description:
-  Regla arquitectónica que separa el texto en bruto, las afirmaciones
+description: Regla arquitectónica que separa el texto en bruto, las afirmaciones
   normalizadas y las relaciones explícitas
 ---
 

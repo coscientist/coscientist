@@ -1,7 +1,6 @@
 ---
 title: Stratégies d’exploration
-description:
-  Stratégies de parcours de graphe pour une découverte continue des
+description: Stratégies de parcours de graphe pour une découverte continue des
   connaissances
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: Travail de contemplation
-description:
-  Le travail cognitif qu’effectue l’IA dans la production de connaissances
+description: Le travail cognitif qu’effectue l’IA dans la production de connaissances
 ---
 
 Le travail de contemplation est le travail cognitif de la production de

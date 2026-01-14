@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from "motion/react"
 import { useTranslations } from "next-intl"
-import { useMemo } from "react"
+import { useEffect, useMemo, useRef } from "react"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { useReducedMotion } from "@/hooks/use-reduced-motion"
 import {
@@ -34,11 +34,17 @@ export function AllNotesList({
   onNoteClick,
   onExpand,
 }: AllNotesListProps) {
-  const { collapsedIndices } = usePaneCollapse()
+  const { collapsedIndices, registerPaneRef } = usePaneCollapse()
   const isCollapsed = collapsedIndices.has(index)
   const prefersReducedMotion = useReducedMotion()
   const t = useTranslations("allNotes")
   const tPane = useTranslations("notePane")
+  const paneRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    registerPaneRef(index, paneRef.current)
+    return () => registerPaneRef(index, null)
+  }, [index, registerPaneRef])
 
   const sortedNotes = useMemo(
     () => [...notes].sort((a, b) => a.title.localeCompare(b.title)),
@@ -72,6 +78,7 @@ export function AllNotesList({
       exit="exit"
       initial={prefersReducedMotion ? false : "initial"}
       layout
+      ref={paneRef}
       style={{
         left: `calc(${index} * var(--pane-spine-width))`,
         zIndex: `calc(var(--z-pane) + ${index})`,

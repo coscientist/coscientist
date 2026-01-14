@@ -1,7 +1,6 @@
 ---
 title: Dérive sémantique
-description:
-  Changements de sens qui rendent les connaissances obsolètes ou trompeuses
+description: Changements de sens qui rendent les connaissances obsolètes ou trompeuses
 ---
 
 La dérive sémantique est la catégorie de

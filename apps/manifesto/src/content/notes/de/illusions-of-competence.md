@@ -1,7 +1,6 @@
 ---
 title: Kompetenzillusionen
-description:
-  Ein falsches Gefühl von Beherrschung, das durch passive Vertrautheit entsteht
+description: Ein falsches Gefühl von Beherrschung, das durch passive Vertrautheit entsteht
 ---
 
 Kompetenzillusionen entstehen, wenn Vertrautheit mit Beherrschung verwechselt

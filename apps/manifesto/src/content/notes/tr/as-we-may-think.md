@@ -1,7 +1,6 @@
 ---
 title: Düşündüğümüz Gibi
-description:
-  Vannevar Bush’un 1945’te Memex’i ana hatlarıyla ortaya koyan denemesi
+description: Vannevar Bush’un 1945’te Memex’i ana hatlarıyla ortaya koyan denemesi
 ---
 
 “Düşündüğümüz Gibi” ’un) 1945 tarihli, [Memex](./memex)’i ve bilginin içinden

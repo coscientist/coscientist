@@ -1,7 +1,6 @@
 ---
 title: Narrative Layer
-description:
-  Time-stamped projections of the dialectical graph suitable for human reading
+description: Time-stamped projections of the dialectical graph suitable for human reading
 ---
 
 The narrative layer is the human-readable projection of a

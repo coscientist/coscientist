@@ -1,7 +1,6 @@
 ---
 title: Explorationsstrategien
-description:
-  Strategien zur Graphdurchquerung für kontinuierliche Wissensentdeckung
+description: Strategien zur Graphdurchquerung für kontinuierliche Wissensentdeckung
 ---
 
 [Kozientist](./coscientist) braucht mehr als Retrieval: Es braucht Exploration,

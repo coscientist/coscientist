@@ -1,7 +1,6 @@
 ---
 title: Kế hoạch Seldon
-description:
-  Chiến lược dài hạn của Hari Seldon nhằm rút ngắn một thời kỳ đen tối
+description: Chiến lược dài hạn của Hari Seldon nhằm rút ngắn một thời kỳ đen tối
 ---
 
 Kế hoạch Seldon là chiến lược dài hạn của [Hari Seldon](./hari-seldon) nhằm rút

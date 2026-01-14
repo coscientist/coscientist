@@ -1,7 +1,6 @@
 ---
 title: Sistema di Verifica
-description:
-  I meccanismi per controllare le affermazioni rispetto a prove e controprove
+description: I meccanismi per controllare le affermazioni rispetto a prove e controprove
 ---
 
 Il sistema di verifica è l’insieme di meccanismi che

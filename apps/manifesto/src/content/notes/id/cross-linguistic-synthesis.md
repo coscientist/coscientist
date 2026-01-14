@@ -1,7 +1,6 @@
 ---
 title: Sintesis Lintas-Bahasa
-description:
-  Menggabungkan pengetahuan dari berbagai bahasa menjadi pemahaman terpadu
+description: Menggabungkan pengetahuan dari berbagai bahasa menjadi pemahaman terpadu
 ---
 
 Sintesis lintas-bahasa adalah proses menggabungkan pengetahuan dari sumber dalam

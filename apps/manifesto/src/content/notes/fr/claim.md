@@ -1,7 +1,6 @@
 ---
 title: Assertion
-description:
-  Une proposition vérifiable stockée comme un nœud dans un graphe dialectique
+description: Une proposition vérifiable stockée comme un nœud dans un graphe dialectique
 ---
 
 Une assertion est une proposition vérifiable extraite d’un texte et stockée

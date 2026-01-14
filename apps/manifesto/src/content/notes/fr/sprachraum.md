@@ -1,7 +1,6 @@
 ---
 title: Sprachraum
-description:
-  Une sphère ou un domaine linguistique qui façonne la pensée et la connaissance
+description: Une sphère ou un domaine linguistique qui façonne la pensée et la connaissance
 ---
 
 Le _Sprachraum_ (allemand : « espace linguistique » ou « sphère linguistique »)

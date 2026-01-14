@@ -1,7 +1,6 @@
 ---
 title: El grafo como defensa contra el colapso
-description:
-  Cómo la estructura dialéctica del grafo previene el colapso del conocimiento
+description: Cómo la estructura dialéctica del grafo previene el colapso del conocimiento
 ---
 
 El grafo como defensa contra el colapso explica cómo el

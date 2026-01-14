@@ -1,7 +1,6 @@
 ---
 title: Evolusi Pengetahuan Pribadi
-description:
-  Perkembangan historis alat dan gagasan manajemen pengetahuan pribadi
+description: Perkembangan historis alat dan gagasan manajemen pengetahuan pribadi
 ---
 
 Evolusi pengetahuan pribadi menelusuri perkembangan alat dan gagasan untuk

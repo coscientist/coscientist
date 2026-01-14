@@ -1,7 +1,6 @@
 ---
 title: Va chạm tài liệu
-description:
-  Giao thức buộc các nguồn khác biệt phải đối chiếu với các [khẳng
+description: Giao thức buộc các nguồn khác biệt phải đối chiếu với các [khẳng
   định](./claim) của nhau
 ---
 

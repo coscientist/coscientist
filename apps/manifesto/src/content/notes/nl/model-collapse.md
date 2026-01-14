@@ -1,7 +1,6 @@
 ---
 title: Modelinstorting
-description:
-  Verslechtering van modellen die op hun eigen gegenereerde data zijn getraind
+description: Verslechtering van modellen die op hun eigen gegenereerde data zijn getraind
 ---
 
 Modelinstorting is een verslechtering die kan optreden wanneer modellen worden

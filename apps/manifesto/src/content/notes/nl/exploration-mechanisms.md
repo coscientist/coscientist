@@ -1,7 +1,6 @@
 ---
 title: Exploratiemechanismen
-description:
-  Strategieën voor continue kennisontdekking in een dialectische graaf
+description: Strategieën voor continue kennisontdekking in een dialectische graaf
 ---
 
 Exploratiemechanismen zijn de strategieën die [Cowetenschapper](./coscientist)

@@ -1,7 +1,6 @@
 ---
 title: Pengulangan Bersela Berbasis Graf
-description:
-  Menggunakan usia klaim atau usia sanggahan untuk memicu verifikasi ulang
+description: Menggunakan usia klaim atau usia sanggahan untuk memicu verifikasi ulang
 ---
 
 Pengulangan bersela berbasis graf menerapkan prinsip

@@ -1,7 +1,6 @@
 ---
 title: Desqualificação por Delegação à IA
-description:
-  Risco de perder a capacidade de aprender quando a IA faz o trabalho cognitivo
+description: Risco de perder a capacidade de aprender quando a IA faz o trabalho cognitivo
 ---
 
 A desqualificação por delegação à IA é o risco de que transferir trabalho

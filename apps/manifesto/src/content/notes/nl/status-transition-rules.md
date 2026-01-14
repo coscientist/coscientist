@@ -1,7 +1,6 @@
 ---
 title: Regels voor statusovergangen
-description:
-  Wat de overgang tussen claimtoestanden in een dialectische grafiek triggert
+description: Wat de overgang tussen claimtoestanden in een dialectische grafiek triggert
 ---
 
 Regels voor statusovergangen bepalen wat een [claim](./claim) van de ene

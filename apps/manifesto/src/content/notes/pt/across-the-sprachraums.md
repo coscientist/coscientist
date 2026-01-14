@@ -1,7 +1,6 @@
 ---
 title: Através dos Sprachraums
-description:
-  A visão de transcender as fronteiras linguísticas para sistemas de
+description: A visão de transcender as fronteiras linguísticas para sistemas de
   conhecimento
 ---
 

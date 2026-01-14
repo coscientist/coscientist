@@ -1,7 +1,6 @@
 ---
 title: GitHub untuk Ilmuwan
-description:
-  Visi memperlakukan eksperimen sebagai kode yang diberi versi dan dapat diaudit
+description: Visi memperlakukan eksperimen sebagai kode yang diberi versi dan dapat diaudit
 ---
 
 "GitHub untuk Ilmuwan" adalah sebuah visi di mana eksperimen ilmiah diperlakukan

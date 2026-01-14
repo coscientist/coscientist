@@ -1,7 +1,6 @@
 ---
 title: Affermazione
-description:
-  Una proposizione verificabile memorizzata come nodo in un grafo dialettico
+description: Una proposizione verificabile memorizzata come nodo in un grafo dialettico
 ---
 
 Un’affermazione è una proposizione verificabile estratta dal testo e memorizzata

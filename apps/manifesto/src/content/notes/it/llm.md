@@ -1,7 +1,6 @@
 ---
 title: LLM
-description:
-  Large Language Model, l'architettura di IA alla base del lavoro di
+description: Large Language Model, l'architettura di IA alla base del lavoro di
   contemplazione di Coscientist
 ---
 

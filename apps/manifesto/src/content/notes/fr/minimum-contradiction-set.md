@@ -1,7 +1,6 @@
 ---
 title: Ensemble minimal de contradiction
-description:
-  Le plus petit ensemble de prémisses et de relations qui produit un conflit
+description: Le plus petit ensemble de prémisses et de relations qui produit un conflit
 ---
 
 L’ensemble minimal de contradiction est la plus petite collection de prémisses,

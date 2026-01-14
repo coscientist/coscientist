@@ -1,7 +1,6 @@
 ---
 title: Tracciabilità
-description:
-  La capacità di risalire da un'affermazione alle sue fonti e ai suoi fondamenti
+description: La capacità di risalire da un'affermazione alle sue fonti e ai suoi fondamenti
 ---
 
 La tracciabilità è la capacità di ripercorrere un'affermazione a ritroso

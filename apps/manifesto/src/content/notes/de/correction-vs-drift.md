@@ -1,7 +1,6 @@
 ---
 title: Korrektur vs. Drift
-description:
-  Ökonomisches Prinzip, dass ein Wissenssystem nur überlebt, wenn die
+description: Ökonomisches Prinzip, dass ein Wissenssystem nur überlebt, wenn die
   Korrekturkosten unter den Driftkosten bleiben
 ---
 

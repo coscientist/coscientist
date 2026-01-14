@@ -1,7 +1,6 @@
 ---
 title: AI
-description:
-  Artificial Intelligence as both tool and challenge for knowledge systems
+description: Artificial Intelligence as both tool and challenge for knowledge systems
 ---
 
 AI in the context of [Coscientist](./coscientist) refers to systems that perform

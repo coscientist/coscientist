@@ -1,7 +1,6 @@
 ---
 title: Isaac Asimov
-description:
-  Science fiction author whose Foundation series inspired Coscientist's vision
+description: Science fiction author whose Foundation series inspired Coscientist's vision
 ---
 
 Isaac Asimov (1920–1992) was a prolific science fiction author and biochemistry

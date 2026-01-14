@@ -1,7 +1,6 @@
 ---
 title: Acoplamento Método-Conclusão
-description:
-  Padrão de análise que agrupa alegações pelo método em vez da conclusão
+description: Padrão de análise que agrupa alegações pelo método em vez da conclusão
 ---
 
 O acoplamento método-conclusão é um padrão de análise que agrupa

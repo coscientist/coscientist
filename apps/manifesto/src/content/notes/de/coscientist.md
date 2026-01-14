@@ -1,7 +1,6 @@
 ---
 title: Coscientist
-description:
-  Ein intellektuelles Begleitsystem für Wissensproduktion in der Post-AI-Ära
+description: Ein intellektuelles Begleitsystem für Wissensproduktion in der Post-AI-Ära
 ---
 
 Coscientist ist ein Open-Source-Dienst, inspiriert von

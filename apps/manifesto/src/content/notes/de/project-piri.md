@@ -1,7 +1,6 @@
 ---
 title: Projekt PIRI
-description:
-  Eine eingestellte Initiative für unbegrenzte Übersetzungen von
+description: Eine eingestellte Initiative für unbegrenzte Übersetzungen von
   Programmierdokumentation
 ---
 

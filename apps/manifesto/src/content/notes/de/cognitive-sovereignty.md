@@ -1,7 +1,6 @@
 ---
 title: Kognitive Souveränität
-description:
-  Menschliche Kontrolle über Urteil und Verifikation in der Wissensarbeit
+description: Menschliche Kontrolle über Urteil und Verifikation in der Wissensarbeit
 ---
 
 Kognitive Souveränität ist die Verpflichtung, menschliches Urteil und

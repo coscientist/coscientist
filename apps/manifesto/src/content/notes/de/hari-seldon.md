@@ -1,7 +1,6 @@
 ---
 title: Hari Seldon
-description:
-  Fiktiver Mathematiker, der in Asimovs Foundation die Psychohistorik
+description: Fiktiver Mathematiker, der in Asimovs Foundation die Psychohistorik
   entwickelte
 ---
 

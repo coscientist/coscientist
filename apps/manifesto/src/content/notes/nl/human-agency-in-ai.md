@@ -1,7 +1,6 @@
 ---
 title: Menselijke regie bij AI
-description:
-  Principes en mechanismen om mensen de controle te laten houden over
+description: Principes en mechanismen om mensen de controle te laten houden over
   AI-ondersteund kenniswerk
 ---
 

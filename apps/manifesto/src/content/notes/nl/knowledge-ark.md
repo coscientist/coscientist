@@ -1,7 +1,6 @@
 ---
 title: Kennisark
-description:
-  Een repository ontworpen om kennis te behouden tijdens een instorting
+description: Een repository ontworpen om kennis te behouden tijdens een instorting
 ---
 
 Een kennisark is een repository ontworpen om kennis te behouden en over te

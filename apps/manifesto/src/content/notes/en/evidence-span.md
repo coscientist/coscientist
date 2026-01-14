@@ -1,7 +1,6 @@
 ---
 title: Evidence Span
-description:
-  An exact quoted range from a source that supports or challenges a claim
+description: An exact quoted range from a source that supports or challenges a claim
 ---
 
 An evidence span is the exact quoted text from a source that supports or

@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from "motion/react"
 import { useLocale, useTranslations } from "next-intl"
 import { IconXmarkOutline18 } from "nucleo-ui-outline-18"
-import { useCallback } from "react"
+import { useCallback, useEffect, useRef } from "react"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { useReducedMotion } from "@/hooks/use-reduced-motion"
 import {
@@ -40,11 +40,17 @@ export function NotePane({
   onExpand,
   onClose,
 }: NotePaneProps) {
-  const { collapsedIndices } = usePaneCollapse()
+  const { collapsedIndices, registerPaneRef } = usePaneCollapse()
   const isCollapsed = collapsedIndices.has(index)
   const prefersReducedMotion = useReducedMotion()
   const t = useTranslations("notePane")
   const locale = useLocale()
+  const paneRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    registerPaneRef(index, paneRef.current)
+    return () => registerPaneRef(index, null)
+  }, [index, registerPaneRef])
 
   const handleLinkClick = useCallback(
     (slug: string) => {
@@ -71,6 +77,7 @@ export function NotePane({
       exit="exit"
       initial={prefersReducedMotion ? false : "initial"}
       layout
+      ref={paneRef}
       style={
         {
           "--pane-left-offset": `calc(${index} * var(--pane-spine-width))`,

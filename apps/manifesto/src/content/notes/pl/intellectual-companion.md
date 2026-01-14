@@ -1,7 +1,6 @@
 ---
 title: Towarzysz intelektualny
-description:
-  AI jako partner do kontemplacji, a nie maszyna do udzielania odpowiedzi
+description: AI jako partner do kontemplacji, a nie maszyna do udzielania odpowiedzi
 ---
 
 Towarzysz intelektualny to system AI zaprojektowany tak, by myśleć razem z

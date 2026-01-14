@@ -1,7 +1,6 @@
 ---
 title: Deriva del sistema
-description:
-  Degradación de los sistemas de conocimiento por aut contaminación o
+description: Degradación de los sistemas de conocimiento por aut contaminación o
   negligencia
 ---
 

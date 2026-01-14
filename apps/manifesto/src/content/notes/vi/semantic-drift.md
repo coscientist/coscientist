@@ -1,7 +1,6 @@
 ---
 title: Trôi dạt ngữ nghĩa
-description:
-  Những thay đổi về ý nghĩa khiến tri thức trở nên lỗi thời hoặc gây hiểu lầm
+description: Những thay đổi về ý nghĩa khiến tri thức trở nên lỗi thời hoặc gây hiểu lầm
 ---
 
 Trôi dạt ngữ nghĩa là một nhóm trong

@@ -1,7 +1,6 @@
 ---
 title: Supercérebro
-description:
-  A visão de um exoesqueleto cognitivo externalizado que amplifica a
+description: A visão de um exoesqueleto cognitivo externalizado que amplifica a
   inteligência humana
 ---
 

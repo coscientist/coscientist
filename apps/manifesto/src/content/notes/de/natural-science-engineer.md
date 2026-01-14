@@ -1,7 +1,6 @@
 ---
 title: Ingenieur für Naturwissenschaften
-description:
-  Eine Rolle, die softwareähnliche Betriebsabläufe auf die Wissenschaft anwendet
+description: Eine Rolle, die softwareähnliche Betriebsabläufe auf die Wissenschaft anwendet
 ---
 
 Ein Ingenieur für Naturwissenschaften ist eine Fachkraft, die wissenschaftliche

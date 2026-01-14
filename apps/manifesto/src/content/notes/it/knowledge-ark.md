@@ -1,7 +1,6 @@
 ---
 title: Arca della conoscenza
-description:
-  Un archivio progettato per preservare la conoscenza durante un collasso
+description: Un archivio progettato per preservare la conoscenza durante un collasso
 ---
 
 Un’arca della conoscenza è un archivio progettato per preservare e trasmettere

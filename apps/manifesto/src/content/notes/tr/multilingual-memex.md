@@ -1,7 +1,6 @@
 ---
 title: Çokdilli Memex
-description:
-  Otomatik çeviri desteğine sahip, dile duyarlı bir kişisel bilgi sistemi
+description: Otomatik çeviri desteğine sahip, dile duyarlı bir kişisel bilgi sistemi
 ---
 
 Çokdilli Memex, birden fazla dilde içeriği yerel olarak destekleyen; otomatik

@@ -1,7 +1,6 @@
 ---
 title: Soberanía cognitiva
-description:
-  Control humano sobre el juicio y la verificación en el trabajo del
+description: Control humano sobre el juicio y la verificación en el trabajo del
   conocimiento
 ---
 

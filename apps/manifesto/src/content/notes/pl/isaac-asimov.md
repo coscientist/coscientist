@@ -1,7 +1,6 @@
 ---
 title: Isaac Asimov
-description:
-  Autor science fiction, którego cykl „Fundacja" zainspirował wizję Coscientist
+description: Autor science fiction, którego cykl „Fundacja" zainspirował wizję Coscientist
 ---
 
 Isaac Asimov (1920–1992) był niezwykle płodnym autorem science fiction oraz

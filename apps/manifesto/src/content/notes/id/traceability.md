@@ -1,7 +1,6 @@
 ---
 title: Keterlacakan
-description:
-  Kemampuan untuk menelusuri sebuah klaim kembali ke sumber dan dasar-dasarnya
+description: Kemampuan untuk menelusuri sebuah klaim kembali ke sumber dan dasar-dasarnya
 ---
 
 Keterlacakan adalah kemampuan untuk menelusuri sebuah klaim mundur melalui

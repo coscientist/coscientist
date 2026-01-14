@@ -1,7 +1,6 @@
 ---
 title: Tranh luận như một mỏ neo dễ ghi nhớ
-description:
-  Bất đồng đòi hỏi nỗ lực nhận thức và tạo ra các dấu vết ký ức mạnh hơn
+description: Bất đồng đòi hỏi nỗ lực nhận thức và tạo ra các dấu vết ký ức mạnh hơn
 ---
 
 "Tranh luận như một mỏ neo dễ ghi nhớ" là nhận định rằng

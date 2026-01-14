@@ -1,7 +1,6 @@
 ---
 title: Dòng trách nhiệm
-description:
-  Chuỗi có thể truy vết về việc ai đã khẳng định điều gì và dựa trên cơ sở nào
+description: Chuỗi có thể truy vết về việc ai đã khẳng định điều gì và dựa trên cơ sở nào
 ---
 
 Dòng trách nhiệm là chuỗi có thể truy vết về việc ai đã khẳng định điều gì và

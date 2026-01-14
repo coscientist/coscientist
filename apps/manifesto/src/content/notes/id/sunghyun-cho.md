@@ -1,7 +1,6 @@
 ---
 title: Sunghyun Cho
-description:
-  Pembuat Coscientist dan penulis esai-esai dasar yang menjadi fondasinya
+description: Pembuat Coscientist dan penulis esai-esai dasar yang menjadi fondasinya
 ---
 
 Sunghyun Cho adalah pembuat [Kosaintis](./coscientist) dan penulis esai yang

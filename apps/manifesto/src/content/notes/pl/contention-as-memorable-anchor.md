@@ -1,7 +1,6 @@
 ---
 title: Spór jako zapadająca w pamięć kotwica
-description:
-  Spory wymagają wysiłku poznawczego i tworzą silniejsze ślady pamięciowe
+description: Spory wymagają wysiłku poznawczego i tworzą silniejsze ślady pamięciowe
 ---
 
 „Spór jako zapadająca w pamięć kotwica" to obserwacja, że

@@ -1,7 +1,6 @@
 ---
 title: Verification System
-description:
-  The mechanisms for checking claims against evidence and counterevidence
+description: The mechanisms for checking claims against evidence and counterevidence
 ---
 
 The verification system is the set of mechanisms [Coscientist](./coscientist)

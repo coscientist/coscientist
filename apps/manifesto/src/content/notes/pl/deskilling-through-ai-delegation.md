@@ -1,7 +1,6 @@
 ---
 title: Utrata kompetencji wskutek delegowania zadań do AI
-description:
-  Ryzyko utraty zdolności uczenia się, gdy AI wykonuje pracę poznawczą
+description: Ryzyko utraty zdolności uczenia się, gdy AI wykonuje pracę poznawczą
 ---
 
 Utrata kompetencji wskutek delegowania zadań do AI to ryzyko, że przenoszenie

@@ -1,7 +1,6 @@
 ---
 title: KI
-description:
-  Künstliche Intelligenz als Werkzeug und Herausforderung für Wissenssysteme
+description: Künstliche Intelligenz als Werkzeug und Herausforderung für Wissenssysteme
 ---
 
 KI (Künstliche Intelligenz) im Kontext von [Kozientist](./coscientist) bezieht

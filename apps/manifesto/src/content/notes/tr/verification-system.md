@@ -1,7 +1,6 @@
 ---
 title: Doğrulama Sistemi
-description:
-  İddiaları kanıt ve karşı kanıtlarla karşılaştırarak kontrol etme mekanizmaları
+description: İddiaları kanıt ve karşı kanıtlarla karşılaştırarak kontrol etme mekanizmaları
 ---
 
 Doğrulama sistemi, [Eşbilimci](./coscientist)'in [iddiaları](./claim) kanıt,

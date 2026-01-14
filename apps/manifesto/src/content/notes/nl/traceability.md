@@ -1,7 +1,6 @@
 ---
 title: Traceerbaarheid
-description:
-  Het vermogen om een bewering terug te volgen naar haar bronnen en gronden
+description: Het vermogen om een bewering terug te volgen naar haar bronnen en gronden
 ---
 
 Traceerbaarheid is het vermogen om een bewering achterwaarts te doorlopen via

@@ -1,7 +1,6 @@
 ---
 title: Búsqueda primero de refutación
-description:
-  Un protocolo de validación que busca contraevidencia antes de aceptar
+description: Un protocolo de validación que busca contraevidencia antes de aceptar
 ---
 
 La búsqueda primero de refutación es un protocolo de validación que busca

@@ -1,7 +1,6 @@
 ---
 title: Graf Tabanlı Aralıklı Tekrar
-description:
-  Yeniden doğrulamayı tetiklemek için iddia yaşı veya çürütme-yaşı kullanma
+description: Yeniden doğrulamayı tetiklemek için iddia yaşı veya çürütme-yaşı kullanma
 ---
 
 Graf tabanlı aralıklı tekrar, bilgi bakımına

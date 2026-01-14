@@ -1,7 +1,6 @@
 ---
 title: Repetição espaçada baseada em grafos
-description:
-  Usar a idade da afirmação ou a idade da refutação para acionar a revalidação
+description: Usar a idade da afirmação ou a idade da refutação para acionar a revalidação
 ---
 
 A repetição espaçada baseada em grafos aplica os princípios de

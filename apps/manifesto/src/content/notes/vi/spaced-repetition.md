@@ -1,7 +1,6 @@
 ---
 title: Lặp lại ngắt quãng
-description:
-  Một kỹ thuật học tập dựa trên việc tăng dần khoảng cách giữa các lần ôn tập
+description: Một kỹ thuật học tập dựa trên việc tăng dần khoảng cách giữa các lần ôn tập
 ---
 
 Lặp lại ngắt quãng là một cách lập lịch ôn tập dựa trên bằng chứng, để bạn luyện

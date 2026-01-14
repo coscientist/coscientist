@@ -1,7 +1,6 @@
 ---
 title: Replication Path Separation
-description:
-  Asking whether support comes from independent paths or repeated restatements
+description: Asking whether support comes from independent paths or repeated restatements
 ---
 
 Replication path separation is the practice of asking whether apparent agreement

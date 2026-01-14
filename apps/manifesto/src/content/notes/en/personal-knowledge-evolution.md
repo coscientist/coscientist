@@ -1,7 +1,6 @@
 ---
 title: Personal Knowledge Evolution
-description:
-  Historical progression of personal knowledge management tools and ideas
+description: Historical progression of personal knowledge management tools and ideas
 ---
 
 Personal knowledge evolution traces the development of tools and ideas for

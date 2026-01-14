@@ -1,7 +1,6 @@
 ---
 title: Taxonomia de Status de Afirmações
-description:
-  Os estados em que uma afirmação pode estar dentro de um grafo dialético
+description: Os estados em que uma afirmação pode estar dentro de um grafo dialético
 ---
 
 A taxonomia de status de afirmações define os estados que uma

@@ -1,7 +1,6 @@
 ---
 title: System Drift
-description:
-  Degradation of knowledge systems through self-contamination or neglect
+description: Degradation of knowledge systems through self-contamination or neglect
 ---
 
 System drift is the category of [drift phenomena](./drift-phenomena) where the

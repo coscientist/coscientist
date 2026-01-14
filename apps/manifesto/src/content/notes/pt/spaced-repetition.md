@@ -1,7 +1,6 @@
 ---
 title: Repetição Espaçada
-description:
-  Uma técnica de aprendizagem baseada em intervalos crescentes de revisão
+description: Uma técnica de aprendizagem baseada em intervalos crescentes de revisão
 ---
 
 A repetição espaçada é uma forma baseada em evidências de programar revisões

@@ -1,7 +1,6 @@
 ---
 title: Các cạnh của Đồ thị Biện chứng
-description:
-  Các kiểu quan hệ kết nối các nút trong một đồ thị tri thức biện chứng
+description: Các kiểu quan hệ kết nối các nút trong một đồ thị tri thức biện chứng
 ---
 
 Trong một [Đồ thị Biện chứng](./dialectical-graph), các cạnh mã hoá các kiểu

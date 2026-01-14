@@ -1,7 +1,6 @@
 ---
 title: Alt Kesme
-description:
-  Bir iddianın temelindeki yönteme, varsayıma veya tanıma yönelik bir saldırı
+description: Bir iddianın temelindeki yönteme, varsayıma veya tanıma yönelik bir saldırı
 ---
 
 Alt kesme, [iddia](./claim)nın kendisini değil, dayandığı zemini hedef alan bir

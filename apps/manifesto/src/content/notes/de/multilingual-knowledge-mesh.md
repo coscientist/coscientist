@@ -1,7 +1,6 @@
 ---
 title: Mehrsprachiges Wissensnetz
-description:
-  Ein Wissensnetzwerk, das Sprachen überspannt und weltweit verteilt wird
+description: Ein Wissensnetzwerk, das Sprachen überspannt und weltweit verteilt wird
 ---
 
 Ein mehrsprachiges Wissensnetz ist ein Wissensnetzwerk, in dem Inhalte in jeder

@@ -1,7 +1,6 @@
 ---
 title: Taxonomie van claimstatus
-description:
-  De toestanden waarin een claim zich kan bevinden binnen een dialectische graaf
+description: De toestanden waarin een claim zich kan bevinden binnen een dialectische graaf
 ---
 
 De taxonomie van claimstatus definieert de toestanden die een [claim](./claim)

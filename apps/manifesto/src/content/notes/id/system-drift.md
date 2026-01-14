@@ -1,7 +1,6 @@
 ---
 title: Drift Sistem
-description:
-  Degradasi sistem pengetahuan melalui kontaminasi diri atau pengabaian
+description: Degradasi sistem pengetahuan melalui kontaminasi diri atau pengabaian
 ---
 
 Drift sistem adalah kategori dari [fenomena drift](./drift-phenomena) ketika

@@ -1,7 +1,6 @@
 ---
 title: Cross-Linguistic Synthesis
-description:
-  Combining knowledge from multiple languages into unified understanding
+description: Combining knowledge from multiple languages into unified understanding
 ---
 
 Cross-linguistic synthesis is the process of combining knowledge from sources in

@@ -1,7 +1,6 @@
 ---
 title: Ingeniero de Ciencias Naturales
-description:
-  Un rol que aplica prácticas operativas al estilo del software a la ciencia
+description: Un rol que aplica prácticas operativas al estilo del software a la ciencia
 ---
 
 Un ingeniero de ciencias naturales es un profesional que combina la

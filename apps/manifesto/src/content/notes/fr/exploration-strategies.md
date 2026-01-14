@@ -1,14 +1,12 @@
 ---
 title: Stratégies d’exploration
-description: Stratégies de parcours de graphe pour une découverte continue des
-  connaissances
+description: Stratégies de parcours de graphe pour la découverte continue de connaissances
 sourceLocale: en
-sourceHash: e9c34bc73e32
+sourceHash: b3abf2d73b65
 translatedAt: 2026-01-14
 ---
-
 [Coscientifique](./coscientist) a besoin de plus que de la récupération : il lui
-faut une exploration qui mette activement au jour les contradictions, les
+faut des [mécanismes d’exploration](./exploration-mechanisms) qui mettent activement au jour les contradictions, les
 conditions aux limites et la dépendance à la méthode dans le
 [Graphe dialectique](./dialectical-graph).
 

@@ -1,17 +1,16 @@
 ---
 title: Verificación
-description: El proceso de contrastar afirmaciones con evidencia y contraevidencia
+description: El proceso de comprobar afirmaciones frente a evidencia y contraevidencia
 sourceLocale: en
-sourceHash: 3af6307d4f28
+sourceHash: 8c91c1527bf6
 translatedAt: 2026-01-14
 ---
-
 La verificación es el proceso de comprobar si una afirmación se sostiene frente
 a evidencia, contraevidencia y explicaciones alternativas. No es una aceptación
 pasiva: requiere esfuerzo, y ese esfuerzo es lo que distingue el conocimiento de
 la creencia.
 
-En [Cocientífico](./coscientist), la verificación es responsabilidad del
+En [Coscientist](./coscientist), la verificación es responsabilidad del
 [Operador](./operator). La IA puede realizar
 [contemplation labor](./contemplation-labor), sacando a la superficie candidatos
 y refutaciones, pero el ser humano decide qué cuenta como verificado. Esto
@@ -25,3 +24,5 @@ antes de aceptar. El
 [Multi-AI Consensus Protocol](./multi-ai-consensus-protocol) añade una dimensión
 social: el desacuerdo entre modelos se trata como una señal de que se justifica
 un mayor escrutinio.
+
+Para un encuadre de implementación más completo, consulta el [Sistema de verificación](./verification-system).

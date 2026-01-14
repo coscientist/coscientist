@@ -2,10 +2,9 @@
 title: Verificatie
 description: Het proces van het toetsen van beweringen aan bewijs en tegenbewijs
 sourceLocale: en
-sourceHash: 3af6307d4f28
+sourceHash: 8c91c1527bf6
 translatedAt: 2026-01-14
 ---
-
 Verificatie is het proces van het nagaan of een bewering standhoudt tegenover
 bewijs, tegenbewijs en alternatieve verklaringen. Het is geen passieve
 acceptatie: het vereist inspanning, en juist die inspanning onderscheidt kennis
@@ -23,3 +22,5 @@ verificatie standaard adversarieel, door tegenbewijs te zoeken vóór acceptatie
 Het [Multi-AI Consensus Protocol](./multi-ai-consensus-protocol) voegt een
 sociale dimensie toe: onenigheid tussen modellen wordt gezien als een signaal
 dat meer nauwkeurige toetsing gerechtvaardigd is.
+
+Voor een vollediger implementatiekader, zie het [Verificatiesysteem](./verification-system).

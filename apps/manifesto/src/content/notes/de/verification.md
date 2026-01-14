@@ -1,11 +1,10 @@
 ---
 title: Verifikation
-description: Der Prozess des Abgleichs von Behauptungen mit Evidenz und Gegenbelegen
+description: Der Prozess, Behauptungen gegen Evidenz und Gegenbelege zu prüfen
 sourceLocale: en
-sourceHash: 3af6307d4f28
+sourceHash: 8c91c1527bf6
 translatedAt: 2026-01-14
 ---
-
 Verifikation ist der Prozess, zu prüfen, ob eine Behauptung gegenüber Evidenz,
 Gegenbelegen und alternativen Erklärungen standhält. Sie ist keine passive
 Akzeptanz: Sie erfordert Aufwand, und genau dieser Aufwand unterscheidet Wissen
@@ -23,3 +22,5 @@ Verifikation standardmäßig adversarial , indem sie Gegenbelege vor der Akzepta
 suchen. Das [Multi-AI Consensus Protocol](./multi-ai-consensus-protocol) fügt
 eine soziale Dimension hinzu: Uneinigkeit zwischen Modellen wird als Signal
 behandelt, dass mehr Prüfung erforderlich ist.
+
+Für eine umfassendere Umsetzungsrahmung siehe das [Verifikationssystem](./verification-system).

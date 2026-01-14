@@ -1,11 +1,10 @@
 ---
 title: Weryfikacja
-description: Proces sprawdzania twierdzeń w świetle dowodów i kontrdowodów
+description: Proces sprawdzania twierdzeń w konfrontacji z dowodami i kontrdowodami
 sourceLocale: en
-sourceHash: 3af6307d4f28
+sourceHash: 8c91c1527bf6
 translatedAt: 2026-01-14
 ---
-
 Weryfikacja to proces sprawdzania, czy twierdzenie wytrzymuje konfrontację z
 dowodami, kontrdowodami oraz alternatywnymi wyjaśnieniami. Nie jest to bierna
 akceptacja: wymaga wysiłku, a ten wysiłek odróżnia wiedzę od przekonania.
@@ -23,3 +22,5 @@ weryfikację domyślnie adversarialną , szukając kontrdowodów przed akceptacj
 [Protokół konsensusu wielu SI](./multi-ai-consensus-protocol) dodaje wymiar
 społeczny: niezgodność między modelami traktuje się jako sygnał, że potrzebna
 jest większa wnikliwość.
+
+Aby zobaczyć pełniejsze ujęcie wdrożeniowe, zobacz [System weryfikacji](./verification-system).

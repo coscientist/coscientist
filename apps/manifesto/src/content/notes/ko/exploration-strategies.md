@@ -2,13 +2,11 @@
 title: 탐색 전략
 description: 지속적인 지식 발견을 위한 그래프 순회 전략
 sourceLocale: en
-sourceHash: e9c34bc73e32
+sourceHash: b3abf2d73b65
 translatedAt: 2026-01-14
 ---
-
-[Coscientist](./coscientist)에는 단순한 검색만으로는 부족하다.
-[변증법적 그래프](./dialectical-graph)에서 모순, 경계 조건, 그리고 방법 의존성을
-능동적으로 드러내는 탐색이 필요하다.
+[Coscientist](./coscientist)에는 단순한 검색만으로는 부족하다: [변증법적 그래프](./dialectical-graph)에서 모순, 경계 조건, 그리고 방법 의존성을
+능동적으로 드러내는 [탐색 메커니즘](./exploration-mechanisms)이 필요하다.
 
 핵심 전략은 다음과 같다:
 

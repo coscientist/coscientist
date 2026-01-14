@@ -2,10 +2,9 @@
 title: Verifikasi
 description: Proses memeriksa klaim terhadap bukti dan bukti tandingan
 sourceLocale: en
-sourceHash: 3af6307d4f28
+sourceHash: 8c91c1527bf6
 translatedAt: 2026-01-14
 ---
-
 Verifikasi adalah proses memeriksa apakah sebuah klaim bertahan ketika
 dihadapkan pada bukti, bukti tandingan, dan penjelasan alternatif. Ini bukan
 penerimaan pasif: verifikasi menuntut upaya, dan upaya itulah yang membedakan
@@ -24,3 +23,5 @@ tandingan sebelum menerima.
 [Protokol Konsensus Multi-AI](./multi-ai-consensus-protocol) menambahkan dimensi
 sosial: ketidaksetujuan di antara model diperlakukan sebagai sinyal bahwa
 diperlukan pengawasan yang lebih ketat.
+
+Untuk kerangka implementasi yang lebih lengkap, lihat [Sistem Verifikasi](./verification-system).

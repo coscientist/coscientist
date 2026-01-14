@@ -1,15 +1,14 @@
 ---
 title: Verkenningsstrategieën
-description: Strategieën voor graf-traversal voor continue kennisontdekking
+description: Graaf-traversalstrategieën voor continue kennisontdekking
 sourceLocale: en
-sourceHash: e9c34bc73e32
+sourceHash: b3abf2d73b65
 translatedAt: 2026-01-14
 ---
-
-[Cowetenschapper](./coscientist) heeft meer nodig dan retrieval: het heeft
-verkenning nodig die actief tegenstrijdigheden, randvoorwaarden en
+[Cowetenschapper](./coscientist) heeft meer nodig dan retrieval: het heeft [verkenningsmechanismen](./exploration-mechanisms)
+nodig die actief tegenstrijdigheden, randvoorwaarden en
 methode-afhankelijkheid in de [Dialectische Graaf](./dialectical-graph) naar
-boven haalt.
+boven halen.
 
 Belangrijke strategieën zijn:
 

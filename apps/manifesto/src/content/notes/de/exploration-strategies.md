@@ -1,14 +1,13 @@
 ---
 title: Explorationsstrategien
-description: Strategien zur Graphdurchquerung für kontinuierliche Wissensentdeckung
+description: Graph-Traversierungsstrategien für kontinuierliche Wissensentdeckung
 sourceLocale: en
-sourceHash: e9c34bc73e32
+sourceHash: b3abf2d73b65
 translatedAt: 2026-01-14
 ---
-
-[Kozientist](./coscientist) braucht mehr als Retrieval: Es braucht Exploration,
+[Kozientist](./coscientist) braucht mehr als Retrieval: Es braucht [Explorationsmechanismen](./exploration-mechanisms),
 die aktiv Widersprüche, Randbedingungen und Methodenabhängigkeit im
-[Dialektischen Graphen](./dialectical-graph) sichtbar macht.
+[Dialektischen Graphen](./dialectical-graph) sichtbar machen.
 
 Wichtige Strategien sind:
 

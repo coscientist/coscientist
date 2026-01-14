@@ -2,13 +2,13 @@
 title: Keşif Stratejileri
 description: Sürekli bilgi keşfi için grafik dolaşım stratejileri
 sourceLocale: en
-sourceHash: e9c34bc73e32
+sourceHash: b3abf2d73b65
 translatedAt: 2026-01-14
 ---
-
 [Eşbilimci](./coscientist) yalnızca geri getirmeden fazlasına ihtiyaç duyar:
 [Diyalektik Grafik](./dialectical-graph) içinde çelişkileri, sınır koşullarını
-ve yönteme bağımlılığı aktif olarak görünür kılan keşfe ihtiyaç duyar.
+ve yönteme bağımlılığı aktif olarak görünür kılan [keşif mekanizmalarına](./exploration-mechanisms)
+ihtiyaç duyar.
 
 Başlıca stratejiler şunlardır:
 

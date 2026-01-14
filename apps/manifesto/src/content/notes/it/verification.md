@@ -1,13 +1,10 @@
 ---
 title: Verifica
-description:
-  Il processo di controllare le affermazioni confrontandole con evidenze e
-  controevidenze
+description: Il processo di controllare le affermazioni rispetto a evidenze e controevidenze
 sourceLocale: en
-sourceHash: 3af6307d4f28
+sourceHash: 8c91c1527bf6
 translatedAt: 2026-01-14
 ---
-
 La verifica è il processo di controllare se un’affermazione regge di fronte a
 evidenze, controevidenze e spiegazioni alternative. Non è un’accettazione
 passiva: richiede impegno, ed è proprio questo impegno che distingue la
@@ -27,3 +24,5 @@ controevidenze prima dell’accettazione. Il
 [Protocollo di Consenso Multi-IA](./multi-ai-consensus-protocol) aggiunge una
 dimensione sociale: il disaccordo tra modelli viene trattato come un segnale che
 è necessaria maggiore scrutinio.
+
+Per un inquadramento di implementazione più completo, vedi il [Sistema di Verifica](./verification-system).

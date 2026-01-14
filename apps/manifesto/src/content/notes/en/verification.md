@@ -2,7 +2,6 @@
 title: Verification
 description: The process of checking claims against evidence and counterevidence
 ---
-
 Verification is the process of checking whether a claim holds up against
 evidence, counterevidence, and alternative explanations. It is not passive
 acceptance: it requires effort, and that effort is what distinguishes knowledge
@@ -20,3 +19,5 @@ verification adversarial by default, seeking counterevidence before acceptance.
 The [Multi-AI Consensus Protocol](./multi-ai-consensus-protocol) adds a social
 dimension: disagreement among models is treated as a signal that more scrutiny
 is warranted.
+
+For a fuller implementation framing, see the [Verification System](./verification-system).

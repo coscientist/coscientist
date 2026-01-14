@@ -1,6 +1,9 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "extends": ["ultracite/biome/core", "ultracite/biome/next"],
+  "files": {
+    "maxSize": 10485760
+  },
   "javascript": {
     "formatter": {
       "semicolons": "asNeeded"

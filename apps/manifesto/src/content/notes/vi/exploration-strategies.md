@@ -1,14 +1,12 @@
 ---
-title: Chiến lược Khám phá
+title: Các Chiến lược Khám phá
 description: Các chiến lược duyệt đồ thị cho việc khám phá tri thức liên tục
 sourceLocale: en
-sourceHash: e9c34bc73e32
+sourceHash: b3abf2d73b65
 translatedAt: 2026-01-14
 ---
-
-[Nhà đồng khoa học](./coscientist) cần nhiều hơn chỉ truy hồi : nó cần khả năng
-khám phá để chủ động làm lộ ra các mâu thuẫn, các điều kiện biên, và sự phụ
-thuộc vào phương pháp trong [Đồ thị Biện chứng](./dialectical-graph).
+[Nhà đồng khoa học](./coscientist) cần nhiều hơn chỉ truy hồi : nó cần các [cơ chế khám phá](./exploration-mechanisms)
+để chủ động làm lộ ra các mâu thuẫn, các điều kiện biên, và sự phụ thuộc vào phương pháp trong [Đồ thị Biện chứng](./dialectical-graph).
 
 Các chiến lược chính bao gồm:
 

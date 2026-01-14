@@ -1,8 +1,8 @@
 ---
 title: تصدیق
-description: دعوؤں کو شواہد اور مخالف شواہد کے مقابل پر جانچنے کا عمل
+description: شواہد اور مخالف شواہد کے مقابل دعوؤں کو جانچنے کا عمل
 sourceLocale: en
-sourceHash: 3af6307d4f28
+sourceHash: 8c91c1527bf6
 translatedAt: 2026-01-14
 ---
 
@@ -13,7 +13,7 @@ translatedAt: 2026-01-14
 
 [کوسائنٹسٹ](./coscientist) میں، تصدیق کی ذمہ داری [آپریٹر](./operator) پر ہوتی
 ہے۔ AI [contemplation labor](./contemplation-labor) انجام دے سکتا ہے—یعنی ممکنہ
-دلائل اور جوابی دلائل سامنے لا سکتا ہے—لیکن یہ فیصلہ انسان کرتا ہے کہ کس چیز کو
+دعوے اور تردیدیں سامنے لا سکتا ہے—لیکن یہ فیصلہ انسان کرتا ہے کہ کس چیز کو
 تصدیق شدہ سمجھا جائے۔ اس طرح [cognitive sovereignty](./cognitive-sovereignty)
 برقرار رہتی ہے: Operator اپنے علم کا مصنف رہتا ہے، AI کے نتائج کا غیر فعال صارف
 نہیں۔
@@ -23,3 +23,5 @@ translatedAt: 2026-01-14
 [Multi-AI Consensus Protocol](./multi-ai-consensus-protocol) ایک سماجی پہلو شامل
 کرتا ہے: ماڈلز کے درمیان اختلاف کو اس بات کا اشارہ سمجھا جاتا ہے کہ مزید باریک
 بینی ضروری ہے۔
+
+مزید مکمل نفاذی فریم کے لیے [نظامِ تصدیق](./verification-system) ملاحظہ کریں۔

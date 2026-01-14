@@ -1,11 +1,10 @@
 ---
 title: Verificação
-description: O processo de conferir alegações contra evidências e contraevidências
+description: O processo de checar alegações frente a evidências e contraevidências
 sourceLocale: en
-sourceHash: 3af6307d4f28
+sourceHash: 8c91c1527bf6
 translatedAt: 2026-01-14
 ---
-
 Verificação é o processo de checar se uma alegação se sustenta diante de
 evidências, contraevidências e explicações alternativas. Não é aceitação
 passiva: exige esforço, e é esse esforço que distingue conhecimento de crença.
@@ -22,3 +21,5 @@ verificação adversarial por padrão, procurando contraevidências antes da
 aceitação. O [Protocolo de Consenso Multi-IA](./multi-ai-consensus-protocol)
 acrescenta uma dimensão social: a discordância entre modelos é tratada como um
 sinal de que é necessária mais escrutínio.
+
+Para um enquadramento de implementação mais completo, veja o [Sistema de Verificação](./verification-system).

@@ -1,13 +1,12 @@
 ---
 title: Strategie eksploracji
-description: Strategie przemierzania grafu dla ciągłego odkrywania wiedzy
+description: Strategie przeszukiwania grafu dla ciągłego odkrywania wiedzy
 sourceLocale: en
-sourceHash: e9c34bc73e32
+sourceHash: b3abf2d73b65
 translatedAt: 2026-01-14
 ---
-
 [Współnaukowiec](./coscientist) potrzebuje czegoś więcej niż wyszukiwania:
-potrzebuje eksploracji, która aktywnie ujawnia sprzeczności, warunki brzegowe
+potrzebuje [mechanizmów eksploracji](./exploration-mechanisms), które aktywnie ujawniają sprzeczności, warunki brzegowe
 oraz zależność od metody w [Grafie Dialektycznym](./dialectical-graph).
 
 Kluczowe strategie obejmują:
@@ -23,7 +22,7 @@ Kluczowe strategie obejmują:
 - [Sprzężenie metody z wnioskiem](./method-conclusion-coupling) — grupuj
   twierdzenia według metody, aby znaleźć wspólne błędy
 - [Separacja ścieżek replikacji](./replication-path-separation) — odróżniaj
-  niezależne dowody od powtarzanych parafraz
+  niezależne dowody od powtarzanych przeformułowań
 
 W implementacji przejawia się to jako wyspecjalizowani agenci do normalizacji,
 wydobywania założeń, wyszukiwania kontrprzykładów, rekonstrukcji zakresu oraz

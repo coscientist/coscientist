@@ -1,16 +1,13 @@
 ---
 title: Strategie di esplorazione
-description:
-  Strategie di attraversamento del grafo per una scoperta continua della
-  conoscenza
+description: Strategie di attraversamento del grafo per la scoperta continua della conoscenza
 sourceLocale: en
-sourceHash: e9c34bc73e32
+sourceHash: b3abf2d73b65
 translatedAt: 2026-01-14
 ---
-
 [Coscienziato](./coscientist) ha bisogno di più del semplice recupero: ha
-bisogno di un’esplorazione che faccia emergere attivamente contraddizioni,
-condizioni al contorno e dipendenza dal metodo nel
+bisogno di [meccanismi di esplorazione](./exploration-mechanisms)
+che facciano emergere attivamente contraddizioni, condizioni al contorno e dipendenza dal metodo nel
 [Grafo dialettico](./dialectical-graph).
 
 Le strategie principali includono:

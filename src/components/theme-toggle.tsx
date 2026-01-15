@@ -1,13 +1,14 @@
 "use client"
 
 import { useTranslations } from "next-intl"
+import { useTheme } from "next-themes"
 import {
   IconMonitorOutline18,
   IconMoonOutline18,
   IconSunOutline18,
 } from "nucleo-ui-outline-18"
+import { useEffect, useState } from "react"
 import { cn } from "@/lib/utils"
-import { useTheme } from "./theme-provider"
 import {
   Select,
   SelectItem,
@@ -23,11 +24,29 @@ const themes = [
 ] as const
 
 export function ThemeToggle({ className }: { className?: string }) {
+  const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
   const t = useTranslations("theme")
 
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   const currentTheme = themes.find((t) => t.value === theme) ?? themes[2]
   const CurrentIcon = currentTheme.icon
+
+  if (!mounted) {
+    return (
+      <div
+        className={cn(
+          "flex h-8 w-9 items-center justify-center sm:w-8",
+          className
+        )}
+      >
+        <IconMonitorOutline18 className="size-[1.2rem] text-muted-foreground sm:size-4" />
+      </div>
+    )
+  }
 
   return (
     <Select onValueChange={(value) => value && setTheme(value)} value={theme}>

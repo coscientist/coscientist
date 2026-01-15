@@ -76,7 +76,7 @@ export function Hero() {
 
             <motion.div
               animate={{ opacity: 1, y: 0 }}
-              className="flex flex-col items-center gap-4 sm:flex-row"
+              className="flex flex-col items-center gap-2 sm:flex-row"
               initial={{ opacity: 0, y: 20 }}
               transition={{ ...springSubtle, delay: 0.1 }}
             >

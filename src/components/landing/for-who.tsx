@@ -1,16 +1,10 @@
 "use client"
 
 import { motion } from "motion/react"
+import { useTranslations } from "next-intl"
 
 import { springSubtle } from "@/lib/animations"
 import { Container, Subheading } from "./primitives"
-
-const audiences = [
-  "Scientists running experiment pipelines",
-  "Engineers building on cutting-edge papers",
-  "Analysts synthesizing cross-domain literature",
-  "Teams who need reproducible knowledge trails",
-]
 
 function AudienceItem({ text, index }: { text: string; index: number }) {
   return (
@@ -27,6 +21,15 @@ function AudienceItem({ text, index }: { text: string; index: number }) {
 }
 
 export function ForWho() {
+  const t = useTranslations("landing.forWho")
+
+  const audiences = [
+    t("audiences.scientists"),
+    t("audiences.engineers"),
+    t("audiences.analysts"),
+    t("audiences.teams"),
+  ]
+
   return (
     <section className="py-16">
       <Container className="flex flex-col gap-10 sm:gap-16">
@@ -35,7 +38,7 @@ export function ForWho() {
           initial={{ opacity: 0, y: 20 }}
           transition={springSubtle}
         >
-          <Subheading>Built for researchers who ship</Subheading>
+          <Subheading>{t("heading")}</Subheading>
         </motion.div>
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">

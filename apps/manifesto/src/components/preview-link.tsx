@@ -11,25 +11,25 @@ import {
   isExternalHref,
   normalizeNoteSlug,
 } from "@/lib/note-links"
-import type { Note } from "@/lib/types"
+import type { NoteSummary } from "@/lib/types"
 
 interface NotePreviewContextValue {
-  notesMap: Map<string, Note>
+  summariesMap: Map<string, NoteSummary>
 }
 
 const NotePreviewContext = createContext<NotePreviewContextValue>({
-  notesMap: new Map(),
+  summariesMap: new Map(),
 })
 
 export function NotePreviewProvider({
   children,
-  notesMap,
+  summariesMap,
 }: {
   children: ReactNode
-  notesMap: Map<string, Note>
+  summariesMap: Map<string, NoteSummary>
 }) {
   return (
-    <NotePreviewContext.Provider value={{ notesMap }}>
+    <NotePreviewContext.Provider value={{ summariesMap }}>
       {children}
     </NotePreviewContext.Provider>
   )
@@ -46,13 +46,13 @@ interface PreviewLinkProps {
 }
 
 export function PreviewLink({ href, children, onClick }: PreviewLinkProps) {
-  const { notesMap } = useNotePreview()
+  const { summariesMap } = useNotePreview()
 
   const slug = isExternalHref(href) ? "" : normalizeNoteSlug(href)
-  const note = slug ? notesMap.get(slug) : undefined
+  const summary = slug ? summariesMap.get(slug) : undefined
   const resolvedHref = slug ? buildNoteHref(slug) : href
 
-  if (!note) {
+  if (!summary) {
     return (
       <a href={resolvedHref} onClick={onClick}>
         {children}
@@ -71,7 +71,7 @@ export function PreviewLink({ href, children, onClick }: PreviewLinkProps) {
       />
       <PreviewCardPopup align="start" side="bottom" sideOffset={8}>
         <p className="line-clamp-4 text-muted-foreground text-xs">
-          {note.excerpt}
+          {summary.description}
         </p>
       </PreviewCardPopup>
     </PreviewCard>

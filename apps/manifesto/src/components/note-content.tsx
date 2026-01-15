@@ -14,15 +14,14 @@ import {
   isExternalHref,
   normalizeNoteSlug,
 } from "@/lib/note-links"
-import type { Note } from "@/lib/types"
 import { PreviewLink } from "./preview-link"
 
 interface NoteContentProps {
-  note: Note
+  contentHtml: string
   onLinkClick: (slug: string) => void
 }
 
-export function NoteContent({ note, onLinkClick }: NoteContentProps) {
+export function NoteContent({ contentHtml, onLinkClick }: NoteContentProps) {
   const t = useTranslations("common")
   const handleInternalLink = useCallback(
     (slug: string, e: React.MouseEvent) => {
@@ -80,8 +79,8 @@ export function NoteContent({ note, onLinkClick }: NoteContentProps) {
   }, [handleInternalLink, t])
 
   const parsedContent = useMemo(
-    () => parse(note.contentHtml, parserOptions),
-    [note.contentHtml, parserOptions]
+    () => parse(contentHtml, parserOptions),
+    [contentHtml, parserOptions]
   )
 
   return <div className="prose-note md:px-4 md:py-3">{parsedContent}</div>

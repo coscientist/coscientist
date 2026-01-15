@@ -1,5 +1,6 @@
 "use client"
 
+import dynamic from "next/dynamic"
 import {
   createContext,
   type ReactNode,
@@ -10,9 +11,13 @@ import {
   useState,
 } from "react"
 import { useIsMobile } from "@/hooks/use-mobile"
-import type { BacklinkInfo, Note } from "@/lib/types"
+import type { NotePaneData } from "@/lib/types"
 import { cn } from "@/lib/utils"
-import { MobilePaneCarousel } from "./mobile-pane-carousel"
+
+const MobilePaneCarousel = dynamic(
+  () => import("./mobile-pane-carousel").then((mod) => mod.MobilePaneCarousel),
+  { ssr: false }
+)
 
 interface PaneCollapseContextValue {
   collapsedIndices: Set<number>
@@ -35,8 +40,8 @@ interface PaneContainerProps {
   focusIndex: number
   scrollToPaneRef?: React.MutableRefObject<((index: number) => void) | null>
   mobileData?: {
-    notes: Note[]
-    backlinksMap: Map<string, BacklinkInfo[]>
+    panes: NotePaneData[]
+    backlinksMap: Map<string, NotePaneData["backlinks"]>
     onLinkClick: (slug: string, fromIndex: number) => void
     onClose: (index: number) => void
   }
@@ -237,9 +242,9 @@ export function PaneContainer({
       <MobilePaneCarousel
         backlinksMap={mobileData.backlinksMap}
         focusIndex={focusIndex}
-        notes={mobileData.notes}
         onClose={mobileData.onClose}
         onLinkClick={mobileData.onLinkClick}
+        panes={mobileData.panes}
       />
     )
   }

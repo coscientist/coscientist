@@ -1,4 +1,3 @@
-import { Analytics } from "@vercel/analytics/next"
 import type { Metadata } from "next"
 import {
   Faculty_Glyphic,
@@ -20,6 +19,7 @@ import "@fontsource/iosevka/600.css"
 import "../globals.css"
 import { LanguageSwitcher } from "@/components/language-switcher"
 import { Logo } from "@/components/logo"
+import { MagneticCursor } from "@/components/magnetic-cursor"
 import { ThemeProvider } from "@/components/theme-provider"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Button } from "@/components/ui/button"
@@ -70,11 +70,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const description = t("description")
 
   return {
-    metadataBase: new URL(
-      process.env.VERCEL_PROJECT_PRODUCTION_URL
-        ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-        : "http://localhost:3000"
-    ),
+    metadataBase: new URL(process.env.SITE_URL ?? "http://localhost:3000"),
     title,
     description,
     openGraph: {
@@ -125,6 +121,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       >
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider defaultTheme="system" storageKey="manifesto-theme">
+            <MagneticCursor />
             <header className="sticky top-0 z-50 flex h-16 flex-shrink-0 items-center justify-between border-border border-b bg-card px-6">
               <Link
                 className="flex items-center gap-3 transition-opacity hover:opacity-80"
@@ -194,7 +191,6 @@ export default async function LocaleLayout({ children, params }: Props) {
             {children}
           </ThemeProvider>
         </NextIntlClientProvider>
-        <Analytics />
       </body>
     </html>
   )

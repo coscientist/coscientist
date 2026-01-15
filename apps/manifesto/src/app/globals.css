@@ -214,4 +214,13 @@ body {
       @apply my-8 border-0 border-t border-border;
     }
   }
+
+  .magnetic-cursor {
+    pointer-events: none;
+    z-index: var(--z-toast);
+  }
+
+  .dark .magnetic-cursor {
+    mix-blend-mode: screen !important;
+  }
 }

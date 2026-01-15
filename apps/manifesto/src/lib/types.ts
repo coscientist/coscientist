@@ -24,3 +24,17 @@ export interface NoteGraph {
   notes: Map<string, Note>
   backlinks: Map<string, BacklinkInfo[]>
 }
+
+export interface NoteSummary {
+  slug: string
+  title: string
+  description?: string
+}
+
+export interface NotePaneData {
+  slug: string
+  title: string
+  description?: string
+  contentHtml: string
+  backlinks: BacklinkInfo[]
+}

@@ -1,6 +1,8 @@
+import "server-only"
 import fs from "node:fs/promises"
 import path from "node:path"
 import matter from "gray-matter"
+import { cache } from "react"
 import { remark } from "remark"
 import gfm from "remark-gfm"
 import html from "remark-html"
@@ -182,40 +184,44 @@ export async function getAllNotes(locale = "en"): Promise<Note[]> {
   return notes.filter((note): note is Note => note !== null)
 }
 
-export async function buildNoteGraph(locale = "en"): Promise<{
-  notes: Map<string, Note>
-  backlinks: Map<string, BacklinkInfo[]>
-}> {
-  const allNotes = await getAllNotes(locale)
-  const notes = new Map<string, Note>()
-  const backlinks = new Map<string, BacklinkInfo[]>()
+export const buildNoteGraph = cache(
+  async (
+    locale = "en"
+  ): Promise<{
+    notes: Map<string, Note>
+    backlinks: Map<string, BacklinkInfo[]>
+  }> => {
+    const allNotes = await getAllNotes(locale)
+    const notes = new Map<string, Note>()
+    const backlinks = new Map<string, BacklinkInfo[]>()
 
-  for (const note of allNotes) {
-    notes.set(note.slug, note)
-    backlinks.set(note.slug, [])
-  }
+    for (const note of allNotes) {
+      notes.set(note.slug, note)
+      backlinks.set(note.slug, [])
+    }
 
-  for (const note of allNotes) {
-    for (const targetSlug of note.outboundLinks) {
-      if (notes.has(targetSlug)) {
-        const targetBacklinks = backlinks.get(targetSlug) || []
-        targetBacklinks.push({
-          slug: note.slug,
-          title: note.title,
-          excerpt: extractExcerpt(note.content, targetSlug),
-        })
-        backlinks.set(targetSlug, targetBacklinks)
+    for (const note of allNotes) {
+      for (const targetSlug of note.outboundLinks) {
+        if (notes.has(targetSlug)) {
+          const targetBacklinks = backlinks.get(targetSlug) || []
+          targetBacklinks.push({
+            slug: note.slug,
+            title: note.title,
+            excerpt: extractExcerpt(note.content, targetSlug),
+          })
+          backlinks.set(targetSlug, targetBacklinks)
 
-        const targetNote = notes.get(targetSlug)
-        if (targetNote && !targetNote.inboundLinks.includes(note.slug)) {
-          targetNote.inboundLinks.push(note.slug)
+          const targetNote = notes.get(targetSlug)
+          if (targetNote && !targetNote.inboundLinks.includes(note.slug)) {
+            targetNote.inboundLinks.push(note.slug)
+          }
         }
       }
     }
-  }
 
-  return { notes, backlinks }
-}
+    return { notes, backlinks }
+  }
+)
 
 export function getNotesBySlugs(
   slugs: string[],

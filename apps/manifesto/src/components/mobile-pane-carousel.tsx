@@ -16,14 +16,13 @@ import { memo, useCallback, useEffect, useRef } from "react"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { useReducedMotion } from "@/hooks/use-reduced-motion"
 import { springSubtle } from "@/lib/animations"
-import type { BacklinkInfo, Note } from "@/lib/types"
+import type { NotePaneData } from "@/lib/types"
 import { cn } from "@/lib/utils"
 import { BacklinksSection } from "./backlinks-section"
 import { NoteContent } from "./note-content"
 
 interface MobilePaneCarouselProps {
-  notes: Note[]
-  backlinksMap: Map<string, BacklinkInfo[]>
+  panes: NotePaneData[]
   onLinkClick: (slug: string, fromIndex: number) => void
   onClose: (index: number) => void
   focusIndex: number
@@ -71,9 +70,8 @@ function SliderNotch({
 }
 
 interface CoverflowPaneProps {
-  note: Note
+  pane: NotePaneData
   index: number
-  backlinks: BacklinkInfo[]
   onLinkClick: (slug: string) => void
   onClose: () => void
   isClosable: boolean
@@ -88,9 +86,8 @@ function clamp(min: number, value: number, max: number): number {
 
 const CoverflowPane = memo(
   function CoverflowPane({
-    note,
+    pane,
     index,
-    backlinks,
     onLinkClick,
     onClose,
     isClosable,
@@ -158,19 +155,22 @@ const CoverflowPane = memo(
             <div className="p-5 pb-10">
               <header className="mb-4 pr-8">
                 <h1 className="font-semibold text-foreground text-xl leading-snug">
-                  {note.title}
+                  {pane.title}
                 </h1>
-                {note.description && (
+                {pane.description && (
                   <p className="mt-2 text-muted-foreground text-sm leading-relaxed">
-                    {note.description}
+                    {pane.description}
                   </p>
                 )}
               </header>
-              <NoteContent note={note} onLinkClick={onLinkClick} />
-              {backlinks.length > 0 && (
+              <NoteContent
+                contentHtml={pane.contentHtml}
+                onLinkClick={onLinkClick}
+              />
+              {pane.backlinks.length > 0 && (
                 <footer className="mt-6 border-border/40 border-t pt-4">
                   <BacklinksSection
-                    backlinks={backlinks}
+                    backlinks={pane.backlinks}
                     onBacklinkClick={onLinkClick}
                   />
                 </footer>
@@ -196,7 +196,7 @@ const CoverflowPane = memo(
     )
   },
   (prev, next) =>
-    prev.note.slug === next.note.slug &&
+    prev.pane.slug === next.pane.slug &&
     prev.index === next.index &&
     prev.isClosable === next.isClosable &&
     prev.prefersReducedMotion === next.prefersReducedMotion &&
@@ -204,8 +204,7 @@ const CoverflowPane = memo(
 )
 
 export function MobilePaneCarousel({
-  notes,
-  backlinksMap,
+  panes,
   onLinkClick,
   onClose,
   focusIndex,
@@ -215,16 +214,16 @@ export function MobilePaneCarousel({
   const prefersReducedMotion = useReducedMotion()
   const currentIndex = useMotionValue(focusIndex)
   const containerRef = useRef<HTMLDivElement>(null)
-  const prevNotesLengthRef = useRef(notes.length)
+  const prevPanesLengthRef = useRef(panes.length)
   const prevFocusIndexRef = useRef(focusIndex)
-  const prevFocusedSlugRef = useRef(notes[focusIndex]?.slug)
+  const prevFocusedSlugRef = useRef(panes[focusIndex]?.slug)
   const dragStartIndex = useRef(focusIndex)
   const isInitialMount = useRef(true)
   const isDragging = useRef(false)
 
   const animateToIndex = useCallback(
     (index: number, instant = false) => {
-      const clampedIndex = Math.max(0, Math.min(index, notes.length - 1))
+      const clampedIndex = Math.max(0, Math.min(index, panes.length - 1))
       if (prefersReducedMotion || instant) {
         currentIndex.set(clampedIndex)
       } else {
@@ -235,10 +234,10 @@ export function MobilePaneCarousel({
         })
       }
     },
-    [notes.length, currentIndex, prefersReducedMotion]
+    [panes.length, currentIndex, prefersReducedMotion]
   )
 
-  const focusedSlug = notes[focusIndex]?.slug
+  const focusedSlug = panes[focusIndex]?.slug
 
   useEffect(() => {
     if (isInitialMount.current) {
@@ -250,19 +249,19 @@ export function MobilePaneCarousel({
       return
     }
 
-    const notesAdded = notes.length > prevNotesLengthRef.current
+    const panesAdded = panes.length > prevPanesLengthRef.current
     const focusIndexChanged = focusIndex !== prevFocusIndexRef.current
-    const focusedNoteChanged = focusedSlug !== prevFocusedSlugRef.current
+    const focusedPaneChanged = focusedSlug !== prevFocusedSlugRef.current
 
-    prevNotesLengthRef.current = notes.length
+    prevPanesLengthRef.current = panes.length
     prevFocusIndexRef.current = focusIndex
     prevFocusedSlugRef.current = focusedSlug
 
-    if (focusIndexChanged || focusedNoteChanged) {
+    if (focusIndexChanged || focusedPaneChanged) {
       if (!isDragging.current) {
         dragStartIndex.current = focusIndex
       }
-      if (notesAdded) {
+      if (panesAdded) {
         requestAnimationFrame(() => {
           animateToIndex(focusIndex)
         })
@@ -270,7 +269,7 @@ export function MobilePaneCarousel({
         animateToIndex(focusIndex)
       }
     }
-  }, [focusIndex, focusedSlug, notes.length, animateToIndex, currentIndex])
+  }, [focusIndex, focusedSlug, panes.length, animateToIndex, currentIndex])
 
   const handleDragStart = useCallback(() => {
     isDragging.current = true
@@ -284,11 +283,11 @@ export function MobilePaneCarousel({
       const newIndex = dragStartIndex.current + dragProgress
       const clampedIndex = Math.max(
         -0.15,
-        Math.min(newIndex, notes.length - 1 + 0.15)
+        Math.min(newIndex, panes.length - 1 + 0.15)
       )
       currentIndex.set(clampedIndex)
     },
-    [currentIndex, notes.length]
+    [currentIndex, panes.length]
   )
 
   const handleDragEnd = useCallback(
@@ -310,26 +309,26 @@ export function MobilePaneCarousel({
         targetIndex = Math.round(currentIdx)
       }
 
-      const clampedTarget = Math.max(0, Math.min(targetIndex, notes.length - 1))
+      const clampedTarget = Math.max(0, Math.min(targetIndex, panes.length - 1))
       dragStartIndex.current = clampedTarget
       animateToIndex(clampedTarget)
     },
-    [currentIndex, animateToIndex, notes.length]
+    [currentIndex, animateToIndex, panes.length]
   )
 
   return (
     <div className="flex h-full w-full flex-1 flex-col items-center justify-center overflow-hidden bg-background">
       <div className="flex h-10 w-full items-center justify-center px-4">
         <div className="flex h-10 items-end justify-center">
-          {notes.map((note, index) => (
+          {panes.map((pane, index) => (
             <SliderNotch
               activeIndex={currentIndex}
               ariaLabel={t("goToNote", {
                 position: index + 1,
-                title: note.title,
+                title: pane.title,
               })}
               index={index}
-              key={`${note.slug}-${index}`}
+              key={`${pane.slug}-${index}`}
               onTap={() => animateToIndex(index)}
             />
           ))}
@@ -349,16 +348,15 @@ export function MobilePaneCarousel({
       >
         <ul className="relative h-full w-full">
           <AnimatePresence initial={false} mode="sync">
-            {notes.map((note, index) => (
+            {panes.map((pane, index) => (
               <CoverflowPane
-                backlinks={backlinksMap.get(note.slug) || []}
-                closeLabel={tPane("closeNote", { title: note.title })}
+                closeLabel={tPane("closeNote", { title: pane.title })}
                 index={index}
                 isClosable={index > 0}
-                key={`${note.slug}-${index}`}
-                note={note}
+                key={`${pane.slug}-${index}`}
                 onClose={() => onClose(index)}
                 onLinkClick={(slug) => onLinkClick(slug, index)}
+                pane={pane}
                 prefersReducedMotion={prefersReducedMotion}
                 progress={currentIndex}
               />

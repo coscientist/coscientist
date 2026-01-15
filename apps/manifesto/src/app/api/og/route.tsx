@@ -2,7 +2,6 @@ import { ImageResponse } from "next/og"
 import type { NextRequest } from "next/server"
 import { getFontsForLocale } from "@/lib/og/fonts"
 
-export const runtime = "edge"
 export const revalidate = 86_400
 
 const OG_WIDTH = 2400

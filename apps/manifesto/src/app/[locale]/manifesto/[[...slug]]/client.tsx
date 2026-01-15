@@ -8,35 +8,32 @@ import { NotePane } from "@/components/note-pane"
 import { PaneContainer } from "@/components/pane-container"
 import { NotePreviewProvider } from "@/components/preview-link"
 import { Spinner } from "@/components/ui/spinner"
-import type { BacklinkInfo, Note } from "@/lib/types"
+import type { NotePaneData, NoteSummary } from "@/lib/types"
 import { useNoteStack } from "@/lib/use-note-stack"
 
 interface NotesPageClientProps {
   rootSlug: string
-  allNotes: Note[]
-  initialNotesData: Array<{
-    note: Note
-    backlinks: BacklinkInfo[]
-  }>
+  noteSummaries: NoteSummary[]
+  initialPanesData: NotePaneData[]
 }
 
 function NotesContent({
   rootSlug,
-  allNotes,
-  initialNotesData,
+  noteSummaries,
+  initialPanesData,
 }: NotesPageClientProps) {
   const { stack, focusIndex, pushNote, popNote, focusPane, setStack } =
     useNoteStack(rootSlug)
   const [keyboardFocusIndex, setKeyboardFocusIndex] = useState(() =>
-    Math.max(0, initialNotesData.length - 1)
+    Math.max(0, initialPanesData.length - 1)
   )
-  const [prevLength, setPrevLength] = useState(initialNotesData.length)
+  const [prevLength, setPrevLength] = useState(initialPanesData.length)
   const scrollToPaneRef = useRef<((index: number) => void) | null>(null)
 
-  if (prevLength !== initialNotesData.length) {
-    setPrevLength(initialNotesData.length)
-    if (initialNotesData.length > 0) {
-      setKeyboardFocusIndex(initialNotesData.length - 1)
+  if (prevLength !== initialPanesData.length) {
+    setPrevLength(initialPanesData.length)
+    if (initialPanesData.length > 0) {
+      setKeyboardFocusIndex(initialPanesData.length - 1)
     }
   }
 
@@ -47,19 +44,19 @@ function NotesContent({
   useKeyboardNavigation({
     stackLength: stack.length,
     focusIndex: keyboardFocusIndex,
-    maxFocusIndex: initialNotesData.length,
+    maxFocusIndex: initialPanesData.length,
     onFocusChange: setKeyboardFocusIndex,
     onPopStack: popNote,
     onScrollToPane: handleScrollToPane,
   })
 
-  const notesMap = useMemo(() => {
-    const map = new Map<string, Note>()
-    for (const note of allNotes) {
-      map.set(note.slug, note)
+  const summariesMap = useMemo(() => {
+    const map = new Map<string, NoteSummary>()
+    for (const summary of noteSummaries) {
+      map.set(summary.slug, summary)
     }
     return map
-  }, [allNotes])
+  }, [noteSummaries])
 
   const handleLinkClick = useCallback(
     (slug: string, fromPaneIndex: number) => {
@@ -98,21 +95,20 @@ function NotesContent({
   )
 
   const mobileData = useMemo(() => {
-    const backlinksMap = new Map<string, BacklinkInfo[]>()
-    const notes = initialNotesData.map((data) => {
-      backlinksMap.set(data.note.slug, data.backlinks)
-      return data.note
-    })
+    const backlinksMap = new Map<string, NotePaneData["backlinks"]>()
+    for (const pane of initialPanesData) {
+      backlinksMap.set(pane.slug, pane.backlinks)
+    }
     return {
-      notes,
+      panes: initialPanesData,
       backlinksMap,
       onLinkClick: handleLinkClick,
       onClose: handleClosePane,
     }
-  }, [initialNotesData, handleLinkClick, handleClosePane])
+  }, [initialPanesData, handleLinkClick, handleClosePane])
 
   return (
-    <NotePreviewProvider notesMap={notesMap}>
+    <NotePreviewProvider summariesMap={summariesMap}>
       <PaneContainer
         focusIndex={focusIndex}
         mobileData={mobileData}
@@ -120,25 +116,28 @@ function NotesContent({
       >
         <LayoutGroup>
           <AnimatePresence initial={false} mode="popLayout">
-            {initialNotesData.map((data, index) => (
+            {initialPanesData.map((pane, index) => (
               <NotePane
-                backlinks={data.backlinks}
+                backlinks={pane.backlinks}
+                contentHtml={pane.contentHtml}
+                description={pane.description}
                 index={index}
                 isClosable={index > 0}
                 isFocused={index === keyboardFocusIndex}
-                key={`pane-${index}-${data.note.slug}`}
-                note={data.note}
+                key={`pane-${index}-${pane.slug}`}
                 onClose={() => handleClosePane(index)}
                 onExpand={() => handleExpandPane(index)}
                 onLinkClick={handleLinkClick}
+                slug={pane.slug}
+                title={pane.title}
               />
             ))}
             <AllNotesList
               currentStack={stack}
-              index={initialNotesData.length}
+              index={initialPanesData.length}
               key="all-notes-list"
-              notes={allNotes}
-              onExpand={() => handleExpandPane(initialNotesData.length)}
+              notes={noteSummaries}
+              onExpand={() => handleExpandPane(initialPanesData.length)}
               onNoteClick={handleAllNotesClick}
             />
           </AnimatePresence>

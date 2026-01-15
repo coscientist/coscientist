@@ -13,14 +13,14 @@ import {
   springSubtle,
 } from "@/lib/animations"
 import { buildNoteHref } from "@/lib/note-links"
-import type { Note } from "@/lib/types"
+import type { NoteSummary } from "@/lib/types"
 import { cn } from "@/lib/utils"
 import { usePaneCollapse } from "./pane-container"
 import { PaneSpine } from "./pane-spine"
 import { PreviewLink } from "./preview-link"
 
 interface AllNotesListProps {
-  notes: Note[]
+  notes: NoteSummary[]
   currentStack: string[]
   index: number
   onNoteClick: (slug: string) => void

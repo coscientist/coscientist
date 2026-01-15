@@ -13,7 +13,7 @@ import {
   springQuick,
   springSubtle,
 } from "@/lib/animations"
-import type { BacklinkInfo, Note } from "@/lib/types"
+import type { BacklinkInfo } from "@/lib/types"
 import { cn } from "@/lib/utils"
 import { BacklinksSection } from "./backlinks-section"
 import { NoteContent } from "./note-content"
@@ -21,7 +21,10 @@ import { usePaneCollapse } from "./pane-container"
 import { PaneSpine } from "./pane-spine"
 
 interface NotePaneProps {
-  note: Note
+  slug: string
+  title: string
+  description?: string
+  contentHtml: string
   index: number
   isFocused?: boolean
   isClosable?: boolean
@@ -32,7 +35,10 @@ interface NotePaneProps {
 }
 
 export function NotePane({
-  note,
+  slug,
+  title,
+  description,
+  contentHtml,
   index,
   isClosable = false,
   backlinks,
@@ -66,7 +72,7 @@ export function NotePane({
   return (
     <motion.article
       animate="animate"
-      aria-label={note.title}
+      aria-label={title}
       className={cn(
         "h-full w-full flex-shrink-0 overflow-hidden md:w-1/3 md:min-w-pane-min",
         "group/pane relative border-border border-l bg-background",
@@ -120,10 +126,10 @@ export function NotePane({
             variants={spineVariants}
           >
             <PaneSpine
-              description={note.description}
+              description={description}
               index={index}
               showIndex
-              title={note.title}
+              title={title}
             />
           </motion.div>
         )}
@@ -137,7 +143,7 @@ export function NotePane({
       >
         {isCollapsed && (
           <button
-            aria-label={t("expandNote", { title: note.title })}
+            aria-label={t("expandNote", { title })}
             className="absolute inset-0 z-overlay cursor-pointer"
             onClick={onExpand}
             type="button"
@@ -153,17 +159,20 @@ export function NotePane({
           <div className="flex min-h-full flex-col">
             <header className="px-4 pt-4 pb-2">
               <h1 className="font-normal text-3xl text-foreground tracking-tight dark:bg-gradient-to-br dark:from-white dark:via-white dark:to-neutral-500 dark:bg-clip-text dark:text-transparent">
-                {note.title}
+                {title}
               </h1>
-              {note.description && (
+              {description && (
                 <p className="mt-2 font-normal text-lg text-muted-foreground">
-                  {note.description}
+                  {description}
                 </p>
               )}
             </header>
 
             <div className="flex-1">
-              <NoteContent note={note} onLinkClick={handleLinkClick} />
+              <NoteContent
+                contentHtml={contentHtml}
+                onLinkClick={handleLinkClick}
+              />
             </div>
 
             {backlinks.length > 0 && (
@@ -178,7 +187,7 @@ export function NotePane({
             <footer className="border-border/40 border-t px-8 py-4">
               <a
                 className="text-muted-foreground text-sm transition-colors hover:text-foreground"
-                href={`https://github.com/coscientist/coscientist/edit/main/apps/manifesto/src/content/notes/${locale}/${note.slug}.md`}
+                href={`https://github.com/coscientist/coscientist/edit/main/apps/manifesto/src/content/notes/${locale}/${slug}.md`}
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -193,7 +202,7 @@ export function NotePane({
           {!isCollapsed && isClosable && (
             <motion.button
               animate={{ opacity: 1, scale: 1 }}
-              aria-label={t("closeNote", { title: note.title })}
+              aria-label={t("closeNote", { title })}
               className={cn(
                 "absolute top-4 right-4 z-overlay",
                 "flex size-8 items-center justify-center rounded-full",

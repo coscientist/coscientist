@@ -5,7 +5,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 import { routing } from "@/i18n/routing"
 import { buildNoteGraph, getAllNoteSlugs, getNoteBySlug } from "@/lib/notes"
 import { parseStackFromParams } from "@/lib/stack"
-import type { BacklinkInfo, Note } from "@/lib/types"
+import type { BacklinkInfo, Note, NotePaneData, NoteSummary } from "@/lib/types"
 import { NotesPageClient } from "./client"
 
 interface PageProps {
@@ -64,11 +64,6 @@ export async function generateMetadata({
   }
 }
 
-interface NotePaneData {
-  note: Note
-  backlinks: BacklinkInfo[]
-}
-
 export default async function Page({ params, searchParams }: PageProps) {
   const resolvedParams = await params
   const resolvedSearchParams = await searchParams
@@ -94,28 +89,43 @@ export default async function Page({ params, searchParams }: PageProps) {
 
   const { stack } = parseStackFromParams(rootSlug, urlSearchParams)
 
-  const { notes, backlinks } = await buildNoteGraph(resolvedParams.locale)
+  const {
+    notes,
+    backlinks,
+  }: { notes: Map<string, Note>; backlinks: Map<string, BacklinkInfo[]> } =
+    await buildNoteGraph(resolvedParams.locale)
   const rootNote = notes.get(rootSlug)
   if (!rootNote) {
     notFound()
   }
 
-  const notesData: NotePaneData[] = []
+  const initialPanesData: NotePaneData[] = []
   for (const slug of stack) {
     const note = notes.get(slug)
     if (!note) {
       continue
     }
-    notesData.push({
-      note,
+    initialPanesData.push({
+      slug: note.slug,
+      title: note.title,
+      description: note.description,
+      contentHtml: note.contentHtml,
       backlinks: backlinks.get(slug) || [],
     })
   }
 
+  const noteSummaries: NoteSummary[] = Array.from(notes.values()).map(
+    (note) => ({
+      slug: note.slug,
+      title: note.title,
+      description: note.description,
+    })
+  )
+
   return (
     <NotesPageClient
-      allNotes={Array.from(notes.values())}
-      initialNotesData={notesData}
+      initialPanesData={initialPanesData}
+      noteSummaries={noteSummaries}
       rootSlug={rootSlug}
     />
   )

@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "motion/react"
+import { useTranslations } from "next-intl"
 
 import { springSubtle } from "@/lib/animations"
 import { Container, Eyebrow, Subheading } from "./primitives"
@@ -25,25 +26,24 @@ function Feature({ title, description, index }: FeatureProps) {
   )
 }
 
-const features = [
-  {
-    title: "Dialectical Graph",
-    description:
-      "Claims and relations, not documents and links. Every statement traces back to evidence.",
-  },
-  {
-    title: "Rebuttal-First",
-    description:
-      "Seek what breaks before what supports. Knowledge that survives challenge.",
-  },
-  {
-    title: "Multilingual",
-    description:
-      "Korean papers. German hypotheses. Japanese datasets. One unified research graph.",
-  },
-]
-
 export function Features() {
+  const t = useTranslations("landing.features")
+
+  const features = [
+    {
+      title: t("dialecticalGraph.title"),
+      description: t("dialecticalGraph.description"),
+    },
+    {
+      title: t("rebuttalFirst.title"),
+      description: t("rebuttalFirst.description"),
+    },
+    {
+      title: t("multilingual.title"),
+      description: t("multilingual.description"),
+    },
+  ]
+
   return (
     <section className="py-16">
       <Container className="flex flex-col gap-10 sm:gap-16">
@@ -53,8 +53,8 @@ export function Features() {
           initial={{ opacity: 0, y: 20 }}
           transition={springSubtle}
         >
-          <Eyebrow>Core Architecture</Eyebrow>
-          <Subheading>Built different from the ground up</Subheading>
+          <Eyebrow>{t("eyebrow")}</Eyebrow>
+          <Subheading>{t("heading")}</Subheading>
         </motion.div>
 
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">

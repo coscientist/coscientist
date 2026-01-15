@@ -7,7 +7,7 @@ Graph components are the building blocks of a
 [Dialectical Graph](./dialectical-graph): the [Dialectical Graph Nodes](./dialectical-graph-nodes) that represent
 epistemic objects and the [Dialectical Graph Edges](./dialectical-graph-edges) that represent [Argumentative Relations](./argumentative-relations) between them.
 
-**Node types** ):
+**Node types**:
 
 - [Claim](./claim) — verifiable propositions
 - [Evidence Span](./evidence-span) — exact quoted text from sources
@@ -18,7 +18,7 @@ epistemic objects and the [Dialectical Graph Edges](./dialectical-graph-edges) t
 - [Counterexample](./counterexample) — cases that break claims
 - [Issue Node](./issue-node) — bundles of colliding claims
 
-**Edge types** ):
+**Edge types**:
 
 - [Attack](./attack) — direct challenges to truth
 - [Undercut](./undercut) — challenges to grounds

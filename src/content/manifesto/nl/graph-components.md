@@ -10,7 +10,7 @@ Graafcomponenten zijn de bouwstenen van een
 [Dialectische Graaf](./dialectical-graph): de [Dialectische Graafknopen](./dialectical-graph-nodes) die epistemische
 objecten representeren en de [Dialectische Graafranden](./dialectical-graph-edges) die [Argumentatieve Relaties](./argumentative-relations) daartussen representeren.
 
-**Knooptypen** ):
+**Knooptypen**:
 
 - [Bewering](./claim) — verifieerbare proposities
 - [Evidentiefragment](./evidence-span) — exact geciteerde tekst uit bronnen
@@ -21,7 +21,7 @@ objecten representeren en de [Dialectische Graafranden](./dialectical-graph-edge
 - [Tegenvoorbeeld](./counterexample) — gevallen die beweringen doorbreken
 - [Issue-knooppunt](./issue-node) — bundels van botsende beweringen
 
-**Randtypen** ):
+**Randtypen**:
 
 - [Aanval](./attack) — directe betwistingen van waarheid
 - [Ondergraving](./undercut) — betwistingen van de grondslag

@@ -10,7 +10,7 @@ Các thành phần đồ thị là những khối xây dựng của một
 [Đồ thị Biện chứng](./dialectical-graph): [Các nút của Đồ thị Biện chứng](./dialectical-graph-nodes) biểu diễn các đối tượng
 nhận thức luận và [Các cạnh của Đồ thị Biện chứng](./dialectical-graph-edges) biểu diễn các [Quan hệ Lập luận](./argumentative-relations) giữa chúng.
 
-**Các loại nút** ):
+**Các loại nút**:
 
 - [Mệnh đề](./claim) — các phát biểu có thể kiểm chứng
 - [Đoạn bằng chứng](./evidence-span) — văn bản được trích dẫn nguyên văn chính
@@ -22,7 +22,7 @@ nhận thức luận và [Các cạnh của Đồ thị Biện chứng](./dialec
 - [Phản ví dụ](./counterexample) — các trường hợp làm sai mệnh đề
 - [Nút vấn đề](./issue-node) — các cụm mệnh đề xung đột
 
-**Các loại cạnh** ):
+**Các loại cạnh**:
 
 - [Tấn công](./attack) — thách thức trực tiếp đối với tính đúng
 - [Làm suy yếu cơ sở](./undercut) — thách thức đối với căn cứ

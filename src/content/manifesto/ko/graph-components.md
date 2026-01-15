@@ -10,7 +10,7 @@ translatedAt: 2026-01-14
 인식론적 객체를 나타내는 [변증법적 그래프 노드](./dialectical-graph-nodes)와,
 그들 사이의 [논증 관계](./argumentative-relations)를 나타내는 [변증법적 그래프 엣지](./dialectical-graph-edges)다.
 
-**노드 유형** ):
+**노드 유형**:
 
 - [주장](./claim) — 검증 가능한 명제
 - [증거 구간](./evidence-span) — 출처에서 정확히 인용한 텍스트
@@ -21,7 +21,7 @@ translatedAt: 2026-01-14
 - [반례](./counterexample) — 주장을 깨뜨리는 사례
 - [이슈 노드](./issue-node) — 충돌하는 주장들의 묶음
 
-**엣지 유형** ):
+**엣지 유형**:
 
 - [공격](./attack) — 진실성에 대한 직접적 도전
 - [언더컷](./undercut) — 근거에 대한 도전

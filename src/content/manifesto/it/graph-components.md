@@ -10,7 +10,7 @@ I componenti del grafo sono i mattoni di un
 [Grafo Dialettico](./dialectical-graph): i [Nodi del Grafo Dialettico](./dialectical-graph-nodes) che rappresentano
 oggetti epistemici e gli [Archi del Grafo Dialettico](./dialectical-graph-edges) che rappresentano le [Relazioni Argomentative](./argumentative-relations) tra di essi.
 
-**Tipi di nodo** ):
+**Tipi di nodo**:
 
 - [Affermazione](./claim) — proposizioni verificabili
 - [Estratto di evidenza](./evidence-span) — testo citato esatto dalle fonti
@@ -22,7 +22,7 @@ oggetti epistemici e gli [Archi del Grafo Dialettico](./dialectical-graph-edges)
 - [Nodo di questione](./issue-node) — raggruppamenti di affermazioni in
   collisione
 
-**Tipi di arco** ):
+**Tipi di arco**:
 
 - [Attacco](./attack) — contestazioni dirette della verità
 - [Undercut](./undercut) — contestazioni dei fondamenti

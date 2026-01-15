@@ -10,7 +10,7 @@ Os componentes do grafo são os blocos de construção de um
 [Grafo Dialético](./dialectical-graph): os [Nós do Grafo Dialético](./dialectical-graph-nodes) que representam
 objetos epistêmicos e as [Arestas do Grafo Dialético](./dialectical-graph-edges) que representam [Relações Argumentativas](./argumentative-relations) entre eles.
 
-**Tipos de nós** ):
+**Tipos de nós**:
 
 - [Alegação](./claim) — proposições verificáveis
 - [Trecho de Evidência](./evidence-span) — texto exatamente citado de fontes
@@ -21,7 +21,7 @@ objetos epistêmicos e as [Arestas do Grafo Dialético](./dialectical-graph-edge
 - [Contraexemplo](./counterexample) — casos que quebram alegações
 - [Nó de Questão](./issue-node) — agrupamentos de alegações em colisão
 
-**Tipos de arestas** ):
+**Tipos de arestas**:
 
 - [Ataque](./attack) — desafios diretos à verdade
 - [Refutação por Minar](./undercut) — desafios aos fundamentos

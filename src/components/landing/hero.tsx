@@ -3,11 +3,13 @@
 import { motion } from "motion/react"
 import Image from "next/image"
 import Link from "next/link"
+import { useTranslations } from "next-intl"
 import { Button } from "@/components/ui/button"
 import { springSubtle } from "@/lib/animations"
 import { Container } from "./primitives"
 
 export function Hero() {
+  const t = useTranslations("landing.hero")
   return (
     <section className="pb-16">
       <Container>
@@ -59,18 +61,19 @@ export function Hero() {
               transition={springSubtle}
             >
               <h1 className="font-normal text-4xl text-[#182D3D] leading-[1.02] tracking-[-0.06em] sm:text-5xl lg:text-6xl dark:text-white">
-                Research at the
-                <br />
-                Speed of Thought
+                {t("title")
+                  .split("\n")
+                  .map((line, index) => (
+                    <span key={line}>
+                      {line}
+                      {index === 0 && <br />}
+                    </span>
+                  ))}
               </h1>
               <p className="text-base text-black leading-[1.3] sm:text-lg dark:text-white">
-                <span className="inline-block">Versioned experiments.</span>{" "}
-                <span className="inline-block">Reproducible knowledge.</span>
+                <span className="inline-block">{t("subtitle")}</span>
                 <br />
-                <span className="inline-block">
-                  The cognitive infrastructure{" "}
-                  <span className="inline-block">for research.</span>
-                </span>
+                <span className="inline-block">{t("description")}</span>
               </p>
             </motion.div>
 
@@ -81,7 +84,7 @@ export function Hero() {
               transition={{ ...springSubtle, delay: 0.1 }}
             >
               <Button render={<Link href="/manifesto" />} size="lg">
-                Enter Manifesto →
+                {t("enterManifesto")}
               </Button>
               <Button
                 render={
@@ -90,7 +93,7 @@ export function Hero() {
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    GitHub →
+                    {t("github")}
                   </a>
                 }
                 size="lg"

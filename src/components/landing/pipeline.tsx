@@ -1,11 +1,10 @@
 "use client"
 
 import { motion } from "motion/react"
+import { useTranslations } from "next-intl"
 
 import { springSubtle } from "@/lib/animations"
 import { Container, Eyebrow, Subheading, Text } from "./primitives"
-
-const steps = ["PROPOSE", "CRITIQUE", "RANK", "REFINE"]
 
 function PipelineStep({
   step,
@@ -40,6 +39,15 @@ function PipelineStep({
 }
 
 export function Pipeline() {
+  const t = useTranslations("landing.pipeline")
+
+  const steps = [
+    t("steps.propose"),
+    t("steps.critique"),
+    t("steps.rank"),
+    t("steps.refine"),
+  ]
+
   return (
     <section className="py-16">
       <Container className="flex flex-col gap-10 sm:gap-16">
@@ -50,12 +58,10 @@ export function Pipeline() {
           transition={springSubtle}
         >
           <div className="flex flex-col gap-2">
-            <Eyebrow>How it works</Eyebrow>
-            <Subheading>Multi-agent debate architecture</Subheading>
+            <Eyebrow>{t("eyebrow")}</Eyebrow>
+            <Subheading>{t("heading")}</Subheading>
           </div>
-          <Text className="text-pretty">
-            Multi-agent AI debates internally. You see the surviving arguments.
-          </Text>
+          <Text className="text-pretty">{t("description")}</Text>
         </motion.div>
 
         <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-0">

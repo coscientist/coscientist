@@ -15,7 +15,7 @@ function Feature({ title, description, index }: FeatureProps) {
   return (
     <motion.div
       animate={{ opacity: 1, y: 0 }}
-      className="flex flex-col gap-2"
+      className="flex flex-col gap-2 overflow-hidden border border-black/[0.06] bg-white p-6 shadow-black/[0.04] shadow-lg [border-radius:32px] dark:border-white/[0.06] dark:bg-black dark:shadow-black/[0.08]"
       initial={{ opacity: 0, y: 20 }}
       transition={{ ...springSubtle, delay: 0.1 + index * 0.1 }}
     >
@@ -57,7 +57,7 @@ export function Features() {
           <Subheading>Built different from the ground up</Subheading>
         </motion.div>
 
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
             <Feature key={feature.title} {...feature} index={index} />
           ))}

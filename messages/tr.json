@@ -58,5 +58,60 @@
   "languageSwitcher": {
     "label": "Dil",
     "selectLanguage": "Dil seçin"
+  },
+  "landing": {
+    "hero": {
+      "title": "Düşünce Hızında\nAraştırma",
+      "subtitle": "Sürümlü deneyler. Yeniden üretilebilir bilgi.",
+      "description": "Araştırma için bilişsel altyapı.",
+      "enterManifesto": "Manifesto'ya Gir",
+      "github": "GitHub"
+    },
+    "features": {
+      "eyebrow": "Temel Mimari",
+      "heading": "Temelden farklı inşa edildi",
+      "dialecticalGraph": {
+        "title": "Diyalektik Graf",
+        "description": "Belgeler ve bağlantılar değil, iddialar ve ilişkiler. Her ifade kanıta kadar izlenebilir."
+      },
+      "rebuttalFirst": {
+        "title": "Önce Çürütme",
+        "description": "Destekleyenden önce kıranı ara. Zorluğa dayanan bilgi."
+      },
+      "multilingual": {
+        "title": "Çok Dilli",
+        "description": "Korece makaleler. Almanca hipotezler. Japonca veri setleri. Tek birleşik araştırma grafı."
+      }
+    },
+    "pipeline": {
+      "eyebrow": "Nasıl Çalışır",
+      "heading": "Çok ajanlı tartışma mimarisi",
+      "description": "Çok ajanlı yapay zeka dahili olarak tartışır. Siz ayakta kalan argümanları görürsünüz.",
+      "steps": {
+        "propose": "ÖNER",
+        "critique": "ELEŞTİR",
+        "rank": "SIRALA",
+        "refine": "İYİLEŞTİR"
+      }
+    },
+    "forWho": {
+      "heading": "Üreten araştırmacılar için inşa edildi",
+      "audiences": {
+        "scientists": "Deney hatları yürüten bilim insanları",
+        "engineers": "Son teknoloji makaleler üzerine inşa eden mühendisler",
+        "analysts": "Çapraz alan literatürünü sentezleyen analistler",
+        "teams": "Yeniden üretilebilir bilgi izlerine ihtiyaç duyan ekipler"
+      }
+    },
+    "cta": {
+      "heading": "Galaktik Ansiklopedi kurguydu.\nBiz altyapıyı inşa ediyoruz.",
+      "readManifesto": "Manifesto'yu Oku",
+      "github": "GitHub"
+    },
+    "footer": {
+      "manifesto": "Manifesto",
+      "github": "GitHub",
+      "copyright": "© {year} Coscientist"
+    }
   }
 }

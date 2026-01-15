@@ -58,5 +58,60 @@
   "languageSwitcher": {
     "label": "Taal",
     "selectLanguage": "Selecteer een taal"
+  },
+  "landing": {
+    "hero": {
+      "title": "Onderzoek op de\nSnelheid van Gedachten",
+      "subtitle": "Versiebeheerde experimenten. Reproduceerbare kennis.",
+      "description": "De cognitieve infrastructuur voor onderzoek.",
+      "enterManifesto": "Naar het Manifest",
+      "github": "GitHub"
+    },
+    "features": {
+      "eyebrow": "Kernarchitectuur",
+      "heading": "Vanaf de grond anders opgebouwd",
+      "dialecticalGraph": {
+        "title": "Dialectische Graaf",
+        "description": "Claims en relaties, geen documenten en links. Elke bewering leidt terug naar bewijs."
+      },
+      "rebuttalFirst": {
+        "title": "Weerlegging Eerst",
+        "description": "Zoek eerst wat breekt, dan wat ondersteunt. Kennis die uitdaging overleeft."
+      },
+      "multilingual": {
+        "title": "Meertalig",
+        "description": "Koreaanse papers. Duitse hypothesen. Japanse datasets. Eén uniforme onderzoeksgraaf."
+      }
+    },
+    "pipeline": {
+      "eyebrow": "Hoe het werkt",
+      "heading": "Multi-agent debatarchitectuur",
+      "description": "Multi-agent AI debatteert intern. Jij ziet de overlevende argumenten.",
+      "steps": {
+        "propose": "VOORSTEL",
+        "critique": "KRITIEK",
+        "rank": "RANGSCHIK",
+        "refine": "VERFIJN"
+      }
+    },
+    "forWho": {
+      "heading": "Gebouwd voor onderzoekers die leveren",
+      "audiences": {
+        "scientists": "Wetenschappers die experimentpipelines draaien",
+        "engineers": "Ingenieurs die bouwen op baanbrekende papers",
+        "analysts": "Analisten die cross-domein literatuur synthetiseren",
+        "teams": "Teams die reproduceerbare kennissporen nodig hebben"
+      }
+    },
+    "cta": {
+      "heading": "De Encyclopedia Galactica was fictie.\nWij bouwen de infrastructuur.",
+      "readManifesto": "Lees het Manifest",
+      "github": "GitHub"
+    },
+    "footer": {
+      "manifesto": "Manifest",
+      "github": "GitHub",
+      "copyright": "© {year} Coscientist"
+    }
   }
 }

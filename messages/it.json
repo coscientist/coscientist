@@ -58,5 +58,60 @@
   "languageSwitcher": {
     "label": "Lingua",
     "selectLanguage": "Seleziona lingua"
+  },
+  "landing": {
+    "hero": {
+      "title": "Ricerca alla\nVelocità del Pensiero",
+      "subtitle": "Esperimenti versionati. Conoscenza riproducibile.",
+      "description": "L'infrastruttura cognitiva per la ricerca.",
+      "enterManifesto": "Entra nel Manifesto",
+      "github": "GitHub"
+    },
+    "features": {
+      "eyebrow": "Architettura Centrale",
+      "heading": "Costruito in modo diverso dalle fondamenta",
+      "dialecticalGraph": {
+        "title": "Grafo Dialettico",
+        "description": "Affermazioni e relazioni, non documenti e link. Ogni dichiarazione risale all'evidenza."
+      },
+      "rebuttalFirst": {
+        "title": "Confutazione Prima",
+        "description": "Cerca ciò che rompe prima di ciò che supporta. Conoscenza che sopravvive alle sfide."
+      },
+      "multilingual": {
+        "title": "Multilingue",
+        "description": "Articoli coreani. Ipotesi tedesche. Dataset giapponesi. Un unico grafo di ricerca unificato."
+      }
+    },
+    "pipeline": {
+      "eyebrow": "Come funziona",
+      "heading": "Architettura di dibattito multi-agente",
+      "description": "L'IA multi-agente dibatte internamente. Tu vedi gli argomenti sopravvissuti.",
+      "steps": {
+        "propose": "PROPONI",
+        "critique": "CRITICA",
+        "rank": "CLASSIFICA",
+        "refine": "RAFFINA"
+      }
+    },
+    "forWho": {
+      "heading": "Costruito per ricercatori che producono",
+      "audiences": {
+        "scientists": "Scienziati che gestiscono pipeline di esperimenti",
+        "engineers": "Ingegneri che costruiscono su articoli all'avanguardia",
+        "analysts": "Analisti che sintetizzano letteratura interdisciplinare",
+        "teams": "Team che necessitano di tracce di conoscenza riproducibili"
+      }
+    },
+    "cta": {
+      "heading": "L'Encyclopedia Galactica era finzione.\nNoi stiamo costruendo l'infrastruttura.",
+      "readManifesto": "Leggi il Manifesto",
+      "github": "GitHub"
+    },
+    "footer": {
+      "manifesto": "Manifesto",
+      "github": "GitHub",
+      "copyright": "© {year} Coscientist"
+    }
   }
 }

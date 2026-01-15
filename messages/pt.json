@@ -58,5 +58,60 @@
   "languageSwitcher": {
     "label": "Idioma",
     "selectLanguage": "Selecionar idioma"
+  },
+  "landing": {
+    "hero": {
+      "title": "Pesquisa na\nVelocidade do Pensamento",
+      "subtitle": "Experimentos versionados. Conhecimento reproduzível.",
+      "description": "A infraestrutura cognitiva para pesquisa.",
+      "enterManifesto": "Entrar no Manifesto",
+      "github": "GitHub"
+    },
+    "features": {
+      "eyebrow": "Arquitetura Central",
+      "heading": "Construído diferente desde a base",
+      "dialecticalGraph": {
+        "title": "Grafo Dialético",
+        "description": "Afirmações e relações, não documentos e links. Cada declaração remonta a evidências."
+      },
+      "rebuttalFirst": {
+        "title": "Refutação Primeiro",
+        "description": "Busque o que quebra antes do que sustenta. Conhecimento que sobrevive ao desafio."
+      },
+      "multilingual": {
+        "title": "Multilíngue",
+        "description": "Artigos coreanos. Hipóteses alemãs. Conjuntos de dados japoneses. Um grafo de pesquisa unificado."
+      }
+    },
+    "pipeline": {
+      "eyebrow": "Como funciona",
+      "heading": "Arquitetura de debate multi-agente",
+      "description": "IA multi-agente debate internamente. Você vê os argumentos sobreviventes.",
+      "steps": {
+        "propose": "PROPOR",
+        "critique": "CRITICAR",
+        "rank": "CLASSIFICAR",
+        "refine": "REFINAR"
+      }
+    },
+    "forWho": {
+      "heading": "Construído para pesquisadores que entregam",
+      "audiences": {
+        "scientists": "Cientistas executando pipelines de experimentos",
+        "engineers": "Engenheiros construindo sobre artigos de ponta",
+        "analysts": "Analistas sintetizando literatura entre domínios",
+        "teams": "Equipes que precisam de trilhas de conhecimento reproduzíveis"
+      }
+    },
+    "cta": {
+      "heading": "A Enciclopédia Galáctica era ficção.\nEstamos construindo a infraestrutura.",
+      "readManifesto": "Leia o Manifesto",
+      "github": "GitHub"
+    },
+    "footer": {
+      "manifesto": "Manifesto",
+      "github": "GitHub",
+      "copyright": "© {year} Coscientist"
+    }
   }
 }

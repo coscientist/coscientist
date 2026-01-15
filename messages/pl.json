@@ -58,5 +58,60 @@
   "languageSwitcher": {
     "label": "Język",
     "selectLanguage": "Wybierz język"
+  },
+  "landing": {
+    "hero": {
+      "title": "Badania z\nprędkością myśli",
+      "subtitle": "Wersjonowane eksperymenty. Odtwarzalna wiedza.",
+      "description": "Kognitywna infrastruktura dla badań.",
+      "enterManifesto": "Wejdź do Manifestu",
+      "github": "GitHub"
+    },
+    "features": {
+      "eyebrow": "Podstawowa architektura",
+      "heading": "Zbudowane inaczej od podstaw",
+      "dialecticalGraph": {
+        "title": "Graf dialektyczny",
+        "description": "Twierdzenia i relacje, nie dokumenty i linki. Każde stwierdzenie prowadzi do dowodów."
+      },
+      "rebuttalFirst": {
+        "title": "Najpierw obalenie",
+        "description": "Szukaj tego, co obala, zanim szukasz tego, co wspiera. Wiedza, która przetrwa wyzwania."
+      },
+      "multilingual": {
+        "title": "Wielojęzyczny",
+        "description": "Koreańskie artykuły. Niemieckie hipotezy. Japońskie zbiory danych. Jeden zunifikowany graf badawczy."
+      }
+    },
+    "pipeline": {
+      "eyebrow": "Jak to działa",
+      "heading": "Wieloagentowa architektura debaty",
+      "description": "Wieloagentowa AI debatuje wewnętrznie. Ty widzisz argumenty, które przetrwały.",
+      "steps": {
+        "propose": "PROPONUJ",
+        "critique": "KRYTYKUJ",
+        "rank": "OCENIAJ",
+        "refine": "UDOSKONALAJ"
+      }
+    },
+    "forWho": {
+      "heading": "Stworzone dla badaczy, którzy realizują",
+      "audiences": {
+        "scientists": "Naukowcy prowadzący potoki eksperymentów",
+        "engineers": "Inżynierowie budujący na najnowszych publikacjach",
+        "analysts": "Analitycy syntetyzujący literaturę międzydomenową",
+        "teams": "Zespoły potrzebujące odtwarzalnych ścieżek wiedzy"
+      }
+    },
+    "cta": {
+      "heading": "Encyklopedia Galactica była fikcją.\nMy budujemy infrastrukturę.",
+      "readManifesto": "Przeczytaj Manifest",
+      "github": "GitHub"
+    },
+    "footer": {
+      "manifesto": "Manifest",
+      "github": "GitHub",
+      "copyright": "© {year} Coscientist"
+    }
   }
 }

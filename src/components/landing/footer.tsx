@@ -1,19 +1,22 @@
+"use client"
+
 import Link from "next/link"
+import { useTranslations } from "next-intl"
 
 import { Container } from "./primitives"
 
-const links = [
-  { label: "Manifesto", href: "/manifesto" },
-  {
-    label: "GitHub",
-    href: "https://github.com/coscientist/coscientist",
-    external: true,
-  },
-  // { label: "X", href: "https://x.com/anaclumos", external: true },
-]
-
 export function Footer() {
+  const t = useTranslations("landing.footer")
   const currentYear = new Date().getFullYear()
+
+  const links = [
+    { label: t("manifesto"), href: "/manifesto" },
+    {
+      label: t("github"),
+      href: "https://github.com/coscientist/coscientist",
+      external: true,
+    },
+  ]
 
   return (
     <footer className="pt-16">
@@ -46,7 +49,7 @@ export function Footer() {
           </nav>
           <div className="flex items-center justify-between gap-10 text-sm/7">
             <div className="text-neutral-600 dark:text-neutral-500">
-              © {currentYear} Coscientist
+              {t("copyright", { year: currentYear })}
             </div>
           </div>
         </Container>

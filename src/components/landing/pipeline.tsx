@@ -1,13 +1,12 @@
 "use client"
 
 import { motion, useInView } from "motion/react"
+import { useTranslations } from "next-intl"
 import { IconChevronRightOutline18 } from "nucleo-ui-outline-18"
 import { useRef } from "react"
 
 import { springSubtle } from "@/lib/animations"
 import { Container, Eyebrow, Subheading, Text } from "./primitives"
-
-const steps = ["PROPOSE", "CRITIQUE", "RANK", "REFINE"]
 
 function PipelineStep({
   step,
@@ -46,8 +45,16 @@ function PipelineStep({
 }
 
 export function Pipeline() {
+  const t = useTranslations("landing.pipeline")
   const sectionRef = useRef(null)
   const isInView = useInView(sectionRef, { amount: 0.2 })
+
+  const steps = [
+    t("steps.propose"),
+    t("steps.critique"),
+    t("steps.rank"),
+    t("steps.refine"),
+  ]
 
   return (
     <section className="py-16" ref={sectionRef}>
@@ -59,14 +66,14 @@ export function Pipeline() {
               initial={{ opacity: 0, y: 20 }}
               transition={{ ...springSubtle, delay: 0 }}
             >
-              <Eyebrow>How it works</Eyebrow>
+              <Eyebrow>{t("eyebrow")}</Eyebrow>
             </motion.div>
             <motion.div
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               initial={{ opacity: 0, y: 20 }}
               transition={{ ...springSubtle, delay: 0.1 }}
             >
-              <Subheading>Multi-agent debate architecture</Subheading>
+              <Subheading>{t("heading")}</Subheading>
             </motion.div>
           </div>
           <motion.div
@@ -74,10 +81,7 @@ export function Pipeline() {
             initial={{ opacity: 0, y: 20 }}
             transition={{ ...springSubtle, delay: 0.2 }}
           >
-            <Text className="text-pretty">
-              Multi-agent AI debates internally. You see the surviving
-              arguments.
-            </Text>
+            <Text className="text-pretty">{t("description")}</Text>
           </motion.div>
         </div>
 

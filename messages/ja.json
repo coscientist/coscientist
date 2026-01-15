@@ -58,5 +58,60 @@
   "languageSwitcher": {
     "label": "言語",
     "selectLanguage": "言語を選択"
+  },
+  "landing": {
+    "hero": {
+      "title": "思考の速度で\n研究を",
+      "subtitle": "バージョン管理された実験。再現可能な知識。",
+      "description": "研究のための認知インフラ。",
+      "enterManifesto": "マニフェストを読む",
+      "github": "GitHub"
+    },
+    "features": {
+      "eyebrow": "コアアーキテクチャ",
+      "heading": "ゼロから根本的に異なる設計",
+      "dialecticalGraph": {
+        "title": "弁証法的グラフ",
+        "description": "ドキュメントとリンクではなく、主張と関係。すべての発言はエビデンスに遡れる。"
+      },
+      "rebuttalFirst": {
+        "title": "反論ファースト",
+        "description": "支持するものより先に、破綻するものを探す。挑戦に耐え抜いた知識。"
+      },
+      "multilingual": {
+        "title": "多言語対応",
+        "description": "韓国語の論文。ドイツ語の仮説。日本語のデータセット。統一された研究グラフ。"
+      }
+    },
+    "pipeline": {
+      "eyebrow": "仕組み",
+      "heading": "マルチエージェント議論アーキテクチャ",
+      "description": "マルチエージェントAIが内部で議論。あなたには生き残った論点だけが見える。",
+      "steps": {
+        "propose": "提案",
+        "critique": "批評",
+        "rank": "順位付け",
+        "refine": "洗練"
+      }
+    },
+    "forWho": {
+      "heading": "成果を出す研究者のために",
+      "audiences": {
+        "scientists": "実験パイプラインを運用する科学者",
+        "engineers": "最先端の論文を基に構築するエンジニア",
+        "analysts": "分野横断的な文献を統合するアナリスト",
+        "teams": "再現可能な知識の軌跡を必要とするチーム"
+      }
+    },
+    "cta": {
+      "heading": "銀河百科事典はフィクションだった。\n私たちはそのインフラを構築している。",
+      "readManifesto": "マニフェストを読む",
+      "github": "GitHub"
+    },
+    "footer": {
+      "manifesto": "マニフェスト",
+      "github": "GitHub",
+      "copyright": "© {year} Coscientist"
+    }
   }
 }

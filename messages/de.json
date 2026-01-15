@@ -58,5 +58,60 @@
   "languageSwitcher": {
     "label": "Sprache",
     "selectLanguage": "Sprache auswählen"
+  },
+  "landing": {
+    "hero": {
+      "title": "Forschung mit\nGedankengeschwindigkeit",
+      "subtitle": "Versionierte Experimente. Reproduzierbares Wissen.",
+      "description": "Die kognitive Infrastruktur für Forschung.",
+      "enterManifesto": "Manifest lesen",
+      "github": "GitHub"
+    },
+    "features": {
+      "eyebrow": "Kernarchitektur",
+      "heading": "Von Grund auf anders gebaut",
+      "dialecticalGraph": {
+        "title": "Dialektischer Graph",
+        "description": "Behauptungen und Beziehungen, nicht Dokumente und Links. Jede Aussage führt zurück zu Belegen."
+      },
+      "rebuttalFirst": {
+        "title": "Widerlegung zuerst",
+        "description": "Suche zuerst, was bricht, nicht was stützt. Wissen, das Herausforderungen übersteht."
+      },
+      "multilingual": {
+        "title": "Mehrsprachig",
+        "description": "Koreanische Paper. Deutsche Hypothesen. Japanische Datensätze. Ein einheitlicher Forschungsgraph."
+      }
+    },
+    "pipeline": {
+      "eyebrow": "So funktioniert es",
+      "heading": "Multi-Agenten-Debattenarchitektur",
+      "description": "Mehrere KI-Agenten debattieren intern. Sie sehen die überlebenden Argumente.",
+      "steps": {
+        "propose": "VORSCHLAGEN",
+        "critique": "KRITISIEREN",
+        "rank": "BEWERTEN",
+        "refine": "VERFEINERN"
+      }
+    },
+    "forWho": {
+      "heading": "Gebaut für Forscher, die liefern",
+      "audiences": {
+        "scientists": "Wissenschaftler, die Experiment-Pipelines betreiben",
+        "engineers": "Ingenieure, die auf neuesten Papers aufbauen",
+        "analysts": "Analysten, die domänenübergreifende Literatur synthetisieren",
+        "teams": "Teams, die reproduzierbare Wissenspfade brauchen"
+      }
+    },
+    "cta": {
+      "heading": "Die Encyclopedia Galactica war Fiktion.\nWir bauen die Infrastruktur.",
+      "readManifesto": "Das Manifest lesen",
+      "github": "GitHub"
+    },
+    "footer": {
+      "manifesto": "Manifest",
+      "github": "GitHub",
+      "copyright": "© {year} Coscientist"
+    }
   }
 }

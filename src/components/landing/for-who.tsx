@@ -1,17 +1,11 @@
 "use client"
 
 import { motion, useInView } from "motion/react"
+import { useTranslations } from "next-intl"
 import { useRef } from "react"
 
 import { springSubtle } from "@/lib/animations"
 import { Container, Subheading } from "./primitives"
-
-const audiences = [
-  "Scientists running experiment pipelines",
-  "Engineers building on cutting-edge papers",
-  "Analysts synthesizing cross-domain literature",
-  "Teams who need reproducible knowledge trails",
-]
 
 function AudienceItem({ text, index }: { text: string; index: number }) {
   const ref = useRef(null)
@@ -32,8 +26,16 @@ function AudienceItem({ text, index }: { text: string; index: number }) {
 }
 
 export function ForWho() {
+  const t = useTranslations("landing.forWho")
   const sectionRef = useRef(null)
   const isInView = useInView(sectionRef, { amount: 0.2 })
+
+  const audiences = [
+    { id: "scientists", text: t("audiences.scientists") },
+    { id: "engineers", text: t("audiences.engineers") },
+    { id: "analysts", text: t("audiences.analysts") },
+    { id: "teams", text: t("audiences.teams") },
+  ]
 
   return (
     <section className="py-16" ref={sectionRef}>
@@ -43,12 +45,16 @@ export function ForWho() {
           initial={{ opacity: 0, y: 20 }}
           transition={springSubtle}
         >
-          <Subheading>Built for researchers who ship</Subheading>
+          <Subheading>{t("heading")}</Subheading>
         </motion.div>
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {audiences.map((audience, index) => (
-            <AudienceItem index={index} key={audience} text={audience} />
+            <AudienceItem
+              index={index}
+              key={audience.id}
+              text={audience.text}
+            />
           ))}
         </div>
       </Container>

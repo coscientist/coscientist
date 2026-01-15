@@ -58,5 +58,60 @@
   "languageSwitcher": {
     "label": "Bahasa",
     "selectLanguage": "Pilih bahasa"
+  },
+  "landing": {
+    "hero": {
+      "title": "Riset dengan\nKecepatan Pikiran",
+      "subtitle": "Eksperimen berversi. Pengetahuan yang dapat direproduksi.",
+      "description": "Infrastruktur kognitif untuk riset.",
+      "enterManifesto": "Masuk Manifesto",
+      "github": "GitHub"
+    },
+    "features": {
+      "eyebrow": "Arsitektur Inti",
+      "heading": "Dibangun berbeda dari awal",
+      "dialecticalGraph": {
+        "title": "Graf Dialektis",
+        "description": "Klaim dan relasi, bukan dokumen dan tautan. Setiap pernyataan dapat dilacak kembali ke bukti."
+      },
+      "rebuttalFirst": {
+        "title": "Bantahan-Pertama",
+        "description": "Cari yang membantah sebelum yang mendukung. Pengetahuan yang bertahan dari tantangan."
+      },
+      "multilingual": {
+        "title": "Multibahasa",
+        "description": "Makalah Korea. Hipotesis Jerman. Dataset Jepang. Satu graf riset yang terpadu."
+      }
+    },
+    "pipeline": {
+      "eyebrow": "Cara kerjanya",
+      "heading": "Arsitektur debat multi-agen",
+      "description": "AI multi-agen berdebat secara internal. Anda melihat argumen yang bertahan.",
+      "steps": {
+        "propose": "AJUKAN",
+        "critique": "KRITIK",
+        "rank": "PERINGKAT",
+        "refine": "PERBAIKI"
+      }
+    },
+    "forWho": {
+      "heading": "Dibangun untuk peneliti yang menghasilkan",
+      "audiences": {
+        "scientists": "Ilmuwan yang menjalankan pipeline eksperimen",
+        "engineers": "Insinyur yang membangun berdasarkan makalah terkini",
+        "analysts": "Analis yang mensintesis literatur lintas domain",
+        "teams": "Tim yang membutuhkan jejak pengetahuan yang dapat direproduksi"
+      }
+    },
+    "cta": {
+      "heading": "Encyclopedia Galactica adalah fiksi.\nKami membangun infrastrukturnya.",
+      "readManifesto": "Baca Manifesto",
+      "github": "GitHub"
+    },
+    "footer": {
+      "manifesto": "Manifesto",
+      "github": "GitHub",
+      "copyright": "© {year} Coscientist"
+    }
   }
 }

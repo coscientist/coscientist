@@ -1,6 +1,7 @@
 "use client"
 
 import { motion, useInView } from "motion/react"
+import { useTranslations } from "next-intl"
 import { useRef } from "react"
 
 import { springSubtle } from "@/lib/animations"
@@ -30,27 +31,28 @@ function Feature({ title, description, index }: FeatureProps) {
   )
 }
 
-const features = [
-  {
-    title: "Dialectical Graph",
-    description:
-      "Claims and relations, not documents and links. Every statement traces back to evidence.",
-  },
-  {
-    title: "Rebuttal-First",
-    description:
-      "Seek what breaks before what supports. Knowledge that survives challenge.",
-  },
-  {
-    title: "Multilingual",
-    description:
-      "Korean papers. German hypotheses. Japanese datasets. One unified research graph.",
-  },
-]
-
 export function Features() {
+  const t = useTranslations("landing.features")
   const sectionRef = useRef(null)
   const isInView = useInView(sectionRef, { amount: 0.2 })
+
+  const features = [
+    {
+      id: "dialecticalGraph",
+      title: t("dialecticalGraph.title"),
+      description: t("dialecticalGraph.description"),
+    },
+    {
+      id: "rebuttalFirst",
+      title: t("rebuttalFirst.title"),
+      description: t("rebuttalFirst.description"),
+    },
+    {
+      id: "multilingual",
+      title: t("multilingual.title"),
+      description: t("multilingual.description"),
+    },
+  ]
 
   return (
     <section className="py-16" ref={sectionRef}>
@@ -61,20 +63,20 @@ export function Features() {
             initial={{ opacity: 0, y: 20 }}
             transition={{ ...springSubtle, delay: 0 }}
           >
-            <Eyebrow>Core Architecture</Eyebrow>
+            <Eyebrow>{t("eyebrow")}</Eyebrow>
           </motion.div>
           <motion.div
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             initial={{ opacity: 0, y: 20 }}
             transition={{ ...springSubtle, delay: 0.1 }}
           >
-            <Subheading>Built different from the ground up</Subheading>
+            <Subheading>{t("heading")}</Subheading>
           </motion.div>
         </div>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
-            <Feature key={feature.title} {...feature} index={index} />
+            <Feature key={feature.id} {...feature} index={index} />
           ))}
         </div>
       </Container>

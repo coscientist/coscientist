@@ -4,7 +4,8 @@
     "description": "トークン ≠ 知識"
   },
   "header": {
-    "title": "Coscientist マニフェスト",
+    "brand": "Coscientist",
+    "brandWithManifesto": "Coscientist マニフェスト",
     "github": "GitHub（新しいタブで開く）",
     "twitter": "X (Twitter)（新しいタブで開く）"
   },

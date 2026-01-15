@@ -1,0 +1,74 @@
+"use client"
+
+import { motion } from "motion/react"
+
+import { springSubtle } from "@/lib/animations"
+import { Container, Eyebrow, Subheading, Text } from "./primitives"
+
+const steps = ["PROPOSE", "CRITIQUE", "RANK", "REFINE"]
+
+function PipelineStep({
+  step,
+  index,
+  isLast,
+}: {
+  step: string
+  index: number
+  isLast: boolean
+}) {
+  return (
+    <motion.div
+      animate={{ opacity: 1, x: 0 }}
+      className="flex items-center"
+      initial={{ opacity: 0, x: -20 }}
+      transition={{ ...springSubtle, delay: 0.2 + index * 0.1 }}
+    >
+      <div className="flex flex-col items-center gap-2">
+        <div className="flex h-12 w-24 items-center justify-center rounded-lg border border-border bg-muted/50">
+          <span className="font-medium font-mono text-foreground text-sm">
+            {step}
+          </span>
+        </div>
+      </div>
+      {!isLast && (
+        <div className="hidden items-center px-2 text-muted-foreground sm:flex">
+          <span className="text-lg">→</span>
+        </div>
+      )}
+    </motion.div>
+  )
+}
+
+export function Pipeline() {
+  return (
+    <section className="py-16">
+      <Container className="flex flex-col gap-10 sm:gap-16">
+        <motion.div
+          animate={{ opacity: 1, y: 0 }}
+          className="flex max-w-2xl flex-col gap-6"
+          initial={{ opacity: 0, y: 20 }}
+          transition={springSubtle}
+        >
+          <div className="flex flex-col gap-2">
+            <Eyebrow>How it works</Eyebrow>
+            <Subheading>Multi-agent debate architecture</Subheading>
+          </div>
+          <Text className="text-pretty">
+            Multi-agent AI debates internally. You see the surviving arguments.
+          </Text>
+        </motion.div>
+
+        <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-0">
+          {steps.map((step, index) => (
+            <PipelineStep
+              index={index}
+              isLast={index === steps.length - 1}
+              key={step}
+              step={step}
+            />
+          ))}
+        </div>
+      </Container>
+    </section>
+  )
+}

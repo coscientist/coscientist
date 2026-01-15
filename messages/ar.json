@@ -4,7 +4,8 @@
     "description": "رموز ≠ المعرفة"
   },
   "header": {
-    "title": "بيان كوساينتست",
+    "brand": "Coscientist",
+    "brandWithManifesto": "بيان Coscientist",
     "github": "GitHub (يفتح في نافذة جديدة)",
     "twitter": "X (تويتر) (يفتح في نافذة جديدة)"
   },

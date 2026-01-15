@@ -1,10 +1,21 @@
-import { redirect } from "next/navigation"
+import {
+  CTA,
+  Features,
+  Footer,
+  ForWho,
+  Hero,
+  Pipeline,
+} from "@/components/landing"
 
-interface PageProps {
-  params: Promise<{ locale: string }>
-}
-
-export default async function LocaleRootPage({ params }: PageProps) {
-  const { locale } = await params
-  redirect(`/${locale}/manifesto`)
+export default function LandingPage() {
+  return (
+    <main className="min-h-screen">
+      <Hero />
+      <Features />
+      <Pipeline />
+      <ForWho />
+      <CTA />
+      <Footer />
+    </main>
+  )
 }

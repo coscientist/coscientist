@@ -4,7 +4,8 @@
     "description": "Tokens ≠ kennis"
   },
   "header": {
-    "title": "Coscientist Manifest",
+    "brand": "Coscientist",
+    "brandWithManifesto": "Coscientist Manifest",
     "github": "GitHub (opent in nieuw tabblad)",
     "twitter": "X (Twitter) (opent in nieuw tabblad)"
   },

@@ -4,7 +4,8 @@
     "description": "Token'lar ≠ Bilgi"
   },
   "header": {
-    "title": "Coscientist Manifestosu",
+    "brand": "Coscientist",
+    "brandWithManifesto": "Coscientist Manifestosu",
     "github": "GitHub (yeni sekmede açılır)",
     "twitter": "X (Twitter) (yeni sekmede açılır)"
   },

@@ -4,7 +4,8 @@
     "description": "Token ≠ 知识"
   },
   "header": {
-    "title": "Coscientist 宣言",
+    "brand": "Coscientist",
+    "brandWithManifesto": "Coscientist 宣言",
     "github": "GitHub（在新标签页中打开）",
     "twitter": "X (Twitter)（在新标签页中打开）"
   },

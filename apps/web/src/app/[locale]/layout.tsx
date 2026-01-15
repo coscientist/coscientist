@@ -17,14 +17,13 @@ import "@fontsource/iosevka/400.css"
 import "@fontsource/iosevka/500.css"
 import "@fontsource/iosevka/600.css"
 import "../globals.css"
+import { HeaderLogo } from "@/components/header-logo"
 import { LanguageSwitcher } from "@/components/language-switcher"
-import { Logo } from "@/components/logo"
 import { MagneticCursorLazy } from "@/components/magnetic-cursor-lazy"
 import { ThemeProvider } from "@/components/theme-provider"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Button } from "@/components/ui/button"
 import { Group, GroupSeparator } from "@/components/ui/group"
-import { Link } from "@/i18n/navigation"
 import { getDirection, type Locale, routing } from "@/i18n/routing"
 
 const facultyGlyphic = Faculty_Glyphic({
@@ -137,15 +136,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <ThemeProvider defaultTheme="system" storageKey="manifesto-theme">
             <MagneticCursorLazy />
             <header className="sticky top-0 z-50 flex h-16 flex-shrink-0 items-center justify-between border-border border-b bg-card px-6">
-              <Link
-                className="flex items-center gap-3 transition-opacity hover:opacity-80"
-                href="/manifesto"
-              >
-                <Logo className="text-foreground" size={20} />
-                <span className="font-semibold text-foreground text-lg">
-                  {t("title")}
-                </span>
-              </Link>
+              <HeaderLogo title={t("title")} />
               <Group aria-label="Header actions">
                 <Group aria-label="Social links">
                   <Button

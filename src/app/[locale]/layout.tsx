@@ -165,7 +165,7 @@ export default async function LocaleLayout({ children, params }: Props) {
                     size="icon"
                     variant="outline"
                   />
-                  <GroupSeparator />
+                  {/* <GroupSeparator />
                   <Button
                     render={
                       <a
@@ -188,7 +188,7 @@ export default async function LocaleLayout({ children, params }: Props) {
                     }
                     size="icon"
                     variant="outline"
-                  />
+                  /> */}
                   <GroupSeparator />
                   <LanguageSwitcher />
                   <GroupSeparator />

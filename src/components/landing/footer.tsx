@@ -9,7 +9,7 @@ const links = [
     href: "https://github.com/coscientist/coscientist",
     external: true,
   },
-  { label: "X", href: "https://x.com/anaclumos", external: true },
+  // { label: "X", href: "https://x.com/anaclumos", external: true },
 ]
 
 export function Footer() {

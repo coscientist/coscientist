@@ -34,14 +34,23 @@ export function Hero() {
 
           {/* Content Container */}
           <div className="relative z-10 flex flex-col items-center gap-[29px] px-8 pt-[48px] pb-12 text-center sm:px-16 lg:px-24">
-            <Image
-              alt=""
-              className="h-[198px] w-[272px] object-contain"
-              height={248 * 3}
-              quality={100}
-              src="/images/hero/hero-book.png"
-              width={340 * 3}
-            />
+            <motion.div
+              animate={{ y: [0, -12, 0] }}
+              transition={{
+                duration: 3,
+                repeat: Number.POSITIVE_INFINITY,
+                ease: "easeInOut",
+              }}
+            >
+              <Image
+                alt=""
+                className="h-[198px] w-[272px] object-contain"
+                height={248 * 3}
+                quality={100}
+                src="/images/hero/hero-book.png"
+                width={340 * 3}
+              />
+            </motion.div>
 
             <motion.div
               animate={{ opacity: 1, y: 0 }}
@@ -55,9 +64,13 @@ export function Hero() {
                 Speed of Thought
               </h1>
               <p className="text-base text-black leading-[1.3] sm:text-lg dark:text-white">
-                Versioned experiments. Reproducible knowledge.
+                <span className="inline-block">Versioned experiments.</span>{" "}
+                <span className="inline-block">Reproducible knowledge.</span>
                 <br />
-                The cognitive infrastructure for research.
+                <span className="inline-block">
+                  The cognitive infrastructure{" "}
+                  <span className="inline-block">for research.</span>
+                </span>
               </p>
             </motion.div>
 

@@ -11,15 +11,23 @@ export function Hero() {
   return (
     <section className="pb-16">
       <Container>
-        <div className="relative mx-auto w-full max-w-[1400px] overflow-hidden border border-white/10 border-t-0 bg-black [border-bottom-left-radius:32px] [border-bottom-right-radius:32px] max-md:[border-bottom-left-radius:24px] max-md:[border-bottom-right-radius:24px]">
+        <div className="relative mx-auto w-full max-w-[1400px] overflow-hidden border border-black/10 border-t-0 bg-white [border-bottom-left-radius:32px] [border-bottom-right-radius:32px] dark:border-white/10 dark:bg-black max-md:[border-bottom-left-radius:24px] max-md:[border-bottom-right-radius:24px]">
           {/* Background Image */}
           <div className="absolute inset-0 top-[-20px]">
             <Image
               alt=""
-              className="h-full w-full object-cover blur-[2px]"
+              className="hidden h-full w-full object-cover blur-[4px] dark:block"
               height={743 * 2}
               priority
-              src="/images/hero/hero-background.png"
+              src="/images/hero/hero-background@dark.png"
+              width={1400 * 2}
+            />
+            <Image
+              alt=""
+              className="block h-full w-full object-cover blur-[2px] dark:hidden"
+              height={743 * 2}
+              priority
+              src="/images/hero/hero-background@light.png"
               width={1400 * 2}
             />
           </div>
@@ -28,7 +36,7 @@ export function Hero() {
           <div className="relative z-10 flex flex-col items-center gap-[29px] px-8 pt-[48px] pb-12 text-center sm:px-16 lg:px-24">
             <Image
               alt=""
-              className="h-[248px] w-[340px]"
+              className="h-[198px] w-[272px] object-contain"
               height={248 * 3}
               quality={100}
               src="/images/hero/hero-book.png"
@@ -41,25 +49,12 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               transition={springSubtle}
             >
-              <h1
-                className="font-normal text-4xl leading-[1.02] tracking-[-0.06em] sm:text-5xl lg:text-[64px]"
-                style={{
-                  fontFamily: "Faculty Glyphic",
-                  background:
-                    "linear-gradient(180deg, rgba(255, 255, 255, 1) 18%, rgba(196, 235, 255, 1) 100%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                }}
-              >
+              <h1 className="font-normal text-4xl text-[#182D3D] leading-[1.02] tracking-[-0.06em] sm:text-5xl lg:text-6xl dark:text-white">
                 Research at the
                 <br />
                 Speed of Thought
               </h1>
-              <p
-                className="text-base text-white leading-[1.3] sm:text-lg"
-                style={{ fontFamily: "Faculty Glyphic" }}
-              >
+              <p className="text-base text-black leading-[1.3] sm:text-lg dark:text-white">
                 Versioned experiments. Reproducible knowledge.
                 <br />
                 The cognitive infrastructure for research.

@@ -67,9 +67,8 @@
   --color-link: var(--link);
   --color-link-visited: var(--link-visited);
   --font-sans:
-    var(--font-faculty-glyphic), var(--font-noto-serif-kr),
-    var(--font-noto-serif-jp), var(--font-noto-serif-sc),
-    var(--font-noto-serif-tc);
+    var(--font-faculty-glyphic), "Noto Serif KR Variable",
+    "Noto Serif JP Variable", "Noto Serif SC Variable", "Noto Serif TC Variable";
   --font-mono: "Iosevka", ui-monospace, monospace;
   --animate-skeleton: skeleton 2s -1s infinite linear;
   --color-warning-foreground: var(--warning-foreground);

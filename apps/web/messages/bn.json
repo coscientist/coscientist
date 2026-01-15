@@ -4,7 +4,8 @@
     "description": "টোকেন ≠ জ্ঞান"
   },
   "header": {
-    "title": "Coscientist",
+    "brand": "Coscientist",
+    "brandWithManifesto": "Coscientist ইশতেহার",
     "github": "GitHub (নতুন ট্যাবে খোলে)",
     "twitter": "X (Twitter) (নতুন ট্যাবে খোলে)"
   },

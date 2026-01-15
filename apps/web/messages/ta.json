@@ -4,7 +4,8 @@
     "description": "டோகன்கள் ≠ அறிவு"
   },
   "header": {
-    "title": "Coscientist",
+    "brand": "Coscientist",
+    "brandWithManifesto": "Coscientist அறிக்கை",
     "github": "GitHub (புதிய தாவலில் திறக்கும்)",
     "twitter": "X (Twitter) (புதிய தாவலில் திறக்கும்)"
   },

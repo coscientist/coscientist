@@ -5,10 +5,11 @@ import { Logo } from "@/components/logo"
 import { Link } from "@/i18n/navigation"
 
 interface HeaderLogoProps {
-  title: string
+  brand: string
+  brandWithManifesto: string
 }
 
-export function HeaderLogo({ title }: HeaderLogoProps) {
+export function HeaderLogo({ brand, brandWithManifesto }: HeaderLogoProps) {
   const pathname = usePathname()
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -17,6 +18,8 @@ export function HeaderLogo({ title }: HeaderLogoProps) {
       window.scrollTo({ top: 0, behavior: "smooth" })
     }
   }
+
+  const title = pathname === "/manifesto" ? brandWithManifesto : brand
 
   return (
     <Link

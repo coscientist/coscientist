@@ -4,7 +4,8 @@
     "description": "โทเคน ≠ ความรู้"
   },
   "header": {
-    "title": "Coscientist",
+    "brand": "Coscientist",
+    "brandWithManifesto": "แถลงการณ์ Coscientist",
     "github": "GitHub (เปิดในแท็บใหม่)",
     "twitter": "X (Twitter) (เปิดในแท็บใหม่)"
   },

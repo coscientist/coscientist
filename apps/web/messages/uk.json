@@ -4,7 +4,8 @@
     "description": "Токени ≠ знання"
   },
   "header": {
-    "title": "Coscientist",
+    "brand": "Coscientist",
+    "brandWithManifesto": "Маніфест Coscientist",
     "github": "GitHub (відкривається в новій вкладці)",
     "twitter": "X (Twitter) (відкривається в новій вкладці)"
   },

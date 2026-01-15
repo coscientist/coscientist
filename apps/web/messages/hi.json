@@ -4,7 +4,8 @@
     "description": "टोकन ≠ ज्ञान"
   },
   "header": {
-    "title": "Coscientist",
+    "brand": "Coscientist",
+    "brandWithManifesto": "Coscientist घोषणापत्र",
     "github": "GitHub (नई टैब में खुलता है)",
     "twitter": "X (Twitter) (नई टैब में खुलता है)"
   },

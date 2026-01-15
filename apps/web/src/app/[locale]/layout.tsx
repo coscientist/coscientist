@@ -136,7 +136,10 @@ export default async function LocaleLayout({ children, params }: Props) {
           <ThemeProvider defaultTheme="system" storageKey="manifesto-theme">
             <MagneticCursorLazy />
             <header className="sticky top-0 z-50 flex h-16 flex-shrink-0 items-center justify-between border-border border-b bg-card px-6">
-              <HeaderLogo title={t("title")} />
+              <HeaderLogo
+                brand={t("brand")}
+                brandWithManifesto={t("brandWithManifesto")}
+              />
               <Group aria-label="Header actions">
                 <Group aria-label="Social links">
                   <Button

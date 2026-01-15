@@ -4,7 +4,8 @@
     "description": "Tokeny ≠ wiedza"
   },
   "header": {
-    "title": "Coscientist",
+    "brand": "Coscientist",
+    "brandWithManifesto": "Manifest Coscientist",
     "github": "GitHub (otwiera się w nowej karcie)",
     "twitter": "X (Twitter) (otwiera się w nowej karcie)"
   },

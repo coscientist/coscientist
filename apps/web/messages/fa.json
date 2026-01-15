@@ -4,7 +4,8 @@
     "description": "توکن‌ها ≠ دانش"
   },
   "header": {
-    "title": "Coscientist",
+    "brand": "Coscientist",
+    "brandWithManifesto": "مانیفست Coscientist",
     "github": "GitHub (در تب جدید باز می‌شود)",
     "twitter": "X (توییتر) (در تب جدید باز می‌شود)"
   },

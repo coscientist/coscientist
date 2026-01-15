@@ -54,26 +54,19 @@ This structure enables asking "how does X bear on Y?" rather than just "are thes
 ## System Layers
 
 1. Data Layer
-
-- Evidence spans (raw quotes)
-- Sources (provenance anchors for traceability)
-
+  - Evidence spans (raw quotes)
+  - Sources (provenance anchors for traceability)
 2. Inference Layer
-
-- The living, evolving network of claims and relations
-- Claims with multi-dimensional status (not just confidence scores)
-
+  - The living, evolving network of claims and relations
+  - Claims with multi-dimensional status (not just confidence scores)
 3. Narrative Layer
-
-- Human-readable projections of the graph
-- Documents as timestamped snapshots, NOT ground truth
-- Every sentence can backtrack through: claim → scope → assumption → method → data → evidence span → source
-
+  - Human-readable projections of the graph
+  - Documents as timestamped snapshots, NOT ground truth
+  - Every sentence can backtrack through: claim → scope → assumption → method → data → evidence span → source
 4. Protocol Layer (Epistemic Protocol)
-
-- Rules for how claims enter and gain authority
-- Knowledge Constitution: the governing document for knowledge operations
-- Sovereignty, traceability, and rebuttal-first validation
+  - Rules for how claims enter and gain authority
+  - Knowledge Constitution: the governing document for knowledge operations
+  - Sovereignty, traceability, and rebuttal-first validation
 
 ## Key Mechanisms
 

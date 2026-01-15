@@ -18,7 +18,7 @@ function PipelineStep({
   isLast: boolean
 }) {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.3 })
+  const isInView = useInView(ref, { amount: 0.3 })
 
   return (
     <motion.div
@@ -46,7 +46,7 @@ function PipelineStep({
 
 export function Pipeline() {
   const sectionRef = useRef(null)
-  const isInView = useInView(sectionRef, { once: true, amount: 0.2 })
+  const isInView = useInView(sectionRef, { amount: 0.2 })
 
   return (
     <section className="py-16" ref={sectionRef}>

@@ -11,7 +11,7 @@ Komponenty grafu to elementy składowe
 obiekty epistemiczne, oraz [Krawędzie grafu dialektycznego](./dialectical-graph-edges), które reprezentują [Relacje argumentacyjne](./argumentative-relations) między
 nimi.
 
-**Typy węzłów** ):
+**Typy węzłów**:
 
 - [Twierdzenie](./claim) — weryfikowalne tezy
 - [Fragment dowodu](./evidence-span) — dokładnie cytowany tekst ze źródeł
@@ -22,7 +22,7 @@ nimi.
 - [Kontrprzykład](./counterexample) — przypadki obalające twierdzenia
 - [Węzeł problemu](./issue-node) — pakiety zderzających się twierdzeń
 
-**Typy krawędzi** ):
+**Typy krawędzi**:
 
 - [Atak](./attack) — bezpośrednie podważenia prawdziwości
 - [Podcięcie](./undercut) — podważenia podstaw

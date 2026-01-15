@@ -10,7 +10,7 @@ Komponen graf adalah blok penyusun dari sebuah
 [Graf Dialektik](./dialectical-graph): [Node Graf Dialektik](./dialectical-graph-nodes) yang merepresentasikan objek
 epistemik dan [Edge Graf Dialektik](./dialectical-graph-edges) yang merepresentasikan [Relasi Argumentatif](./argumentative-relations) di antara mereka.
 
-**Jenis node** ):
+**Jenis node**:
 
 - [Klaim](./claim) — proposisi yang dapat diverifikasi
 - [Cuplikan Bukti](./evidence-span) — teks kutipan persis dari sumber
@@ -21,7 +21,7 @@ epistemik dan [Edge Graf Dialektik](./dialectical-graph-edges) yang merepresenta
 - [Kontracontoh](./counterexample) — kasus yang mematahkan klaim
 - [Node Isu](./issue-node) — bundel klaim yang saling bertabrakan
 
-**Jenis edge** ):
+**Jenis edge**:
 
 - [Serangan](./attack) — tantangan langsung terhadap kebenaran
 - [Undercut](./undercut) — tantangan terhadap dasar

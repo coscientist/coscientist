@@ -11,7 +11,7 @@ Graph-Komponenten sind die Bausteine eines
 Objekte repräsentieren, und die [Kanten des Dialektischen Graphen](./dialectical-graph-edges), die [Argumentative Relationen](./argumentative-relations) zwischen ihnen
 darstellen.
 
-**Knotentypen** ):
+**Knotentypen**:
 
 - [Behauptung](./claim) — überprüfbare Aussagen
 - [Evidenzspanne](./evidence-span) — exakt zitierter Text aus Quellen
@@ -22,7 +22,7 @@ darstellen.
 - [Gegenbeispiel](./counterexample) — Fälle, die Behauptungen widerlegen
 - [Issue-Knoten](./issue-node) — Bündel kollidierender Behauptungen
 
-**Kantentypen** ):
+**Kantentypen**:
 
 - [Angriff](./attack) — direkte Infragestellungen der Wahrheit
 - [Untergrabung](./undercut) — Infragestellungen der Grundlage

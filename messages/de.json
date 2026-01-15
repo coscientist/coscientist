@@ -64,8 +64,8 @@
       "title": "Forschung mit\nGedankengeschwindigkeit",
       "subtitle": "Versionierte Experimente. Reproduzierbares Wissen.",
       "description": "Die kognitive Infrastruktur für Forschung.",
-      "enterManifesto": "Manifest lesen →",
-      "github": "GitHub →"
+      "enterManifesto": "Manifest lesen",
+      "github": "GitHub"
     },
     "features": {
       "eyebrow": "Kernarchitektur",
@@ -105,8 +105,8 @@
     },
     "cta": {
       "heading": "Die Encyclopedia Galactica war Fiktion.\nWir bauen die Infrastruktur.",
-      "readManifesto": "Das Manifest lesen →",
-      "github": "GitHub →"
+      "readManifesto": "Das Manifest lesen",
+      "github": "GitHub"
     },
     "footer": {
       "manifesto": "Manifest",

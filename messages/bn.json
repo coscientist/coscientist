@@ -64,8 +64,8 @@
       "title": "চিন্তার গতিতে\nগবেষণা",
       "subtitle": "সংস্করণিত পরীক্ষা। পুনরুৎপাদনযোগ্য জ্ঞান।",
       "description": "গবেষণার জন্য জ্ঞানীয় অবকাঠামো।",
-      "enterManifesto": "ইশতেহারে প্রবেশ করুন →",
-      "github": "GitHub →"
+      "enterManifesto": "ইশতেহারে প্রবেশ করুন",
+      "github": "GitHub"
     },
     "features": {
       "eyebrow": "মূল স্থাপত্য",
@@ -105,8 +105,8 @@
     },
     "cta": {
       "heading": "এনসাইক্লোপিডিয়া গ্যালাক্টিকা কল্পকাহিনী ছিল।\nআমরা অবকাঠামো তৈরি করছি।",
-      "readManifesto": "ইশতেহার পড়ুন →",
-      "github": "GitHub →"
+      "readManifesto": "ইশতেহার পড়ুন",
+      "github": "GitHub"
     },
     "footer": {
       "manifesto": "ইশতেহার",

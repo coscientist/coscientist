@@ -64,8 +64,8 @@
       "title": "以思维的速度\n进行研究",
       "subtitle": "版本化的实验。可复现的知识。",
       "description": "研究的认知基础设施。",
-      "enterManifesto": "进入宣言 →",
-      "github": "GitHub →"
+      "enterManifesto": "进入宣言",
+      "github": "GitHub"
     },
     "features": {
       "eyebrow": "核心架构",
@@ -105,8 +105,8 @@
     },
     "cta": {
       "heading": "《银河百科全书》曾是虚构。\n我们正在构建这一基础设施。",
-      "readManifesto": "阅读宣言 →",
-      "github": "GitHub →"
+      "readManifesto": "阅读宣言",
+      "github": "GitHub"
     },
     "footer": {
       "manifesto": "宣言",

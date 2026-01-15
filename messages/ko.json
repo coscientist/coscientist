@@ -64,8 +64,8 @@
       "title": "생각의 속도로\n연구하다",
       "subtitle": "버전 관리되는 실험. 재현 가능한 지식.",
       "description": "연구를 위한 인지 인프라.",
-      "enterManifesto": "선언문 입장 →",
-      "github": "GitHub →"
+      "enterManifesto": "선언문 입장",
+      "github": "GitHub"
     },
     "features": {
       "eyebrow": "핵심 아키텍처",
@@ -105,8 +105,8 @@
     },
     "cta": {
       "heading": "은하 백과사전은 허구였습니다.\n우리는 그 인프라를 구축하고 있습니다.",
-      "readManifesto": "선언문 읽기 →",
-      "github": "GitHub →"
+      "readManifesto": "선언문 읽기",
+      "github": "GitHub"
     },
     "footer": {
       "manifesto": "선언문",

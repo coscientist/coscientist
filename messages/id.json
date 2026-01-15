@@ -64,8 +64,8 @@
       "title": "Riset dengan\nKecepatan Pikiran",
       "subtitle": "Eksperimen berversi. Pengetahuan yang dapat direproduksi.",
       "description": "Infrastruktur kognitif untuk riset.",
-      "enterManifesto": "Masuk Manifesto →",
-      "github": "GitHub →"
+      "enterManifesto": "Masuk Manifesto",
+      "github": "GitHub"
     },
     "features": {
       "eyebrow": "Arsitektur Inti",
@@ -105,8 +105,8 @@
     },
     "cta": {
       "heading": "Encyclopedia Galactica adalah fiksi.\nKami membangun infrastrukturnya.",
-      "readManifesto": "Baca Manifesto →",
-      "github": "GitHub →"
+      "readManifesto": "Baca Manifesto",
+      "github": "GitHub"
     },
     "footer": {
       "manifesto": "Manifesto",

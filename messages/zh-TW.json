@@ -64,8 +64,8 @@
       "title": "以思考的速度\n進行研究",
       "subtitle": "版本化的實驗。可複製的知識。",
       "description": "研究的認知基礎設施。",
-      "enterManifesto": "進入宣言 →",
-      "github": "GitHub →"
+      "enterManifesto": "進入宣言",
+      "github": "GitHub"
     },
     "features": {
       "eyebrow": "核心架構",
@@ -105,8 +105,8 @@
     },
     "cta": {
       "heading": "銀河百科全書曾是虛構。\n我們正在打造這個基礎設施。",
-      "readManifesto": "閱讀宣言 →",
-      "github": "GitHub →"
+      "readManifesto": "閱讀宣言",
+      "github": "GitHub"
     },
     "footer": {
       "manifesto": "宣言",

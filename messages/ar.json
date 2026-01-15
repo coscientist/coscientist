@@ -64,8 +64,8 @@
       "title": "البحث بسرعة\nالفكر",
       "subtitle": "تجارب مُسيطر عليها. معرفة قابلة للتكرار.",
       "description": "البنية التحتية المعرفية للبحث.",
-      "enterManifesto": "ادخل البيان →",
-      "github": "GitHub →"
+      "enterManifesto": "ادخل البيان",
+      "github": "GitHub"
     },
     "features": {
       "eyebrow": "البنية الأساسية",
@@ -105,8 +105,8 @@
     },
     "cta": {
       "heading": "موسوعة المجرة كانت خيالاً.\nنحن نبني البنية التحتية.",
-      "readManifesto": "اقرأ البيان →",
-      "github": "GitHub →"
+      "readManifesto": "اقرأ البيان",
+      "github": "GitHub"
     },
     "footer": {
       "manifesto": "البيان",

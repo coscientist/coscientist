@@ -64,8 +64,8 @@
       "title": "Düşünce Hızında\nAraştırma",
       "subtitle": "Sürümlü deneyler. Yeniden üretilebilir bilgi.",
       "description": "Araştırma için bilişsel altyapı.",
-      "enterManifesto": "Manifesto'ya Gir →",
-      "github": "GitHub →"
+      "enterManifesto": "Manifesto'ya Gir",
+      "github": "GitHub"
     },
     "features": {
       "eyebrow": "Temel Mimari",
@@ -105,8 +105,8 @@
     },
     "cta": {
       "heading": "Galaktik Ansiklopedi kurguydu.\nBiz altyapıyı inşa ediyoruz.",
-      "readManifesto": "Manifesto'yu Oku →",
-      "github": "GitHub →"
+      "readManifesto": "Manifesto'yu Oku",
+      "github": "GitHub"
     },
     "footer": {
       "manifesto": "Manifesto",

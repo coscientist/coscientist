@@ -64,8 +64,8 @@
       "title": "Onderzoek op de\nSnelheid van Gedachten",
       "subtitle": "Versiebeheerde experimenten. Reproduceerbare kennis.",
       "description": "De cognitieve infrastructuur voor onderzoek.",
-      "enterManifesto": "Naar het Manifest →",
-      "github": "GitHub →"
+      "enterManifesto": "Naar het Manifest",
+      "github": "GitHub"
     },
     "features": {
       "eyebrow": "Kernarchitectuur",
@@ -105,8 +105,8 @@
     },
     "cta": {
       "heading": "De Encyclopedia Galactica was fictie.\nWij bouwen de infrastructuur.",
-      "readManifesto": "Lees het Manifest →",
-      "github": "GitHub →"
+      "readManifesto": "Lees het Manifest",
+      "github": "GitHub"
     },
     "footer": {
       "manifesto": "Manifest",

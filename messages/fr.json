@@ -64,8 +64,8 @@
       "title": "La recherche à la\nvitesse de la pensée",
       "subtitle": "Expériences versionnées. Connaissances reproductibles.",
       "description": "L'infrastructure cognitive pour la recherche.",
-      "enterManifesto": "Accéder au Manifeste →",
-      "github": "GitHub →"
+      "enterManifesto": "Accéder au Manifeste",
+      "github": "GitHub"
     },
     "features": {
       "eyebrow": "Architecture fondamentale",
@@ -105,8 +105,8 @@
     },
     "cta": {
       "heading": "L'Encyclopedia Galactica était une fiction.\nNous construisons l'infrastructure.",
-      "readManifesto": "Lire le Manifeste →",
-      "github": "GitHub →"
+      "readManifesto": "Lire le Manifeste",
+      "github": "GitHub"
     },
     "footer": {
       "manifesto": "Manifeste",

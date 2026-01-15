@@ -64,8 +64,8 @@
       "title": "Nghiên cứu với\nTốc độ Tư duy",
       "subtitle": "Thí nghiệm có phiên bản. Tri thức tái tạo được.",
       "description": "Hạ tầng nhận thức cho nghiên cứu.",
-      "enterManifesto": "Vào Tuyên ngôn →",
-      "github": "GitHub →"
+      "enterManifesto": "Vào Tuyên ngôn",
+      "github": "GitHub"
     },
     "features": {
       "eyebrow": "Kiến trúc Cốt lõi",
@@ -105,8 +105,8 @@
     },
     "cta": {
       "heading": "Encyclopedia Galactica là hư cấu.\nChúng tôi đang xây dựng hạ tầng.",
-      "readManifesto": "Đọc Tuyên ngôn →",
-      "github": "GitHub →"
+      "readManifesto": "Đọc Tuyên ngôn",
+      "github": "GitHub"
     },
     "footer": {
       "manifesto": "Tuyên ngôn",

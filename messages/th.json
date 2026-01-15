@@ -64,8 +64,8 @@
       "title": "วิจัยด้วยความเร็ว\nแห่งความคิด",
       "subtitle": "การทดลองที่มีเวอร์ชัน ความรู้ที่ทำซ้ำได้",
       "description": "โครงสร้างพื้นฐานทางปัญญาสำหรับการวิจัย",
-      "enterManifesto": "เข้าสู่แถลงการณ์ →",
-      "github": "GitHub →"
+      "enterManifesto": "เข้าสู่แถลงการณ์",
+      "github": "GitHub"
     },
     "features": {
       "eyebrow": "สถาปัตยกรรมหลัก",
@@ -105,8 +105,8 @@
     },
     "cta": {
       "heading": "Encyclopedia Galactica เป็นเพียงนิยาย\nเรากำลังสร้างโครงสร้างพื้นฐาน",
-      "readManifesto": "อ่านแถลงการณ์ →",
-      "github": "GitHub →"
+      "readManifesto": "อ่านแถลงการณ์",
+      "github": "GitHub"
     },
     "footer": {
       "manifesto": "แถลงการณ์",

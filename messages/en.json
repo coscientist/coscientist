@@ -64,8 +64,8 @@
       "title": "Research at the\nSpeed of Thought",
       "subtitle": "Versioned experiments. Reproducible knowledge.",
       "description": "The cognitive infrastructure for research.",
-      "enterManifesto": "Enter Manifesto →",
-      "github": "GitHub →"
+      "enterManifesto": "Enter Manifesto",
+      "github": "GitHub"
     },
     "features": {
       "eyebrow": "Core Architecture",
@@ -105,8 +105,8 @@
     },
     "cta": {
       "heading": "The Encyclopedia Galactica was fiction.\nWe're building the infrastructure.",
-      "readManifesto": "Read the Manifesto →",
-      "github": "GitHub →"
+      "readManifesto": "Read the Manifesto",
+      "github": "GitHub"
     },
     "footer": {
       "manifesto": "Manifesto",

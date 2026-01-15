@@ -64,8 +64,8 @@
       "title": "پژوهش با\nسرعت اندیشه",
       "subtitle": "آزمایش‌های نسخه‌بندی‌شده. دانش قابل بازتولید.",
       "description": "زیرساخت شناختی برای پژوهش.",
-      "enterManifesto": "ورود به مانیفست →",
-      "github": "GitHub →"
+      "enterManifesto": "ورود به مانیفست",
+      "github": "GitHub"
     },
     "features": {
       "eyebrow": "معماری هسته‌ای",
@@ -105,8 +105,8 @@
     },
     "cta": {
       "heading": "دانشنامهٔ کهکشانی داستان بود.\nما زیرساخت را می‌سازیم.",
-      "readManifesto": "خواندن مانیفست →",
-      "github": "GitHub →"
+      "readManifesto": "خواندن مانیفست",
+      "github": "GitHub"
     },
     "footer": {
       "manifesto": "مانیفست",

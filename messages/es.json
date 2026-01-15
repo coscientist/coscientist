@@ -64,8 +64,8 @@
       "title": "Investigación a la\nVelocidad del Pensamiento",
       "subtitle": "Experimentos versionados. Conocimiento reproducible.",
       "description": "La infraestructura cognitiva para la investigación.",
-      "enterManifesto": "Entrar al Manifiesto →",
-      "github": "GitHub →"
+      "enterManifesto": "Entrar al Manifiesto",
+      "github": "GitHub"
     },
     "features": {
       "eyebrow": "Arquitectura Central",
@@ -105,8 +105,8 @@
     },
     "cta": {
       "heading": "La Enciclopedia Galáctica era ficción.\nEstamos construyendo la infraestructura.",
-      "readManifesto": "Leer el Manifiesto →",
-      "github": "GitHub →"
+      "readManifesto": "Leer el Manifiesto",
+      "github": "GitHub"
     },
     "footer": {
       "manifesto": "Manifiesto",

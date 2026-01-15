@@ -64,8 +64,8 @@
       "title": "Badania z\nprędkością myśli",
       "subtitle": "Wersjonowane eksperymenty. Odtwarzalna wiedza.",
       "description": "Kognitywna infrastruktura dla badań.",
-      "enterManifesto": "Wejdź do Manifestu →",
-      "github": "GitHub →"
+      "enterManifesto": "Wejdź do Manifestu",
+      "github": "GitHub"
     },
     "features": {
       "eyebrow": "Podstawowa architektura",
@@ -105,8 +105,8 @@
     },
     "cta": {
       "heading": "Encyklopedia Galactica była fikcją.\nMy budujemy infrastrukturę.",
-      "readManifesto": "Przeczytaj Manifest →",
-      "github": "GitHub →"
+      "readManifesto": "Przeczytaj Manifest",
+      "github": "GitHub"
     },
     "footer": {
       "manifesto": "Manifest",

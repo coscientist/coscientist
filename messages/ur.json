@@ -64,8 +64,8 @@
       "title": "سوچ کی رفتار سے\nتحقیق",
       "subtitle": "ورژن والے تجربات۔ قابل تکرار علم۔",
       "description": "تحقیق کے لیے علمی بنیادی ڈھانچہ۔",
-      "enterManifesto": "منشور میں داخل ہوں →",
-      "github": "GitHub →"
+      "enterManifesto": "منشور میں داخل ہوں",
+      "github": "GitHub"
     },
     "features": {
       "eyebrow": "بنیادی ڈھانچہ",
@@ -105,8 +105,8 @@
     },
     "cta": {
       "heading": "انسائیکلوپیڈیا گلیکٹیکا افسانہ تھا۔\nہم بنیادی ڈھانچہ بنا رہے ہیں۔",
-      "readManifesto": "منشور پڑھیں →",
-      "github": "GitHub →"
+      "readManifesto": "منشور پڑھیں",
+      "github": "GitHub"
     },
     "footer": {
       "manifesto": "منشور",

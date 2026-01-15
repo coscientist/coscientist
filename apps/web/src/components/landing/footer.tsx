@@ -14,16 +14,16 @@ const links = [
 
 export function Footer() {
   return (
-    <footer className="border-border border-t">
-      <div className="bg-muted/30 py-12">
-        <Container className="flex flex-col items-center gap-6 text-center text-sm">
+    <footer className="pt-16">
+      <div className="bg-neutral-950/2.5 py-16 text-neutral-950 dark:bg-white/5 dark:text-white">
+        <Container className="flex flex-col gap-16">
           <nav>
-            <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2">
+            <ul className="flex flex-wrap gap-x-8 gap-y-2">
               {links.map((link) => (
                 <li key={link.label}>
                   {link.external ? (
                     <a
-                      className="text-muted-foreground transition-colors hover:text-foreground"
+                      className="text-neutral-700 transition-colors hover:text-neutral-950 dark:text-neutral-400 dark:hover:text-white"
                       href={link.href}
                       rel="noopener noreferrer"
                       target="_blank"
@@ -32,7 +32,7 @@ export function Footer() {
                     </a>
                   ) : (
                     <Link
-                      className="text-muted-foreground transition-colors hover:text-foreground"
+                      className="text-neutral-700 transition-colors hover:text-neutral-950 dark:text-neutral-400 dark:hover:text-white"
                       href={link.href}
                     >
                       {link.label}
@@ -42,7 +42,11 @@ export function Footer() {
               ))}
             </ul>
           </nav>
-          <p className="text-muted-foreground/70">© 2026 Coscientist</p>
+          <div className="flex items-center justify-between gap-10 text-sm/7">
+            <div className="text-neutral-600 dark:text-neutral-500">
+              © 2026 Coscientist
+            </div>
+          </div>
         </Container>
       </div>
     </footer>

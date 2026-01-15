@@ -8,21 +8,22 @@ import { Container, Subheading } from "./primitives"
 
 export function CTA() {
   return (
-    <section className="py-24">
-      <Container className="flex flex-col items-center gap-8">
-        <motion.div
-          animate={{ opacity: 1, y: 0 }}
-          className="flex max-w-3xl flex-col items-center gap-6 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          transition={springSubtle}
-        >
-          <Subheading className="text-center">
-            The Encyclopedia Galactica was fiction.
-            <br />
-            We're building the infrastructure.
-          </Subheading>
-        </motion.div>
-
+    <section className="py-16">
+      <Container className="flex flex-col gap-10">
+        <div className="flex flex-col gap-6">
+          <motion.div
+            animate={{ opacity: 1, y: 0 }}
+            className="flex max-w-4xl flex-col gap-2"
+            initial={{ opacity: 0, y: 20 }}
+            transition={springSubtle}
+          >
+            <Subheading>
+              The Encyclopedia Galactica was fiction.
+              <br />
+              We're building the infrastructure.
+            </Subheading>
+          </motion.div>
+        </div>
         <motion.div
           animate={{ opacity: 1, y: 0 }}
           className="flex items-center gap-4"

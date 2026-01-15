@@ -3,6 +3,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --font-display: "Instrument Serif", serif;
+}
+
 :root {
   --pane-spine-width: 2.5rem;
   --pane-min-width: 20rem;
@@ -66,6 +70,7 @@
   --color-foreground: var(--foreground);
   --color-link: var(--link);
   --color-link-visited: var(--link-visited);
+  --font-display: var(--font-display);
   --font-sans:
     var(--font-faculty-glyphic), var(--font-noto-serif-kr),
     var(--font-noto-serif-jp), var(--font-noto-serif-sc),

@@ -118,6 +118,18 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html className="h-full" dir={direction} lang={locale}>
+      <head>
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link
+          crossOrigin=""
+          href="https://fonts.gstatic.com"
+          rel="preconnect"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body
         className={`${facultyGlyphic.variable} ${notoSerifKR.variable} ${notoSerifJP.variable} ${notoSerifSC.variable} ${notoSerifTC.variable} flex h-full flex-col font-sans antialiased`}
       >

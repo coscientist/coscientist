@@ -27,9 +27,8 @@ export function Heading({
   return (
     <h1
       className={cn(
-        "text-balance font-semibold text-5xl/12 tracking-tight sm:text-[5rem]/20",
-        "text-foreground",
-        "dark:bg-gradient-to-br dark:from-white dark:via-white dark:to-neutral-400 dark:bg-clip-text dark:text-transparent",
+        "text-balance font-display text-5xl/12 tracking-tight sm:text-[5rem]/20",
+        "text-neutral-950 dark:text-white",
         className
       )}
       {...props}
@@ -47,7 +46,8 @@ export function Subheading({
   return (
     <h2
       className={cn(
-        "text-pretty text-[2rem]/10 text-foreground tracking-tight sm:text-5xl/14",
+        "text-pretty text-[2rem]/10 tracking-tight sm:text-5xl/14",
+        "text-neutral-950 dark:text-white",
         className
       )}
       {...props}
@@ -64,7 +64,11 @@ export function Eyebrow({
 }: ComponentProps<"div">) {
   return (
     <div
-      className={cn("font-semibold text-muted-foreground text-sm/7", className)}
+      className={cn(
+        "font-semibold text-sm/7",
+        "text-neutral-700 dark:text-neutral-400",
+        className
+      )}
       {...props}
     >
       {children}
@@ -83,7 +87,7 @@ export function Text({
       className={cn(
         size === "md" && "text-base/7",
         size === "lg" && "text-lg/8",
-        "text-muted-foreground",
+        "text-neutral-700 dark:text-neutral-400",
         className
       )}
       {...props}

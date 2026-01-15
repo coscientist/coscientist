@@ -7,7 +7,7 @@
     "lint": "bun x ultracite check",
     "format": "bun x ultracite fix",
     "check-types": "turbo run check-types",
-    "prepare": "lefthook install"
+    "prepare": "[ -d .git ] && lefthook install || true"
   },
   "devDependencies": {
     "@biomejs/biome": "2.3.11",

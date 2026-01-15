@@ -83,16 +83,19 @@ export function Hero() {
               <Button render={<Link href="/manifesto" />} size="lg">
                 Enter Manifesto →
               </Button>
-              <a
-                className="no-underline"
-                href="https://github.com/coscientist/coscientist"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <Button size="lg" variant="outline">
-                  GitHub →
-                </Button>
-              </a>
+              <Button
+                render={
+                  <a
+                    href="https://github.com/coscientist/coscientist"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    GitHub →
+                  </a>
+                }
+                size="lg"
+                variant="outline"
+              />
             </motion.div>
           </div>
         </div>

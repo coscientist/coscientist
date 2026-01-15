@@ -112,7 +112,7 @@ mcp_motion_generate-css-spring(duration=0.2, bounce=0.05)
 mcp_motion_visualise-spring(duration=0.2, bounce=0.05)
 ```
 
-### Spring Configurations (apps/web/src/lib/animations.ts)
+### Spring Configurations (src/lib/animations.ts)
 
 | Name           | Duration | Bounce | Use Case                         |
 | -------------- | -------- | ------ | -------------------------------- |
@@ -147,7 +147,7 @@ export const paneContentVariants = {
 ### Directory Structure
 
 ```
-apps/web/src/
+src/
 ├── app/
 │   ├── globals.css          # Tokens, prose layer
 │   ├── [locale]/layout.tsx  # Root layout, fonts
@@ -289,7 +289,7 @@ bun run start        # Start production server
 
 ### Adding Notes
 
-Create `apps/web/src/content/notes/en/your-slug.md`:
+Create `src/content/manifesto/en/your-slug.md`:
 
 ```md
 ---

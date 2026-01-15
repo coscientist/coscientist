@@ -124,7 +124,7 @@ export function Section({
             {cta}
           </div>
         )}
-        <div>{children}</div>
+        {children && <div>{children}</div>}
       </Container>
     </section>
   )

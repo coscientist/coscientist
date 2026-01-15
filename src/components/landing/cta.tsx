@@ -2,11 +2,14 @@
 
 import { motion } from "motion/react"
 import Link from "next/link"
+import { useTranslations } from "next-intl"
 import { Button } from "@/components/ui/button"
 import { springSubtle } from "@/lib/animations"
 import { Container, Subheading } from "./primitives"
 
 export function CTA() {
+  const t = useTranslations("landing.cta")
+
   return (
     <section className="py-16">
       <Container className="flex flex-col gap-10">
@@ -18,9 +21,14 @@ export function CTA() {
             transition={springSubtle}
           >
             <Subheading>
-              The Encyclopedia Galactica was fiction.
-              <br />
-              We're building the infrastructure.
+              {t("heading")
+                .split("\n")
+                .map((line, index, arr) => (
+                  <span key={line}>
+                    {line}
+                    {index < arr.length - 1 && <br />}
+                  </span>
+                ))}
             </Subheading>
           </motion.div>
         </div>
@@ -31,7 +39,7 @@ export function CTA() {
           transition={{ ...springSubtle, delay: 0.1 }}
         >
           <Button render={<Link href="/manifesto" />} size="lg">
-            Read the Manifesto →
+            {t("readManifesto")}
           </Button>
           <a
             className="no-underline"
@@ -40,7 +48,7 @@ export function CTA() {
             target="_blank"
           >
             <Button size="lg" variant="outline">
-              GitHub →
+              {t("github")}
             </Button>
           </a>
         </motion.div>

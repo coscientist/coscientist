@@ -50,7 +50,7 @@ export function CTA() {
           transition={{ ...transition, delay: 0.1 }}
           variants={itemVariants}
         >
-          <Group className="flex items-center gap-4">
+          <Group className="flex items-center">
             <Button render={<Link href="/manifesto" />} size="lg">
               {t("readManifesto")}{" "}
               <IconChevronRightOutline18 className="ml-1 size-4" />

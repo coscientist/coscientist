@@ -97,7 +97,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               transition={{ ...springSubtle, delay: 0.1 }}
             >
-              <Group className="flex flex-col items-center gap-2 sm:flex-row">
+              <Group className="flex flex-col items-center sm:flex-row">
                 <Button render={<Link href="/manifesto" />} size="lg">
                   {t("enterManifesto")}{" "}
                   <IconChevronRightOutline18 className="ml-1 size-4" />

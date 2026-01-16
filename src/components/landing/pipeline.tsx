@@ -4,7 +4,11 @@ import { motion } from "motion/react"
 import { useTranslations } from "next-intl"
 import { IconChevronRightOutline18 } from "nucleo-ui-outline-18"
 
-import { itemVariants, useSectionAnimation } from "@/lib/landing-animations"
+import {
+  horizontalItemVariants,
+  itemVariants,
+  useSectionAnimation,
+} from "@/lib/landing-animations"
 import { AmbientGradient } from "./ambient-gradient"
 import { Container, Eyebrow, Subheading, Text } from "./primitives"
 
@@ -21,7 +25,7 @@ function PipelineStep({
     <motion.div
       className="flex items-center"
       transition={transition}
-      variants={itemVariants}
+      variants={horizontalItemVariants}
     >
       <div className="flex flex-col items-center gap-2">
         <div className="flex h-12 w-24 items-center justify-center rounded-lg border border-border bg-muted/50">

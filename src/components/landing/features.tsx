@@ -10,14 +10,12 @@ import { Container, Eyebrow, Subheading } from "./primitives"
 interface FeatureProps {
   title: string
   description: string
-  transition: import("motion/react").Transition
 }
 
-function Feature({ title, description, transition }: FeatureProps) {
+function Feature({ title, description }: FeatureProps) {
   return (
     <motion.div
       className="flex flex-col gap-2 overflow-hidden border border-black/[0.06] bg-white p-6 shadow-black/[0.04] shadow-lg [border-radius:32px] dark:border-white/[0.06] dark:bg-black dark:shadow-black/[0.08]"
-      transition={transition}
       variants={itemVariants}
     >
       <h3 className="font-semibold text-foreground">{title}</h3>
@@ -84,7 +82,7 @@ export function Features() {
           variants={staggerContainerVariants}
         >
           {features.map((feature) => (
-            <Feature key={feature.id} {...feature} transition={transition} />
+            <Feature key={feature.id} {...feature} />
           ))}
         </motion.div>
       </Container>

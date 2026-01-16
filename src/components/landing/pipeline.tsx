@@ -12,21 +12,9 @@ import {
 import { AmbientGradient } from "./ambient-gradient"
 import { Container, Eyebrow, Subheading, Text } from "./primitives"
 
-function PipelineStep({
-  step,
-  isLast,
-  transition,
-}: {
-  step: string
-  isLast: boolean
-  transition: import("motion/react").Transition
-}) {
+function PipelineStep({ step, isLast }: { step: string; isLast: boolean }) {
   return (
-    <motion.div
-      className="flex items-center"
-      transition={transition}
-      variants={horizontalItemVariants}
-    >
+    <motion.div className="flex items-center" variants={horizontalItemVariants}>
       <div className="flex flex-col items-center gap-2">
         <div className="flex h-12 w-24 items-center justify-center rounded-lg border border-border bg-muted/50">
           <span className="font-medium font-mono text-foreground text-sm">
@@ -104,7 +92,6 @@ export function Pipeline() {
               isLast={index === steps.length - 1}
               key={step}
               step={step}
-              transition={transition}
             />
           ))}
         </motion.div>

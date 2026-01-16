@@ -7,19 +7,9 @@ import { itemVariants, useSectionAnimation } from "@/lib/landing-animations"
 import { AmbientGradient } from "./ambient-gradient"
 import { Container, Subheading } from "./primitives"
 
-function AudienceItem({
-  text,
-  transition,
-}: {
-  text: string
-  transition: import("motion/react").Transition
-}) {
+function AudienceItem({ text }: { text: string }) {
   return (
-    <motion.div
-      className="flex items-start gap-3"
-      transition={transition}
-      variants={itemVariants}
-    >
+    <motion.div className="flex items-start gap-3" variants={itemVariants}>
       <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/40" />
       <span className="text-base/7 text-muted-foreground">{text}</span>
     </motion.div>
@@ -63,11 +53,7 @@ export function ForWho() {
           variants={staggerContainerVariants}
         >
           {audiences.map((audience) => (
-            <AudienceItem
-              key={audience.id}
-              text={audience.text}
-              transition={transition}
-            />
+            <AudienceItem key={audience.id} text={audience.text} />
           ))}
         </motion.div>
       </Container>

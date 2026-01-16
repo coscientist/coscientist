@@ -1,24 +1,19 @@
 "use client"
 
-import { motion, useInView } from "motion/react"
+import { motion } from "motion/react"
 import { useTranslations } from "next-intl"
-import { useRef } from "react"
 
-import { springSubtle } from "@/lib/animations"
+import {
+  itemVariants,
+  staggerContainer,
+  useSectionAnimation,
+} from "@/lib/landing-animations"
+import { AmbientGradient } from "./ambient-gradient"
 import { Container, Subheading } from "./primitives"
 
-function AudienceItem({ text, index }: { text: string; index: number }) {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { amount: 0.3 })
-
+function AudienceItem({ text }: { text: string }) {
   return (
-    <motion.div
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-      className="flex items-start gap-3"
-      initial={{ opacity: 0, y: 20 }}
-      ref={ref}
-      transition={{ ...springSubtle, delay: 0.1 + index * 0.08 }}
-    >
+    <motion.div className="flex items-start gap-3" variants={itemVariants}>
       <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/40" />
       <span className="text-base/7 text-muted-foreground">{text}</span>
     </motion.div>
@@ -27,8 +22,7 @@ function AudienceItem({ text, index }: { text: string; index: number }) {
 
 export function ForWho() {
   const t = useTranslations("landing.forWho")
-  const sectionRef = useRef(null)
-  const isInView = useInView(sectionRef, { amount: 0.2 })
+  const { ref, isInView, transition } = useSectionAnimation({ amount: 0.2 })
 
   const audiences = [
     { id: "scientists", text: t("audiences.scientists") },
@@ -38,25 +32,32 @@ export function ForWho() {
   ]
 
   return (
-    <section className="py-16" ref={sectionRef}>
+    <section
+      className="relative overflow-hidden py-16"
+      ref={ref as React.RefObject<HTMLElement>}
+    >
+      <AmbientGradient color="white" position="top-right" />
+
       <Container className="flex flex-col gap-10 sm:gap-16">
         <motion.div
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          initial={{ opacity: 0, y: 20 }}
-          transition={springSubtle}
+          animate={isInView ? "visible" : "hidden"}
+          initial="hidden"
+          transition={transition}
+          variants={itemVariants}
         >
           <Subheading>{t("heading")}</Subheading>
         </motion.div>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {audiences.map((audience, index) => (
-            <AudienceItem
-              index={index}
-              key={audience.id}
-              text={audience.text}
-            />
+        <motion.div
+          animate={isInView ? "visible" : "hidden"}
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2"
+          initial="hidden"
+          variants={staggerContainer}
+        >
+          {audiences.map((audience) => (
+            <AudienceItem key={audience.id} text={audience.text} />
           ))}
-        </div>
+        </motion.div>
       </Container>
     </section>
   )

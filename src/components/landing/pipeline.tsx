@@ -1,33 +1,20 @@
 "use client"
 
-import { motion, useInView } from "motion/react"
+import { motion } from "motion/react"
 import { useTranslations } from "next-intl"
 import { IconChevronRightOutline18 } from "nucleo-ui-outline-18"
-import { useRef } from "react"
 
-import { springSubtle } from "@/lib/animations"
+import {
+  itemVariants,
+  staggerContainer,
+  useSectionAnimation,
+} from "@/lib/landing-animations"
+import { AmbientGradient } from "./ambient-gradient"
 import { Container, Eyebrow, Subheading, Text } from "./primitives"
 
-function PipelineStep({
-  step,
-  index,
-  isLast,
-}: {
-  step: string
-  index: number
-  isLast: boolean
-}) {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { amount: 0.3 })
-
+function PipelineStep({ step, isLast }: { step: string; isLast: boolean }) {
   return (
-    <motion.div
-      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-      className="flex items-center"
-      initial={{ opacity: 0, x: -20 }}
-      ref={ref}
-      transition={{ ...springSubtle, delay: 0.3 + index * 0.1 }}
-    >
+    <motion.div className="flex items-center" variants={itemVariants}>
       <div className="flex flex-col items-center gap-2">
         <div className="flex h-12 w-24 items-center justify-center rounded-lg border border-border bg-muted/50">
           <span className="font-medium font-mono text-foreground text-sm">
@@ -46,8 +33,7 @@ function PipelineStep({
 
 export function Pipeline() {
   const t = useTranslations("landing.pipeline")
-  const sectionRef = useRef(null)
-  const isInView = useInView(sectionRef, { amount: 0.2 })
+  const { ref, isInView, transition } = useSectionAnimation({ amount: 0.2 })
 
   const steps = [
     t("steps.propose"),
@@ -57,44 +43,56 @@ export function Pipeline() {
   ]
 
   return (
-    <section className="py-16" ref={sectionRef}>
+    <section
+      className="relative overflow-hidden py-16"
+      ref={ref as React.RefObject<HTMLElement>}
+    >
+      <AmbientGradient color="blue" position="bottom-left" />
+
       <Container className="flex flex-col gap-10 sm:gap-16">
         <div className="flex max-w-2xl flex-col gap-6">
           <div className="flex flex-col gap-2">
             <motion.div
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              initial={{ opacity: 0, y: 20 }}
-              transition={{ ...springSubtle, delay: 0 }}
+              animate={isInView ? "visible" : "hidden"}
+              initial="hidden"
+              transition={transition}
+              variants={itemVariants}
             >
               <Eyebrow>{t("eyebrow")}</Eyebrow>
             </motion.div>
             <motion.div
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              initial={{ opacity: 0, y: 20 }}
-              transition={{ ...springSubtle, delay: 0.1 }}
+              animate={isInView ? "visible" : "hidden"}
+              initial="hidden"
+              transition={{ ...transition, delay: 0.1 }}
+              variants={itemVariants}
             >
               <Subheading>{t("heading")}</Subheading>
             </motion.div>
           </div>
           <motion.div
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            initial={{ opacity: 0, y: 20 }}
-            transition={{ ...springSubtle, delay: 0.2 }}
+            animate={isInView ? "visible" : "hidden"}
+            initial="hidden"
+            transition={{ ...transition, delay: 0.2 }}
+            variants={itemVariants}
           >
             <Text className="text-pretty">{t("description")}</Text>
           </motion.div>
         </div>
 
-        <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-0">
+        <motion.div
+          animate={isInView ? "visible" : "hidden"}
+          className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-0"
+          initial="hidden"
+          variants={staggerContainer}
+        >
           {steps.map((step, index) => (
             <PipelineStep
-              index={index}
               isLast={index === steps.length - 1}
               key={step}
               step={step}
             />
           ))}
-        </div>
+        </motion.div>
       </Container>
     </section>
   )

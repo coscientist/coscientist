@@ -3,6 +3,8 @@
 import Link from "next/link"
 import { useTranslations } from "next-intl"
 
+import { Button } from "@/components/ui/button"
+import { AmbientGradient } from "./ambient-gradient"
 import { Container } from "./primitives"
 
 export function Footer() {
@@ -19,7 +21,9 @@ export function Footer() {
   ]
 
   return (
-    <footer className="pt-16">
+    <footer className="relative overflow-hidden pt-16">
+      <AmbientGradient color="white" position="bottom-left" />
+
       <div className="bg-neutral-950/[0.025] py-16 text-neutral-950 dark:bg-white/5 dark:text-white">
         <Container className="flex flex-col gap-16">
           <nav>
@@ -27,28 +31,35 @@ export function Footer() {
               {links.map((link) => (
                 <li key={link.label}>
                   {link.external ? (
-                    <a
-                      className="text-neutral-700 transition-colors hover:text-neutral-950 dark:text-neutral-400 dark:hover:text-white"
-                      href={link.href}
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <Button
+                      className="h-auto p-0 text-muted-foreground"
+                      render={
+                        // biome-ignore lint/a11y/useAnchorContent: Content provided via Button children
+                        <a
+                          href={link.href}
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        />
+                      }
+                      variant="link"
                     >
                       {link.label}
-                    </a>
+                    </Button>
                   ) : (
-                    <Link
-                      className="text-neutral-700 transition-colors hover:text-neutral-950 dark:text-neutral-400 dark:hover:text-white"
-                      href={link.href}
+                    <Button
+                      className="h-auto p-0 text-muted-foreground"
+                      render={<Link href={link.href} />}
+                      variant="link"
                     >
                       {link.label}
-                    </Link>
+                    </Button>
                   )}
                 </li>
               ))}
             </ul>
           </nav>
           <div className="flex items-center justify-between gap-10 text-sm/7">
-            <div className="text-neutral-600 dark:text-neutral-500">
+            <div className="text-muted-foreground">
               {t("copyright", { year: currentYear })}
             </div>
           </div>

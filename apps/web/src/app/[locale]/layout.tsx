@@ -1,6 +1,6 @@
 import { Analytics } from "@vercel/analytics/next"
 import type { Metadata } from "next"
-import { Faculty_Glyphic, Instrument_Serif } from "next/font/google"
+import { Faculty_Glyphic } from "next/font/google"
 import { notFound } from "next/navigation"
 import { hasLocale } from "next-intl"
 import {
@@ -30,17 +30,6 @@ const facultyGlyphic = Faculty_Glyphic({
   variable: "--font-faculty-glyphic",
   subsets: ["latin"],
   weight: "400",
-})
-
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-display",
-  subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-  display: "swap",
-  preload: true,
-  fallback: ["serif"],
-  adjustFontFallback: true,
 })
 
 interface Props {
@@ -122,7 +111,6 @@ export default async function LocaleLayout({ children, params }: Props) {
       <body
         className={cn(
           facultyGlyphic.variable,
-          instrumentSerif.variable,
           "flex h-full flex-col font-sans antialiased"
         )}
       >

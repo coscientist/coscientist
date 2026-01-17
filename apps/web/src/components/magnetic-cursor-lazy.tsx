@@ -8,7 +8,6 @@ const MagneticCursor = dynamic(
   () => import("./magnetic-cursor").then((mod) => mod.MagneticCursor),
   {
     ssr: false,
-    loading: () => null, // Decorative element, no placeholder needed
   }
 )
 

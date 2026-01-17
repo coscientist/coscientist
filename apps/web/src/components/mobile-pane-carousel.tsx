@@ -188,7 +188,7 @@ const CoverflowPane = memo(
               }}
               type="button"
             >
-              {IconXmarkOutline18 && <IconXmarkOutline18 className="size-4" />}
+              <IconXmarkOutline18 className="size-4" />
             </button>
           )}
         </motion.article>

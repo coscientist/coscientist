@@ -16,9 +16,7 @@ import { cn } from "@/lib/utils"
 
 const MobilePaneCarousel = dynamic(
   () => import("./mobile-pane-carousel").then((mod) => mod.MobilePaneCarousel),
-  {
-    ssr: false,
-  }
+  { ssr: false }
 )
 
 interface PaneCollapseContextValue {

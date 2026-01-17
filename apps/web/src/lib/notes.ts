@@ -1,7 +1,6 @@
 import fs from "node:fs/promises"
 import path from "node:path"
 import matter from "gray-matter"
-import { cacheLife, cacheTag } from "next/cache"
 import { cache } from "react"
 import { remark } from "remark"
 import gfm from "remark-gfm"
@@ -103,25 +102,23 @@ const getNotesDirectoryForLocale = cache(async (locale = "en") => {
   return (await directoryExists(notesDir)) ? notesDir : legacyDir
 })
 
-export async function getAllNoteSlugs(locale = "en"): Promise<string[]> {
-  "use cache"
-  cacheTag("notes", `notes-slugs-${locale}`)
-  cacheLife("hours")
+export const getAllNoteSlugs = cache(
+  async (locale = "en"): Promise<string[]> => {
+    const dirToUse = await getNotesDirectoryForLocale(locale)
 
-  const dirToUse = await getNotesDirectoryForLocale(locale)
-
-  try {
-    const fileNames = await fs.readdir(dirToUse)
-    return fileNames
-      .filter((name) => name.endsWith(".md"))
-      .map((name) => name.replace(MD_EXTENSION_REGEX, ""))
-  } catch (error) {
-    if (isMissingFile(error)) {
-      return []
+    try {
+      const fileNames = await fs.readdir(dirToUse)
+      return fileNames
+        .filter((name) => name.endsWith(".md"))
+        .map((name) => name.replace(MD_EXTENSION_REGEX, ""))
+    } catch (error) {
+      if (isMissingFile(error)) {
+        return []
+      }
+      throw error
     }
-    throw error
   }
-}
+)
 
 function generateExcerpt(content: string, maxLength = 300): string {
   const withoutTitle = content.replace(TITLE_LINE_REGEX, "")
@@ -139,98 +136,89 @@ function generateExcerpt(content: string, maxLength = 300): string {
   return `${lastSpace > 0 ? truncated.slice(0, lastSpace) : truncated}...`
 }
 
-export async function getNoteBySlug(
-  slug: string,
-  locale = "en"
-): Promise<Note | null> {
-  "use cache"
-  cacheTag("notes", `note-${locale}-${slug}`)
-  cacheLife("hours")
+export const getNoteBySlug = cache(
+  async (slug: string, locale = "en"): Promise<Note | null> => {
+    const dirToUse = await getNotesDirectoryForLocale(locale)
+    const fullPath = path.join(dirToUse, `${slug}.md`)
 
-  const dirToUse = await getNotesDirectoryForLocale(locale)
-  const fullPath = path.join(dirToUse, `${slug}.md`)
-
-  let fileContents: string
-  try {
-    fileContents = await fs.readFile(fullPath, "utf8")
-  } catch (error) {
-    if (isMissingFile(error)) {
-      return null
+    let fileContents: string
+    try {
+      fileContents = await fs.readFile(fullPath, "utf8")
+    } catch (error) {
+      if (isMissingFile(error)) {
+        return null
+      }
+      throw error
     }
-    throw error
+    const { data, content } = matter(fileContents)
+
+    const processedContent = await remark()
+      .use(gfm)
+      .use(html, { sanitize: false })
+      .process(content)
+
+    const contentHtml = processedContent.toString()
+    const outboundLinks = extractOutboundLinks(content)
+    const excerpt = generateExcerpt(content)
+
+    return {
+      slug,
+      title: data.title || slug,
+      description: data.description,
+      createdAt: data.createdAt,
+      updatedAt: data.updatedAt,
+      content,
+      contentHtml,
+      excerpt,
+      outboundLinks,
+      inboundLinks: [],
+    }
   }
-  const { data, content } = matter(fileContents)
+)
 
-  const processedContent = await remark()
-    .use(gfm)
-    .use(html, { sanitize: false })
-    .process(content)
-
-  const contentHtml = processedContent.toString()
-  const outboundLinks = extractOutboundLinks(content)
-  const excerpt = generateExcerpt(content)
-
-  return {
-    slug,
-    title: data.title || slug,
-    description: data.description,
-    createdAt: data.createdAt,
-    updatedAt: data.updatedAt,
-    content,
-    contentHtml,
-    excerpt,
-    outboundLinks,
-    inboundLinks: [],
-  }
-}
-
-async function getAllNotes(locale = "en"): Promise<Note[]> {
-  "use cache"
-  cacheTag("notes", `notes-all-${locale}`)
-  cacheLife("hours")
-
+const getAllNotes = cache(async (locale = "en"): Promise<Note[]> => {
   const slugs = await getAllNoteSlugs(locale)
   const notes = await Promise.all(
     slugs.map((slug) => getNoteBySlug(slug, locale))
   )
   return notes.filter((note): note is Note => note !== null)
-}
+})
 
-export async function buildNoteGraph(locale = "en"): Promise<{
-  notes: Map<string, Note>
-  backlinks: Map<string, BacklinkInfo[]>
-}> {
-  "use cache"
-  cacheTag("notes", `notes-graph-${locale}`)
-  cacheLife("hours")
+export const buildNoteGraph = cache(
+  async (
+    locale = "en"
+  ): Promise<{
+    notes: Map<string, Note>
+    backlinks: Map<string, BacklinkInfo[]>
+  }> => {
+    const allNotes = await getAllNotes(locale)
+    const notes = new Map<string, Note>()
+    const backlinks = new Map<string, BacklinkInfo[]>()
 
-  const allNotes = await getAllNotes(locale)
-  const notes = new Map<string, Note>()
-  const backlinks = new Map<string, BacklinkInfo[]>()
+    for (const note of allNotes) {
+      notes.set(note.slug, note)
+      backlinks.set(note.slug, [])
+    }
 
-  for (const note of allNotes) {
-    notes.set(note.slug, note)
-    backlinks.set(note.slug, [])
-  }
+    for (const note of allNotes) {
+      for (const targetSlug of note.outboundLinks) {
+        if (notes.has(targetSlug)) {
+          const targetBacklinks = backlinks.get(targetSlug) || []
+          targetBacklinks.push({
+            slug: note.slug,
+            title: note.title,
+            excerpt: extractExcerpt(note.content, targetSlug),
+          })
+          backlinks.set(targetSlug, targetBacklinks)
 
-  for (const note of allNotes) {
-    for (const targetSlug of note.outboundLinks) {
-      if (notes.has(targetSlug)) {
-        const targetBacklinks = backlinks.get(targetSlug) || []
-        targetBacklinks.push({
-          slug: note.slug,
-          title: note.title,
-          excerpt: extractExcerpt(note.content, targetSlug),
-        })
-        backlinks.set(targetSlug, targetBacklinks)
-
-        const targetNote = notes.get(targetSlug)
-        if (targetNote && !targetNote.inboundLinks.includes(note.slug)) {
-          targetNote.inboundLinks.push(note.slug)
+          const targetNote = notes.get(targetSlug)
+          if (targetNote && !targetNote.inboundLinks.includes(note.slug)) {
+            targetNote.inboundLinks.push(note.slug)
+          }
         }
       }
     }
-  }
 
-  return { notes, backlinks }
-}
+    return { notes, backlinks }
+  }
+)

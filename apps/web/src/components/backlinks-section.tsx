@@ -42,9 +42,7 @@ export function BacklinksSection({
   return (
     <section>
       <h3 className="mb-3 flex items-center gap-1.5 font-medium text-muted-foreground text-xs uppercase tracking-wider">
-        {IconArrowUpLeftOutline18 && (
-          <IconArrowUpLeftOutline18 className="size-3" />
-        )}
+        <IconArrowUpLeftOutline18 className="size-3" />
         {t(translationKey, { count: backlinks.length })}
       </h3>
       <ul className="flex flex-col">

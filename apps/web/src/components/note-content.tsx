@@ -49,12 +49,10 @@ export function NoteContent({ contentHtml, onLinkClick }: NoteContentProps) {
                 target="_blank"
               >
                 {domToReact(domNode.children as DOMNode[], options)}
-                {IconArrowUpRightOutline18 && (
-                  <IconArrowUpRightOutline18
-                    aria-hidden="true"
-                    className="ml-0.5 inline-block size-[0.85em] align-baseline"
-                  />
-                )}
+                <IconArrowUpRightOutline18
+                  aria-hidden="true"
+                  className="ml-0.5 inline-block size-[0.85em] align-baseline"
+                />
                 <span className="sr-only"> ({t("opensInNewTab")})</span>
               </a>
             )

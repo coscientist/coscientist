@@ -3,9 +3,6 @@ import type { NextConfig } from "next"
 import createNextIntlPlugin from "next-intl/plugin"
 
 const nextConfig: NextConfig = {
-  turbopack: {
-    root: "../..",
-  },
   images: {
     qualities: [100, 75],
   },

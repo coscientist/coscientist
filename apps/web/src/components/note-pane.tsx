@@ -218,7 +218,7 @@ export function NotePane({
               transition={quickTransition}
               type="button"
             >
-              <IconXmarkOutline18 className="size-5" />
+              {IconXmarkOutline18 && <IconXmarkOutline18 className="size-5" />}
             </motion.button>
           )}
         </AnimatePresence>

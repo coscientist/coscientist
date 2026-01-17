@@ -4,6 +4,9 @@ import createNextIntlPlugin from "next-intl/plugin"
 
 const nextConfig: NextConfig = {
   transpilePackages: ["nucleo-ui-outline-18"],
+  experimental: {
+    optimizePackageImports: ["nucleo-ui-outline-18"],
+  },
   images: {
     qualities: [100, 75],
   },

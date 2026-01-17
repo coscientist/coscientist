@@ -52,6 +52,7 @@ No secret logic in Next.js - all sensitive operations live in Convex functions. 
 - Files Control
 - ProseMirror Sync
 - Other modular backend pieces that accelerate development
+
 </Tab>
 
 <Tab value="Workflow & Scheduling">
@@ -175,6 +176,7 @@ Rejected because:
 - Requires building real-time sync and OT logic from scratch
 - Loses Convex's elegant reactivity
 - WebSockets on Vercel are non-trivial (separate server needed)
+
 </Tab>
 
 <Tab value="Fully Serverless">
@@ -185,6 +187,7 @@ Rejected because:
 - Patchwork harder to maintain
 - Tight integration difficult to achieve
 - CRDT state merging with security is challenging
+
 </Tab>
 
 <Tab value="AI at MVP">
@@ -195,6 +198,7 @@ Rejected because:
 - Overcomplicates initial architecture
 - Requires vector DB and LLM service integration upfront
 - Better to design for it, implement later
+
 </Tab>
 
 <Tab value="Ignore Expansion">
@@ -205,6 +209,7 @@ Rejected because:
 - Shortcuts would hinder later expansion
 - Using globally unique IDs now eases future data merging
 - Code structured for easy factoring (AI functions as separate module)
+
 </Tab>
 </Tabs>
 

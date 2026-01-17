@@ -2,8 +2,6 @@
 title: "ADR 5: File Storage and Access Control (Convex File Storage + Files Control)"
 ---
 
-
-
 # ADR 5: File Storage and Access Control (Convex File Storage + Files Control)
 
 ## Context
@@ -11,9 +9,9 @@ title: "ADR 5: File Storage and Access Control (Convex File Storage + Files Cont
 The knowledge system will include **file attachments** – images, PDFs, data files, etc. We need to allow users to upload files and embed or link them in blocks.
 
 <Callout type="info" title="Key Requirements">
-- Handle potentially large binary files
-- Efficient delivery (possibly via CDN)
-- **Access control** so private files aren't accessible to unauthorized users
+  - Handle potentially large binary files - Efficient delivery (possibly via
+  CDN) - **Access control** so private files aren't accessible to unauthorized
+  users
 </Callout>
 
 Since we're using Convex as our backend, we aim to use its provided capabilities for file storage. Convex offers an integrated file storage solution and a component called _Files Control_ that provides a higher-level API for secure file handling.
@@ -21,7 +19,8 @@ Since we're using Convex as our backend, we aim to use its provided capabilities
 ## Decision
 
 <Callout type="info" title="Core Approach">
-**Utilize Convex's built-in File Storage with the Convex Files Control component to manage uploads, downloads, and file permissions.**
+  **Utilize Convex's built-in File Storage with the Convex Files Control
+  component to manage uploads, downloads, and file permissions.**
 </Callout>
 
 We treat files as a special kind of content stored outside the main database (binary storage), referenced by IDs in our Block model.
@@ -66,6 +65,7 @@ This integrates with block permissions ([ADR 6](/docs/adr/adr-006-permissions-em
 ### File Metadata
 
 We store file metadata in our blocks table:
+
 - `fileName`
 - `fileSize`
 - `contentType`
@@ -89,26 +89,28 @@ Using Convex's file storage and Files Control component is a pragmatic choice:
 
 ## Alternatives Considered
 
-<Tabs items={['Direct Embedding', 'External Storage', 'Next.js Serving', 'IPFS']}>
+<Tabs
+  items={["Direct Embedding", "External Storage", "Next.js Serving", "IPFS"]}
+>
   <Tab value="Direct Embedding">
-    **Direct File Embedding:** Store small files directly in Convex database as binary data (e.g., base64 in a block).
-    
-    **Rejected** because it would bloat the database and slow queries. Convex's file storage is meant for binaries.
+    **Direct File Embedding:** Store small files directly in Convex database as
+    binary data (e.g., base64 in a block). **Rejected** because it would bloat
+    the database and slow queries. Convex's file storage is meant for binaries.
   </Tab>
   <Tab value="External Storage">
-    **External Storage (S3/GCS) without Convex integration:** Write our own backend endpoints to sign URLs.
-    
-    **Rejected** – more boilerplate and ensuring security. We lose tight integration with Convex's auth.
+    **External Storage (S3/GCS) without Convex integration:** Write our own
+    backend endpoints to sign URLs. **Rejected** – more boilerplate and ensuring
+    security. We lose tight integration with Convex's auth.
   </Tab>
   <Tab value="Next.js Serving">
-    **Serving via Next.js (hosting files on Vercel):** Use Vercel's built-in storage for static assets.
-    
-    Doesn't work for user uploads since those are dynamic. Vercel has no built-in binary store for user uploads.
+    **Serving via Next.js (hosting files on Vercel):** Use Vercel's built-in
+    storage for static assets. Doesn't work for user uploads since those are
+    dynamic. Vercel has no built-in binary store for user uploads.
   </Tab>
   <Tab value="IPFS">
-    **Peer-to-peer or IPFS:** Store files decentralized.
-    
-    **Rejected** – complexity and lack of fine-grained access control (everything on IPFS is public).
+    **Peer-to-peer or IPFS:** Store files decentralized. **Rejected** –
+    complexity and lack of fine-grained access control (everything on IPFS is
+    public).
   </Tab>
 </Tabs>
 
@@ -123,26 +125,45 @@ Using Convex's file storage and Files Control component is a pragmatic choice:
 - **Managing File Access with Block Sharing:** Keep file ACL in sync with block ACL. If sharing a document containing an image, the image file must also become accessible.
 
 <Callout type="warn" title="Security Consideration">
-Using tokenized URLs for images means tokens can be copied and used by others until expiry. If short (say 5 minutes) and continuously refreshed, it's reasonably secure.
+  Using tokenized URLs for images means tokens can be copied and used by others
+  until expiry. If short (say 5 minutes) and continuously refreshed, it's
+  reasonably secure.
 </Callout>
 
 ## Expansion Path
 
 <Cards>
-  <Card title="Image Thumbnails & Processing" href="/docs/adr/adr-008-platform-boundaries-expansion">
-    Generate smaller thumbnails for large images. Could integrate a third-party or use Vercel Edge Functions for image processing.
+  <Card
+    title="Image Thumbnails & Processing"
+    href="/docs/adr/adr-008-platform-boundaries-expansion"
+  >
+    Generate smaller thumbnails for large images. Could integrate a third-party
+    or use Vercel Edge Functions for image processing.
   </Card>
-  <Card title="Video & Audio Handling" href="/docs/adr/adr-008-platform-boundaries-expansion">
-    Offload to specialized services for encoding/streaming (like Mux or Cloudinary).
+  <Card
+    title="Video & Audio Handling"
+    href="/docs/adr/adr-008-platform-boundaries-expansion"
+  >
+    Offload to specialized services for encoding/streaming (like Mux or
+    Cloudinary).
   </Card>
-  <Card title="Large Data Files" href="/docs/adr/adr-008-platform-boundaries-expansion">
-    Integrate with user's own cloud or institutional storage. Allow "external_file" blocks that hold URLs instead of actual files.
+  <Card
+    title="Large Data Files"
+    href="/docs/adr/adr-008-platform-boundaries-expansion"
+  >
+    Integrate with user's own cloud or institutional storage. Allow
+    "external_file" blocks that hold URLs instead of actual files.
   </Card>
   <Card title="File Versioning" href="/docs/adr/adr-002-versioning-strategy">
-    Allow version history on files. Updating a file block keeps the same block id but points to a new storageId.
+    Allow version history on files. Updating a file block keeps the same block
+    id but points to a new storageId.
   </Card>
 </Cards>
 
 <Callout type="idea" title="Workflow Integration">
-If we have background processes or agents (see [ADR 8](/docs/adr/adr-008-platform-boundaries-expansion)) that produce files (like an AI generating a report PDF), they can use the same file storage mechanism. Our consistent approach means even automated content goes through the same pipelines.
+  If we have background processes or agents (see [ADR
+  8](/docs/adr/adr-008-platform-boundaries-expansion)) that produce files (like
+  an AI generating a report PDF), they can use the same file storage mechanism.
+  Our consistent approach means even automated content goes through the same
+  pipelines.
 </Callout>

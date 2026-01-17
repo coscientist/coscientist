@@ -2,8 +2,6 @@
 title: "ADR 6: Permissions and Embargo Model (Block-level ACL with Time Locks)"
 ---
 
-
-
 # ADR 6: Permissions and Embargo Model (Block-level ACL with Time Locks)
 
 ## Context
@@ -11,15 +9,17 @@ title: "ADR 6: Permissions and Embargo Model (Block-level ACL with Time Locks)"
 We need a **permissions model** to control who can view or edit content, as the system may contain private or sensitive knowledge. Additionally, the notion of an "embargo" is introduced – content that should remain hidden or read-restricted until a certain time (common in research or media to prevent premature disclosure).
 
 <Callout type="info" title="Key Requirements">
-- Differentiate access between users within an organization
-- Block-level access control (since our content model is block-granular)
-- **Time-based access control** (embargo) where a block automatically becomes visible after a timestamp
+  - Differentiate access between users within an organization - Block-level
+  access control (since our content model is block-granular) - **Time-based
+  access control** (embargo) where a block automatically becomes visible after a
+  timestamp
 </Callout>
 
 ## Decision
 
 <Callout type="info" title="Core Approach">
-**Implement block-level Access Control Lists (ACLs) combined with optional time-based embargo restrictions.**
+  **Implement block-level Access Control Lists (ACLs) combined with optional
+  time-based embargo restrictions.**
 </Callout>
 
 ### ACL Structure
@@ -39,30 +39,28 @@ Each block also has an `owner` (usually the creator's user ID) which always has 
 
 ### Access Control Rules
 
-<Tabs items={['Read Access', 'Write Access', 'Public Blocks', 'Inheritance']}>
+<Tabs items={["Read Access", "Write Access", "Public Blocks", "Inheritance"]}>
   <Tab value="Read Access">
-    To retrieve or subscribe to a block, the requesting user must be either:
-    - Listed in the block's allowed list, OR
-    - The block is marked public
-    
-    Otherwise, the Convex query will not return that block. This check is built into all query functions.
+    To retrieve or subscribe to a block, the requesting user must be either: -
+    Listed in the block's allowed list, OR - The block is marked public
+    Otherwise, the Convex query will not return that block. This check is built
+    into all query functions.
   </Tab>
   <Tab value="Write Access">
-    Modifications (edit text, add child, etc.) require the user to be either:
-    - The owner, OR
-    - Explicitly in the writers list
-    
-    For MVP, we may treat write access as having the same list as read.
+    Modifications (edit text, add child, etc.) require the user to be either: -
+    The owner, OR - Explicitly in the writers list For MVP, we may treat write
+    access as having the same list as read.
   </Tab>
   <Tab value="Public Blocks">
-    A block marked as `public: true` is viewable by anyone, including unauthenticated users (if the app supports anonymous access).
-    
-    In future, public means we might expose it without login via a public URL.
+    A block marked as `public: true` is viewable by anyone, including
+    unauthenticated users (if the app supports anonymous access). In future,
+    public means we might expose it without login via a public URL.
   </Tab>
   <Tab value="Inheritance">
-    Permission is primarily per block. However, blocks that are part of a larger document should inherit the parent's permissions by default.
-    
-    When setting ACL on a parent, cascade it to descendants. Or ensure queries treat possession of parent access as implying child access.
+    Permission is primarily per block. However, blocks that are part of a larger
+    document should inherit the parent's permissions by default. When setting
+    ACL on a parent, cascade it to descendants. Or ensure queries treat
+    possession of parent access as implying child access.
   </Tab>
 </Tabs>
 
@@ -76,7 +74,9 @@ We add an `embargoUntil` timestamp on blocks that need it:
 - We enforce embargo in the read check: if `now < embargoUntil` and the user isn't in a special allow list, deny access
 
 <Callout type="idea" title="Automation">
-Embargo automates what would otherwise be manual. Instead of waking up at midnight to flip a switch, the system does it automatically – preventing human error.
+  Embargo automates what would otherwise be manual. Instead of waking up at
+  midnight to flip a switch, the system does it automatically – preventing human
+  error.
 </Callout>
 
 ### Implementation Details
@@ -102,26 +102,35 @@ Embargo automates what would otherwise be manual. Instead of waking up at midnig
 
 ## Alternatives Considered
 
-<Tabs items={['Document-Level Only', 'Role-Based', 'Capability Links', 'Encryption']}>
+<Tabs
+  items={[
+    "Document-Level Only",
+    "Role-Based",
+    "Capability Links",
+    "Encryption",
+  ]}
+>
   <Tab value="Document-Level Only">
-    **Document-Level Permissions Only:** Simplify to only top-level documents having ACL, with all child blocks inheriting fully.
-    
-    This is likely how users will commonly use it (share entire doc or not). We decided to keep the possibility of per-block ACL for flexibility.
+    **Document-Level Permissions Only:** Simplify to only top-level documents
+    having ACL, with all child blocks inheriting fully. This is likely how users
+    will commonly use it (share entire doc or not). We decided to keep the
+    possibility of per-block ACL for flexibility.
   </Tab>
   <Tab value="Role-Based">
-    **Role-Based Access:** Using roles (admin, member, viewer) and assigning roles to blocks.
-    
-    For MVP, we skip this complexity. All users are basically equal collaborators.
+    **Role-Based Access:** Using roles (admin, member, viewer) and assigning
+    roles to blocks. For MVP, we skip this complexity. All users are basically
+    equal collaborators.
   </Tab>
   <Tab value="Capability Links">
-    **Capability Links (Shareable links with secret tokens):** Generate a token and not require login for that token.
-    
-    Useful feature, but MVP will focus on user identity-based sharing. The "public" flag is essentially a special case.
+    **Capability Links (Shareable links with secret tokens):** Generate a token
+    and not require login for that token. Useful feature, but MVP will focus on
+    user identity-based sharing. The "public" flag is essentially a special
+    case.
   </Tab>
   <Tab value="Encryption">
-    **Encryption-based security:** Encrypt content for certain users so even the server cannot read without keys.
-    
-    Complicates collaboration (key distribution). We trust our server environment for MVP.
+    **Encryption-based security:** Encrypt content for certain users so even the
+    server cannot read without keys. Complicates collaboration (key
+    distribution). We trust our server environment for MVP.
   </Tab>
 </Tabs>
 
@@ -136,26 +145,43 @@ Embargo automates what would otherwise be manual. Instead of waking up at midnig
 - **Security:** We must ensure no ACL bypass. All queries and mutations must enforce checks. Any path that could reveal a block's existence or content requires permission
 
 <Callout type="warn" title="Temporal Edge Cases">
-If we only run a cron hourly, an embargo might lift up to 59 minutes late. Better to also check time on access – if `now` is past embargo, allow access even if the flag hasn't flipped yet.
+  If we only run a cron hourly, an embargo might lift up to 59 minutes late.
+  Better to also check time on access – if `now` is past embargo, allow access
+  even if the flag hasn't flipped yet.
 </Callout>
 
 ## Expansion Path
 
 <Cards>
   <Card title="Group Sharing" href="/docs/adr/adr-007-presence-cursors">
-    Add concept of groups/teams to simplify sharing to many people. Share to "Research Team" instead of 30 individual users.
+    Add concept of groups/teams to simplify sharing to many people. Share to
+    "Research Team" instead of 30 individual users.
   </Card>
-  <Card title="Roles & Permissions Matrix" href="/docs/adr/adr-007-presence-cursors">
-    Formalize roles: "viewer" vs "editor" vs "commenter". Extend ACL structure per permission type.
+  <Card
+    title="Roles & Permissions Matrix"
+    href="/docs/adr/adr-007-presence-cursors"
+  >
+    Formalize roles: "viewer" vs "editor" vs "commenter". Extend ACL structure
+    per permission type.
   </Card>
-  <Card title="Hierarchical Permissions" href="/docs/adr/adr-007-presence-cursors">
-    Flag on block: "inherits ACL from parent unless overridden". Walk up until finding explicit ACL.
+  <Card
+    title="Hierarchical Permissions"
+    href="/docs/adr/adr-007-presence-cursors"
+  >
+    Flag on block: "inherits ACL from parent unless overridden". Walk up until
+    finding explicit ACL.
   </Card>
-  <Card title="Temporary Access Links" href="/docs/adr/adr-005-file-storage-access-control">
-    Generate time-limited links to share with external collaborators (e.g., "share for 7 days").
+  <Card
+    title="Temporary Access Links"
+    href="/docs/adr/adr-005-file-storage-access-control"
+  >
+    Generate time-limited links to share with external collaborators (e.g.,
+    "share for 7 days").
   </Card>
 </Cards>
 
 <Callout type="idea" title="AI Agent Permissions">
-If we add AI agents that can read or write blocks, we might treat an agent as a special user identity with its own ID and appropriate ACL entries. Our current model could include an agent's userId in the allowed list.
+  If we add AI agents that can read or write blocks, we might treat an agent as
+  a special user identity with its own ID and appropriate ACL entries. Our
+  current model could include an agent's userId in the allowed list.
 </Callout>

@@ -235,7 +235,7 @@ export const get = query({
     return await ctx.db
       .query("notes")
       .withIndex("by_slug_locale", (q) =>
-        q.eq("slug", args.slug).eq("locale", args.locale)
+        q.eq("slug", args.slug).eq("locale", args.locale),
       )
       .unique();
   },
@@ -355,11 +355,11 @@ async function translateToAllLocales(note: Note) {
 
 ### Key Concepts
 
-| Directive        | Purpose                                           |
-| ---------------- | ------------------------------------------------- |
-| `"use workflow"` | Marks function as durable (survives crashes)      |
-| `"use step"`     | Marks unit of work (auto-retry, persistence)      |
-| `sleep()`        | Pause without holding compute, resume later       |
+| Directive        | Purpose                                      |
+| ---------------- | -------------------------------------------- |
+| `"use workflow"` | Marks function as durable (survives crashes) |
+| `"use step"`     | Marks unit of work (auto-retry, persistence) |
+| `sleep()`        | Pause without holding compute, resume later  |
 
 ## UI Constraints
 

@@ -3,8 +3,6 @@ title: "ADR 8: Platform Boundaries and Expansion Plan"
 description: "Architecture decisions for Convex, Vercel, Workflow, and Mastra integration with clear platform boundaries and future expansion paths"
 ---
 
-
-
 # ADR 8: Platform Boundaries and Expansion Plan
 
 ## Context
@@ -14,11 +12,9 @@ The MVP system is built with a **Next.js frontend on Vercel** and a **Convex bac
 While MVP excludes federated multi-server setups and advanced AI agent features, the architecture must be conceived with a path to those capabilities.
 
 <Callout type="info" title="Scope of This ADR">
-This ADR covers:
-- Frontend/backend boundary structure
-- Convex scheduling and workflow integration
-- AI agent system (Mastra) introduction planning
-- Federated and multi-component architecture roadmap
+  This ADR covers: - Frontend/backend boundary structure - Convex scheduling and
+  workflow integration - AI agent system (Mastra) introduction planning -
+  Federated and multi-component architecture roadmap
 </Callout>
 
 ## Decision
@@ -52,10 +48,11 @@ No secret logic in Next.js - all sensitive operations live in Convex functions. 
 - Single database centralizes consistency and simplifies sync
 
 **Convex Components:**
+
 - Files Control
 - ProseMirror Sync
 - Other modular backend pieces that accelerate development
-</Tab>
+  </Tab>
 
 <Tab value="Workflow & Scheduling">
 **Background Tasks:**
@@ -79,7 +76,8 @@ Using Convex's built-in Auth with Google/GitHub OAuth integration. The Next fron
 ### Mastra (AI & Agents) - Future Integration
 
 <Callout type="info" title="What is Mastra?">
-Mastra is a TypeScript AI framework with multi-agent workflow capabilities, promoted by Vercel for building AI-powered features on modern JS stacks.
+  Mastra is a TypeScript AI framework with multi-agent workflow capabilities,
+  promoted by Vercel for building AI-powered features on modern JS stacks.
 </Callout>
 
 **Integration Strategy:**
@@ -95,10 +93,11 @@ Mastra is a TypeScript AI framework with multi-agent workflow capabilities, prom
 ### Federation - Future Expansion
 
 <Callout type="warn" title="Not in MVP">
-MVP is a single Convex deployment. Federation is a future consideration.
+  MVP is a single Convex deployment. Federation is a future consideration.
 </Callout>
 
 **Future Path:**
+
 - Connect multiple backends via API layer or message passing
 - Block model can be extended with `origin` or `globalId` fields
 - Potential federation server for routing requests by content location
@@ -107,21 +106,21 @@ MVP is a single Convex deployment. Federation is a future consideration.
 
 ### DevOps and Deployment
 
-| Layer | Platform | Notes |
-|-------|----------|-------|
-| Frontend | Vercel | Domain, CDN, static assets |
-| Backend | Convex Cloud | Functions, database, realtime |
-| Communication | HTTPS + WebSockets | SSL secured, auth required |
-| Logging | Convex Dashboard + Vercel | Sentry optional for frontend |
+| Layer         | Platform                  | Notes                         |
+| ------------- | ------------------------- | ----------------------------- |
+| Frontend      | Vercel                    | Domain, CDN, static assets    |
+| Backend       | Convex Cloud              | Functions, database, realtime |
+| Communication | HTTPS + WebSockets        | SSL secured, auth required    |
+| Logging       | Convex Dashboard + Vercel | Sentry optional for frontend  |
 
 ### Workflow Examples in MVP
 
-| Use Case | Implementation |
-|----------|----------------|
-| Periodic cleanup | Cron jobs |
-| AI summarization | Convex action with retries |
+| Use Case               | Implementation                         |
+| ---------------------- | -------------------------------------- |
+| Periodic cleanup       | Cron jobs                              |
+| AI summarization       | Convex action with retries             |
 | Multi-step agent tasks | Durable functions (workflow component) |
-| File cleanup | Scheduled actions |
+| File cleanup           | Scheduled actions                      |
 
 ## Rationale
 
@@ -131,11 +130,14 @@ Next.js handles presentation and user interaction. Convex handles data consisten
 </Card>
 
 <Card title="Specialized Platforms">
-Vercel optimized for frontend delivery (CDN, asset optimization). Convex optimized for backend state with real-time sync. Each does what it does best.
+  Vercel optimized for frontend delivery (CDN, asset optimization). Convex
+  optimized for backend state with real-time sync. Each does what it does best.
 </Card>
 
 <Card title="Scale as You Grow">
-Convex scales horizontally behind the scenes. Vercel auto-scales serverless functions and static content. New features integrate via Convex components or Vercel integrations.
+  Convex scales horizontally behind the scenes. Vercel auto-scales serverless
+  functions and static content. New features integrate via Convex components or
+  Vercel integrations.
 </Card>
 
 <Card title="Expansion Readiness">
@@ -152,6 +154,7 @@ AI/Agent integration via modular interfaces. Federation possible with globally u
 ### Security Boundary
 
 All sensitive operations on Convex side. Next.js holds only:
+
 - Convex deployment URL
 - Public auth configuration
 
@@ -168,37 +171,41 @@ Running everything through Convex ensures data consistency - effectively a singl
 **Node.js server with Postgres/Mongo + ShareDB/Yjs for collab**
 
 Rejected because:
+
 - Requires building real-time sync and OT logic from scratch
 - Loses Convex's elegant reactivity
 - WebSockets on Vercel are non-trivial (separate server needed)
-</Tab>
+  </Tab>
 
 <Tab value="Fully Serverless">
 **Client + edge functions + Firebase + CRDT library**
 
 Rejected because:
+
 - Patchwork harder to maintain
 - Tight integration difficult to achieve
 - CRDT state merging with security is challenging
-</Tab>
+  </Tab>
 
 <Tab value="AI at MVP">
 **Include AI agent from day one**
 
 Rejected because:
+
 - Overcomplicates initial architecture
 - Requires vector DB and LLM service integration upfront
 - Better to design for it, implement later
-</Tab>
+  </Tab>
 
 <Tab value="Ignore Expansion">
 **Build MVP ignoring federation/multi-agent future**
 
 Rejected because:
+
 - Shortcuts would hinder later expansion
 - Using globally unique IDs now eases future data merging
 - Code structured for easy factoring (AI functions as separate module)
-</Tab>
+    </Tab>
 </Tabs>
 
 **Monorepo Decision**: Frontend and backend in same repository for shared types and dev convenience. Convex functions live alongside Next app with Convex dev server watching file changes.
@@ -207,10 +214,10 @@ Rejected because:
 
 ### Trade-offs Accepted
 
-| Concern | Mitigation |
-|---------|------------|
-| **Vendor Lock-in** | Code structured for potential porting. Convex has open-source core. |
-| **Costs** | Monitor usage. Clear boundaries allow swapping components if needed. |
+| Concern                     | Mitigation                                                                          |
+| --------------------------- | ----------------------------------------------------------------------------------- |
+| **Vendor Lock-in**          | Code structured for potential porting. Convex has open-source core.                 |
+| **Costs**                   | Monitor usage. Clear boundaries allow swapping components if needed.                |
 | **Single Point of Failure** | High availability from both platforms. Read-only cache possible for public content. |
 
 ### Development Workflow
@@ -229,14 +236,15 @@ Rejected because:
 
 ### Stateful vs Stateless Boundaries
 
-| Layer | State Model | Implication |
-|-------|-------------|-------------|
-| Convex | Stateful (DB) | All persistent state here |
+| Layer       | State Model                | Implication                  |
+| ----------- | -------------------------- | ---------------------------- |
+| Convex      | Stateful (DB)              | All persistent state here    |
 | Next/Vercel | Stateless between requests | No server memory assumptions |
-| Browser | Transient UI state | Ephemeral per-client state |
+| Browser     | Transient UI state         | Ephemeral per-client state   |
 
 <Callout type="error" title="Critical Rule">
-Never store persistent state in Next.js server memory - it's ephemeral and multi-instance. All persistent state must go to Convex.
+  Never store persistent state in Next.js server memory - it's ephemeral and
+  multi-instance. All persistent state must go to Convex.
 </Callout>
 
 ### Continuous Deployment
@@ -248,6 +256,7 @@ Never store persistent state in Next.js server memory - it's ephemeral and multi
 ### Documentation for Developers
 
 Key rules to document:
+
 - "All data mutations go in Convex functions"
 - "Do not mutate application state in Next.js side"
 - "Next.js should only call Convex or render UI"
@@ -256,7 +265,8 @@ Key rules to document:
 ## Expansion Path
 
 <Callout type="info" title="Cross-Reference">
-See integration sections in ADRs 1-7 for feature-specific expansions. This section covers architectural expansions.
+  See integration sections in ADRs 1-7 for feature-specific expansions. This
+  section covers architectural expansions.
 </Callout>
 
 <Cards>
@@ -265,23 +275,28 @@ Block model as federation unit. Global identifiers (instance + ID). Smart proxy 
 </Card>
 
 <Card title="AI and Agents (Mastra)" href="#ai-agents">
-Agents read/contribute to knowledge base. Agent memory in Convex. Background processes via workflows. Treat agents as special users with API access.
+  Agents read/contribute to knowledge base. Agent memory in Convex. Background
+  processes via workflows. Treat agents as special users with API access.
 </Card>
 
 <Card title="Vector Search" href="#vector-search">
-Convex vector search or external service (Pinecone). Query → embedding → vector DB → block IDs → Convex retrieval.
+  Convex vector search or external service (Pinecone). Query → embedding →
+  vector DB → block IDs → Convex retrieval.
 </Card>
 
 <Card title="Public Publishing" href="#public-publishing">
-Export public blocks to static site. Enable SEO. Serve without hitting Convex. Cross-domain linking in federated scenario.
+  Export public blocks to static site. Enable SEO. Serve without hitting Convex.
+  Cross-domain linking in federated scenario.
 </Card>
 
 <Card title="Offline & Local-First" href="#offline">
-CRDT approach (Yjs) or Convex local-first capabilities. Client-side database syncing when online. Significant architecture shift.
+  CRDT approach (Yjs) or Convex local-first capabilities. Client-side database
+  syncing when online. Significant architecture shift.
 </Card>
 
 <Card title="Workflow Automation" href="#automation">
-User-defined rules ("when claim added, find evidence"). Trigger system on table changes. Mastra or Convex workflow engine.
+  User-defined rules ("when claim added, find evidence"). Trigger system on
+  table changes. Mastra or Convex workflow engine.
 </Card>
 
 <Card title="Multi-Tenancy" href="#multi-tenancy">
@@ -292,6 +307,7 @@ Partition data with `tenantId`/`workspaceId`. Tenant-scoped permissions. Separat
 ### Mastra Introduction Details
 
 When bringing in Mastra:
+
 1. Allocate separate Convex functions for agent interface
 2. Or run Mastra within Convex action (depending on load)
 3. Store agent memory (conversation logs, knowledge) in Convex
@@ -300,6 +316,7 @@ When bringing in Mastra:
 ### External Integration APIs
 
 Convex provides HTTP API for external integration:
+
 - Design functions with clean interfaces for external exposure
 - Use API keys or service accounts for authentication
 - Enable plugin ecosystem and federation scenarios

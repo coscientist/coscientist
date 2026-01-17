@@ -2,8 +2,6 @@
 title: "ADR 7: Presence and Cursors (Realtime User Awareness)"
 ---
 
-
-
 # ADR 7: Presence and Cursors (Realtime User Awareness)
 
 ## Context
@@ -11,9 +9,9 @@ title: "ADR 7: Presence and Cursors (Realtime User Awareness)"
 In a collaborative application, it's important to provide **user presence awareness**: seeing who else is online, viewing or editing the same content, and where their cursor or selection is.
 
 <Callout type="info" title="Why Presence Matters">
-- Helps avoid conflicts (avoid editing where someone else is typing)
-- Adds a sense of collaboration and social connection
-- Turns a static wiki into a lively workspace
+  - Helps avoid conflicts (avoid editing where someone else is typing) - Adds a
+  sense of collaboration and social connection - Turns a static wiki into a
+  lively workspace
 </Callout>
 
 Features typically include: a list or avatars of users currently viewing/editing, indicators if someone is typing, and live cursors or highlights showing each user's position in the text.
@@ -23,45 +21,50 @@ Convex has real-time capabilities, but presence data has different characteristi
 ## Decision
 
 <Callout type="info" title="Core Approach">
-**Implement a Convex-based presence system tracking each user's activity per document, with periodic heartbeats and lightweight cursor data, and display this info with minimal latency.**
+  **Implement a Convex-based presence system tracking each user's activity per
+  document, with periodic heartbeats and lightweight cursor data, and display
+  this info with minimal latency.**
 </Callout>
 
 ### Presence Table
 
 Create a Convex table `presence` with entries keyed by `(documentId, userId)`:
 
-| Field | Type | Purpose |
-|-------|------|---------|
-| `userId` | string | User identifier (or session ID) |
-| `documentId` | string | Document being viewed/edited |
-| `lastActive` | number | Timestamp of last heartbeat or action |
-| `cursorPos` | object | Current cursor/selection representation |
-| `status` | string | "editing" / "online" / "idle" or `isTyping` flag |
+| Field        | Type   | Purpose                                          |
+| ------------ | ------ | ------------------------------------------------ |
+| `userId`     | string | User identifier (or session ID)                  |
+| `documentId` | string | Document being viewed/edited                     |
+| `lastActive` | number | Timestamp of last heartbeat or action            |
+| `cursorPos`  | object | Current cursor/selection representation          |
+| `status`     | string | "editing" / "online" / "idle" or `isTyping` flag |
 
 ### Core Mechanisms
 
-<Tabs items={['Join/Leave', 'Heartbeat', 'Reactive Query', 'Cursor Handling']}>
+<Tabs items={["Join/Leave", "Heartbeat", "Reactive Query", "Cursor Handling"]}>
   <Tab value="Join/Leave">
     **Join:** When a user opens a document, add or update their presence entry.
-    
-    **Leave:** When they navigate away or disconnect, remove or mark offline after a timeout.
+    **Leave:** When they navigate away or disconnect, remove or mark offline
+    after a timeout.
   </Tab>
   <Tab value="Heartbeat">
-    Each client sends a heartbeat (Convex mutation) every few seconds (e.g., every 5 sec) to update `lastActive`.
-    
-    **Optimization:** If user is actively editing (sending steps), that inherently updates presence, so separate heartbeat can be skipped during activity.
+    Each client sends a heartbeat (Convex mutation) every few seconds (e.g.,
+    every 5 sec) to update `lastActive`. **Optimization:** If user is actively
+    editing (sending steps), that inherently updates presence, so separate
+    heartbeat can be skipped during activity.
   </Tab>
   <Tab value="Reactive Query">
-    A Convex query function returns all presence records for a document, filtering out ones offline beyond a threshold.
-    
-    Because Convex queries are **reactive**, all subscribed clients get updates whenever any presence record changes.
+    A Convex query function returns all presence records for a document,
+    filtering out ones offline beyond a threshold. Because Convex queries are
+    **reactive**, all subscribed clients get updates whenever any presence
+    record changes.
   </Tab>
   <Tab value="Cursor Handling">
-    **MVP Approach:** Track which block or section a user is focused on rather than exact character position.
-    
-    For precise text cursors, we'd need ProseMirror position mapping (complex). MVP may accept slight inaccuracy or update cursors lazily after edits.
-    
-    **Alternative:** Show user highlights (colored selection) when they select something, using ProseMirror's collaborative editing awareness.
+    **MVP Approach:** Track which block or section a user is focused on rather
+    than exact character position. For precise text cursors, we'd need
+    ProseMirror position mapping (complex). MVP may accept slight inaccuracy or
+    update cursors lazily after edits. **Alternative:** Show user highlights
+    (colored selection) when they select something, using ProseMirror's
+    collaborative editing awareness.
   </Tab>
 </Tabs>
 
@@ -77,6 +80,7 @@ Create a Convex table `presence` with entries keyed by `(documentId, userId)`:
 **Rate-limit presence updates** to avoid spamming. Update cursor position at most 5 times per second or on idle stop.
 
 Use **single-flight** pattern: if user is moving cursor rapidly, batch updates or only send the latest. This drops intermediate updates if one is already in flight.
+
 </Callout>
 
 ## Rationale
@@ -93,25 +97,24 @@ Use **single-flight** pattern: if user is moving cursor rapidly, batch updates o
 
 ## Alternatives Considered
 
-<Tabs items={['No Presence', 'Polling', 'External Pub-Sub', 'Full CRDT']}>
+<Tabs items={["No Presence", "Polling", "External Pub-Sub", "Full CRDT"]}>
   <Tab value="No Presence">
     **No presence indicators:** Defer to later to focus on core editing.
-    
-    **Rejected** – given modern expectations and minimal effort to show online users, we include it in MVP.
+    **Rejected** – given modern expectations and minimal effort to show online
+    users, we include it in MVP.
   </Tab>
   <Tab value="Polling">
-    **Polling instead of realtime:** Clients poll for others' presence every few seconds.
-    
-    **Rejected** – less efficient and not real-time. Convex's push obviates polling.
+    **Polling instead of realtime:** Clients poll for others' presence every few
+    seconds. **Rejected** – less efficient and not real-time. Convex's push
+    obviates polling.
   </Tab>
   <Tab value="External Pub-Sub">
-    **Using Pusher or Ably:** External pub-sub services for high-frequency updates.
-    
-    **Rejected** – not needed since Convex covers the basics. Adding another service is overkill.
+    **Using Pusher or Ably:** External pub-sub services for high-frequency
+    updates. **Rejected** – not needed since Convex covers the basics. Adding
+    another service is overkill.
   </Tab>
   <Tab value="Full CRDT">
     **Full CRDT for cursors:** Each cursor as an item in a CRDT list.
-    
     **Rejected** – too complex for this small feature.
   </Tab>
 </Tabs>
@@ -131,20 +134,39 @@ Use **single-flight** pattern: if user is moving cursor rapidly, batch updates o
 ## Expansion Path
 
 <Cards>
-  <Card title="Precise Collaborative Cursors" href="/docs/adr/adr-003-collaboration-protocol">
-    Implement robust solution for tracking text cursors through document changes. Use ProseMirror plugin broadcasting cursor positions mapped to specific version.
+  <Card
+    title="Precise Collaborative Cursors"
+    href="/docs/adr/adr-003-collaboration-protocol"
+  >
+    Implement robust solution for tracking text cursors through document
+    changes. Use ProseMirror plugin broadcasting cursor positions mapped to
+    specific version.
   </Card>
-  <Card title="Selections & Annotations" href="/docs/adr/adr-004-edge-types-dialectical-graph">
-    Expand from single cursor to full text selections (range). Show if someone has a chunk of text highlighted.
+  <Card
+    title="Selections & Annotations"
+    href="/docs/adr/adr-004-edge-types-dialectical-graph"
+  >
+    Expand from single cursor to full text selections (range). Show if someone
+    has a chunk of text highlighted.
   </Card>
-  <Card title="Multiple Presence Scopes" href="/docs/adr/adr-008-platform-boundaries-expansion">
-    Generalize presence to other scopes: project-level, platform-wide (online users list).
+  <Card
+    title="Multiple Presence Scopes"
+    href="/docs/adr/adr-008-platform-boundaries-expansion"
+  >
+    Generalize presence to other scopes: project-level, platform-wide (online
+    users list).
   </Card>
-  <Card title="Activity Indications" href="/docs/adr/adr-008-platform-boundaries-expansion">
-    Extend presence to show detailed activity: "Alice is editing Title block" or "Bob is commenting".
+  <Card
+    title="Activity Indications"
+    href="/docs/adr/adr-008-platform-boundaries-expansion"
+  >
+    Extend presence to show detailed activity: "Alice is editing Title block" or
+    "Bob is commenting".
   </Card>
 </Cards>
 
 <Callout type="idea" title="AI Agent Presence">
-If we have AI agents participating (e.g., an AI "co-scientist" making suggestions), we could reflect that in presence ("AI Bot is online"). Implement by having agent processes update presence like a user.
+  If we have AI agents participating (e.g., an AI "co-scientist" making
+  suggestions), we could reflect that in presence ("AI Bot is online").
+  Implement by having agent processes update presence like a user.
 </Callout>

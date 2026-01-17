@@ -1,4 +1,4 @@
-import { RootProvider } from "fumadocs-ui/provider"
+import { RootProvider } from "fumadocs-ui/provider/next"
 import type { Metadata } from "next"
 import "./global.css"
 
@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <body className="flex min-h-screen flex-col">
         <RootProvider>{children}</RootProvider>
       </body>
     </html>

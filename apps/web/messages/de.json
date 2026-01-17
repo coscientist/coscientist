@@ -111,7 +111,14 @@
     "footer": {
       "manifesto": "Manifest",
       "github": "GitHub",
-      "copyright": "© {year} Coscientist"
+      "copyright": "© {year} Coscientist",
+      "hq": "HQ"
+    },
+    "buildInPublic": {
+      "eyebrow": "Radikale Transparenz",
+      "heading": "Wir bauen öffentlich",
+      "description": "Jede Architekturentscheidung, jeder Kompromiss, jede technische Wahl—dokumentiert und zugänglich. Wenn Wissenssysteme Nachvollziehbarkeit fordern sollten, sollten die Werkzeuge, die sie ermöglichen, auf dieselbe Weise gebaut werden.",
+      "visitHQ": "HQ besuchen"
     }
   }
 }

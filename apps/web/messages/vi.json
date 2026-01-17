@@ -111,7 +111,14 @@
     "footer": {
       "manifesto": "Tuyên ngôn",
       "github": "GitHub",
-      "copyright": "© {year} Coscientist"
+      "copyright": "© {year} Coscientist",
+      "hq": "Trụ sở"
+    },
+    "buildInPublic": {
+      "eyebrow": "Minh Bạch Triệt Để",
+      "heading": "Chúng tôi xây dựng công khai",
+      "description": "Mọi quyết định kiến trúc, mọi đánh đổi, mọi lựa chọn kỹ thuật—được ghi chép và có thể truy cập. Nếu các hệ thống tri thức phải yêu cầu khả năng truy xuất nguồn gốc, các công cụ hỗ trợ chúng cũng nên được xây dựng theo cùng cách đó.",
+      "visitHQ": "Truy cập trụ sở"
     }
   }
 }

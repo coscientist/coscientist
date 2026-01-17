@@ -111,7 +111,14 @@
     "footer": {
       "manifesto": "البيان",
       "github": "GitHub",
-      "copyright": "© {year} Coscientist"
+      "copyright": "© {year} Coscientist",
+      "hq": "المقر"
+    },
+    "buildInPublic": {
+      "eyebrow": "الشفافية الجذرية",
+      "heading": "نبني علناً",
+      "description": "كل قرار معماري، كل مقايضة، كل خيار تقني—موثق ويمكن الوصول إليه. إذا كانت أنظمة المعرفة يجب أن تطالب بإمكانية التتبع، فيجب بناء الأدوات التي تمكنها بنفس الطريقة.",
+      "visitHQ": "زيارة المقر"
     }
   }
 }

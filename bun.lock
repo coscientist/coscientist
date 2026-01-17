@@ -11,10 +11,12 @@
       "name": "@coscientist/hq",
       "version": "0.0.0",
       "dependencies": {
+        "@coscientist/assets": "workspace:*",
         "fumadocs-core": "^16.4.7",
         "fumadocs-mdx": "^14.2.5",
         "fumadocs-ui": "^16.4.7",
         "next": "16.1.1",
+        "next-intl": "^4.7.0",
         "react": "19.2.3",
         "react-dom": "19.2.3",
       },
@@ -36,6 +38,7 @@
       "version": "0.1.0",
       "dependencies": {
         "@base-ui/react": "^1.0.0",
+        "@coscientist/assets": "workspace:*",
         "@fontsource-variable/noto-serif-jp": "^5.2.9",
         "@fontsource-variable/noto-serif-kr": "^5.2.10",
         "@fontsource-variable/noto-serif-sc": "^5.2.10",
@@ -76,6 +79,17 @@
         "ultracite": "7.0.11",
       },
     },
+    "packages/assets": {
+      "name": "@coscientist/assets",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/react": "^19.0.0",
+        "typescript": "^5.7.0",
+      },
+      "peerDependencies": {
+        "react": ">=18",
+      },
+    },
     "packages/typescript-config": {
       "name": "@coscientist/typescript-config",
       "version": "0.0.0",
@@ -111,6 +125,8 @@
     "@clack/core": ["@clack/core@0.5.0", "", { "dependencies": { "picocolors": "^1.0.0", "sisteransi": "^1.0.5" } }, "sha512-p3y0FIOwaYRUPRcMO7+dlmLh8PSRcrjuTndsiA0WAFbWES0mLZlrjVoBRZ9DzkPFJZG6KGkJmoEAY0ZcVWTkow=="],
 
     "@clack/prompts": ["@clack/prompts@0.11.0", "", { "dependencies": { "@clack/core": "0.5.0", "picocolors": "^1.0.0", "sisteransi": "^1.0.5" } }, "sha512-pMN5FcrEw9hUkZA4f+zLlzivQSeQf5dRGJjSUbvVYDLvpKCdQx5OaknvKzgbtXOizhP+SJJJjqEbOe55uKKfAw=="],
+
+    "@coscientist/assets": ["@coscientist/assets@workspace:packages/assets"],
 
     "@coscientist/hq": ["@coscientist/hq@workspace:apps/hq"],
 

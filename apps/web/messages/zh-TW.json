@@ -111,7 +111,14 @@
     "footer": {
       "manifesto": "宣言",
       "github": "GitHub",
-      "copyright": "© {year} Coscientist"
+      "copyright": "© {year} Coscientist",
+      "hq": "總部"
+    },
+    "buildInPublic": {
+      "eyebrow": "徹底透明",
+      "heading": "我們公開構建",
+      "description": "每一個架構決策、每一個權衡、每一個技術選擇——都有文件記錄且可訪問。如果知識系統應該要求可追溯性,那麼構建這些系統的工具也應該以同樣的方式構建。",
+      "visitHQ": "訪問總部"
     }
   }
 }

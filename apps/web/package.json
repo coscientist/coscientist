@@ -11,6 +11,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@coscientist/assets": "workspace:*",
     "@base-ui/react": "^1.0.0",
     "@fontsource-variable/noto-serif-jp": "^5.2.9",
     "@fontsource-variable/noto-serif-kr": "^5.2.10",

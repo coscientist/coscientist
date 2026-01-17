@@ -1,29 +1,33 @@
-import { cn } from "@/lib/utils"
+import type { CSSProperties } from "react"
 
 interface LogoProps {
   className?: string
   size?: number
+  style?: CSSProperties
 }
 
-export function Logo({ className, size = 20 }: LogoProps) {
+/**
+ * Coscientist Logo - The Monolith
+ *
+ * 3 vertical bars with decreasing opacity — stacked monoliths receding into depth.
+ * Inspired by Kubrick's Monolith from 2001: A Space Odyssey.
+ */
+export function Logo({ className, size = 20, style }: LogoProps) {
   return (
     <svg
       aria-label="Coscientist logo"
-      className={cn("text-foreground", className)}
+      className={className}
       fill="none"
       height={size}
       role="img"
+      style={style}
       viewBox="0 0 32 32"
       width={size}
       xmlns="http://www.w3.org/2000/svg"
     >
+      <rect fill="currentColor" height="32" width="32" />
       <rect
-        className="fill-neutral-900 dark:fill-neutral-100"
-        height="32"
-        width="32"
-      />
-      <rect
-        className="fill-white dark:fill-neutral-900"
+        fill="var(--logo-bar-color, #fff)"
         fillOpacity="1"
         height="20"
         width="6"
@@ -31,7 +35,7 @@ export function Logo({ className, size = 20 }: LogoProps) {
         y="6"
       />
       <rect
-        className="fill-white dark:fill-neutral-900"
+        fill="var(--logo-bar-color, #fff)"
         fillOpacity="0.5"
         height="20"
         width="6"
@@ -39,7 +43,7 @@ export function Logo({ className, size = 20 }: LogoProps) {
         y="6"
       />
       <rect
-        className="fill-white dark:fill-neutral-900"
+        fill="var(--logo-bar-color, #fff)"
         fillOpacity="0.2"
         height="20"
         width="6"

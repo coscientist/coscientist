@@ -111,7 +111,14 @@
     "footer": {
       "manifesto": "Manifest",
       "github": "GitHub",
-      "copyright": "© {year} Coscientist"
+      "copyright": "© {year} Coscientist",
+      "hq": "HQ"
+    },
+    "buildInPublic": {
+      "eyebrow": "Radicale Transparantie",
+      "heading": "We bouwen in het openbaar",
+      "description": "Elke architectuurbeslissing, elke afweging, elke technische keuze—gedocumenteerd en toegankelijk. Als kennissystemen traceerbaarheid moeten eisen, moeten de tools die ze mogelijk maken op dezelfde manier worden gebouwd.",
+      "visitHQ": "Bezoek HQ"
     }
   }
 }

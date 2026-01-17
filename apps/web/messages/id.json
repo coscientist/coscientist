@@ -111,7 +111,14 @@
     "footer": {
       "manifesto": "Manifesto",
       "github": "GitHub",
-      "copyright": "© {year} Coscientist"
+      "copyright": "© {year} Coscientist",
+      "hq": "HQ"
+    },
+    "buildInPublic": {
+      "eyebrow": "Transparansi Radikal",
+      "heading": "Kami membangun secara terbuka",
+      "description": "Setiap keputusan arsitektur, setiap trade-off, setiap pilihan teknis—didokumentasikan dan dapat diakses. Jika sistem pengetahuan harus menuntut ketertelusuran, alat yang memungkinkannya harus dibangun dengan cara yang sama.",
+      "visitHQ": "Kunjungi HQ"
     }
   }
 }

@@ -1,0 +1,28 @@
+{
+  "name": "@coscientist/assets",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./logo": {
+      "types": "./dist/logo.d.ts",
+      "import": "./dist/logo.js"
+    },
+    "./static/*": "./static/*"
+  },
+  "files": [
+    "dist",
+    "static"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "type-check": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "typescript": "^5.7.0"
+  }
+}

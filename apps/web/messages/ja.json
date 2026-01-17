@@ -111,7 +111,14 @@
     "footer": {
       "manifesto": "マニフェスト",
       "github": "GitHub",
-      "copyright": "© {year} Coscientist"
+      "copyright": "© {year} Coscientist",
+      "hq": "本部"
+    },
+    "buildInPublic": {
+      "eyebrow": "徹底的な透明性",
+      "heading": "私たちは公開で構築します",
+      "description": "すべてのアーキテクチャの決定、すべてのトレードオフ、すべての技術的選択—文書化され、アクセス可能です。知識システムがトレーサビリティを要求すべきなら、それらを可能にするツールも同じ方法で構築されるべきです。",
+      "visitHQ": "本部を訪問"
     }
   }
 }

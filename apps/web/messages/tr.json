@@ -111,7 +111,14 @@
     "footer": {
       "manifesto": "Manifesto",
       "github": "GitHub",
-      "copyright": "© {year} Coscientist"
+      "copyright": "© {year} Coscientist",
+      "hq": "Merkez"
+    },
+    "buildInPublic": {
+      "eyebrow": "Radikal Şeffaflık",
+      "heading": "Halka açık inşa ediyoruz",
+      "description": "Her mimari karar, her ödün, her teknik seçim—belgelenmiş ve erişilebilir. Bilgi sistemleri izlenebilirlik talep etmeliyse, onları mümkün kılan araçlar da aynı şekilde inşa edilmelidir.",
+      "visitHQ": "Merkezi Ziyaret Et"
     }
   }
 }

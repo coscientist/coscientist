@@ -13,6 +13,7 @@ export function Footer() {
 
   const links = [
     { label: t("manifesto"), href: "/manifesto" },
+    { label: t("hq"), href: "https://hq.coscientist.app", external: true },
     {
       label: t("github"),
       href: "https://github.com/coscientist/coscientist",

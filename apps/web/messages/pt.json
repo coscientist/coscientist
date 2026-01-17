@@ -111,7 +111,14 @@
     "footer": {
       "manifesto": "Manifesto",
       "github": "GitHub",
-      "copyright": "© {year} Coscientist"
+      "copyright": "© {year} Coscientist",
+      "hq": "HQ"
+    },
+    "buildInPublic": {
+      "eyebrow": "Transparência Radical",
+      "heading": "Construímos em público",
+      "description": "Cada decisão arquitetônica, cada trade-off, cada escolha técnica—documentada e acessível. Se os sistemas de conhecimento devem exigir rastreabilidade, as ferramentas que os habilitam devem ser construídas da mesma forma.",
+      "visitHQ": "Visitar HQ"
     }
   }
 }

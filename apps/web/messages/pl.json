@@ -111,7 +111,14 @@
     "footer": {
       "manifesto": "Manifest",
       "github": "GitHub",
-      "copyright": "© {year} Coscientist"
+      "copyright": "© {year} Coscientist",
+      "hq": "Siedziba"
+    },
+    "buildInPublic": {
+      "eyebrow": "Radykalna Przejrzystość",
+      "heading": "Budujemy publicznie",
+      "description": "Każda decyzja architektoniczna, każdy kompromis, każdy wybór techniczny—udokumentowany i dostępny. Jeśli systemy wiedzy powinny wymagać identyfikowalności, narzędzia, które je umożliwiają, również powinny być budowane w ten sam sposób.",
+      "visitHQ": "Odwiedź siedzibę"
     }
   }
 }

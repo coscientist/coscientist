@@ -103,6 +103,12 @@
         "teams": "Teams who need reproducible knowledge trails"
       }
     },
+    "buildInPublic": {
+      "eyebrow": "Radical Transparency",
+      "heading": "We build in public",
+      "description": "Every architecture decision, every tradeoff, every technical choice—documented and accessible. If knowledge systems should demand traceability, the tools that enable them should be built the same way.",
+      "visitHQ": "Visit HQ"
+    },
     "cta": {
       "heading": "The Encyclopedia Galactica was fiction.\nWe're building the infrastructure.",
       "readManifesto": "Read the Manifesto",
@@ -110,6 +116,7 @@
     },
     "footer": {
       "manifesto": "Manifesto",
+      "hq": "HQ",
       "github": "GitHub",
       "copyright": "© {year} Coscientist"
     }

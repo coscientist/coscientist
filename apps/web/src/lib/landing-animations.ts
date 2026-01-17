@@ -4,9 +4,6 @@ import { useRef } from "react"
 
 import { springSubtle } from "./animations"
 
-// biome-ignore lint/performance/noBarrelFile: Intentional re-export for landing page animation utilities
-export { springQuick, springSubtle } from "./animations"
-
 export const sectionVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },

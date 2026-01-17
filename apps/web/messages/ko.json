@@ -111,7 +111,14 @@
     "footer": {
       "manifesto": "선언문",
       "github": "GitHub",
-      "copyright": "© {year} Coscientist"
+      "copyright": "© {year} Coscientist",
+      "hq": "본부"
+    },
+    "buildInPublic": {
+      "eyebrow": "급진적 투명성",
+      "heading": "우리는 공개적으로 구축합니다",
+      "description": "모든 아키텍처 결정, 모든 트레이드오프, 모든 기술적 선택—문서화되고 접근 가능합니다. 지식 시스템이 추적 가능성을 요구해야 한다면, 이를 가능하게 하는 도구도 같은 방식으로 구축되어야 합니다.",
+      "visitHQ": "본부 방문"
     }
   }
 }

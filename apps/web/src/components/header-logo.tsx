@@ -1,6 +1,6 @@
 "use client"
 
-import { Logo } from "@/components/logo"
+import { Logo } from "@coscientist/assets/logo"
 import { Link, usePathname } from "@/i18n/navigation"
 
 interface HeaderLogoProps {

@@ -292,3 +292,29 @@ Run TypeScript/build checks if you want validation on the refactor.
 ### Notes
 
 Build logs show non-blocking warnings about `--localstorage-file` without a valid path during `@coscientist/web` static generation.
+
+---
+
+## Node LTS Pin & Build Warning Removal
+
+**Scope**: `apps/web`, repo root
+
+### Changes Made
+
+| File | Change |
+| ---- | ------ |
+| `.prototools` | Pinned Node.js to 24.13.0 for consistent LTS usage. |
+| `package.json` | Restricted Node engine to `>=24 <25` to avoid Node 25 warnings. |
+| `apps/web/package.json` | Restored `build` script to `next build` after removing wrapper. |
+| `apps/web/scripts/next-build.js` | Removed build wrapper (no longer needed). |
+
+### Technical Decisions
+
+1. **Use Node 24 LTS**: Node 25 emits `--localstorage-file` warnings during Next.js static generation; pinning Node 24 resolves the issue.
+2. **Proto Pinning**: `.prototools` keeps the local toolchain consistent without requiring nvm/volta.
+
+### Verification
+
+- TypeScript: Pass (via `proto exec --tools-from-config -- bun run build`)
+- Build: Pass (via `proto exec --tools-from-config -- bun run build`)
+- Tests: Not run

@@ -27,6 +27,66 @@ evokes stacked monoliths receding into depth.
 4. **Duplicate allowed** - Clicking an existing note appends it again
 5. **URL-synced state** - Stack state persists in `?stack=a,b,c&focus=N` format
 
+## Work Logs (MANDATORY)
+
+After completing any work, AI agents **MUST** create a work log entry in HQ, in both English and Korean.
+
+### Location
+
+`apps/hq/content/docs/logs/YYYYMMDD.mdx`
+
+**IMPORTANT**: Each day should have **exactly ONE log entry per language**. If you work on multiple tasks in a single day, consolidate all work into a single file with multiple sections. Read other Work Logs for styles, and match them. If you find discrepancy in English and Korean, raise the issue to the developer. If language entry is missing, create it.
+
+### Format
+
+```mdx
+---
+title: "YYYY-MM-DD"
+description: "Brief summary of work done"
+---
+
+# Work Log: YYYY-MM-DD
+
+## [Feature/Task Name]
+
+**Scope**: `apps/web` or relevant path
+
+### Changes Made
+
+| File           | Change                |
+| -------------- | --------------------- |
+| `path/to/file` | Description of change |
+
+### Technical Decisions
+
+1. **Decision**: Rationale
+
+### Verification
+
+- TypeScript: Pass/Fail
+- Build: Pass/Fail
+- Tests: Pass/Fail
+
+### Next Steps
+
+Any follow-up actions required.
+```
+
+### When to Log
+
+- New feature implementations
+- Significant refactors
+- Integration of new libraries/services
+- Architecture changes
+- Bug fixes with non-trivial investigation
+
+### When NOT to Log
+
+- Trivial typo fixes
+- Single-line config changes
+- Documentation-only updates (unless significant)
+
+
 ## Tech Stack
 
 | Layer         | Choice                            | Why                                                              |
@@ -535,63 +595,5 @@ it, th, pl, uk, nl
 | Focus          | `focus-visible:ring-1 ring-primary/20 ring-inset` |
 | Semantic       | `<article>` for panes, `<aside>` for list         |
 
-## Work Logs (MANDATORY)
-
-After completing any work, AI agents **MUST** create a work log entry in HQ, in both English and Korean.
-
-### Location
-
-`apps/hq/content/docs/logs/YYYYMMDD.mdx`
-
-**IMPORTANT**: Each day should have **exactly ONE log entry per language**. If you work on multiple tasks in a single day, consolidate all work into a single file with multiple sections. Read other Work Logs for styles, and match them. If you find discrepancy in English and Korean, raise the issue to the developer. If language entry is missing, create it.
-
-### Format
-
-```mdx
----
-title: "YYYY-MM-DD"
-description: "Brief summary of work done"
----
-
-# Work Log: YYYY-MM-DD
-
-## [Feature/Task Name]
-
-**Scope**: `apps/web` or relevant path
-
-### Changes Made
-
-| File           | Change                |
-| -------------- | --------------------- |
-| `path/to/file` | Description of change |
-
-### Technical Decisions
-
-1. **Decision**: Rationale
-
-### Verification
-
-- TypeScript: Pass/Fail
-- Build: Pass/Fail
-- Tests: Pass/Fail
-
-### Next Steps
-
-Any follow-up actions required.
-```
-
-### When to Log
-
-- New feature implementations
-- Significant refactors
-- Integration of new libraries/services
-- Architecture changes
-- Bug fixes with non-trivial investigation
-
-### When NOT to Log
-
-- Trivial typo fixes
-- Single-line config changes
-- Documentation-only updates (unless significant)
 
 _Last updated: January 2026_

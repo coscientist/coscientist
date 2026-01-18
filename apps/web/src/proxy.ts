@@ -1,4 +1,4 @@
-import type { NextRequest } from "next/server"
+import { type NextRequest, NextResponse } from "next/server"
 import createMiddleware from "next-intl/middleware"
 import { type Locale, routing } from "./i18n/routing"
 
@@ -10,7 +10,10 @@ export default function proxy(request: NextRequest) {
   const localeParam = searchParams.get("locale") as Locale | null
 
   if (localeParam && routing.locales.includes(localeParam)) {
-    const response = handleI18nRouting(request)
+    const url = new URL(request.url)
+    url.searchParams.delete("locale")
+
+    const response = NextResponse.redirect(url)
     response.cookies.set(LOCALE_COOKIE, localeParam, {
       path: "/",
       maxAge: 60 * 60 * 24 * 365,

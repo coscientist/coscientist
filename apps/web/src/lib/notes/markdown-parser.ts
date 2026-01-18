@@ -3,8 +3,19 @@ import { remark } from "remark"
 import gfm from "remark-gfm"
 import html from "remark-html"
 
+export interface NoteFrontmatter {
+  title: string
+  description?: string
+  sourceLocale?: string
+  sourceHash?: string
+  translatedAt?: string
+  createdAt?: string
+  updatedAt?: string
+  [key: string]: unknown // Allow additional fields
+}
+
 export interface ParsedNote {
-  data: Record<string, any>
+  data: NoteFrontmatter
   content: string
   contentHtml: string
 }
@@ -22,7 +33,7 @@ export async function parseMarkdown(fileContents: string): Promise<ParsedNote> {
   const contentHtml = processedContent.toString()
 
   return {
-    data,
+    data: data as NoteFrontmatter,
     content,
     contentHtml,
   }

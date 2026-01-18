@@ -13,7 +13,11 @@ export default async function Layout({
   const { lang } = await params
 
   return (
-    <DocsLayout {...baseOptions(lang)} tree={source.getPageTree(lang)}>
+    <DocsLayout
+      {...baseOptions(lang)}
+      sidebar={{ defaultOpenLevel: 1 }}
+      tree={source.getPageTree(lang)}
+    >
       {children}
     </DocsLayout>
   )

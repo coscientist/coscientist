@@ -1,3 +1,5 @@
+import "server-only"
+
 import type { Note } from "@/lib/types"
 import { getAllNoteSlugs, readNoteFile } from "./file-io"
 import { extractOutboundLinks } from "./link-extractor"

@@ -1,3 +1,5 @@
+import "server-only"
+
 import type { BacklinkInfo, Note } from "@/lib/types"
 import { extractExcerpt } from "./link-extractor"
 import { loadAllNotes } from "./note-loader"

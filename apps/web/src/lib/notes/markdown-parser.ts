@@ -1,3 +1,5 @@
+import "server-only"
+
 import matter from "gray-matter"
 import { remark } from "remark"
 import gfm from "remark-gfm"

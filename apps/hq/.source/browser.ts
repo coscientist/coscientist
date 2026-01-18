@@ -11,6 +11,10 @@ const create = browser<
 const browserCollections = {
   docs: create.doc("docs", {
     "index.mdx": () => import("../content/docs/index.mdx?collection=docs"),
+    "logs/20260118.ko.mdx": () =>
+      import("../content/docs/logs/20260118.ko.mdx?collection=docs"),
+    "logs/20260118.mdx": () =>
+      import("../content/docs/logs/20260118.mdx?collection=docs"),
     "adr/001-unified-block-model.ko.mdx": () =>
       import(
         "../content/docs/adr/001-unified-block-model.ko.mdx?collection=docs"
@@ -67,8 +71,6 @@ const browserCollections = {
       import(
         "../content/docs/adr/008-platform-boundaries-expansion.mdx?collection=docs"
       ),
-    "logs/20260118.mdx": () =>
-      import("../content/docs/logs/20260118.mdx?collection=docs"),
   }),
 }
 export default browserCollections

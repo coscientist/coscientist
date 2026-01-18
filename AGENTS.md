@@ -537,7 +537,7 @@ it, th, pl, uk, nl
 
 ## Work Logs (MANDATORY)
 
-After completing significant work, AI agents **MUST** create a work log entry in HQ, in both English and Korean.
+After completing any work, AI agents **MUST** create a work log entry in HQ, in both English and Korean.
 
 ### Location
 

@@ -7,7 +7,8 @@
     "brand": "Coscientist",
     "brandWithManifesto": "Coscientist-Manifest",
     "github": "GitHub (öffnet in neuem Tab)",
-    "twitter": "X (Twitter) (öffnet in neuem Tab)"
+    "twitter": "X (Twitter) (öffnet in neuem Tab)",
+    "joinWaitlist": "Join Waitlist"
   },
   "allNotes": {
     "title": "Alle Notizen",

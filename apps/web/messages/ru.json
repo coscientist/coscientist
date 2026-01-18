@@ -7,7 +7,8 @@
     "brand": "Coscientist",
     "brandWithManifesto": "Манифест косайентиста",
     "github": "GitHub (откроется в новой вкладке)",
-    "twitter": "X (Twitter) (откроется в новой вкладке)"
+    "twitter": "X (Twitter) (откроется в новой вкладке)",
+    "joinWaitlist": "Join Waitlist"
   },
   "allNotes": {
     "title": "Все заметки",

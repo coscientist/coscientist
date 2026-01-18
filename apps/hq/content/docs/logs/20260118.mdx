@@ -1,6 +1,6 @@
 ---
 title: "2026-01-18"
-description: "Clerk authentication integration and implementation patterns for apps/web"
+description: "Clerk authentication & waitlist integration for apps/web"
 ---
 
 ## Clerk Authentication Integration & Implementation
@@ -132,3 +132,80 @@ User must add real Clerk API keys to `.env.local`:
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
 CLERK_SECRET_KEY=sk_test_...
 ```
+
+---
+
+## Clerk Waitlist Integration
+
+**Scope**: `apps/web`
+
+### Changes Made
+
+| File | Change |
+| ---- | ------ |
+| `src/app/[locale]/layout.tsx` | Added `waitlistUrl="/"` prop to `<ClerkProvider>` |
+| `src/components/layout/app-header.tsx` | Replaced `SignedIn`/`SignedOut`/`SignInButton`/`SignUpButton` with `useClerk().openWaitlist()` modal trigger |
+| `src/components/landing/hero-cta.tsx` | Replaced custom form with Clerk's native `<Waitlist />` component |
+| `messages/*.json` (all 25 locales) | Added `header.joinWaitlist` translation key, removed unused custom form keys |
+
+### Technical Decisions
+
+1. **Native Clerk `<Waitlist />` Component**: Instead of building a custom waitlist form, leveraged Clerk's built-in `<Waitlist />` component from `@clerk/nextjs`. This provides:
+   - Consistent styling with other Clerk components
+   - Built-in email validation and submission handling
+   - Integration with Clerk Dashboard for waitlist management
+   - No custom backend needed
+
+2. **Modal via `openWaitlist()`**: The header "Join Waitlist" button uses `useClerk().openWaitlist()` to open Clerk's waitlist modal, matching the previous UX pattern where SignIn/SignUp opened modals.
+
+3. **Inline Hero Placement**: The hero section shows `<Waitlist />` component inline below the main CTAs, providing immediate visibility for waitlist signup.
+
+4. **Removed Custom Form Code**: Deleted the custom useState-based form implementation in favor of Clerk's native solution, reducing code complexity and maintenance burden.
+
+### Implementation Pattern
+
+#### Header Waitlist Button
+
+```typescript
+"use client"
+import { useClerk } from "@clerk/nextjs"
+
+export function AppHeader() {
+  const { openWaitlist } = useClerk()
+  
+  return (
+    <Button onClick={() => openWaitlist()}>
+      Join Waitlist
+    </Button>
+  )
+}
+```
+
+#### Hero Inline Waitlist
+
+```typescript
+import { Waitlist } from "@clerk/nextjs"
+
+export function HeroCTA() {
+  return (
+    <div>
+      {/* Primary CTAs */}
+      <span>or</span>
+      <Waitlist />
+    </div>
+  )
+}
+```
+
+### Verification
+
+- TypeScript: Pass
+- LSP Diagnostics: 0 errors
+- Build: Pass (3760 pages generated)
+
+### Prerequisites
+
+User must enable Waitlist mode in Clerk Dashboard:
+1. Go to **User & Authentication** → **Restrictions** (or **Waitlist settings**)
+2. Enable **Waitlist** mode
+3. Configure auto-approve or manual review as needed

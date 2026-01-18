@@ -1,5 +1,6 @@
 "use client"
 
+import { Waitlist } from "@clerk/nextjs"
 import { motion } from "motion/react"
 import Link from "next/link"
 import { useTranslations } from "next-intl"
@@ -15,10 +16,12 @@ export function HeroCTA() {
   return (
     <motion.div
       animate={{ opacity: 1, y: 0 }}
+      className="flex flex-col items-center gap-6"
+      id="waitlist"
       initial={{ opacity: 0, y: 20 }}
       transition={{ ...springSubtle, delay: 0.1 }}
     >
-      <Group className="flex flex-col items-center sm:flex-row">
+      <Group className="flex flex-col items-center flex-row">
         <Button render={<Link href="/manifesto" />} size="lg">
           {t("enterManifesto")}{" "}
           <IconChevronRightOutline18 className="ml-1 size-4" />
@@ -38,6 +41,11 @@ export function HeroCTA() {
           {t("github")} <IconChevronRightOutline18 className="ml-1 size-4" />
         </Button>
       </Group>
+
+      <div className="flex flex-col items-center gap-4 text-center">
+        <span className="text-muted-foreground text-sm">or</span>
+        <Waitlist />
+      </div>
     </motion.div>
   )
 }

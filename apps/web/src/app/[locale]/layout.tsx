@@ -53,7 +53,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   ])
 
   return (
-    <ClerkProvider>
+    <ClerkProvider waitlistUrl="/">
       <RootLayoutWrapper direction={direction} locale={locale}>
         <Suspense>
           <Providers messages={messages}>

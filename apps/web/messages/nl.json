@@ -7,7 +7,8 @@
     "brand": "Coscientist",
     "brandWithManifesto": "Coscientist Manifest",
     "github": "GitHub (opent in nieuw tabblad)",
-    "twitter": "X (Twitter) (opent in nieuw tabblad)"
+    "twitter": "X (Twitter) (opent in nieuw tabblad)",
+    "joinWaitlist": "Join Waitlist"
   },
   "allNotes": {
     "title": "Alle notities",
@@ -24,7 +25,6 @@
     "closePane": "Paneel {index} sluiten",
     "editOnGitHub": "Bewerken op GitHub"
   },
-
   "backlinks": {
     "singular": "{count} notitie linkt hiernaar",
     "plural": "{count} notities linken hiernaar"
@@ -111,7 +111,6 @@
     },
     "footer": {
       "manifesto": "Manifest",
-
       "github": "GitHub",
       "copyright": "© {year} Coscientist",
       "hq": "HQ"

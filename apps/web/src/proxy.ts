@@ -6,7 +6,7 @@ import { type Locale, routing } from "./i18n/routing"
 const LOCALE_COOKIE = "NEXT_LOCALE"
 const handleI18nRouting = createMiddleware(routing)
 
-const isProtectedRoute = createRouteMatcher(["/*/profile(.*)"])
+const isProtectedRoute = createRouteMatcher(["/profile(.*)"])
 
 export default clerkMiddleware(async (auth, request: NextRequest) => {
   const { searchParams } = request.nextUrl

@@ -17,7 +17,6 @@ interface NotePaneProps {
   description?: string
   contentHtml: string
   index: number
-  isFocused?: boolean
   isClosable?: boolean
   backlinks: BacklinkInfo[]
   onLinkClick: (slug: string, fromIndex: number) => void
@@ -31,7 +30,6 @@ export const NotePane = memo(function NotePane({
   description,
   contentHtml,
   index,
-  isFocused,
   isClosable = false,
   backlinks,
   onLinkClick,
@@ -75,7 +73,6 @@ export const NotePane = memo(function NotePane({
   return (
     <PaneWrapper
       index={index}
-      isFocused={isFocused}
       paneRef={paneRef}
       prefersReducedMotion={prefersReducedMotion}
       title={title}

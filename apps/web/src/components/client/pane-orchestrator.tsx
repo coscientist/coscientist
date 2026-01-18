@@ -4,10 +4,7 @@ import { AnimatePresence, LayoutGroup } from "motion/react"
 import { memo, useCallback } from "react"
 import { AllNotesList } from "@/components/all-notes-list"
 import { NotePane } from "@/components/pane/note-pane"
-import {
-  useKeyboardFocusIndex,
-  useSetKeyboardFocusIndex,
-} from "@/lib/stores/pane-ui-store"
+import { useSetKeyboardFocusIndex } from "@/lib/stores/pane-ui-store"
 import type { NotePaneData, NoteSummary } from "@/lib/types"
 import { useNoteStackContext } from "./note-stack-provider"
 
@@ -21,7 +18,6 @@ export const PaneOrchestrator = memo(function PaneOrchestrator({
   noteSummaries,
 }: PaneOrchestratorProps) {
   const { stack, pushNote, focusPane, setStack } = useNoteStackContext()
-  const keyboardFocusIndex = useKeyboardFocusIndex()
   const setKeyboardFocusIndex = useSetKeyboardFocusIndex()
 
   const handleLinkClick = useCallback(
@@ -70,7 +66,6 @@ export const PaneOrchestrator = memo(function PaneOrchestrator({
             description={pane.description}
             index={index}
             isClosable={index > 0}
-            isFocused={index === keyboardFocusIndex}
             key={`pane-${index}-${pane.slug}`}
             onClose={handleClosePane}
             onExpand={handleExpandPane}

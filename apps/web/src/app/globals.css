@@ -8,6 +8,8 @@
 }
 
 :root {
+  color-scheme: light;
+
   --pane-spine-width: 2.5rem;
   --pane-min-width: 20rem;
 
@@ -119,6 +121,8 @@ body {
 }
 
 .dark {
+  color-scheme: dark;
+
   --accent: --alpha(var(--color-white) / 4%);
   --accent-foreground: var(--color-neutral-100);
   --background: #0a0a0a;

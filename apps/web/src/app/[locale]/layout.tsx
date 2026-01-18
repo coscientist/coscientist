@@ -1,6 +1,7 @@
 import { ClerkProvider } from "@clerk/nextjs"
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import type { Viewport } from "next"
 import { notFound } from "next/navigation"
 import { hasLocale } from "next-intl"
 import {
@@ -17,6 +18,16 @@ import { Providers } from "@/components/providers"
 import { getDirection, type Locale, routing } from "@/i18n/routing"
 
 export { generateMetadata } from "./layout-metadata"
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+  ],
+  colorScheme: "light dark",
+  width: "device-width",
+  initialScale: 1,
+}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }))

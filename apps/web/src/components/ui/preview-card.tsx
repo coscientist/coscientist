@@ -6,9 +6,16 @@ import { cn } from "@/lib/utils"
 
 const PreviewCard = PreviewCardPrimitive.Root
 
-function PreviewCardTrigger({ ...props }: PreviewCardPrimitive.Trigger.Props) {
+function PreviewCardTrigger({
+  className,
+  ...props
+}: PreviewCardPrimitive.Trigger.Props) {
   return (
-    <PreviewCardPrimitive.Trigger data-slot="preview-card-trigger" {...props} />
+    <PreviewCardPrimitive.Trigger
+      className={cn("touch-manipulation", className)}
+      data-slot="preview-card-trigger"
+      {...props}
+    />
   )
 }
 

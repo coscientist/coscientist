@@ -4,6 +4,7 @@ import createNextIntlPlugin from "next-intl/plugin"
 
 const nextConfig: NextConfig = {
   cacheComponents: true,
+  transpilePackages: ["motion"],
   images: {
     qualities: [100, 75],
   },

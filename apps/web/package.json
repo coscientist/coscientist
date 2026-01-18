@@ -11,7 +11,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@base-ui/react": "^1.0.0",
+    "@base-ui/react": "^1.1.0",
     "@clerk/nextjs": "^6.36.8",
     "@coscientist/assets": "workspace:*",
     "@fontsource-variable/noto-serif-jp": "^5.2.9",

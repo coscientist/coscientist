@@ -1,0 +1,43 @@
+"use client"
+
+import { motion } from "motion/react"
+import Link from "next/link"
+import { useTranslations } from "next-intl"
+import { IconChevronRightOutline18 } from "nucleo-ui-outline-18"
+
+import { Button } from "@/components/ui/button"
+import { Group } from "@/components/ui/group"
+import { springSubtle } from "@/lib/animations"
+
+export function HeroCTA() {
+  const t = useTranslations("landing.hero")
+
+  return (
+    <motion.div
+      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 20 }}
+      transition={{ ...springSubtle, delay: 0.1 }}
+    >
+      <Group className="flex flex-col items-center sm:flex-row">
+        <Button render={<Link href="/manifesto" />} size="lg">
+          {t("enterManifesto")}{" "}
+          <IconChevronRightOutline18 className="ml-1 size-4" />
+        </Button>
+        <Button
+          render={
+            // biome-ignore lint/a11y/useAnchorContent: Content provided via Button children
+            <a
+              href="https://github.com/coscientist/coscientist"
+              rel="noopener noreferrer"
+              target="_blank"
+            />
+          }
+          size="lg"
+          variant="outline"
+        >
+          {t("github")} <IconChevronRightOutline18 className="ml-1 size-4" />
+        </Button>
+      </Group>
+    </motion.div>
+  )
+}

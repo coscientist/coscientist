@@ -1,0 +1,88 @@
+"use client"
+
+import { useTranslations } from "next-intl"
+import { useEffect, useRef } from "react"
+import { ScrollArea } from "@/components/ui/scroll-area"
+import { useReducedMotion } from "@/hooks/use-reduced-motion"
+import { springQuick, springSubtle } from "@/lib/animations"
+import type { NoteSummary } from "@/lib/types"
+import { usePaneCollapse } from "../pane-container"
+import { useNotesListState } from "./list-state"
+import { NoteItem } from "./note-item"
+import { PaneWrapper } from "./pane-wrapper"
+
+interface AllNotesListProps {
+  notes: NoteSummary[]
+  currentStack: string[]
+  index: number
+  onNoteClick: (slug: string) => void
+  onExpand?: () => void
+}
+
+export function AllNotesList({
+  notes,
+  currentStack,
+  index,
+  onNoteClick,
+  onExpand,
+}: AllNotesListProps) {
+  const { collapsedIndices, registerPaneRef } = usePaneCollapse()
+  const isCollapsed = collapsedIndices.has(index)
+  const prefersReducedMotion = useReducedMotion()
+  const t = useTranslations("allNotes")
+  const tPane = useTranslations("notePane")
+  const paneRef = useRef<HTMLElement>(null)
+
+  const { filteredNotes, stackIndexBySlug } = useNotesListState({
+    notes,
+    currentStack,
+  })
+
+  useEffect(() => {
+    registerPaneRef(index, paneRef.current)
+    return () => registerPaneRef(index, null)
+  }, [index, registerPaneRef])
+
+  const transition = prefersReducedMotion ? { duration: 0 } : springSubtle
+  const quickTransition = prefersReducedMotion ? { duration: 0 } : springQuick
+
+  return (
+    <PaneWrapper
+      expandLabel={`${tPane("expand")} ${t("title")}`}
+      index={index}
+      isCollapsed={isCollapsed}
+      onExpand={onExpand}
+      paneRef={paneRef}
+      prefersReducedMotion={prefersReducedMotion}
+      quickTransition={quickTransition}
+      title={t("title")}
+      transition={transition}
+    >
+      <ScrollArea className="relative z-0 h-full">
+        <div className="sticky top-0 z-sticky border-border/50 border-b bg-background/80 px-4 pt-4 pb-2 backdrop-blur-md">
+          <h2 className="font-normal text-2xl text-foreground tracking-tight dark:bg-gradient-to-br dark:from-white dark:via-white dark:to-neutral-500 dark:bg-clip-text dark:text-transparent">
+            {t("title")}
+          </h2>
+          <p className="mt-1 font-mono text-muted-foreground text-sm">
+            {t("noteCount", { count: filteredNotes.length })}
+          </p>
+        </div>
+        <div className="px-8 py-6">
+          <ul className="space-y-1">
+            {filteredNotes.map((note) => (
+              <NoteItem
+                currentlyOpenLabel={(pos) =>
+                  t("currentlyOpen", { position: pos })
+                }
+                key={note.slug}
+                note={note}
+                onNoteClick={onNoteClick}
+                stackPosition={stackIndexBySlug.get(note.slug)}
+              />
+            ))}
+          </ul>
+        </div>
+      </ScrollArea>
+    </PaneWrapper>
+  )
+}

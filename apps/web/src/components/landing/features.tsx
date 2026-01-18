@@ -5,28 +5,9 @@ import { useTranslations } from "next-intl"
 
 import { itemVariants, useSectionAnimation } from "@/lib/landing-animations"
 import { AmbientGradient } from "./ambient-gradient"
+import { FeatureCard } from "./feature-card"
+import { getFeatures } from "./features-data"
 import { Container, Eyebrow, Subheading } from "./primitives"
-
-interface FeatureProps {
-  title: string
-  description: string
-}
-
-function Feature({
-  title,
-  description,
-  variants,
-}: FeatureProps & { variants: import("motion/react").Variants }) {
-  return (
-    <motion.div
-      className="flex flex-col gap-2 overflow-hidden border border-black/[0.06] bg-white p-6 shadow-black/[0.04] shadow-lg [border-radius:32px] dark:border-white/[0.06] dark:bg-black dark:shadow-black/[0.08]"
-      variants={variants}
-    >
-      <h3 className="font-semibold text-foreground">{title}</h3>
-      <p className="text-muted-foreground text-sm/7">{description}</p>
-    </motion.div>
-  )
-}
 
 export function Features() {
   const t = useTranslations("landing.features")
@@ -38,23 +19,7 @@ export function Features() {
     itemVariantsWithTransition,
   } = useSectionAnimation({ amount: 0.2 })
 
-  const features = [
-    {
-      id: "dialecticalGraph",
-      title: t("dialecticalGraph.title"),
-      description: t("dialecticalGraph.description"),
-    },
-    {
-      id: "rebuttalFirst",
-      title: t("rebuttalFirst.title"),
-      description: t("rebuttalFirst.description"),
-    },
-    {
-      id: "multilingual",
-      title: t("multilingual.title"),
-      description: t("multilingual.description"),
-    },
-  ]
+  const features = getFeatures(t)
 
   return (
     <section
@@ -91,7 +56,7 @@ export function Features() {
           variants={staggerContainerVariants}
         >
           {features.map((feature) => (
-            <Feature
+            <FeatureCard
               key={feature.id}
               {...feature}
               variants={itemVariantsWithTransition}

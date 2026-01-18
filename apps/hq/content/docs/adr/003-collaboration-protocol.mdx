@@ -2,8 +2,6 @@
 title: "ADR 3: Collaboration Protocol (ProseMirror OT, Step Batching, Conflict Handling)"
 ---
 
-# ADR 3: Collaboration Protocol (ProseMirror OT, Step Batching, Conflict Handling)
-
 ## Context
 
 Multiple users need to **edit the same block or document in real-time**, seeing each other's changes instantly. We require a collaboration protocol that merges concurrent edits reliably. ProseMirror was chosen as the rich-text editing framework, and it comes with a collaboration module based on Operational Transformation (OT) in a centralized fashion.

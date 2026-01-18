@@ -2,8 +2,6 @@
 title: "ADR 3: 협업 프로토콜 (ProseMirror OT, Step 일괄 처리, 충돌 해결)"
 ---
 
-# ADR 3: 협업 프로토콜 (ProseMirror OT, Step 일괄 처리, 충돌 해결)
-
 ## 배경
 
 여러 사용자가 **같은 Block이나 문서를 실시간으로 편집**하면서 서로의 변경 사항을 즉시 봐야 한다. 동시 편집을 안정적으로 병합하는 협업 프로토콜이 필요하다. 리치 텍스트 편집 프레임워크로 ProseMirror를 선택했고 중앙 집중식 Operational Transformation(OT) 기반 협업 모듈이 함께 온다.

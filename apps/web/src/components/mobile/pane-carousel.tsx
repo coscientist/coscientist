@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from "motion/react"
 import { useTranslations } from "next-intl"
-import { useRef } from "react"
+import { memo, useCallback, useRef } from "react"
 import { useReducedMotion } from "@/hooks/use-reduced-motion"
 import type { NotePaneData } from "@/lib/types"
 import { useCarouselState } from "./carousel-state"
@@ -16,7 +16,7 @@ interface MobilePaneCarouselProps {
   focusIndex: number
 }
 
-export function MobilePaneCarousel({
+export const MobilePaneCarousel = memo(function MobilePaneCarousel({
   panes,
   onLinkClick,
   onClose,
@@ -40,6 +40,27 @@ export function MobilePaneCarousel({
     containerRef,
   })
 
+  const handleNotchTap = useCallback(
+    (index: number) => {
+      animateToIndex(index)
+    },
+    [animateToIndex]
+  )
+
+  const handlePaneClose = useCallback(
+    (index: number) => {
+      onClose(index)
+    },
+    [onClose]
+  )
+
+  const handlePaneLinkClick = useCallback(
+    (slug: string, index: number) => {
+      onLinkClick(slug, index)
+    },
+    [onLinkClick]
+  )
+
   return (
     <div className="flex h-full w-full flex-1 flex-col items-center justify-center overflow-hidden bg-background">
       <div className="flex h-10 w-full items-center justify-center px-4">
@@ -53,7 +74,7 @@ export function MobilePaneCarousel({
               })}
               index={index}
               key={`${pane.slug}-${index}`}
-              onTap={() => animateToIndex(index)}
+              onTap={handleNotchTap}
             />
           ))}
         </div>
@@ -78,8 +99,8 @@ export function MobilePaneCarousel({
                 index={index}
                 isClosable={index > 0}
                 key={`${pane.slug}-${index}`}
-                onClose={() => onClose(index)}
-                onLinkClick={(slug) => onLinkClick(slug, index)}
+                onClose={handlePaneClose}
+                onLinkClick={handlePaneLinkClick}
                 pane={pane}
                 prefersReducedMotion={prefersReducedMotion}
                 progress={currentIndex}
@@ -90,4 +111,4 @@ export function MobilePaneCarousel({
       </motion.div>
     </div>
   )
-}
+})

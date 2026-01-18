@@ -1,49 +1,68 @@
 "use client"
 
-import { useRouter, useSearchParams } from "next/navigation"
-import { useCallback, useMemo } from "react"
+import { useRouter } from "next/navigation"
+import { useQueryStates } from "nuqs"
+import { useCallback, useMemo, useRef } from "react"
 import {
+  buildFullStack,
   buildStackUrl,
-  parseStackFromParams,
+  getFocusIndex,
+  noteStackParsers,
   popFromStack,
   pushToStack,
-} from "./stack"
+} from "./stores/note-stack-parsers"
 
 export function useNoteStack(rootSlug: string) {
   const router = useRouter()
-  const searchParams = useSearchParams()
+  const [urlState] = useQueryStates(noteStackParsers, {
+    shallow: false,
+  })
 
-  const { stack, focusIndex } = useMemo(() => {
-    return parseStackFromParams(rootSlug, searchParams)
-  }, [rootSlug, searchParams])
+  const stack = useMemo(
+    () => buildFullStack(rootSlug, urlState.stack),
+    [rootSlug, urlState.stack]
+  )
+
+  const focusIndex = useMemo(
+    () => getFocusIndex(urlState.focus, stack.length),
+    [urlState.focus, stack.length]
+  )
+
+  const stackRef = useRef(stack)
+  stackRef.current = stack
 
   const pushNote = useCallback(
     (slug: string, fromPaneIndex: number) => {
-      const newStack = pushToStack(stack, slug, fromPaneIndex)
+      const newStack = pushToStack(stackRef.current, slug, fromPaneIndex)
       const newUrl = buildStackUrl(newStack)
       router.push(newUrl)
     },
-    [stack, router]
+    [router]
   )
 
   const popNote = useCallback(() => {
-    const newStack = popFromStack(stack)
+    const newStack = popFromStack(stackRef.current)
     const newUrl = buildStackUrl(newStack)
     router.push(newUrl)
-  }, [stack, router])
+  }, [router])
 
   const focusPane = useCallback(
     (index: number) => {
-      if (index < 0 || index >= stack.length) {
+      const currentStack = stackRef.current
+      if (index < 0 || index >= currentStack.length) {
         return
       }
-      if (index === focusIndex) {
+      const currentFocusIndex = getFocusIndex(
+        urlState.focus,
+        currentStack.length
+      )
+      if (index === currentFocusIndex) {
         return
       }
-      const newUrl = buildStackUrl(stack, index)
+      const newUrl = buildStackUrl(currentStack, index)
       router.replace(newUrl, { scroll: false })
     },
-    [stack, focusIndex, router]
+    [router, urlState.focus]
   )
 
   const setStack = useCallback(
@@ -58,13 +77,16 @@ export function useNoteStack(rootSlug: string) {
     router.back()
   }, [router])
 
-  return {
-    stack,
-    focusIndex,
-    pushNote,
-    popNote,
-    focusPane,
-    setStack,
-    goBack,
-  }
+  return useMemo(
+    () => ({
+      stack,
+      focusIndex,
+      pushNote,
+      popNote,
+      focusPane,
+      setStack,
+      goBack,
+    }),
+    [stack, focusIndex, pushNote, popNote, focusPane, setStack, goBack]
+  )
 }

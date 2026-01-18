@@ -1,7 +1,6 @@
 "use client"
 
-import type { ReactNode } from "react"
-import { useRef } from "react"
+import { type ReactNode, useMemo, useRef } from "react"
 import { cn } from "@/lib/utils"
 import { useCollapseDetection } from "./collapse-detector"
 import { PaneCollapseContext } from "./pane-collapse-context"
@@ -37,10 +36,13 @@ export function DesktopContainer({
   useScrollListener(containerRef, updateCollapsedIndices)
   useFocusScroll(focusIndex, paneRefsMap)
 
+  const contextValue = useMemo(
+    () => ({ collapsedIndices, registerPaneRef, scrollToPane }),
+    [collapsedIndices, registerPaneRef, scrollToPane]
+  )
+
   return (
-    <PaneCollapseContext.Provider
-      value={{ collapsedIndices, registerPaneRef, scrollToPane }}
-    >
+    <PaneCollapseContext.Provider value={contextValue}>
       <div
         className={cn(
           "relative flex min-h-0 flex-1 overflow-x-auto overflow-y-hidden",

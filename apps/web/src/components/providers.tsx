@@ -1,4 +1,5 @@
 import { NextIntlClientProvider } from "next-intl"
+import { NuqsAdapter } from "nuqs/adapters/next/app"
 import type { ReactNode } from "react"
 import { ThemeProviderClient } from "./theme-provider-client"
 
@@ -16,10 +17,12 @@ export function Providers({
   storageKey = "coscientist-theme",
 }: ProvidersProps) {
   return (
-    <NextIntlClientProvider messages={messages}>
-      <ThemeProviderClient storageKey={storageKey}>
-        {children}
-      </ThemeProviderClient>
-    </NextIntlClientProvider>
+    <NuqsAdapter>
+      <NextIntlClientProvider messages={messages}>
+        <ThemeProviderClient storageKey={storageKey}>
+          {children}
+        </ThemeProviderClient>
+      </NextIntlClientProvider>
+    </NuqsAdapter>
   )
 }

@@ -1,7 +1,7 @@
 "use client"
 
 import { useTranslations } from "next-intl"
-import { useEffect, useRef } from "react"
+import { memo, useCallback, useEffect, useRef } from "react"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { useReducedMotion } from "@/hooks/use-reduced-motion"
 import { springQuick, springSubtle } from "@/lib/animations"
@@ -16,10 +16,10 @@ interface AllNotesListProps {
   currentStack: string[]
   index: number
   onNoteClick: (slug: string) => void
-  onExpand?: () => void
+  onExpand: (index: number) => void
 }
 
-export function AllNotesList({
+export const AllNotesList = memo(function AllNotesList({
   notes,
   currentStack,
   index,
@@ -43,6 +43,15 @@ export function AllNotesList({
     return () => registerPaneRef(index, null)
   }, [index, registerPaneRef])
 
+  const handleExpand = useCallback(() => {
+    onExpand(index)
+  }, [onExpand, index])
+
+  const getCurrentlyOpenLabel = useCallback(
+    (pos: number) => t("currentlyOpen", { position: pos }),
+    [t]
+  )
+
   const transition = prefersReducedMotion ? { duration: 0 } : springSubtle
   const quickTransition = prefersReducedMotion ? { duration: 0 } : springQuick
 
@@ -51,7 +60,7 @@ export function AllNotesList({
       expandLabel={`${tPane("expand")} ${t("title")}`}
       index={index}
       isCollapsed={isCollapsed}
-      onExpand={onExpand}
+      onExpand={handleExpand}
       paneRef={paneRef}
       prefersReducedMotion={prefersReducedMotion}
       quickTransition={quickTransition}
@@ -71,9 +80,7 @@ export function AllNotesList({
           <ul className="space-y-1">
             {filteredNotes.map((note) => (
               <NoteItem
-                currentlyOpenLabel={(pos) =>
-                  t("currentlyOpen", { position: pos })
-                }
+                currentlyOpenLabel={getCurrentlyOpenLabel}
                 key={note.slug}
                 note={note}
                 onNoteClick={onNoteClick}
@@ -85,4 +92,4 @@ export function AllNotesList({
       </ScrollArea>
     </PaneWrapper>
   )
-}
+})

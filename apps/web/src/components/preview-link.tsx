@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext, type ReactNode, useContext } from "react"
+import { createContext, type ReactNode, useContext, useMemo } from "react"
 import {
   PreviewCard,
   PreviewCardPopup,
@@ -28,8 +28,10 @@ export function NotePreviewProvider({
   children: ReactNode
   summariesMap: Map<string, NoteSummary>
 }) {
+  const value = useMemo(() => ({ summariesMap }), [summariesMap])
+
   return (
-    <NotePreviewContext.Provider value={{ summariesMap }}>
+    <NotePreviewContext.Provider value={value}>
       {children}
     </NotePreviewContext.Provider>
   )

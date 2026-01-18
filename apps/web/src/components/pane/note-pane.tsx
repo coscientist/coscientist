@@ -1,6 +1,6 @@
 "use client"
 
-import { useCallback, useEffect, useRef } from "react"
+import { memo, useCallback, useEffect, useRef } from "react"
 import { useReducedMotion } from "@/hooks/use-reduced-motion"
 import { springQuick, springSubtle } from "@/lib/animations"
 import type { BacklinkInfo } from "@/lib/types"
@@ -21,16 +21,17 @@ interface NotePaneProps {
   isClosable?: boolean
   backlinks: BacklinkInfo[]
   onLinkClick: (slug: string, fromIndex: number) => void
-  onExpand?: () => void
-  onClose?: () => void
+  onExpand: (index: number) => void
+  onClose: (index: number) => void
 }
 
-export function NotePane({
+export const NotePane = memo(function NotePane({
   slug,
   title,
   description,
   contentHtml,
   index,
+  isFocused,
   isClosable = false,
   backlinks,
   onLinkClick,
@@ -48,11 +49,19 @@ export function NotePane({
   }, [index, registerPaneRef])
 
   const handleLinkClick = useCallback(
-    (slug: string) => {
-      onLinkClick(slug, index)
+    (linkSlug: string) => {
+      onLinkClick(linkSlug, index)
     },
     [onLinkClick, index]
   )
+
+  const handleExpand = useCallback(() => {
+    onExpand(index)
+  }, [onExpand, index])
+
+  const handleClose = useCallback(() => {
+    onClose(index)
+  }, [onClose, index])
 
   const transition = prefersReducedMotion ? { duration: 0 } : springSubtle
   const quickTransition = prefersReducedMotion ? { duration: 0 } : springQuick
@@ -60,6 +69,7 @@ export function NotePane({
   return (
     <PaneWrapper
       index={index}
+      isFocused={isFocused}
       paneRef={paneRef}
       prefersReducedMotion={prefersReducedMotion}
       title={title}
@@ -78,8 +88,8 @@ export function NotePane({
       <PaneContentWrapper
         isClosable={isClosable}
         isCollapsed={isCollapsed}
-        onClose={onClose}
-        onExpand={onExpand}
+        onClose={handleClose}
+        onExpand={handleExpand}
         quickTransition={quickTransition}
         title={title}
         transition={transition}
@@ -95,4 +105,4 @@ export function NotePane({
       </PaneContentWrapper>
     </PaneWrapper>
   )
-}
+})

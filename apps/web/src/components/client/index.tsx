@@ -1,12 +1,12 @@
 "use client"
 
-import { Suspense, useCallback, useMemo, useRef } from "react"
+import { Suspense, useEffect, useMemo, useRef } from "react"
 import { PaneContainer } from "@/components/pane/container"
 import { NotePreviewProvider } from "@/components/preview-link"
 import { Spinner } from "@/components/ui/spinner"
+import { usePaneUIStore } from "@/lib/stores/pane-ui-store"
 import type { NotePaneData, NoteSummary } from "@/lib/types"
 import { KeyboardHandler } from "./keyboard-handler"
-import { useMobileData } from "./mobile-orchestrator"
 import { NoteStackProvider } from "./note-stack-provider"
 import { PaneOrchestrator } from "./pane-orchestrator"
 
@@ -22,10 +22,16 @@ function NotesContent({
   initialPanesData,
 }: NotesPageClientProps) {
   const scrollToPaneRef = useRef<((index: number) => void) | null>(null)
+  const setScrollToPaneHandler = usePaneUIStore(
+    (state) => state.setScrollToPaneHandler
+  )
 
-  const handleScrollToPane = useCallback((index: number) => {
-    scrollToPaneRef.current?.(index)
-  }, [])
+  useEffect(() => {
+    const handler = (index: number) => {
+      scrollToPaneRef.current?.(index)
+    }
+    setScrollToPaneHandler(handler)
+  }, [setScrollToPaneHandler])
 
   const summariesMap = useMemo(() => {
     const map = new Map<string, NoteSummary>()
@@ -37,10 +43,7 @@ function NotesContent({
 
   return (
     <NoteStackProvider rootSlug={rootSlug}>
-      <KeyboardHandler
-        initialPanesLength={initialPanesData.length}
-        onScrollToPane={handleScrollToPane}
-      />
+      <KeyboardHandler initialPanesLength={initialPanesData.length} />
       <NotePreviewProvider summariesMap={summariesMap}>
         <PaneContainer
           initialPanesData={initialPanesData}

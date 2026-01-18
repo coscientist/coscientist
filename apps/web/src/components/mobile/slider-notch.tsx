@@ -1,16 +1,16 @@
 "use client"
 
 import { animate, type MotionValue, motion, useSpring } from "motion/react"
-import { useEffect } from "react"
+import { memo, useCallback, useEffect } from "react"
 
 interface SliderNotchProps {
   index: number
   activeIndex: MotionValue<number>
-  onTap: () => void
+  onTap: (index: number) => void
   ariaLabel: string
 }
 
-export function SliderNotch({
+export const SliderNotch = memo(function SliderNotch({
   index,
   activeIndex,
   onTap,
@@ -28,14 +28,18 @@ export function SliderNotch({
     })
   }, [activeIndex, index, height, opacity])
 
+  const handleClick = useCallback(() => {
+    onTap(index)
+  }, [onTap, index])
+
   return (
     <button
       aria-label={ariaLabel}
       className="flex h-10 touch-none items-center justify-center px-1"
-      onClick={onTap}
+      onClick={handleClick}
       type="button"
     >
       <motion.div className="w-1.5 bg-foreground" style={{ height, opacity }} />
     </button>
   )
-}
+})

@@ -9,8 +9,9 @@ interface PaneWrapperProps {
   children: ReactNode
   title: string
   index: number
+  isFocused?: boolean
   prefersReducedMotion: boolean
-  transition: any
+  transition: object
   paneRef: React.RefObject<HTMLElement | null>
 }
 
@@ -18,6 +19,7 @@ export function PaneWrapper({
   children,
   title,
   index,
+  isFocused,
   prefersReducedMotion,
   transition,
   paneRef,
@@ -30,7 +32,8 @@ export function PaneWrapper({
         "h-full w-full flex-shrink-0 overflow-hidden md:w-1/3 md:min-w-pane-min",
         "group/pane relative border-border border-l bg-background",
         "left-0 md:sticky md:left-[var(--pane-left-offset)]",
-        "snap-start md:snap-align-none"
+        "snap-start md:snap-align-none",
+        isFocused && "ring-2 ring-primary/20 ring-inset"
       )}
       data-index={index}
       data-pane

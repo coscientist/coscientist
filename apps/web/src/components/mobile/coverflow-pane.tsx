@@ -1,7 +1,7 @@
 "use client"
 
 import { type MotionValue, motion } from "motion/react"
-import { memo } from "react"
+import { memo, useCallback } from "react"
 import { springSubtle } from "@/lib/animations"
 import type { NotePaneData } from "@/lib/types"
 import { cn } from "@/lib/utils"
@@ -11,8 +11,8 @@ import { usePaneTransforms } from "./pane-transforms"
 interface CoverflowPaneProps {
   pane: NotePaneData
   index: number
-  onLinkClick: (slug: string) => void
-  onClose: () => void
+  onLinkClick: (slug: string, index: number) => void
+  onClose: (index: number) => void
   isClosable: boolean
   progress: MotionValue<number>
   prefersReducedMotion: boolean
@@ -40,6 +40,17 @@ export const CoverflowPane = memo(
       usePaneTransforms(index, progress, prefersReducedMotion)
 
     const transition = prefersReducedMotion ? { duration: 0 } : springSubtle
+
+    const handleLinkClick = useCallback(
+      (slug: string) => {
+        onLinkClick(slug, index)
+      },
+      [onLinkClick, index]
+    )
+
+    const handleClose = useCallback(() => {
+      onClose(index)
+    }, [onClose, index])
 
     return (
       <motion.li
@@ -70,8 +81,8 @@ export const CoverflowPane = memo(
           <PaneContent
             closeLabel={closeLabel}
             isClosable={isClosable}
-            onClose={onClose}
-            onLinkClick={onLinkClick}
+            onClose={handleClose}
+            onLinkClick={handleLinkClick}
             pane={pane}
           />
         </motion.article>

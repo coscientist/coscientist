@@ -15,8 +15,10 @@ interface PageProps {
 }
 
 export default async function Page({ params, searchParams }: PageProps) {
-  const { locale, slug } = await params
-  const resolvedSearchParams = await searchParams
+  const [{ locale, slug }, resolvedSearchParams] = await Promise.all([
+    params,
+    searchParams,
+  ])
 
   if (!hasLocale(routing.locales, locale)) {
     notFound()

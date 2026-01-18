@@ -1,3 +1,4 @@
+import { clerkMiddleware } from "@clerk/nextjs/server"
 import { type NextRequest, NextResponse } from "next/server"
 import createMiddleware from "next-intl/middleware"
 import { type Locale, routing } from "./i18n/routing"
@@ -5,7 +6,7 @@ import { type Locale, routing } from "./i18n/routing"
 const LOCALE_COOKIE = "NEXT_LOCALE"
 const handleI18nRouting = createMiddleware(routing)
 
-export default function proxy(request: NextRequest) {
+export default clerkMiddleware(async (_auth, request: NextRequest) => {
   const { searchParams } = request.nextUrl
   const localeParam = searchParams.get("locale") as Locale | null
 
@@ -23,8 +24,13 @@ export default function proxy(request: NextRequest) {
   }
 
   return handleI18nRouting(request)
-}
+})
 
 export const config = {
-  matcher: ["/((?!api|_next|.*\\..*).*)"],
+  matcher: [
+    // Skip Next.js internals and all static files, unless found in search params
+    "/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)",
+    // Always run for API routes
+    "/(api|trpc)(.*)",
+  ],
 }

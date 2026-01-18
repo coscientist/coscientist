@@ -1,3 +1,4 @@
+import { ClerkProvider } from "@clerk/nextjs"
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { notFound } from "next/navigation"
@@ -41,20 +42,22 @@ export default async function LocaleLayout({ children, params }: Props) {
   ])
 
   return (
-    <RootLayoutWrapper direction={direction} locale={locale}>
-      <Suspense>
-        <Providers messages={messages}>
-          <MagneticCursorLazy />
-          <AppHeader
-            brand={t("brand")}
-            brandWithManifesto={t("brandWithManifesto")}
-            githubLabel={t("github")}
-          />
-          {children}
-          <Analytics />
-          <SpeedInsights />
-        </Providers>
-      </Suspense>
-    </RootLayoutWrapper>
+    <ClerkProvider>
+      <RootLayoutWrapper direction={direction} locale={locale}>
+        <Suspense>
+          <Providers messages={messages}>
+            <MagneticCursorLazy />
+            <AppHeader
+              brand={t("brand")}
+              brandWithManifesto={t("brandWithManifesto")}
+              githubLabel={t("github")}
+            />
+            {children}
+            <Analytics />
+            <SpeedInsights />
+          </Providers>
+        </Suspense>
+      </RootLayoutWrapper>
+    </ClerkProvider>
   )
 }

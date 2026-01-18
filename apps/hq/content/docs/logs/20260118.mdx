@@ -1,0 +1,42 @@
+---
+title: "2026-01-18"
+description: "Clerk authentication integration for apps/web"
+---
+
+# Work Log: 2026-01-18
+
+## Clerk Authentication Integration
+
+**Scope**: `apps/web`
+
+### Changes Made
+
+| File | Change |
+|------|--------|
+| `package.json` | Added `@clerk/nextjs@^6.36.8` |
+| `src/proxy.ts` | Integrated `clerkMiddleware()` with existing `next-intl` i18n middleware |
+| `src/app/[locale]/layout.tsx` | Added `<ClerkProvider>` wrapper around app |
+| `src/components/layout/app-header.tsx` | Added `SignInButton`, `SignUpButton`, `UserButton` with `SignedIn`/`SignedOut` conditional rendering |
+| `.env.local.example` | Created with placeholder Clerk API keys |
+
+### Technical Decisions
+
+1. **Middleware Chaining**: Used `clerkMiddleware()` as the outer wrapper, passing the existing i18n logic as the inner handler. This preserves locale cookie behavior while adding auth.
+
+2. **Provider Placement**: `ClerkProvider` wraps `RootLayoutWrapper` to ensure auth context is available throughout the app, including the header.
+
+3. **Modal Auth Flow**: Used `mode="modal"` for `SignInButton` and `SignUpButton` to keep users on the current page during auth.
+
+### Verification
+
+- TypeScript: Pass
+- LSP Diagnostics: No errors on modified files
+- Build: Requires Clerk API keys in `.env.local` (expected behavior)
+
+### Next Steps
+
+User must add real Clerk API keys to `.env.local`:
+```bash
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
+CLERK_SECRET_KEY=sk_test_...
+```

@@ -1,3 +1,10 @@
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  SignUpButton,
+  UserButton,
+} from "@clerk/nextjs"
 import { HeaderLogo } from "@/components/header-logo"
 import { LanguageSwitcher } from "@/components/language-switcher"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -19,6 +26,28 @@ export function AppHeader({
     <header className="sticky top-0 z-50 flex h-16 flex-shrink-0 items-center justify-between border-border border-b bg-card px-6">
       <HeaderLogo brand={brand} brandWithManifesto={brandWithManifesto} />
       <Group aria-label="Header actions">
+        <SignedOut>
+          <SignInButton mode="modal">
+            <Button size="sm" variant="ghost">
+              Sign in
+            </Button>
+          </SignInButton>
+          <SignUpButton mode="modal">
+            <Button size="sm" variant="outline">
+              Sign up
+            </Button>
+          </SignUpButton>
+        </SignedOut>
+        <SignedIn>
+          <UserButton
+            appearance={{
+              elements: {
+                avatarBox: "size-8",
+              },
+            }}
+          />
+        </SignedIn>
+        <GroupSeparator />
         <Group aria-label="Social links">
           <Button
             render={

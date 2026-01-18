@@ -1,6 +1,6 @@
 "use client"
 
-import { AnimatePresence, motion } from "motion/react"
+import { AnimatePresence, motion, type Transition } from "motion/react"
 import { spineVariants } from "./pane-animations"
 import { PaneSpine } from "./pane-spine"
 
@@ -9,7 +9,7 @@ interface PaneCollapsedSpineProps {
   title: string
   description?: string
   index: number
-  quickTransition: any
+  quickTransition: Transition
 }
 
 export function PaneCollapsedSpine({

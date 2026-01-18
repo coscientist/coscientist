@@ -1,6 +1,6 @@
 "use client"
 
-import { AnimatePresence, motion } from "motion/react"
+import { AnimatePresence, motion, type Transition } from "motion/react"
 import { useTranslations } from "next-intl"
 import { IconXmarkOutline18 } from "nucleo-ui-outline-18"
 import type { ReactNode } from "react"
@@ -12,8 +12,8 @@ interface PaneContentWrapperProps {
   isCollapsed: boolean
   isClosable: boolean
   title: string
-  transition: any
-  quickTransition: any
+  transition: Transition
+  quickTransition: Transition
   onExpand?: () => void
   onClose?: () => void
 }

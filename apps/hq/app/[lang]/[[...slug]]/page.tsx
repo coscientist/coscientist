@@ -28,6 +28,7 @@ export default async function Page({ params }: PageProps) {
   return (
     <DocsPage toc={toc}>
       <DocsBody>
+        <h1>{page.data.title}</h1>
         <MDX components={getMDXComponents()} />
       </DocsBody>
     </DocsPage>

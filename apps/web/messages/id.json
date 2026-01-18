@@ -65,7 +65,7 @@
       "title": "Riset dengan\nKecepatan Pikiran",
       "subtitle": "Eksperimen yang berakar pada sejarah. Pengetahuan yang bertahan.",
       "description": "Infrastruktur kognitif untuk riset.",
-      "enterManifesto": "Masuk ke Manifesto",
+      "readManifesto": "Baca Manifesto",
       "github": "GitHub"
     },
     "features": {
@@ -107,7 +107,7 @@
     "buildInPublic": {
       "eyebrow": "Transparansi Radikal",
       "heading": "Kami membangun di ruang publik",
-      "description": "Setiap keputusan arsitektur, setiap trade‑off, setiap pilihan teknis—terdokumentasi dan dapat diakses. Jika sistem pengetahuan harus dapat ditelusuri, maka alat yang memungkinkannya juga harus dibangun dengan cara yang sama.",
+      "description": "Setiap keputusan arsitektur, setiap trade‑off, setiap pilihan teknis terdokumentasi dan dapat diakses. Jika sistem pengetahuan harus dapat ditelusuri, maka alat yang memungkinkannya juga harus dibangun dengan cara yang sama.",
       "visitHQ": "Jelajahi HQ kami"
     },
     "cta": {

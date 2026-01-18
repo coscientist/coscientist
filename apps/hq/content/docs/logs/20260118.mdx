@@ -374,13 +374,15 @@ Build logs show non-blocking warnings about `--localstorage-file` without a vali
 
 | File | Change |
 | ---- | ------ |
-| `apps/web/messages/*.json` | Rewrote UI copy across 25 locales for more natural, locally fluent phrasing and fixed English grammar. |
+| `apps/web/messages/*.json` | Refined UI copy across 25 locales, aligned hero CTA text to Read the Manifesto, and removed em dash punctuation. |
+| `apps/web/src/components/landing/hero-cta.tsx` | Switched hero CTA key usage from `enterManifesto` to `readManifesto`. |
 
 ### Technical Decisions
 
 1. **Local voice per locale**: Adjusted tone and phrasing to read like native product copy while preserving meaning.
 2. **Placeholder preservation**: Kept `{count}`, `{position}`, `{title}`, `{index}`, `{year}` intact to avoid runtime issues.
 3. **Consistent naming**: Kept brand and proper nouns (Coscientist, GitHub) consistent across locales.
+4. **CTA alignment**: Reused the CTA phrasing in the hero to keep a consistent action label.
 
 ### Verification
 

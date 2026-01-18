@@ -65,7 +65,7 @@
       "title": "Ricerca alla\nvelocità del pensiero",
       "subtitle": "Esperimenti radicati nella storia. Conoscenza che dura.",
       "description": "Infrastruttura cognitiva per la ricerca.",
-      "enterManifesto": "Entra nel Manifesto",
+      "readManifesto": "Leggi il Manifesto",
       "github": "GitHub"
     },
     "features": {
@@ -107,7 +107,7 @@
     "buildInPublic": {
       "eyebrow": "Trasparenza radicale",
       "heading": "Costruiamo in pubblico",
-      "description": "Ogni decisione architetturale, ogni compromesso, ogni scelta tecnica—documentata e accessibile. Se i sistemi di conoscenza devono essere tracciabili, gli strumenti che li rendono possibili devono essere costruiti allo stesso modo.",
+      "description": "Ogni decisione architetturale, ogni compromesso, ogni scelta tecnica è documentata e accessibile. Se i sistemi di conoscenza devono essere tracciabili, gli strumenti che li rendono possibili devono essere costruiti allo stesso modo.",
       "visitHQ": "Esplora il nostro HQ"
     },
     "cta": {

@@ -65,7 +65,7 @@
       "title": "Düşünce\nhızında araştırma",
       "subtitle": "Tarihe dayalı deneyler. Kalıcı bilgi.",
       "description": "Araştırma için bilişsel altyapı.",
-      "enterManifesto": "Manifestoya gir",
+      "readManifesto": "Manifestoyu oku",
       "github": "GitHub"
     },
     "features": {
@@ -107,7 +107,7 @@
     "buildInPublic": {
       "eyebrow": "Radikal Şeffaflık",
       "heading": "Açıkta inşa ediyoruz",
-      "description": "Her mimari karar, her trade‑off, her teknik seçim—belgelenmiş ve erişilebilir. Bilgi sistemleri izlenebilirlik talep ediyorsa, bunu mümkün kılan araçlar da aynı şekilde inşa edilmelidir.",
+      "description": "Her mimari karar, her trade‑off, her teknik seçim belgelenmiş ve erişilebilir. Bilgi sistemleri izlenebilirlik talep ediyorsa, bunu mümkün kılan araçlar da aynı şekilde inşa edilmelidir.",
       "visitHQ": "HQ’muzu keşfet"
     },
     "cta": {

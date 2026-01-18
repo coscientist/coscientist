@@ -65,7 +65,7 @@
       "title": "La recherche à la\nvitesse de la pensée",
       "subtitle": "Des expériences ancrées dans l’histoire. Un savoir qui dure.",
       "description": "Une infrastructure cognitive pour la recherche.",
-      "enterManifesto": "Entrer dans le manifeste",
+      "readManifesto": "Lire le manifeste",
       "github": "GitHub"
     },
     "features": {
@@ -107,7 +107,7 @@
     "buildInPublic": {
       "eyebrow": "Transparence radicale",
       "heading": "Nous construisons en public",
-      "description": "Chaque décision d’architecture, chaque compromis, chaque choix technique — documenté et accessible. Si les systèmes de connaissance doivent être traçables, les outils qui les rendent possibles doivent être construits de la même manière.",
+      "description": "Chaque décision d’architecture, chaque compromis et chaque choix technique sont documentés et accessibles. Si les systèmes de connaissance doivent être traçables, les outils qui les rendent possibles doivent être construits de la même manière.",
       "visitHQ": "Explorer notre HQ"
     },
     "cta": {

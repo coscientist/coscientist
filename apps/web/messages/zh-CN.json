@@ -65,7 +65,7 @@
       "title": "以思维的\n速度研究",
       "subtitle": "植根历史的实验。经得起时间的知识。",
       "description": "面向研究的认知基础设施。",
-      "enterManifesto": "进入宣言",
+      "readManifesto": "阅读宣言",
       "github": "GitHub"
     },
     "features": {
@@ -107,7 +107,7 @@
     "buildInPublic": {
       "eyebrow": "激进透明",
       "heading": "我们公开构建",
-      "description": "每一次架构决定、每一次权衡、每一次技术选择——都被记录并可访问。如果知识系统应该可追溯，那么支撑它们的工具也应以同样方式构建。",
+      "description": "每一次架构决定、每一次权衡、每一次技术选择，都被记录并可访问。如果知识系统应该可追溯，那么支撑它们的工具也应以同样方式构建。",
       "visitHQ": "探索我们的 HQ"
     },
     "cta": {

@@ -65,7 +65,7 @@
       "title": "以思維的\n速度研究",
       "subtitle": "扎根歷史的實驗。經得起時間的知識。",
       "description": "面向研究的認知基礎設施。",
-      "enterManifesto": "進入宣言",
+      "readManifesto": "閱讀宣言",
       "github": "GitHub"
     },
     "features": {
@@ -107,7 +107,7 @@
     "buildInPublic": {
       "eyebrow": "激進透明",
       "heading": "我們公開打造",
-      "description": "每一次架構決策、每一次取捨、每一次技術選擇——都被記錄並可存取。如果知識系統應該可追溯，支撐它們的工具也應以同樣方式打造。",
+      "description": "每一次架構決策、每一次取捨、每一次技術選擇，都被記錄並可存取。如果知識系統應該可追溯，支撐它們的工具也應以同樣方式打造。",
       "visitHQ": "探索我們的 HQ"
     },
     "cta": {

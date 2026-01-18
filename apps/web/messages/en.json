@@ -65,15 +65,15 @@
       "title": "Research at the\nSpeed of Thought",
       "subtitle": "Experiments, grounded in history. Knowledge that lasts.",
       "description": "Cognitive infrastructure for research.",
-      "enterManifesto": "Enter the Manifesto",
+      "readManifesto": "Read the Manifesto",
       "github": "GitHub"
     },
     "features": {
       "eyebrow": "Core Architecture",
-      "heading": "Built from the ground up—by design",
+      "heading": "Built from the ground up by design",
       "dialecticalGraph": {
         "title": "Dialectical Graph",
-        "description": "Claims and relations—not documents and links. Every statement traces back to evidence."
+        "description": "Claims and relations, not documents and links. Every statement traces back to evidence."
       },
       "rebuttalFirst": {
         "title": "Rebuttal First",
@@ -107,7 +107,7 @@
     "buildInPublic": {
       "eyebrow": "Radical Transparency",
       "heading": "We build in public",
-      "description": "Every architecture decision, every trade-off, every technical choice—documented and accessible. If knowledge systems demand traceability, the tools that enable them should be built the same way.",
+      "description": "Every architecture decision, every trade-off, every technical choice is documented and accessible. If knowledge systems demand traceability, the tools that enable them should be built the same way.",
       "visitHQ": "Explore our HQ"
     },
     "cta": {

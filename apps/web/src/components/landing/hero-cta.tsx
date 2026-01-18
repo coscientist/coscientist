@@ -26,7 +26,7 @@ export function HeroCTA() {
       }
     >
       <Button render={<Link href="/manifesto" />} size="lg">
-        {t("enterManifesto")}{" "}
+        {t("readManifesto")}{" "}
         <IconChevronRightOutline18 className="ml-1 size-4" />
       </Button>
       <div className="flex flex-col items-center gap-4 text-center">

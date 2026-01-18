@@ -65,7 +65,7 @@
       "title": "Forschung mit der\nGeschwindigkeit des Denkens",
       "subtitle": "Experimente, verankert in der Geschichte. Wissen, das bleibt.",
       "description": "Kognitive Infrastruktur für Forschung.",
-      "enterManifesto": "Manifest betreten",
+      "readManifesto": "Manifest lesen",
       "github": "GitHub"
     },
     "features": {
@@ -107,7 +107,7 @@
     "buildInPublic": {
       "eyebrow": "Radikale Transparenz",
       "heading": "Wir bauen öffentlich",
-      "description": "Jede Architekturentscheidung, jeder Trade‑off, jede technische Wahl — dokumentiert und zugänglich. Wenn Wissenssysteme Nachvollziehbarkeit verlangen, sollten die Werkzeuge, die sie ermöglichen, genauso gebaut werden.",
+      "description": "Jede Architekturentscheidung, jeder Trade‑off, jede technische Wahl ist dokumentiert und zugänglich. Wenn Wissenssysteme Nachvollziehbarkeit verlangen, sollten die Werkzeuge, die sie ermöglichen, genauso gebaut werden.",
       "visitHQ": "Unser HQ erkunden"
     },
     "cta": {

@@ -65,7 +65,7 @@
       "title": "Onderzoek op de\nsnelheid van het denken",
       "subtitle": "Experimenten, verankerd in de geschiedenis. Kennis die blijft.",
       "description": "Cognitieve infrastructuur voor onderzoek.",
-      "enterManifesto": "Het Manifest in",
+      "readManifesto": "Lees het Manifest",
       "github": "GitHub"
     },
     "features": {
@@ -107,7 +107,7 @@
     "buildInPublic": {
       "eyebrow": "Radicale transparantie",
       "heading": "We bouwen in het openbaar",
-      "description": "Elke architectuurbeslissing, elke trade‑off, elke technische keuze—gedocumenteerd en toegankelijk. Als kennissystemen traceerbaarheid eisen, moeten de tools die dat mogelijk maken op dezelfde manier worden gebouwd.",
+      "description": "Elke architectuurbeslissing, elke trade‑off, elke technische keuze is gedocumenteerd en toegankelijk. Als kennissystemen traceerbaarheid eisen, moeten de tools die dat mogelijk maken op dezelfde manier worden gebouwd.",
       "visitHQ": "Ontdek onze HQ"
     },
     "cta": {

@@ -65,7 +65,7 @@
       "title": "Badania z\nprędkością myśli",
       "subtitle": "Eksperymenty zakorzenione w historii. Wiedza, która zostaje.",
       "description": "Infrastruktura kognitywna dla badań.",
-      "enterManifesto": "Wejdź do Manifestu",
+      "readManifesto": "Przeczytaj Manifest",
       "github": "GitHub"
     },
     "features": {
@@ -107,7 +107,7 @@
     "buildInPublic": {
       "eyebrow": "Radykalna przejrzystość",
       "heading": "Budujemy publicznie",
-      "description": "Każda decyzja architektoniczna, każdy trade‑off, każdy wybór techniczny—udokumentowane i dostępne. Jeśli systemy wiedzy mają wymagać śledzenia źródeł, narzędzia, które to umożliwiają, powinny być budowane tak samo.",
+      "description": "Każda decyzja architektoniczna, każdy trade‑off i każdy wybór techniczny są udokumentowane i dostępne. Jeśli systemy wiedzy mają wymagać śledzenia źródeł, narzędzia, które to umożliwiają, powinny być budowane tak samo.",
       "visitHQ": "Poznaj nasze HQ"
     },
     "cta": {

@@ -65,7 +65,7 @@
       "title": "Nghiên cứu với\nTốc độ của tư duy",
       "subtitle": "Thí nghiệm bám rễ trong lịch sử. Tri thức bền vững.",
       "description": "Hạ tầng nhận thức cho nghiên cứu.",
-      "enterManifesto": "Vào Tuyên ngôn",
+      "readManifesto": "Đọc Tuyên ngôn",
       "github": "GitHub"
     },
     "features": {
@@ -107,7 +107,7 @@
     "buildInPublic": {
       "eyebrow": "Minh bạch triệt để",
       "heading": "Chúng tôi xây dựng công khai",
-      "description": "Mọi quyết định kiến trúc, mọi đánh đổi, mọi lựa chọn kỹ thuật—được ghi lại và có thể truy cập. Nếu hệ thống tri thức đòi hỏi khả năng truy vết, thì các công cụ tạo ra điều đó cũng cần được xây dựng theo cách tương tự.",
+      "description": "Mọi quyết định kiến trúc, mọi đánh đổi, mọi lựa chọn kỹ thuật được ghi lại và có thể truy cập. Nếu hệ thống tri thức đòi hỏi khả năng truy vết, thì các công cụ tạo ra điều đó cũng cần được xây dựng theo cách tương tự.",
       "visitHQ": "Khám phá HQ của chúng tôi"
     },
     "cta": {

@@ -65,7 +65,7 @@
       "title": "Pesquisa na\nvelocidade do pensamento",
       "subtitle": "Experimentos ancorados na história. Conhecimento que dura.",
       "description": "Infraestrutura cognitiva para pesquisa.",
-      "enterManifesto": "Entrar no Manifesto",
+      "readManifesto": "Ler o Manifesto",
       "github": "GitHub"
     },
     "features": {
@@ -107,7 +107,7 @@
     "buildInPublic": {
       "eyebrow": "Transparência radical",
       "heading": "Construímos em público",
-      "description": "Cada decisão de arquitetura, cada trade-off, cada escolha técnica—documentada e acessível. Se os sistemas de conhecimento exigem rastreabilidade, as ferramentas que os viabilizam devem ser construídas do mesmo jeito.",
+      "description": "Cada decisão de arquitetura, cada trade-off, cada escolha técnica é documentada e acessível. Se os sistemas de conhecimento exigem rastreabilidade, as ferramentas que os viabilizam devem ser construídas do mesmo jeito.",
       "visitHQ": "Explore nosso HQ"
     },
     "cta": {

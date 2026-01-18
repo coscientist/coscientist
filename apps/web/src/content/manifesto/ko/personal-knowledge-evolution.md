@@ -24,7 +24,7 @@ translatedAt: 2026-01-14
 
 ## 구현
 
-- [프로젝트 알데하이드](./project-aldehyde) — [선현 조](./sunghyun-cho)의 초기
+- [프로젝트 알데하이드](./project-aldehyde) — [조성현](./sunghyun-cho)의 초기
   시도
 - [외골격두뇌](./extracranial) — 조의 개인 디지털 브레인 시스템
 - [다국어 메멕스](./multilingual-memex) — 자동 번역을 갖춘 언어 인지형 지식

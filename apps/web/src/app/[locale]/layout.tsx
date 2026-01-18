@@ -13,7 +13,7 @@ import { Suspense } from "react"
 import "@/app/globals.css"
 import { AppHeader } from "@/components/layout/app-header"
 import { RootLayoutWrapper } from "@/components/layout/root-layout-wrapper"
-import { MagneticCursorLazy } from "@/components/magnetic-cursor-lazy"
+import { MagneticCursorClient } from "@/components/magnetic-cursor-client"
 import { Providers } from "@/components/providers"
 import { getDirection, type Locale, routing } from "@/i18n/routing"
 
@@ -57,7 +57,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       <RootLayoutWrapper direction={direction} locale={locale}>
         <Suspense>
           <Providers messages={messages}>
-            <MagneticCursorLazy />
+            <MagneticCursorClient />
             <AppHeader
               brand={t("brand")}
               brandWithManifesto={t("brandWithManifesto")}

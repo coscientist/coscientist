@@ -1,7 +1,8 @@
 "use client"
 
 import { Select as SelectPrimitive } from "@base-ui/react/select"
-import { IconCheckOutline18 } from "nucleo-ui-outline-18"
+import { Tick01Icon } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
 import { cn } from "@/lib/utils"
 
 export function SelectItem({
@@ -19,7 +20,7 @@ export function SelectItem({
       {...props}
     >
       <SelectPrimitive.ItemIndicator className="col-start-1">
-        <IconCheckOutline18 className="size-4" />
+        <HugeiconsIcon icon={Tick01Icon} size={16} strokeWidth={1.5} />
       </SelectPrimitive.ItemIndicator>
       <SelectPrimitive.ItemText className="col-start-2 min-w-0">
         {children}

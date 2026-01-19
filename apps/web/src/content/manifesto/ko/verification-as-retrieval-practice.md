@@ -1,6 +1,6 @@
 ---
 title: 검색 연습으로서의 검증
-description: 지식 유지를 강화하는 능동 회상의 한 형태로서 Operator의 검증 루프
+description: 지식 유지를 강화하는 능동 회상의 한 형태로서 오퍼레이터의 검증 루프
 sourceLocale: en
 sourceHash: 0bd698c0483b
 translatedAt: 2026-01-14
@@ -8,8 +8,8 @@ translatedAt: 2026-01-14
 
 검색 연습으로서의 검증은 [오퍼레이터](./operator)의 검증 작업 자체가
 [능동 회상](./active-recall)의 한 형태라는 통찰이다. [주장](./claim)을 그
-[근거 구간](./evidence-span)까지 거슬러 추적하고, [반례](./counterexample)를
-확인하며, [책임 경계선](./responsibility-line)을 평가할 때, 당신은 수동적으로
+[증거 구간](./evidence-span)까지 거슬러 추적하고, [반례](./counterexample)를
+확인하며, [책임선](./responsibility-line)을 평가할 때, 오퍼레이터는 수동적으로
 소비하는 것이 아니라 검색(회상)을 연습하고 있다.
 
 이 연결이 중요한 이유는, 엄격한 [검증](./verification)이 단지 인식론적으로 더
@@ -20,5 +20,5 @@ translatedAt: 2026-01-14
 
 [Coscientist](./coscientist)는 서사 뒤에 숨기는 대신 주장 구조를 드러내는
 방식으로 이를 뒷받침한다. [오퍼레이터](./operator)가
-[변증법적 그래프](./dialectical-graph)와 상호작용할 때, 그들은 학습 과학이
+[변증법적 그래프](./dialectical-graph)와 상호작용할 때, 오퍼레이터는 학습 과학이
 효과적이라고 보여주는 인지적 작업을 수행하고 있다.

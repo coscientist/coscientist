@@ -24,8 +24,13 @@ export interface ParsedNote {
 
 const TITLE_LINE_REGEX = /^#\s+.+\n+/
 
-export async function parseMarkdown(fileContents: string): Promise<ParsedNote> {
+export function parseFrontmatter(fileContents: string) {
   const { data, content } = matter(fileContents)
+  return { data: data as NoteFrontmatter, content }
+}
+
+export async function parseMarkdown(fileContents: string): Promise<ParsedNote> {
+  const { data, content } = parseFrontmatter(fileContents)
 
   const processedContent = await remark()
     .use(gfm)

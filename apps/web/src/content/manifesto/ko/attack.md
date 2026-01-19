@@ -14,7 +14,7 @@ translatedAt: 2026-01-14
 공격은 [변증법 그래프](./dialectical-graph)의 핵심 엣지
 유형이다([변증법 그래프 엣지](./dialectical-graph-edges) 참고). 공격이 등록되면,
 도전의 강도와 유형에 따라 주장 상태가 `supported`에서 `contested` 또는
-`refuted`로 바뀔 수 있다.
+`refuted`로 바뀐다.
 
 모든 공격이 동등한 것은 아니다. 출처가 확실한 반례는 단순한 반대 주장보다 더 큰
 무게를 가진다. 이런 이유로 [Coscientist](./coscientist)는 주장뿐 아니라 공격에

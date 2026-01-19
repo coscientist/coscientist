@@ -4,7 +4,12 @@ import createNextIntlPlugin from "next-intl/plugin"
 
 const nextConfig: NextConfig = {
   cacheComponents: true,
-  transpilePackages: ["motion", "motion-plus", "nucleo-ui-outline-18"],
+  transpilePackages: [
+    "motion",
+    "motion-plus",
+    "@hugeicons/react",
+    "@hugeicons/core-free-icons",
+  ],
   images: {
     qualities: [100, 75],
   },

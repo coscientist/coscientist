@@ -10,7 +10,7 @@ translatedAt: 2026-01-14
 에세이들의 저자다. 그의 작업은 개인 지식 도구(예:
 [차세대 디지털 브레인 구축](./creating-next-gen-digital-brains),
 [외골격두뇌](./extracranial))를 더 넓은 문제의식과 연결한다. 즉, AI로 포화된
-환경에서 검증과 주체성을 어떻게 온전히 유지할 것인가이다.
+환경에서 검증과 주체성을 어떻게 온전히 유지하는가가 핵심이다.
 
 성현은 [디지털 브레인](./digital-brain)에서 영어와 한국어를 병행하는 이중언어적
 방식으로 작업한다. 이 실천은 [언어권을 가로질러](./across-the-sprachraums)에
@@ -23,4 +23,4 @@ translatedAt: 2026-01-14
 
 입문용 글로는 [사이언스옵스](./scienceops), [AI 슬롭](./ai-slop),
 [백과사전 멜트다운](./encyclopedia-meltdown), 그리고
-[Coscientist](./coscientist)의 시스템 개요를 참고하면 좋다.
+[Coscientist](./coscientist)의 시스템 개요를 참고하라.

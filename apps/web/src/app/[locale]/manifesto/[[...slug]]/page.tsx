@@ -14,8 +14,11 @@ interface PageProps {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
-export default async function Page({ params }: PageProps) {
-  const { locale, slug } = await params
+export default async function Page({ params, searchParams }: PageProps) {
+  const [{ locale, slug }, resolvedSearchParams] = await Promise.all([
+    params,
+    searchParams,
+  ])
 
   if (!hasLocale(routing.locales, locale)) {
     notFound()
@@ -33,6 +36,7 @@ export default async function Page({ params }: PageProps) {
         locale={locale}
         noteGraphPromise={noteGraphPromise}
         rootSlug={rootSlug}
+        searchParams={resolvedSearchParams}
       />
     </Suspense>
   )

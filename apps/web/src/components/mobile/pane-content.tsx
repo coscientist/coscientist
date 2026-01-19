@@ -1,6 +1,7 @@
 "use client"
 
-import { IconXmarkOutline18 } from "nucleo-ui-outline-18"
+import { Cancel01Icon } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import type { NotePaneData } from "@/lib/types"
 import { BacklinksSection } from "../backlinks-section"
@@ -60,7 +61,7 @@ export function PaneContent({
           }}
           type="button"
         >
-          <IconXmarkOutline18 className="size-4" />
+          <HugeiconsIcon icon={Cancel01Icon} size={16} strokeWidth={1.5} />
         </button>
       )}
     </>

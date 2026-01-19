@@ -22,7 +22,7 @@ translatedAt: 2026-01-14
 학습 데이터를 오염시키며, 시스템은 점진적으로 그라운드 트루스와의 접점을 잃는다.
 
 [백과사전 멜트다운](./encyclopedia-meltdown)는 그 극단적 형태다. AI가 주도적으로
-글을 쓰기 시작하면 [책임 경계선](./responsibility-line)이 사라지고, 시스템은
+글을 쓰기 시작하면 [책임선](./responsibility-line)이 사라지고, 시스템은
 자기참조적 붕괴 쪽으로 드리프트한다. 방어책은
 [인식론적 프로토콜 레이어](./epistemic-protocol-layer)로,
 [추적 가능성](./traceability), [제로 트러스트 수집](./zero-trust-ingestion),

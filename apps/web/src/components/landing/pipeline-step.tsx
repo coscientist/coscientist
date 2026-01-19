@@ -1,7 +1,8 @@
 "use client"
 
+import { ArrowRight01Icon } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
 import { motion } from "motion/react"
-import { IconChevronRightOutline18 } from "nucleo-ui-outline-18"
 
 export interface PipelineStepProps {
   step: string
@@ -21,7 +22,7 @@ export function PipelineStep({ step, isLast, variants }: PipelineStepProps) {
       </div>
       {!isLast && (
         <div className="hidden items-center px-2 text-muted-foreground sm:flex">
-          <IconChevronRightOutline18 className="size-4" />
+          <HugeiconsIcon icon={ArrowRight01Icon} size={16} strokeWidth={1.5} />
         </div>
       )}
     </motion.div>

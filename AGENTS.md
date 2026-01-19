@@ -100,6 +100,7 @@ Any follow-up actions required.
 | UI Components | COSS/UI                           | Cal.com's component library, Base UI + Tailwind                  |
 | Animation     | motion/react                      | Performant springs, AnimatePresence, layout                      |
 | Font          | Faculty Glyphic                   | Distinctive serif with personality                               |
+| Icons         | Hugeicons (core-free)             | Unified icon set across UI surfaces                              |
 | Backend       | Convex                            | Reactive DB, realtime sync, file storage, auto-generated types   |
 | Realtime      | Convex + ProseMirror              | Collaborative editing with CRDT-like conflict resolution         |
 | AI Agents     | Mastra                            | TypeScript-first agent framework with workflows, tools, RAG, MCP |
@@ -460,10 +461,10 @@ async function translateToAllLocales(note: Note) {
 ### Icons
 
 - NEVER use unicode characters for icons (→, ←, ✓, ×, •, etc.)
-- MUST use Nucleo Icons from `nucleo-ui-outline-18` package
-- Import pattern: `import { IconNameOutline18 } from "nucleo-ui-outline-18"`
-- Usage: `<IconArrowRightOutline18 className="size-4" />`
-- Common icons: `IconArrowRightOutline18`, `IconXmarkOutline18`, `IconCheckOutline18`
+- MUST use Hugeicons via `@hugeicons/react` and `@hugeicons/core-free-icons`
+- Import pattern: `import { HugeiconsIcon } from "@hugeicons/react"` + `import { IconName } from "@hugeicons/core-free-icons"`
+- Usage: `<HugeiconsIcon icon={ArrowRight01Icon} size={16} strokeWidth={1.5} />`
+- Common icons: `Menu01Icon`, `ArrowRight01Icon`, `Cancel01Icon`, `Tick01Icon`
 
 ## Dark Mode Effects
 
@@ -526,6 +527,50 @@ function Component({ className, size, ...props }) {
 | Overlay    | Dialog, Sheet, Popover, Tooltip, PreviewCard      |
 | Disclosure | Accordion, Collapsible, Toggle                    |
 
+### Nested Sheet Pattern (Mobile Drill-Down)
+
+For mobile "More" menus with sub-options, use nested Sheets:
+
+```tsx
+// Parent state controls
+const [isMainOpen, setIsMainOpen] = useState(false)
+const [isChildOpen, setIsChildOpen] = useState(false)
+
+// Main Sheet
+<Sheet open={isMainOpen} onOpenChange={setIsMainOpen}>
+  <SheetTrigger render={<Button />}>Menu</SheetTrigger>
+  <SheetPopup side="bottom">
+    <SheetHeader><SheetTitle>More</SheetTitle></SheetHeader>
+    <SheetPanel>
+      <Button onClick={() => setIsChildOpen(true)}>
+        Sub-option <ArrowRight01Icon />
+      </Button>
+    </SheetPanel>
+  </SheetPopup>
+</Sheet>
+
+// Nested Sheet (transparent backdrop to overlay parent)
+<Sheet open={isChildOpen} onOpenChange={setIsChildOpen}>
+  <SheetPopup side="bottom" backdropClassName="bg-transparent">
+    <SheetHeader className="flex-row items-center gap-2 border-b">
+      <Button onClick={() => setIsChildOpen(false)} size="icon" variant="ghost">
+        <ArrowLeft01Icon />
+      </Button>
+      <SheetTitle>Sub-option</SheetTitle>
+    </SheetHeader>
+    <SheetPanel>
+      {/* Child content */}
+    </SheetPanel>
+  </SheetPopup>
+</Sheet>
+```
+
+Key points:
+- Use `backdropClassName="bg-transparent"` on child sheets to prevent double-darkening
+- Child sheet headers include back button (`ArrowLeft01Icon`)
+- Selection in child should close BOTH sheets: `setIsChildOpen(false); setIsMainOpen(false);`
+- Requires `backdropClassName` prop added to `SheetPopup` in `sheet.tsx`
+
 ## Commands
 
 ```bash
@@ -551,6 +596,45 @@ Content here. Link with [Display Text](./other-slug).
 ```
 
 **Link format**: `[Text](./slug)` — not wikilinks (`[[slug]]`).
+
+
+### Korean Manifesto Writing Pattern (Assertive Academic)
+
+**Principles**
+
+- Declarative, assertive tone: state claims as facts, not possibilities.
+- Remove colloquial fillers/intensifiers (뭔가, 그냥, 너무, 되게, 꽤).
+- Prefer direct predicates: "...할 수 있다" → "...한다/된다"; avoid "...해준다" → "...한다/하게 한다".
+- Keep sentences tight; split long chains; avoid softeners like "아마/모른다/일지도".
+- Standardize terminology and avoid mixed English labels inside body text.
+
+**Standard Terms**
+
+- 책임선 (not 책임 경계선)
+- 증거 구간 (not 증거 범위/근거 구간/스팬)
+- 정의 표류 (not 정의 드리프트)
+- 다국어 지식 메쉬 (not 메시)
+- 오퍼레이터 (not Operator)
+- 변증법적 그래프 / 노드 / 엣지
+
+**Examples**
+
+```md
+- Before: "하지만 뭔가가 빠져 있었다."
+  After:  "하지만 핵심이 빠져 있었다."
+
+- Before: "이 시스템은 정보를 다시 떠올리게 해줄 수 있다."
+  After:  "이 시스템은 정보를 다시 떠올리게 한다."
+
+- Before: "번역 오류가 합의가 있는 것처럼 보이게 만들 수 있다."
+  After:  "번역 오류는 합의가 있는 것처럼 보이게 만든다."
+
+- Before: "근거 범위와 책임 경계선을 추적한다."
+  After:  "증거 구간과 책임선을 추적한다."
+
+- Before: "Operator는 AI 출력의 소비자다."
+  After:  "오퍼레이터는 AI 출력의 소비자다."
+```
 
 ### Scripts
 

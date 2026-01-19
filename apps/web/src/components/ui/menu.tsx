@@ -1,7 +1,8 @@
 "use client"
 
 import { Menu as MenuPrimitive } from "@base-ui/react/menu"
-import { ChevronRightIcon } from "lucide-react"
+import { ArrowRight01Icon, Tick01Icon } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
 import type * as React from "react"
 import { cn } from "@/lib/utils"
 
@@ -118,19 +119,7 @@ function MenuCheckboxItem({
       ) : (
         <>
           <MenuPrimitive.CheckboxItemIndicator className="col-start-1">
-            <svg
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M5.252 12.7 10.2 18.63 18.748 5.37" />
-            </svg>
+            <HugeiconsIcon icon={Tick01Icon} size={16} strokeWidth={1.5} />
           </MenuPrimitive.CheckboxItemIndicator>
           <span className="col-start-2">{children}</span>
         </>
@@ -158,19 +147,7 @@ function MenuRadioItem({
       {...props}
     >
       <MenuPrimitive.RadioItemIndicator className="col-start-1">
-        <svg
-          fill="none"
-          height="24"
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M5.252 12.7 10.2 18.63 18.748 5.37" />
-        </svg>
+        <HugeiconsIcon icon={Tick01Icon} size={16} strokeWidth={1.5} />
       </MenuPrimitive.RadioItemIndicator>
       <span className="col-start-2">{children}</span>
     </MenuPrimitive.RadioItem>
@@ -243,7 +220,12 @@ function MenuSubTrigger({
       {...props}
     >
       {children}
-      <ChevronRightIcon className="-me-0.5 ms-auto opacity-80" />
+      <HugeiconsIcon
+        className="-me-0.5 ms-auto opacity-80"
+        icon={ArrowRight01Icon}
+        size={16}
+        strokeWidth={1.5}
+      />
     </MenuPrimitive.SubmenuTrigger>
   )
 }

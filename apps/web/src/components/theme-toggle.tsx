@@ -1,12 +1,9 @@
 "use client"
 
+import { LaptopIcon, Moon01Icon, Sun01Icon } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
 import { useTranslations } from "next-intl"
 import { useTheme } from "next-themes"
-import {
-  IconMonitorOutline18,
-  IconMoonOutline18,
-  IconSunOutline18,
-} from "nucleo-ui-outline-18"
 import { useEffect, useState } from "react"
 import { cn } from "@/lib/utils"
 import {
@@ -18,12 +15,18 @@ import {
 } from "./ui/select"
 
 const themes = [
-  { value: "light", icon: IconSunOutline18 },
-  { value: "dark", icon: IconMoonOutline18 },
-  { value: "system", icon: IconMonitorOutline18 },
+  { value: "light", icon: Sun01Icon },
+  { value: "dark", icon: Moon01Icon },
+  { value: "system", icon: LaptopIcon },
 ] as const
 
-export function ThemeToggle({ className }: { className?: string }) {
+export function ThemeToggle({
+  className,
+  variant = "icon",
+}: {
+  className?: string
+  variant?: "icon" | "select"
+}) {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
   const t = useTranslations("theme")
@@ -32,41 +35,42 @@ export function ThemeToggle({ className }: { className?: string }) {
     setMounted(true)
   }, [])
 
-  const currentTheme = themes.find((t) => t.value === theme) ?? themes[2]
+  const resolvedTheme = mounted ? (theme ?? "system") : "system"
+  const currentTheme =
+    themes.find((t) => t.value === resolvedTheme) ?? themes[2]
   const CurrentIcon = currentTheme.icon
 
-  if (!mounted) {
-    return (
-      <div
-        className={cn(
-          "flex h-8 w-9 items-center justify-center sm:w-8",
-          className
-        )}
-      >
-        <IconMonitorOutline18 className="size-[1.2rem] text-muted-foreground sm:size-4" />
-      </div>
-    )
-  }
-
   return (
-    <Select onValueChange={(value) => value && setTheme(value)} value={theme}>
-      <SelectTrigger
-        aria-label={t("toggle")}
-        className={cn(
-          "w-9 min-w-0 justify-center px-0 sm:w-8 [&>[data-slot=select-icon]]:hidden",
-          className
-        )}
-        size="sm"
-      >
-        <SelectValue className="flex-none" placeholder={t("toggle")}>
-          <CurrentIcon className="size-[1.2rem] sm:size-4" />
-        </SelectValue>
-      </SelectTrigger>
-      <SelectPopup alignItemWithTrigger={false}>
+    <Select
+      onValueChange={(value) => value && setTheme(value)}
+      value={resolvedTheme}
+    >
+      {variant === "icon" ? (
+        <SelectTrigger
+          aria-label={t("toggle")}
+          className={cn(
+            "w-9 min-w-0 justify-center px-0 sm:w-8 [&>[data-slot=select-icon]]:hidden",
+            className
+          )}
+          size="sm"
+        >
+          <SelectValue className="flex-none" placeholder={t("toggle")}>
+            <HugeiconsIcon icon={CurrentIcon} size={18} strokeWidth={1.5} />
+          </SelectValue>
+        </SelectTrigger>
+      ) : (
+        <SelectTrigger
+          aria-label={t("toggle")}
+          className={cn("w-full justify-between", className)}
+        >
+          <SelectValue />
+        </SelectTrigger>
+      )}
+      <SelectPopup alignItemWithTrigger={variant !== "icon"}>
         {themes.map(({ value, icon: Icon }) => (
           <SelectItem key={value} value={value}>
             <span className="flex items-center gap-2">
-              <Icon className="size-4" />
+              <HugeiconsIcon icon={Icon} size={16} strokeWidth={1.5} />
               {t(value)}
             </span>
           </SelectItem>

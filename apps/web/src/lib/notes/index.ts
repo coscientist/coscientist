@@ -5,4 +5,4 @@ import { loadNote } from "./note-loader"
 export { getAllNoteSlugs } from "./file-io"
 
 export const getNoteBySlug = cache(loadNote)
-export const buildNoteGraph = buildNoteGraphFromBuilder
+export const buildNoteGraph = cache(buildNoteGraphFromBuilder)

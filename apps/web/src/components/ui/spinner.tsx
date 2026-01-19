@@ -1,6 +1,7 @@
 "use client"
 
-import { IconArrowRotateClockwiseOutline18 } from "nucleo-ui-outline-18"
+import { Loading03Icon } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
 import { cn } from "@/lib/utils"
 
 const sizeClasses = {
@@ -14,17 +15,20 @@ function Spinner({
   className,
   size = "default",
   ...props
-}: Omit<
-  React.ComponentProps<typeof IconArrowRotateClockwiseOutline18>,
-  "size"
-> & {
+}: Omit<React.ComponentProps<typeof HugeiconsIcon>, "icon" | "size"> & {
   size?: keyof typeof sizeClasses
 }) {
+  const resolvedSize =
+    size === "sm" ? 16 : size === "lg" ? 24 : size === "xl" ? 32 : 20
+
   return (
-    <IconArrowRotateClockwiseOutline18
+    <HugeiconsIcon
       aria-label="Loading"
       className={cn("animate-spin", sizeClasses[size], className)}
+      icon={Loading03Icon}
       role="status"
+      size={resolvedSize}
+      strokeWidth={1.5}
       {...props}
     />
   )

@@ -1,8 +1,9 @@
 "use client"
 
+import { ArrowRight01Icon } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
 import { motion } from "motion/react"
 import { useLocale, useTranslations } from "next-intl"
-import { IconChevronRightOutline18 } from "nucleo-ui-outline-18"
 
 import { Button } from "@/components/ui/button"
 import { itemVariants, useSectionAnimation } from "@/lib/landing-animations"
@@ -67,7 +68,13 @@ export function BuildInPublic() {
             size="lg"
             variant="outline"
           >
-            {t("visitHQ")} <IconChevronRightOutline18 className="ml-1 size-4" />
+            {t("visitHQ")}{" "}
+            <HugeiconsIcon
+              className="ml-1"
+              icon={ArrowRight01Icon}
+              size={16}
+              strokeWidth={1.5}
+            />
           </Button>
         </motion.div>
       </Container>

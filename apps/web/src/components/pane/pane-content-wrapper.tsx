@@ -1,8 +1,9 @@
 "use client"
 
+import { Cancel01Icon } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
 import { AnimatePresence, motion, type Transition } from "motion/react"
 import { useTranslations } from "next-intl"
-import { IconXmarkOutline18 } from "nucleo-ui-outline-18"
 import type { ReactNode } from "react"
 import { closeButtonVariants, paneContentVariants } from "@/lib/animations"
 import { cn } from "@/lib/utils"
@@ -74,7 +75,7 @@ export function PaneContentWrapper({
             type="button"
             variants={closeButtonVariants}
           >
-            <IconXmarkOutline18 className="size-5" />
+            <HugeiconsIcon icon={Cancel01Icon} size={20} strokeWidth={1.5} />
           </motion.button>
         )}
       </AnimatePresence>

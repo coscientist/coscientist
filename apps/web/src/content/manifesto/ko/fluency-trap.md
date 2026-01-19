@@ -18,6 +18,6 @@ translatedAt: 2026-01-14
 
 유창성 함정을 상쇄하려면 능동적인 노력이 필요하다.
 [Coscientist](./coscientist)에서는 이는
-[반박 우선 검색](./rebuttal-first-search), [근거 구간](./evidence-span)까지
+[반박 우선 검색](./rebuttal-first-search), [증거 구간](./evidence-span)까지
 이어지는 [추적 가능성](./traceability), 그리고 [검증](./verification)을
 [오퍼레이터](./operator)의 명시적 책임으로 만드는 것을 뜻한다.

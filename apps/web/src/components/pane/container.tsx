@@ -11,17 +11,17 @@ import { MobileContainer } from "./mobile-container"
 interface PaneContainerProps {
   children: ReactNode
   scrollToPaneRef?: React.MutableRefObject<((index: number) => void) | null>
-  allNotesData: NotePaneData[]
+  paneNotes: NotePaneData[]
 }
 
 export function PaneContainer({
   children,
   scrollToPaneRef,
-  allNotesData,
+  paneNotes,
 }: PaneContainerProps) {
   const isMobile = useIsMobile()
   const { focusIndex } = useNoteStackContext()
-  const mobileData = useMobileData({ allNotesData })
+  const mobileData = useMobileData({ paneNotes })
 
   if (isMobile) {
     return <MobileContainer focusIndex={focusIndex} mobileData={mobileData} />

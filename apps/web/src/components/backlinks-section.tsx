@@ -1,7 +1,8 @@
 "use client"
 
+import { ArrowUpLeft01Icon } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
 import { useTranslations } from "next-intl"
-import { IconArrowUpLeftOutline18 } from "nucleo-ui-outline-18"
 import { memo, useCallback, useMemo } from "react"
 import type { BacklinkInfo } from "@/lib/types"
 import { cn } from "@/lib/utils"
@@ -84,7 +85,7 @@ export const BacklinksSection = memo(function BacklinksSection({
   return (
     <section>
       <h3 className="mb-3 flex items-center gap-1.5 font-medium text-muted-foreground text-xs uppercase tracking-wider">
-        <IconArrowUpLeftOutline18 className="size-3" />
+        <HugeiconsIcon icon={ArrowUpLeft01Icon} size={12} strokeWidth={1.5} />
         {t(translationKey, { count: backlinks.length })}
       </h3>
       <ul className="flex flex-col">

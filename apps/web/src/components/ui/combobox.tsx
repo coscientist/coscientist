@@ -1,7 +1,12 @@
 "use client"
 
 import { Combobox as ComboboxPrimitive } from "@base-ui/react/combobox"
-import { ChevronsUpDownIcon, XIcon } from "lucide-react"
+import {
+  ArrowUpDownIcon,
+  Cancel01Icon,
+  Tick01Icon,
+} from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
 import * as React from "react"
 import { Input } from "@/components/ui/input"
 import { ScrollArea } from "@/components/ui/scroll-area"
@@ -105,7 +110,7 @@ function ComboboxInput({
             sizeValue === "sm" ? "end-0" : "end-0.5"
           )}
         >
-          <ChevronsUpDownIcon />
+          <HugeiconsIcon icon={ArrowUpDownIcon} size={16} strokeWidth={1.5} />
         </ComboboxTrigger>
       )}
       {showClear && (
@@ -115,7 +120,7 @@ function ComboboxInput({
             sizeValue === "sm" ? "end-0" : "end-0.5"
           )}
         >
-          <XIcon />
+          <HugeiconsIcon icon={Cancel01Icon} size={16} strokeWidth={1.5} />
         </ComboboxClear>
       )}
     </div>
@@ -187,19 +192,7 @@ function ComboboxItem({
       {...props}
     >
       <ComboboxPrimitive.ItemIndicator className="col-start-1">
-        <svg
-          fill="none"
-          height="24"
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          width="24"
-          xmlns="http://www.w3.org/1500/svg"
-        >
-          <path d="M5.252 12.7 10.2 18.63 18.748 5.37" />
-        </svg>
+        <HugeiconsIcon icon={Tick01Icon} size={16} strokeWidth={1.5} />
       </ComboboxPrimitive.ItemIndicator>
       <div className="col-start-2">{children}</div>
     </ComboboxPrimitive.Item>
@@ -385,7 +378,7 @@ function ComboboxChipRemove(props: ComboboxPrimitive.ChipRemove.Props) {
       data-slot="combobox-chip-remove"
       {...props}
     >
-      <XIcon />
+      <HugeiconsIcon icon={Cancel01Icon} size={16} strokeWidth={1.5} />
     </ComboboxPrimitive.ChipRemove>
   )
 }

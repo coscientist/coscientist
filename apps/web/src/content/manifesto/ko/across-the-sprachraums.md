@@ -23,13 +23,13 @@ translatedAt: 2026-01-14
 [언어-불가지론적 인덱스](./language-agnostic-indexing)를 유지하고,
 [번역 충실도](./translation-fidelity)를 보존하며,
 [번역 뉘앙스 손실](./translation-nuance-loss)을 방지해야 한다. 목표는 단어
-매칭만이 아니라 기저의 개념을 통해 한국어 노트가 영어 노트로 연결될 수 있는
+매칭만이 아니라 기저의 개념을 통해 한국어 노트가 영어 노트로 연결되는
 [다언어 지식 메쉬](./multilingual-knowledge-mesh)다.
 
 [외골격두뇌](./extracranial)는 이중언어 콘텐츠, 자동 언어 감지, hreflang 태그를
 통해 이를 구현한다. [Coscientist](./coscientist)는 이 비전을 확장한다.
-[대규모 언어 모델](./llm)을 사용하기 때문에 어떤 언어로 된 문헌이든 읽고 종합할
-수 있어, [범언어적 종합](./cross-linguistic-synthesis)이 사후적으로 덧붙는
+[대규모 언어 모델](./llm)을 사용하기 때문에 어떤 언어로 된 문헌이든 읽고
+종합하며, [범언어적 종합](./cross-linguistic-synthesis)은 사후적으로 덧붙는
 기능이 아니라 기본 역량이 된다.
 
 참고: https://cho.sh/r/2EB438.

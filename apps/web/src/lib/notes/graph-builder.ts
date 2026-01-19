@@ -1,24 +1,23 @@
 import "server-only"
 
-import type { BacklinkInfo, Note } from "@/lib/types"
+import type { BacklinkInfo, NoteSummary } from "@/lib/types"
 import { extractExcerpt } from "./link-extractor"
-import { loadAllNotes } from "./note-loader"
-
-const graphCache = new Map<
-  string,
-  Promise<{ notes: Map<string, Note>; backlinks: Map<string, BacklinkInfo[]> }>
->()
+import { loadAllNoteGraphNodes } from "./note-loader"
 
 async function buildNoteGraphUncached(locale: string): Promise<{
-  notes: Map<string, Note>
+  notes: Map<string, NoteSummary>
   backlinks: Map<string, BacklinkInfo[]>
 }> {
-  const allNotes = await loadAllNotes(locale)
-  const notes = new Map<string, Note>()
+  const allNotes = await loadAllNoteGraphNodes(locale)
+  const notes = new Map<string, NoteSummary>()
   const backlinks = new Map<string, BacklinkInfo[]>()
 
   for (const note of allNotes) {
-    notes.set(note.slug, note)
+    notes.set(note.slug, {
+      slug: note.slug,
+      title: note.title,
+      description: note.description,
+    })
     backlinks.set(note.slug, [])
   }
 
@@ -32,11 +31,6 @@ async function buildNoteGraphUncached(locale: string): Promise<{
           excerpt: extractExcerpt(note.content, targetSlug),
         })
         backlinks.set(targetSlug, targetBacklinks)
-
-        const targetNote = notes.get(targetSlug)
-        if (targetNote && !targetNote.inboundLinks.includes(note.slug)) {
-          targetNote.inboundLinks.push(note.slug)
-        }
       }
     }
   }
@@ -45,11 +39,8 @@ async function buildNoteGraphUncached(locale: string): Promise<{
 }
 
 export function buildNoteGraph(locale = "en"): Promise<{
-  notes: Map<string, Note>
+  notes: Map<string, NoteSummary>
   backlinks: Map<string, BacklinkInfo[]>
 }> {
-  if (!graphCache.has(locale)) {
-    graphCache.set(locale, buildNoteGraphUncached(locale))
-  }
-  return graphCache.get(locale)!
+  return buildNoteGraphUncached(locale)
 }

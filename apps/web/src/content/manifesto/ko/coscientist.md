@@ -21,14 +21,14 @@ Coscientist는 [아이작 아시모프](./isaac-asimov)의 허구적
 
 첫 번째 원칙은 주권이다. 지식에 대한 권위는 반드시 [운영자](./operator)에 남아
 있어야 한다. [백과사전 멜트다운](./encyclopedia-meltdown)을 막는 일은 사후
-고려가 아니라 설계 제약이다. AI는 사유 노동을 할 수 있지만, 작성하고 선언하는
+고려가 아니라 설계 제약이다. AI는 사유 노동을 하지만, 작성하고 선언하는
 주도권을 빼앗아서는 안 된다.
 
 이 때문에 Coscientist는 Q&A 스타일의 RAG를 넘어선다. Coscientist는 원문 문서 텍스트가 아니라
 [논증 행위](./argumentative-act)를 저장하는
 [변증법적 그래프](./dialectical-graph)를 유지한다. 그래서 모든 주장은 증거 구간,
 출처, 그리고 명시적 관계 및
-[변증법적 그래프 엣지](./dialectical-graph-edges)에 연결될 수 있다.
+[변증법적 그래프 엣지](./dialectical-graph-edges)에 연결된다.
 
 탐색은 기본적으로 대립적이다. [반례 우선 탐색](./counterexample-first-search),
 [최소 컷](./minimum-cut)을 통한 모순 격리, 그리고 명시적
@@ -39,9 +39,9 @@ Coscientist는 [아이작 아시모프](./isaac-asimov)의 허구적
 [다중-AI 합의 프로토콜](./multi-ai-consensus-protocol)과
 [지식 합성](./knowledge-synthesis) 같은 절차를 사용해, 문서들이 단순히 요약되는
 것이 아니라 서로 충돌하도록 만든다. [대규모 언어 모델](./llm)을 사용하기 때문에
-Coscientist는 [교차언어 합성](./cross-linguistic-synthesis)을 수행할 수 있다. 즉
+Coscientist는 [교차언어 합성](./cross-linguistic-synthesis)을 수행한다. 즉
 어떤 언어로든 문헌을 읽고 합성하여, 진정한
-[다국어 시지식 메쉬](./multilingual-knowledge-mesh)를 가능하게 한다. 의도된 최종
+[다국어 지식 메쉬](./multilingual-knowledge-mesh)를 가능하게 한다. 의도된 최종
 상태는 논증의 생태계다. AI가 탐색과 재구조화를 처리하고, 운영자가 구조와 검증을
 감독하여, 결과 서사가 추적 가능하게 유지된다.
 

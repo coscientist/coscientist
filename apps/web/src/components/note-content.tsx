@@ -1,5 +1,7 @@
 "use client"
 
+import { ArrowUpRight01Icon } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
 import parse, {
   type DOMNode,
   domToReact,
@@ -7,7 +9,6 @@ import parse, {
   type HTMLReactParserOptions,
 } from "html-react-parser"
 import { useTranslations } from "next-intl"
-import { IconArrowUpRightOutline18 } from "nucleo-ui-outline-18"
 import { useCallback, useMemo } from "react"
 import {
   buildNoteHref,
@@ -49,9 +50,12 @@ export function NoteContent({ contentHtml, onLinkClick }: NoteContentProps) {
                 target="_blank"
               >
                 {domToReact(domNode.children as DOMNode[], options)}
-                <IconArrowUpRightOutline18
+                <HugeiconsIcon
                   aria-hidden="true"
-                  className="ml-0.5 inline-block size-[0.85em] align-baseline"
+                  className="ml-0.5 inline-block align-baseline"
+                  icon={ArrowUpRight01Icon}
+                  size={12}
+                  strokeWidth={1.5}
                 />
                 <span className="sr-only"> ({t("opensInNewTab")})</span>
               </a>

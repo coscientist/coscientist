@@ -1,9 +1,10 @@
 "use client"
 
+import { ArrowRight01Icon } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
 import { motion } from "motion/react"
 import Link from "next/link"
 import { useTranslations } from "next-intl"
-import { IconChevronRightOutline18 } from "nucleo-ui-outline-18"
 
 import { Button } from "@/components/ui/button"
 import { itemVariants, useSectionAnimation } from "@/lib/landing-animations"
@@ -53,7 +54,12 @@ export function CTA() {
           <div className="flex items-center gap-3">
             <Button render={<Link href="/manifesto" />} size="lg">
               {t("readManifesto")}{" "}
-              <IconChevronRightOutline18 className="ml-1 size-4" />
+              <HugeiconsIcon
+                className="ml-1"
+                icon={ArrowRight01Icon}
+                size={16}
+                strokeWidth={1.5}
+              />
             </Button>
             <Button
               render={

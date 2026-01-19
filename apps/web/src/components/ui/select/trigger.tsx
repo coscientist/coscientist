@@ -1,7 +1,8 @@
 "use client"
 
 import { Select as SelectPrimitive } from "@base-ui/react/select"
-import { IconChevronExpandYOutline18 } from "nucleo-ui-outline-18"
+import { ArrowUpDownIcon } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
 import { cn } from "@/lib/utils"
 
 export function SelectTrigger({
@@ -26,7 +27,12 @@ export function SelectTrigger({
     >
       {children}
       <SelectPrimitive.Icon data-slot="select-icon">
-        <IconChevronExpandYOutline18 className="-me-1 size-4.5 opacity-80 sm:size-4" />
+        <HugeiconsIcon
+          className="-me-1 opacity-80"
+          icon={ArrowUpDownIcon}
+          size={16}
+          strokeWidth={1.5}
+        />
       </SelectPrimitive.Icon>
     </SelectPrimitive.Trigger>
   )

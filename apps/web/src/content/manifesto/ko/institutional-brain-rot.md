@@ -18,5 +18,5 @@ translatedAt: 2026-01-14
 
 [Coscientist](./coscientist)는 상호 참조,
 [반박 우선 검색](./rebuttal-first-search)을 통한 적대적 검토, 그리고 주장이
-사회적 마찰 없이도 도전받을 수 있도록 하는 명시적
+사회적 마찰 없이도 도전받도록 하는 명시적
 [추적 가능성](./traceability)을 통해 제도적 브레인롯에 대응한다.

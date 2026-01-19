@@ -1,11 +1,12 @@
 import { notFound } from "next/navigation"
+import { getNoteBySlug } from "@/lib/notes"
 import { buildFullStack, parseStackString } from "@/lib/stores/stack-utils"
-import type { BacklinkInfo, Note, NotePaneData, NoteSummary } from "@/lib/types"
+import type { BacklinkInfo, NotePaneData, NoteSummary } from "@/lib/types"
 import { NotesPageClient } from "./client"
 
 interface ClientWrapperProps {
   noteGraphPromise: Promise<{
-    notes: Map<string, Note>
+    notes: Map<string, NoteSummary>
     backlinks: Map<string, BacklinkInfo[]>
   }>
   rootSlug: string
@@ -17,23 +18,37 @@ export async function ClientWrapper({
   noteGraphPromise,
   rootSlug,
   locale,
-}: Omit<ClientWrapperProps, "searchParams">) {
-  const { notes, backlinks } = await noteGraphPromise
+  searchParams,
+}: ClientWrapperProps) {
+  const stackParam = Array.isArray(searchParams.stack)
+    ? searchParams.stack[0]
+    : searchParams.stack
+  const additionalSlugs = parseStackString(stackParam)
+  const fullStack = buildFullStack(rootSlug, additionalSlugs)
+
+  const [graph, stackNotes] = await Promise.all([
+    noteGraphPromise,
+    Promise.all(fullStack.map((slug) => getNoteBySlug(slug, locale))),
+  ])
+
+  const { notes, backlinks } = graph
 
   const rootNote = notes.get(rootSlug)
   if (!rootNote) {
     notFound()
   }
 
-  const allNotesData: NotePaneData[] = Array.from(notes.values()).map(
-    (note) => ({
+  const paneNotes = stackNotes.reduce<NotePaneData[]>((acc, note) => {
+    if (!note) return acc
+    acc.push({
       slug: note.slug,
       title: note.title,
       description: note.description,
       contentHtml: note.contentHtml,
       backlinks: backlinks.get(note.slug) || [],
     })
-  )
+    return acc
+  }, [])
 
   const noteSummaries: NoteSummary[] = Array.from(notes.values()).map(
     (note) => ({
@@ -42,12 +57,13 @@ export async function ClientWrapper({
       description: note.description,
     })
   )
-  noteSummaries.sort((a, b) => a.title.localeCompare(b.title, locale))
+  const collator = new Intl.Collator(locale)
+  noteSummaries.sort((a, b) => collator.compare(a.title, b.title))
 
   return (
     <NotesPageClient
-      allNotesData={allNotesData}
       noteSummaries={noteSummaries}
+      paneNotes={paneNotes}
       rootSlug={rootSlug}
     />
   )

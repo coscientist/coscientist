@@ -1,10 +1,11 @@
 "use client"
 
 import { Waitlist } from "@clerk/nextjs"
+import { ArrowRight01Icon } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
 import { motion, useReducedMotion } from "motion/react"
 import Link from "next/link"
 import { useTranslations } from "next-intl"
-import { IconChevronRightOutline18 } from "nucleo-ui-outline-18"
 
 import { Button } from "@/components/ui/button"
 import { reducedMotionTransition, springSubtle } from "@/lib/animations"
@@ -27,7 +28,12 @@ export function HeroCTA() {
     >
       <Button render={<Link href="/manifesto" />} size="lg">
         {t("readManifesto")}{" "}
-        <IconChevronRightOutline18 className="ml-1 size-4" />
+        <HugeiconsIcon
+          className="ml-1"
+          icon={ArrowRight01Icon}
+          size={16}
+          strokeWidth={1.5}
+        />
       </Button>
       <div className="flex flex-col items-center gap-4 text-center">
         <span className="text-muted-foreground text-sm">or</span>

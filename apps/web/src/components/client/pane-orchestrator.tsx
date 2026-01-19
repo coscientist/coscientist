@@ -9,12 +9,12 @@ import type { NotePaneData, NoteSummary } from "@/lib/types"
 import { useNoteStackContext } from "./note-stack-provider"
 
 interface PaneOrchestratorProps {
-  allNotesData: NotePaneData[]
+  paneNotes: NotePaneData[]
   noteSummaries: NoteSummary[]
 }
 
 export const PaneOrchestrator = memo(function PaneOrchestrator({
-  allNotesData,
+  paneNotes,
   noteSummaries,
 }: PaneOrchestratorProps) {
   const { stack, pushNote, focusPane, setStack } = useNoteStackContext()
@@ -22,14 +22,14 @@ export const PaneOrchestrator = memo(function PaneOrchestrator({
 
   const panesData = useMemo(() => {
     const paneDataMap = new Map<string, NotePaneData>()
-    for (const pane of allNotesData) {
+    for (const pane of paneNotes) {
       paneDataMap.set(pane.slug, pane)
     }
 
     return stack
       .map((slug) => paneDataMap.get(slug))
       .filter((pane): pane is NotePaneData => pane !== undefined)
-  }, [stack, allNotesData])
+  }, [stack, paneNotes])
 
   const handleLinkClick = useCallback(
     (slug: string, fromPaneIndex: number) => {
@@ -50,21 +50,26 @@ export const PaneOrchestrator = memo(function PaneOrchestrator({
 
   const handleAllNotesClick = useCallback(
     (slug: string) => {
-      pushNote(slug, stack.length - 1)
+      const fromIndex = Math.max(0, panesData.length - 1)
+      pushNote(slug, fromIndex)
     },
-    [pushNote, stack.length]
+    [pushNote, panesData.length]
   )
 
   const handleClosePane = useCallback(
     (index: number) => {
-      if (index === 0 || stack.length <= 1) {
+      const availableStack = stack.slice(0, panesData.length)
+      if (index === 0 || availableStack.length <= 1) {
         return
       }
-      const newStack = [...stack.slice(0, index), ...stack.slice(index + 1)]
+      const newStack = [
+        ...availableStack.slice(0, index),
+        ...availableStack.slice(index + 1),
+      ]
       const newFocusIndex = Math.min(index, newStack.length - 1)
       setStack(newStack, newFocusIndex)
     },
-    [stack, setStack]
+    [stack, panesData.length, setStack]
   )
 
   return (

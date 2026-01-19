@@ -21,5 +21,5 @@ translatedAt: 2026-01-14
 [변증법적 그래프](./dialectical-graph)를 통해 구조화된 출력을 제시하지만,
 [검증](./verification)을 오퍼레이터에게 맡김으로써
 [인지적 주권](./cognitive-sovereignty)을 보존한다. LLM(대규모 언어 모델)을
-사용하기 때문에 [언어권을 가로질러](./across-the-sprachraums) 작동할 수 있으며,
+사용하기 때문에 [언어권을 가로질러](./across-the-sprachraums) 작동하며,
 [언어 간 종합](./cross-linguistic-synthesis)을 위한 동반자 역할을 한다.

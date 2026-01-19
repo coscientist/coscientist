@@ -11,11 +11,10 @@ translatedAt: 2026-01-14
 지식을 믿음과 구분 짓는다.
 
 [Coscientist](./coscientist)에서 검증은 [오퍼레이터](./operator)의 책임이다.
-AI는 [contemplation labor](./contemplation-labor)(숙고 노동)을 수행하며 후보와
-반박을 드러내는 데 도움을 줄 수 있지만, 무엇이 검증된 것으로 간주되는지는 인간이
-결정한다. 이는 [cognitive sovereignty](./cognitive-sovereignty)(인지 주권)을
-보존한다. 즉 Operator는 AI 출력의 수동적 소비자가 아니라, 자신의 지식의 저자로
-남는다.
+AI는 [숙고 노동](./contemplation-labor)을 수행하며 후보와 반박을 드러내는 데
+도움을 주지만, 무엇이 검증된 것으로 간주되는지는 인간이 결정한다. 이는
+[인지 주권](./cognitive-sovereignty)을 보존한다. 즉 오퍼레이터는 AI 출력의
+수동적 소비자가 아니라, 자신의 지식의 저자로 남는다.
 
 [반박 우선 검색](./rebuttal-first-search)(반박 우선 검색) 같은 기법은 기본적으로
 검증을 대립적으로 만들며, 수용하기 전에 먼저 반증을 찾는다.

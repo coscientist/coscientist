@@ -1,7 +1,8 @@
 "use client"
 
+import { Globe02Icon } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
 import { useLocale, useTranslations } from "next-intl"
-import { IconLanguageOutline18 } from "nucleo-ui-outline-18"
 import { useQueryStates } from "nuqs"
 import { Button } from "@/components/ui/button"
 import {
@@ -9,6 +10,7 @@ import {
   SelectItem,
   SelectPopup,
   SelectTrigger,
+  SelectValue,
 } from "@/components/ui/select"
 import { usePathname, useRouter } from "@/i18n/navigation"
 import { type Locale, routing } from "@/i18n/routing"
@@ -19,7 +21,7 @@ import {
 } from "@/lib/stores/note-stack-parsers"
 import { cn } from "@/lib/utils"
 
-const localeNames: Record<Locale, string> = {
+export const localeNames: Record<Locale, string> = {
   en: "English",
   "zh-CN": "简体中文",
   "zh-TW": "繁體中文",
@@ -47,7 +49,13 @@ const localeNames: Record<Locale, string> = {
   nl: "Nederlands",
 }
 
-export function LanguageSwitcher({ className }: { className?: string }) {
+export function LanguageSwitcher({
+  className,
+  variant = "icon",
+}: {
+  className?: string
+  variant?: "icon" | "select"
+}) {
   const t = useTranslations("languageSwitcher")
   const locale = useLocale()
   const router = useRouter()
@@ -71,18 +79,27 @@ export function LanguageSwitcher({ className }: { className?: string }) {
 
   return (
     <Select onValueChange={handleChange} value={locale}>
-      <Button
-        aria-label={t("selectLanguage")}
-        className={cn(
-          "w-auto min-w-0 [&_[data-slot=select-icon]]:hidden",
-          className
-        )}
-        render={<SelectTrigger />}
-        size="icon"
-        variant="outline"
-      >
-        <IconLanguageOutline18 className="size-[1.2rem]" />
-      </Button>
+      {variant === "icon" ? (
+        <Button
+          aria-label={t("selectLanguage")}
+          className={cn(
+            "w-auto min-w-0 [&_[data-slot=select-icon]]:hidden",
+            className
+          )}
+          render={<SelectTrigger />}
+          size="icon"
+          variant="outline"
+        >
+          <HugeiconsIcon icon={Globe02Icon} size={18} strokeWidth={1.5} />
+        </Button>
+      ) : (
+        <SelectTrigger
+          aria-label={t("selectLanguage")}
+          className={cn("w-full justify-between", className)}
+        >
+          <SelectValue />
+        </SelectTrigger>
+      )}
       <SelectPopup className="max-h-[300px]">
         {routing.locales.map((loc) => (
           <SelectItem key={loc} value={loc}>

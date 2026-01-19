@@ -6,12 +6,17 @@ interface NoteMeta {
   updatedAt?: string
 }
 
-export interface Note extends NoteMeta {
+interface NoteBase extends NoteMeta {
   content: string
+}
+
+export interface NoteGraphNode extends NoteBase {
+  outboundLinks: string[]
+}
+
+export interface Note extends NoteBase {
   contentHtml: string
   excerpt: string
-  outboundLinks: string[]
-  inboundLinks: string[]
 }
 
 export interface BacklinkInfo {

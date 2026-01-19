@@ -178,9 +178,6 @@ export function AppHeader({
                   variant="ghost"
                 >
                   <span>{githubLabel}</span>
-                  <span className="text-muted-foreground text-sm">
-                    (opens in new tab)
-                  </span>
                   <HugeiconsIcon
                     className="text-muted-foreground"
                     icon={ArrowUpRight01Icon}

@@ -1,14 +1,14 @@
 {
   "metadata": {
     "title": "Coscientist: 토큰 ≠ 지식",
-    "description": "더 나은 연구를 위한 인지 인프라."
+    "description": "더 나은 연구를 위한 두뇌 증강 인프라."
   },
   "header": {
     "brand": "Coscientist",
-    "brandWithManifesto": "Coscientist 선언문",
-    "joinWaitlist": "대기자 명단에 합류",
-    "github": "GitHub (새 탭에서 열림)",
-    "twitter": "X (Twitter) (새 탭에서 열림)"
+    "brandWithManifesto": "Coscientist 선언",
+    "joinWaitlist": "대기자 명단 합류",
+    "github": "GitHub",
+    "twitter": "Twitter"
   },
   "allNotes": {
     "title": "모든 노트",
@@ -63,8 +63,8 @@
   "landing": {
     "hero": {
       "title": "생각의 속도로\n연구하다",
-      "subtitle": "역사에 뿌리 둔 실험. 오래가는 지식.",
-      "description": "연구를 위한 인지 인프라.",
+      "subtitle": "스스로 사유하는 연구 플랫폼.",
+      "description": "더 나은 연구를 위한 두뇌 증강 인프라.",
       "readManifesto": "선언문 읽기",
       "github": "GitHub"
     },
@@ -73,21 +73,21 @@
       "heading": "처음부터 다르게, 의도적으로",
       "dialecticalGraph": {
         "title": "변증법적 그래프",
-        "description": "문서와 링크가 아니라 주장과 관계. 모든 진술은 증거로 거슬러 올라갑니다."
+        "description": "연구 엔티티들은 단순 링크가 아니라 주장과 관계로 연결됩니다. 모든 문장의 근거로 수학적으로 찾을 수 있습니다.."
       },
       "rebuttalFirst": {
         "title": "반박 우선",
-        "description": "지지보다 붕괴를 먼저 찾는다. 도전을 견디는 지식."
+        "description": "다른 AI처럼 아첨하지 않습니다. 오히려 빈틈을 끊임없이 공격합니다."
       },
       "multilingual": {
-        "title": "다국어",
-        "description": "한국어 논문. 독일어 가설. 일본어 데이터셋. 하나의 통합 연구 그래프."
+        "title": "다국어 네이티브",
+        "description": "영어 논문. 한국어 가설. 일본어 데이터셋. 하나의 통합 연구 그래프."
       }
     },
     "pipeline": {
       "eyebrow": "작동 방식",
       "heading": "멀티 에이전트 토론 아키텍처",
-      "description": "멀티 에이전트 AI가 내부에서 토론합니다. 끝까지 남는 논증만 보게 됩니다.",
+      "description": "멀티 에이전트 AI가 내부에서 토론합니다. 끝까지 남는 결론 논증만 보게 됩니다.",
       "steps": {
         "propose": "제안",
         "critique": "비평",
@@ -105,13 +105,13 @@
       }
     },
     "buildInPublic": {
-      "eyebrow": "급진적 투명성",
+      "eyebrow": "확연한 투명성",
       "heading": "우리는 공개적으로 구축합니다",
-      "description": "모든 아키텍처 결정과 트레이드오프, 기술적 선택은 문서화되어 누구나 접근할 수 있습니다. 지식 시스템이 추적 가능성을 요구한다면, 이를 가능케 하는 도구도 같은 방식으로 만들어져야 합니다.",
+      "description": "모든 아키텍처 결정과 트레이드오프, 기술적 선택은 문서화되어 기록하고 있습니다. 지식 시스템이 추적 가능성을 요구한다면, 이를 가능케 하는 도구도 같은 방식으로 만들어져야 합니다.",
       "visitHQ": "우리의 HQ 살펴보기"
     },
     "cta": {
-      "heading": "은하 백과사전은 허구였습니다.\n우리는 인프라를 구축하고 있습니다.",
+      "heading": "아시모프의 은하대백과는 허구였습니다.\n우리는 이를 현실에 구축해보려 합니다.",
       "readManifesto": "선언문 읽기",
       "github": "GitHub"
     },

@@ -1,36 +1,36 @@
 {
   "metadata": {
     "title": "Coscientist: Tokens ≠ Conocimiento",
-    "description": "Infraestructura de aumento cognitivo para una mejor investigación."
+    "description": "Infraestructura de Aumento Cognitivo para una Mejor Investigación."
   },
   "header": {
     "brand": "Coscientist",
     "brandWithManifesto": "Manifiesto de Coscientist",
-    "joinWaitlist": "Únete a la lista de espera",
+    "joinWaitlist": "Únete a la Lista de Espera",
     "github": "GitHub",
     "twitter": "Twitter"
   },
   "allNotes": {
-    "title": "Todas las notas",
-    "noteCount": "{count} notas",
-    "currentlyOpen": "Actualmente abierta en la posición {position}"
+    "title": "Todas las Notas",
+    "noteCount": "{count} Notas",
+    "currentlyOpen": "Actualmente Abierta en la Posición {position}"
   },
   "notePane": {
-    "expand": "Ampliar espacio de trabajo",
+    "expand": "Ampliar Espacio de Trabajo",
     "expandNote": "Explorar {title}",
     "closeNote": "Cerrar {title}",
-    "closePane": "Cerrar panel {index}",
+    "closePane": "Cerrar Panel {index}",
     "editOnGitHub": "Editar en GitHub"
   },
   "mobileCarousel": {
-    "goToNote": "Ir a la nota {position}: {title}"
+    "goToNote": "Ir a la Nota {position}: {title}"
   },
   "backlinks": {
-    "singular": "{count} notas enlazan aquí",
-    "plural": "{count} notas enlazan aquí"
+    "singular": "{count} Notas Enlazan Aquí",
+    "plural": "{count} Notas Enlazan Aquí"
   },
   "theme": {
-    "toggle": "Cambiar tema",
+    "toggle": "Cambiar Tema",
     "light": "Claro",
     "dark": "Oscuro",
     "system": "Sistema"
@@ -38,55 +38,55 @@
   "navigation": {
     "previous": "Anterior",
     "next": "Siguiente",
-    "goToPreviousPage": "Ir a la página anterior",
-    "goToNextPage": "Ir a la página siguiente",
-    "morePages": "Más páginas",
+    "goToPreviousPage": "Ir a la Página Anterior",
+    "goToNextPage": "Ir a la Página Siguiente",
+    "morePages": "Más Páginas",
     "pagination": "Paginación",
-    "breadcrumb": "Ruta de navegación",
+    "breadcrumb": "Ruta de Navegación",
     "more": "Más"
   },
   "sidebar": {
-    "title": "Barra lateral",
-    "description": "Acceso rápido directo a la investigación",
-    "toggle": "Alternar barra lateral"
+    "title": "Barra Lateral",
+    "description": "Acceso Rápido Directo a la Investigación",
+    "toggle": "Alternar Barra Lateral"
   },
   "common": {
     "close": "Cerrar",
     "remove": "Eliminar",
-    "loading": "Cargando investigación...",
-    "opensInNewTab": "Se abre en una nueva pestaña"
+    "loading": "Cargando Investigación...",
+    "opensInNewTab": "Se Abre en una Nueva Pestaña"
   },
   "languageSwitcher": {
     "label": "Idioma",
-    "selectLanguage": "Seleccionar idioma"
+    "selectLanguage": "Seleccionar Idioma"
   },
   "landing": {
     "hero": {
-      "title": "Investigar\na la velocidad del pensamiento",
-      "subtitle": "Una plataforma de investigación que piensa por sí misma.",
-      "description": "Infraestructura de aumento cognitivo para una mejor investigación.",
-      "readManifesto": "Leer el manifiesto",
+      "title": "Investigar a la\nVelocidad del Pensamiento",
+      "subtitle": "Una Plataforma de Investigación que Piensa por Sí Misma.",
+      "description": "Infraestructura de Aumento Cognitivo para una Mejor Investigación.",
+      "readManifesto": "Leer el Manifiesto",
       "github": "GitHub"
     },
     "features": {
-      "eyebrow": "Arquitectura central",
-      "heading": "Diferente desde el inicio, a propósito",
+      "eyebrow": "Arquitectura Central",
+      "heading": "Diferente Desde el Inicio, con Intención",
       "dialecticalGraph": {
-        "title": "Grafo dialéctico",
+        "title": "Grafo Dialéctico",
         "description": "Las entidades de investigación no se conectan con enlaces simples, sino con afirmaciones y relaciones. Cada oración puede rastrearse matemáticamente hasta su evidencia."
       },
       "rebuttalFirst": {
-        "title": "Refutación primero",
+        "title": "Refutación Primero",
         "description": "No adula como otras IA. En cambio, ataca sin descanso los vacíos."
       },
       "multilingual": {
-        "title": "Multilingüe nativo",
+        "title": "Multilingüe Nativo",
         "description": "Artículos en inglés. Hipótesis en coreano. Conjuntos de datos en japonés. Un único grafo de investigación unificado."
       }
     },
     "pipeline": {
-      "eyebrow": "Cómo funciona",
-      "heading": "Arquitectura de debate multiagente",
+      "eyebrow": "Cómo Funciona",
+      "heading": "Arquitectura de Debate Multiagente",
       "description": "La IA multiagente debate internamente. Solo ves los argumentos que sobreviven hasta el final.",
       "steps": {
         "propose": "Proponer",
@@ -96,23 +96,23 @@
       }
     },
     "forWho": {
-      "heading": "Para investigadores que entregan resultados",
+      "heading": "Para Investigadores que Entregan Resultados",
       "audiences": {
-        "scientists": "Científicos que operan canalizaciones experimentales",
-        "engineers": "Ingenieros que construyen sobre los artículos más recientes",
-        "analysts": "Analistas que integran literatura interdisciplinaria",
-        "teams": "Equipos que necesitan rutas de conocimiento reproducibles"
+        "scientists": "Científicos que Operan Canalizaciones Experimentales",
+        "engineers": "Ingenieros que Construyen sobre los Artículos Más Recientes",
+        "analysts": "Analistas que Integran Literatura Interdisciplinaria",
+        "teams": "Equipos que Necesitan Rutas de Conocimiento Reproducibles"
       }
     },
     "buildInPublic": {
-      "eyebrow": "Transparencia radical",
-      "heading": "Construimos en público",
+      "eyebrow": "Transparencia Radical",
+      "heading": "Construimos en Público",
       "description": "Cada decisión arquitectónica, cada trade-off y cada elección técnica se documenta y se registra. Si los sistemas de conocimiento exigen trazabilidad, las herramientas que la permiten deben construirse de la misma manera.",
-      "visitHQ": "Visita nuestro HQ"
+      "visitHQ": "Visita Nuestro HQ"
     },
     "cta": {
-      "heading": "La Enciclopedia Galáctica de Asimov fue ficción.\nQueremos construirla en la realidad.",
-      "readManifesto": "Leer el manifiesto",
+      "heading": "La Enciclopedia Galáctica de Asimov Fue Ficción.\nLa Estamos Construyendo en la Realidad.",
+      "readManifesto": "Leer el Manifiesto",
       "github": "GitHub"
     },
     "footer": {

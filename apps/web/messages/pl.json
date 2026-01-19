@@ -1,36 +1,36 @@
 {
   "metadata": {
     "title": "Coscientist: Tokeny ≠ Wiedza",
-    "description": "Infrastruktura wzmocnienia poznawczego dla lepszych badań."
+    "description": "Infrastruktura Wzmocnienia Poznawczego dla Lepszych Badań."
   },
   "header": {
     "brand": "Coscientist",
     "brandWithManifesto": "Manifest Coscientist",
-    "joinWaitlist": "Dołącz do listy oczekujących",
+    "joinWaitlist": "Dołącz do Listy Oczekujących",
     "github": "GitHub",
     "twitter": "Twitter"
   },
   "allNotes": {
-    "title": "Wszystkie notatki",
-    "noteCount": "{count} notatek",
-    "currentlyOpen": "Obecnie otwarta na pozycji {position}"
+    "title": "Wszystkie Notatki",
+    "noteCount": "{count} Notatek",
+    "currentlyOpen": "Obecnie Otwarta na Pozycji {position}"
   },
   "notePane": {
-    "expand": "Rozwiń przestrzeń roboczą",
+    "expand": "Rozwiń Przestrzeń Roboczą",
     "expandNote": "Odkrywaj {title}",
     "closeNote": "Zamknij {title}",
-    "closePane": "Zamknij panel {index}",
+    "closePane": "Zamknij Panel {index}",
     "editOnGitHub": "Edytuj na GitHub"
   },
   "mobileCarousel": {
-    "goToNote": "Przejdź do notatki {position}: {title}"
+    "goToNote": "Przejdź do Notatki {position}: {title}"
   },
   "backlinks": {
-    "singular": "{count} notatek prowadzi tutaj",
-    "plural": "{count} notatek prowadzi tutaj"
+    "singular": "{count} Notatek Prowadzi Tutaj",
+    "plural": "{count} Notatek Prowadzi Tutaj"
   },
   "theme": {
-    "toggle": "Zmień motyw",
+    "toggle": "Zmień Motyw",
     "light": "Jasny",
     "dark": "Ciemny",
     "system": "System"
@@ -38,55 +38,55 @@
   "navigation": {
     "previous": "Poprzedni",
     "next": "Następny",
-    "goToPreviousPage": "Przejdź do poprzedniej strony",
-    "goToNextPage": "Przejdź do następnej strony",
-    "morePages": "Więcej stron",
+    "goToPreviousPage": "Przejdź do Poprzedniej Strony",
+    "goToNextPage": "Przejdź do Następnej Strony",
+    "morePages": "Więcej Stron",
     "pagination": "Paginacja",
-    "breadcrumb": "Ścieżka nawigacji",
+    "breadcrumb": "Ścieżka Nawigacji",
     "more": "Więcej"
   },
   "sidebar": {
-    "title": "Pasek boczny",
-    "description": "Szybki dostęp bezpośrednio do badań",
-    "toggle": "Przełącz pasek boczny"
+    "title": "Pasek Boczny",
+    "description": "Szybki Dostęp Bezpośrednio do Badań",
+    "toggle": "Przełącz Pasek Boczny"
   },
   "common": {
     "close": "Zamknij",
     "remove": "Usuń",
-    "loading": "Ładowanie badań...",
-    "opensInNewTab": "Otwiera się w nowej karcie"
+    "loading": "Ładowanie Badań...",
+    "opensInNewTab": "Otwiera się w Nowej Karcie"
   },
   "languageSwitcher": {
     "label": "Język",
-    "selectLanguage": "Wybierz język"
+    "selectLanguage": "Wybierz Język"
   },
   "landing": {
     "hero": {
-      "title": "Badania\nz prędkością myśli",
-      "subtitle": "Platforma badawcza, która myśli samodzielnie.",
-      "description": "Infrastruktura wzmocnienia poznawczego dla lepszych badań.",
-      "readManifesto": "Przeczytaj manifest",
+      "title": "Badania z\nPrędkością Myśli",
+      "subtitle": "Platforma Badawcza, Która Myśli Sama.",
+      "description": "Infrastruktura Wzmocnienia Poznawczego dla Lepszych Badań.",
+      "readManifesto": "Przeczytaj Manifest",
       "github": "GitHub"
     },
     "features": {
-      "eyebrow": "Architektura rdzeniowa",
-      "heading": "Inne od początku, z premedytacją",
+      "eyebrow": "Architektura Rdzeniowa",
+      "heading": "Inne od Początku, z Premedytacją",
       "dialecticalGraph": {
-        "title": "Graf dialektyczny",
+        "title": "Graf Dialektyczny",
         "description": "Byty badawcze są połączone nie prostymi linkami, lecz twierdzeniami i relacjami. Każde zdanie można matematycznie prześledzić do jego dowodów."
       },
       "rebuttalFirst": {
-        "title": "Najpierw kontrargumenty",
+        "title": "Najpierw Kontrargumenty",
         "description": "Nie schlebia jak inne SI. Zamiast tego bezustannie atakuje luki."
       },
       "multilingual": {
-        "title": "Natywnie wielojęzyczna",
+        "title": "Natywnie Wielojęzyczna",
         "description": "Angielskie prace. Koreańskie hipotezy. Japońskie zbiory danych. Jeden spójny graf badań."
       }
     },
     "pipeline": {
-      "eyebrow": "Jak to działa",
-      "heading": "Architektura debaty wieloagentowej",
+      "eyebrow": "Jak to Działa",
+      "heading": "Architektura Debaty Wieloagentowej",
       "description": "Wieloagentowa SI debatuje wewnętrznie. Widzisz tylko argumenty, które przetrwają do końca.",
       "steps": {
         "propose": "Proponuj",
@@ -96,23 +96,23 @@
       }
     },
     "forWho": {
-      "heading": "Dla badaczy, którzy dowożą wyniki",
+      "heading": "Dla Badaczy, Którzy Dowożą Wyniki",
       "audiences": {
-        "scientists": "Naukowcy prowadzący eksperymentalne pipeline’y",
-        "engineers": "Inżynierowie budujący na najnowszych pracach",
-        "analysts": "Analitycy integrujący literaturę interdyscyplinarną",
-        "teams": "Zespoły potrzebujące odtwarzalnych ścieżek wiedzy"
+        "scientists": "Naukowcy Prowadzący Eksperymentalne Pipeline’y",
+        "engineers": "Inżynierowie Budujący na Najnowszych Pracach",
+        "analysts": "Analitycy Integrujący Literaturę Interdyscyplinarną",
+        "teams": "Zespoły Potrzebujące Odtwarzalnych Ścieżek Wiedzy"
       }
     },
     "buildInPublic": {
-      "eyebrow": "Radykalna transparentność",
-      "heading": "Budujemy publicznie",
+      "eyebrow": "Radykalna Transparentność",
+      "heading": "Budujemy Publicznie",
       "description": "Każda decyzja architektoniczna, każdy kompromis i każdy wybór techniczny jest dokumentowany i rejestrowany. Jeśli systemy wiedzy wymagają śledzenia, narzędzia, które to umożliwiają, powinny być budowane w ten sam sposób.",
-      "visitHQ": "Odwiedź nasze HQ"
+      "visitHQ": "Odwiedź Nasze HQ"
     },
     "cta": {
-      "heading": "Encyklopedia Galactica Asimova była fikcją.\nChcemy zbudować ją naprawdę.",
-      "readManifesto": "Przeczytaj manifest",
+      "heading": "Encyklopedia Galactica Asimova Była Fikcją.\nBudujemy ją Naprawdę.",
+      "readManifesto": "Przeczytaj Manifest",
       "github": "GitHub"
     },
     "footer": {

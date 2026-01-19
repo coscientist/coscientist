@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Coscientist: Tokens ≠ Wissen",
-    "description": "Kognitive Augmentationsinfrastruktur für bessere Forschung."
+    "description": "Kognitive Augmentationsinfrastruktur für Bessere Forschung."
   },
   "header": {
     "brand": "Coscientist",
@@ -13,24 +13,24 @@
   "allNotes": {
     "title": "Alle Notizen",
     "noteCount": "{count} Notizen",
-    "currentlyOpen": "Derzeit auf Position {position} geöffnet"
+    "currentlyOpen": "Derzeit auf Position {position} Geöffnet"
   },
   "notePane": {
-    "expand": "Arbeitsbereich erweitern",
-    "expandNote": "{title} erkunden",
-    "closeNote": "{title} schließen",
-    "closePane": "Panel {index} schließen",
-    "editOnGitHub": "Auf GitHub bearbeiten"
+    "expand": "Arbeitsbereich Erweitern",
+    "expandNote": "{title} Erkunden",
+    "closeNote": "{title} Schließen",
+    "closePane": "Panel {index} Schließen",
+    "editOnGitHub": "Auf GitHub Bearbeiten"
   },
   "mobileCarousel": {
-    "goToNote": "Zu Notiz {position} wechseln: {title}"
+    "goToNote": "Zu Notiz {position} Wechseln: {title}"
   },
   "backlinks": {
-    "singular": "{count} Notizen verweisen hierher",
-    "plural": "{count} Notizen verweisen hierher"
+    "singular": "{count} Notizen Verweisen Hierher",
+    "plural": "{count} Notizen Verweisen Hierher"
   },
   "theme": {
-    "toggle": "Design wechseln",
+    "toggle": "Design Wechseln",
     "light": "Hell",
     "dark": "Dunkel",
     "system": "System"
@@ -38,8 +38,8 @@
   "navigation": {
     "previous": "Zurück",
     "next": "Weiter",
-    "goToPreviousPage": "Zur vorherigen Seite",
-    "goToNextPage": "Zur nächsten Seite",
+    "goToPreviousPage": "Zur Vorherigen Seite",
+    "goToNextPage": "Zur Nächsten Seite",
     "morePages": "Weitere Seiten",
     "pagination": "Paginierung",
     "breadcrumb": "Navigationspfad",
@@ -47,45 +47,45 @@
   },
   "sidebar": {
     "title": "Seitenleiste",
-    "description": "Schneller Zugriff direkt zur Forschung",
-    "toggle": "Seitenleiste umschalten"
+    "description": "Schneller Zugriff Direkt Zur Forschung",
+    "toggle": "Seitenleiste Umschalten"
   },
   "common": {
     "close": "Schließen",
     "remove": "Entfernen",
-    "loading": "Forschung wird geladen...",
-    "opensInNewTab": "Öffnet in einem neuen Tab"
+    "loading": "Forschung Wird Geladen...",
+    "opensInNewTab": "Öffnet in Einem Neuen Tab"
   },
   "languageSwitcher": {
     "label": "Sprache",
-    "selectLanguage": "Sprache auswählen"
+    "selectLanguage": "Sprache Auswählen"
   },
   "landing": {
     "hero": {
-      "title": "Forschen\nmit der Geschwindigkeit des Denkens",
-      "subtitle": "Eine Forschungsplattform, die selbst denkt.",
-      "description": "Kognitive Augmentationsinfrastruktur für bessere Forschung.",
-      "readManifesto": "Manifest lesen",
+      "title": "Forschen mit der\nGeschwindigkeit des Denkens",
+      "subtitle": "Eine Forschungsplattform, Die Selbst Denkt.",
+      "description": "Kognitive Augmentationsinfrastruktur für Bessere Forschung.",
+      "readManifesto": "Manifest Lesen",
       "github": "GitHub"
     },
     "features": {
       "eyebrow": "Kernarchitektur",
-      "heading": "Von Anfang an anders, mit Absicht",
+      "heading": "Von Anfang an Anders, Mit Absicht",
       "dialecticalGraph": {
         "title": "Dialektischer Graph",
         "description": "Forschungsentitäten sind nicht durch einfache Links, sondern durch Behauptungen und Beziehungen verbunden. Jeder Satz lässt sich mathematisch auf seine Evidenz zurückführen."
       },
       "rebuttalFirst": {
-        "title": "Widerlegung zuerst",
-        "description": "Keine Schmeichelei wie andere AIs. Stattdessen greift sie die Lücken unermüdlich an."
+        "title": "Widerlegung Zuerst",
+        "description": "Keine Schmeichelei wie andere KI. Stattdessen greift sie die Lücken unermüdlich an."
       },
       "multilingual": {
-        "title": "Mehrsprachig nativ",
+        "title": "Mehrsprachig Nativ",
         "description": "Englische Papers. Koreanische Hypothesen. Japanische Datensätze. Ein einheitlicher Forschungsgraph."
       }
     },
     "pipeline": {
-      "eyebrow": "So funktioniert es",
+      "eyebrow": "So Funktioniert Es",
       "heading": "Multi-Agenten-Debattenarchitektur",
       "description": "Mehrere KI-Agenten debattieren intern. Du siehst nur die Argumente, die bis zum Ende überleben.",
       "steps": {
@@ -96,23 +96,23 @@
       }
     },
     "forWho": {
-      "heading": "Für Forschende, die Ergebnisse liefern",
+      "heading": "Für Forschende, Die Ergebnisse Liefern",
       "audiences": {
-        "scientists": "Wissenschaftler, die experimentelle Pipelines betreiben",
-        "engineers": "Ingenieure, die auf den neuesten Papers aufbauen",
-        "analysts": "Analysten, die fachübergreifende Literatur integrieren",
-        "teams": "Teams, die reproduzierbare Wissenspfade brauchen"
+        "scientists": "Wissenschaftler, Die Experimentelle Pipelines Betreiben",
+        "engineers": "Ingenieure, Die Auf Den Neuesten Papers Aufbauen",
+        "analysts": "Analysten, Die Fachübergreifende Literatur Integrieren",
+        "teams": "Teams, Die Reproduzierbare Wissenspfade Brauchen"
       }
     },
     "buildInPublic": {
       "eyebrow": "Radikale Transparenz",
-      "heading": "Wir bauen öffentlich",
+      "heading": "Wir Bauen Öffentlich",
       "description": "Jede Architekturentscheidung, jeder Trade-off und jede technische Wahl wird dokumentiert und festgehalten. Wenn Wissenssysteme Nachvollziehbarkeit verlangen, sollten die Werkzeuge, die das ermöglichen, genauso gebaut sein.",
-      "visitHQ": "Unsere HQ besuchen"
+      "visitHQ": "Unsere HQ Besuchen"
     },
     "cta": {
-      "heading": "Asimovs Enzyklopädie Galactica war Fiktion.\nWir wollen sie in die Realität bauen.",
-      "readManifesto": "Manifest lesen",
+      "heading": "Asimovs Enzyklopädie Galactica War Fiktion.\nWir Bauen Sie Für Die Realität.",
+      "readManifesto": "Manifest Lesen",
       "github": "GitHub"
     },
     "footer": {

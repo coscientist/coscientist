@@ -1,36 +1,36 @@
 {
   "metadata": {
     "title": "Coscientist: Tokens ≠ Knowledge",
-    "description": "Cognitive augmentation infrastructure for better research."
+    "description": "Cognitive Augmentation Infrastructure for Better Research."
   },
   "header": {
     "brand": "Coscientist",
     "brandWithManifesto": "Coscientist Manifesto",
-    "joinWaitlist": "Join the waitlist",
+    "joinWaitlist": "Join the Waitlist",
     "github": "GitHub",
     "twitter": "Twitter"
   },
   "allNotes": {
-    "title": "All notes",
-    "noteCount": "{count} notes",
-    "currentlyOpen": "Currently open at position {position}"
+    "title": "All Notes",
+    "noteCount": "{count} Notes",
+    "currentlyOpen": "Currently Open at Position {position}"
   },
   "notePane": {
-    "expand": "Expand workspace",
+    "expand": "Expand Workspace",
     "expandNote": "Explore {title}",
     "closeNote": "Close {title}",
-    "closePane": "Close panel {index}",
+    "closePane": "Close Panel {index}",
     "editOnGitHub": "Edit on GitHub"
   },
   "mobileCarousel": {
-    "goToNote": "Go to note {position}: {title}"
+    "goToNote": "Go to Note {position}: {title}"
   },
   "backlinks": {
-    "singular": "{count} notes link here",
-    "plural": "{count} notes link here"
+    "singular": "{count} Notes Link Here",
+    "plural": "{count} Notes Link Here"
   },
   "theme": {
-    "toggle": "Change theme",
+    "toggle": "Change Theme",
     "light": "Light",
     "dark": "Dark",
     "system": "System"
@@ -38,55 +38,55 @@
   "navigation": {
     "previous": "Previous",
     "next": "Next",
-    "goToPreviousPage": "Go to previous page",
-    "goToNextPage": "Go to next page",
-    "morePages": "More pages",
+    "goToPreviousPage": "Go to Previous Page",
+    "goToNextPage": "Go to Next Page",
+    "morePages": "More Pages",
     "pagination": "Pagination",
     "breadcrumb": "Breadcrumb",
     "more": "More"
   },
   "sidebar": {
     "title": "Sidebar",
-    "description": "Quick access straight to research",
-    "toggle": "Toggle sidebar"
+    "description": "Quick Access Straight to Research",
+    "toggle": "Toggle Sidebar"
   },
   "common": {
     "close": "Close",
     "remove": "Remove",
-    "loading": "Loading research...",
-    "opensInNewTab": "Opens in a new tab"
+    "loading": "Loading Research...",
+    "opensInNewTab": "Opens in a New Tab"
   },
   "languageSwitcher": {
     "label": "Language",
-    "selectLanguage": "Select language"
+    "selectLanguage": "Select Language"
   },
   "landing": {
     "hero": {
       "title": "Research at the\nSpeed of Thought",
-      "subtitle": "A research platform that thinks for itself.",
-      "description": "Cognitive augmentation infrastructure for better research.",
-      "readManifesto": "Read the manifesto",
+      "subtitle": "A Research Platform That Thinks for Itself.",
+      "description": "Cognitive Augmentation Infrastructure for Better Research.",
+      "readManifesto": "Read the Manifesto",
       "github": "GitHub"
     },
     "features": {
-      "eyebrow": "Core architecture",
-      "heading": "Different from the start, by design",
+      "eyebrow": "Core Architecture",
+      "heading": "Different From the Start, By Design",
       "dialecticalGraph": {
-        "title": "Dialectical graph",
-        "description": "Research entities are connected not by simple links, but by claims and relations. Every sentence can be mathematically traced to its evidence."
+        "title": "Dialectical Graph",
+        "description": "Research entities connect not through simple links, but through claims and relations. Every sentence can be mathematically traced to its evidence."
       },
       "rebuttalFirst": {
-        "title": "Rebuttal first",
-        "description": "It doesn't flatter like other AIs. Instead, it relentlessly attacks the gaps."
+        "title": "Rebuttal First",
+        "description": "No flattery like other AI. It relentlessly attacks the gaps."
       },
       "multilingual": {
-        "title": "Native multilingual",
+        "title": "Native Multilingual",
         "description": "English papers. Korean hypotheses. Japanese datasets. One unified research graph."
       }
     },
     "pipeline": {
-      "eyebrow": "How it works",
-      "heading": "Multi-agent debate architecture",
+      "eyebrow": "How It Works",
+      "heading": "Multi-Agent Debate Architecture",
       "description": "Multi-agent AI debates internally. You only see the arguments that survive to the end.",
       "steps": {
         "propose": "Propose",
@@ -96,23 +96,23 @@
       }
     },
     "forWho": {
-      "heading": "For researchers who deliver results",
+      "heading": "For Researchers Who Deliver Results",
       "audiences": {
-        "scientists": "Scientists running experimental pipelines",
-        "engineers": "Engineers building on the latest papers",
-        "analysts": "Analysts integrating cross-disciplinary literature",
-        "teams": "Teams that need reproducible knowledge paths"
+        "scientists": "Scientists Running Experimental Pipelines",
+        "engineers": "Engineers Building on the Latest Papers",
+        "analysts": "Analysts Integrating Cross-Disciplinary Literature",
+        "teams": "Teams That Need Reproducible Knowledge Paths"
       }
     },
     "buildInPublic": {
-      "eyebrow": "Radical transparency",
-      "heading": "We build in public",
-      "description": "Every architectural decision, trade-off, and technical choice is documented and recorded. If knowledge systems demand traceability, the tools that enable it should be built the same way.",
-      "visitHQ": "Visit our HQ"
+      "eyebrow": "Radical Transparency",
+      "heading": "We Build in Public",
+      "description": "Every architecture decision, trade-off, and technical choice is documented and recorded. If knowledge systems demand traceability, the tools that enable it should be built the same way.",
+      "visitHQ": "Visit Our HQ"
     },
     "cta": {
-      "heading": "Asimov's Encyclopedia Galactica was fiction.\nWe aim to build it for real.",
-      "readManifesto": "Read the manifesto",
+      "heading": "Asimov's Encyclopedia Galactica Was Fiction.\nWe're Building It for Real.",
+      "readManifesto": "Read the Manifesto",
       "github": "GitHub"
     },
     "footer": {

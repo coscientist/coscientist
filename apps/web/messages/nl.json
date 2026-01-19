@@ -62,7 +62,7 @@
   },
   "landing": {
     "hero": {
-      "title": "Onderzoek met de\nSnelheid van Denken",
+      "title": "Onderzoek met de Snelheid\nvan Denken",
       "subtitle": "Een Onderzoeksplatform dat Zelf Denkt.",
       "description": "Cognitieve Augmentatie‑Infrastructuur voor Beter Onderzoek.",
       "readManifesto": "Lees het Manifest",
@@ -111,7 +111,7 @@
       "visitHQ": "Bezoek Onze HQ"
     },
     "cta": {
-      "heading": "Asimovs Encyclopedia Galactica Was Fictie.\nWe Bouwen het voor het Echt.",
+      "heading": "Asimovs Encyclopedia Galactica Was Fictie.\nMaar We Bouwen het in de Realiteit.",
       "readManifesto": "Lees het Manifest",
       "github": "GitHub"
     },

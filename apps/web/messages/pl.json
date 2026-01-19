@@ -62,7 +62,7 @@
   },
   "landing": {
     "hero": {
-      "title": "Badania z\nPrędkością Myśli",
+      "title": "Badania z Prędkością\nMyśli",
       "subtitle": "Platforma Badawcza, Która Myśli Sama.",
       "description": "Infrastruktura Wzmocnienia Poznawczego dla Lepszych Badań.",
       "readManifesto": "Przeczytaj Manifest",
@@ -111,7 +111,7 @@
       "visitHQ": "Odwiedź Nasze HQ"
     },
     "cta": {
-      "heading": "Encyklopedia Galactica Asimova Była Fikcją.\nBudujemy ją Naprawdę.",
+      "heading": "Encyklopedia Galactica Asimova Była Fikcją.\nAle Budujemy ją w Rzeczywistości.",
       "readManifesto": "Przeczytaj Manifest",
       "github": "GitHub"
     },

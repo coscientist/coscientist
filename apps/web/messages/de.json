@@ -62,7 +62,7 @@
   },
   "landing": {
     "hero": {
-      "title": "Forschen mit der\nGeschwindigkeit des Denkens",
+      "title": "Forschen mit der Geschwindigkeit\ndes Denkens",
       "subtitle": "Eine Forschungsplattform, Die Selbst Denkt.",
       "description": "Kognitive Augmentationsinfrastruktur für Bessere Forschung.",
       "readManifesto": "Manifest Lesen",
@@ -111,7 +111,7 @@
       "visitHQ": "Unsere HQ Besuchen"
     },
     "cta": {
-      "heading": "Asimovs Enzyklopädie Galactica War Fiktion.\nWir Bauen Sie Für Die Realität.",
+      "heading": "Asimovs Enzyklopädie Galactica War Fiktion.\nAber Wir Bauen Sie in der Realität.",
       "readManifesto": "Manifest Lesen",
       "github": "GitHub"
     },

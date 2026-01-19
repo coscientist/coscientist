@@ -62,7 +62,7 @@
   },
   "landing": {
     "hero": {
-      "title": "Pesquisar\na Velocidade do Pensamento",
+      "title": "Pesquisar a Velocidade\nDo Pensamento",
       "subtitle": "Uma Plataforma de Pesquisa que Pensa por Si.",
       "description": "Infraestrutura de Aumento Cognitivo para uma Pesquisa Melhor.",
       "readManifesto": "Ler o Manifesto",
@@ -111,7 +111,7 @@
       "visitHQ": "Visite Nosso HQ"
     },
     "cta": {
-      "heading": "A Enciclopédia Galáctica de Asimov Era Ficção.\nEstamos Construindo-a na Realidade.",
+      "heading": "A Enciclopédia Galáctica de Asimov Era Ficção.\nMas Estamos Construindo-a na Realidade.",
       "readManifesto": "Ler o Manifesto",
       "github": "GitHub"
     },

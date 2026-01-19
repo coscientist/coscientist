@@ -62,7 +62,7 @@
   },
   "landing": {
     "hero": {
-      "title": "Rechercher à la\nVitesse de la Pensée",
+      "title": "Rechercher à la Vitesse\nde la Pensée",
       "subtitle": "Une Plateforme de Recherche qui Pense par Elle‑Même.",
       "description": "Infrastructure d’Augmentation Cognitive pour une Meilleure Recherche.",
       "readManifesto": "Lire le Manifeste",
@@ -111,7 +111,7 @@
       "visitHQ": "Visiter Notre HQ"
     },
     "cta": {
-      "heading": "L’Encyclopédie Galactique d’Asimov Était une Fiction.\nNous la Construisons pour de Vrai.",
+      "heading": "L’Encyclopédie Galactique d’Asimov Était une Fiction.\nMais Nous la Construisons dans la Réalité.",
       "readManifesto": "Lire le Manifeste",
       "github": "GitHub"
     },

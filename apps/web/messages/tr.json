@@ -62,7 +62,7 @@
   },
   "landing": {
     "hero": {
-      "title": "Düşüncenin Hızında\nAraştır",
+      "title": "Düşüncenin\nHızında Araştır",
       "subtitle": "Kendi Kendine Düşünen Bir Araştırma Platformu.",
       "description": "Daha İyi Araştırma İçin Bilişsel Güçlendirme Altyapısı.",
       "readManifesto": "Manifestoyu Oku",
@@ -111,7 +111,7 @@
       "visitHQ": "HQ'muzu Ziyaret Et"
     },
     "cta": {
-      "heading": "Asimov'un Galaktik Ansiklopedisi Kurguydu.\nOnu Gerçeğe Dönüştürüyoruz.",
+      "heading": "Asimov'un Galaktik Ansiklopedisi Kurguydu.\nAma Onu Gerçekte İnşa Ediyoruz.",
       "readManifesto": "Manifestoyu Oku",
       "github": "GitHub"
     },

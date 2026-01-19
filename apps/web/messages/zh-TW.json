@@ -62,7 +62,7 @@
   },
   "landing": {
     "hero": {
-      "title": "以思考的速度\n研究",
+      "title": "以思考的\n速度研究",
       "subtitle": "一個會自行思考的研究平台。",
       "description": "更好研究的認知增強基礎設施。",
       "readManifesto": "閱讀宣言",
@@ -111,7 +111,7 @@
       "visitHQ": "查看我們的 HQ"
     },
     "cta": {
-      "heading": "阿西莫夫的《銀河百科全書》是虛構的。\n我們要把它建成現實。",
+      "heading": "阿西莫夫的《銀河百科全書》是虛構的。\n但我們正在把它建成現實。",
       "readManifesto": "閱讀宣言",
       "github": "GitHub"
     },

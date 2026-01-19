@@ -1,6 +1,6 @@
 "use client"
 
-import { Waitlist } from "@clerk/nextjs"
+import { ClerkLoaded, ClerkLoading, Waitlist } from "@clerk/nextjs"
 import { ArrowRight01Icon } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
 import { motion, useReducedMotion } from "motion/react"
@@ -8,7 +8,18 @@ import Link from "next/link"
 import { useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/button"
+import { Skeleton } from "@/components/ui/skeleton"
 import { reducedMotionTransition, springSubtle } from "@/lib/animations"
+
+function WaitlistSkeleton() {
+  return (
+    <div className="flex w-full max-w-sm flex-col gap-4 rounded-xl border bg-card p-6">
+      <Skeleton className="h-6 w-48" />
+      <Skeleton className="h-10 w-full" />
+      <Skeleton className="h-10 w-full" />
+    </div>
+  )
+}
 
 export function HeroCTA() {
   const t = useTranslations("landing.hero")
@@ -37,7 +48,14 @@ export function HeroCTA() {
       </Button>
       <div className="flex flex-col items-center gap-4 text-center">
         <span className="text-muted-foreground text-sm">or</span>
-        <Waitlist />
+        <div className="min-h-45">
+          <ClerkLoading>
+            <WaitlistSkeleton />
+          </ClerkLoading>
+          <ClerkLoaded>
+            <Waitlist />
+          </ClerkLoaded>
+        </div>
       </div>
     </motion.div>
   )

@@ -27,8 +27,6 @@
     "node": ">=24 <25"
   },
   "dependencies": {
-    "@convex-dev/prosemirror-sync": "^0.2.1",
-    "@mastra/core": "^1.0.4",
     "@sentry/nextjs": "^10.36.0"
   }
 }

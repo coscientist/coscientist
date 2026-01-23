@@ -241,3 +241,63 @@ access: v.object({
 1. `apps/web/convex/schema.ts` - Updated blocks table access field
 2. `apps/web/convex/types.ts` - New file with enums and interfaces
 3. `apps/web/src/lib/convex-types.ts` - New file with re-exports
+
+## Task 2.1: Integrate ProseMirror Sync Component ✅
+
+### Installation & Setup
+- Installed `@convex-dev/prosemirror-sync@0.2.1` via `bun add`
+- Created `convex/convex.config.ts` to register the component with Convex
+- Component automatically creates `steps` and `snapshots` tables (already in schema)
+
+### Component Configuration Pattern
+```typescript
+// convex/convex.config.ts
+import { defineApp } from "convex/server";
+import prosemirrorSync from "@convex-dev/prosemirror-sync/convex.config.js";
+
+const app = defineApp();
+app.use(prosemirrorSync);
+export default app;
+```
+
+### API Exposure Pattern
+```typescript
+// convex/prosemirror.ts
+import { components } from "./_generated/api";
+import { ProsemirrorSync } from "@convex-dev/prosemirror-sync";
+
+const prosemirrorSync = new ProsemirrorSync(components.prosemirrorSync);
+export const {
+  getSnapshot,
+  submitSnapshot,
+  latestVersion,
+  getSteps,
+  submitSteps,
+} = prosemirrorSync.syncApi({});
+```
+
+### Exported Functions
+1. **submitSteps**: Client submits editing operations (OT steps)
+2. **getSteps**: Client fetches steps since a version for rebasing
+3. **saveSnapshot**: Periodic full-state checkpoint
+4. **getSnapshot**: Client fetches latest document state
+5. **latestVersion**: Get current document version number
+
+### Verification
+- `bunx convex dev --typecheck disable` output:
+  ```
+  ✔ Installed component prosemirrorSync.
+  ✔ 18:23:00 Convex functions ready! (2.79s)
+  ```
+- Component successfully registered and synced
+- No TypeScript errors in prosemirror.ts
+
+### Key Insights
+1. **Component Auto-Setup**: The component automatically manages steps/snapshots tables
+2. **OT Conflict Resolution**: Uses Operational Transformation per ADR 3
+3. **Debounced Snapshots**: Default 1s debounce interval (configurable)
+4. **No Custom Logic Needed**: Component handles all OT complexity
+5. **Authorization Hooks**: Can be added to syncApi() for custom access control
+
+### Dependencies Added
+- @convex-dev/prosemirror-sync@0.2.1

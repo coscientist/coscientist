@@ -1,7 +1,6 @@
 import { NextIntlClientProvider } from "next-intl"
 import { NuqsAdapter } from "nuqs/adapters/next/app"
 import type { ReactNode } from "react"
-import { ConvexClientProvider } from "./convex-client-provider"
 import { ThemeProviderClient } from "./theme-provider-client"
 
 interface ProvidersProps {
@@ -21,7 +20,7 @@ export function Providers({
     <NuqsAdapter>
       <NextIntlClientProvider messages={messages}>
         <ThemeProviderClient storageKey={storageKey}>
-          <ConvexClientProvider>{children}</ConvexClientProvider>
+          {children}
         </ThemeProviderClient>
       </NextIntlClientProvider>
     </NuqsAdapter>

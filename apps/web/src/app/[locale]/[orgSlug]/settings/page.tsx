@@ -1,11 +1,10 @@
 "use client"
 
-import { useUser } from "@clerk/nextjs"
+import { useOrganization, useUser } from "@clerk/nextjs"
 import { Key01Icon, Tick01Icon } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
-import { useMutation, useQuery } from "convex/react"
 import { useParams, useRouter } from "next/navigation"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -15,24 +14,26 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
-import { api } from "@/convex/_generated/api"
 
 export default function SettingsPage() {
   const params = useParams()
   const router = useRouter()
   const locale = params.locale as string
-  const _orgSlug = params.orgSlug as string
-  const { user, isLoaded } = useUser()
-
-  const _settings = useQuery(api.settings.getSettings)
-  const hasKey = useQuery(api.settings.hasOpenAIKey)
-  const updateKey = useMutation(api.settings.updateOpenAIKey)
+  const { user, isLoaded: isUserLoaded } = useUser()
+  const { organization, isLoaded: isOrgLoaded } = useOrganization()
 
   const [apiKey, setApiKey] = useState("")
   const [isUpdating, setIsUpdating] = useState(false)
   const [showSuccess, setShowSuccess] = useState(false)
+  const [hasKey, setHasKey] = useState(false)
 
-  if (!isLoaded) {
+  useEffect(() => {
+    if (organization?.publicMetadata) {
+      setHasKey(!!organization.publicMetadata.hasOpenAIKey)
+    }
+  }, [organization])
+
+  if (!(isUserLoaded && isOrgLoaded)) {
     return (
       <main className="container mx-auto max-w-2xl px-6 py-16">
         <div className="h-8 w-32 animate-pulse rounded bg-muted" />
@@ -45,6 +46,11 @@ export default function SettingsPage() {
     return null
   }
 
+  if (!organization) {
+    router.push(`/${locale}/select-lab`)
+    return null
+  }
+
   const handleSaveKey = async () => {
     if (!apiKey.trim()) {
       return
@@ -52,10 +58,18 @@ export default function SettingsPage() {
 
     setIsUpdating(true)
     try {
-      await updateKey({ apiKey: apiKey.trim() })
-      setApiKey("")
-      setShowSuccess(true)
-      setTimeout(() => setShowSuccess(false), 3000)
+      const response = await fetch("/api/settings/openai-key", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ apiKey: apiKey.trim() }),
+      })
+
+      if (response.ok) {
+        setApiKey("")
+        setHasKey(true)
+        setShowSuccess(true)
+        setTimeout(() => setShowSuccess(false), 3000)
+      }
     } finally {
       setIsUpdating(false)
     }
@@ -64,9 +78,15 @@ export default function SettingsPage() {
   const handleRemoveKey = async () => {
     setIsUpdating(true)
     try {
-      await updateKey({ apiKey: null })
-      setShowSuccess(true)
-      setTimeout(() => setShowSuccess(false), 3000)
+      const response = await fetch("/api/settings/openai-key", {
+        method: "DELETE",
+      })
+
+      if (response.ok) {
+        setHasKey(false)
+        setShowSuccess(true)
+        setTimeout(() => setShowSuccess(false), 3000)
+      }
     } finally {
       setIsUpdating(false)
     }
@@ -182,8 +202,9 @@ export default function SettingsPage() {
               stored securely and used only when you trigger AI features.
             </p>
             <p>
-              Your key is stored in our database and never shared. API calls are
-              made directly from our servers to OpenAI using your key.
+              Your key is stored in your workspace&apos;s secure metadata and
+              never shared. API calls are made directly from our servers to
+              OpenAI using your key.
             </p>
             <p>
               You can remove your key at any time. Without a key, AI features

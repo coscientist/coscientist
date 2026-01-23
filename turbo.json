@@ -22,7 +22,10 @@
         "NEXT_PUBLIC_SENTRY_DSN",
         "SENTRY_ORG",
         "SENTRY_PROJECT",
-        "SENTRY_AUTH_TOKEN"
+        "SENTRY_AUTH_TOKEN",
+        "SENTRY_VERCEL_LOG_DRAIN_URL",
+        "SENTRY_OTLP_TRACES_URL",
+        "SENTRY_PUBLIC_KEY"
       ]
     },
     "dev": {

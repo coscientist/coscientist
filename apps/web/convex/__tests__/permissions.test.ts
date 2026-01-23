@@ -63,7 +63,7 @@ describe("Permission Functions - Type Safety", () => {
 
   describe("setEmbargo", () => {
     it("should accept blockId and timestamp", () => {
-      const futureDate = Date.now() + 86400000
+      const futureDate = Date.now() + 86_400_000
       const validArgs = {
         blockId: "test-id" as any,
         embargoUntil: futureDate,
@@ -83,8 +83,8 @@ describe("Permission Functions - Type Safety", () => {
   describe("Permission validation logic", () => {
     it("should validate future embargo timestamps", () => {
       const now = Date.now()
-      const futureDate = now + 86400000
-      const pastDate = now - 86400000
+      const futureDate = now + 86_400_000
+      const pastDate = now - 86_400_000
 
       expect(futureDate).toBeGreaterThan(now)
       expect(pastDate).toBeLessThan(now)

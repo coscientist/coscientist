@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react"
+import { useCallback, useRef, useState } from "react"
 
 export function useCollapseDetection(
   containerRef: React.RefObject<HTMLDivElement | null>,

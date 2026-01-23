@@ -12,9 +12,13 @@ import type * as actions_ai from "../actions/ai.js";
 import type * as actions_rebuttal from "../actions/rebuttal.js";
 import type * as blocks from "../blocks.js";
 import type * as edges from "../edges.js";
+import type * as http from "../http.js";
+import type * as labs from "../labs.js";
+import type * as lib_auth from "../lib/auth.js";
 import type * as permissions from "../permissions.js";
 import type * as presence from "../presence.js";
 import type * as prosemirror from "../prosemirror.js";
+import type * as settings from "../settings.js";
 import type * as types from "../types.js";
 import type * as verification from "../verification.js";
 
@@ -29,9 +33,13 @@ declare const fullApi: ApiFromModules<{
   "actions/rebuttal": typeof actions_rebuttal;
   blocks: typeof blocks;
   edges: typeof edges;
+  http: typeof http;
+  labs: typeof labs;
+  "lib/auth": typeof lib_auth;
   permissions: typeof permissions;
   presence: typeof presence;
   prosemirror: typeof prosemirror;
+  settings: typeof settings;
   types: typeof types;
   verification: typeof verification;
 }>;

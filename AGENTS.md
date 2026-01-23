@@ -1,3 +1,5 @@
+NEVER USE GIT CHECKOUT. YOU WILL DELETE UNCOMMITED CHANGES MADE BY OTHER PARALLEL AGENTS.
+
 # Manifesto - AI Agent Guidelines
 
 > **IMPORTANT**: Update this document after significant changes to reflect new
@@ -262,6 +264,29 @@ convex/
 - Each pane: `left: calc(index * var(--pane-spine-width))`
 - Z-index: `calc(var(--z-pane) + index)`
 - No JavaScript collapse logic - pure CSS behavior
+
+### Import Conventions
+
+- **NEVER** use relative paths (`./`, `../`)
+- **ALWAYS** use TypeScript path aliases (`@/`, `@convex/`)
+- This applies to ALL imports: components, lib, hooks, types, etc.
+
+| Pattern | Example |
+| ------- | ------- |
+| `@/` | `@/components/ui/button` (maps to `src/`) |
+| `@convex/` | `@convex/_generated/api` (maps to `convex/`) |
+
+```tsx
+// CORRECT
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { api } from "@convex/_generated/api";
+
+// WRONG - never do this
+import { Button } from "./ui/button";
+import { cn } from "../../lib/utils";
+import { api } from "../convex/_generated/api";
+```
 
 ## Convex (Backend & Realtime)
 

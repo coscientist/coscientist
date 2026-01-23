@@ -18,7 +18,6 @@ import { Step } from "@tiptap/pm/transform"
 import { EditorView } from "@tiptap/pm/view"
 import { useConvex, useQuery } from "convex/react"
 import { useCallback, useEffect, useRef, useState } from "react"
-import { useReducedMotion } from "@/hooks/use-reduced-motion"
 import { cn } from "@/lib/utils"
 import { api } from "../../../convex/_generated/api"
 
@@ -106,7 +105,7 @@ export function CollaborativeEditor({ documentId }: CollaborativeEditorProps) {
   }, [convex, documentId])
 
   useEffect(() => {
-    if (!initialSnapshot || !editorRef.current || viewRef.current) return
+    if (!(initialSnapshot && editorRef.current) || viewRef.current) return
 
     let doc
     let version = 0
@@ -157,20 +156,20 @@ export function CollaborativeEditor({ documentId }: CollaborativeEditorProps) {
 
   if (!initialSnapshot) {
     return (
-      <div className="flex items-center justify-center h-[200px] border rounded-md bg-muted/50">
+      <div className="flex h-[200px] items-center justify-center rounded-md border bg-muted/50">
         <StatusIndicator status="loading" />
       </div>
     )
   }
 
   return (
-    <div className="relative w-full max-w-prose mx-auto group">
-      <div className="absolute top-2 right-2 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+    <div className="group relative mx-auto w-full max-w-prose">
+      <div className="absolute top-2 right-2 z-10 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
         <StatusIndicator status={status} />
       </div>
       <div
         aria-label="Collaborative text editor"
-        className="min-h-[200px] p-4 border rounded-md focus-within:ring-1 focus-within:ring-primary/20 focus-within:border-primary/50 transition-all outline-none prose dark:prose-invert max-w-none"
+        className="prose dark:prose-invert min-h-[200px] max-w-none rounded-md border p-4 outline-none transition-all focus-within:border-primary/50 focus-within:ring-1 focus-within:ring-primary/20"
         ref={editorRef}
         role="textbox"
       />
@@ -182,15 +181,15 @@ function StatusIndicator({ status }: { status: SyncStatus }) {
   return (
     <div
       className={cn(
-        "flex items-center gap-1.5 px-2 py-1 rounded-full text-xs font-medium transition-colors backdrop-blur-sm border shadow-sm",
+        "flex items-center gap-1.5 rounded-full border px-2 py-1 font-medium text-xs shadow-sm backdrop-blur-sm transition-colors",
         status === "connected" &&
-          "bg-green-50/80 text-green-700 border-green-200 dark:bg-green-900/30 dark:text-green-400 dark:border-green-800",
+          "border-green-200 bg-green-50/80 text-green-700 dark:border-green-800 dark:bg-green-900/30 dark:text-green-400",
         status === "syncing" &&
-          "bg-blue-50/80 text-blue-700 border-blue-200 dark:bg-blue-900/30 dark:text-blue-400 dark:border-blue-800",
+          "border-blue-200 bg-blue-50/80 text-blue-700 dark:border-blue-800 dark:bg-blue-900/30 dark:text-blue-400",
         status === "error" &&
-          "bg-red-50/80 text-red-700 border-red-200 dark:bg-red-900/30 dark:text-red-400 dark:border-red-800",
+          "border-red-200 bg-red-50/80 text-red-700 dark:border-red-800 dark:bg-red-900/30 dark:text-red-400",
         status === "loading" &&
-          "bg-gray-50/80 text-gray-700 border-gray-200 dark:bg-gray-800/50 dark:text-gray-400 dark:border-gray-700"
+          "border-gray-200 bg-gray-50/80 text-gray-700 dark:border-gray-700 dark:bg-gray-800/50 dark:text-gray-400"
       )}
     >
       {status === "connected" && (

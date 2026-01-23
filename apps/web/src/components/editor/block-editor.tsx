@@ -23,7 +23,7 @@ import { useReducedMotion } from "@/hooks/use-reduced-motion"
 import { springSubtle } from "@/lib/animations"
 import { cn } from "@/lib/utils"
 import { api } from "../../../convex/_generated/api"
-import { Id } from "../../../convex/_generated/dataModel"
+import type { Id } from "../../../convex/_generated/dataModel"
 
 type BlockType = "text" | "heading" | "list" | "document"
 
@@ -67,19 +67,19 @@ export function BlockEditor({
   if (parentId && blocks === undefined) {
     return (
       <div className="animate-pulse space-y-4 p-4">
-        <div className="h-8 bg-muted rounded w-3/4"></div>
-        <div className="h-24 bg-muted rounded"></div>
-        <div className="h-24 bg-muted rounded"></div>
+        <div className="h-8 w-3/4 rounded bg-muted" />
+        <div className="h-24 rounded bg-muted" />
+        <div className="h-24 rounded bg-muted" />
       </div>
     )
   }
 
   if (blockId && singleBlock === undefined) {
-    return <div className="animate-pulse p-4 h-24 bg-muted rounded"></div>
+    return <div className="h-24 animate-pulse rounded bg-muted p-4" />
   }
 
   return (
-    <div className={cn("w-full max-w-prose mx-auto space-y-4", className)}>
+    <div className={cn("mx-auto w-full max-w-prose space-y-4", className)}>
       <AnimatePresence mode="popLayout">
         {parentId &&
           blocks?.map((block) => <BlockItem block={block} key={block._id} />)}
@@ -92,7 +92,7 @@ export function BlockEditor({
       {parentId && (
         <motion.div
           animate={{ opacity: 1 }}
-          className="flex gap-2 pt-4 border-t border-border/40"
+          className="flex gap-2 border-border/40 border-t pt-4"
           initial={{ opacity: 0 }}
           layout
         >
@@ -187,13 +187,13 @@ function BlockItem({ block }: BlockItemProps) {
       layout
       transition={springSubtle}
     >
-      <div className="mt-2 opacity-0 group-hover:opacity-100 transition-opacity absolute -left-8 flex flex-col gap-1">
+      <div className="absolute -left-8 mt-2 flex flex-col gap-1 opacity-0 transition-opacity group-hover:opacity-100">
         <Select onValueChange={handleTypeChange} value={block.type}>
           <SelectTrigger
             aria-label="Change block type"
-            className="h-6 w-6 p-0 border-none bg-transparent shadow-none focus:ring-0 focus-visible:ring-1 focus-visible:ring-primary/20 focus-visible:ring-inset"
+            className="h-6 w-6 border-none bg-transparent p-0 shadow-none focus:ring-0 focus-visible:ring-1 focus-visible:ring-primary/20 focus-visible:ring-inset"
           >
-            <div className="p-1 hover:bg-muted rounded cursor-pointer text-muted-foreground">
+            <div className="cursor-pointer rounded p-1 text-muted-foreground hover:bg-muted">
               {block.type === "heading" && (
                 <HugeiconsIcon icon={Heading01Icon} size={14} />
               )}
@@ -214,7 +214,7 @@ function BlockItem({ block }: BlockItemProps) {
 
         <button
           aria-label="Delete block"
-          className="p-1 hover:bg-red-100 hover:text-red-600 rounded text-muted-foreground transition-colors focus-visible:ring-1 focus-visible:ring-primary/20 focus-visible:ring-inset"
+          className="rounded p-1 text-muted-foreground transition-colors hover:bg-red-100 hover:text-red-600 focus-visible:ring-1 focus-visible:ring-primary/20 focus-visible:ring-inset"
           onClick={handleDelete}
         >
           <HugeiconsIcon icon={Delete02Icon} size={14} />
@@ -222,13 +222,13 @@ function BlockItem({ block }: BlockItemProps) {
       </div>
 
       {block.type === "list" && (
-        <div className="mt-2.5 h-1.5 w-1.5 rounded-full bg-foreground/40 shrink-0" />
+        <div className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/40" />
       )}
 
       <Textarea
         aria-label={`${block.type} content`}
         className={cn(
-          "resize-none overflow-hidden bg-transparent border-none shadow-none focus-visible:ring-1 focus-visible:ring-primary/20 focus-visible:ring-inset p-0 min-h-[1.8rem]",
+          "min-h-[1.8rem] resize-none overflow-hidden border-none bg-transparent p-0 shadow-none focus-visible:ring-1 focus-visible:ring-primary/20 focus-visible:ring-inset",
           getStyles(),
           block.type === "heading" ? "placeholder:text-muted-foreground/50" : ""
         )}

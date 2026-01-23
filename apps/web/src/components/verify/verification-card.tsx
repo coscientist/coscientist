@@ -22,7 +22,7 @@ import {
 import { Separator } from "@/components/ui/separator"
 import { Skeleton } from "@/components/ui/skeleton"
 import { api } from "@/convex/_generated/api"
-import { Doc, Id } from "@/convex/_generated/dataModel"
+import type { Doc, Id } from "@/convex/_generated/dataModel"
 import { useReducedMotion } from "@/hooks/use-reduced-motion"
 import { paneVariants, springSubtle } from "@/lib/animations"
 import { RatingButtons } from "./rating-buttons"
@@ -68,7 +68,7 @@ export function VerificationCard({
 
   if (block === undefined) {
     return (
-      <Card className="w-full max-w-2xl mx-auto h-[400px] flex flex-col justify-center p-8">
+      <Card className="mx-auto flex h-[400px] w-full max-w-2xl flex-col justify-center p-8">
         <div className="space-y-4">
           <Skeleton className="h-8 w-3/4" />
           <Skeleton className="h-4 w-full" />
@@ -81,7 +81,7 @@ export function VerificationCard({
 
   if (block === null) {
     return (
-      <Card className="w-full max-w-2xl mx-auto p-8 text-center text-muted-foreground">
+      <Card className="mx-auto w-full max-w-2xl p-8 text-center text-muted-foreground">
         Block not found or access denied.
       </Card>
     )
@@ -90,7 +90,7 @@ export function VerificationCard({
   return (
     <motion.div
       animate="animate"
-      className="w-full max-w-2xl mx-auto"
+      className="mx-auto w-full max-w-2xl"
       exit="exit"
       initial="initial"
       transition={transition}
@@ -98,11 +98,11 @@ export function VerificationCard({
     >
       <Card className="overflow-hidden border-2">
         <CardHeader className="pb-2">
-          <div className="flex justify-between items-start">
+          <div className="flex items-start justify-between">
             <Badge className="mb-2" variant="outline">
               {block.type}
             </Badge>
-            <div className="flex gap-2 text-xs text-muted-foreground">
+            <div className="flex gap-2 text-muted-foreground text-xs">
               {supportingEdges.length > 0 && (
                 <span className="flex items-center gap-1 text-green-600 dark:text-green-400">
                   <HugeiconsIcon
@@ -134,27 +134,7 @@ export function VerificationCard({
 
         <CardContent className="min-h-[120px] py-6">
           <AnimatePresence mode="wait">
-            {!isRevealed ? (
-              <motion.div
-                animate={{ opacity: 1 }}
-                className="flex flex-col items-center justify-center h-full gap-4 text-muted-foreground"
-                exit={{ opacity: 0 }}
-                initial={{ opacity: 0 }}
-                key="hidden"
-              >
-                <p className="text-sm italic">
-                  Recall the evidence for this claim...
-                </p>
-                <Button
-                  className="gap-2"
-                  onClick={() => setIsRevealed(true)}
-                  variant="secondary"
-                >
-                  <HugeiconsIcon icon={ViewIcon} size={16} strokeWidth={1.5} />
-                  Reveal Evidence
-                </Button>
-              </motion.div>
-            ) : (
+            {isRevealed ? (
               <motion.div
                 animate={{ opacity: 1, y: 0 }}
                 className="space-y-4"
@@ -163,7 +143,7 @@ export function VerificationCard({
                 transition={transition}
               >
                 <div className="rounded-md bg-muted/50 p-4 text-sm">
-                  <h4 className="font-medium mb-2 flex items-center gap-2">
+                  <h4 className="mb-2 flex items-center gap-2 font-medium">
                     <HugeiconsIcon
                       icon={ViewIcon}
                       size={14}
@@ -208,17 +188,37 @@ export function VerificationCard({
                   )}
                 </div>
               </motion.div>
+            ) : (
+              <motion.div
+                animate={{ opacity: 1 }}
+                className="flex h-full flex-col items-center justify-center gap-4 text-muted-foreground"
+                exit={{ opacity: 0 }}
+                initial={{ opacity: 0 }}
+                key="hidden"
+              >
+                <p className="text-sm italic">
+                  Recall the evidence for this claim...
+                </p>
+                <Button
+                  className="gap-2"
+                  onClick={() => setIsRevealed(true)}
+                  variant="secondary"
+                >
+                  <HugeiconsIcon icon={ViewIcon} size={16} strokeWidth={1.5} />
+                  Reveal Evidence
+                </Button>
+              </motion.div>
             )}
           </AnimatePresence>
         </CardContent>
 
         <Separator />
 
-        <CardFooter className="bg-muted/20 p-6 flex justify-center min-h-[100px]">
+        <CardFooter className="flex min-h-[100px] justify-center bg-muted/20 p-6">
           {isRevealed ? (
             <RatingButtons disabled={isSubmitting} onRate={handleRate} />
           ) : (
-            <div className="text-sm text-muted-foreground flex items-center gap-2">
+            <div className="flex items-center gap-2 text-muted-foreground text-sm">
               <HugeiconsIcon
                 icon={ViewOffSlashIcon}
                 size={16}

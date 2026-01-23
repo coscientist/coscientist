@@ -48,17 +48,16 @@ export const updatePresence = mutation({
         cursorPos: args.cursorPos,
       })
       return existingPresence._id
-    } else {
-      // Create new presence record
-      const presenceId = await ctx.db.insert("presence", {
-        userId,
-        documentId: args.documentId,
-        lastActive: now,
-        status: args.status,
-        cursorPos: args.cursorPos,
-      })
-      return presenceId
     }
+    // Create new presence record
+    const presenceId = await ctx.db.insert("presence", {
+      userId,
+      documentId: args.documentId,
+      lastActive: now,
+      status: args.status,
+      cursorPos: args.cursorPos,
+    })
+    return presenceId
   },
 })
 

@@ -48,7 +48,7 @@ export const SliderNotch = memo(function SliderNotch({
       type="button"
     >
       <motion.div
-        className="w-1.5 h-6 bg-foreground"
+        className="h-6 w-1.5 bg-foreground"
         style={{ scaleY, opacity, transformOrigin: "center" }}
       />
     </button>

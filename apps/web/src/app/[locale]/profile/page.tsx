@@ -12,13 +12,13 @@ export default async function ProfilePage() {
 
   return (
     <main className="container mx-auto max-w-prose px-6 py-16">
-      <h1 className="mb-8 text-[1.75rem] font-semibold tracking-tight">
+      <h1 className="mb-8 font-semibold text-[1.75rem] tracking-tight">
         Profile
       </h1>
 
       <div className="space-y-6">
         <div>
-          <h2 className="mb-2 text-[1.375rem] font-medium tracking-tight">
+          <h2 className="mb-2 font-medium text-[1.375rem] tracking-tight">
             User Information
           </h2>
           <dl className="space-y-2">
@@ -36,7 +36,7 @@ export default async function ProfilePage() {
             </div>
             <div>
               <dt className="font-medium">User ID:</dt>
-              <dd className="font-mono text-sm text-muted-foreground">
+              <dd className="font-mono text-muted-foreground text-sm">
                 {userId}
               </dd>
             </div>
@@ -44,7 +44,7 @@ export default async function ProfilePage() {
         </div>
 
         <div className="rounded-lg border border-border bg-muted p-4">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-muted-foreground text-sm">
             This is an example protected page. It uses{" "}
             <code className="rounded bg-background px-1 py-0.5 font-mono text-xs">
               auth()

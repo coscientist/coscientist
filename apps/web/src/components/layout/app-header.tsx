@@ -160,14 +160,14 @@ export function AppHeader({
             <SheetPanel>
               <div className="flex flex-col gap-1">
                 <Button
-                  className="w-full justify-start px-2 h-12 text-base font-normal"
+                  className="h-12 w-full justify-start px-2 font-normal text-base"
                   onClick={handleWaitlist}
                   variant="ghost"
                 >
                   {t("joinWaitlist")}
                 </Button>
                 <Button
-                  className="w-full justify-start gap-2 px-2 h-12 text-base font-normal"
+                  className="h-12 w-full justify-start gap-2 px-2 font-normal text-base"
                   render={
                     <a
                       href="https://github.com/coscientist/coscientist"
@@ -189,7 +189,7 @@ export function AppHeader({
                 <Separator className="my-2" />
 
                 <Button
-                  className="w-full justify-between px-2 h-12 text-base font-normal"
+                  className="h-12 w-full justify-between px-2 font-normal text-base"
                   onClick={() => setIsLanguageOpen(true)}
                   variant="ghost"
                 >
@@ -208,7 +208,7 @@ export function AppHeader({
                 </Button>
 
                 <Button
-                  className="w-full justify-between px-2 h-12 text-base font-normal"
+                  className="h-12 w-full justify-between px-2 font-normal text-base"
                   onClick={() => setIsThemeOpen(true)}
                   variant="ghost"
                 >
@@ -236,7 +236,7 @@ export function AppHeader({
             className="sm:hidden"
             side="bottom"
           >
-            <SheetHeader className="flex-row items-center gap-2 p-4 border-b">
+            <SheetHeader className="flex-row items-center gap-2 border-b p-4">
               <Button
                 className="-ml-2 h-8 w-8"
                 onClick={() => setIsLanguageOpen(false)}
@@ -258,7 +258,7 @@ export function AppHeader({
                 {routing.locales.map((loc) => (
                   <Button
                     className={cn(
-                      "w-full justify-between px-2 h-12 text-base font-normal",
+                      "h-12 w-full justify-between px-2 font-normal text-base",
                       loc === locale && "font-medium"
                     )}
                     key={loc}
@@ -287,7 +287,7 @@ export function AppHeader({
             className="sm:hidden"
             side="bottom"
           >
-            <SheetHeader className="flex-row items-center gap-2 p-4 border-b">
+            <SheetHeader className="flex-row items-center gap-2 border-b p-4">
               <Button
                 className="-ml-2 h-8 w-8"
                 onClick={() => setIsThemeOpen(false)}
@@ -307,7 +307,7 @@ export function AppHeader({
                 {themes.map(({ value, icon: Icon }) => (
                   <Button
                     className={cn(
-                      "w-full justify-between px-2 h-12 text-base font-normal",
+                      "h-12 w-full justify-between px-2 font-normal text-base",
                       value === resolvedTheme && "font-medium"
                     )}
                     key={value}

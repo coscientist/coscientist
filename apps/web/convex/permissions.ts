@@ -44,10 +44,8 @@ export const shareBlock = mutation({
       if (!readers.includes(args.userId)) {
         readers.push(args.userId)
       }
-    } else {
-      if (!writers.includes(args.userId)) {
-        writers.push(args.userId)
-      }
+    } else if (!writers.includes(args.userId)) {
+      writers.push(args.userId)
     }
 
     await ctx.db.patch(args.blockId, {

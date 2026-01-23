@@ -101,7 +101,7 @@ export function Facepile({
             <div
               aria-label={`${user.userId} (${user.status})`}
               className={cn(
-                "flex size-8 items-center justify-center rounded-full border-2 border-background text-xs font-medium text-white",
+                "flex size-8 items-center justify-center rounded-full border-2 border-background font-medium text-white text-xs",
                 getColorFromUserId(user.userId)
               )}
               title={`${user.userId} (${user.status})`}
@@ -111,7 +111,7 @@ export function Facepile({
 
             <div
               className={cn(
-                "absolute bottom-0 right-0 size-2.5 rounded-full border-2 border-background",
+                "absolute right-0 bottom-0 size-2.5 rounded-full border-2 border-background",
                 getStatusIndicatorColor(user.status)
               )}
             />
@@ -123,7 +123,7 @@ export function Facepile({
         <motion.div
           animate={{ opacity: 1, scale: 1 }}
           aria-label={`${overflowCount} more user${overflowCount > 1 ? "s" : ""}`}
-          className="relative flex size-8 items-center justify-center rounded-full border-2 border-background bg-muted text-xs font-medium text-foreground"
+          className="relative flex size-8 items-center justify-center rounded-full border-2 border-background bg-muted font-medium text-foreground text-xs"
           initial={{ opacity: 0, scale: 0.8 }}
           layout
           role="listitem"

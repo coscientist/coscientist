@@ -67,10 +67,10 @@ export function RatingButtons({ onRate, disabled }: RatingButtonsProps) {
             onClick={() => onRate(rating.value)}
             variant="ghost"
           >
-            <span className="text-lg font-bold tabular-nums">
+            <span className="font-bold text-lg tabular-nums">
               {rating.value}
             </span>
-            <span className="text-xs font-medium opacity-80">
+            <span className="font-medium text-xs opacity-80">
               {rating.label}
             </span>
           </Button>

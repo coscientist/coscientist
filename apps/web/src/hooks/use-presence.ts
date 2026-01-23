@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react"
 import { api } from "@/convex/_generated/api"
 import type { Id } from "@/convex/_generated/dataModel"
 
-const HEARTBEAT_INTERVAL_MS = 5_000
+const HEARTBEAT_INTERVAL_MS = 5000
 
 interface UsePresenceOptions {
   documentId: Id<"blocks">

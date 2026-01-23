@@ -4,18 +4,18 @@ import { useMemo } from "react"
 import ReactFlow, {
   Background,
   Controls,
-  Edge,
+  type Edge,
   Handle,
   MarkerType,
-  Node,
-  NodeProps,
+  type Node,
+  type NodeProps,
   Position,
 } from "reactflow"
 import "reactflow/dist/style.css"
 import { useQuery } from "convex/react"
 import { useReducedMotion } from "@/hooks/use-reduced-motion"
 import { api } from "../../../convex/_generated/api"
-import { Doc, Id } from "../../../convex/_generated/dataModel"
+import type { Doc, Id } from "../../../convex/_generated/dataModel"
 
 type BlockType = "text" | "heading" | "list" | "document"
 type EdgeType = "contains" | "supports" | "refutes" | "references"
@@ -60,14 +60,14 @@ const CustomNode = ({ data, type }: NodeProps) => {
       />
 
       <div className="flex flex-col gap-1">
-        <div className="text-xs font-mono uppercase tracking-wider text-muted-foreground opacity-70">
+        <div className="font-mono text-muted-foreground text-xs uppercase tracking-wider opacity-70">
           {blockType}
         </div>
-        <div className="font-medium text-sm text-foreground line-clamp-2">
+        <div className="line-clamp-2 font-medium text-foreground text-sm">
           {label || "Untitled Block"}
         </div>
         {content && typeof content === "string" && (
-          <div className="text-xs text-muted-foreground line-clamp-2 font-mono">
+          <div className="line-clamp-2 font-mono text-muted-foreground text-xs">
             {content.substring(0, 50)}
           </div>
         )}
@@ -133,10 +133,8 @@ export function KnowledgeGraph({
         } else if (typeof block.content === "string") {
           label = block.content
         }
-      } else {
-        if (typeof block.content === "string") {
-          label = block.content
-        }
+      } else if (typeof block.content === "string") {
+        label = block.content
       }
 
       return {
@@ -200,7 +198,7 @@ export function KnowledgeGraph({
   if (!rootBlock) {
     return (
       <div
-        className={`flex items-center justify-center h-full min-h-[400px] bg-muted/10 rounded-lg border border-dashed border-border ${className}`}
+        className={`flex h-full min-h-[400px] items-center justify-center rounded-lg border border-border border-dashed bg-muted/10 ${className}`}
       >
         <div className="text-muted-foreground text-sm">Loading Graph...</div>
       </div>
@@ -210,7 +208,7 @@ export function KnowledgeGraph({
   return (
     <div
       aria-label="Knowledge graph visualization"
-      className={`h-[600px] w-full bg-background/50 rounded-xl border border-border overflow-hidden ${className}`}
+      className={`h-[600px] w-full overflow-hidden rounded-xl border border-border bg-background/50 ${className}`}
       role="region"
     >
       <ReactFlow

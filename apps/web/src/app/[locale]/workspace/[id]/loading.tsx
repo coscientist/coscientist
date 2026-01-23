@@ -1,0 +1,9 @@
+import { Spinner } from "@/components/ui/spinner"
+
+export default function DocumentLoading() {
+  return (
+    <main className="flex flex-1 items-center justify-center">
+      <Spinner />
+    </main>
+  )
+}

@@ -25,9 +25,7 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { springSubtle } from "@/lib/animations"
-import { cn } from "@/lib/utils"
 import { api } from "../../../../convex/_generated/api"
-import type { Id } from "../../../../convex/_generated/dataModel"
 
 export default function WorkspacePage() {
   const params = useParams()
@@ -76,17 +74,17 @@ export default function WorkspacePage() {
   ) {
     return (
       <main className="min-h-screen p-8">
-        <div className="max-w-6xl mx-auto space-y-8">
-          <div className="h-10 bg-muted rounded w-48 animate-pulse" />
-          <div className="h-12 bg-muted rounded w-full animate-pulse" />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="mx-auto max-w-6xl space-y-8">
+          <div className="h-10 w-48 animate-pulse rounded bg-muted" />
+          <div className="h-12 w-full animate-pulse rounded bg-muted" />
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {[1, 2, 3].map((i) => (
-              <div className="h-40 bg-muted rounded-xl animate-pulse" key={i} />
+              <div className="h-40 animate-pulse rounded-xl bg-muted" key={i} />
             ))}
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div className="h-32 bg-muted rounded-xl animate-pulse" key={i} />
+              <div className="h-32 animate-pulse rounded-xl bg-muted" key={i} />
             ))}
           </div>
         </div>
@@ -104,13 +102,13 @@ export default function WorkspacePage() {
 
   return (
     <main className="min-h-screen p-8">
-      <div className="max-w-6xl mx-auto space-y-8">
+      <div className="mx-auto max-w-6xl space-y-8">
         <div className="flex items-center justify-between">
           <div className="space-y-1">
-            <h1 className="text-[1.75rem] font-semibold tracking-tight">
+            <h1 className="font-semibold text-[1.75rem] tracking-tight">
               Workspace
             </h1>
-            <p className="text-muted-foreground text-base">
+            <p className="text-base text-muted-foreground">
               Welcome back, {user?.firstName || "Operator"}
             </p>
           </div>
@@ -122,13 +120,13 @@ export default function WorkspacePage() {
 
         <form className="relative" onSubmit={handleQuickCapture}>
           <Input
-            className="h-12 text-lg px-4 shadow-sm"
+            className="h-12 px-4 text-lg shadow-sm"
             disabled={isCreating}
             onChange={(e) => setQuickCaptureText(e.target.value)}
             placeholder="Quick capture... (Press Enter to create document)"
             value={quickCaptureText}
           />
-          <div className="absolute right-2 top-1/2 -translate-y-1/2">
+          <div className="absolute top-1/2 right-2 -translate-y-1/2">
             <Button
               disabled={!quickCaptureText.trim() || isCreating}
               size="sm"
@@ -140,8 +138,8 @@ export default function WorkspacePage() {
           </div>
         </form>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card className="h-full flex flex-col">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <Card className="flex h-full flex-col">
             <CardHeader className="pb-3">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <HugeiconsIcon icon={InboxIcon} size={18} />
@@ -150,27 +148,27 @@ export default function WorkspacePage() {
               <CardTitle className="text-2xl">{inboxBlocks.length}</CardTitle>
               <CardDescription>Shared with you</CardDescription>
             </CardHeader>
-            <CardContent className="flex-1 min-h-0 overflow-y-auto max-h-[300px] space-y-2">
+            <CardContent className="max-h-[300px] min-h-0 flex-1 space-y-2 overflow-y-auto">
               {inboxBlocks.length === 0 ? (
-                <p className="text-sm text-muted-foreground">
+                <p className="text-muted-foreground text-sm">
                   No pending items
                 </p>
               ) : (
                 inboxBlocks.slice(0, 5).map((block) => (
                   <Link
-                    className="block p-2 rounded-md hover:bg-muted/50 transition-colors"
+                    className="block rounded-md p-2 transition-colors hover:bg-muted/50"
                     href={`/${locale}/workspace/${block._id}`}
                     key={block._id}
                   >
                     <div className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
-                      <span className="text-sm font-medium truncate">
+                      <div className="h-1.5 w-1.5 shrink-0 rounded-full bg-blue-500" />
+                      <span className="truncate font-medium text-sm">
                         {typeof block.content === "string"
                           ? block.content
                           : "Untitled Block"}
                       </span>
                     </div>
-                    <div className="text-xs text-muted-foreground pl-3.5 mt-0.5">
+                    <div className="mt-0.5 pl-3.5 text-muted-foreground text-xs">
                       {block.type} •{" "}
                       {new Date(block.updatedAt).toLocaleDateString(locale)}
                     </div>
@@ -178,14 +176,14 @@ export default function WorkspacePage() {
                 ))
               )}
               {inboxBlocks.length > 5 && (
-                <div className="text-xs text-center text-muted-foreground pt-2">
+                <div className="pt-2 text-center text-muted-foreground text-xs">
                   + {inboxBlocks.length - 5} more
                 </div>
               )}
             </CardContent>
           </Card>
 
-          <Card className="h-full flex flex-col">
+          <Card className="flex h-full flex-col">
             <CardHeader className="pb-3">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <HugeiconsIcon icon={Tick01Icon} size={18} />
@@ -194,7 +192,7 @@ export default function WorkspacePage() {
               <CardTitle className="text-2xl">{dueReviews.length}</CardTitle>
               <CardDescription>Due for review</CardDescription>
             </CardHeader>
-            <CardContent className="flex-1 flex flex-col justify-end">
+            <CardContent className="flex flex-1 flex-col justify-end">
               <Link href={`/${locale}/verify`}>
                 <Button
                   className="w-full"
@@ -206,7 +204,7 @@ export default function WorkspacePage() {
             </CardContent>
           </Card>
 
-          <Card className="h-full flex flex-col">
+          <Card className="flex h-full flex-col">
             <CardHeader className="pb-3">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <HugeiconsIcon icon={Clock01Icon} size={18} />
@@ -217,20 +215,20 @@ export default function WorkspacePage() {
               </CardTitle>
               <CardDescription>Last updated blocks</CardDescription>
             </CardHeader>
-            <CardContent className="flex-1 min-h-0 overflow-y-auto max-h-[300px] space-y-2">
+            <CardContent className="max-h-[300px] min-h-0 flex-1 space-y-2 overflow-y-auto">
               {recentActivity.slice(0, 5).map((block) => (
                 <Link
-                  className="block p-2 rounded-md hover:bg-muted/50 transition-colors"
+                  className="block rounded-md p-2 transition-colors hover:bg-muted/50"
                   href={`/${locale}/workspace/${block._id}`}
                   key={block._id}
                 >
                   <div className="flex items-center justify-between gap-2">
-                    <span className="text-sm font-medium truncate">
+                    <span className="truncate font-medium text-sm">
                       {typeof block.content === "string"
                         ? block.content
                         : "Untitled Block"}
                     </span>
-                    <span className="text-xs text-muted-foreground whitespace-nowrap">
+                    <span className="whitespace-nowrap text-muted-foreground text-xs">
                       {new Date(block.updatedAt).toLocaleDateString(locale, {
                         month: "short",
                         day: "numeric",
@@ -250,12 +248,12 @@ export default function WorkspacePage() {
               icon={File01Icon}
               size={20}
             />
-            <h2 className="text-lg font-medium">My Documents</h2>
+            <h2 className="font-medium text-lg">My Documents</h2>
           </div>
 
           {documents.length === 0 ? (
-            <Card className="py-12 border-dashed">
-              <CardHeader className="text-center space-y-4">
+            <Card className="border-dashed py-12">
+              <CardHeader className="space-y-4 text-center">
                 <CardTitle>No documents yet</CardTitle>
                 <CardDescription>
                   Create your first document to get started
@@ -267,7 +265,7 @@ export default function WorkspacePage() {
               </CardHeader>
             </Card>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {documents.map((doc) => (
                 <motion.div
                   animate={{ opacity: 1, y: 0 }}
@@ -276,10 +274,10 @@ export default function WorkspacePage() {
                   transition={springSubtle}
                 >
                   <Link href={`/${locale}/workspace/${doc._id}`}>
-                    <Card className="hover:shadow-md transition-shadow cursor-pointer group h-full">
+                    <Card className="group h-full cursor-pointer transition-shadow hover:shadow-md">
                       <CardHeader>
                         <div className="flex items-start justify-between gap-4">
-                          <div className="flex-1 min-w-0">
+                          <div className="min-w-0 flex-1">
                             <CardTitle className="truncate text-base">
                               {doc.content || "Untitled Document"}
                             </CardTitle>
@@ -296,7 +294,7 @@ export default function WorkspacePage() {
                             </CardDescription>
                           </div>
                           <HugeiconsIcon
-                            className="text-muted-foreground group-hover:text-foreground transition-colors shrink-0"
+                            className="shrink-0 text-muted-foreground transition-colors group-hover:text-foreground"
                             icon={ArrowRight01Icon}
                             size={16}
                           />

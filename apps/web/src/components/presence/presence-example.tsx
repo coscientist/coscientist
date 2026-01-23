@@ -17,7 +17,7 @@ export function PresenceExample({ documentId }: PresenceExampleProps) {
 
   return (
     <div className="flex items-center gap-2">
-      <span className="text-sm text-muted-foreground">
+      <span className="text-muted-foreground text-sm">
         {users.length} {users.length === 1 ? "user" : "users"} online
       </span>
       <Facepile users={users} />

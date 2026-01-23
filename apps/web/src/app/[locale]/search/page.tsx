@@ -25,7 +25,7 @@ export default function SearchPage() {
   const allBlocks = useQuery(api.blocks.getAllBlocks)
 
   const searchResults = useMemo(() => {
-    if (!allBlocks || !searchQuery.trim()) {
+    if (!(allBlocks && searchQuery.trim())) {
       return []
     }
 
@@ -41,20 +41,20 @@ export default function SearchPage() {
 
   return (
     <main className="min-h-screen p-8">
-      <div className="max-w-4xl mx-auto space-y-8">
+      <div className="mx-auto max-w-4xl space-y-8">
         <div className="space-y-4">
-          <h1 className="text-[1.75rem] font-semibold tracking-tight">
+          <h1 className="font-semibold text-[1.75rem] tracking-tight">
             Search
           </h1>
           <div className="relative">
             <HugeiconsIcon
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none"
+              className="pointer-events-none absolute top-1/2 left-4 -translate-y-1/2 text-muted-foreground"
               icon={Search01Icon}
               size={18}
             />
             <Input
               autoFocus
-              className="pl-12 h-12 text-base"
+              className="h-12 pl-12 text-base"
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search your blocks..."
               type="search"
@@ -67,14 +67,14 @@ export default function SearchPage() {
           <div className="space-y-4">
             {[1, 2, 3].map((i) => (
               <div
-                className="h-32 bg-muted rounded-2xl animate-pulse"
+                className="h-32 animate-pulse rounded-2xl bg-muted"
                 key={i}
               />
             ))}
           </div>
         ) : searchQuery.trim() === "" ? (
           <Card className="py-12">
-            <CardHeader className="text-center space-y-2">
+            <CardHeader className="space-y-2 text-center">
               <HugeiconsIcon
                 className="mx-auto text-muted-foreground/40"
                 icon={Search01Icon}
@@ -88,7 +88,7 @@ export default function SearchPage() {
           </Card>
         ) : searchResults.length === 0 ? (
           <Card className="py-12">
-            <CardHeader className="text-center space-y-2">
+            <CardHeader className="space-y-2 text-center">
               <CardTitle>No results found</CardTitle>
               <CardDescription>
                 Try a different search query or create new content
@@ -97,7 +97,7 @@ export default function SearchPage() {
           </Card>
         ) : (
           <div className="space-y-4">
-            <p className="text-sm text-muted-foreground">
+            <p className="text-muted-foreground text-sm">
               Found {searchResults.length} result
               {searchResults.length !== 1 ? "s" : ""}
             </p>
@@ -118,12 +118,12 @@ export default function SearchPage() {
                     transition={springSubtle}
                   >
                     <Link href={targetUrl}>
-                      <Card className="hover:shadow-md transition-shadow cursor-pointer group">
+                      <Card className="group cursor-pointer transition-shadow hover:shadow-md">
                         <CardHeader>
                           <div className="flex items-start justify-between gap-4">
-                            <div className="flex-1 min-w-0 space-y-2">
+                            <div className="min-w-0 flex-1 space-y-2">
                               <div className="flex items-center gap-2">
-                                <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider">
+                                <span className="font-mono text-muted-foreground text-xs uppercase tracking-wider">
                                   {block.type}
                                 </span>
                               </div>
@@ -143,7 +143,7 @@ export default function SearchPage() {
                               </CardDescription>
                             </div>
                             <HugeiconsIcon
-                              className="text-muted-foreground group-hover:text-foreground transition-colors shrink-0"
+                              className="shrink-0 text-muted-foreground transition-colors group-hover:text-foreground"
                               icon={ArrowRight01Icon}
                               size={16}
                             />

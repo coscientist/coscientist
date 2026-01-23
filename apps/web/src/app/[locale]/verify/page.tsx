@@ -37,10 +37,10 @@ export default function VerifyPage() {
 
   if (reviews === undefined) {
     return (
-      <main className="container mx-auto px-4 py-8 max-w-3xl min-h-[80vh] flex flex-col items-center justify-center">
-        <div className="animate-pulse space-y-4 w-full max-w-2xl">
-          <div className="h-8 bg-muted rounded w-1/3 mx-auto"></div>
-          <div className="h-[400px] bg-muted rounded-xl"></div>
+      <main className="container mx-auto flex min-h-[80vh] max-w-3xl flex-col items-center justify-center px-4 py-8">
+        <div className="w-full max-w-2xl animate-pulse space-y-4">
+          <div className="mx-auto h-8 w-1/3 rounded bg-muted" />
+          <div className="h-[400px] rounded-xl bg-muted" />
         </div>
       </main>
     )
@@ -48,28 +48,28 @@ export default function VerifyPage() {
 
   if (reviews.length === 0) {
     return (
-      <main className="container mx-auto px-4 py-8 max-w-3xl min-h-[80vh] flex flex-col items-center justify-center text-center">
+      <main className="container mx-auto flex min-h-[80vh] max-w-3xl flex-col items-center justify-center px-4 py-8 text-center">
         <motion.div
           animate={{ opacity: 1, scale: 1 }}
           className="space-y-6"
           initial={{ opacity: 0, scale: 0.9 }}
           transition={springSubtle}
         >
-          <div className="w-24 h-24 bg-green-100 dark:bg-green-900/20 rounded-full flex items-center justify-center mx-auto text-green-600 dark:text-green-400">
+          <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-green-100 text-green-600 dark:bg-green-900/20 dark:text-green-400">
             <HugeiconsIcon icon={Tick01Icon} size={48} strokeWidth={2} />
           </div>
           <div className="space-y-2">
-            <h1 className="text-3xl font-bold tracking-tight">
+            <h1 className="font-bold text-3xl tracking-tight">
               All Caught Up!
             </h1>
-            <p className="text-muted-foreground max-w-md mx-auto">
+            <p className="mx-auto max-w-md text-muted-foreground">
               You've completed all your verification tasks for now. Great job
               maintaining your knowledge sovereignty.
             </p>
           </div>
 
           <div className="pt-4">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-muted rounded-full text-sm font-medium">
+            <div className="inline-flex items-center gap-2 rounded-full bg-muted px-4 py-2 font-medium text-sm">
               <span>Today's Session:</span>
               <span className="text-primary">{completedCount} verified</span>
             </div>
@@ -92,11 +92,11 @@ export default function VerifyPage() {
   }
 
   return (
-    <main className="container mx-auto px-4 py-8 max-w-3xl min-h-[80vh] flex flex-col">
+    <main className="container mx-auto flex min-h-[80vh] max-w-3xl flex-col px-4 py-8">
       <div className="mb-8 space-y-4">
-        <div className="flex justify-between items-end">
+        <div className="flex items-end justify-between">
           <div>
-            <h1 className="text-2xl font-bold tracking-tight">
+            <h1 className="font-bold text-2xl tracking-tight">
               Verification Queue
             </h1>
             <p className="text-muted-foreground">
@@ -104,10 +104,10 @@ export default function VerifyPage() {
             </p>
           </div>
           <div className="text-right">
-            <div className="text-2xl font-mono font-bold tabular-nums">
+            <div className="font-bold font-mono text-2xl tabular-nums">
               {reviews.length}
             </div>
-            <div className="text-xs text-muted-foreground uppercase tracking-wider">
+            <div className="text-muted-foreground text-xs uppercase tracking-wider">
               Remaining
             </div>
           </div>
@@ -115,14 +115,14 @@ export default function VerifyPage() {
 
         <div className="space-y-1">
           <Progress className="h-2" value={progress} />
-          <div className="flex justify-between text-xs text-muted-foreground">
+          <div className="flex justify-between text-muted-foreground text-xs">
             <span>{completedCount} completed</span>
             <span>{effectiveTotal} total</span>
           </div>
         </div>
       </div>
 
-      <div className="flex-1 flex flex-col justify-center">
+      <div className="flex flex-1 flex-col justify-center">
         <VerificationCard
           blockId={reviews[0].blockId}
           key={reviews[0]._id}

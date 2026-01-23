@@ -125,7 +125,7 @@ export function ShareDialog({ blockId, trigger }: ShareDialogProps) {
         <DialogPanel>
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-3">
-              <Label className="text-sm font-medium">Add User</Label>
+              <Label className="font-medium text-sm">Add User</Label>
               <div className="flex gap-2">
                 <Input
                   aria-label="User ID to share with"
@@ -165,7 +165,7 @@ export function ShareDialog({ blockId, trigger }: ShareDialogProps) {
             </div>
 
             <div className="flex flex-col gap-3">
-              <Label className="text-sm font-medium">Current Access</Label>
+              <Label className="font-medium text-sm">Current Access</Label>
               <div className="flex flex-col gap-2">
                 {allUsers.length === 0 ? (
                   <p className="text-muted-foreground text-sm">
@@ -209,7 +209,7 @@ export function ShareDialog({ blockId, trigger }: ShareDialogProps) {
 
             <div className="flex items-center justify-between">
               <div className="flex flex-col gap-1">
-                <Label className="text-sm font-medium">Public Access</Label>
+                <Label className="font-medium text-sm">Public Access</Label>
                 <span className="text-muted-foreground text-xs">
                   Anyone can view this block
                 </span>
@@ -221,7 +221,7 @@ export function ShareDialog({ blockId, trigger }: ShareDialogProps) {
             </div>
 
             <div className="flex flex-col gap-3">
-              <Label className="text-sm font-medium">Embargo</Label>
+              <Label className="font-medium text-sm">Embargo</Label>
               {access.embargoUntil ? (
                 <div className="flex items-center justify-between rounded-lg border border-input bg-muted/32 px-3 py-2">
                   <div className="flex flex-col">

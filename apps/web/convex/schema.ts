@@ -23,7 +23,33 @@ const edgeTypes = v.union(
   v.literal("references") // Reference: block references another
 )
 
+const labRoles = v.union(v.literal("org:admin"), v.literal("org:member"))
+
 export default defineSchema({
+  labs: defineTable({
+    clerkId: v.string(),
+    name: v.string(),
+    slug: v.string(),
+    imageUrl: v.optional(v.string()),
+    createdBy: v.optional(v.string()),
+    createdAt: v.number(),
+    updatedAt: v.number(),
+  })
+    .index("by_clerkId", ["clerkId"])
+    .index("by_slug", ["slug"]),
+
+  labMemberships: defineTable({
+    clerkId: v.string(),
+    labId: v.id("labs"),
+    userId: v.string(),
+    role: labRoles,
+    createdAt: v.number(),
+    updatedAt: v.number(),
+  })
+    .index("by_clerkId", ["clerkId"])
+    .index("by_labId", ["labId"])
+    .index("by_userId", ["userId"])
+    .index("by_labId_userId", ["labId", "userId"]),
   /**
    * Blocks Table (ADR 1)
    * Unified model where all content is stored as blocks
@@ -34,6 +60,7 @@ export default defineSchema({
   blocks: defineTable({
     type: blockTypes,
     content: v.any(), // Flexible content: text, JSON, references, etc.
+    labId: v.id("labs"), // Lab (organization) that owns this block
     createdBy: v.string(), // User ID who created the block
     createdAt: v.number(), // Timestamp in milliseconds
     updatedAt: v.number(), // Timestamp of last update
@@ -44,7 +71,10 @@ export default defineSchema({
       public: v.boolean(), // Viewable by anyone
       embargoUntil: v.optional(v.number()), // Time lock (timestamp in ms)
     }), // ADR 6: Block-level ACL with time-based embargo
-  }).index("by_parentId", ["parentId"]), // Index for efficient hierarchy queries
+  })
+    .index("by_parentId", ["parentId"]) // Index for efficient hierarchy queries
+    .index("by_labId", ["labId"]) // Index for lab-scoped queries
+    .index("by_labId_type", ["labId", "type"]), // Compound index for type filtering within lab
 
   /**
    * Edges Table (ADR 4)
@@ -125,4 +155,11 @@ export default defineSchema({
   })
     .index("by_userId_nextReview", ["userId", "nextReview"]) // Efficient query for due reviews
     .index("by_blockId_userId", ["blockId", "userId"]), // Find user's review for a block
+
+  userSettings: defineTable({
+    userId: v.string(),
+    openaiApiKey: v.optional(v.string()),
+    createdAt: v.number(),
+    updatedAt: v.number(),
+  }).index("by_userId", ["userId"]),
 })

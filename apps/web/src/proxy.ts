@@ -1,5 +1,5 @@
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server"
-import { type NextRequest, NextResponse } from "next/server"
+import { NextResponse } from "next/server"
 import createMiddleware from "next-intl/middleware"
 import { type Locale, routing } from "./i18n/routing"
 
@@ -8,7 +8,7 @@ const handleI18nRouting = createMiddleware(routing)
 
 const isProtectedRoute = createRouteMatcher(["/profile(.*)"])
 
-export default clerkMiddleware(async (auth, request: NextRequest) => {
+export default clerkMiddleware(async (auth, request) => {
   const { searchParams } = request.nextUrl
   const localeParam = searchParams.get("locale") as Locale | null
 

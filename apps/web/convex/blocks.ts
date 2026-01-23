@@ -1,5 +1,6 @@
 import { v } from "convex/values"
 import { mutation, query } from "./_generated/server"
+import { getLabContext, getOptionalLabContext } from "./lib/auth"
 
 const canRead = (block: any, userId: string | null): boolean => {
   if (!userId) return block.access.public
@@ -33,11 +34,15 @@ export const createBlock = mutation({
     parentId: v.optional(v.id("blocks")),
   },
   handler: async (ctx, args) => {
-    const identity = await ctx.auth.getUserIdentity()
-    const userId = identity?.subject
+    const labCtx = await getLabContext(ctx)
 
-    if (!userId) {
-      throw new Error("User must be authenticated to create blocks")
+    const lab = await ctx.db
+      .query("labs")
+      .withIndex("by_clerkId", (q) => q.eq("clerkId", labCtx.labId))
+      .unique()
+
+    if (!lab) {
+      throw new Error("Lab not found")
     }
 
     const now = Date.now()
@@ -45,13 +50,14 @@ export const createBlock = mutation({
     const blockId = await ctx.db.insert("blocks", {
       type: args.type,
       content: args.content,
-      createdBy: userId,
+      labId: lab._id,
+      createdBy: labCtx.userId,
       createdAt: now,
       updatedAt: now,
       parentId: args.parentId,
       access: {
-        readers: [userId],
-        writers: [userId],
+        readers: [labCtx.userId],
+        writers: [labCtx.userId],
         public: false,
       },
     })
@@ -65,8 +71,8 @@ export const getBlock = query({
     blockId: v.id("blocks"),
   },
   handler: async (ctx, args) => {
-    const identity = await ctx.auth.getUserIdentity()
-    const userId = identity?.subject ?? null
+    const labCtx = await getOptionalLabContext(ctx)
+    const userId = labCtx?.userId ?? null
 
     const block = await ctx.db.get(args.blockId)
 
@@ -74,10 +80,18 @@ export const getBlock = query({
       return null
     }
 
-    if (isEmbargoed(block)) {
-      if (!canRead(block, userId)) {
+    if (labCtx) {
+      const lab = await ctx.db
+        .query("labs")
+        .withIndex("by_clerkId", (q) => q.eq("clerkId", labCtx.labId))
+        .unique()
+      if (!lab || block.labId !== lab._id) {
         return null
       }
+    }
+
+    if (isEmbargoed(block) && !canRead(block, userId)) {
+      return null
     }
 
     if (!canRead(block, userId)) {
@@ -102,11 +116,15 @@ export const updateBlock = mutation({
     ),
   },
   handler: async (ctx, args) => {
-    const identity = await ctx.auth.getUserIdentity()
-    const userId = identity?.subject
+    const labCtx = await getLabContext(ctx)
 
-    if (!userId) {
-      throw new Error("User must be authenticated to update blocks")
+    const lab = await ctx.db
+      .query("labs")
+      .withIndex("by_clerkId", (q) => q.eq("clerkId", labCtx.labId))
+      .unique()
+
+    if (!lab) {
+      throw new Error("Lab not found")
     }
 
     const block = await ctx.db.get(args.blockId)
@@ -115,11 +133,15 @@ export const updateBlock = mutation({
       throw new Error("Block not found")
     }
 
-    if (!canWrite(block, userId)) {
+    if (block.labId !== lab._id) {
+      throw new Error("Block not found in this lab")
+    }
+
+    if (!canWrite(block, labCtx.userId)) {
       throw new Error("User does not have write access to this block")
     }
 
-    const updates: any = {
+    const updates: Record<string, unknown> = {
       updatedAt: Date.now(),
     }
 
@@ -142,11 +164,15 @@ export const deleteBlock = mutation({
     blockId: v.id("blocks"),
   },
   handler: async (ctx, args) => {
-    const identity = await ctx.auth.getUserIdentity()
-    const userId = identity?.subject
+    const labCtx = await getLabContext(ctx)
 
-    if (!userId) {
-      throw new Error("User must be authenticated to delete blocks")
+    const lab = await ctx.db
+      .query("labs")
+      .withIndex("by_clerkId", (q) => q.eq("clerkId", labCtx.labId))
+      .unique()
+
+    if (!lab) {
+      throw new Error("Lab not found")
     }
 
     const block = await ctx.db.get(args.blockId)
@@ -155,7 +181,11 @@ export const deleteBlock = mutation({
       throw new Error("Block not found")
     }
 
-    if (!canWrite(block, userId)) {
+    if (block.labId !== lab._id) {
+      throw new Error("Block not found in this lab")
+    }
+
+    if (!canWrite(block, labCtx.userId)) {
       throw new Error("User does not have write access to this block")
     }
 
@@ -180,8 +210,17 @@ export const getBlocksByParent = query({
     parentId: v.id("blocks"),
   },
   handler: async (ctx, args) => {
-    const identity = await ctx.auth.getUserIdentity()
-    const userId = identity?.subject ?? null
+    const labCtx = await getOptionalLabContext(ctx)
+    const userId = labCtx?.userId ?? null
+
+    let labId: string | null = null
+    if (labCtx) {
+      const lab = await ctx.db
+        .query("labs")
+        .withIndex("by_clerkId", (q) => q.eq("clerkId", labCtx.labId))
+        .unique()
+      labId = lab?._id ?? null
+    }
 
     const blocks = await ctx.db
       .query("blocks")
@@ -189,9 +228,8 @@ export const getBlocksByParent = query({
       .collect()
 
     return blocks.filter((block) => {
-      if (isEmbargoed(block)) {
-        return canRead(block, userId)
-      }
+      if (labId && block.labId !== labId) return false
+      if (isEmbargoed(block)) return canRead(block, userId)
       return canRead(block, userId)
     })
   },
@@ -207,17 +245,27 @@ export const getBlocksByType = query({
     ),
   },
   handler: async (ctx, args) => {
-    const identity = await ctx.auth.getUserIdentity()
-    const userId = identity?.subject ?? null
+    const labCtx = await getLabContext(ctx)
+    const userId = labCtx.userId
 
-    const allBlocks = await ctx.db.query("blocks").collect()
+    const lab = await ctx.db
+      .query("labs")
+      .withIndex("by_clerkId", (q) => q.eq("clerkId", labCtx.labId))
+      .unique()
 
-    const blocksByType = allBlocks.filter((block) => block.type === args.type)
+    if (!lab) {
+      return []
+    }
 
-    return blocksByType.filter((block) => {
-      if (isEmbargoed(block)) {
-        return canRead(block, userId)
-      }
+    const blocks = await ctx.db
+      .query("blocks")
+      .withIndex("by_labId_type", (q) =>
+        q.eq("labId", lab._id).eq("type", args.type)
+      )
+      .collect()
+
+    return blocks.filter((block) => {
+      if (isEmbargoed(block)) return canRead(block, userId)
       return canRead(block, userId)
     })
   },
@@ -226,15 +274,25 @@ export const getBlocksByType = query({
 export const getAllBlocks = query({
   args: {},
   handler: async (ctx) => {
-    const identity = await ctx.auth.getUserIdentity()
-    const userId = identity?.subject ?? null
+    const labCtx = await getLabContext(ctx)
+    const userId = labCtx.userId
 
-    const allBlocks = await ctx.db.query("blocks").collect()
+    const lab = await ctx.db
+      .query("labs")
+      .withIndex("by_clerkId", (q) => q.eq("clerkId", labCtx.labId))
+      .unique()
 
-    return allBlocks.filter((block) => {
-      if (isEmbargoed(block)) {
-        return canRead(block, userId)
-      }
+    if (!lab) {
+      return []
+    }
+
+    const blocks = await ctx.db
+      .query("blocks")
+      .withIndex("by_labId", (q) => q.eq("labId", lab._id))
+      .collect()
+
+    return blocks.filter((block) => {
+      if (isEmbargoed(block)) return canRead(block, userId)
       return canRead(block, userId)
     })
   },

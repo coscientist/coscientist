@@ -1,0 +1,4 @@
+- [drizzle-kit silent failure](drizzle-kit-silent-failure.md) — migrate exits 1 with no message unless the version-matched patch applies; how to regenerate it
+- [Server function HTTP probe](server-fn-http-probe.md) — server functions answer 200; read the body; the headers, payload, and IDs a probe needs
+- [OTP send errors swallowed](otp-send-errors-swallowed.md) — Better Auth hides sender errors; the failedSignInSends mark and why non-sign-in types stay unmarked
+- [lefthook shared hooks](lefthook-shared-hooks.md) — worktrees share the pre-push hook; run bun install in the pushing checkout when it cannot find lefthook

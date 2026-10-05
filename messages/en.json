@@ -1,0 +1,53 @@
+{
+  "Layout": {
+    "description": "A networked tool for thought.",
+    "title": "coscientist"
+  },
+  "Error": {
+    "retry": "Try again",
+    "title": "Something went wrong."
+  },
+  "NotFound": {
+    "home": "Go to your notes",
+    "title": "This page does not exist."
+  },
+  "SignIn": {
+    "code": "Sign-in code",
+    "codeSent": "We sent a 6-digit code to {email}.",
+    "differentEmail": "Use a different email",
+    "disposableEmail": "Disposable email addresses cannot sign up. Use a permanent address.",
+    "email": "Email",
+    "failed": "Sign-in failed. Check the code and try again.",
+    "passkey": "Sign in with a passkey",
+    "passkeyFailed": "Passkey sign-in failed.",
+    "sendCode": "Send code",
+    "sendFailed": "The code could not be sent.",
+    "title": "Sign in to coscientist",
+    "tooManyRequests": "Too many attempts. Wait a minute and try again.",
+    "unexpected": "Something went wrong. Try again.",
+    "verify": "Sign in"
+  },
+  "SignInEmail": {
+    "subject": "{otp} is your coscientist sign-in code",
+    "text": "Your coscientist sign-in code is {otp}. It expires in 5 minutes.\n\nIf you did not request this code, ignore this email."
+  },
+  "Notes": {
+    "addPasskey": "Add a passkey",
+    "createFailed": "The note could not be created.",
+    "dangling": "Notes that link to missing notes",
+    "empty": "You have no notes yet.",
+    "newNote": "New note",
+    "passkeyAdded": "Passkey added.",
+    "passkeyFailed": "The passkey could not be added.",
+    "signOut": "Sign out",
+    "title": "Notes",
+    "untitled": "Untitled"
+  },
+  "Note": {
+    "backlinks": "Backlinks",
+    "back": "All notes",
+    "missingNote": "Missing note",
+    "noBacklinks": "No notes link here.",
+    "untitled": "Untitled"
+  }
+}

@@ -1,0 +1,12 @@
+diff --git a/bin.cjs b/bin.cjs
+index c28f3e4732f0d911237dc1eb1bc466cefaa1b976..ef9ea6ae94a46f9015dcd941a01e7917f66dfc87 100755
+--- a/bin.cjs
++++ b/bin.cjs
+@@ -1464,6 +1464,7 @@ var require_hanji = __commonJS({
+           return result;
+         } catch (err2) {
+           terminal.reject(err2);
++          console.error(err2);
+           process.exit(1);
+         }
+       });

@@ -1,0 +1,166 @@
+import { createFileRoute, redirect, useRouter } from '@tanstack/react-router'
+import { useState } from 'react'
+import type { FormEvent } from 'react'
+import { useTranslations } from 'use-intl'
+
+import { emailOtp, signIn } from '@/lib/auth-client'
+import { fetchViewer } from '@/lib/auth/session'
+
+const SignInPage = () => {
+  const t = useTranslations('SignIn')
+  const router = useRouter()
+  const [email, setEmail] = useState('')
+  const [code, setCode] = useState('')
+  const [step, setStep] = useState<'code' | 'email'>('email')
+  const [pending, setPending] = useState(false)
+  const [alert, setAlert] = useState<string | null>(null)
+
+  const run = async (action: () => Promise<string | null>) => {
+    setPending(true)
+    setAlert(null)
+    try {
+      setAlert(await action())
+    } catch (error) {
+      console.error(error)
+      setAlert(t('unexpected'))
+    }
+    setPending(false)
+  }
+
+  const describe = (failure: { code?: string; status: number }, fallback: string) => {
+    if (failure.code === 'DISPOSABLE_EMAIL') {
+      return t('disposableEmail')
+    }
+    if (failure.status === 429) {
+      return t('tooManyRequests')
+    }
+    return fallback
+  }
+
+  const finish = async () => {
+    await router.invalidate()
+    await router.navigate({ to: '/' })
+  }
+
+  const sendCode = (event: FormEvent) => {
+    event.preventDefault()
+    void run(async () => {
+      const result = await emailOtp.sendVerificationOtp({ email, type: 'sign-in' })
+      if (result.error) {
+        return describe(result.error, t('sendFailed'))
+      }
+      setCode('')
+      setStep('code')
+      return null
+    })
+  }
+
+  const verify = (event: FormEvent) => {
+    event.preventDefault()
+    void run(async () => {
+      const result = await signIn.emailOtp({ email, otp: code })
+      if (result.error) {
+        return describe(result.error, t('failed'))
+      }
+      await finish()
+      return null
+    })
+  }
+
+  const passkeySignIn = () => {
+    void run(async () => {
+      const result = await signIn.passkey()
+      if (result?.error) {
+        return t('passkeyFailed')
+      }
+      await finish()
+      return null
+    })
+  }
+
+  return (
+    <main className="mx-auto flex max-w-sm flex-col gap-6 p-6">
+      <h1 className="text-xl font-semibold">{t('title')}</h1>
+      {step === 'email' ? (
+        <form className="flex flex-col gap-3" onSubmit={sendCode}>
+          <label className="flex flex-col gap-1">
+            <span>{t('email')}</span>
+            <input
+              autoComplete="email"
+              className="rounded border px-2 py-1"
+              name="email"
+              onChange={(event) => setEmail(event.target.value)}
+              required
+              type="email"
+              value={email}
+            />
+          </label>
+          <button
+            className="rounded bg-neutral-900 px-3 py-1 text-white disabled:opacity-50"
+            disabled={pending}
+            type="submit"
+          >
+            {t('sendCode')}
+          </button>
+        </form>
+      ) : (
+        <form className="flex flex-col gap-3" onSubmit={verify}>
+          <p>{t('codeSent', { email })}</p>
+          <label className="flex flex-col gap-1">
+            <span>{t('code')}</span>
+            <input
+              autoComplete="one-time-code"
+              className="rounded border px-2 py-1 tracking-widest"
+              inputMode="numeric"
+              maxLength={6}
+              minLength={6}
+              name="code"
+              onChange={(event) => setCode(event.target.value)}
+              required
+              value={code}
+            />
+          </label>
+          <button
+            className="rounded bg-neutral-900 px-3 py-1 text-white disabled:opacity-50"
+            disabled={pending}
+            type="submit"
+          >
+            {t('verify')}
+          </button>
+          <button
+            className="self-start underline"
+            onClick={() => {
+              setStep('email')
+              setAlert(null)
+            }}
+            type="button"
+          >
+            {t('differentEmail')}
+          </button>
+        </form>
+      )}
+      {alert ? (
+        <p className="text-red-700" role="alert">
+          {alert}
+        </p>
+      ) : null}
+      <button
+        className="rounded border px-3 py-1 disabled:opacity-50"
+        disabled={pending}
+        onClick={passkeySignIn}
+        type="button"
+      >
+        {t('passkey')}
+      </button>
+    </main>
+  )
+}
+
+export const Route = createFileRoute('/sign-in')({
+  beforeLoad: async () => {
+    if (await fetchViewer()) {
+      throw redirect({ to: '/' })
+    }
+  },
+  component: SignInPage,
+})

@@ -1,0 +1,14 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      BETTER_AUTH_SECRET: qa-interns-test-secret-not-for-production
+      BETTER_AUTH_URL: http://web:3000
+      DATABASE_URL: postgres://coscientist_app:coscientist_app@db:5432/coscientist
+      MIGRATION_DATABASE_URL: postgres://coscientist:coscientist@db:5432/coscientist
+    mem_limit: 2g

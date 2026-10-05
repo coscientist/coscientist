@@ -1,31 +1,17 @@
-# dependencies (bun install)
-node_modules
+/node_modules
 
-# output
-out
-dist
-*.tgz
+/.output/
+/.nitro/
+/.tanstack/
+/dist/
 
-# code coverage
-coverage
-*.lcov
+.DS_Store
 
-# logs
-logs
-_.log
-report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
-
-# dotenv environment variable files
 .env*
 !.env.*.enc
 
-# caches
-.eslintcache
-.cache
+.vercel
+
 *.tsbuildinfo
 
-# IntelliJ based IDEs
-.idea
-
-# Finder (MacOS) folder config
-.DS_Store
+/src/routeTree.gen.ts

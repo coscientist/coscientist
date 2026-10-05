@@ -1,0 +1,8 @@
+assert_lefthook_installed: true
+
+pre-push:
+  jobs:
+    - name: check
+      script: check.sh
+    - name: typecheck
+      script: typecheck.sh

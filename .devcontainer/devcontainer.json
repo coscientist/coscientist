@@ -1,0 +1,24 @@
+{
+  "name": "coscientist",
+  "dockerComposeFile": ["../docker-compose.yml", "compose.yml"],
+  "service": "web",
+  "workspaceFolder": "/app",
+  "customizations": {
+    "qa-interns": {
+      "urls": { "app": "http://web:3000" },
+      "ready": "http://web:3000/sign-in",
+      "seed": "bun run db:migrate >&2 && bun .devcontainer/seed.ts",
+      "focus": [
+        "Account isolation between the two seeded accounts: open, list, link to, embed, and save each note of one account while signed in as the other account and while signed out, through the pages and through the server functions under /_serverFn.",
+        "The notes list and the read-only note page: New note, links between notes, embedded notes, backlinks, links to missing notes, and the list of notes that link to missing notes.",
+        "The sign-in page and the auth API under /api/auth: email validation, disposable email addresses, wrong and expired codes, repeated requests, sign-out, and the redirect of every page to /sign-in without a session."
+      ],
+      "knownGaps": [
+        "Email sign-in codes reach only the server log, because the environment has no mail delivery. Each seeded account carries a signed session cookie for the app host instead.",
+        "A browser without a WebAuthn authenticator waits without an answer after Add a passkey and Sign in with a passkey.",
+        "Requests reach the app with no client IP header, so the rate limiter counts every client of the environment in one bucket per auth path.",
+        "The note page is read-only and the app has no editor. A note changes only through the save server function."
+      ]
+    }
+  }
+}

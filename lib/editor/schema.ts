@@ -4,10 +4,10 @@ import { UniqueID } from '@tiptap/extension-unique-id'
 import { StarterKit } from '@tiptap/starter-kit'
 import { z } from 'zod'
 
-const noteId = z.uuid()
+export const uuid = z.uuid().lowercase('the UUID is not lowercase')
 
 const validateNoteId = (value: unknown) => {
-  noteId.parse(value)
+  uuid.parse(value)
 }
 
 const validateHref = (value: unknown) => {

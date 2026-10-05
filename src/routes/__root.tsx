@@ -1,12 +1,10 @@
 import { createRootRoute, HeadContent, Scripts } from '@tanstack/react-router'
 import type { ReactNode } from 'react'
 import { IntlProvider } from 'use-intl'
-import { createTranslator } from 'use-intl/core'
 
+import { translate } from '@/lib/i18n'
 import messages from '@/messages/en.json'
 import appCss from '@/src/styles.css?url'
-
-const t = createTranslator({ locale: 'en', messages, namespace: 'Layout' })
 
 const RootShell = ({ children }: { children: ReactNode }) => (
   <html lang="en">
@@ -28,8 +26,8 @@ export const Route = createRootRoute({
     meta: [
       { charSet: 'utf-8' },
       { content: 'width=device-width, initial-scale=1', name: 'viewport' },
-      { title: t('title') },
-      { content: t('description'), name: 'description' },
+      { title: translate('Layout.title') },
+      { content: translate('Layout.description'), name: 'description' },
     ],
   }),
   shellComponent: RootShell,

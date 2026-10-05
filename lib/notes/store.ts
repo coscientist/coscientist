@@ -1,7 +1,7 @@
 import type { JSONContent } from '@tiptap/core'
 import { and, asc, desc, eq, inArray, isNull, ne, sql } from 'drizzle-orm'
 import { alias } from 'drizzle-orm/pg-core'
-import { Effect } from 'effect'
+import { Array, Effect } from 'effect'
 
 import { emptyDocument, InvalidDocument, readDocument } from '@/lib/notes/document'
 import type { DocumentContent } from '@/lib/notes/document'
@@ -23,21 +23,29 @@ interface Revision {
   title: string
 }
 
+const insertBatchRows = 1000
+
+const insertInSequence = async <Row>(
+  [batch, ...rest]: Row[][],
+  insert: (rows: Row[]) => Promise<unknown>,
+): Promise<void> => {
+  if (batch) {
+    await insert(batch)
+    await insertInSequence(rest, insert)
+  }
+}
+
 const writeContent = async (
   tx: TenantTx,
   { actorId, content, noteId, ownerId, revision, title }: Revision,
 ) => {
   await tx.delete(noteBlocks).where(eq(noteBlocks.noteId, noteId))
-  if (content.blocks.length > 0) {
-    await tx
-      .insert(noteBlocks)
-      .values(content.blocks.map((block) => ({ ...block, noteId, ownerId })))
-  }
-  if (content.links.length > 0) {
-    await tx
-      .insert(noteLinks)
-      .values(content.links.map((link) => ({ ...link, ownerId, sourceNoteId: noteId })))
-  }
+  await insertInSequence(Array.chunksOf(content.blocks, insertBatchRows), (blocks) =>
+    tx.insert(noteBlocks).values(blocks.map((block) => ({ ...block, noteId, ownerId }))),
+  )
+  await insertInSequence(Array.chunksOf(content.links, insertBatchRows), (links) =>
+    tx.insert(noteLinks).values(links.map((link) => ({ ...link, ownerId, sourceNoteId: noteId }))),
+  )
   await tx
     .insert(noteRevisions)
     .values({ actorId, doc: content.doc, noteId, ownerId, revision, title })

@@ -7,6 +7,7 @@ import type { ReactNode } from 'react'
 import { useTranslations } from 'use-intl'
 
 import { extensions } from '@/lib/editor/schema'
+import { translate } from '@/lib/i18n'
 import { getNotePageFn } from '@/lib/notes/functions'
 
 interface Targets {
@@ -22,11 +23,15 @@ interface NodeViewProps {
 
 type NodeMapping = Record<string, (props: NodeViewProps) => ReactNode>
 
-const NoteLink = ({ noteId }: { noteId: string }) => {
+const NoteLink = ({ label, noteId }: { label?: string | null; noteId: string }) => {
   const t = useTranslations('Note')
   const title = use(TargetsContext).titles.get(noteId)
   if (title === undefined) {
-    return <span className="text-neutral-500">{t('missingNote')}</span>
+    return (
+      <span className="text-neutral-500">
+        {label ? t('missingLink', { label }) : t('missingNote')}
+      </span>
+    )
   }
   return (
     <Link className="underline" params={{ noteId }} to="/notes/$noteId">
@@ -35,7 +40,9 @@ const NoteLink = ({ noteId }: { noteId: string }) => {
   )
 }
 
-const PageLinkView = ({ node }: NodeViewProps) => <NoteLink noteId={node.attrs.noteId} />
+const PageLinkView = ({ node }: NodeViewProps) => (
+  <NoteLink label={node.attrs.label} noteId={node.attrs.noteId} />
+)
 
 const NestedTransclusionView = ({ node }: NodeViewProps) => (
   <p>
@@ -110,4 +117,16 @@ const NotePage = () => {
 export const Route = createFileRoute('/notes/$noteId')({
   component: NotePage,
   loader: ({ params }) => getNotePageFn({ data: params }),
+  head: ({ loaderData }) =>
+    loaderData
+      ? {
+          meta: [
+            {
+              title: translate('Layout.pageTitle', {
+                page: loaderData.note.title || translate('Note.untitled'),
+              }),
+            },
+          ],
+        }
+      : {},
 })

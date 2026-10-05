@@ -42,7 +42,7 @@ export const saveNoteFn = createServerFn({ method: 'POST' })
   .middleware([viewerMiddleware])
   .validator(
     noteInput.extend({
-      baseRevision: z.int().positive(),
+      baseRevision: z.int32().positive(),
       doc: documentInput,
       title: z.string().max(500),
     }),

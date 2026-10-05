@@ -1,6 +1,7 @@
 {
   "Layout": {
     "description": "A networked tool for thought.",
+    "pageTitle": "{page} | coscientist",
     "title": "coscientist"
   },
   "Error": {
@@ -14,7 +15,8 @@
   "SignIn": {
     "code": "Sign-in code",
     "codeExpired": "This code expired or had too many wrong attempts. Request a new code.",
-    "codeSent": "We sent a 6-digit code to {email}.",
+    "codeIncomplete": "Enter the {length}-digit code.",
+    "codeSent": "We sent a {length}-digit code to {email}.",
     "differentEmail": "Use a different email",
     "disposableEmail": "Disposable email addresses are not accepted. Use a permanent address.",
     "email": "Email",
@@ -48,6 +50,7 @@
   "Note": {
     "backlinks": "Backlinks",
     "back": "All notes",
+    "missingLink": "{label} (missing)",
     "missingNote": "Missing note",
     "noBacklinks": "No notes link here.",
     "untitled": "Untitled"

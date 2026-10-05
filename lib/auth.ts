@@ -8,6 +8,7 @@ import { disposableEmailBlocklistSet } from 'disposable-email-domains-js'
 import { createTranslator } from 'use-intl/core'
 
 import { authDb } from '@/lib/auth/db'
+import { otpLength } from '@/lib/auth/otp'
 import { env } from '@/lib/env'
 import { sendEmail } from '@/lib/mail'
 import messages from '@/messages/en.json'
@@ -70,7 +71,7 @@ export const auth = betterAuth({
     emailOTP({
       allowedAttempts: 5,
       expiresIn: 300,
-      otpLength: 6,
+      otpLength,
       sendVerificationOTP: async ({ email, otp, type }, ctx) => {
         if (type !== 'sign-in') {
           throw new Error(`auth: coscientist sends only sign-in codes, not ${type} codes`)

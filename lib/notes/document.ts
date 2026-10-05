@@ -1,15 +1,26 @@
 import { getText, getTextSerializersFromSchema } from '@tiptap/core'
 import type { JSONContent } from '@tiptap/core'
 import { Data } from 'effect'
-import { z } from 'zod'
 
-import { blockTypes, schema } from '@/lib/editor/schema'
+import { blockTypes, schema, uuid } from '@/lib/editor/schema'
 
 export class InvalidDocument extends Data.TaggedError('InvalidDocument')<{
   readonly cause: unknown
 }> {}
 
-const blockId = z.uuid()
+const attributeTypes: ReadonlySet<string> = new Set(['boolean', 'number', 'string'])
+
+const maxDepth = 100
+
+const checkAttributes = (kind: string, name: string, attrs: Readonly<Record<string, unknown>>) => {
+  for (const [attribute, value] of Object.entries(attrs)) {
+    if (value !== null && !attributeTypes.has(typeof value)) {
+      throw new Error(
+        `document: the attribute ${attribute} of the ${kind} ${name} is not a string, a number, a boolean, or null`,
+      )
+    }
+  }
+}
 
 const textSerializers = getTextSerializersFromSchema(schema)
 
@@ -42,6 +53,9 @@ export const readDocument = (json: JSONContent): DocumentContent => {
   if (doc.type !== schema.topNodeType) {
     throw new Error(`document: the root node is ${doc.type.name}, not ${schema.topNodeType.name}`)
   }
+  if (doc.marks.length > 0) {
+    throw new Error('document: the root node has marks')
+  }
   doc.check()
   const blocks: Block[] = []
   const blockIds = new Set<string>()
@@ -49,9 +63,16 @@ export const readDocument = (json: JSONContent): DocumentContent => {
   const addLink = (link: Link) => {
     links.set(`${link.kind} ${link.sourceBlockId} ${link.targetNoteId}`, link)
   }
-  doc.descendants((node, _position, parent) => {
+  doc.descendants((node, position, parent) => {
+    if (doc.resolve(position).depth >= maxDepth) {
+      throw new Error(`document: a node is nested more than ${maxDepth} levels deep`)
+    }
+    checkAttributes('node', node.type.name, node.attrs)
+    for (const mark of node.marks) {
+      checkAttributes('mark', mark.type.name, mark.attrs)
+    }
     if (blockTypes.has(node.type.name)) {
-      const id = blockId.parse(node.attrs.id)
+      const id = uuid.parse(node.attrs.id)
       if (blockIds.has(id)) {
         throw new Error(`document: the block id ${id} appears more than once`)
       }

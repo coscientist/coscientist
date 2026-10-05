@@ -8,7 +8,7 @@ export default defineConfig({
   build: { assetsDir: '_build' },
   plugins: [
     tanstackStart({ router: { routeTreeFileHeader: [] } }),
-    nitro(),
+    nitro({ plugins: ['./server/plugins/env.ts'] }),
     viteReact({ compiler: true }),
     tailwindcss(),
   ],

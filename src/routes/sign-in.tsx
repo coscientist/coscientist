@@ -4,7 +4,9 @@ import type { FormEvent } from 'react'
 import { useTranslations } from 'use-intl'
 
 import { emailOtp, signIn } from '@/lib/auth-client'
+import { otpLength } from '@/lib/auth/otp'
 import { fetchViewer } from '@/lib/auth/session'
+import { translate } from '@/lib/i18n'
 
 const finish = () => {
   globalThis.location.assign('/')
@@ -67,6 +69,9 @@ const SignInPage = () => {
   const verify = (event: FormEvent) => {
     event.preventDefault()
     void run(async () => {
+      if (code.length < otpLength) {
+        return t('codeIncomplete', { length: otpLength })
+      }
       const result = await signIn.emailOtp({ email, otp: code })
       if (result.error) {
         return describe(result.error, t('failed'))
@@ -114,16 +119,22 @@ const SignInPage = () => {
         </form>
       ) : (
         <form className="flex flex-col gap-3" onSubmit={verify}>
-          <p>{t('codeSent', { email })}</p>
+          <p>{t('codeSent', { email, length: otpLength })}</p>
           <label className="flex flex-col gap-1">
             <span>{t('code')}</span>
             <input
               autoComplete="one-time-code"
               className="rounded border px-2 py-1 tracking-widest"
               inputMode="numeric"
-              minLength={6}
               name="code"
-              onChange={(event) => setCode(event.target.value.trim())}
+              onChange={(event) =>
+                setCode(
+                  [...event.target.value]
+                    .filter((character) => '0123456789'.includes(character))
+                    .join('')
+                    .slice(0, otpLength),
+                )
+              }
               required
               value={code}
             />
@@ -171,4 +182,5 @@ export const Route = createFileRoute('/sign-in')({
     }
   },
   component: SignInPage,
+  head: () => ({ meta: [{ title: translate('SignIn.title') }] }),
 })

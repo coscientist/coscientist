@@ -1,6 +1,6 @@
-import { sql as query } from 'drizzle-orm'
+import { DrizzleQueryError, sql as query } from 'drizzle-orm'
 import { drizzle } from 'drizzle-orm/postgres-js'
-import { Data, Effect } from 'effect'
+import { Data, Effect, Logger } from 'effect'
 
 import { sql } from '@/lib/pg'
 
@@ -21,10 +21,11 @@ const enterTenant = async (tx: TenantTx, viewerId: string) => {
 
 export const withTenant = <A>(viewerId: string, run: (tx: TenantTx) => Promise<A>) =>
   Effect.tryPromise({
-    catch: (cause) => new DatabaseError({ cause }),
+    catch: (cause) =>
+      new DatabaseError({ cause: cause instanceof DrizzleQueryError ? cause.cause : cause }),
     try: () =>
       db.transaction(async (tx) => {
         await enterTenant(tx, viewerId)
         return await run(tx)
       }),
-  })
+  }).pipe(Effect.tapCause(Effect.logError), Effect.provideService(Logger.LogToStderr, true))

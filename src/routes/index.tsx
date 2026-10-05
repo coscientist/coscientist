@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { useTranslations } from 'use-intl'
 
 import { passkey, signOut } from '@/lib/auth-client'
+import { translate } from '@/lib/i18n'
 import { createNoteFn, listNotesFn } from '@/lib/notes/functions'
 
 const leave = async () => {
@@ -90,5 +91,8 @@ const NotesPage = () => {
 
 export const Route = createFileRoute('/')({
   loader: () => listNotesFn(),
+  head: () => ({
+    meta: [{ title: translate('Layout.pageTitle', { page: translate('Notes.title') }) }],
+  }),
   component: NotesPage,
 })

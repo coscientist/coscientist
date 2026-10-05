@@ -118,7 +118,7 @@ const bobNotes = [
     doc(
       block('paragraph', [
         text('A link to a note of another account: '),
-        pageLink(questions, 'Research questions'),
+        pageLink(questions, 'Shared plan'),
       ]),
       transclusion(summary),
       block('paragraph', [text('My own draft: '), pageLink(bobDraft, 'Bob draft')]),

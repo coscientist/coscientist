@@ -1,10 +1,10 @@
 import { createFileRoute, redirect } from '@tanstack/react-router'
-import { useState } from 'react'
+import { useId, useState } from 'react'
 import type { FormEvent } from 'react'
 import { useTranslations } from 'use-intl'
 
 import { emailOtp, signIn } from '@/lib/auth-client'
-import { otpLength } from '@/lib/auth/otp'
+import { otpLength, otpMinutes } from '@/lib/auth/otp'
 import { fetchViewer } from '@/lib/auth/session'
 import { translate } from '@/lib/i18n'
 
@@ -12,11 +12,17 @@ const finish = () => {
   globalThis.location.assign('/')
 }
 
+interface SentCode {
+  address: string
+  expiresAt: number
+}
+
 const SignInPage = () => {
   const t = useTranslations('SignIn')
+  const sentId = useId()
   const [email, setEmail] = useState('')
   const [code, setCode] = useState('')
-  const [sentTo, setSentTo] = useState<string | null>(null)
+  const [sent, setSent] = useState<SentCode | null>(null)
   const [pending, setPending] = useState(false)
   const [alert, setAlert] = useState<string | null>(null)
 
@@ -57,20 +63,25 @@ const SignInPage = () => {
         return describe(result.error, t('sendFailed'))
       }
       setCode('')
-      setSentTo(email)
+      setSent({ address: email, expiresAt: Date.now() + otpMinutes * 60_000 })
       return null
     })
   }
 
-  const verify = (address: string) => (event: FormEvent) => {
+  const verify = (current: SentCode) => (event: FormEvent) => {
     event.preventDefault()
     void run(async () => {
       if (code.length < otpLength) {
         return t('codeIncomplete', { length: otpLength })
       }
-      const result = await signIn.emailOtp({ email: address, otp: code })
-      if (result.error?.code === 'OTP_EXPIRED' || result.error?.code === 'TOO_MANY_ATTEMPTS') {
-        setSentTo(null)
+      const result = await signIn.emailOtp({ email: current.address, otp: code })
+      if (
+        result.error &&
+        (Date.now() >= current.expiresAt ||
+          result.error.code === 'OTP_EXPIRED' ||
+          result.error.code === 'TOO_MANY_ATTEMPTS')
+      ) {
+        setSent(null)
         return t('codeExpired')
       }
       if (result.error) {
@@ -95,12 +106,13 @@ const SignInPage = () => {
   return (
     <main className="mx-auto flex max-w-sm flex-col gap-6 p-6">
       <h1 className="text-xl font-semibold">{t('title')}</h1>
-      {sentTo === null ? (
+      {sent === null ? (
         <form className="flex flex-col gap-3" onSubmit={sendCode}>
           <label className="flex flex-col gap-1">
             <span>{t('email')}</span>
             <input
               autoComplete="email"
+              autoFocus
               className="rounded border px-2 py-1"
               name="email"
               onChange={(event) => {
@@ -122,11 +134,12 @@ const SignInPage = () => {
           </button>
         </form>
       ) : (
-        <form className="flex flex-col gap-3" onSubmit={verify(sentTo)}>
-          <p>{t('codeSent', { email: sentTo, length: otpLength })}</p>
+        <form className="flex flex-col gap-3" onSubmit={verify(sent)}>
+          <p id={sentId}>{t('codeSent', { email: sent.address, length: otpLength })}</p>
           <label className="flex flex-col gap-1">
             <span>{t('code')}</span>
             <input
+              aria-describedby={sentId}
               autoComplete="one-time-code"
               autoFocus
               className="rounded border px-2 py-1 tracking-widest"
@@ -158,7 +171,7 @@ const SignInPage = () => {
             className="self-start underline disabled:opacity-50"
             disabled={pending}
             onClick={() => {
-              setSentTo(null)
+              setSent(null)
               setAlert(null)
             }}
             type="button"

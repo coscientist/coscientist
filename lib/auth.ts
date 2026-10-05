@@ -8,14 +8,12 @@ import { disposableEmailBlocklistSet } from 'disposable-email-domains-js'
 import { createTranslator } from 'use-intl/core'
 
 import { authDb } from '@/lib/auth/db'
-import { otpLength } from '@/lib/auth/otp'
+import { otpLength, otpMinutes } from '@/lib/auth/otp'
 import { env } from '@/lib/env'
 import { sendEmail } from '@/lib/mail'
 import messages from '@/messages/en.json'
 
 const t = createTranslator({ locale: 'en', messages, namespace: 'SignInEmail' })
-
-const otpMinutes = 5
 
 const disposableDomains = disposableEmailBlocklistSet()
 

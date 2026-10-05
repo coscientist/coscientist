@@ -99,6 +99,7 @@ Code that imports `lib/auth.ts`, `lib/pg.ts`, `lib/env.ts`, `lib/mail.ts`, or `l
 - Write no code comments. Rationale goes in the PR body or this file.
 - Write no unit tests. End-to-end coverage runs through qa-interns against `.devcontainer/`.
 - Lint and format with Ultracite. No suppressions and no per-path overrides.
+- `src/styles.css` sets `--font-sans` to the Tailwind 4.0 stack, which starts with `ui-sans-serif, system-ui, sans-serif`. The Tailwind 4.3.3 default stack names only families that Chrome on Linux rejects as substitutes when Liberation Sans and Noto Sans are missing, so spaces and digits render from Noto Color Emoji.
 - `patches/drizzle-kit@0.31.11.patch` makes `drizzle-kit migrate` print the error of a failed migration. `drizzle-kit` is pinned to that version. On an upgrade, regenerate the patch with `bun patch drizzle-kit`.
 - Memories live in `.memory/`, indexed by `.memory/MEMORY.md`.
 

@@ -107,6 +107,7 @@ const SignInPage = () => {
                 setEmail(event.target.value)
                 setAlert(null)
               }}
+              readOnly={pending}
               required
               type="email"
               value={email}
@@ -131,14 +132,16 @@ const SignInPage = () => {
               inputMode="numeric"
               name="code"
               onChange={(event) => {
-                setCode(
-                  [...event.target.value]
-                    .filter((character) => '0123456789'.includes(character))
-                    .join('')
-                    .slice(0, otpLength),
-                )
-                setAlert(null)
+                const next = [...event.target.value]
+                  .filter((character) => '0123456789'.includes(character))
+                  .join('')
+                  .slice(0, otpLength)
+                if (next !== code) {
+                  setCode(next)
+                  setAlert(null)
+                }
               }}
+              readOnly={pending}
               required
               value={code}
             />
@@ -151,7 +154,8 @@ const SignInPage = () => {
             {t('verify')}
           </button>
           <button
-            className="self-start underline"
+            className="self-start underline disabled:opacity-50"
+            disabled={pending}
             onClick={() => {
               setStep('email')
               setAlert(null)

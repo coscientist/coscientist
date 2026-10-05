@@ -5,7 +5,7 @@ coscientist is a networked note app at `coscientist.app`. A note is a Tiptap doc
 ## Stack
 
 - Bun 1.4 runs scripts and installs packages. The production server runs on Node 24.
-- TanStack Start (React 19, Vite, Nitro). Nitro picks the `vercel` preset when `VERCEL` is set at build time and `node-server` otherwise.
+- TanStack Start (React 19, Vite, Nitro). Nitro picks the `vercel` preset when `VERCEL`, `VERCEL_ENV`, or `NOW_BUILDER` is set at build time and `node-server` otherwise, so a local build with `VERCEL_ENV` in its environment writes `.vercel/output/`.
 - Drizzle ORM on Postgres 18 through `postgres` (postgres.js). Effect 4 wraps server data access. zod validates input and the environment.
 - Better Auth with email OTP and passkeys. Resend sends mail.
 - Tiptap 3 defines the document schema. `@tiptap/static-renderer` renders notes with no editor and no DOM.
@@ -38,7 +38,7 @@ The lefthook `pre-push` hook runs `check` and `typecheck`. `lefthook.yml` sets `
 | `BETTER_AUTH_URL` | Public origin, for example `https://coscientist.app`. The passkey RP ID is its hostname. |
 | `RESEND_API_KEY` | Required when `VERCEL_ENV` is `preview` or `production`. |
 | `EMAIL_FROM` | Sender address. Required when `VERCEL_ENV` is `preview` or `production`. |
-| `VERCEL_ENV` | Set by Vercel. Any value other than `production` marks mail as test mail. |
+| `VERCEL_ENV` | Set by Vercel. Unset, `development`, `preview`, or `production`. Any other value fails the parse. Every value other than `production` marks mail as test mail. |
 
 `drizzle.config.ts` reads `MIGRATION_DATABASE_URL`, the owner role's direct connection. The app never reads it.
 
@@ -56,7 +56,7 @@ Without `RESEND_API_KEY` and `EMAIL_FROM`, local development prints each email, 
 - Child tables reference `notes (id, owner_id)` with a composite foreign key, so a row cannot attach to another account's note. `note_links.target_note_id` has no foreign key: a link to a missing note is stored and reads as dangling.
 - `note_revisions` is append-only for `coscientist_app`: it has `SELECT` and `INSERT` only.
 - The Better Auth tables (`user`, `session`, `account`, `verification`, `passkey`, `rate_limit`) have no RLS.
-- A new table gets its `GRANT` to `coscientist_app` in a custom migration. A new tenant table also gets `owner_id`, the `ownerOnly` policy, and `FORCE ROW LEVEL SECURITY` in that migration.
+- A new table gets its `GRANT` to `coscientist_app` in a custom migration. A new tenant table also gets an `owner_id` and the `ownerOnly` policy, which is local to `lib/notes/schema.ts`, and its custom migration sets `FORCE ROW LEVEL SECURITY`.
 - A migration that grants to `coscientist_app` fails when the role is missing, and the whole migration run rolls back.
 
 ## Production database (PlanetScale Postgres)
@@ -72,15 +72,16 @@ PgBouncer on port 6432 runs in transaction mode, which keeps `set_config(..., tr
 
 ## Notes
 
-- `lib/editor/schema.ts` is the one document schema for the server and the client. It has StarterKit, a link mark whose `href` must pass `isAllowedUri`, the inline `pageLink` node, the block `transclusion` node, and `UniqueID` on every block type.
-- `readDocument` in `lib/notes/document.ts` validates a document with `nodeFromJSON` and `check()`, requires a `doc` root with no marks and a unique UUID on every block, extracts blocks and links, and returns the normalized `doc.toJSON()`. Stored JSON never holds raw HTML.
+- `lib/editor/schema.ts` is the one document schema for the server and the client. It has StarterKit, a link mark whose `href` must pass `isAllowedUri`, the inline `pageLink` node, the block `transclusion` node, and `UniqueID` on the types in `blockTypes`: paragraph, heading, code block, horizontal rule, and transclusion. Quotes, lists, and list items have no ID.
+- `readDocument` in `lib/notes/document.ts` validates a document with `nodeFromJSON` and `check()`, requires a `doc` root with no marks and a unique UUID on every node in `blockTypes`, extracts blocks and links, and returns the normalized `doc.toJSON()`. Stored JSON never holds raw HTML.
 - Block IDs and the `noteId` of `pageLink` and `transclusion` are lowercase UUIDs, through the `uuid` schema in `lib/editor/schema.ts`. The Postgres `uuid` columns ignore case, and the page looks up link targets by the exact string.
 - `readDocument` rejects a node or mark attribute whose value is not a string, a number, a boolean, or null. ProseMirror runs only the `validate` an attribute defines, and the static renderer throws on an object value.
-- `readDocument` rejects a node nested more than 100 levels deep. The note page fails in the browser past about 450 levels, and the router state fails to serialize past about 495.
+- `readDocument` rejects a node nested more than 100 levels deep. Text and other inline nodes count at the level of their parent, so a block that saves empty also saves with text. The note page fails in the browser past about 400 levels, and the router state fails to serialize past about 495.
+- `saveNote` sets the new revision to `revision + 1` in SQL, from the row it updates, so no client value reaches the `integer` column.
 - `saveNote` in `lib/notes/store.ts` is the one write path. It updates the note only when `revision` equals the base revision, rebuilds `note_blocks` and `note_links`, and appends a revision, all in one transaction. It answers `saved`, `conflict`, or `not-found`, and fails with `InvalidDocument` before it opens a transaction.
 - `writeContent` inserts blocks and links in batches of 1000 rows, because postgres.js rejects a query with 65534 or more parameters.
 - `backlinksQuery` and `danglingLinksQuery` in `lib/notes/store.ts` read links. Pages render notes with `renderToReactElement` and a node mapping for `pageLink` and `transclusion`. A link to an existing note shows the target's current title. A link to a missing note shows its stored label followed by "(missing)", or "Missing note" when it has no label.
-- `getNotePageFn` runs `viewerMiddleware` before its validator, and the validator answers not found for a malformed note ID. A signed-out request to any `/notes/*` URL redirects to `/sign-in`.
+- `getNotePageFn` runs `viewerMiddleware` before its validator, and the validator answers not found for a malformed note ID. A signed-out request to `/notes/<id>` redirects to `/sign-in` for any `<id>`.
 
 ## Auth and mail
 
@@ -90,7 +91,7 @@ PgBouncer on port 6432 runs in transaction mode, which keeps `set_config(..., tr
 - A failed sign-in send answers 503 `OTP_DELIVERY_FAILED` through the `failedSignInSends` hook.
 - `otpLength` in `lib/auth/otp.ts` sets the code length for Better Auth and the sign-in page. The code field keeps only the digits 0 to 9, up to `otpLength`, and the page sends no code shorter than `otpLength`. `minLength` cannot hold that rule, because Chrome checks it only after a user edit and the field rewrites its value from script.
 - `hooks.before` rejects an email whose domain or parent domain is on the `disposable-email-domains-js` list with 400 `DISPOSABLE_EMAIL`, unless an account with that email exists.
-- The Better Auth rate limiter is on in every environment, with database storage in `rate_limit`. The email OTP paths allow 3 requests per 60 seconds per IP. Direct `auth.api` calls skip the limiter.
+- The Better Auth rate limiter is on in every environment, with database storage in `rate_limit`. The email OTP paths allow 3 requests per 60 seconds per IP. The IP comes from a single-valued `x-vercel-forwarded-for` or `x-forwarded-for` header. A production build that finds neither puts the request in one bucket per path that every such request shares, as on the local `node-server` build with no proxy. Direct `auth.api` calls skip the limiter.
 - `sendEmail` in `lib/mail.ts` is the one mailer. Outside `VERCEL_ENV=production`, it prefixes the subject with `[TEST] ` and opens the body with `This email comes from a TEST setup.`.
 - Sign-in and sign-out end with a full document navigation through `location.assign`, so the router cache of the previous account does not survive.
 - `noStoreMiddleware` in `src/start.ts` runs first in the request middleware and sets `cache-control: no-store` on the final `Response`: pages, redirects, not-found and error pages, server functions, and `/api/auth/*`. A header set through `setResponseHeader` reaches only 2xx responses, because h3 merges event headers only into ok responses. h3's own JSON 500, built when a handler throws something that is not a `Response`, has no header and no account data. Start's 308 for a protocol-relative path and Nitro's 400 for a malformed percent escape are built before the request middleware runs and have no `cache-control`. The Nitro route rule for `/_build/**` replaces the header with `public, max-age=31536000, immutable` after the middleware, so the not-found page under that path carries it. None of these responses carries account data. The back-forward cache and the HTTP cache keep no account page, so **Back** after sign-out reloads and redirects to `/sign-in`.

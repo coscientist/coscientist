@@ -126,12 +126,16 @@ export const saveNote = (
       try: () => readDocument(input.doc),
     })
     return yield* withTenant(viewerId, async (tx): Promise<SaveResult> => {
-      const revision = input.baseRevision + 1
       const [saved] = await tx
         .update(notes)
-        .set({ doc: content.doc, revision, title: input.title, updatedAt: sql`now()` })
+        .set({
+          doc: content.doc,
+          revision: sql`${notes.revision} + 1`,
+          title: input.title,
+          updatedAt: sql`now()`,
+        })
         .where(and(eq(notes.id, input.noteId), eq(notes.revision, input.baseRevision)))
-        .returning({ ownerId: notes.ownerId })
+        .returning({ ownerId: notes.ownerId, revision: notes.revision })
       if (!saved) {
         const [current] = await tx
           .select({ revision: notes.revision })
@@ -146,10 +150,10 @@ export const saveNote = (
         content,
         noteId: input.noteId,
         ownerId: saved.ownerId,
-        revision,
+        revision: saved.revision,
         title: input.title,
       })
-      return { revision, status: 'saved' }
+      return { revision: saved.revision, status: 'saved' }
     })
   })
 

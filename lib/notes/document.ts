@@ -96,7 +96,7 @@ export const readDocument = (json: JSONContent): DocumentContent => {
       })
     }
     for (const child of node.children) {
-      visit(child, node, depth + 1)
+      visit(child, node, child.isInline ? depth : depth + 1)
     }
   }
   for (const child of doc.children) {

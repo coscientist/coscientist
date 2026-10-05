@@ -16,7 +16,7 @@ const SignInPage = () => {
   const t = useTranslations('SignIn')
   const [email, setEmail] = useState('')
   const [code, setCode] = useState('')
-  const [step, setStep] = useState<'code' | 'email'>('email')
+  const [sentTo, setSentTo] = useState<string | null>(null)
   const [pending, setPending] = useState(false)
   const [alert, setAlert] = useState<string | null>(null)
 
@@ -43,10 +43,6 @@ const SignInPage = () => {
       case 'INVALID_EMAIL': {
         return t('invalidEmail')
       }
-      case 'OTP_EXPIRED':
-      case 'TOO_MANY_ATTEMPTS': {
-        return t('codeExpired')
-      }
       default: {
         return fallback
       }
@@ -61,18 +57,22 @@ const SignInPage = () => {
         return describe(result.error, t('sendFailed'))
       }
       setCode('')
-      setStep('code')
+      setSentTo(email)
       return null
     })
   }
 
-  const verify = (event: FormEvent) => {
+  const verify = (address: string) => (event: FormEvent) => {
     event.preventDefault()
     void run(async () => {
       if (code.length < otpLength) {
         return t('codeIncomplete', { length: otpLength })
       }
-      const result = await signIn.emailOtp({ email, otp: code })
+      const result = await signIn.emailOtp({ email: address, otp: code })
+      if (result.error?.code === 'OTP_EXPIRED' || result.error?.code === 'TOO_MANY_ATTEMPTS') {
+        setSentTo(null)
+        return t('codeExpired')
+      }
       if (result.error) {
         return describe(result.error, t('failed'))
       }
@@ -95,7 +95,7 @@ const SignInPage = () => {
   return (
     <main className="mx-auto flex max-w-sm flex-col gap-6 p-6">
       <h1 className="text-xl font-semibold">{t('title')}</h1>
-      {step === 'email' ? (
+      {sentTo === null ? (
         <form className="flex flex-col gap-3" onSubmit={sendCode}>
           <label className="flex flex-col gap-1">
             <span>{t('email')}</span>
@@ -122,12 +122,13 @@ const SignInPage = () => {
           </button>
         </form>
       ) : (
-        <form className="flex flex-col gap-3" onSubmit={verify}>
-          <p>{t('codeSent', { email, length: otpLength })}</p>
+        <form className="flex flex-col gap-3" onSubmit={verify(sentTo)}>
+          <p>{t('codeSent', { email: sentTo, length: otpLength })}</p>
           <label className="flex flex-col gap-1">
             <span>{t('code')}</span>
             <input
               autoComplete="one-time-code"
+              autoFocus
               className="rounded border px-2 py-1 tracking-widest"
               inputMode="numeric"
               name="code"
@@ -157,7 +158,7 @@ const SignInPage = () => {
             className="self-start underline disabled:opacity-50"
             disabled={pending}
             onClick={() => {
-              setStep('email')
+              setSentTo(null)
               setAlert(null)
             }}
             type="button"

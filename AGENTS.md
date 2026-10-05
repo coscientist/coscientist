@@ -5,7 +5,7 @@ coscientist is a networked note app at `coscientist.app`. A note is a Tiptap doc
 ## Stack
 
 - Bun 1.4 runs scripts and installs packages. The production server runs on Node 24.
-- TanStack Start (React 19, Vite, Nitro). Nitro picks the `vercel` preset when `VERCEL`, `VERCEL_ENV`, or `NOW_BUILDER` is set at build time and `node-server` otherwise, so a local build with `VERCEL_ENV` in its environment writes `.vercel/output/`.
+- TanStack Start (React 19, Vite, Nitro). Nitro picks its preset from the build environment: `vercel` on a Vercel build and `node-server` for a local `bun run build`. A local build with `VERCEL_ENV` or `NOW_BUILDER` in its environment also picks `vercel` and writes `.vercel/output/`.
 - Drizzle ORM on Postgres 18 through `postgres` (postgres.js). Effect 4 wraps server data access. zod validates input and the environment.
 - Better Auth with email OTP and passkeys. Resend sends mail.
 - Tiptap 3 defines the document schema. `@tiptap/static-renderer` renders notes with no editor and no DOM.
@@ -38,7 +38,7 @@ The lefthook `pre-push` hook runs `check` and `typecheck`. `lefthook.yml` sets `
 | `BETTER_AUTH_URL` | Public origin, for example `https://coscientist.app`. The passkey RP ID is its hostname. |
 | `RESEND_API_KEY` | Required when `VERCEL_ENV` is `preview` or `production`. |
 | `EMAIL_FROM` | Sender address. Required when `VERCEL_ENV` is `preview` or `production`. |
-| `VERCEL_ENV` | Set by Vercel. Unset, `development`, `preview`, or `production`. Any other value fails the parse. Every value other than `production` marks mail as test mail. |
+| `VERCEL_ENV` | Set by Vercel. Unset, empty, `development`, `preview`, or `production`. Any other value fails the parse. Every value other than `production` marks mail as test mail. |
 
 `drizzle.config.ts` reads `MIGRATION_DATABASE_URL`, the owner role's direct connection. The app never reads it.
 
@@ -77,11 +77,10 @@ PgBouncer on port 6432 runs in transaction mode, which keeps `set_config(..., tr
 - Block IDs and the `noteId` of `pageLink` and `transclusion` are lowercase UUIDs, through the `uuid` schema in `lib/editor/schema.ts`. The Postgres `uuid` columns ignore case, and the page looks up link targets by the exact string.
 - `readDocument` rejects a node or mark attribute whose value is not a string, a number, a boolean, or null. ProseMirror runs only the `validate` an attribute defines, and the static renderer throws on an object value.
 - `readDocument` rejects a node nested more than 100 levels deep. Text and other inline nodes count at the level of their parent, so a block that saves empty also saves with text. The note page fails in the browser past about 400 levels, and the router state fails to serialize past about 495.
-- `saveNote` sets the new revision to `revision + 1` in SQL, from the row it updates, so no client value reaches the `integer` column.
-- `saveNote` in `lib/notes/store.ts` is the one write path. It updates the note only when `revision` equals the base revision, rebuilds `note_blocks` and `note_links`, and appends a revision, all in one transaction. It answers `saved`, `conflict`, or `not-found`, and fails with `InvalidDocument` before it opens a transaction.
+- `saveNote` in `lib/notes/store.ts` is the one write path for an existing note. `createNote` inserts a new note at revision 1 through the same `writeContent`. `saveNote` updates the note only when `revision` equals the base revision, sets the new revision to `revision + 1` in SQL from the row it updates, rebuilds `note_blocks` and `note_links`, and appends a revision, all in one transaction. The base revision only selects the row, within the `z.int32()` range of `saveNoteFn`. It answers `saved`, `conflict`, or `not-found`, and fails with `InvalidDocument` before it opens a transaction.
 - `writeContent` inserts blocks and links in batches of 1000 rows, because postgres.js rejects a query with 65534 or more parameters.
 - `backlinksQuery` and `danglingLinksQuery` in `lib/notes/store.ts` read links. Pages render notes with `renderToReactElement` and a node mapping for `pageLink` and `transclusion`. A link to an existing note shows the target's current title. A link to a missing note shows its stored label followed by "(missing)", or "Missing note" when it has no label.
-- `getNotePageFn` runs `viewerMiddleware` before its validator, and the validator answers not found for a malformed note ID. A signed-out request to `/notes/<id>` redirects to `/sign-in` for any `<id>`.
+- `getNotePageFn` runs `viewerMiddleware` before its validator, and the validator answers not found for a malformed note ID. A signed-out request to `/notes/abc` redirects to `/sign-in` like one to `/notes/<uuid>`.
 
 ## Auth and mail
 
@@ -89,7 +88,7 @@ PgBouncer on port 6432 runs in transaction mode, which keeps `set_config(..., tr
 - `sendVerificationOTP` sends sign-in codes only. Every other OTP type throws, Better Auth logs the error, and the endpoint answers as it does for an unknown email.
 - `disabledPaths` turns off every email OTP path except `/email-otp/send-verification-otp` and `/sign-in/email-otp`. `/email-otp/check-verification-otp` counts attempts with a read and a separate write, so concurrent guesses pass the attempt limit. `/email-otp/reset-password` sets a password with no mail to the account owner. `disabledPaths` does not block direct `auth.api` calls.
 - A failed sign-in send answers 503 `OTP_DELIVERY_FAILED` through the `failedSignInSends` hook.
-- `otpLength` in `lib/auth/otp.ts` sets the code length for Better Auth and the sign-in page. The code field keeps only the digits 0 to 9, up to `otpLength`, and the page sends no code shorter than `otpLength`. `minLength` cannot hold that rule, because Chrome checks it only after a user edit and the field rewrites its value from script.
+- `otpLength` in `lib/auth/otp.ts` sets the code length for Better Auth and the sign-in page. The code field keeps only the digits 0 to 9, up to `otpLength`, and the page sends no code shorter than `otpLength`. `minLength` cannot hold that rule, because Chrome checks it only after a user edit and the field rewrites its value from script. The code step names and signs in the address the code went to. An expired or exhausted code returns the page to the email step.
 - `hooks.before` rejects an email whose domain or parent domain is on the `disposable-email-domains-js` list with 400 `DISPOSABLE_EMAIL`, unless an account with that email exists.
 - The Better Auth rate limiter is on in every environment, with database storage in `rate_limit`. The email OTP paths allow 3 requests per 60 seconds per IP. The IP comes from a single-valued `x-vercel-forwarded-for` or `x-forwarded-for` header. A production build that finds neither puts the request in one bucket per path that every such request shares, as on the local `node-server` build with no proxy. Direct `auth.api` calls skip the limiter.
 - `sendEmail` in `lib/mail.ts` is the one mailer. Outside `VERCEL_ENV=production`, it prefixes the subject with `[TEST] ` and opens the body with `This email comes from a TEST setup.`.

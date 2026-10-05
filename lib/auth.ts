@@ -25,11 +25,6 @@ const isDisposable = (email: string) => {
 }
 
 export const auth = betterAuth({
-  advanced: {
-    ipAddress: {
-      ipAddressHeaders: ['x-vercel-forwarded-for', 'x-forwarded-for'],
-    },
-  },
   appName: 'coscientist',
   baseURL: env.BETTER_AUTH_URL,
   database: drizzleAdapter(authDb, { provider: 'pg' }),

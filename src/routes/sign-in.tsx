@@ -55,16 +55,21 @@ const SignInPage = () => {
     }
   }
 
-  const sendCode = (event: FormEvent) => {
+  const sendCode = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
+    const address = new FormData(event.currentTarget).get('email')
+    if (typeof address !== 'string') {
+      throw new TypeError('sign-in: the form has no email field')
+    }
+    setEmail(address)
     void run(async () => {
       const expiresAt = Date.now() + otpMinutes * 60_000
-      const result = await emailOtp.sendVerificationOtp({ email, type: 'sign-in' })
+      const result = await emailOtp.sendVerificationOtp({ email: address, type: 'sign-in' })
       if (result.error) {
         return describe(result.error, t('sendFailed'))
       }
       setCode('')
-      setSent({ address: email, expiresAt })
+      setSent({ address, expiresAt })
       return null
     })
   }
@@ -113,16 +118,16 @@ const SignInPage = () => {
             <span>{t('email')}</span>
             <input
               autoComplete="email"
+              autoFocus={email !== ''}
               className="rounded border px-2 py-1"
+              defaultValue={email}
               name="email"
-              onChange={(event) => {
-                setEmail(event.target.value)
+              onChange={() => {
                 setAlert(null)
               }}
               readOnly={pending}
               required
               type="email"
-              value={email}
             />
           </label>
           <button

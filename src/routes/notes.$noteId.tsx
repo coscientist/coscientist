@@ -1,4 +1,4 @@
-import { createFileRoute, Link, notFound } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
 import type { JSONContent } from '@tiptap/core'
 import type { Node as ProseMirrorNode } from '@tiptap/pm/model'
 import { renderToReactElement } from '@tiptap/static-renderer/pm/react'
@@ -7,7 +7,7 @@ import type { ReactNode } from 'react'
 import { useTranslations } from 'use-intl'
 
 import { extensions } from '@/lib/editor/schema'
-import { getNotePageFn, noteInput } from '@/lib/notes/functions'
+import { getNotePageFn } from '@/lib/notes/functions'
 
 interface Targets {
   embeds: ReadonlyMap<string, { doc: JSONContent; id: string; title: string }>
@@ -109,11 +109,5 @@ const NotePage = () => {
 
 export const Route = createFileRoute('/notes/$noteId')({
   component: NotePage,
-  loader: ({ params }) => {
-    const input = noteInput.safeParse(params)
-    if (!input.success) {
-      throw notFound()
-    }
-    return getNotePageFn({ data: input.data })
-  },
+  loader: ({ params }) => getNotePageFn({ data: params }),
 })

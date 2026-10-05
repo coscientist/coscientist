@@ -1,4 +1,4 @@
-import { createFileRoute, redirect, useRouter } from '@tanstack/react-router'
+import { createFileRoute, redirect } from '@tanstack/react-router'
 import { useState } from 'react'
 import type { FormEvent } from 'react'
 import { useTranslations } from 'use-intl'
@@ -6,9 +6,12 @@ import { useTranslations } from 'use-intl'
 import { emailOtp, signIn } from '@/lib/auth-client'
 import { fetchViewer } from '@/lib/auth/session'
 
+const finish = () => {
+  globalThis.location.assign('/')
+}
+
 const SignInPage = () => {
   const t = useTranslations('SignIn')
-  const router = useRouter()
   const [email, setEmail] = useState('')
   const [code, setCode] = useState('')
   const [step, setStep] = useState<'code' | 'email'>('email')
@@ -28,18 +31,24 @@ const SignInPage = () => {
   }
 
   const describe = (failure: { code?: string; status: number }, fallback: string) => {
-    if (failure.code === 'DISPOSABLE_EMAIL') {
-      return t('disposableEmail')
-    }
     if (failure.status === 429) {
       return t('tooManyRequests')
     }
-    return fallback
-  }
-
-  const finish = async () => {
-    await router.invalidate()
-    await router.navigate({ to: '/' })
+    switch (failure.code) {
+      case 'DISPOSABLE_EMAIL': {
+        return t('disposableEmail')
+      }
+      case 'INVALID_EMAIL': {
+        return t('invalidEmail')
+      }
+      case 'OTP_EXPIRED':
+      case 'TOO_MANY_ATTEMPTS': {
+        return t('codeExpired')
+      }
+      default: {
+        return fallback
+      }
+    }
   }
 
   const sendCode = (event: FormEvent) => {
@@ -62,7 +71,7 @@ const SignInPage = () => {
       if (result.error) {
         return describe(result.error, t('failed'))
       }
-      await finish()
+      finish()
       return null
     })
   }
@@ -73,7 +82,7 @@ const SignInPage = () => {
       if (result?.error) {
         return t('passkeyFailed')
       }
-      await finish()
+      finish()
       return null
     })
   }
@@ -112,10 +121,9 @@ const SignInPage = () => {
               autoComplete="one-time-code"
               className="rounded border px-2 py-1 tracking-widest"
               inputMode="numeric"
-              maxLength={6}
               minLength={6}
               name="code"
-              onChange={(event) => setCode(event.target.value)}
+              onChange={(event) => setCode(event.target.value.trim())}
               required
               value={code}
             />

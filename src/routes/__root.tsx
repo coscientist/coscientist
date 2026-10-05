@@ -13,7 +13,7 @@ const RootShell = ({ children }: { children: ReactNode }) => (
     <head>
       <HeadContent />
     </head>
-    <body className="bg-white text-neutral-900 antialiased">
+    <body className="bg-white text-neutral-900 antialiased wrap-anywhere">
       <IntlProvider locale="en" messages={messages} timeZone="UTC">
         {children}
       </IntlProvider>

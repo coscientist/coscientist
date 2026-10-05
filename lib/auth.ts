@@ -32,6 +32,15 @@ export const auth = betterAuth({
   appName: 'coscientist',
   baseURL: env.BETTER_AUTH_URL,
   database: drizzleAdapter(authDb, { provider: 'pg' }),
+  disabledPaths: [
+    '/email-otp/check-verification-otp',
+    '/email-otp/verify-email',
+    '/email-otp/request-password-reset',
+    '/forget-password/email-otp',
+    '/email-otp/reset-password',
+    '/email-otp/request-email-change',
+    '/email-otp/change-email',
+  ],
   hooks: {
     after: createAuthMiddleware((ctx) =>
       failedSignInSends.has(ctx.context)
@@ -52,7 +61,7 @@ export const auth = betterAuth({
       ) {
         throw APIError.from('BAD_REQUEST', {
           code: 'DISPOSABLE_EMAIL',
-          message: 'Disposable email addresses cannot sign up.',
+          message: 'Disposable email addresses are not accepted.',
         })
       }
     }),

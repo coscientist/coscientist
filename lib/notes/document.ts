@@ -39,6 +39,9 @@ export const emptyDocument = (): JSONContent => ({
 
 export const readDocument = (json: JSONContent): DocumentContent => {
   const doc = schema.nodeFromJSON(json)
+  if (doc.type !== schema.topNodeType) {
+    throw new Error(`document: the root node is ${doc.type.name}, not ${schema.topNodeType.name}`)
+  }
   doc.check()
   const blocks: Block[] = []
   const blockIds = new Set<string>()

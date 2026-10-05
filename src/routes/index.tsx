@@ -5,6 +5,11 @@ import { useTranslations } from 'use-intl'
 import { passkey, signOut } from '@/lib/auth-client'
 import { createNoteFn, listNotesFn } from '@/lib/notes/functions'
 
+const leave = async () => {
+  await signOut()
+  globalThis.location.assign('/sign-in')
+}
+
 const NotesPage = () => {
   const t = useTranslations('Notes')
   const { dangling, notes } = Route.useLoaderData()
@@ -30,10 +35,7 @@ const NotesPage = () => {
     setStatus(result?.error ? t('passkeyFailed') : t('passkeyAdded'))
   }
 
-  const leave = async () => {
-    await signOut()
-    await navigate({ to: '/sign-in' })
-  }
+  const danglingNotes = new Map(dangling.map((link) => [link.sourceNoteId, link.sourceTitle]))
 
   return (
     <main className="mx-auto flex max-w-xl flex-col gap-6 p-6">
@@ -68,18 +70,14 @@ const NotesPage = () => {
           ))}
         </ul>
       )}
-      {dangling.length > 0 ? (
+      {danglingNotes.size > 0 ? (
         <section className="flex flex-col gap-2 border-t pt-4">
           <h2 className="font-semibold">{t('dangling')}</h2>
           <ul className="flex flex-col gap-1">
-            {dangling.map((link) => (
-              <li key={`${link.sourceNoteId} ${link.targetNoteId}`}>
-                <Link
-                  className="underline"
-                  params={{ noteId: link.sourceNoteId }}
-                  to="/notes/$noteId"
-                >
-                  {link.sourceTitle || t('untitled')}
+            {[...danglingNotes].map(([noteId, title]) => (
+              <li key={noteId}>
+                <Link className="underline" params={{ noteId }} to="/notes/$noteId">
+                  {title || t('untitled')}
                 </Link>
               </li>
             ))}

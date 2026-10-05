@@ -7,7 +7,7 @@ import { z } from 'zod'
 import { viewerMiddleware } from '@/lib/auth/session'
 import { createNote, getNotePage, listNotes, saveNote } from '@/lib/notes/store'
 
-export const noteInput = z.object({ noteId: z.uuid() })
+const noteInput = z.object({ noteId: z.uuid() })
 
 const documentInput = z.custom<JSONContent>(
   (value) => typeof value === 'object' && value !== null && !Array.isArray(value),
@@ -23,7 +23,13 @@ export const createNoteFn = createServerFn({ method: 'POST' })
 
 export const getNotePageFn = createServerFn({ method: 'GET' })
   .middleware([viewerMiddleware])
-  .validator(noteInput)
+  .validator((input: { noteId: string }) => {
+    const parsed = noteInput.safeParse(input)
+    if (!parsed.success) {
+      throw notFound()
+    }
+    return parsed.data
+  })
   .handler(async ({ context, data }) => {
     const page = await Effect.runPromise(getNotePage(context.viewer.id, data.noteId))
     if (!page) {

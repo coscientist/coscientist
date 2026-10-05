@@ -73,18 +73,22 @@ PgBouncer on port 6432 runs in transaction mode, which keeps `set_config(..., tr
 ## Notes
 
 - `lib/editor/schema.ts` is the one document schema for the server and the client. It has StarterKit, a link mark whose `href` must pass `isAllowedUri`, the inline `pageLink` node, the block `transclusion` node, and `UniqueID` on every block type.
-- `readDocument` in `lib/notes/document.ts` validates a document with `nodeFromJSON` and `check()`, requires a unique UUID on every block, extracts blocks and links, and returns the normalized `doc.toJSON()`. Stored JSON never holds raw HTML.
+- `readDocument` in `lib/notes/document.ts` validates a document with `nodeFromJSON` and `check()`, requires a `doc` root and a unique UUID on every block, extracts blocks and links, and returns the normalized `doc.toJSON()`. Stored JSON never holds raw HTML.
 - `saveNote` in `lib/notes/store.ts` is the one write path. It updates the note only when `revision` equals the base revision, rebuilds `note_blocks` and `note_links`, and appends a revision, all in one transaction. It answers `saved`, `conflict`, or `not-found`, and fails with `InvalidDocument` before it opens a transaction.
 - `backlinksQuery` and `danglingLinksQuery` in `lib/notes/store.ts` read links. Pages render notes with `renderToReactElement` and a node mapping for `pageLink` and `transclusion`.
+- `getNotePageFn` runs `viewerMiddleware` before its validator, and the validator answers not found for a malformed note ID. A signed-out request to any `/notes/*` URL redirects to `/sign-in`.
 
 ## Auth and mail
 
 - `lib/auth.ts` configures Better Auth. Only `/sign-in/email-otp` creates users, and it marks the email verified. `getViewer` accepts only verified sessions.
 - `sendVerificationOTP` sends sign-in codes only. Every other OTP type throws, Better Auth logs the error, and the endpoint answers as it does for an unknown email.
+- `disabledPaths` turns off every email OTP path except `/email-otp/send-verification-otp` and `/sign-in/email-otp`. `/email-otp/check-verification-otp` counts attempts with a read and a separate write, so concurrent guesses pass the attempt limit. `/email-otp/reset-password` sets a password with no mail to the account owner. `disabledPaths` does not block direct `auth.api` calls.
 - A failed sign-in send answers 503 `OTP_DELIVERY_FAILED` through the `failedSignInSends` hook.
 - `hooks.before` rejects an email whose domain or parent domain is on the `disposable-email-domains-js` list with 400 `DISPOSABLE_EMAIL`, unless an account with that email exists.
 - The Better Auth rate limiter is on in every environment, with database storage in `rate_limit`. The email OTP paths allow 3 requests per 60 seconds per IP. Direct `auth.api` calls skip the limiter.
 - `sendEmail` in `lib/mail.ts` is the one mailer. Outside `VERCEL_ENV=production`, it prefixes the subject with `[TEST] ` and opens the body with `This email comes from a TEST setup.`.
+- Sign-in and sign-out end with a full document navigation through `location.assign`, so the router cache of the previous account does not survive.
+- `noStoreMiddleware` in `src/start.ts` sets `cache-control: no-store` on every response the Start handler builds. The back-forward cache and the HTTP cache keep no account page, so **Back** after sign-out reloads and redirects to `/sign-in`.
 
 ## Server code boundary
 

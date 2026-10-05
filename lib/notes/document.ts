@@ -1,5 +1,6 @@
 import { getText, getTextSerializersFromSchema } from '@tiptap/core'
 import type { JSONContent } from '@tiptap/core'
+import type { Node as ProseMirrorNode } from '@tiptap/pm/model'
 import { Data } from 'effect'
 
 import { blockTypes, schema, uuid } from '@/lib/editor/schema'
@@ -63,8 +64,8 @@ export const readDocument = (json: JSONContent): DocumentContent => {
   const addLink = (link: Link) => {
     links.set(`${link.kind} ${link.sourceBlockId} ${link.targetNoteId}`, link)
   }
-  doc.descendants((node, position, parent) => {
-    if (doc.resolve(position).depth >= maxDepth) {
+  const visit = (node: ProseMirrorNode, parent: ProseMirrorNode, depth: number) => {
+    if (depth >= maxDepth) {
       throw new Error(`document: a node is nested more than ${maxDepth} levels deep`)
     }
     checkAttributes('node', node.type.name, node.attrs)
@@ -85,7 +86,7 @@ export const readDocument = (json: JSONContent): DocumentContent => {
       })
     }
     if (node.type.name === 'pageLink') {
-      addLink({ kind: 'link', sourceBlockId: parent?.attrs.id, targetNoteId: node.attrs.noteId })
+      addLink({ kind: 'link', sourceBlockId: parent.attrs.id, targetNoteId: node.attrs.noteId })
     }
     if (node.type.name === 'transclusion') {
       addLink({
@@ -94,6 +95,12 @@ export const readDocument = (json: JSONContent): DocumentContent => {
         targetNoteId: node.attrs.noteId,
       })
     }
-  })
+    for (const child of node.children) {
+      visit(child, node, depth + 1)
+    }
+  }
+  for (const child of doc.children) {
+    visit(child, doc, 0)
+  }
   return { blocks, doc: doc.toJSON(), links: [...links.values()] }
 }

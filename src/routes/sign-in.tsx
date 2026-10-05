@@ -103,7 +103,10 @@ const SignInPage = () => {
               autoComplete="email"
               className="rounded border px-2 py-1"
               name="email"
-              onChange={(event) => setEmail(event.target.value)}
+              onChange={(event) => {
+                setEmail(event.target.value)
+                setAlert(null)
+              }}
               required
               type="email"
               value={email}
@@ -127,14 +130,15 @@ const SignInPage = () => {
               className="rounded border px-2 py-1 tracking-widest"
               inputMode="numeric"
               name="code"
-              onChange={(event) =>
+              onChange={(event) => {
                 setCode(
                   [...event.target.value]
                     .filter((character) => '0123456789'.includes(character))
                     .join('')
                     .slice(0, otpLength),
                 )
-              }
+                setAlert(null)
+              }}
               required
               value={code}
             />

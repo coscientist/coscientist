@@ -15,6 +15,8 @@ import messages from '@/messages/en.json'
 
 const t = createTranslator({ locale: 'en', messages, namespace: 'SignInEmail' })
 
+const otpMinutes = 5
+
 const disposableDomains = disposableEmailBlocklistSet()
 
 const failedSignInSends = new WeakSet<object>()
@@ -70,14 +72,18 @@ export const auth = betterAuth({
   plugins: [
     emailOTP({
       allowedAttempts: 5,
-      expiresIn: 300,
+      expiresIn: otpMinutes * 60,
       otpLength,
       sendVerificationOTP: async ({ email, otp, type }, ctx) => {
         if (type !== 'sign-in') {
           throw new Error(`auth: coscientist sends only sign-in codes, not ${type} codes`)
         }
         try {
-          await sendEmail({ subject: t('subject', { otp }), text: t('text', { otp }), to: email })
+          await sendEmail({
+            subject: t('subject', { otp }),
+            text: t('text', { minutes: otpMinutes, otp }),
+            to: email,
+          })
         } catch (error) {
           if (ctx) {
             failedSignInSends.add(ctx.context)

@@ -33,7 +33,7 @@
   },
   "SignInEmail": {
     "subject": "{otp} is your coscientist sign-in code",
-    "text": "Your coscientist sign-in code is {otp}. It expires in 5 minutes.\n\nIf you did not request this code, ignore this email."
+    "text": "Your coscientist sign-in code is {otp}. It expires in {minutes, plural, one {# minute} other {# minutes}}.\n\nIf you did not request this code, ignore this email."
   },
   "Notes": {
     "addPasskey": "Add a passkey",

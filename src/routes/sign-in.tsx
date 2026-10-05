@@ -58,12 +58,13 @@ const SignInPage = () => {
   const sendCode = (event: FormEvent) => {
     event.preventDefault()
     void run(async () => {
+      const expiresAt = Date.now() + otpMinutes * 60_000
       const result = await emailOtp.sendVerificationOtp({ email, type: 'sign-in' })
       if (result.error) {
         return describe(result.error, t('sendFailed'))
       }
       setCode('')
-      setSent({ address: email, expiresAt: Date.now() + otpMinutes * 60_000 })
+      setSent({ address: email, expiresAt })
       return null
     })
   }
@@ -107,12 +108,11 @@ const SignInPage = () => {
     <main className="mx-auto flex max-w-sm flex-col gap-6 p-6">
       <h1 className="text-xl font-semibold">{t('title')}</h1>
       {sent === null ? (
-        <form className="flex flex-col gap-3" onSubmit={sendCode}>
+        <form className="flex flex-col gap-3" method="post" onSubmit={sendCode}>
           <label className="flex flex-col gap-1">
             <span>{t('email')}</span>
             <input
               autoComplete="email"
-              autoFocus
               className="rounded border px-2 py-1"
               name="email"
               onChange={(event) => {

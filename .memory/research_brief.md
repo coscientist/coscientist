@@ -6,13 +6,8 @@
 - The student is the largest open-weight model that fine-tunes on rented hardware and then quantizes or compresses to fit the 128 GB Mac; the Mac is a deployment target, not a pipeline constraint, so rank students by capability after compression, not by unquantized size, and distill into a smaller model only when the larger student cannot train or deploy.
 - Investigate the ambitious target before narrowing it; state a capability gap only with dated evidence, and name the experiment that could close or confirm it.
 - Pick between GLM-5.3-Flash and Qwen3.8-Flash-Next by measurement on the target Mac at the shipped quantization (Gate 0), not on paper; the target Mac is a different machine from the development host, so never benchmark the host as a substitute.
-- "Qwen 3.8 Next" is `Qwen/Qwen3.8-Flash-Next` under the Qwen Community License 1.0 (internal use is exempt from its MaaS clause; 180B on disk, 6B active; fits 128 GB at 4 to 5 bits per weight), and "GPT Astra" is GPT-6 Astra.
+- The owner's "Qwen 3.8 Next" is `Qwen/Qwen3.8-Flash-Next`, and "GPT Astra" is GPT-6 Astra.
 - Write the Hugging Face ID and the license in every plan row that names a model.
-- Qwen3.8-27B is Apache 2.0.
-- GLM-5.3-Flash is MIT (320B, 18B active) and fits 128 GB only at 2.4 to 3.0 bits per weight.
-- MiMo-V2.6-Pro (1.02T, MIT tag, Artificial Analysis index 46) is the top open model and does not fit 128 GB, so it serves as a teacher.
-- 128 GB pairs only with the 40-core GPU M5 Max at 614 GB/s (Apple support page 126318).
-- The default Metal working set is about 107.5 GiB per three community reports, so read it on the deployment Mac before sizing a build.
 - How the model speaks, interacts, and behaves (register, flattery openers, hedging, list and markdown habits, length, moralizing, closers, question-asking, how pushback is phrased, persona consistency) is its own measured target, Gate H in section 6, separate from intelligence (Gate E) and disposition (Gate F), with no credit transfer among the three; the style-stripping and length guards on disposition screens stay. [source: https://github.com/coscientist/coscientist/pull/4]
 - The brief's ban on reducing disposition to "a creative persona" does not forbid the interaction-behavior target; the frontier register labels "opusfived" and "claudish" name the failure to avoid, and removing one frontier tell can raise another. [source: https://github.com/coscientist/coscientist/pull/4]
 - A plan or evaluation that treats voice, tone, or style only as a look-alike failure or a non-goal gets a separate interaction-behavior section: named behaviors with a measurement each, frontier failure modes with evidence, the constitution clauses that set the voice, the training signal and data, pass values and guards (accuracy not down, warmth-induced error rise checked), local-deployment constraints (system prompt versus weights, samplers, quantization, drift over turns), and risks.

@@ -1,4 +1,18 @@
-- [drizzle-kit silent failure](drizzle-kit-silent-failure.md) — migrate exits 1 with no message unless the version-matched patch applies; how to regenerate it
-- [Server function HTTP probe](server-fn-http-probe.md) — server functions answer 200; read the body; the headers, payload, and IDs a probe needs
-- [OTP send errors swallowed](otp-send-errors-swallowed.md) — Better Auth hides sender errors; the failedSignInSends mark and why non-sign-in types stay unmarked
-- [lefthook shared hooks](lefthook-shared-hooks.md) — worktrees share the pre-push hook; run bun install in the pushing checkout when it cannot find lefthook
+# Memory: coscientist
+
+- A TanStack Start server function answers HTTP 200 when its handler throws an error, `notFound()`, or `redirect()`, so a probe reads the body, never the status; the probe recipe is in [[e2e_probes]].
+- A push that aborts with `Can't find lefthook in PATH` and `ERROR: Operation is aborted due to lefthook settings.` needs `bun install` in the checkout that pushes, because every worktree shares one hooks directory and the hook reads the `node_modules` of the pushing checkout.
+- The owner brief behind `docs/research-plan.md` is not in the repository; read [[research_brief]] before plan or model work, and [[research_plan]] before editing the plan.
+
+## Index
+
+- [[auth]]
+- [[database]]
+- [[e2e_probes]]
+- [[framework_apis]]
+- [[git_workflow]]
+- [[lint]]
+- [[notes_editor]]
+- [[qa_interns]]
+- [[research_brief]]
+- [[research_plan]]

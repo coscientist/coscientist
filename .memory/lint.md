@@ -1,0 +1,6 @@
+- `bun run check` runs no type-aware oxlint rule: `oxlint-tsgolint` is not installed and `ultracite check` passes no `--type-aware`, so `typescript/no-floating-promises`, `no-misused-promises`, and `strict-boolean-expressions` report nothing; review promise handling by hand.
+- An `async` function with no `await` fails `require-await`; return the promise from a plain function.
+- An awaited loop, `reduce`, or `.then` fails `no-await-in-loop`, `unicorn/no-array-reduce`, or `promise/prefer-await-to-then`; recurse as `insertInSequence` in `lib/notes/store.ts` does.
+- Work after `await next()` fails `node/callback-return`; wrap it in a helper as `withNoStore` in `src/start.ts` does.
+- An empty plugin body fails `no-empty-function`; write `void env`.
+- `no-shadow` rejects an imported `t` beside `const t = useTranslations(...)`, which is why `lib/i18n.ts` exports `translate`.

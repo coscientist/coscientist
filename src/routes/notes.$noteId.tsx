@@ -6,7 +6,7 @@ import { createContext, use, useMemo } from 'react'
 import type { ReactNode } from 'react'
 import { useTranslations } from 'use-intl'
 
-import { extensions } from '@/lib/editor/schema'
+import { extensions, pageLinkLabel } from '@/lib/editor/schema'
 import { translate } from '@/lib/i18n'
 import { getNotePageFn } from '@/lib/notes/functions'
 
@@ -41,7 +41,7 @@ const NoteLink = ({ label, noteId }: { label?: string | null; noteId: string }) 
 }
 
 const PageLinkView = ({ node }: NodeViewProps) => (
-  <NoteLink label={node.attrs.label} noteId={node.attrs.noteId} />
+  <NoteLink label={pageLinkLabel(node.attrs.label)} noteId={node.attrs.noteId} />
 )
 
 const NestedTransclusionView = ({ node }: NodeViewProps) => (

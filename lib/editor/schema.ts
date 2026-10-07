@@ -31,6 +31,9 @@ const SafeLink = Link.extend({
   },
 })
 
+export const pageLinkLabel = (label: unknown) =>
+  typeof label === 'string' && label.trim() !== '' ? label : null
+
 export const PageLink = Node.create({
   addAttributes() {
     return {
@@ -57,11 +60,11 @@ export const PageLink = Node.create({
     return [
       'span',
       mergeAttributes(HTMLAttributes, { 'data-note-id': node.attrs.noteId, 'data-page-link': '' }),
-      node.attrs.label ?? node.attrs.noteId,
+      pageLinkLabel(node.attrs.label) ?? node.attrs.noteId,
     ]
   },
   renderText({ node }) {
-    return `[[${node.attrs.label ?? node.attrs.noteId}]]`
+    return `[[${pageLinkLabel(node.attrs.label) ?? node.attrs.noteId}]]`
   },
 })
 

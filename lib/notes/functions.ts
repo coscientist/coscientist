@@ -5,6 +5,7 @@ import { Effect } from 'effect'
 import { z } from 'zod'
 
 import { viewerMiddleware } from '@/lib/auth/session'
+import { hasNul } from '@/lib/notes/document'
 import { createNote, getNotePage, listNotes, saveNote } from '@/lib/notes/store'
 
 const noteInput = z.object({ noteId: z.uuid() })
@@ -44,7 +45,10 @@ export const saveNoteFn = createServerFn({ method: 'POST' })
     noteInput.extend({
       baseRevision: z.int32().positive(),
       doc: documentInput,
-      title: z.string().max(500),
+      title: z
+        .string()
+        .max(500)
+        .refine((title) => !hasNul(title), 'The title holds U+0000'),
     }),
   )
   .handler(({ context, data }) => Effect.runPromise(saveNote(context.viewer.id, data)))

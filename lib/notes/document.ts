@@ -94,6 +94,9 @@ export const readDocument = (json: JSONContent): DocumentContent => {
       })
     }
     if (node.type.name === 'pageLink') {
+      if (node.marks.length > 0) {
+        throw new Error('document: a pageLink has marks')
+      }
       addLink({ kind: 'link', sourceBlockId: parent.attrs.id, targetNoteId: node.attrs.noteId })
     }
     if (node.type.name === 'transclusion') {

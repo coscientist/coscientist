@@ -13,12 +13,17 @@ const attributeTypes: ReadonlySet<string> = new Set(['boolean', 'number', 'strin
 
 const maxDepth = 100
 
+export const hasNul = (value: string) => value.includes('\u0000')
+
 const checkAttributes = (kind: string, name: string, attrs: Readonly<Record<string, unknown>>) => {
   for (const [attribute, value] of Object.entries(attrs)) {
     if (value !== null && !attributeTypes.has(typeof value)) {
       throw new Error(
         `document: the attribute ${attribute} of the ${kind} ${name} is not a string, a number, a boolean, or null`,
       )
+    }
+    if (typeof value === 'string' && hasNul(value)) {
+      throw new Error(`document: the attribute ${attribute} of the ${kind} ${name} holds U+0000`)
     }
   }
 }
@@ -71,6 +76,9 @@ export const readDocument = (json: JSONContent): DocumentContent => {
     checkAttributes('node', node.type.name, node.attrs)
     for (const mark of node.marks) {
       checkAttributes('mark', mark.type.name, mark.attrs)
+    }
+    if (node.isText && hasNul(node.text ?? '')) {
+      throw new Error('document: a text node holds U+0000')
     }
     if (blockTypes.has(node.type.name)) {
       const id = uuid.parse(node.attrs.id)
